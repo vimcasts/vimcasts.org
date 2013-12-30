@@ -5,15 +5,17 @@
 # Time.zone = "UTC"
 
 activate :blog do |blog|
+  blog.name = "blog"
   blog.prefix = "blog"
-  blog.sources = "blog/{year}-{month}-{day}-{title}.html"
-  blog.permalink = "blog/{year}/{month}/{day}/{title}.html"
+  blog.sources = "{title}.html"
+  blog.permalink = "{year}/{month}/{title}.html"
 end
 
 activate :blog do |podcast|
+  podcast.name = "episodes"
   podcast.prefix = "episodes"
-  podcast.sources = "episodes/{number}-{title}.html"
-  podcast.permalink = "episodes/{title}.html"
+  podcast.sources = "{number}-{title}.html"
+  podcast.permalink = "{title}.html"
 end
 
 ###
