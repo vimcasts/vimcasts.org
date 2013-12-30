@@ -1,4 +1,22 @@
 ###
+# Blog settings
+###
+
+# Time.zone = "UTC"
+
+activate :blog do |blog|
+  blog.prefix = "blog"
+  blog.sources = "blog/{year}-{month}-{day}-{title}.html"
+  blog.permalink = "blog/{year}/{month}/{day}/{title}.html"
+end
+
+activate :blog do |podcast|
+  podcast.prefix = "episodes"
+  podcast.sources = "episodes/{number}-{title}.html"
+  podcast.permalink = "episodes/{title}.html"
+end
+
+###
 # Compass
 ###
 
