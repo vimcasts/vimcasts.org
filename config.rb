@@ -18,6 +18,8 @@ activate :blog do |podcast|
   podcast.permalink = "{title}.html"
 end
 
+page "/feed.xml", layout: false
+
 ###
 # Compass
 ###
