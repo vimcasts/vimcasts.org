@@ -1,3 +1,6 @@
+require 'lib/aggregator'
+activate :aggregator
+
 ###
 # Blog settings
 ###
