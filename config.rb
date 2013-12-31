@@ -12,13 +12,15 @@ activate :blog do |blog|
   blog.prefix = "blog"
   blog.sources = "{title}.html"
   blog.permalink = "{year}/{month}/{title}.html"
+  blog.summary_separator = /(READMORE)/
 end
 
-activate :blog do |podcast|
-  podcast.name = "episodes"
-  podcast.prefix = "episodes"
-  podcast.sources = "{number}-{title}.html"
-  podcast.permalink = "{title}.html"
+activate :blog do |blog|
+  blog.name = "episodes"
+  blog.prefix = "episodes"
+  blog.sources = "{number}-{title}.html"
+  blog.permalink = "{title}.html"
+  blog.summary_separator = /(READMORE)/
 end
 
 page "/feed.xml", layout: false
