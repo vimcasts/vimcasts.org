@@ -23,7 +23,7 @@ activate :blog do |blog|
   blog.summary_separator = /(READMORE)/
 end
 
-page "/feed.xml", layout: false
+page "/feeds/ogg", layout: false
 
 ###
 # Compass
