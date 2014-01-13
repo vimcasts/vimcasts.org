@@ -24,6 +24,7 @@ activate :blog do |blog|
 end
 
 page "/feeds/ogg", layout: false
+page "/episodes.json", layout: false
 
 ###
 # Compass
