@@ -9,13 +9,13 @@
             "poster": "http://vimcasts.org<%= e.data.poster %>",
             "abstract": "<%= js_escape_html(e.summary) %>",
             "ogg": {
-                "url": "<%= e.data.ogg.source %>",
+                "url": "<%= e.data.ogg.url %>",
                 "bytes": "<%= e.data.ogg[:size] %>",
                 "seconds": "<%= e.data.duration %>",
                 "contentType": "video/ogg"
             },
             "quicktime": {
-                "url": "<%= e.data.quicktime.source %>",
+                "url": "<%= e.data.quicktime.url %>",
                 "bytes": "<%= e.data.quicktime[:size] %>",
                 "seconds": "<%= e.data.duration %>",
                 "contentType": "video/x-m4v"
