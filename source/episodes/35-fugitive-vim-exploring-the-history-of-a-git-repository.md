@@ -4,6 +4,7 @@
 :poster: /images/posters/fugitive_5.png
 :flattr_id: "277398"
 :duration: 604
+:number: 35
 :ogg: 
   :url: http://media.vimcasts.org/videos/35/fugitive_5.ogv
   :size: 26702522

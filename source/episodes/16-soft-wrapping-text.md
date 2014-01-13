@@ -4,6 +4,7 @@
 :poster: /images/posters/soft_wrapping_text.png
 :flattr_id: "31941"
 :duration: 294
+:number: 16
 :ogg: 
   :url: http://media.vimcasts.org/videos/16/soft_wrap.ogv
   :size: 9675588

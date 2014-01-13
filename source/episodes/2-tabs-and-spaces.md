@@ -4,6 +4,7 @@
 :poster: /images/posters/tabs_and_spaces.png
 :flattr_id: "31923"
 :duration: 382
+:number: 2
 :ogg: 
   :url: http://media.vimcasts.org/videos/2/tabs_and_spaces.ogv
   :size: 8675696

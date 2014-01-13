@@ -4,6 +4,7 @@
 :poster: /images/posters/commandline_window.png
 :flattr_id: "86560"
 :duration: 471
+:number: 28
 :ogg: 
   :url: http://media.vimcasts.org/videos/28/commandline_window.ogv
   :size: 10505095

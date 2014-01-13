@@ -4,6 +4,7 @@
 :poster: /images/posters/paste-option-toggle.png
 :flattr_id: ""
 :duration: 265
+:number: 59
 :ogg: 
   :url: http://media.vimcasts.org/videos/59/paste-option-toggle.ogv
   :size: 5456772

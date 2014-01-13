@@ -4,6 +4,7 @@
 :poster: /images/posters/tidying_whitespace.png
 :flattr_id: "31926"
 :duration: 273
+:number: 4
 :ogg: 
   :url: http://media.vimcasts.org/videos/4/tidying_whitespace.ogv
   :size: 4917979

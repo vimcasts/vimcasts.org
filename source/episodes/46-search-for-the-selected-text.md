@@ -4,6 +4,7 @@
 :poster: /images/posters/visual_star.png
 :flattr_id: "1204601"
 :duration: 279
+:number: 46
 :ogg: 
   :url: http://media.vimcasts.org/videos/46/visual_star.ogv
   :size: 5534285

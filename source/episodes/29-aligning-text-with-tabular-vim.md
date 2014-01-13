@@ -4,6 +4,7 @@
 :poster: /images/posters/alignment.png
 :flattr_id: "118292"
 :duration: 311
+:number: 29
 :ogg: 
   :url: http://media.vimcasts.org/videos/29/alignment.ogv
   :size: 6556323

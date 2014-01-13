@@ -4,6 +4,7 @@
 :poster: /images/posters/sync_with_git.png
 :flattr_id: "72257"
 :duration: 564
+:number: 27
 :ogg: 
   :url: http://media.vimcasts.org/videos/27/sync_with_git.ogv
   :size: 19428011

@@ -4,6 +4,7 @@
 :poster: /images/posters/visual_block.png
 :flattr_id: "31947"
 :duration: 261
+:number: 22
 :ogg: 
   :url: http://media.vimcasts.org/videos/22/visual_block.ogv
   :size: 5721437

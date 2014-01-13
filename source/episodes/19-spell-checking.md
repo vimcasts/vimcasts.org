@@ -4,6 +4,7 @@
 :poster: /images/posters/spell_checking.png
 :flattr_id: "31944"
 :duration: 342
+:number: 19
 :ogg: 
   :url: http://media.vimcasts.org/videos/19/spell_checking.ogv
   :size: 7475923

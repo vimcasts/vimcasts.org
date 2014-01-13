@@ -4,6 +4,7 @@
 :poster: /images/posters/named-registers.png
 :flattr_id: ""
 :duration: 209
+:number: 53
 :ogg: 
   :url: http://media.vimcasts.org/videos/53/named-registers.ogv
   :size: 5356368

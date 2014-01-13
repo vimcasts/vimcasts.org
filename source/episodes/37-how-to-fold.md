@@ -4,6 +4,7 @@
 :poster: /images/posters/how_to_fold.png
 :flattr_id: "1003463"
 :duration: 529
+:number: 37
 :ogg: 
   :url: http://media.vimcasts.org/videos/37/how-to-fold.ogv
   :size: 17856957

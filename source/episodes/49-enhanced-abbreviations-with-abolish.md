@@ -4,6 +4,7 @@
 :poster: /images/posters/abolish-abbrev.png
 :flattr_id: "1303220"
 :duration: 189
+:number: 49
 :ogg: 
   :url: http://media.vimcasts.org/videos/49/abolish-abbreviate.ogv
   :size: 4705804

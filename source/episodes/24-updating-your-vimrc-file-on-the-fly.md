@@ -4,6 +4,7 @@
 :poster: /images/posters/vimrc_on_the_fly.png
 :flattr_id: "37935"
 :duration: 171
+:number: 24
 :ogg: 
   :url: http://media.vimcasts.org/videos/24/vimrc_on_the_fly.ogv
   :size: 2922294

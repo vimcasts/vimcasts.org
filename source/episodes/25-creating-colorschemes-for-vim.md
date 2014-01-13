@@ -4,6 +4,7 @@
 :poster: /images/posters/colorschemes.png
 :flattr_id: "67028"
 :duration: 584
+:number: 25
 :ogg: 
   :url: http://media.vimcasts.org/videos/25/colorschemes.ogv
   :size: 18548209

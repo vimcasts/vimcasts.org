@@ -4,6 +4,7 @@
 :poster: /images/posters/ascii.png
 :flattr_id: "31932"
 :duration: 347
+:number: 10
 :ogg: 
   :url: http://media.vimcasts.org/videos/10/ascii_art.ogv
   :size: 8082719

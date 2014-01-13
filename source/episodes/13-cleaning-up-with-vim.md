@@ -4,6 +4,7 @@
 :poster: /images/posters/cleaning_up.png
 :flattr_id: "31937"
 :duration: 36
+:number: 13
 :ogg: 
   :url: http://media.vimcasts.org/videos/13/cleaning_up.ogv
   :size: 1724552

@@ -4,6 +4,7 @@
 :poster: /images/posters/clipboard-register.png
 :flattr_id: ""
 :duration: 288
+:number: 58
 :ogg: 
   :url: http://media.vimcasts.org/videos/58/clipboard-register.ogv
   :size: 6577643

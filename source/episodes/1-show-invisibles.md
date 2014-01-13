@@ -4,6 +4,7 @@
 :poster: /images/posters/show_invisibles.png
 :flattr_id: "31755"
 :duration: 172
+:number: 1
 :ogg: 
   :url: http://media.vimcasts.org/videos/1/show_invisibles.ogv
   :size: 5036160

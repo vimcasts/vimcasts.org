@@ -4,6 +4,7 @@
 :poster: /images/posters/abolish-search.png
 :flattr_id: "1248431"
 :duration: 333
+:number: 47
 :ogg: 
   :url: http://media.vimcasts.org/videos/47/abolish-search.ogv
   :size: 6849844

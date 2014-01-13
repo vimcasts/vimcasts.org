@@ -4,6 +4,7 @@
 :poster: /images/posters/the_file_explorer.png
 :flattr_id: "31940"
 :duration: 336
+:number: 15
 :ogg: 
   :url: http://media.vimcasts.org/videos/15/the_file_explorer.ogv
   :size: 9156710

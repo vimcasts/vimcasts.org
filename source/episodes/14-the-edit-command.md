@@ -4,6 +4,7 @@
 :poster: /images/posters/edit_command.png
 :flattr_id: "31938"
 :duration: 230
+:number: 14
 :ogg: 
   :url: http://media.vimcasts.org/videos/14/the_edit_command.ogv
   :size: 7333302

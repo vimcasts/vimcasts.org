@@ -4,6 +4,7 @@
 :poster: /images/posters/modal_editing.png
 :flattr_id: "31936"
 :duration: 326
+:number: 12
 :ogg: 
   :url: http://media.vimcasts.org/videos/12/modal_editing.ogv
   :size: 6943276

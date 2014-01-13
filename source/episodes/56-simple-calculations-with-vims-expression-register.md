@@ -4,6 +4,7 @@
 :poster: /images/posters/expression-register-maths.png
 :flattr_id: ""
 :duration: 242
+:number: 56
 :ogg: 
   :url: http://media.vimcasts.org/videos/56/expression-register.ogv
   :size: 4704449

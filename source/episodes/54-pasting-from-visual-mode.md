@@ -4,6 +4,7 @@
 :poster: /images/posters/paste-from-visual.png
 :flattr_id: ""
 :duration: 213
+:number: 54
 :ogg: 
   :url: http://media.vimcasts.org/videos/54/visual-mode-put.ogv
   :size: 3955140

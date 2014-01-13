@@ -4,6 +4,7 @@
 :poster: /images/posters/irb_and_vim.png
 :flattr_id: "31945"
 :duration: 275
+:number: 20
 :ogg: 
   :url: http://media.vimcasts.org/videos/20/irb_and_vim.ogv
   :size: 6114279

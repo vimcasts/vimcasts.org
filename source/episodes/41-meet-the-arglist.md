@@ -4,6 +4,7 @@
 :poster: /images/posters/meet_arglist.png
 :flattr_id: "1143785"
 :duration: 297
+:number: 41
 :ogg: 
   :url: http://media.vimcasts.org/videos/41/meet_arglist.ogv
   :size: 6615244

@@ -4,6 +4,7 @@
 :poster: /images/posters/profiling.png
 :flattr_id: "1045993"
 :duration: 489
+:number: 39
 :ogg: 
   :url: http://media.vimcasts.org/videos/39/profiling.ogv
   :size: 13627416

@@ -4,6 +4,7 @@
 :poster: /images/posters/fugitive_2.png
 :flattr_id: "177652"
 :duration: 701
+:number: 32
 :ogg: 
   :url: http://media.vimcasts.org/videos/32/fugitive_2.ogv
   :size: 19217222

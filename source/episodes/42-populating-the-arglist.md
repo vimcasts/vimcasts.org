@@ -4,6 +4,7 @@
 :poster: /images/posters/arglist_populate.png
 :flattr_id: "1146839"
 :duration: 331
+:number: 42
 :ogg: 
   :url: http://media.vimcasts.org/videos/42/arglist_populate.ogv
   :size: 6533057

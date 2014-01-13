@@ -4,6 +4,7 @@
 :poster: /images/posters/paste-from-insert.png
 :flattr_id: ""
 :duration: 255
+:number: 55
 :ogg: 
   :url: http://media.vimcasts.org/videos/55/insert-mode-put.ogv
   :size: 5660879

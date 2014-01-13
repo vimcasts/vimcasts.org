@@ -4,6 +4,7 @@
 :poster: /images/posters/vspec-intro.png
 :flattr_id: "1496691"
 :duration: 435
+:number: 50
 :ogg: 
   :url: http://media.vimcasts.org/videos/50/vspec_intro.ogv
   :size: 13515400

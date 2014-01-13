@@ -4,6 +4,7 @@
 :poster: /images/posters/working_with_buffers.png
 :flattr_id: "31928"
 :duration: 208
+:number: 6
 :ogg: 
   :url: http://media.vimcasts.org/videos/6/buffers_listed_and_hidden.ogv
   :size: 4834378

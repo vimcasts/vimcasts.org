@@ -4,6 +4,7 @@
 :poster: /images/posters/yank-register.png
 :flattr_id: ""
 :duration: 269
+:number: 52
 :ogg: 
   :url: http://media.vimcasts.org/videos/52/yank-register.ogv
   :size: 5415333

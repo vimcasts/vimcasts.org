@@ -4,6 +4,7 @@
 :poster: /images/posters/undo_tree.png
 :flattr_id: "137468"
 :duration: 390
+:number: 30
 :ogg: 
   :url: http://media.vimcasts.org/videos/30/undo_tree.ogv
   :size: 9435598

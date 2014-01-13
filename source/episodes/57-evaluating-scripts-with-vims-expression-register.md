@@ -4,6 +4,7 @@
 :poster: /images/posters/expression-register-eval.png
 :flattr_id: ""
 :duration: 236
+:number: 57
 :ogg: 
   :url: http://media.vimcasts.org/videos/57/eval-register.ogv
   :size: 5514595

@@ -4,6 +4,7 @@
 :poster: /images/posters/markdown_macro.png
 :flattr_id: "31946"
 :duration: 565
+:number: 21
 :ogg: 
   :url: http://media.vimcasts.org/videos/21/markdown_macro.ogv
   :size: 14625008

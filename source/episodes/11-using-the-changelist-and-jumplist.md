@@ -4,6 +4,7 @@
 :poster: /images/posters/vimlists.png
 :flattr_id: "31933"
 :duration: 201
+:number: 11
 :ogg: 
   :url: http://media.vimcasts.org/videos/11/changelist_and_jumplist.ogv
   :size: 6286432

@@ -4,6 +4,7 @@
 :poster: /images/posters/default-register.png
 :flattr_id: ""
 :duration: 247
+:number: 51
 :ogg: 
   :url: http://media.vimcasts.org/videos/51/default-register.ogv
   :size: 5676820

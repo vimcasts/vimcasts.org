@@ -4,6 +4,7 @@
 :poster: /images/posters/formatting_text_with_par.png
 :flattr_id: "31943"
 :duration: 312
+:number: 18
 :ogg: 
   :url: http://media.vimcasts.org/videos/18/formatting_with_par.ogv
   :size: 7937415

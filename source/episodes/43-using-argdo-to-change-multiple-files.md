@@ -4,6 +4,7 @@
 :poster: /images/posters/argdo.png
 :flattr_id: "1150023"
 :duration: 340
+:number: 43
 :ogg: 
   :url: http://media.vimcasts.org/videos/43/argdo.ogv
   :size: 7790359

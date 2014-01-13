@@ -4,6 +4,7 @@
 :poster: /images/posters/vimgrep.png
 :flattr_id: "1156445"
 :duration: 445
+:number: 44
 :ogg: 
   :url: http://media.vimcasts.org/videos/44/vimgrep.ogv
   :size: 13806112
