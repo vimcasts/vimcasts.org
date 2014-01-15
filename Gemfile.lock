@@ -68,6 +68,7 @@ GEM
       sprockets-helpers (~> 1.0.0)
       sprockets-sass (~> 1.0.0)
     multi_json (1.8.4)
+    nokogiri (1.5.10)
     rack (1.5.2)
     rack-livereload (0.3.15)
       rack
@@ -107,4 +108,5 @@ DEPENDENCIES
   middleman (~> 3.2.1)
   middleman-blog (~> 3.5.1)
   middleman-livereload (~> 3.1.0)
+  nokogiri
   wdm (~> 0.1.0)
