@@ -13,6 +13,7 @@ activate :blog do |blog|
   blog.sources = "{title}.html"
   blog.permalink = "{year}/{month}/{title}.html"
   blog.summary_separator = /(READMORE)/
+  blog.paginate = true
 end
 
 activate :blog do |blog|
@@ -21,7 +22,7 @@ activate :blog do |blog|
   blog.sources = "{number}-{title}.html"
   blog.permalink = "{title}.html"
   blog.summary_separator = /(READMORE)/
-  # blog.paginate = true
+  blog.paginate = true
 end
 
 page "/feeds/ogg", layout: false
