@@ -15,6 +15,7 @@ activate :blog do |blog|
   blog.summary_separator = /(READMORE)/
   blog.paginate = true
   blog.year_template = "blog-archive-by-year.html"
+  blog.month_template = "blog-archive-by-month.html"
 end
 
 activate :blog do |blog|
