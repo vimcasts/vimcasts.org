@@ -14,6 +14,7 @@ activate :blog do |blog|
   blog.permalink = "{year}/{month}/{title}.html"
   blog.summary_separator = /(READMORE)/
   blog.paginate = true
+  blog.year_template = "blog-archive-by-year.html"
 end
 
 activate :blog do |blog|
