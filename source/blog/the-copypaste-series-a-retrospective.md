@@ -20,9 +20,9 @@ READMORE
 
 ### The default, yank, and named registers
 
-Vimâ€™s *default register* makes it easy to perform some of the most basic types of cut, copy, and paste operations. Thatâ€™s partly thanks to the `p` command, which behaves differently depending on whether the default register contains a characterwise or linewise region of text. As a result, we can toggle characters with `xp`, toggle lines with `ddp`, or duplicate a line with `yyp`. [Episode 51 - Simple operations using the default register][51] shows how.
+Vim’s *default register* makes it easy to perform some of the most basic types of cut, copy, and paste operations. That’s partly thanks to the `p` command, which behaves differently depending on whether the default register contains a characterwise or linewise region of text. As a result, we can toggle characters with `xp`, toggle lines with `ddp`, or duplicate a line with `yyp`. [Episode 51 - Simple operations using the default register][51] shows how.
 
-The default register is not a safe place to keep yanked text that you want to paste later. Itâ€™s all too easy to clobber the default register with a `d` or `x` command. Luckily, the last yanked text is kept safe in Vimâ€™s *yank register*. [Episode 52 - Meet the yank register][52] shows how to use the yank register.
+The default register is not a safe place to keep yanked text that you want to paste later. It’s all too easy to clobber the default register with a `d` or `x` command. Luckily, the last yanked text is kept safe in Vim’s *yank register*. [Episode 52 - Meet the yank register][52] shows how to use the yank register.
 
 Vim also has 26 *named registers* - one for each letter of the alphabet. These are handy if you want to cut or copy multiple regions of text that you intend to paste later. The named registers have an interesting property: as well as being able to overwrite their contents, we can also append to a named register. [Episode 53 - Using Vim's named registers][53] shows how.
 
@@ -34,7 +34,7 @@ The `<C-r>{reg}` command lets us paste a register from Insert mode (and it works
 
 ### Working with the system clipboard
 
-Vim's registers are internal to Vim. If you want to move text between Vim and other programs running locally, you can do so using the the system clipboard, which Vim exposes through the quoteplus register: `"+`. We can use this with the delete, yank and put operations in much the same way that we use Vimâ€™s other registers. [Episode 58 - accessing the system clipboard from Vim][58] shows how.
+Vim's registers are internal to Vim. If you want to move text between Vim and other programs running locally, you can do so using the the system clipboard, which Vim exposes through the quoteplus register: `"+`. We can use this with the delete, yank and put operations in much the same way that we use Vim’s other registers. [Episode 58 - accessing the system clipboard from Vim][58] shows how.
 
 We can only use the `"+` register when Vim is compiled with the `+clipboard` feature. If you don't already have this feature enabled, find out [how to get Vim with `+clipboard` support][clipboard].
 

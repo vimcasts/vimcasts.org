@@ -27,7 +27,7 @@ Each month, the [PragPub magazine][mag] issues a list of what's hot in the Pragm
 
 The reviews of Practical Vim have been terrific. Linux Format Magazine [rated it 9/10][linuxformat]. To date, Practical Vim has [32 reviews on Amazon.com][us] as well as [7 reviews on the UK version of the site][uk]. 5 stars!
 
-If youâ€™ve read Practical Vim, please take a moment to review it on Amazon. It really makes a difference. As [Johan Aulin said][best]:
+If you’ve read Practical Vim, please take a moment to review it on Amazon. It really makes a difference. As [Johan Aulin said][best]:
 
 > Decided I want a Vim book for my birthday. Based on Amazon reviews, I settled on Practical Vim by @nelstrom as the best choice.
 

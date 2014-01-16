@@ -110,7 +110,7 @@ In the comments, [k00pa][gindent] has posted a method based on
 entire file then restores the cursor position. [Jonathan Palardy][refactor]
 has recognised that `StripTrailingWhitespaces()`
 
-> doesnâ€™t do one thing, it does two (useful) things: saving the â€œstateâ€ and
+> doesn’t do one thing, it does two (useful) things: saving the “state” and
 > executing a command to remove the trailing whitespace.
 
 He suggests refactoring the methods as follows:

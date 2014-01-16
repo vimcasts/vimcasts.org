@@ -52,7 +52,7 @@ This exchange has relieved me of some of the guilt I used to feel when promoting
 
 I've had a response from Meetup.com, although it doesn't show any signs that they've read my reply:
 
-> Itâ€™s important that a Meetup Group's intentions be clearly stated in the Group description, especially during the initial start up phase. The automated email invitation and announcement process for new Organizers is one of the best tools we have to kick-start a new Meetup Group.
+> It’s important that a Meetup Group's intentions be clearly stated in the Group description, especially during the initial start up phase. The automated email invitation and announcement process for new Organizers is one of the best tools we have to kick-start a new Meetup Group.
 > 
 > If your intentions are unclear, your content may be reported to us as inappropriate, which is why we took action from here. Members will also be less likely to join your Meetup Group.
 > 

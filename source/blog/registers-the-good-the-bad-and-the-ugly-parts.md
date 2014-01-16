@@ -133,9 +133,9 @@ There are so many idiosyncrasies in this table that it's hard to decide what's a
 
 ### The Ugly Parts
 
-Vim uses non-standard terminology to describe cut, copy, and paste operations. As I've [noted before][jargon]: 'put' and 'paste' are easily interchangeable, and the word 'yank' becomes synonymous with 'copy' when you get used to it, but Vim's use of the word â€˜deleteâ€™ is problematic. 
+Vim uses non-standard terminology to describe cut, copy, and paste operations. As I've [noted before][jargon]: 'put' and 'paste' are easily interchangeable, and the word 'yank' becomes synonymous with 'copy' when you get used to it, but Vim's use of the word ‘delete’ is problematic. 
 
-In most text editing contexts the word delete means *remove*. But Vim's delete operation copies the text into a register, then removes it from the document. In other words, Vim's delete operation behaves like the standard cut command. I find Vim's terminology to be unhelpful, so I try to make a point of describing the `d{motion}` command as â€œcut the specified textâ€ (rather than â€œdelete the specified textâ€). Likewise for `x`, `c`, `s`, and so on.
+In most text editing contexts the word delete means *remove*. But Vim's delete operation copies the text into a register, then removes it from the document. In other words, Vim's delete operation behaves like the standard cut command. I find Vim's terminology to be unhelpful, so I try to make a point of describing the `d{motion}` command as “cut the specified text” (rather than “delete the specified text”). Likewise for `x`, `c`, `s`, and so on.
 
 The fact that `x`, `s`, `d`, and `c` all *cut by default* makes it awkward to perform a true deletion. To really delete text (without writing to a register), we have to prefix each of these commands with `"_`, the blackhole register. That's bizarre! More often than not, when I use Vim's delete operation, I only want to remove the text from the document. I don't want to write it to a register and I consider that to be an unfortunate side-effect.
 

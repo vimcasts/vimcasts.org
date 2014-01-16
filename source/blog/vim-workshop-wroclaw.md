@@ -20,7 +20,7 @@ A [20% discount][d] is available for anyone attending the wroc\_love.rb conferen
 
 READMORE
 
-What can you expect from a Vimcasts workshop? Dirty hands. We learn best by doing, so I wonâ€™t lecture you. Instead, weâ€™ll work through excercises designed to reveal the best practices of working with Vim. The material will tie in with my upcoming book, [Practical Vim][p].
+What can you expect from a Vimcasts workshop? Dirty hands. We learn best by doing, so I won’t lecture you. Instead, we’ll work through excercises designed to reveal the best practices of working with Vim. The material will tie in with my upcoming book, [Practical Vim][p].
 
 ## Future dates for workshops
 
