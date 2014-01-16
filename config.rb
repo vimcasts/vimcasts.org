@@ -58,7 +58,7 @@ page "/episodes.json", layout: false
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 
-proxy "/episodes/all", "/episodes-all.html"
+proxy "/episodes/all.html", "/episodes-all.html"
 
 ###
 # Helpers
