@@ -1,5 +1,5 @@
 --- 
-:title: "Macbook Pro for sale - \xC3\x82\xC2\xA3900"
+:title: "Macbook Pro for sale - £900"
 :date: 2013/06/03
 
 ---
