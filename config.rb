@@ -60,6 +60,29 @@ page "/episodes.json", layout: false
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 
+def transcript_count
+  Dir[File.join('source', 'transcripts', '*')].count do |file|
+    File.file?(file)
+  end
+end
+
+def extract_number_from_path(glob)
+  Dir[glob].map { |path| path.slice(/\d+/) }
+end
+
+glob = File.join("source", "transcripts", "*", "en.md")
+extract_number_from_path(glob).each do |number|
+  proxy "/episodes/#{number}/transcript.html", "/transcripts/#{number}/en.html"
+end
+
+languages = %w{fr}
+languages.each do |lang|
+  glob = File.join("source", "transcripts", "*", "#{lang}.md")
+  extract_number_from_path(glob).each do |number|
+    proxy "/episodes/#{number}/transcript/#{lang}.html", "/transcripts/#{number}/#{lang}.html"
+  end
+end
+
 proxy "/episodes/all.html", "/episodes-all.html"
 
 ###
