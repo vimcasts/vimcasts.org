@@ -96,7 +96,7 @@ proxy "/episodes/all.html", "/episodes-all.html"
 activate :directory_indexes
 
 # Reload the browser automatically whenever files change
-# activate :livereload
+activate :livereload
 
 # Methods defined in the helpers block are available in templates
 # helpers do
