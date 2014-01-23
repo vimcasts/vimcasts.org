@@ -137,6 +137,9 @@ configure :build do
       redirect "e/#{n}.html", to: episode.path
       redirect "e/#{n}/t.html", to: "/episodes/#{n}/transcript"
     end
+    # blog(:blog).articles.each do |post|
+    #   redirect post.path, to: post.destination_path
+    # end
   end
 
 end
