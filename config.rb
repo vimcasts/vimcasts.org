@@ -2,6 +2,8 @@ require 'pry'
 require 'lib/aggregator'
 activate :aggregator
 
+I18n.enforce_available_locales = false
+
 ###
 # Blog settings
 ###
