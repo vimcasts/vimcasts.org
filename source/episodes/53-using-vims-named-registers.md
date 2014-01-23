@@ -1,6 +1,7 @@
 --- 
 :title: Using Vim's named registers
 :date: 2013/10/04
+:tags: registers
 :poster: /images/posters/named-registers.png
 :flattr_id: ""
 :duration: 209

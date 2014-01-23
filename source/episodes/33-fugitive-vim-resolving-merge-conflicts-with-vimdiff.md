@@ -1,6 +1,7 @@
 --- 
 :title: Fugitive.vim - resolving merge conflicts with vimdiff
 :date: 2011/05/06
+:tags: fugitive
 :poster: /images/posters/fugitive_3.png
 :flattr_id: "184250"
 :duration: 695

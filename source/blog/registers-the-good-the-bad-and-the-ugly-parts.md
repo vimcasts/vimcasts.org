@@ -1,6 +1,7 @@
 --- 
 :title: "Registers: the Good, the Bad, and the Ugly Parts"
 :date: 2013/11/25
+:tags: registers
 
 ---
 

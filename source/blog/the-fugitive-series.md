@@ -1,6 +1,7 @@
 --- 
 :title: The Fugitive Series - a retrospective
 :date: 2011/05/18
+:tags: fugitive
 
 ---
 

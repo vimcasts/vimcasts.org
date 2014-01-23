@@ -1,6 +1,7 @@
 --- 
 :title: Getting Vim with `+clipboard` support
 :date: 2013/11/13
+:tags: registers
 
 ---
 

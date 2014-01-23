@@ -1,6 +1,7 @@
 --- 
 :title: Fugitive.vim - a complement to command line git
 :date: 2011/04/22
+:tags: fugitive
 :poster: /images/posters/fugitive_1.png
 :flattr_id: "173139"
 :duration: 507

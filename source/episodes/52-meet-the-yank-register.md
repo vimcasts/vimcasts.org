@@ -1,6 +1,7 @@
 --- 
 :title: Meet the yank register
 :date: 2013/09/30
+:tags: registers
 :poster: /images/posters/yank-register.png
 :flattr_id: ""
 :duration: 269

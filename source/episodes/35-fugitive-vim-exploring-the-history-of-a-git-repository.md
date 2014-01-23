@@ -1,6 +1,7 @@
 --- 
 :title: Fugitive.vim - exploring the history of a git repository
 :date: 2011/05/18
+:tags: fugitive
 :poster: /images/posters/fugitive_5.png
 :flattr_id: "277398"
 :duration: 604

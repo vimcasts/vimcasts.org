@@ -1,6 +1,7 @@
 --- 
 :title: Writing a custom fold expression
 :date: 2012/11/26
+:tags: folding
 :poster: /images/posters/custom_foldexpr.png
 :flattr_id: "1033505"
 :duration: 727

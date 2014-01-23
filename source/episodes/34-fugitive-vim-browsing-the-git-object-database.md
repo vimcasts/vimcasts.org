@@ -1,6 +1,7 @@
 --- 
 :title: Fugitive.vim - browsing the git object database
 :date: 2011/05/13
+:tags: fugitive
 :poster: /images/posters/fugitive_4.png
 :flattr_id: "271805"
 :duration: 585
