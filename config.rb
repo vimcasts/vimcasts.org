@@ -1,3 +1,4 @@
+require 'pry'
 require 'lib/aggregator'
 activate :aggregator
 
@@ -139,3 +140,6 @@ configure :build do
   end
 
 end
+
+# Uncomment next line to use Pry as a console
+# ready { binding.pry }

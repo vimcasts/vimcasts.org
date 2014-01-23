@@ -8,6 +8,7 @@ GEM
     atomic (1.1.14)
     builder (3.2.2)
     chunky_png (1.2.9)
+    coderay (1.0.9)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -34,6 +35,7 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
+    method_source (0.8.1)
     middleman (3.2.1)
       coffee-script (~> 2.2.0)
       compass (>= 0.12.2)
@@ -69,6 +71,10 @@ GEM
       sprockets-sass (~> 1.0.0)
     multi_json (1.8.4)
     nokogiri (1.5.10)
+    pry (0.9.12.2)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.4)
     rack (1.5.2)
     rack-livereload (0.3.15)
       rack
@@ -80,6 +86,7 @@ GEM
     rb-kqueue (0.2.0)
       ffi (>= 0.5.0)
     sass (3.2.13)
+    slop (3.4.5)
     sprockets (2.10.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -109,4 +116,5 @@ DEPENDENCIES
   middleman-blog (~> 3.5.1)
   middleman-livereload (~> 3.1.0)
   nokogiri
+  pry
   wdm (~> 0.1.0)
