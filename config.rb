@@ -154,5 +154,14 @@ configure :build do
 
 end
 
+def save_tags_to_yaml
+  tags = (blog(:blog).tags.keys + blog(:episodes).tags.keys).uniq
+  File.open('data/categories.yml', 'w') { |f| f.write tags.to_yaml }
+end
+
+ready do
+  save_tags_to_yaml
+end
+
 # Uncomment next line to use Pry as a console
 # ready { binding.pry }
