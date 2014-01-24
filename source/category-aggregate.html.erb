@@ -1,8 +1,0 @@
-<h1>Articles tagged '<%= tagname %>'</h1>
-
-<ul>
-  <% aggregate_by_tag(tagname).each do |article| %>
-    <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
-  <% end %>
-</ul>
-
