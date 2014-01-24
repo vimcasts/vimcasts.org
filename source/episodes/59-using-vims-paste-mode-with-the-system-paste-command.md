@@ -19,7 +19,6 @@ When Vim is compiled without the `+clipboard` feature, we can still insert text 
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 If you [copy this snippet of JavaScript][gist], then use the system paste command (`ctrl-v`, or `cmd-v` for mac users) to paste it into a Vim session running in the terminal, you might end up with something that looks like this:
 

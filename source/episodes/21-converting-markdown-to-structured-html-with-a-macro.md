@@ -19,7 +19,6 @@ Recording your keystrokes as a macro can be a great timesaver, but you have to b
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 The demonstration in this video uses a range of techniques to construct a
 macro that can be replayed reliably, including text objects, the surround

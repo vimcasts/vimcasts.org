@@ -23,7 +23,6 @@
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 Using the `:Git` command, you can run any arbitrary git command from inside Vim. I prefer to switch to the shell for anything that generates a log of output, such as `git log` for example. But commands that generate little or no output are fair game for running from inside Vim (`:Git checkout -b experimental` for example).
 

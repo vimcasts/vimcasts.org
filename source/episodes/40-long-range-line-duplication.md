@@ -19,7 +19,6 @@ When writing code, we can often save time by duplicating a line then changing on
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 ### The brief
 

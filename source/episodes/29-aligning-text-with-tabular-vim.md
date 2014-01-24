@@ -20,7 +20,6 @@ There are times when you can improve the readability of your code by lining up t
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 In this episode, I introduce the [Tabular.vim][t] plugin, by [Matt Wozniski][matt], which makes it easy to align regions of text that match a pattern.
 

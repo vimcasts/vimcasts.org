@@ -18,7 +18,6 @@ The `:argdo` command allows us to execute an Ex command across all buffers in th
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 The `argdo` command works like this:
 

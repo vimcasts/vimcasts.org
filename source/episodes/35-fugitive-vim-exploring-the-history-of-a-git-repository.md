@@ -22,7 +22,6 @@ Git provides tools for searching the contents of files, commit messages, and eve
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 ### Browsing past revisions of a file
 

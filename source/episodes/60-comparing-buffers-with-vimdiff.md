@@ -18,7 +18,6 @@ Vim's diff mode allows us to easily compare the contents of two (or more) buffer
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 ### Using vimdiff to compare two files
 

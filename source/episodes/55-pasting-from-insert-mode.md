@@ -24,7 +24,6 @@ We don't have to be in Normal mode to paste the contents of a register. The [`<C
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 In Insert mode, we can use the [`<C-r>{reg}`][cr] command to paste the contents from any of Vim's registers. For example, pressing `<C-r>a` would insert the contents of named register 'a', while pressing `<C-r>0` would insert the contents of [the yank register][yank-register]. In Vim's documentation, it lists a few more registers that can be useful in this context:
 

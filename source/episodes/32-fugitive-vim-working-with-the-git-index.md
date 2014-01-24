@@ -21,7 +21,6 @@ The fugitive plugin provides an interactive status window, where you can easily 
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 ### The Gstatus window
 

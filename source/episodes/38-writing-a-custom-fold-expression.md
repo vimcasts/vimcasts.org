@@ -19,7 +19,6 @@ With a little bit of Vimscript, you can create a custom folding expression for a
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 Here's [a gist of the markdown folding expression][gist] that was created in the video. 
 

@@ -19,7 +19,6 @@ HAML and ERB are two commonly used ruby templating languages. You may have a str
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 This is not intended to be a complete solution for converting haml files to erb. Indeed, there may be better ways to approach this problem (and if you know of any, I'd be glad to hear about them in the comments below). The point of this demonstration is to showcase some of the things that you can acheive using Vim's macros. You may encounter other scenarios where these techniques come in useful.
 

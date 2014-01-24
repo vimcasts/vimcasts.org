@@ -19,7 +19,6 @@ If you want to edit several adjacent lines with a similar format, you might save
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 [Visual block mode][v_block] allows you to select a rectangular section of text. From normal mode, you can enter visual block mode by pressing `ctrl-v`. 
 

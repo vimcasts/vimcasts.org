@@ -24,7 +24,6 @@ We've met Vim's [default register][quotequote] and the [yank register][quote0]. 
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 From Vim's documentation (see [`:h quote_alpha`][quote_alpha]):
 

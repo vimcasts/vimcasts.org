@@ -18,7 +18,6 @@ The arglist wouldn't be much use if we had to quit and relaunch Vim every time w
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 When run with no arguments, the `:args` command reveals the contents of the arglist. But when a valid `{arglist}` is passed to the `:args` command it sets the contents of the arglist:
 

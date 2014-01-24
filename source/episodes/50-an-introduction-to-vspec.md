@@ -21,7 +21,6 @@
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 Vspec lets you write tests for you Vimscript code, following a format that resembles [rspec][]. We can use a `describe` block to specify a context, then wrap each individual test in an `it` block. Each of these blocks is closed with an `end` keyword, just like in ruby:
 

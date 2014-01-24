@@ -22,7 +22,6 @@ Vim's default register is not a safe place to keep yanked text that you want to 
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 From Vim's documentation ([`:help quote0`][quote0]):
 

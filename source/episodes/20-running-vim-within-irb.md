@@ -19,7 +19,6 @@ If you work with ruby you will know that the interactive ruby shell, or 'IRB' fo
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 IRB is great for trying out one liners, but if you need to sketch longer
 blocks of ruby, it soon falls down. 

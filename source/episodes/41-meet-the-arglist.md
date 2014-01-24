@@ -18,7 +18,6 @@ The arglist feature complements Vim's buffer list. In this episode, we'll learn 
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 Vim keeps a record of the filepaths specified on launch in the argument list (or 'arglist').
 

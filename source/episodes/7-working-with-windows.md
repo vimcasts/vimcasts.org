@@ -20,7 +20,6 @@ In Vim, you can view several buffers at once by loading them into multiple windo
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 ###Opening split windows
 

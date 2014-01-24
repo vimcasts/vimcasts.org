@@ -19,7 +19,6 @@ Vim's `list` feature can be used to reveal hidden characters, such as tabstops a
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 Put the following in your `.vimrc` file:
 

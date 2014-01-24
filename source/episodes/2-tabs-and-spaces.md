@@ -19,7 +19,6 @@ Vim offers very granular control over whitespace. This episode explains the purp
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 The following combinations are demonstrated in the video:
 

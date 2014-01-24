@@ -18,7 +18,6 @@ The vimrc file allows you to preserve your settings so that they are restored ea
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 ###Sourcing the vimrc file
 

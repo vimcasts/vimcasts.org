@@ -19,7 +19,6 @@ Vim's modal editing paradigm - the newbie killer - brings tremendous efficiency 
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 In the video, I demonstrate that `A` plays better with the `.` command than it's longhand equivalent: `$a`. The dot command replays the last edit, but it does not replay motions such as `$`. The `A` command compresses the *move to line end* motion with the *append* command into a single edit, making the motion implicit, and therefore repeatable with the `.` command.
 

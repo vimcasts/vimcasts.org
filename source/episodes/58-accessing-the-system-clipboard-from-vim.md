@@ -20,7 +20,6 @@ In some environments, Vim lets us access the system clipboard using the quoteplu
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 This is an abridged quote from Vim's documentation (see [`:h quoteplus`][quoteplus]):
 

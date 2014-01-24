@@ -19,7 +19,6 @@ Vim's treatment of tabs is a little different than what you might be used to if 
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 You can reveal the current directory with the command:
 

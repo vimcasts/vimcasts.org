@@ -19,7 +19,6 @@ Choosing a colorscheme that you find pleasing to look at is essential if you wan
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 ### Revealing syntax groups
 

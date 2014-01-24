@@ -19,7 +19,6 @@ It is sometimes preferable to format text with hard wrapped lines, for example w
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 The `gq{motion}` command will format a section of text. The `ip` motion selects the current paragraph, so `gqip` applies formatting to the current paragraph.
 

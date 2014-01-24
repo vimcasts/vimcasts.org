@@ -24,7 +24,6 @@ With the fugitive plugin, you're not limited to just working with files in your 
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 ### Reading a file from any git branch
 

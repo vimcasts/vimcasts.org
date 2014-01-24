@@ -20,7 +20,6 @@ Demonstrating miscellaneous tips and tricks gleaned whilst making an ASCII art v
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 In this episode, I demonstrate how to make an [ASCII art][ascii] version of the [Vimcasts.org logo][logo]. Rather than focussing on a single feature, I demonstrate a handful of miscellaneous tips and tricks as they come up in the course of editing the ASCII art. 
 

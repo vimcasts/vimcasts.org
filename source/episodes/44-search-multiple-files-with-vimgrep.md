@@ -18,7 +18,6 @@
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 Have you ever wished that Vim would report your position as you navigate through search matches? For example, by saying: 'match 2 out of 5'.
 

@@ -23,7 +23,6 @@ The [abolish plugin][abolish] provides a command called `:Subvert`, which is lik
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 In [Episode 47](/e/47), we saw how the `:Subvert` command can be used as a smart search command. In this episode, we learn about this form of the `:Subvert` command:
 

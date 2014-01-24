@@ -19,7 +19,6 @@ This episode demonstrates how Vim's native file browser can be used to explore a
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 The video demonstrates some of the functionality of the [netrw][netrw_plugin] plugin, which is usually distributed with Vim. Note that if the [NERD_tree][ntree_plugin] is installed, then the functionality described in this episode won't work for you.
 

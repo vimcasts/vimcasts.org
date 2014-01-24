@@ -18,7 +18,6 @@ TextMate has a few built in commands for moving selected text around a document.
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 In TextMate, the commands for moving selected text can be found under the "Text > Move Selection" menu. I find "move selected line up" to be an acurate but dull description. Personally, I prefer to call this feature *text bubbling*. 
 

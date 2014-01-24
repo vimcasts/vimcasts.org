@@ -22,7 +22,6 @@ Vim's built-in abbreviation feature is handy if you want to auto-correct words t
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 Vim's built-in [abbreviations][ab] feature can provide auto-correct functionality. For example, we could make Vim auto-correct 'colour' (the British spelling) to 'color' (the American spelling) by running this command:
 

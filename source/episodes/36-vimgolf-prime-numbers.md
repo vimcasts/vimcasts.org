@@ -21,7 +21,6 @@ For the VimGolf challenge ["List the first 100 prime numbers"][primes], there's 
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 Here's the full solution (with a running keystroke tally):
 

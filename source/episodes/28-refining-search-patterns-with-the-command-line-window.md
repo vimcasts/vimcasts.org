@@ -18,7 +18,6 @@ When you need to build a complex command, or devise a non-trivial search pattern
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 Commandline mode
 ----------------

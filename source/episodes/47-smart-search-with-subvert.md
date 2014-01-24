@@ -20,7 +20,6 @@ The `:Subvert` command lets us create a particular style of regular expressions 
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 The `:Subvert` command lets us generate a pattern based on 
 

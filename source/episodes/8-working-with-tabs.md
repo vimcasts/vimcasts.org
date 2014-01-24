@@ -19,7 +19,6 @@ This episode covers the essential commands for working with Vim's tab pages: ope
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 ###Opening & closing tabs
 

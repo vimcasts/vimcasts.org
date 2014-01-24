@@ -19,7 +19,6 @@ Introducing the buffer list, and commands for switching between buffers. This ep
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 ###Working with buffers
 

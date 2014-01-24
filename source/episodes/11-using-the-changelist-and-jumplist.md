@@ -19,7 +19,6 @@ This episode introduces the changelist and jumplist, demonstrating a couple of s
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 ### The Changelist
 

@@ -22,7 +22,6 @@ Vim's [default register][quotequote] makes it easy to perform some of the most b
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 From Vim's documentation ([`:h quotequote`][quotequote]):
 

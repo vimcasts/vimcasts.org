@@ -19,7 +19,6 @@
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 [Par][par] was written by Adam Costello in 1993, aiming to do one narrow task: reformat a single paragraph that might have a border on either side. The [documentation][par_doc] is terse, and the author apologises for the implementation being unclean. Nevertheless, the program is stable, portable, and most important of all, extremely useful.
 

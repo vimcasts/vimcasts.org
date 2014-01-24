@@ -21,7 +21,6 @@ When git branches are merged, there is always the chance of a conflict arising i
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 ### `:Gdiff` on a conflicted file opens 3-way diff
 

@@ -22,7 +22,6 @@
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 Look up [`:help visual-search`][vs] in Vim's documentation, and you'll find a suggestion for this simple mapping:
 

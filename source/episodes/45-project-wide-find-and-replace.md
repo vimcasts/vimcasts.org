@@ -18,7 +18,6 @@ Vim doesn't have a built-in command for project-wide find and replace operations
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 In the video, I find all occurrences of `Vimcasts.com` and change them to `Vimcasts.org`. I show two different ways of doing it. This builds on material that was introduced in episodes [41][], [42][], [43][], and [44][].
 

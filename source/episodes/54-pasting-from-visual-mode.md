@@ -22,7 +22,6 @@ When used [in Visual mode the `p` command][v_p] replaces the selection with the 
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 From Vim's documentation (see [`:help v_p`][v_p]):
 

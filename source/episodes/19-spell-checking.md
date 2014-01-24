@@ -19,7 +19,6 @@ Using a spell checker is a good habit to get into.  In this episode, I demonstra
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 Spell checking is enabled by running `:set spell`. I like to be able to quickly toggle spell checking on and off, so I keep the following in my .vimrc:
 

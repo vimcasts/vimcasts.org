@@ -19,7 +19,6 @@ This episode demonstrates a few techniques for tidying up whitespace.  First, it
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 ###Converting between tabs and spaces
 

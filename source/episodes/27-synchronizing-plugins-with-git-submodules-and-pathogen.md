@@ -20,7 +20,6 @@ If you use Vim on muliple machines, it can be difficult to keep your configurati
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 ## Keep your dotfiles in git
 

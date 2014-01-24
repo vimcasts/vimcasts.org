@@ -21,7 +21,6 @@ The [expression register][quote=] lets us evaluate a snippet of Vimscript code. 
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 From Insert mode, pressing `<C-r>=` drops us into the [expression register][quote=]. We can enter any Vimscript expression. On pressing Enter, Vim evaluates the expression, and inserts the result into the document. For example, if we entered  `2*21` into the expression register, Vim would insert `42` into the document.
 

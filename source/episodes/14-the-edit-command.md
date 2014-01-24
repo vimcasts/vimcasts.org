@@ -19,7 +19,6 @@ This episode focuses on the `:edit` command. I demonstrate how to open files who
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 Depending on what arguments you supply, the `:edit` command may do one of 3 things:
 

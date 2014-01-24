@@ -20,7 +20,6 @@ Vim's folding feature enables us to expand and collapse regions of a document. N
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 ## Methods of folding
 

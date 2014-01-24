@@ -19,7 +19,6 @@ Different file types may require particular whitespace settings. For example, YA
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 Put the following in your `.vimrc` file:
 

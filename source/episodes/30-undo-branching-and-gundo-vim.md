@@ -18,7 +18,6 @@ The undo command is almost universally available in software today. Being able t
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 Vim maintains your undo history in a tree structure. This is a powerful feature, which lets you switch back to any previous state of your document (up to the value of [`undolevels`][ul]), but it's not easy to understand. Vim's interface to the undo tree is made up of the familiar undo and redo operations, as well as a handful of ways to traverse the list of changes in chronological order. These commands enable you to shine a light on every corner of the undo tree, but it can still be difficult to get a sense of what you are looking at. Nodes that are adjacent in chronological order may be several steps apart on the graph.
 

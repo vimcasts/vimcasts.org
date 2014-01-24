@@ -19,7 +19,6 @@ Long lines of text can be wrapped if they don't fit inside the window. By defaul
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 If you want to make Vim wrap long lines to fit in the window, you first have to enable `:set wrap`. By default Vim will break lines at exactly the width of the window, which causes some words to be split across two lines. To prevent this from happening, you can enable `:set linebreak`. 
 

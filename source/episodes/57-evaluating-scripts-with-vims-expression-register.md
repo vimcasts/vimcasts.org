@@ -20,7 +20,6 @@ In [the previous lesson][previous] we learned how use the expression register to
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 ### Calling functions from Vimscript standard library
 

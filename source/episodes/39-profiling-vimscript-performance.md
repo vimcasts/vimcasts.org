@@ -18,7 +18,6 @@ Vim users are unforgiving of plugins that impair performance. Luckily, Vim provi
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 In the video, I demonstrate how profiling enabled me to locate a bottleneck in my `markdown-folding` script. I used a 1500 line markdown file as a test case. The first attempt at a solution took 5 seconds to execute, the second solution ran in about 1 second, and the final solution took just 100 miliseconds. You can follow the same process by [reading the discussion on github][issue].
 

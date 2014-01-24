@@ -19,7 +19,6 @@ This episode covers the commands for shifting text left and right (`<` and `>`),
 
 READMORE
 
-<r:snippet name="announcement"/>
 
 To add TextMate's key mappings, put the following in your `.vimrc`:
 
