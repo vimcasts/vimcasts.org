@@ -19,8 +19,6 @@
 
 <p></p>
 
-<r:snippet name="announcement" />
-
 <p>From Insert mode, pressing <code>&lt;C-r&gt;=</code> drops us into the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote=">expression register</a>. We can enter any Vimscript expression. On pressing Enter, Vim evaluates the expression, and inserts the result into the document. For example, if we entered  <code>2*21</code> into the expression register, Vim would insert <code>42</code> into the document.</p>
 
 <p>In general, we can think of Vim's registers as being variables that hold a string of text, but the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote=">expression register</a> is different. This register behaves like a scratchpad that lets us evaluate Vimscript code. If the return value is a string, or if it can be coerced to a string, then Vim will use the result just as though it had been retrieved from any other register.</p>

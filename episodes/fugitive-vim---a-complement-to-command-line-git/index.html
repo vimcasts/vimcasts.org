@@ -21,8 +21,6 @@
 
 <p></p>
 
-<r:snippet name="announcement" />
-
 <p>Using the <code>:Git</code> command, you can run any arbitrary git command from inside Vim. I prefer to switch to the shell for anything that generates a log of output, such as <code>git log</code> for example. But commands that generate little or no output are fair game for running from inside Vim (<code>:Git checkout -b experimental</code> for example).</p>
 
 <p>At Vim's command line, <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#cmdline-special">the <code>%</code> symbol has a special meaning</a>: it expands to the full path of the current file. You can use this to run any git command that expects a filepath as an argument, making the command act on the current file. But fugitive also provides a few convenience methods, some of which are summarized in this table:</p>
