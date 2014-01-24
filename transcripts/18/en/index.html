@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title></title>
+
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <p>'Do one thing and do it well' is the principle of the Unix toolkit. Editing text is a broad domain, and there are many related tasks with which it overlaps. Vim acknowledges this by enabling certain tasks to be outsourced to external programs which do that one thing, and do it well.  This episode will demonstrate how the <em>par</em> program can be used for formatting text.</p>
+
+<h2 id="introducing-par">Introducing par</h2>
+
+<p>Par was written by Adam Costello in 1993, aiming to do one narrow task: reformat a single paragraph that might have a border on either side. The documentation is terse, and the author apologises for the implementation being unclean. Nevertheless, the program is stable, portable, and most important of all, extremely useful.</p>
+
+<h2 id="outsourcing-formatting-with-formatprg">Outsourcing formatting with <code>formatprg</code></h2>
+
+<p>The <code>formatprg</code> setting can be used to specify an external program which will be called by the <code>gq</code> command. To tell Vim to use par for formatting, set the formatprg option as follows:</p>
+
+<pre><code>:set formatprg=par
+</code></pre>
+
+<p>Now, when I run <code>gqip</code>, the selected text is sent to par, then replaced with the program's output. Note that if I press <code>:</code> then the up cursor key, it shows the last command entered at the command line, which simply sets a range then passes it to the external program.</p>
+
+<h2 id="better-looking-output">Better looking output</h2>
+
+<p>Having set the <code>formatprg</code> option, the <code>gq</code> command calls par, but you can still use Vim's internal formatting engine by running the <code>gw</code> command instead.</p>
+
+<p>Lets compare the output from Vim's internal formatter with that from par. Both of these examples have been hard wrapped with a line length of 72 characters, but they look different. Vim's internal formatter uses a 'greedy' algorithm, which maximises the length of each line, within the specified limit. The algorithm used by par is more sophisticated: it attempts to make consecutive lines as close in length as possible, while never exceeding the specified limit. The output from par is more aesthetically pleasing.</p>
+
+<p>Excerpt from Leonardo's Kitchen notebook:</p>
+
+<pre><code>On Saffron in Wine
+
+Saffron added to wine makes you very drunk
+and foul-smelling as well as making the wine
+taste most strange. As there is no receipt
+which instructs you to add saffron to wine I
+am surprised that my friend Gaudio Fullente
+so frequently offers it to one, but then as
+he is drunk and foul-smelling at all times it
+is possible I am wrong in my condemnation of
+his drink and it is he for whom I should have
+contempt.
+
+Excerpt from Leonardo's Kitchen Note Books.
+</code></pre>
+
+<p>Demonstrate <code>gw</code> with <code>:set tw=72</code>.
+Demonstrate <code>gq</code> with <code>:set formatprg=par</code>.</p>
+
+<h2 id="ability-to-align-trailing-comments">Ability to align trailing comments</h2>
+
+<p>Not only does par's output look better, the program is capable of handling passages that would confuse Vim's internal formatter. Here, for example, each line of text is is wrapped with open and closing comments. If I run this through Vim's internal formatting engine, it mangles the text, but Par handles this gracefully.</p>
+
+<pre><code>|- Saffron added to wine makes you very     -|
+|- drunk and foul-smelling as well as       -|
+|- making the wine taste most strange. As   -|
+|- there is no receipt which instructs you  -|
+|- to add saffron to wine I am surprised    -|
+|- that my friend Gaudio Fullente so        -|
+|- frequently offers it to one, but then    -|
+|- as he is drunk and foul-smelling at all  -|
+|- times it is possible I am wrong in my    -|
+|- condemnation of his drink and it is he   -|
+|- for whom I should have contempt.         -|
+</code></pre>
+
+<h2 id="tweaking-pars-settings">Tweaking par's settings</h2>
+
+<p>If you run <code>par help</code> at the command line, you'll see a list of options that can be used to tweak the way the program behaves. You can specify these with the <code>formatprg</code> option as follows:</p>
+
+<pre><code>:set formatprg=par\ -w40
+</code></pre>
+
+<p>This tells par to use a maximum width of 40 columns. It is necessary to escape the space with a backslash, just like at the command line when referencing files with spaces in their name.</p>
+
+<p>I shall quickly demonstrate a handful of Par's options here.</p>
+
+<h3 id="repeat-blank-characters">Repeat blank characters</h3>
+
+<p>This excerpt includes several blank lines. When I ask par to format it, the blank lines are left unchanged. If I pass the <code>r</code> flag to par, it will pad out these so called 'bodiless' lines with spaces.</p>
+
+<h3 id="justify-text">Justify text</h3>
+
+<p>When par is run with the <code>j</code> flag, the text is justified. Note that this requires extra spaces to be inserted between some words, but par distributes these quite evenly.</p>
+
+<h3 id="expel-superfluous-lines">Expel superfluous lines</h3>
+
+<p>When par is run with the <code>e</code> flag, it strips out superfluous lines.</p>
+
+<h3 id="quotation-aware">Quotation aware</h3>
+
+<p>The <code>q</code> flag tells par to handle passages with nested quotations in plain text emails. When I run par without the <code>q</code> flag, it breaks the nested quote. Now when I run it with the <code>q</code> flag, it handles the nested quote properly.</p>
+
+<h2 id="conflict-with-vims-formatoptions">Conflict with Vim's <code>formatoptions</code></h2>
+
+<p>If the <code>textwidth</code> option is set to a value greater than zero, you can make Vim automatically insert line breaks as you type. To do so, you must ensure that the <code>formatoptions</code> setting includes the <code>t</code> flag. With these settings enabled, Vim applies it's own internal formatting as you compose text. You can always apply the <code>gq</code> command afterwards, to tidy up the formatting with par.</p>
+
+<h2 id="other-programs">Other programs</h2>
+
+<p>I've just grazed the surface of par. If you have any favourite settings you like to use with par, I'd be happy to hear about them in the comments. Also, if you know of any other external formatting programs besides par, I'd be happy to hear about their relative strengths and weaknesses.</p>
+
+  </body>
+
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Vim London January in review</title>
+
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <p>On Tuesday, 29th January, we held the 3rd meeting of Vim London. We had 5 short talks on the theme of <a href="http://www.meetup.com/Vim-London/events/97866502/">Speak Vim - operators and motions</a>. The talks weren't recorded, so I'm posting a retrospective here.</p>
+
+<p></p>
+
+<p>We had five short talks, which I'll summarize briefly here:</p>
+
+<h3 id="vim-grammar-by-tom-cammann">1. Vim Grammar, by Tom Cammann</h3>
+
+<p>Tom Camman kicked off the evening with an introduction to <a href="http://takac.github.com/2013/01/30/vim-grammar/">Vim's Grammar</a>. He illustrated Vim's Normal mode operations with a simple set of rules:</p>
+
+<p><a href="http://takac.github.com/assets/grammar-slide.html"><img src="/images/blog/vim-grammar.png" /></a></p>
+
+<p>Check out his <a href="http://takac.github.com/assets/grammar-slide.html">grammar slide</a> and be sure to click the 'Show optional' link. Tom has written up an <a href="http://takac.github.com/2013/01/30/vim-grammar/">Intro to Vim grammar</a> blog post, which nicely summarizes the material from his talk.</p>
+
+<h3 id="when-and-why-you-should-stay-out-of-visual-mode-by-drew-neil">2. When and why you should stay out of visual mode, by Drew Neil</h3>
+
+<p>I've published the <a href="https://speakerdeck.com/nelstrom/when-and-why-you-should-stay-out-of-visual-mode">slides for my presentation</a> on speakerdeck.</p>
+
+<script async="" class="speakerdeck-embed" data-id="871a0d204ced0130735122000a8d8021" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
+<p>In a nutshell: visual mode doesn't work well with the dot command. The dot command repeats your last change, which allows for a very efficient workflow when going through a set of similar changes. When performing a repetitive set of changes (where the dot command is your friend), you should prefer using Normal operations over Visual operations.</p>
+
+<p>This will be a familiar refrain if you've ever attended one of my Vim Masterclasses. I also cover this material in tip 23 of <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>. Essential further reading: <a href="http://whileimautomaton.net/2008/11/vimm3/operator">Operator, the true power of Vim</a>, by Kana Natsuno.</p>
+
+<h3 id="meet-easymotion-by-jack-franklin">3. Meet Easymotion, by Jack Franklin</h3>
+
+<p>Jack presented a lightning talk on the <a href="https://github.com/Lokaltog/vim-easymotion">easymotion</a> plugin by Kim Silkebaekken. He gave a live demonstration (no slides) of how the plugin allows you to rapidly move around a file. He also mentioned that his <a href="http://www.apress.com/9781430249320">Beginning jQuery</a> book was due to be released the next day. Congratulations to Jack on becoming a published author! (I'll show you the secret handshake next time we meet)</p>
+
+<h3 id="meet-surround-by-kris-jenkins">4. Meet Surround, by Kris Jenkins</h3>
+
+<p>Kris presented a lightning talk on <a href="https://github.com/tpope/vim-surround">surround</a>, an essential plugin from Tim Pope. Kris gave a live demonstration of some of the scenarios where the plugin can make life easier. You can find his <a href="https://github.com/krisajenkins/surround">demo files</a> github. He also explained the way that surround fits in with Vim's existing grammar rules.</p>
+
+<h3 id="custom-motions-in-vim-by-alex-young">5. Custom motions in Vim, by Alex Young</h3>
+
+<p>Alex closed the evening with a look at how to create custom motions using Vimscript. He's <a href="https://speakerdeck.com/aryoung/vim-london-custom-motions">published his slides</a> on speakerdeck:</p>
+
+<script async="" class="speakerdeck-embed" data-id="2f5cb0004cf9013041a3123139281814" data-ratio="1.2994923857868" src="//speakerdeck.com/assets/embed.js"></script>
+
+<p>Alex introduced the concept of operator-pending mode, and showed how <code>:omap</code> can be used to create motions that work in that mode. As case studies he looked at the <a href="http://www.vim.org/scripts/script.php?script_id=1905">camelcasemotion</a> and <a href="https://github.com/goldfeld/vim-seek">seek</a> plugins, discussing how they were implemented.</p>
+
+<h3 id="more">More</h3>
+
+<p><a href="https://twitter.com/robmil/status/296658616088395779">Inspired by the meetup</a>, Rob Miller published a new custom motion of his own: <a href="https://github.com/robmiller/vim-movar">movar</a>, which makes it easy to operate on variables in (so far) PHP, Javascript, and Ruby. Check it out!</p>
+
+<h3 id="up-next">Up next…</h3>
+
+<p>Vim London will meet again in February, on the last Tuesday of the month. We haven't picked a theme yet, but if you'd like to be involved in the discussion, then please join the <a href="https://groups.google.com/forum/?hl=en&amp;amp;fromgroups#!forum/vimlondon">Vim London google group</a>.</p>
+
+<p>It's disappointing that we didn't manage to record the talks this time around, but I hope to figure something out in time for the next meetup. If you can help, I'd love to hear from you.</p>
+
+
+  </body>
+
+</html>

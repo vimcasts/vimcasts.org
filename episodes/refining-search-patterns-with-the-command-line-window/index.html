@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Refining search patterns with the command-line window</title>
+
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <p>When you need to build a complex command, or devise a non-trivial search pattern, Vim's command-line mode can be rather limiting. In this episode, I will introduce the command-line window, which allows you to use the full power of Vim when editing search queries and commands.</p>
+
+<p></p>
+
+<r:snippet name="announcement" />
+
+<h2 id="commandline-mode">Commandline mode</h2>
+
+<p>When you press <code>:</code> or <code>/</code> in Vim, you go into commandline mode. This opens up a prompt at the bottom of the screen, where you can enter a command or a search pattern.</p>
+
+<p>In commandline mode, you can press <code>ctrl-p</code> to go backwards and <code>ctrl-n</code> to go forwards through your command history. The up and down arrow cursor keys also work.</p>
+
+<table>
+   <tr>
+     <th>command</th>
+     <th>action</th>
+   </tr>
+   <tr>
+     <td><code>ctrl-p</code></td>
+     <td>Show previous historical command/search</td>
+   </tr>
+   <tr>
+     <td><code>ctrl-n</code></td>
+     <td>Show next historical command/search</td>
+   </tr>
+   <tr>
+     <td><code>ctrl-f</code></td>
+     <td>Switch from commandline mode to the commandline window</td>
+   </tr>
+</table>
+
+<p>If you need to make extensive edits to a command, change to the commandline window by pressing <code>ctrl-f</code>.</p>
+
+<p>Note that <code>ctrl-f</code> is the default, but it can be customized using the <code>cedit</code> option. Read <a title="cedit" href="http://vimdoc.sourceforge.net/htmldoc/options.html#"><code>:help cedit</code></a> for more information.</p>
+
+<h2 id="the-commandline-window">The commandline window</h2>
+
+<p>The commandline window shows your last 20 search patterns or commands. You can move up and down through them with the <code>k</code> and <code>j</code> keys, and when you press <code>&lt;enter&gt;</code> it executes the command underneath the cursor.</p>
+
+<p>The cool thing about the command-line window is that it's a regular Vim buffer, so all of the editing commands that you are used to are available to you. This makes it extremely useful if you need to iterate on a search pattern.</p>
+
+<table>
+   <tr>
+     <th>command</th>
+     <th>action</th>
+   </tr>
+   <tr>
+     <td><code>q/</code></td>
+     <td>Open the commandline window with history of searches</td>
+   </tr>
+   <tr>
+     <td><code>q:</code></td>
+     <td>Open the commandline window with history of commands</td>
+   </tr>
+   <tr>
+     <td><code>ctrl-f</code></td>
+     <td>Switch from commandline mode to the commandline window</td>
+   </tr>
+</table>
+
+<p>Note that you can customize the number of commands that Vim remembers with the <a title="hi" href="http://vimdoc.sourceforge.net/htmldoc/options.html#"><code>history</code></a> setting.</p>
+
+<h2 id="replacing-prime-marks-with-curly-quotes">Replacing prime marks with curly quotes</h2>
+
+<p>In the video, I use the following example as a demonstration:</p>
+
+<pre><code>This string contains a 'quoted' word.
+This string contains 'two' quoted 'words'.
+This 'string doesn't make things easy'.
+</code></pre>
+
+<p>My intention is to replace the prime marks with curly double quotes, so that it looks like this:</p>
+
+<pre><code>This string contains a â€œquotedâ€ word.
+This string contains â€œtwoâ€ quoted â€œwordsâ€.
+This â€œstring doesn't make things easyâ€.
+</code></pre>
+
+<p>To create a suitable search pattern, I went through the following iterations:</p>
+
+<pre><code>\v'.+'
+\v'[^']+'
+\v'('\w|[^'])+'
+\v'(('\w|[^'])+)'
+</code></pre>
+
+<p>The final pattern works for each of my test cases, so I can use it for a substitution command as follows:</p>
+
+<pre><code>/\v'(('\w|[^'])+)'
+:%s//â€œ\1â€/gc
+</code></pre>
+
+<p>Here, I've left the search field blank in the substitution command, which tells Vim to use the most recent search. Alternatively, I could hard code the search pattern into the substitution command:</p>
+
+<pre><code>:%s/\v'(('\w|[^'])+)'/â€œ\1â€/gc
+</code></pre>
+
+<p>When making this substitution on an entire document, I use the <code>c</code> flag so that I can inspect each substitution before either doing it or skipping it.</p>
+
+<h3 id="homework">Homework</h3>
+
+<p>Note that this substitution command is not a complete solution for replacing prime marks with curly double quotes. It works for my 3 test cases, but there are other situations where it will fail. Here is one:</p>
+
+<pre><code>This string doesn't contain any quotes, isn't it.
+</code></pre>
+
+<p>Your homework, should you choose to accept it, is to refine the search pattern so that it handles this case appropriately. See if you can think up other failing test cases, and hone the substitution command to work for those as well. </p>
+
+<h3 id="further-reading">Further reading</h3>
+
+<ul>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#q:">:help q:</a> - the command line window</li>
+  <li><a title="cedit" href="http://vimdoc.sourceforge.net/htmldoc/options.html#">:help cedit</a> - the key used in Command-line mode to open the command-line window</li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:s">:help :s[ubstitute]</a> - the substitute command</li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:s_flags">:help :s_flags</a> - the flags for the substitute command</li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/magic">:help /magic</a> - searching with <em>very magic</em> mode</li>
+</ul>
+
+
+  </body>
+
+</html>

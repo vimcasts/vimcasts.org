@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>How to fold</title>
+
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <p>Vim's folding feature enables us to expand and collapse regions of a document. Not only does this allow us to organize our workspace, it also makes it easy to navigate around the document, and to rearrange entire sections as though they were single lines.</p>
+
+<p></p>
+
+<r:snippet name="announcement" />
+
+<h2 id="methods-of-folding">Methods of folding</h2>
+
+<p>Vim has several different methods for folding a document. You can read more about them by looking up <a href="http://vimdoc.sourceforge.net/htmldoc/fold.html#fold-methods"><code>:help fold-methods</code></a>. I don't want to go into much detail about these different methods, except to say that I've found using a <a href="http://vimdoc.sourceforge.net/htmldoc/fold.html#fold-expr">custom expression</a> to be the most useful method by far.</p>
+
+<p>For the purposes of the demonstration in this video, I used a markdown file, with the <a href="http://github.com/nelstrom/vim-markdown-folding"><code>markdown-folding</code></a> providing the fold expression. <a href="/e/38">Episode 38</a> will look at how the markdown folding expression is implemented, here we focus on <em>how to use</em> folding.</p>
+
+<h2 id="essential-folding-commands">Essential folding commands</h2>
+
+<p>Top of any Vim folding cheat sheet should be the <code>zi</code> command, which turns the folding functionality on and off. Here are the folding commands which I use most frequently:</p>
+
+<table>
+    <tr>
+        <th>command</th>
+        <th>effect</th>
+    </tr>
+    <tr>
+        <td><code>zi</code></td>
+        <td>switch folding on or off</td>
+    </tr>
+    <tr>
+        <td><code>za</code></td>
+        <td>toggle current fold open/closed</td>
+    </tr>
+    <tr>
+        <td><code>zc</code></td>
+        <td>close current fold</td>
+    </tr>
+    <tr>
+        <td><code>zR</code></td>
+        <td>open all folds</td>
+    </tr>
+    <tr>
+        <td><code>zM</code></td>
+        <td>close all folds</td>
+    </tr>
+    <tr>
+        <td><code>zv</code></td>
+        <td>expand folds to reveal cursor</td>
+    </tr>
+</table>
+
+<p>I recommend learning these commands first. The <code>za</code> command is so useful that you may want to consider mapping it to a single keystroke. Steve Losh suggests using this mapping:</p>
+
+<pre><code>nnoremap &lt;Space&gt; za
+</code></pre>
+
+<p>While <code>za</code> is great for opening folds, the <code>zc</code> command is often more suitable when you want to close a fold. If the current fold is already closed, then <code>zc</code> will close the parent fold.</p>
+
+<h2 id="navigating-the-unfolded-document">Navigating the unfolded document</h2>
+
+<p>Even when the document is fully unfolded, the fact that Vim knows where the folds start and finish gives us an additional method for moving around.</p>
+
+<table>
+    <tr>
+        <th>command</th>
+        <th>effect</th>
+    </tr>
+    <tr>
+        <td><code>zj</code></td>
+        <td>move down to top of next fold</td>
+    </tr>
+    <tr>
+        <td><code>zk</code></td>
+        <td>move up to bottom of previous fold</td>
+    </tr>
+</table>
+
+<p>The custom fold expression adds a whole new layer of semantics, which allows us to rapidly navigate the sections of the document.</p>
+
+<h2 id="more-folding-commands">More folding commands</h2>
+
+<p>Here are some more folding commands:</p>
+
+<table>
+    <tr>
+        <th>command</th>
+        <th>effect</th>
+    </tr>
+    <tr>
+        <td><code>zo</code></td>
+        <td>open current fold</td>
+    </tr>
+    <tr>
+        <td><code>zO</code></td>
+        <td>recursively open current fold</td>
+    </tr>
+    <tr>
+        <td><code>zc</code></td>
+        <td>close current fold</td>
+    </tr>
+    <tr>
+        <td><code>zC</code></td>
+        <td>recursively close current fold</td>
+    </tr>
+    <tr>
+        <td><code>za</code></td>
+        <td>toggle current fold</td>
+    </tr>
+    <tr>
+        <td><code>zA</code></td>
+        <td>recursively open/close current fold</td>
+    </tr>
+    <tr>
+        <td><code>zm</code></td>
+        <td>reduce `foldlevel` by one</td>
+    </tr>
+    <tr>
+        <td><code>zM</code></td>
+        <td>close all folds</td>
+    </tr>
+    <tr>
+        <td><code>zr</code></td>
+        <td>increase `foldlevel` by one</td>
+    </tr>
+    <tr>
+        <td><code>zR</code></td>
+        <td>open all folds</td>
+    </tr>
+</table>
+
+<h2 id="chaining-folding-commands">Chaining folding commands</h2>
+
+<p>Vim's folding commands operate at a low level. Sometimes, we have to chain a couple of these low level commands together to produce the desired result. For example, pressing <code>zMzv</code> has the effect of closing all open folds <em>apart from the one that the cursor is on</em> (see the video for a demonstration).</p>
+
+<h2 id="further-reading">Further reading</h2>
+
+<ul>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/fold.html#fold-commands"><code>:help fold-commands</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/fold.html#fold-methods"><code>:help fold-methods</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/fold.html#fold-expr"><code>:help fold-expr</code></a></li>
+  <li><a href="http://github.com/nelstrom/vim-markdown-folding">markdown-folding plugin</a></li>
+  <li><a href="https://github.com/sjl/dotfiles/blob/eea18b00b8c74943f5094fddf91d3c2a7e0a7242/vim/vimrc#L534">Steve Losh's fold mappings</a></li>
+</ul>
+
+
+  </body>
+
+</html>

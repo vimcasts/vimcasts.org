@@ -1,0 +1,21 @@
+---
+title: Episode archive
+blog: episodes
+---
+
+<h1>All Vimcasts episodes</h1>
+
+<section id="archive">
+  <% blog(:episodes).articles.group_by {|a| {year: a.date.year, month: a.date.strftime("%B")} }.each do |date, episodes| %>
+    <h3 class="archive"><%= date[:month] %> <%= date[:year] %></h3>
+    <% episodes.each do |episode| %>
+      <div>
+        <span class="episode_number"><small>#</small><%= episode.data.number %></span>
+        <% link_to episode, class: 'archive' do %>
+          <%= episode.title %>
+          <span>(<%= minute_second(episode.data.duration) %>)</span>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+</section>

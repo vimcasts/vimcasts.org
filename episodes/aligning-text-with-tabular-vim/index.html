@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Aligning text with Tabular.vim</title>
+
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <p>There are times when you can improve the readability of your code by lining up the elements on neighbouring lines. In this episode, I demonstrate how this can be achieved using the <a href="https://github.com/godlygeek/tabular">Tabular</a> plugin.</p>
+
+<p></p>
+
+<r:snippet name="announcement" />
+
+<p>In this episode, I introduce the <a href="https://github.com/godlygeek/tabular">Tabular.vim</a> plugin, by <a href="https://github.com/godlygeek/">Matt Wozniski</a>, which makes it easy to align regions of text that match a pattern.</p>
+
+<h3 id="aligning-assignments">Aligning assignments</h3>
+
+<p>Before:</p>
+
+<pre class="brush: ruby">
+one = 1
+two = 2
+three = 3
+four = 4
+</pre>
+
+<p>Running <code>:Tab /=</code> produces:</p>
+
+<pre class="brush: ruby">
+one   = 1
+two   = 2
+three = 3
+four  = 4
+</pre>
+
+<h3 id="colon-assignments">Colon assignments</h3>
+
+<p>There are a couple of different ways that colon assignments could be aligned. If we start with an example that is not aligned:</p>
+
+<pre class="brush: javascript">
+var video = {
+    metadata: {
+        title: "Aligning assignments"
+        h264Src: "/media/alignment.mov",
+        oggSrc: "/media/alignment.ogv"
+        posterSrc: "/media/alignment.png"
+        duration: 320,
+    }
+}
+</pre>
+
+<p>Select the inner block by positioning your cursor inside it and running <code>vi}</code> (enable _V_isual mode, and select _i_nner _B_race). Then you could run <code>:Tab/:</code> which would produce this result:</p>
+
+<pre class="brush: javascript">
+var video = {
+    metadata: {
+        title     : "Aligning assignments"
+        h264Src   : "/media/alignment.mov",
+        oggSrc    : "/media/alignment.ogv"
+        posterSrc : "/media/alignment.png"
+        duration  : 320,
+    }
+}
+</pre>
+
+<p>If you don't like stacking the colons in a column, you could use the <a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\zs"><code>\zs</code></a> atom to exclude the <code>:</code> character from the search match. Running <code>:Tab /:\zs</code> produces this result:</p>
+
+<pre class="brush: javascript">
+var video = {
+    metadata: {
+        title:      "Aligning assignments"
+        h264Src:    "/media/alignment.mov",
+        oggSrc:     "/media/alignment.ogv"
+        posterSrc:  "/media/alignment.png"
+        duration:   320,
+    }
+}
+</pre>
+
+<p>Be aware that if you work in a team, there may be a house style that you should follow.</p>
+
+<h3 id="table-markup">Table markup</h3>
+
+<p>Here is a scenario outline for cucumber steps, including a pipe-delimited table of examples:</p>
+
+<pre><code>Scenario Outline: eating
+  Given there are &amp;lt;start&amp;gt; cucumbers
+  When I eat &amp;lt;eat&amp;gt; cucumbers
+  Then I should have &amp;lt;left&amp;gt; cucumbers
+
+  Examples:
+    |start|eat|left|
+    |12|5|7|
+    |20|5|15|
+</code></pre>
+
+<p>With the cursor positioned anywhere in the table, running <code>:Tab/|</code> produces:</p>
+
+<pre><code>Scenario Outline: eating
+  Given there are &amp;lt;start&amp;gt; cucumbers
+  When I eat &amp;lt;eat&amp;gt; cucumbers
+  Then I should have &amp;lt;left&amp;gt; cucumbers
+
+  Examples:
+    | start | eat | left |
+    | 12    | 5   | 7    |
+    | 20    | 5   | 15   |
+</code></pre>
+
+<h2 id="creating-mappings">Creating mappings</h2>
+
+<p>If you find yourself using a particular token for alignment often, then you might want to save yourself a few keystrokes by creating mappings for normal and visual modes. Here are a few suggestions to get you started:</p>
+
+<pre class="brush: vimscript">
+    let mapleader=','
+    if exists(&quot;:Tabularize&quot;)
+      nmap &lt;Leader&gt;a= :Tabularize /=&lt;CR&gt;
+      vmap &lt;Leader&gt;a= :Tabularize /=&lt;CR&gt;
+      nmap &lt;Leader&gt;a: :Tabularize /:\zs&lt;CR&gt;
+      vmap &lt;Leader&gt;a: :Tabularize /:\zs&lt;CR&gt;
+    endif
+</pre>
+
+<p>If you were in normal or visual mode, you could type <code>,a=</code> to align equals signs. In visual mode, the alignment would apply to the selected lines, but in normal mode tabular would attempt to guess the range.</p>
+
+<p>You could take it a step further, by creating an insert mode mapping to trigger the <code>:Tabular</code> command when you type the character that you want to align. Tim Pope shows us how in this <a href="https://gist.github.com/287147">gist</a>:</p>
+
+<pre class="brush: vimscript">
+inoremap &lt;silent&gt; &lt;Bar&gt;   &lt;Bar&gt;&lt;Esc&gt;:call &lt;SID&gt;align()&lt;CR&gt;a
+
+function! s:align()
+  let p = '^\s*|\s.*\s|\s*$'
+  if exists(':Tabularize') &amp;&amp; getline('.') =~# '^\s*|' &amp;&amp; (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+    let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+    let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+    Tabularize/|/l1
+    normal! 0
+    call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+  endif
+endfunction
+</pre>
+
+<p>If you put this in your vimrc file, then it will call the <code>:Tabularize</code> command each time you insert a <code>|</code> character.</p>
+
+<h3 id="further-reading">Further reading</h3>
+
+<ul>
+  <li>the <a href="https://github.com/godlygeek/tabular">Tabular</a> plugin</li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\zs">:help /\zs</a> - Vim's zero-width 'pattern start' search atom</li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\@&amp;lt;=">:help /\@&lt;=</a> - Vim also has a 'positive lookbehind' assertion</li>
+  <li>Tim Pope's <a href="https://gist.github.com/287147">insert mode cucumber alignment gist</a></li>
+  <li><a href="http://www.vim.org/scripts/script.php?script_id=294">Align.vim</a> by Charles Campbell - another fine alignment plugin</li>
+</ul>
+
+
+  </body>
+
+</html>

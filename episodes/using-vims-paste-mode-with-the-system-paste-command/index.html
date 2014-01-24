@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Using Vim's paste mode with the system paste command</title>
+
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <p>When Vim is compiled without the <code>+clipboard</code> feature, we can still insert text from the clipboard using the system paste command (<code>ctrl-v</code> or <code>cmd-v</code>). This can produce strange effects, but we can avoid them by toggling the <code>paste</code> option each time we use the system paste command.</p>
+
+<p></p>
+
+<r:snippet name="announcement" />
+
+<p>If you <a href="https://gist.github.com/nelstrom/7416573">copy this snippet of JavaScript</a>, then use the system paste command (<code>ctrl-v</code>, or <code>cmd-v</code> for mac users) to paste it into a Vim session running in the terminal, you might end up with something that looks like this:</p>
+
+<pre><code>for (var i = 1; i &lt;= 100; i++) {
+      if (i % 15 == 0) {
+              console.log("FizzBuzz");
+                } else if (i % 3 == 0) {
+                        console.log("Fizz");
+                          } else if (i % 5 == 0) {
+                                  console.log("Buzz");
+                                    } else {
+                                            console.log(i);
+                                              }
+}
+</code></pre>
+
+<p>The problem is that when Vim runs inside a terminal, it can't distinguish between characters that are typed manually and those that are pasted. In this case, each time Vim creates a new line, it's autoindented. Add on top of that the indentation that was already present the source code, and we end up with each line drifting farther and farther to the right.</p>
+
+<p>We can avoid this by enabling the <code>paste</code> option, which temporarily disables several settings that can interfere when pasting text.</p>
+
+<pre><code>:set paste
+</code></pre>
+
+<p>With that option enabled, the system paste command should work in Insert mode just fine.</p>
+
+<h3 id="why-not-keep-paste-enabled-at-all-times">Why not keep 'paste' enabled at all times?</h3>
+
+<p>You might be thinking: Why not keep the <code>paste</code> option enabled at all times? Here's the gotcha: when the paste option is enabled, any abbreviations or mappings defined for Insert mode will be disabled. For example, suppose that you have this mapping set up, to swich from Insert to Normal mode by typing <code>kj</code>:</p>
+
+<pre><code>:inoremap kj &lt;Esc&gt;
+</code></pre>
+
+<p>If the <code>paste</code> option is enabled, then typing <code>kj</code> will insert those characters into the document. But with the <code>paste</code> option disabled, typing <code>kj</code> will behave just as though you pressed <code>&lt;Esc&gt;</code>.</p>
+
+<p>So remember: with the <code>paste</code> option enabled, you're safe to use the system paste command, but any user-defined Insert mode mappings will fail. For that reason, it's a good idea to turn off the <code>paste</code> option as soon as you're finished using it.</p>
+
+<p>If you're thinking of creating a mapping to make it easier to toggle the paste option, don't forget that your mapping won't work in Insert mode! Read Vim's documentation on <a title="pastetoggle" href="http://vimdoc.sourceforge.net/htmldoc/options.html#"><code>'pastetoggle'</code></a> to learn about a workaround.</p>
+
+<h3 id="the-unimpaired-workflow">The unimpaired workflow</h3>
+
+<p>I like the approach that's enabled by Tim Pope's <a href="https://github.com/tpope/vim-unimpaired">unimpaired plugin</a>. In <a href="https://github.com/tpope/vim-unimpaired/blob/a029dc28ebc1ba5953cd5b0ef9a50bd0ffba3aa4/doc/unimpaired.txt#L88-L94">the documentation</a>, he notes that:</p>
+
+<blockquote>
+  <p>you toggle twice, but you only paste once (<a href="https://github.com/tpope/vim-unimpaired/blob/a029dc28ebc1ba5953cd5b0ef9a50bd0ffba3aa4/doc/unimpaired.txt#L88-L94">YOPO</a>).</p>
+</blockquote>
+
+<p>Unimpaired provides a <code>yo</code> mapping. Just like the regular <code>o</code> command, it opens a new line and switches to Insert mode, but the <code>yo</code> variant also enables the <code>paste</code> option making it safe to use the system paste command. It uses an autocommand to disable the <code>paste</code> option when you return to Normal mode. That's a much neater workflow than having to toggle the <code>paste</code> option on and off again manually.</p>
+
+<h3 id="further-reading">Further reading</h3>
+
+<ul>
+  <li><a title="paste" href="http://vimdoc.sourceforge.net/htmldoc/options.html#">:h 'paste'</a></li>
+  <li><a title="pastetoggle" href="http://vimdoc.sourceforge.net/htmldoc/options.html#">:h 'pastetoggle'</a></li>
+  <li><a href="https://github.com/tpope/vim-unimpaired">vim-unimpaired</a> provides a smoother workflow - <a href="https://github.com/tpope/vim-unimpaired/blob/a029dc28ebc1ba5953cd5b0ef9a50bd0ffba3aa4/doc/unimpaired.txt#L88-L94">"you only paste once"</a></li>
+</ul>
+
+
+  </body>
+
+</html>

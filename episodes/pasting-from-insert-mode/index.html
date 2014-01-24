@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Pasting from Insert mode</title>
+
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <p>We don't have to be in Normal mode to paste the contents of a register. The <a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r"><code>&lt;C-r&gt;{reg}</code></a> command lets us paste a register from Insert mode (and it <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-r">works in commandline mode too</a>!) Using this command allows us to make changes that can be repeated with <a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#.">the dot command</a>.</p>
+
+<p></p>
+
+<r:snippet name="announcement" />
+
+<p>In Insert mode, we can use the <a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r"><code>&lt;C-r&gt;{reg}</code></a> command to paste the contents from any of Vim's registers. For example, pressing <code>&lt;C-r&gt;a</code> would insert the contents of named register 'a', while pressing <code>&lt;C-r&gt;0</code> would insert the contents of <a href="/e/52">the yank register</a>. In Vim's documentation, it lists a few more registers that can be useful in this context:</p>
+
+<table>
+  <tr>
+    <th>register</th>
+    <th>description</th>
+    <tr>
+    <td><code>"</code></td>
+    <td>the default register</td>
+    </tr>
+    <tr>
+    <td><code>%</code></td>
+    <td>the current file name</td>
+    </tr>
+    <tr>
+    <td><code>#</code></td>
+    <td>the alternate file name</td>
+    </tr>
+    <tr>
+    <td><code>*</code></td>
+    <td>the clipboard contents (X11: primary selection)</td>
+    </tr>
+    <tr>
+    <td><code>+</code></td>
+    <td>the clipboard contents</td>
+    </tr>
+    <tr>
+    <td><code>/</code></td>
+    <td>the last search pattern</td>
+    </tr>
+    <tr>
+    <td><code>:</code></td>
+    <td>the last command-line</td>
+    </tr>
+    <tr>
+    <td><code>.</code></td>
+    <td>the last inserted text</td>
+    </tr>
+    <tr>
+    <td><code>-</code></td>
+    <td>the last small (less than a line) delete</td>
+    </tr>
+  </tr>
+</table>
+
+<p>Note that the <code>&lt;C-r&gt;{reg}</code> commands can also be used at Vim's command line.</p>
+
+<h3 id="variations-on-c-rreg">Variations on <code>&lt;C-r&gt;{reg}</code></h3>
+
+<p>The <code>&lt;C-r&gt;{reg}</code> command comes with a few variations, including <a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r_ctrl-r"><code>&lt;C-r&gt;&lt;C-r&gt;{reg}</code></a>,  <a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r_ctrl-o"><code>&lt;C-r&gt;&lt;C-o&gt;{reg}</code></a>, <a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r_ctrl-p"><code>&lt;C-r&gt;&lt;C-p&gt;{reg}</code></a>. In the video tutorial, I demonstrate the the difference between <code>&lt;C-r&gt;{reg}</code> and <code>&lt;C-r&gt;&lt;C-o&gt;{reg}</code>, by attempting to complete the Vimgolf challenge, <a href="http://vimgolf.com/challenges/5192f96ad8df110002000002">Words in parens</a>.</p>
+
+<p>We can use <code>&lt;C-r&gt;"</code> to insert the text that was just deleted with the <code>cw</code> command. That works fine for a one off change, but if we attempt to repeat the change with the dot command, it reproduces the result of the last insertion. In the example, that means using the dot command on <code>two</code> produces <code>(one)</code>, when we actually want <code>(two)</code>.</p>
+
+<p>If we use <code>&lt;C-r&gt;&lt;C-o&gt;"</code> instead, Vim inserts the contents of the default register literally, using the current value of the default register. In this case, we can use the dot command to repeat the remaining changes. </p>
+
+<h3 id="further-reading">Further reading</h3>
+
+<ul>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r"><code>:h i_ctrl-r</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-r"><code>:h c_ctrl-r</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r_ctrl-o"><code>:h i_ctrl-r_ctrl-o</code></a></li>
+  <li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, tip 62: Paste from a register</li>
+  <li>Vimgolf challenge: <a href="http://vimgolf.com/challenges/5192f96ad8df110002000002">Words in parens</a></li>
+</ul>
+
+
+  </body>
+
+</html>

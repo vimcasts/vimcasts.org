@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Spell checking</title>
+
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <p>Using a spell checker is a good habit to get into.  In this episode, I demonstrate how to use Vim's built in spell checking feature.</p>
+
+<p></p>
+
+<r:snippet name="announcement" />
+
+<p>Spell checking is enabled by running <code>:set spell</code>. I like to be able to quickly toggle spell checking on and off, so I keep the following in my .vimrc:</p>
+
+<pre class="brush: vimscript">
+&quot; Toggle spell checking on and off with `,s`
+let mapleader = &quot;,&quot;
+nmap &lt;silent&gt; &lt;leader&gt;s :set spell!&lt;CR&gt;
+
+&quot; Set region to British English
+set spelllang=en_gb
+</pre>
+
+<p>The default <code>spelllang</code> is <code>en</code>, which includes all regions of English. In the example above, I run <code>set spelllang=en_gb</code>, which sets the region to British English. The available regions for the English language are:</p>
+
+<ul>
+  <li><code>en</code> - all regions</li>
+  <li><code>en_au</code> - Australia</li>
+  <li><code>en_ca</code> - Canada</li>
+  <li><code>en_gb</code> - Great Britain</li>
+  <li><code>en_nz</code> - New Zealand</li>
+  <li><code>en_us</code> - USA</li>
+</ul>
+
+<p>When the region is set to British English, American spellings (e.g. 'color') are highlighted as regional variations, rather than being marked as misspellings.</p>
+
+<p>The value of <code>spelllang</code> can be set locally to each buffer. This means it is possible to have several documents open at once, and for each to have their own spelling dictionary. If you would prefer to set the spelllang to the same value for all documents, you can run one of the following:</p>
+
+<pre><code>:windo set spelllang=en_us
+:bufdo set spelllang=en_us
+</code></pre>
+
+<p>The first of these will set the spelling dictionary for all windows in the current tabpage. The second one will apply the spelling dictionary to all open buffers.</p>
+
+<h3 id="usage">Usage</h3>
+
+<p>You can advance through the highlighted spelling errors with the <code>]s</code> command, or you can move through them backwards with the <code>[s</code> command. </p>
+
+<p>When the cursor is on a misspelled word, you can bring up a list of suggested corrections with the command <code>z=</code>. The prompt at the bottom of the screen advises you to enter the number of the word you want to use in place of the misspelled word, then hit enter. This takes you back to your document, with the correction applied.</p>
+
+<p>If you prepend the <code>z=</code> command with a count, it will take that word from the list of suggested corrections without even showing you the list. So if you are confident that the first suggestion is the one you want, you could instead run <code>1z=</code>.</p>
+
+<h3 id="adding-and-removing-words-to-spellfile">Adding and removing words to spellfile</h3>
+
+<p>By default, Vim will load a spellfile from the location:</p>
+
+<pre><code>~/.vim/spell/LL.EEE.add
+</code></pre>
+
+<p>Where <code>LL</code> is the language and <code>EEE</code> is the encoding of the file in the active window. For example, if you are editing a file whose encoding is UTF-8, with <code>spelllang</code> set to <code>en_us</code> then Vim will look for a spell file at <code>~/.vim/spell/en.utf-8.add</code></p>
+
+<p>If you don't want to correct a word, you can add it to the <code>spellfile</code> with the <code>zg</code> command. You can also remove a word from the spelling dictionary with the <code>zw</code> command. If you change your mind, each of these commands can be reverted with the undo commands <code>zug</code> and <code>zuw</code>, respectively.</p>
+
+<h3 id="spelling-dictionaries-for-other-languages">Spelling dictionaries for other languages</h3>
+
+<p>Out of the box, Vim comes with a spelling dictionary for the English language. If you want to spell check another language, you have to first install the spell file for it. Here is a good article on <a href="http://henry.precheur.org/vim/create_spell_file_for_vim">creating a spell file for Vim</a>.</p>
+
+<h3 id="further-reading">Further Reading</h3>
+
+<ul>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/spell.html#spell"><code>:help spell</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/options.html#%27spell%27"><code>:help 'spell'</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/spell.html#]s"><code>:help ]s</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/spell.html#[s"><code>:help [s</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/spell.html#z="><code>:help z=</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/spell.html#zg"><code>:help zg</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/spell.html#zw"><code>:help zw</code></a></li>
+  <li><a title="spelllang" href="http://vimdoc.sourceforge.net/htmldoc/options.html#"><code>:help spelllang</code></a></li>
+  <li><a title="spellfile" href="http://vimdoc.sourceforge.net/htmldoc/options.html#"><code>:help spellfile</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/spell.html#spellfile-cleanup"><code>:help spellfile-cleanup</code></a></li>
+</ul>
+
+
+  </body>
+
+</html>

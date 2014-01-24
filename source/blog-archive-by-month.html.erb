@@ -1,0 +1,10 @@
+<% content_for(:title, "Blog archive for #{Date::MONTHNAMES[month]} #{year}") %>
+
+<h2><%= "#{Date::MONTHNAMES[month]} #{year}" %></h2>
+
+<ul>
+  <% page_articles.each do |article| %>
+    <li><%= link_to article.title, article %></li>
+  <% end %>
+</ul>
+

@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Supercharged substitution with :Subvert</title>
+
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <p>The <a href="https://github.com/tpope/vim-abolish">abolish plugin</a> provides a command called <code>:Subvert</code>, which is like a supercharged version of Vim's built-in <code>:substitute</code> command. The <code>:Subvert</code> command is especially useful for changing singular and plural variants of a word, and for refactoring names that appear in <code>snake_case</code> and <code>MixedCase</code>.</p>
+
+<p><em>This is part two of a three-part series on Tim Pope's <a href="https://github.com/tpope/vim-abolish">abolish</a> plugin.</em></p>
+
+<p></p>
+
+<r:snippet name="announcement" />
+
+<p>In <a href="/e/47">Episode 47</a>, we saw how the <code>:Subvert</code> command can be used as a smart search command. In this episode, we learn about this form of the <code>:Subvert</code> command:</p>
+
+<pre><code>:[range]Subvert/target/replacement/[flags]
+</code></pre>
+
+<p><code>:Subvert</code> behaves a lot like Vim's standard <code>:substitute</code> command: it accepts the same flags and operates the same way over a range, but the target and replacement fields are handled differently.</p>
+
+<p>Suppose that we wanted to change the word <code>pumpkin</code> to <code>potato</code>. We could use the <code>:Subvert</code> command:</p>
+
+<pre><code>:%S/pumpkin/potato/g
+</code></pre>
+
+<p>This looks a lot like Vim's built-in <code>:substitute</code> command. In fact, if we used a lowercase <code>s</code> then this would be a valid <code>:substitute</code> command. But <code>:Subvert</code> does a bit of extra work for us. Not only will it change <code>pumpkin</code> to <code>potato</code>, it will also change <code>Pumpkin</code> to <code>Potato</code>, and even <code>PUMPKIN</code> to <code>POTATO</code>.</p>
+
+<h3 id="working-with-irregular-plurals">Working with irregular plurals</h3>
+
+<p>The plural form of <code>potato</code> is irregular: it ends with <code>-es</code>. We can adapt the <code>:Subvert</code> command from above to handle singular and plural forms like this:</p>
+
+<pre><code>:%S/pumpkin{,s}/potato{,es}/gc
+</code></pre>
+
+<p>This will change <code>pumpkins</code> to <code>potatoes</code> and <code>pumpkin</code> to <code>potato</code>. That's pretty handy!</p>
+
+<p>We could also use the <code>:Subvert</code> command to switch from a word with irregular singular/plural forms to a regular word. Suppose we needed to change <code>mouse</code> to <code>trackpad</code>. The <code>:Subvert</code> command could handle it like this:</p>
+
+<pre><code>%S/m{ouse,ice}/trackpad{,s}/gc
+</code></pre>
+
+<p>This command will change <code>mouse</code> to <code>trackpad</code> and <code>mice</code> to <code>trackpads</code>. As before, it will work for Titlecase and SHOUTYCASE variants too.</p>
+
+<h3 id="working-with-snakecase-and-mixedcase">Working with <code>snake_case</code> and <code>MixedCase</code></h3>
+
+<p>The <code>:Subvert</code> command can also target <code>snake_case</code> and <code>MixedCase</code> forms of a word. Suppose that we needed to change <code>insert_mode</code> to <code>replace_mode</code>. We could use this command:</p>
+
+<pre><code>:%S/insert_mode/replace_mode/gc
+</code></pre>
+
+<p>Not only will this change <code>insert_mode</code> to <code>replace_mode</code>, but it will change <code>InsertMode</code> to <code>ReplaceMode</code>, and <code>INSERT_MODE</code> to <code>REPLACE_MODE</code> as well. That can be really handy when refactoring code.</p>
+
+<h3 id="swapping-words">Swapping words</h3>
+
+<p>We could use the <code>:Subvert</code> command to swap all occurrences of <code>vim</code> and <code>tmux</code> in this <a href="https://twitter.com/tpope/status/316783714019442688">tweet</a>:</p>
+
+<pre><code>:S/{vim,tmux}/{tmux,vim}/g
+</code></pre>
+
+<p>That would change each instance of <code>vim</code> to <code>tmux</code> and vice versa.</p>
+
+<h3 id="further-reading">Further reading</h3>
+
+<ul>
+  <li><a href="https://github.com/tpope/vim-abolish">abolish</a> by tpope</li>
+  <li>:help :Subvert</li>
+  <li>:help abolish-substitute</li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-R"><code>:help c_CTRL-R</code></a></li>
+</ul>
+
+
+  </body>
+
+</html>

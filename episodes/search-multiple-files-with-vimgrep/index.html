@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Search multiple files with :vimgrep</title>
+
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <p><code>vimgrep</code> is Vim's built-in command for searching across multiple files. It's not so fast as external tools like ack and git-grep, but it has its uses. <code>vimgrep</code> uses Vim's built-in regex engine, so you can reuse the patterns that work with Vim's standard search command. </p>
+
+<p></p>
+
+<r:snippet name="announcement" />
+
+<p>Have you ever wished that Vim would report your position as you navigate through search matches? For example, by saying: 'match 2 out of 5'.</p>
+
+<p>That's not a feature provided by Vim's search command, but it is a feature supplied by the <a href="http://vimdoc.sourceforge.net/htmldoc/quickfix.html#quickfix">quickfix list</a>. We can use the <a href="http://vimdoc.sourceforge.net/htmldoc/quickfix.html#:vimgrep"><code>:vimgrep</code></a> command to populate the quickfix list with search results from the current file:</p>
+
+<pre><code>:vimgrep /{pattern}/ %
+</code></pre>
+
+<p>The <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#:_%"><code>%</code> character is a special symbol</a>, which represents the filepath of the active buffer.</p>
+
+<p>The <code>{pattern}</code> field behaves more or less as you would expect. You can supply any pattern that would work with Vim's standard search command.</p>
+
+<h3 id="searching-for-the-last-pattern">Searching for the last pattern</h3>
+
+<p>You can search for the last pattern in your search history by running:</p>
+
+<pre><code>:vimgrep /&lt;C-r&gt;// %
+</code></pre>
+
+<p>On the command line, <code>&lt;C-r&gt;/</code> (that is: <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-R"><code>CTRL-R</code></a> followed by <code>/</code>) will insert the last search pattern.</p>
+
+<h3 id="specifiying-the-set-of-files-for-vimgrep-to-search">Specifiying the set of files for <code>vimgrep</code> to search</h3>
+
+<p>When running the <code>vimgrep</code> command, we have to specify at least one file for the command to search inside. We could provide:</p>
+
+<ol>
+  <li>one or more filepaths (separated by whitespace)</li>
+  <li>a wildcard</li>
+  <li>a backtick expression</li>
+  <li>the <code>##</code> symbol, representing the arglist</li>
+</ol>
+
+<p>The first three from this list should look familiar if you've watched <a href="/e/42">Vimcast #42 - Populating the arglist</a>.</p>
+
+<p>The <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#:_##">special ## symbol</a> is expanded to represent each of the files from the arglist. It's really handy in this context. Suppose that we wanted to search the same set of files for one pattern, then another pattern, and so on. It would be a drag to have to specify the same set of files again and again:</p>
+
+<pre><code>:vim /pattern1/ `find . -type f`
+:vim /pattern2/ `find . -type f`
+:vim /pattern3/ `find . -type f`
+</code></pre>
+
+<p>We can avoid this repetition by populating the arglist with the set of files we want to work with, then using the special symbol <code>##</code> (double hash) to reference the arglist:</p>
+
+<pre><code>:args `find . -type f`
+:vim /pattern1/ ##
+:vim /pattern2/ ##
+:vim /pattern3/ ##
+</code></pre>
+
+<p>Not having to think about which files you're dealing with frees you up to focus on the more interesting part of the <code>vimgrep</code> command: the pattern.</p>
+
+<p>For more ideas on how to specify the set of files for <code>vimgrep</code> to look inside, check out these articles on <a href="http://vimcasts.org/blog/2013/03/combining-vimgrep-with-ack--f/"><code>ack -f</code></a> and <a href="http://vimcasts.org/blog/2013/03/combining-vimgrep-with-git-ls-files/"><code>git ls-files</code></a>.</p>
+
+<h3 id="navitating-the-quickfix-list">Navitating the quickfix list</h3>
+
+<p>The results from the <code>vimgrep</code> command are collected in the quickfix list. We can traverse them with the following commands:</p>
+
+<table>
+   <tr>
+       <th>Ex command</th>
+       <th>unimpaired map</th>
+       <th>effect</th>
+   </tr>
+   <tr>
+       <td><code>:cprev[ious]</code></td>
+       <td><code>[q</code></td>
+       <td>reverse through quickfix list</td>
+   </tr>
+   <tr>
+       <td><code>:cnext</code></td>
+       <td><code>]q</code></td>
+       <td>advance through quickfix list</td>
+   </tr>
+   <tr>
+       <td><code>:cfirst</code></td>
+       <td><code>[Q</code></td>
+       <td>go to start of quickfix list</td>
+   </tr>
+   <tr>
+       <td><code>:clast</code></td>
+       <td><code>]Q</code></td>
+       <td>go to end of quickfix list</td>
+   </tr>
+</table>
+
+<p>The square-bracket mappings are not built-in to Vim, but are added by Tim Pope's <a href="https://github.com/tpope/vim-unimpaired">unimpaired plugin</a> (which I recommend).</p>
+
+<h3 id="vimgrep-pros-cons-and-alternatives">Vimgrep: pros, cons, and alternatives</h3>
+
+<p>I reach for <code>vimgrep</code> when I want to use Vim's built-in regex engine. I love being able to test my regular expression in one buffer using the search command, then use the same pattern without modification to search across the entire project. For me, that convenience is the killer feature of <code>vimgrep</code>.</p>
+
+<p>On the downside, <code>vimgrep</code> isn't as quick as some of the alternatives out there. If you want to search a large codebase and get results fast, then you'd be better off using an external tool like <a href="http://www.kernel.org/pub/software/scm/git/docs/git-grep.html"><code>git-grep</code></a>, <a href="http://betterthangrep.com/"><code>ack</code></a> or <a href="https://github.com/ggreer/the_silver_searcher">the silver searcher</a>. All of these external tools integrate with the quickfix list, and you can find Vim plugins for each of them:</p>
+
+<ul>
+  <li><a href="https://github.com/tpope/vim-fugitive">fugitive</a> provides the <code>:Ggrep</code> command</li>
+  <li><a href="https://github.com/mileszs/ack.vim">Ack.vim</a> provides the <code>:Ack</code> command</li>
+  <li><a href="https://github.com/rking/ag.vim">ag.vim</a> provides the <code>:Ag</code> command</li>
+</ul>
+
+<p>The downside to using these external tools it that each uses a different regex syntax from Vim's.</p>
+
+<h3 id="further-reading">Further reading</h3>
+
+<ul>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/quickfix.html#quickfix"><code>:help quickfix</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/quickfix.html#:vimgrep"><code>:help :vimgrep</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#:_%"><code>:help :_%</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#:_##"><code>:help :_##</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:su"><code>:help :substitute</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#:g"><code>:help :global</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-R"><code>:help c_CTRL-R</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote/"><code>:help quote/</code></a></li>
+  <li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> - chapter 12: Matching Patterns and Literals</li>
+  <li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> - chapter 16: Compile code and navigate errors with the quickfix list</li>
+  <li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> - chapter 17: Search project-wide with grep, vimgrep, and others</li>
+  <li><a href="https://github.com/tpope/vim-unimpaired">unimpaired.vim</a></li>
+</ul>
+
+
+  </body>
+
+</html>

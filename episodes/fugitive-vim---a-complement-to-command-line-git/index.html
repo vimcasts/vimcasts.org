@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Fugitive.vim - a complement to command line git</title>
+
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <p><a href="https://github.com/tpope/vim-fugitive">The fugitive plugin</a>, by Tim Pope, is a git wrapper for Vim. It  complements the command line interface to git, but doesn't aim to replace it. In this episode, we'll see how some of fugitive's commands can streamline your workflow.</p>
+
+<p><em>This is the first of a five part series on fugitive.</em></p>
+
+<p></p>
+
+<r:snippet name="announcement" />
+
+<p>Using the <code>:Git</code> command, you can run any arbitrary git command from inside Vim. I prefer to switch to the shell for anything that generates a log of output, such as <code>git log</code> for example. But commands that generate little or no output are fair game for running from inside Vim (<code>:Git checkout -b experimental</code> for example).</p>
+
+<p>At Vim's command line, <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#cmdline-special">the <code>%</code> symbol has a special meaning</a>: it expands to the full path of the current file. You can use this to run any git command that expects a filepath as an argument, making the command act on the current file. But fugitive also provides a few convenience methods, some of which are summarized in this table:</p>
+
+<table>
+   <tr>
+       <th>git</th>
+       <th>fugitive</th>
+       <th>action</th>
+   </tr>
+   <tr>
+       <td><code>:Git add %</code></td>
+       <td><code>:Gwrite</code></td>
+       <td>Stage the current file to the index</td>
+   </tr>
+   <tr>
+       <td><code>:Git checkout %</code></td>
+       <td><code>:Gread</code></td>
+       <td>Revert current file to last checked in version</td>
+   </tr>
+   <tr>
+       <td><code>:Git rm %</code></td>
+       <td><code>:Gremove</code></td>
+       <td>Delete the current file and the corresponding Vim buffer</td>
+   </tr>
+   <tr>
+       <td><code>:Git mv %</code></td>
+       <td><code>:Gmove</code></td>
+       <td>Rename the current file and the corresponding Vim buffer</td>
+   </tr>
+</table>
+
+<p>The <code>:Gcommit</code> command opens up a commit window in a split window. One advantage to using this, rather than running <code>git commit</code> in the shell, is that you can use Vim's <a title="complete" href="http://vimdoc.sourceforge.net/htmldoc/options.html#">keyword autocompletion</a> when composing your commit message.</p>
+
+<p>The <code>:Gblame</code> command opens a vertically split window containing annotations for each line of the file: the last commit reference, with author and timestamp. The split windows are bound, so that when you scroll one, the other window will follow.</p>
+
+<h3 id="further-reading">Further Reading</h3>
+
+<ul>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#cmdline-special"><code>:help cmdline-special</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#:_%"><code>:help :_%</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#compl-generic"><code>ctlr-n</code>/<code>ctrl-p</code></a> keyword autocompletion</li>
+  <li><a title="complete" href="http://vimdoc.sourceforge.net/htmldoc/options.html#"><code>:help 'complete'</code></a></li>
+  <li><a href="https://github.com/tpope/vim-fugitive/blob/762bfa79795146ee44d50d4ce8b3e36efcb603b8/doc/fugitive.txt#L42-44"><code>:help :Git</code></a></li>
+  <li><a href="https://github.com/tpope/vim-fugitive/blob/762bfa79795146ee44d50d4ce8b3e36efcb603b8/doc/fugitive.txt#L108-114"><code>:help :Gwrite</code></a></li>
+  <li><a href="https://github.com/tpope/vim-fugitive/blob/762bfa79795146ee44d50d4ce8b3e36efcb603b8/doc/fugitive.txt#L99-103"><code>:help :Gread</code></a></li>
+  <li><a href="https://github.com/tpope/vim-fugitive/blob/762bfa79795146ee44d50d4ce8b3e36efcb603b8/doc/fugitive.txt#L149-153"><code>:help :Gremove</code></a></li>
+  <li><a href="https://github.com/tpope/vim-fugitive/blob/762bfa79795146ee44d50d4ce8b3e36efcb603b8/doc/fugitive.txt#L143-147"><code>:help :Gmove</code></a></li>
+  <li><a href="https://github.com/tpope/vim-fugitive/blob/762bfa79795146ee44d50d4ce8b3e36efcb603b8/doc/fugitive.txt#L62-72"><code>:help :Gcommit</code></a></li>
+  <li><a href="https://github.com/tpope/vim-fugitive/blob/762bfa79795146ee44d50d4ce8b3e36efcb603b8/doc/fugitive.txt#L155-160"><code>:help :Gblame</code></a></li>
+</ul>
+
+
+  </body>
+
+</html>

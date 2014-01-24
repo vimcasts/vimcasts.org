@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Running Vim within IRB</title>
+
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <p>If you work with ruby you will know that the interactive ruby shell, or 'IRB' for short, is a useful sketchpad for coding. But the command line interface of IRB can feel quite limiting in comparison with the power of your text editor. In this episode, I'm going to demonstrate how you can get the best of both worlds, by loading Vim from inside IRB.</p>
+
+<p></p>
+
+<r:snippet name="announcement" />
+
+<p>IRB is great for trying out one liners, but if you need to sketch longer
+blocks of ruby, it soon falls down. </p>
+
+<p>In his <a href="http://utilitybelt.rubyforge.org/">Utility Belt gem</a>, <a href="http://gilesbowkett.blogspot.com/2008/11/vi-in-irb-screencasting-fail.html">Giles Bowkett</a> has
+collected a grab-bag of tricks and techniques for IRB, the highlight of
+which is the ability to <a href="http://gilesbowkett.blogspot.com/2007/10/use-vi-or-any-text-editor-from-within.html">interactively edit code in your text
+editor</a>. The Utility Belt gem hasn't been updated in a little
+while, but the interactive editor has continued to evolve, thanks to
+<a href="http://zegoggl.es/2009/04/integrating-vim-and-irb.html">Jan Berkel</a> and with help from <a href="http://blog.headius.com/">Charles Nutter</a>.</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>Install the <a href="http://github.com/jberkel/interactive_editor">interactive editor gem</a> by running this at the
+command line:</p>
+
+<pre><code>gem install interactive_editor
+</code></pre>
+
+<p>Create an <code>~/.irbrc</code> file if you don't already have one, then paste the
+following into it:</p>
+
+<pre class="brush: ruby">
+require 'rubygems'
+require 'interactive_editor'
+</pre>
+
+<p>Note that the utility belt gem also includes an interactive editor, but
+it is currently out of date. If you require both <code>interactive_editor</code>
+and <code>utility_belt</code> gems in your .irbrc file, there may be some conflict
+between them.</p>
+
+<h2 id="vim-restore-cursor-position-and-highlight-syntax">Vim: restore cursor position and highlight syntax</h2>
+
+<p>To get the most from this technique, you will want to ensure that you
+have enabled filetype detection and syntax highlighting in Vim.
+Additionally, it is helpful to have Vim <a href="http://vimdoc.sourceforge.net/htmldoc/usr_05.html#restore-cursor">restore the cursor
+position</a> to where you left it. The following snippet of
+Vimscript takes care of these.</p>
+
+<pre class="brush: vimscript">
+if has(&quot;autocmd&quot;)
+  &quot; Enable filetype detection
+  filetype plugin indent on
+
+  &quot; Restore cursor position
+  autocmd BufReadPost *
+    \ if line(&quot;'\&quot;&quot;) &gt; 1 &amp;&amp; line(&quot;'\&quot;&quot;) &lt;= line(&quot;$&quot;) |
+    \   exe &quot;normal! g`\&quot;&quot; |
+    \ endif
+endif
+if &amp;t_Co &gt; 2 || has(&quot;gui_running&quot;)
+  &quot; Enable syntax highlighting
+  syntax on
+endif
+</pre>
+
+<p>Note that the <a href="http://vim.cybermirror.org/runtime/vimrc_example.vim">example vimrc file</a> that comes with Vim
+includes all of the above, so don't paste this into your vimrc without
+first checking if you already have this functionality.</p>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,30 @@
+---
+title: The blog
+pageable: true
+blog: blog
+per_page: 10
+---
+
+<h1>Blog</h1>
+
+<% page_articles.each_with_index do |blogpost, i| %>
+  <section class="blogpost">
+    <h2><%= link_to blogpost.title, blogpost %></h2>
+    <time datetime="<%= blogpost.date.strftime('%Y-%m-%d') %>"><%= blogpost.date.strftime('%b %d, %Y') %></time>
+
+    <%= blogpost.summary %>
+
+    <%# TODO: only show 'continue reading' link if there's more to read! %>
+    <%= link_to "Continue reading&hellip;", blogpost %>
+
+  </section>
+<% end %>
+
+<% if paginate %>
+  <% if prev_page %>
+    <p><%= link_to 'Prev page', prev_page %></p>
+  <% end %>
+  <% if next_page %>
+    <p><%= link_to 'Next page', next_page %></p>
+  <% end %>
+<% end %>

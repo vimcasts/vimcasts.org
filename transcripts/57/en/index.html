@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title></title>
+
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <h1 id="evaluating-scripts-with-vims-expression-register">Evaluating scripts with Vim's expression register</h1>
+
+<h3 id="evaluating-simple-code">Evaluating simple code</h3>
+
+<p>We've already seen how to evaluate simple calculations such as <code>2*21</code>. We can actually execute any Vimscript code at the expression register. For example, I could use the <code>sqrt()</code> function to calculate the square root of a number:</p>
+
+<pre><code>=sqrt(81)
+</code></pre>
+
+<p>The Vimscript standard library contains several functions for working with floating point numbers:</p>
+
+<pre><code>:h float-functions
+</code></pre>
+
+<p>We can execute any Vimscript code at the expression register. So long as the expression returns a string (or something that can be converted to a string), then we can use the result. For a complete reference of the functions defined in Vim's standard library, look up <code>:h function-list</code>.</p>
+
+<h3 id="use-put-to-evaluate-expression-and-put-result-on-a-new-line">Use :put to evaluate expression and put result on a new line</h3>
+
+<p>So far, every time I've demonstrated the expression register, I've done so by pressing "control-R-equals" in Insert mode. But we can also invoke the expression register using the <code>:put</code> Ex command:</p>
+
+<pre><code>:put =sqrt(81)
+</code></pre>
+
+<p>When we invoke the expression register from Insert mode, the result is inserted at the current cursor location. Whereas the <code>:put</code> Ex command always inserts the result on a new line.</p>
+
+<h3 id="calling-user-defined-functions">Calling user-defined functions</h3>
+
+<p>One thing you won't find in Vim's standard library is a function for generating random numbers. But we could roll our own <code>Random()</code> function. This is a bit of a dirty hack, that uses the <code>reltime()</code> function to generate a random number from the system clock:</p>
+
+<pre><code>function! Random()
+  return str2nr(matchstr(reltimestr(reltime()), '\v\.@&lt;=\d+')[1:])
+endfunction
+</code></pre>
+
+<p>Let's source this file:</p>
+
+<pre><code>:source %
+</code></pre>
+
+<p>Now we can use the <code>Random()</code> function at the expression register:</p>
+
+<pre><code>:put =Random()&lt;CR&gt;
+</code></pre>
+
+<p>If you need something that isn't in Vim's standard library, you can always hand roll a Vimscript function of your own.</p>
+
+<h3 id="calling-external-scripts">Calling external scripts</h3>
+
+<p>But there's another alternative that you might prefer. Vim's <code>system()</code> function allows us to call some external script, returning it's output:</p>
+
+<pre><code>:h system()
+</code></pre>
+
+<p>Instead of hacking together a <code>Random()</code> function in Vimscript, we could simply use the <code>$RANDOM</code> function that's built-in to the Bash shell.</p>
+
+<pre><code>:put =system('echo $RANDOM')
+</code></pre>
+
+<p>Or if we wanted some more complex behaviour, we could write a script using a language of our choice.</p>
+
+<p>For example, suppose that I want to generate a CSV file containing fake names and emails. Here's a tiny script written in Ruby, which uses the <code>Faker</code> library to generate fake credentials. Each time I run the script in the shell, it produces a different name and email address.</p>
+
+<p>Inside of Vim, we could use the expression register to insert the results from this external script into the document:</p>
+
+<pre><code>:put =system('ruby fake-credentials.rb')
+</code></pre>
+
+<h3 id="meet-the-read-command">Meet the :read! command</h3>
+
+<p>If you're only using the expression register to get output from an external script, then there's an even quicker way of doing it: using the <code>:read!</code> "read-bang" Ex command.</p>
+
+<pre><code>:read !ruby fake-credentials.rb
+</code></pre>
+
+<p>This executes the specified command in the shell and outputs the results directly into the document below the cursor position.</p>
+
+  </body>
+
+</html>

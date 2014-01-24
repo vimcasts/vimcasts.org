@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title></title>
+
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <h1 id="converting-haml-to-erb-with-vim-macros">Converting HAML to ERB with Vim macros</h1>
+
+<h1 id="intro">Intro</h1>
+
+<p>HAML and ERB are two commonly used ruby templating languages. You may have a strong preference for one or the other, but it's not always up to you which one you use. I was recently asked to convert several HAML files to ERB format. In this episode, I will demonstrate a couple of Vim macros that helped make short work of the task.</p>
+
+<h2 id="commercial">Commercial</h2>
+
+<p>You can now show your support for Vimcasts using Flattr - a social micropayment service. If you enjoy this episode, please flattr me by clicking the button on the shownotes page. Your donation can ensure that Vimcasts remains free to all.</p>
+
+<h1 id="setup">Setup</h1>
+
+<p>When I open an ERB file, Vim detects the filetype from the file extension and sets the auto indentation accordingly. In this case, I have a HAML file with the ERB extension. This is going to confuse Vim's automatic indentation, so I shall begin by switching it off:</p>
+
+<pre><code>:set indentexpr=
+</code></pre>
+
+<p>[Also, enable search highlighting.</p>
+
+<pre><code>:set hlsearch
+</code></pre>
+
+<p>]</p>
+
+<h2 id="single-line-ruby-expressions">Single line ruby expressions</h2>
+
+<p>In HAML, there are basically two different ways of evaluating ruby. The lines beginning with a minus sign evalute the code silently, whereas those beginning with an equals sign will output the result of the code.</p>
+
+<p>In ERB we have the same two concepts, except that the whole expression is wrapped in angle-brackets with percent symbols. </p>
+
+<p>For a one-liner such as this, the conversion from HAML to ERB is straightforward. Pressing shift-I moves my cursor to the first non-blank character and enters insert mode. I type the opening angle bracket delimiters, then press the escape key to leave insert mode. Shift-A puts me in insert mode the end of the line, where I enter a space followed by the closing delimiter. I then hit escape again to leave insert mode.</p>
+
+<p>It's nothing too arduous, but if you have to do this over and over you can save yourself some time by recording a macro.</p>
+
+<p>I'll repeat the edit, but this time I shall record my keystrokes. </p>
+
+<p>With my cursor on the next line that I want to change, I begin recording into the 'P' register by pressing <code>qp</code>. Once again, shift-I to insert the opening delimiter; shift-A to append the closing delimiter, and when I'm done, I hit the <code>q</code> key again to stop recording.</p>
+
+<p>I'm going to search for the pattern of an equals sign at the beginning of a line, with zero or more leading whitespace characters in front of it. </p>
+
+<pre><code>/^\s\+=
+</code></pre>
+
+<p>This takes me straight to my next match. From here, I can replay the macro by pressing <code>@p</code>. Remember that the macro was recorded into the 'p' register.</p>
+
+<p>Pressing the <code>n</code> key takes me to the next match for my search pattern. I can then replay my macro by hitting the <code>@</code> key twice. This is just a shorthand to replay the macro that was most recently played.</p>
+
+<p>So by typing the sequence <code>n@@</code> again and again, I can rapidly apply this conversion throughout the file.</p>
+
+<h1 id="multiline-ruby-expressions">Multiline ruby expressions</h1>
+
+<p>HAML somewhat resembles Python in that it uses significant whitespace. Whereas ERB looks more like ruby because it uses the <code>end</code> keyword. </p>
+
+<p>To convert this HAML file into ERB it will be necessary to insert <code>end</code> keywords in a few places. Once again, I'm going to use a macro to record my keystrokes so that this conversion can be replayed. </p>
+
+<p>To begin with, I place my cursor on the first line of the block, then enter visual line mode by pressing shift-V. I then move my cursor down until I've selected the entire block. The <code>end</code> keyword will be inserted on the line after the selection.</p>
+
+<p>Having visually selected the range that I want to wrap, I am ready to begin recording my macro. I press <code>qo</code>, to save my keystrokes into the 'o' register.</p>
+
+<p>I want to keep track of the top and bottom of my current selection, and to do this I'm going to use a couple of marks. My cursor is currently at the bottom of the selection, so I press <code>mb</code> to <em>mark</em> the <em>bottom</em> of my range.</p>
+
+<p>The <code>o</code> key moves my cursor to the opposite end of the selection, and here I press <code>mt</code> to <em>mark</em> the <em>top</em> of the range. Having saved those two positions, I press escape to exit visual mode.</p>
+
+<p>The line at the top of the block needs to be wrapped in ERB delimiters. Even though I am currently recording a macro, there is nothing to stop me from playing back another macro. So if I run <code>@p</code> it will play back the macro that I recorded earlier.</p>
+
+<p>Now, I want to insert the <code>end</code> keyword. Remember that I saved the position of the bottom of the block with the 'b' mark, so I can jump back there by pressing 'single-quote-b'. The <code>o</code> key opens a new line underneath, then I type the <code>end</code> keyword and hit escape to leave insert mode.</p>
+
+<p>This is valid ERB, but it would be nice to tidy up the formatting whilst I'm at it. I'm going to do this by simply copying the indentation at the beginning of the block, and pasting in front of the last line of the block. </p>
+
+<p>I can jump back up to the top mark with 'single-quote-t'. Then hit <code>0</code> zero to get to the beginning of the line. <code>v^h</code> 'v-caret-h' visually selects the leading whitespace characters. I'm going to yank these into the 'n' register ('n' is for 'indentation') by pressing 'doublequote-n-y'.</p>
+
+<p>I jump to the end of the block with <code>'bj</code> 'single-quote-b-j', then move to the beginning of the line by pressing <code>0</code> zero, and insert the indentation from the 'n' register by pressing <code>"nP</code> 'doublequote-n-shift-P'. </p>
+
+<p>I'm happy with that, so I'll press <code>q</code> to stop recording my keystrokes.</p>
+
+<p>Now, if I manually select a block of code in visual mode, I can quickly convert it to ERB by replaying the macro that I just recorded. </p>
+
+<h2 id="limitations">Limitations</h2>
+
+<p>Don't forget that a macro is simply a recording of commands which you can play back. It doesn't follow any logic, so in some situations the result of running a macro may be surprising.</p>
+
+<p>In this example, the macro expects you to make your selection from the top down. If you make a visual selection by starting at the bottom of a block, then the macro will invert the marks for top and bottom, and the result will look broken. To fix this:</p>
+
+<pre><code>ugvo@o
+</code></pre>
+
+<p>undo the change, reselect the last visual block, ensure that the cursor is positioned at the bottom of the selection, and replay the macro. No big deal.</p>
+
+<h1 id="coda">Coda</h1>
+
+<p>The information in this video is summarized in the accompanying shownotes. </p>
+
+<p>If you have any questions, requests or recommendations, or if you would be interested in sponsoring vimcasts, then you can contact me at DREW AT VIMCASTS DOT ORG.</p>
+
+<p>Vimcasts is supported by Xeriom networks. If you need to build a reliable, scalable network that can support your growing business needs, then get in touch with xeriom networks, and be sure to say you heard about them here.</p>
+
+  </body>
+
+</html>

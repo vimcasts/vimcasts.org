@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>The copy/paste series - a retrospective</title>
+
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <p>Episodes <a href="/e/51">51</a>, <a href="/e/52">52</a>, <a href="/e/53">53</a>, <a href="/e/54">54</a>, <a href="/e/55">55</a>, <a href="/e/58">58</a>, and <a href="/e/59">59</a> are all on the topic of copy and paste in Vim. I think that this is one area where Vim is especially confusing, partly because of <a href="http://vimcasts.org/episodes/meet-the-yank-register#vim-jargon">Vim's non-standard jargon for cut, copy and paste operations</a>. It's not the most intuitive copy/paste system, but it's usable when you get the hang of certain concepts and techniques.</p>
+
+<p></p>
+
+<h3 id="the-default-yank-and-named-registers">The default, yank, and named registers</h3>
+
+<p>Vim’s <em>default register</em> makes it easy to perform some of the most basic types of cut, copy, and paste operations. That’s partly thanks to the <code>p</code> command, which behaves differently depending on whether the default register contains a characterwise or linewise region of text. As a result, we can toggle characters with <code>xp</code>, toggle lines with <code>ddp</code>, or duplicate a line with <code>yyp</code>. <a href="/e/51">Episode 51 - Simple operations using the default register</a> shows how.</p>
+
+<p>The default register is not a safe place to keep yanked text that you want to paste later. It’s all too easy to clobber the default register with a <code>d</code> or <code>x</code> command. Luckily, the last yanked text is kept safe in Vim’s <em>yank register</em>. <a href="/e/52">Episode 52 - Meet the yank register</a> shows how to use the yank register.</p>
+
+<p>Vim also has 26 <em>named registers</em> - one for each letter of the alphabet. These are handy if you want to cut or copy multiple regions of text that you intend to paste later. The named registers have an interesting property: as well as being able to overwrite their contents, we can also append to a named register. <a href="/e/53">Episode 53 - Using Vim's named registers</a> shows how.</p>
+
+<h3 id="pasting-text-from-visual-and-insert-modes">Pasting text from Visual and Insert modes</h3>
+
+<p>Most of Vim's commands are activated from Normal mode, but the paste command has variants that can be triggered from Visual and Insert modes. When used in Visual mode the <code>p</code> command replaces the selection with the contents of a register. This makes for a smooth workflow when you want to overwrite a selection, or swap the order of two regions of text. <a href="/e/54">Episode 54 - Pasting from Visual mode</a> demonstrates these workflows.</p>
+
+<p>The <code>&lt;C-r&gt;{reg}</code> command lets us paste a register from Insert mode (and it works in commandline mode too!) Using this command allows us to make changes that can be repeated with the dot command. Check out <a href="/e/55">Episode 55 - Pasting from Insert mode</a> for a demonstration.</p>
+
+<h3 id="working-with-the-system-clipboard">Working with the system clipboard</h3>
+
+<p>Vim's registers are internal to Vim. If you want to move text between Vim and other programs running locally, you can do so using the the system clipboard, which Vim exposes through the quoteplus register: <code>"+</code>. We can use this with the delete, yank and put operations in much the same way that we use Vim’s other registers. <a href="/e/58">Episode 58 - accessing the system clipboard from Vim</a> shows how.</p>
+
+<p>We can only use the <code>"+</code> register when Vim is compiled with the <code>+clipboard</code> feature. If you don't already have this feature enabled, find out <a href="http://vimcasts.org/blog/2013/11/getting-vim-with-clipboard-support/">how to get Vim with <code>+clipboard</code> support</a>.</p>
+
+<p>Even without the <code>+clipboard</code> feature, we can still insert text from the clipboard using the system paste command (<code>ctrl-v</code> or <code>cmd-v</code>). This can produce strange effects, but we can avoid them by toggling the 'paste' option each time we use the system paste command. <a href="/e/59">Episode 59 - Using Vim's paste mode with the system paste command</a> goes into more detail.</p>
+
+
+  </body>
+
+</html>

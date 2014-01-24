@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>VimGolf - Prime Numbers</title>
+
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <p>For the VimGolf challenge <a href="http://vimgolf.com/challenges/4d1c27940e3d7832db000010">"List the first 100 prime numbers"</a>, there's a solution that uses a regular expression to detect prime numbers. At 43 keystokes, it's not the winning solution, but I think it's the most interesting one. It uses a few clever Vim tricks, including macros, control-a to increment, the very magic pattern switch, and the <code>:global</code> command. There's a lot to learn from those 43 keystrokes, so let's study it!</p>
+
+<p></p>
+
+<r:snippet name="announcement" />
+
+<p>Here's the full solution (with a running keystroke tally):</p>
+
+<table>
+   <tr>
+       <th>keystrokes</th>
+       <th>tally</th>
+   </tr>
+   <tr>
+       <td><code>C&lt;Tab&gt;1&lt;Esc&gt;</code></td>
+       <td>4</td>
+   </tr>
+   <tr>
+       <td><code>qw</code></td>
+       <td>2</td>
+   </tr>
+   <tr>
+       <td><code>&lt;C-a&gt;</code></td>
+       <td>1</td>
+   </tr>
+   <tr>
+       <td><code>&gt;&gt;</code></td>
+       <td>2</td>
+   </tr>
+   <tr>
+       <td><code>Yp</code></td>
+       <td>2</td>
+   </tr>
+   <tr>
+       <td><code>q</code></td>
+       <td>1</td>
+   </tr>
+   <tr>
+       <td><code>540@w</code></td>
+       <td>5</td>
+   </tr>
+   <tr>
+       <td><code>:g/\v^(&lt;Tab&gt;&lt;Tab&gt;+)\1+&lt;/d|%s/&lt;Tab&gt;*&lt;CR&gt;</code></td>
+       <td>24</td>
+   </tr>
+   <tr>
+       <td><code>ZZ</code></td>
+       <td>2</td>
+   </tr>
+   <tr>
+       <td><strong>total:</strong></td>
+       <td>43</td>
+   </tr>
+</table>
+
+<p>The <code>&lt;Tab&gt;</code> notation stands for the tab key, and <code>&lt;Esc&gt;</code> for the escape key. <code>&lt;C-a&gt;</code> stands for ctrl-a, and <code>&lt;CR&gt;</code> for carriage return, a.k.a. the enter key.</p>
+
+<p>Try it out for yourself, and see if you can figure out how it works. You might consider the following explanation a spoiler.</p>
+
+<h3 id="strategy">Strategy</h3>
+
+<p>Here's the general strategy: we'll start by inserting the numbers 2, 3, 4, 5, and so on, up to 541, which is the one-hundredth prime number. Having inserted all of the numbers in this range, one per line, we'll then delete each line that contain a non-prime number. That should leave us with the first 100 prime numbers, and nothing else.</p>
+
+<p>And here's the trick: we'll indent each line by a number of tabs that equals the value of the number on that line. For example, the line containing the number 2 will lead with 2 tab characters. The line containing the number 3 will lead with 3 tab characters. And so on. Then we can examine the length of the string with a regular expression.</p>
+
+<h3 id="insert-numbers-2-up-to-542">Insert numbers 2 up to 542</h3>
+
+<p>Combining the [<code>ctrl-a</code>][] command with a macro lets us rapidly insert the numbers from 2 up to 542:</p>
+
+<table>
+   <tr>
+       <th>keystrokes</th>
+       <th>explanation</th>
+   </tr>
+   <tr>
+       <td><code>C&lt;Tab&gt;1&lt;Esc&gt;</code></td>
+       <td>insert a tab followed by 1</td>
+   </tr>
+   <tr>
+       <td><code>qw</code></td>
+       <td>start recording</td>
+   </tr>
+   <tr>
+       <td><code>&lt;C-a&gt;</code></td>
+       <td>increment the number</td>
+   </tr>
+   <tr>
+       <td><code>&gt;&gt;</code></td>
+       <td>insert a tab at the start of the line</td>
+   </tr>
+   <tr>
+       <td><code>Yp</code></td>
+       <td>duplicate the line</td>
+   </tr>
+   <tr>
+       <td><code>q</code></td>
+       <td>stop recording</td>
+   </tr>
+   <tr>
+       <td><code>540@w</code></td>
+       <td>execute the macro 540 times</td>
+   </tr>
+</table>
+
+<h3 id="delete-all-non-prime-numbers">Delete all non-prime numbers</h3>
+
+<p>The <code>:g/{pattern}/[cmd]</code> command allows us to execute the specified [cmd] on every line that matches the specified <code>{pattern}</code>. It can be used in this form to delete all non-prime numbers:</p>
+
+<pre><code>:g/\v^(&lt;Tab&gt;&lt;Tab&gt;+)\1+&lt;/d
+</code></pre>
+
+<p>Then we can flatten the remaining indentation with this substitute command:</p>
+
+<pre><code>:s/&lt;Tab&gt;*
+</code></pre>
+
+<p>Note that these two individual Ex commands can be combined into a single command-line, which saves a keystroke (this is VimGolf remember!):</p>
+
+<pre><code>:g/\v^(&lt;Tab&gt;&lt;Tab&gt;+)\1+&lt;/d|s/&lt;Tab&gt;*
+</code></pre>
+
+<h3 id="how-does-that-regular-expression-work">How does that regular expression work?</h3>
+
+<p>The magic of the regex happens in this bit:</p>
+
+<pre><code>(&lt;Tab&gt;&lt;Tab&gt;+)\1+
+</code></pre>
+
+<p>Inside the parentheses, we match two or more tab characters. These are captured in a sub-match, and we can reference this sub-match using the <code>\1</code> notation. This bit of the pattern matches one or more occurrences of the original sub-match.</p>
+
+<p>The <code>+</code> operator means "one or more" occurrences, and it performs a greedy match. That means it matches as many characters as it can. This diagram demonstrates how the regular expression inspects a string of 8 tab characters:</p>
+
+<p><img alt="The regex finds that 4 is a factor of 8" src="/images/blog/regex-nonprime-8.png" /></p>
+
+<p>The match indicates that 4 is a factor of 8, and therefore 8 is not a prime.</p>
+
+<p>This diagram demonstrates how the same regex interacts with a string of 7 tab characters:</p>
+
+<p><img alt="The regex finds no factors of 7, meaning it's a prime" src="/images/blog/regex-prime-7.png" /></p>
+
+<p>There's no match, which indicates that 7 is a prime number.</p>
+
+<h3 id="credit">Credit where due</h3>
+
+<p>Thanks to <a href="https://twitter.com/federicogalassi">Federicco Galassi</a> for introducing me to this VimGolf solution. He credited it to <a href="https://twitter.com/_matthewd">Matthew Draper</a>, but Matthew says his solution was a refinement of the one posted by <a href="https://twitter.com/spamcow_moo">Glenn</a>. That seems to cover the history of this trick since it appeared on the VimGolf site, but the regex that forms the core of this solution has a much longer history.</p>
+
+<p>This Perl one-liner was used in <a href="http://diswww.mit.edu/bloom-picayune.mit.edu/perl/7588">Abigail's email signature back in 1997</a>:</p>
+
+<pre><code>perl -wle 'print "Prime" if (1 x shift) =~ /^(?!(11+)\1+$)/'
+</code></pre>
+
+<p>That regex must have gained some notoriety. In this <a href="http://www.perlmonks.org/?node_id=81695">perlgolf "Sieve of Erastosthenes" challenge</a> (from 2001), it was referred to as <em>the infamous RE from Abigail</em>. I've come across [several][] <a href="http://www.catonmat.net/blog/perl-regex-that-matches-prime-numbers/">explanations</a> of <a href="http://pages.cs.wisc.edu/~psilord/blog/9.html">how the Perl one-liner works</a>, as well as an article that points out <a href="http://zmievski.org/2010/08/the-prime-that-wasnt">its limitations</a>.</p>
+
+<p>If you can fill in any more of the details in the history of this solution, please leave a comment below.</p>
+
+<h3 id="further-reading">Further reading</h3>
+
+<ul>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#CTRL-A">&lt;C-a&gt;</a> to increment a number</li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#q">q{register}</a> to record a macro</li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#@">@{register}</a> to execute a macro</li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\v">\v</a> the verymagic pattern switch</li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#:g">:global</a> to perform an Ex command on each line matching a pattern</li>
+  <li><a href="http://vimgolf.com/challenges/4d1c27940e3d7832db000010">VimGolf: insert the first 100 prime numbers</a></li>
+  <li><a href="http://udioica.blogspot.co.uk/2013/11/its-factor-plus-little-prime-numbers.html">It's a factor</a> and an <a href="http://vimgolf.com/challenges/51459ef6b94aa50002000002">explanation of the solution</a></li>
+</ul>
+
+
+  </body>
+
+</html>

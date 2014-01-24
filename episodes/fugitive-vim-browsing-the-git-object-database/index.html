@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Fugitive.vim - browsing the git object database</title>
+
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <p>With the fugitive plugin, you're not limited to just working with files in your working tree. The <code>:Gedit</code> command allows you to open files in other branches, and to browse any <a href="http://book.git-scm.com/1_the_git_object_model.html">git object</a>, including tags, commits and trees. Plus, if your repository is hosted on github, you can easily bring up the webpage for any git object using the <code>:Gbrowse</code> command.</p>
+
+<p><em>This is the penultimate of a five part series on fugitive.vim.</em></p>
+
+<p></p>
+
+<r:snippet name="announcement" />
+
+<h3 id="reading-a-file-from-any-git-branch">Reading a file from any git branch</h3>
+
+<p>Fugitive makes it possible to open a <em>read only</em> buffer with the contents of any file, on any local git branch. You can do this using the <code>:Gedit</code> command followed by an argument of the form: <code>branchname:path/to/file</code>. Note that you can use the tab key to auto-complete both the branchname and the filepath.</p>
+
+<p>Remember that the <code>%</code> symbol has special meaning on Vim's command line: it is a shorthand for the current file's path. So if you wanted to open the current file on a branch called 'feature', you could do so by running <code>:Gedit feature:%</code>.</p>
+
+<h3 id="exploring-the-git-object-database">Exploring the git object database</h3>
+
+<p>The <code>:Gedit</code> command allows you to open a buffer containing any git object. There are 4 kinds of git object:</p>
+
+<ul>
+  <li>blobs - correspond to the content of a file</li>
+  <li>trees - correspond to a directory on the filesystem, representing a list of blobs and trees</li>
+  <li>commits - can reference a tree and one or more parent commits</li>
+  <li>tags - refer to a particular commit by name</li>
+</ul>
+
+<p>Every git object is identified by a SHA code. When you run <code>:Gedit SHA</code> it will open a buffer containing a textual representation of the corresponding git object. This could be a blob, tree, commit or tag.</p>
+
+<h3 id="commit-objects">Commit objects</h3>
+
+<p>If you run <code>:Gedit SHA</code>, passing in the id for a commit object, then fugitive will open a buffer containing a textual representation of that commit. This looks just like the what you see when you run <code>git show SHA</code> in the shell, but fugitive makes the buffer interactive in a number of ways. Depending on where your cursor is positioned, pressing the <code>&lt;Enter&gt;</code> key can open a new buffer containing another git object.</p>
+
+<ul>
+  <li>press <code>&lt;Enter&gt;</code> on a reference to a parent to open that commit object</li>
+  <li>press <code>&lt;Enter&gt;</code> on a reference to a tree to open that tree</li>
+  <li>press <code>&lt;Enter&gt;</code> on a diff summary line to diff the specified file before and after that commit</li>
+</ul>
+
+<h3 id="tree-objects">Tree objects</h3>
+
+<p>If you run <code>:Gedit SHA</code>, passing the id for a tree object, then fugitive will open a buffer containing a textual representation of that tree. Again, this looks just like what you see when you run <code>git show SHA</code> in the shell. But you can get more information in the shell by running <code>git ls-tree SHA</code> - this includes the SHA code for every object referenced by that tree.</p>
+
+<p>When fugitive creates a buffer representing a tree object, you can press the <code>a</code> key to toggle between the <code>git show</code> and <code>git ls-tree</code> views.</p>
+
+<p>You can navigate through a fugitive tree buffer just like you would using <a href="/e/15">Vim's native file explorer</a> (or the NERD tree). Pressing <code>&lt;Enter&gt;</code> when your cursor is on a line representing a file or a directory will open a buffer for that object.</p>
+
+<p>The tree buffer makes it easy to drill down through the directories of your git repository, but it's not obvious how you could go up a level to the parent directory. Running the following command will open the parent tree:</p>
+
+<pre><code>:edit %:h
+</code></pre>
+
+<p>If you want, you could create a mapping to make this easier. Here's an example, which maps <code>..</code> to the above command, but only for buffers containing a git blob or tree:</p>
+
+<pre class="brush: vimscript">
+autocmd User fugitive 
+  \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+  \   nnoremap &lt;buffer&gt; .. :edit %:h&lt;CR&gt; |
+  \ endif
+</pre>
+
+<p>Whenever your current buffer contains a git tree or blob, you can always jump up to the commit object for the current tree by pressing <code>C</code>.</p>
+
+<h3 id="open-the-github-url-for-the-current-object">Open the github URL for the current object</h3>
+
+<p>If your git repository is hosted on github, then you can open the webpage for the current git object by running the <code>:Gbrowse</code> command. This is pretty smart about doing the right thing for the context. Whether the active buffer contains a blob, tree, commit or tag, fugitive will generate the appropriate URL.</p>
+
+<p>Also, if you trigger <code>:Gbrowse</code> from visual mode in a file, then the selected lines will be highlighted in the github source.</p>
+
+<h3 id="auto-clean-fugitive-buffers">Auto-clean fugitive buffers</h3>
+
+<p>Each time you open a git object using fugitive it creates a new buffer. This means that your buffer listing can quickly become swamped with fugitive buffers.</p>
+
+<p>Here's an autocommand that prevents this from becomming an issue:</p>
+
+<pre class="brush: vimscript">
+autocmd BufReadPost fugitive://* set bufhidden=delete
+</pre>
+
+<h3 id="add-git-branch-to-status-line">Add git branch to status line</h3>
+
+<p>Fugitive provides a function that you can add to your statusline, and it will show your current git branch. This example is taken from the fugitive documentation (<code>:help fugitive-statusline</code>):</p>
+
+<pre class="brush: vimscript">
+set statusline=%&lt;%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+</pre>
+
+<h3 id="further-reading">Further reading</h3>
+
+<ul>
+  <li><a href="http://book.git-scm.com/1_the_git_object_model.html">The git object model</a></li>
+  <li><a href="http://book.git-scm.com/7_browsing_git_objects.html">Browsing git objects</a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_%"><code>:help c_%</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#::h"><code>:help ::h</code></a></li>
+  <li><a href="http://vim-doc.heroku.com/view?https://raw.github.com/tpope/vim-fugitive/master/doc/fugitive.txt#fugitive-:Gedit"><code>:help :Gedit</code></a></li>
+  <li><a href="http://vim-doc.heroku.com/view?https://raw.github.com/tpope/vim-fugitive/master/doc/fugitive.txt#fugitive-:Gbrowse"><code>:help :Gbrowse</code></a></li>
+  <li><a href="http://vim-doc.heroku.com/view?https://raw.github.com/tpope/vim-fugitive/master/doc/fugitive.txt#fugitive-mappings"><code>:help fugitive-mappings</code></a></li>
+  <li><a href="http://vim-doc.heroku.com/view?https://raw.github.com/tpope/vim-fugitive/master/doc/fugitive.txt#fugitive-statusline"><code>:help fugitive-statusline</code></a></li>
+</ul>
+
+
+  </body>
+
+</html>

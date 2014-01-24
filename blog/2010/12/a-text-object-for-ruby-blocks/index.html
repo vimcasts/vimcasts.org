@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>A text-object for ruby blocks</title>
+
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <p>Ever since learning about Vim's <a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#text-objects">text-objects</a> I have wished that there was a way of selecting blocks in ruby code. Well, now there is. Today I am releasing a plugin that creates <a href="http://www.vim.org/scripts/script.php?script_id=3382">a custom text object for selecting ruby blocks</a>. Merry Christmas!</p>
+
+<p></p>
+
+<h3 id="usage">Usage</h3>
+
+<p>In ruby, a block is always closed with the <code>end</code> keyword. Ruby blocks may be opened using one of several keywords, including <code>module</code>, <code>class</code>, <code>def</code> <code>if</code> and <code>do</code>. The <a href="http://www.vim.org/scripts/script.php?script_id=3382">rubyblock</a> plugin is aware of each of these.</p>
+
+<p>In the example image below, suppose your cursor was positioned on the word <code>def</code>. Typing <code>var</code> would enable visual mode, selecting <em>all</em> of the method definition. </p>
+
+<p><img alt="The 'var' text-object selects all of the current ruby block" src="/images/blog/rubyblock-all.png" /></p>
+
+<p>Whereas if you typed <code>vir</code>, everything <em>inside</em> of the method definition would be selected:</p>
+
+<p><img alt="The 'vir' text-object selects inside of the current ruby block" src="/images/blog/rubyblock-inner.png" /></p>
+
+<p>If you make a visual selection, you can expand it to encompass the outer ruby block by pressing <code>ar</code>, or you can contract your selection by pressing <code>ir</code>. You can repeat this as many times as you like. The image below begins with the innermost ruby block selected. By pressing <code>ar</code> again and again, the selection expands until it encompasses all of the outermost block. If you press <code>ir</code>, you can back up the other way, contracting the selection towards inner blocks.</p>
+
+<p><img alt="You can expand or contract your selection by repeating 'ar' and 'ir' commands" src="/images/blog/rubyblock-scissorkick.png" /></p>
+
+<h3 id="installation">Installation</h3>
+
+<p>If you like to <a href="http://vimcasts.org/e/27">keep your plugins under version control with pathogen</a>, then you will want to clone the <a href="https://github.com/kana/vim-textobj-user">textobj-user</a> and <a href="https://github.com/nelstrom/vim-textobj-rubyblock">textobj-rubyblock</a> plugins from github.</p>
+
+<p>If you're old-school, you can get the <a href="http://www.vim.org/scripts/script.php?script_id=2100">textobj-user</a> and <a href="http://www.vim.org/scripts/script.php?script_id=3382">textobj-rubyblock</a> plugins from <a href="http://www.vim.org/scripts/index.php">vim.org</a>.</p>
+
+<p>Note that the rubyblock plugin currently requires that the <a href="http://www.vim.org/scripts/script.php?script_id=39">matchit.vim</a> plugin is enabled. This can be done by adding the following line to your vimrc:</p>
+
+<pre class="brush: vimscript">
+runtime macros/matchit.vim
+</pre>
+
+<p>Also note, that there is a plugin called ruby-matchit, which calls itself 'matchit for ruby'. If you have this installed, it may interfere with the operation of the rubyblock plugin. Also, matchit.vim supports ruby now (which was not the case when ruby-matchit was written), so there's no need to install them both.</p>
+
+<p>Morgan Prior took the time to explain <a href="http://amaras-tech.co.uk/people/morgan/article/84">how to install the rubyblock plugin</a> on his blog, so go read that if my instructions are too brief. Thanks Morgan!</p>
+
+<h3 id="issues">Issues</h3>
+
+<p>If you notice any unexpected behaviour, I would appreciate if you could report it on the <a href="https://github.com/nelstrom/vim-textobj-rubyblock/issues">github issue tracker</a> for this project.</p>
+
+<h3 id="thanks">Thanks</h3>
+
+<p>I never thought I had the vimscript chops to put this plugin together, but the <a href="http://www.vim.org/scripts/script.php?script_id=2100">textobj-user</a> framework made it possible. So I'd like to say a big thankyou to <a href="http://whileimautomaton.net/">Kana</a> for his excellent work. </p>
+
+
+  </body>
+
+</html>

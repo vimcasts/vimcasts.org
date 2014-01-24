@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title></title>
+
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <h1 id="populating-the-arglist">Populating the arglist</h1>
+
+<p>When launching Vim from the command line, we can supply arguments in a few different ways. The simplest way is to specify one or more filepaths.</p>
+
+<p>In this directory, we've got 5 text files named A, B, C, D, and E:</p>
+
+<pre><code>$ ls -l
+total 40
+-rw-r--r--  1 drew  staff    0 17 Feb 15:40 README
+-rw-r--r--  1 drew  staff  544 14 Jan 14:38 a.txt
+-rw-r--r--  1 drew  staff  336 14 Jan 14:38 b.txt
+-rw-r--r--  1 drew  staff  352 14 Jan 14:38 c.txt
+-rw-r--r--  1 drew  staff  352 14 Jan 14:38 d.txt
+-rw-r--r--  1 drew  staff  368 14 Jan 14:38 e.txt
+</code></pre>
+
+<p>We could launch Vim specifiying one or more filepaths directly:</p>
+
+<pre><code>vim a.txt b.txt
+</code></pre>
+
+<p>As you might expect, that populates the arglist with the two specified files:</p>
+
+<pre><code>:args
+[a.txt] b.txt
+:q
+</code></pre>
+
+<p>Alternatively, we could supply a wildcard when launching Vim:</p>
+
+<pre><code>vim *.txt
+</code></pre>
+
+<p>The bash shell expands the wildcard to match all five text files in the current directory, and those five files appear in the arglist when Vim launches.</p>
+
+<h2 id="changing-the-arglist-at-runtime">Changing the arglist at runtime</h2>
+
+<p>The arglist wouldn't be that much use if it could only be changed by quiting and then relaunching Vim. It turns out that you can change the contents of the arglist at runtime, using the <code>:args</code> command:</p>
+
+<pre><code>:help :args
+</code></pre>
+
+<p>Remember, it's called the arglist because it starts out containing the list of arguments that were passed to Vim when it was launched from the command line. But the fact that you can change the contents of the list while Vim is running means that the name 'argument list' is a bit of a misnomer. Don't underestimate this feature!</p>
+
+<p>Just as you can pass filepaths and wildcards to Vim on the commandline, you can do the same with the :args command. At the moment, we've got 5 items in the arglist:</p>
+
+<pre><code>:args
+[a.txt] b.txt c.txt d.txt e.txt
+</code></pre>
+
+<p>We could contract the arglist to reference just two of these buffers by specifying them with the args command:</p>
+
+<pre><code>:args a.txt b.txt
+</code></pre>
+
+<p>Now the arglist contains only two buffers:</p>
+
+<pre><code>:args
+[a.txt] b.txt
+</code></pre>
+
+<p>Whereas the buffer list still contains all of the files that were specified at launch:</p>
+
+<pre><code>:ls
+...
+</code></pre>
+
+<p>Remember in episode 41, I said that it's useful to think of the arglist as being a subset of the buffer list? Being able to set the contents of the arglist at runtime allows us to define a small working subset of buffers. </p>
+
+<p>We could easily restore the arglist to its previous state with a single command:</p>
+
+<pre><code>:args *.txt
+:args
+[a.txt] b.txt c.txt d.txt e.txt
+</code></pre>
+
+<p>As a general rule: anything that you can provide as an argument to the Vim executable at the commandline can also be supplied as an argument to the <code>:args</code> command.</p>
+
+<p>Now let's have a look at a more complex example.</p>
+
+<h2 id="using-backticks">Using backticks</h2>
+
+<p>This directory contains about 30 markdown files, which correspond to the chapters of my book, Practical Vim. Suppose that we want to open each of these chapters in Vim, we could do so using a wildcard:</p>
+
+<pre><code>vim *.md
+</code></pre>
+
+<p>That's quick and dirty and it gets the job done, but it lists the chapters in alphabetical order. I'd like to have the files listed in the order that they appear in the book, so I've created a hidden file called <code>.toc</code>. Let's inspect it's contents with the <code>cat</code> command:</p>
+
+<pre><code>$ cat .toc
+</code></pre>
+
+<p>This file simply mirrors Practical Vim's table of contents.</p>
+
+<p>Now watch this, if we wrap the cat command in backticks, then it will run in a subshell. We can use the output from the subshell as the arguments to launch Vim:</p>
+
+<pre><code>$ vim `cat .toc`
+</code></pre>
+
+<p>Now the arglist contains all of the chapters in the order that they appear in the table of contents:</p>
+
+<pre><code>:args
+[introduction.md] the_vim_way.md ...
+</code></pre>
+
+<p>Pretty neat!</p>
+
+<p>Earlier on, I stated a general rule that any arguments that can be passed to the Vim executable at the command line can also be supplied to the <code>:args</code> command.  So what about backtick expressions like this one?</p>
+
+<p>Well let's launch Vim again, opening the <code>toc</code> file:</p>
+
+<pre><code>:q
+$ vim .toc
+</code></pre>
+
+<p>That populates the arglist with a single buffer:</p>
+
+<pre><code>:args
+[.toc]
+</code></pre>
+
+<p>We can quickly set the arglist to contain each of the files listed in the table of contents by running "args with the cat command in backticks":</p>
+
+<pre><code>:args `cat .toc`
+</code></pre>
+
+<p>Boom! The backtick expression works just as it does in the shell:</p>
+
+<pre><code>:args
+[introduction.md] the_vim_way.md ...
+</code></pre>
+
+<h2 id="more-ideas-for-using-backtick-expressions">More ideas for using backtick expressions</h2>
+
+<p>I've chosen a simple example for demonstration purposes, but we could put anything inside that backtick expression.  So long as the subshell returns a list of filepaths, then Vim will consider it as valid input.  For example, you could use the output of <code>find</code> or <code>grep</code>, or even a shell script of your own.  I'm sure that you can think of lots of other possibilities.</p>
+
+  </body>
+
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Project-wide find and replace</title>
+
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <p>Vim doesn't have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as <code>:substitute</code>, <code>:argdo</code>, and <code>:vimgrep</code>. We'll look at two possible strategies: first using the arglist, then the quickfix list.</p>
+
+<p></p>
+
+<r:snippet name="announcement" />
+
+<p>In the video, I find all occurrences of <code>Vimcasts.com</code> and change them to <code>Vimcasts.org</code>. I show two different ways of doing it. This builds on material that was introduced in episodes <a href="/e/41">41</a>, <a href="/e/42">42</a>, <a href="/e/43">43</a>, and <a href="/e/44">44</a>.</p>
+
+<h3 id="strategy-1---run-substitute-across-all-project-files">Strategy #1 - run :substitute across all project files</h3>
+
+<p>The first strategy is to populate the arglist with all of the files in the project, then run the substitute command against them all:</p>
+
+<pre><code>:args *.txt
+:argdo %s/Vimcasts\.\zscom/org/ge
+:argdo update
+</code></pre>
+
+<p>This may mean that the substutite command runs in buffers that don't contain a match.</p>
+
+<h3 id="strategy-2---run-substitute-across-project-files-that-contain-a-match">Strategy #2 - run :substitute across project files that contain a match</h3>
+
+<p>The second strategy breaks the substitute command into two steps: find all matches, then run the substitute command only in those buffers that contain a match. Here are the steps:</p>
+
+<pre><code>:args *.txt
+:vimgrep /Vimcasts\.\zscom/g ##
+:Qargs
+:argdo %s/Vimcasts\.\zscom/org/ge
+:argdo update
+</code></pre>
+
+<p>This uses a custom <code>:Qargs</code> command to prune the arglist of buffers that don't contain a match.</p>
+
+<h3 id="the-qargs-helper-command">The :Qargs helper command</h3>
+
+<p>The custom <code>:Qargs</code> command sets the arglist to contain each of the files referenced by the quickfix list. You add it to Vim by copying these lines into your vimrc file:</p>
+
+<pre class="brush: vimscript">
+command! -nargs=0 -bar Qargs execute 'args' QuickfixFilenames()
+function! QuickfixFilenames()
+  " Building a hash ensures we get each buffer only once
+  let buffer_numbers = {}
+  for quickfix_item in getqflist()
+    let buffer_numbers[quickfix_item['bufnr']] = bufname(quickfix_item['bufnr'])
+  endfor
+  return join(map(values(buffer_numbers), 'fnameescape(v:val)'))
+endfunction
+</pre>
+
+<p>Or you could install the <a href="https://github.com/nelstrom/vim-qargs">vim-qargs</a> plugin from github. Credit where due: I adapted this code from <a href="http://stackoverflow.com/a/4793316/128850">a Stack Overflow solution</a> posted by Dr Al.</p>
+
+<h3 id="proposal-cdo">Proposal: :cdo</h3>
+
+<p>Vim needs a <code>:cdo {cmd}</code> command. It would behave like the <a href="http://vimdoc.sourceforge.net/htmldoc/editing.html#:argdo"><code>:argdo</code></a> and <a href="http://vimdoc.sourceforge.net/htmldoc/windows.html#:bufdo"><code>:bufdo</code></a> commands, except that it would iterate through the quickfix list. The <code>:cdo {cmd}</code> command would work as follows:</p>
+
+<pre><code>:cfirst
+:{cmd}
+:cnfile
+:{cmd}
+etc.
+</code></pre>
+
+<p>If such a command existed, then we could refine Strategy #2, removing the <code>:Qargs</code> step:</p>
+
+<pre><code>:args *.txt
+:vimgrep /Vimcasts\.\zscom/g ##
+:cdo %s/Vimcasts\.\zscom/org/ge
+:cdo update
+</code></pre>
+
+<p><strong>UPDATE</strong> on June 2nd, 2013, <a href="https://groups.google.com/forum/#!msg/vim_dev/dfyt-G6SMec/_6h8pDUpeZMJ">Yegappan submitted a patch</a> to add native <code>:cdo</code> and <code>:ldo</code> commands to Vim's core.</p>
+
+<h3 id="cdo-implementations-in-the-wild">:cdo implementations in the wild</h3>
+
+<p>Henrik Nye created a <a href="https://github.com/henrik/vim-qargs/blob/22a27f3745198b942b3d2b8bec31d4daa964aa28/plugin/qargs.vim#L5"><code>:Qdo</code> command</a> in his fork of <a href="https://github.com/nelstrom/vim-qargs">my Qargs plugin</a>. This takes the slightly dirty approach of populating the arglist from the contents of the quickfix list, then using the built-in <code>:argdo</code> command to iterate over the resulting arglist. Of course, this has the side-effect that it changes the contents of the arglist. That's tolerable, but not ideal. Henrik has written up how to <a href="http://henrik.nyh.se/2012/07/project-wide-search-and-replace-in-vim-with-qdo/">use <code>:Qdo</code> for project wide search and replace</a>.</p>
+
+<p>Peter Jaros created <a href="https://github.com/Peeja/vim-cdo"><code>vim-cdo</code></a>, which includes <code>:Cdo</code> as well as <code>:Ldo</code> for operating on the location list. Peter's plugin differs slightly from the formula I described above, because it effectively uses <code>:cnext</code> instead of <code>:cnfile</code>.</p>
+
+<p>In the comments, Vincent Velociter pointed out <a href="http://efiquest.org/2009-02-19/32/">another implementation</a> that creates both <code>:Qfdo</code> and <code>:Qfdofile</code> commands.</p>
+
+<h3 id="further-reading">Further reading</h3>
+
+<ul>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\zs"><code>:help /\zs</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/editing.html#:argdo"><code>:help :argdo</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/windows.html#:bufdo"><code>:help :bufdo</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/quickfix.html#:vim"><code>:help :vimgrep</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:s"><code>:help :substitute</code></a></li>
+  <li>Vimcast #41 - <a href="/e/41">Meet the arglist</a></li>
+  <li>Vimcast #42 - <a href="/e/42">Populating the arglist</a></li>
+  <li>Vimcast #43 - <a href="/e/43">Using :argdo to change multiple files</a></li>
+  <li>Vimcast #44 - <a href="/e/44">Search multiple files with :vimgrep</a></li>
+  <li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> tip 77 - Stake the boundaries of a match</li>
+  <li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> tip 96 - Find and replace across multiple files</li>
+  <li><a href="http://henrik.nyh.se/2012/07/project-wide-search-and-replace-in-vim-with-qdo/">Project wide search and replace in Vim with Qdo</a></li>
+  <li>Stack overflow: <a href="http://stackoverflow.com/a/5686810/6962">Search &amp; replace using quickfix list in Vim</a></li>
+  <li>Stack overflow: <a href="http://stackoverflow.com/a/4793316/128850">How to do search &amp; replace with ack in Vim</a></li>
+  <li><a href="https://groups.google.com/forum/#!msg/vim_dev/dfyt-G6SMec/_6h8pDUpeZMJ">Yegappan's patch for native <code>:cdo</code> and <code>:ldo</code></a></li>
+</ul>
+
+
+  </body>
+
+</html>

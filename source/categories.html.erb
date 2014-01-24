@@ -1,0 +1,7 @@
+<h2>Categories</h2>
+
+<ul>
+  <% data.categories.each do |tagname| %>
+    <li><%= link_to tagname, "/categories/#{tagname}" %></li>
+  <% end %>
+</ul>

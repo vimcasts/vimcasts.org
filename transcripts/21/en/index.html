@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title></title>
+
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <h1 id="intro">Intro</h1>
+
+<p>Even if a macro is composed of only a few keystrokes, it can save you a lot of
+effort if you replay it enough times. Occasionally you will be faced with an
+editing task which can be accomplishd by recording a more intricate macro, and
+in this case it may save you even more time. In this episode, I'm going to
+demonstrate a complex macro that I recently used in the real world.</p>
+
+<p>MarkDown documents are usually converted to HTML by filtering them through a
+script. But sometimes the target format is not so simple, and a bit of manual
+editing is required.</p>
+
+<p>This MarkDown document is fairly well-structured. There are 21 paragraphs,
+each preceded by a numbered heading. The paragraphs are all roughly the same
+length, but some are a little shorter, and others are a little longer. </p>
+
+<p>The target format is a structured HTML document. Each paragraph from the
+Markdown document corresponds to a 'slide' in the target document. It begins
+with a navigational list, containing links to each of the 'slides' below.</p>
+
+<p>The fact that the input and output formats are so well structured makes it
+easy to automate the conversion with a carefully constructed macro.</p>
+
+<h2 id="preliminary-notes">Preliminary notes</h2>
+
+<p>I shall be making use of the surround plugin. Although this editing task could
+be accomplished without it, this plugin considerably speeds up certain
+operations, as you shall observe. It is outwith the scope of this video to
+give detailed usage and installation instructions, but links shall be provided
+in the shownotes.</p>
+
+<h2 id="walkthrough">Walkthrough</h2>
+
+<p>I've created a skeleton template for the document. This contains all of the
+necessary structural markup. I'll begin by copying the entire Markdown
+document in to the main content section. I can read the contents of a file in
+place with the <code>:r</code> command:</p>
+
+<pre><code>:r pecha-kucha-script.md
+</code></pre>
+
+<p>Which inserts the entire specified file at the current cursor position.</p>
+
+<h3 id="start-recording-the-macro">Start recording the macro</h3>
+
+<p>To begin recording the macro, I press the 'q' key followed by 'a', which is
+the register I want to save it to. You know you've done it right if it says
+'recording' at the bottom of the screen. Now, every key that I press is
+captured, until I press 'q' in normal mode, which stops recording the macro.</p>
+
+<h3 id="jump-to-slide-header">Jump to slide header</h3>
+
+<p>When recording a macro, it is best to move around the file using commands that
+can acheive a similar effect when replayed in a different context. I need to
+move my cursor to the first slide heading. I could use <code>13G</code> to jump to line
+'13', but this wouldn't translate well when the macro was replayed later.
+Instead, I'm going to search for the pattern of a hash at the beginning of the
+line, followed by a two digit number.</p>
+
+<p>I hit the forward slash key to activate search, then enter the pattern:</p>
+
+<pre><code>"caret hash backslash-D backslash-D"
+^#\d\d
+</code></pre>
+
+<p>As soon as I hit enter, my cursor jumps to the first occurance of this
+pattern, which is just where I want it. </p>
+
+<h3 id="capture-the-slide-number">Capture the slide number</h3>
+
+<p>I want to keep hold of the number for the current slide, so I'm going to save
+it in a register. First, I move the cursor one place to the right by pressing
+the <code>l</code> key. Now the <code>de</code> command will delete the number, but I want to make
+sure I can access it later, so I prepend 'double-quote-z' <code>"z</code>. This places
+the deleted text into the 'z' register. You can use any lowercase letter as a
+register. </p>
+
+<h3 id="capture-the-heading">Capture the heading</h3>
+
+<p>All of the headings use the same format: a hash followed by a two digit number
+and a space, then a dash followed by another space, and then the text of the
+heading. </p>
+
+<p>I want to save the actual text of the heading, so I move my cursor forwards by
+pressing the <code>w</code> key twice. I can discard everything on the line before this,
+so I issue the command:</p>
+
+<pre><code>d0
+</code></pre>
+
+<p>In this case, I don't want to reuse the text, so I won't bother prepending a
+register.</p>
+
+<p>I do want to save everything else on this line, so I specify register 'x' and
+delete the entire line:</p>
+
+<pre><code>"xdd
+</code></pre>
+
+<p>After the heading there is a blank line. I delete this with the <code>dd</code> command.
+Again, I know that I won't need to reuse this, so I don't specify a register.</p>
+
+<h3 id="wrap-the-paragraph-in-a-li-element-with-idslide-01">Wrap the paragraph in a &lt;li&gt; element with id="slide-01"</h3>
+
+<p>Most paragraphs are 4 lines long, but some are shorter and others are longer,
+so if I was to move the cursor down 4 times it wouldn't always work the way I
+want it to. However, I can visually select the current paragraph, no matter
+how long it is, by issuing the command:</p>
+
+<pre><code>"shift-v IP"
+Vip
+</code></pre>
+
+<p>I want to wrap this election with a list-item element. I can do so by
+invoking a command from the surround plugin:</p>
+
+<pre><code>s&lt;li&gt;
+</code></pre>
+
+<p>There is a kind of grammar to the surround plugin, which makes it quite easy
+to learn. When you are in visual mode, the 's' key says "surround the
+selection with the next element". If you follow that with an opening angle
+bracket, surround understands that you are entering an XML style tag, and
+opens a prompt where you can enter the name of the element. When you enter the
+closing angle bracket, the selection is wrapped with opening and closing tags.</p>
+
+<p>Note that, because the selection was made using visual <em>line</em> mode, the
+opening and closing tags are each given a line of their own.</p>
+
+<p>I want to add an id to the list-item element that I just created. My cursor is
+currently on the opening angle bracket, so if I press the <code>%</code> key, I can jump
+to the closing angle bracket. Then I press <code>i</code> to go into insert mode, and I
+type the id attribute, leaving a gap where the number should go.</p>
+
+<pre><code> id="slide-"
+</code></pre>
+
+<p>When I leave insert mode, my cursor is placed on the closing quote mark. I
+want to paste the number that I captured earlier in front of the current
+cursor position, so for this I use <code>P</code> "shift-P". Remember that I saved the
+number into register 'z', so to paste this I run the command:</p>
+
+<pre><code>"double-quote z shift-p"
+"zP
+</code></pre>
+
+<h2 id="creating-the-navigation">Creating the navigation</h2>
+
+<p>Now I want to create an entry in the navigation list that links to this slide.
+Once again, the best way for me to move my cursor is to search for something
+that marks the navigation menu. Instead of using the forward slash, I can
+search backwards by pressing the question-mark key. I'm going to use the
+pattern:</p>
+
+<pre><code>\/ol
+</code></pre>
+
+<p>When I press enter, my cursor jumps to the end of the navigation list. The
+reason why I move to the end, rather than the beginning of the list, is so
+that I can append the title at the end of the list. The title of the slide was
+saved in register 'x', so if I run:</p>
+
+<pre><code>"double-quote x shift-P"
+"xP
+</code></pre>
+
+<p>it places the title on the line above my cursor. To fix the indentation, I run
+the command <code>==</code> "equals-equals".</p>
+
+<p>With my cursor on the first character of the title, I hit:</p>
+
+<pre><code>"v dollar h"
+v$h
+</code></pre>
+
+<p>To go into visual mode, selecting to the end of the line, then back one
+character to make sure that the line-break itself is not included in the
+selection. Once again, I use the surround plugin:</p>
+
+<pre><code>s&lt;li&gt;
+</code></pre>
+
+<p>which wraps the selection with a list item element. Note that this time, the
+opening and closing tags are on the same line as the selected text. This is
+because I made my selection using visual character mode (with a small 'v'),
+whereas the previous time I used visual line mode (triggered with a large
+'V').</p>
+
+<p>Next, I want to wrap the inner text with a link. I can select the inner
+contents of a tag using the text-object:</p>
+
+<pre><code>vit
+</code></pre>
+
+<p>Then I surround the selection with a link tag:</p>
+
+<pre><code>s&lt;a&gt;
+</code></pre>
+
+<p>I want to add an "href" attribute, so I press <code>%</code> to move to the closing angle
+bracket, then enter insert mode by pressing <code>i</code>. I then type the href
+attribute, leaving a gap for the number I captured earlier.</p>
+
+<pre><code>href="#slide-"
+</code></pre>
+
+<p>When I hit escape, my cursor is positioned on the closing quote, so I can
+paste the number from the 'z' register by typing:</p>
+
+<pre><code>"double-quote z shift-p"
+"zP
+</code></pre>
+
+<p>Now I have an entry in the navigation which links to the corresponding slide,
+so I can finish recording the macro by pressing <code>q</code>.</p>
+
+<h2 id="replay-the-macro">Replay the macro</h2>
+
+<p>The macro can be replayed by pressing the "at" key followed by the register in
+which it was saved. In this case, I saved it to the 'a' register, so it can be
+replayed by pressing "at-A":</p>
+
+<pre><code>@a
+</code></pre>
+
+<p>That has created a navigational link to the second slide, and wrapped up the
+corresponding content in it's own list element.</p>
+
+<p>I can also prepend a count before replaying a macro, and it will be executed
+the specified number of times. I know that I have 20 slides, and two have
+already been processed, so I can finish off the job by running:</p>
+
+<pre><code>18@a
+</code></pre>
+
+<p>Bang! Job done.</p>
+
+
+  </body>
+
+</html>

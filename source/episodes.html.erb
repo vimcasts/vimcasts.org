@@ -1,0 +1,29 @@
+---
+title: Episodes
+pageable: true
+blog: episodes
+per_page: 10
+---
+
+<h1>Episodes of Vimcasts</h1>
+
+<% page_articles.each_with_index do |episode, i| %>
+  <section class="episode">
+    <h2><%= link_to episode.title, episode %></h2>
+    <div class="episode_number"><small>#</small><%= episode.data.number %></div>
+    <time datetime="<%= episode.date.strftime('%Y-%m-%d') %>"><%= episode.date.strftime('%b %d, %Y') %></time>
+
+    <%= episode.summary %>
+    <%= link_to "Continue reading&hellip;", episode %>
+
+  </section>
+<% end %>
+
+<% if paginate %>
+  <% if prev_page %>
+    <p><%= link_to 'Prev page', prev_page %></p>
+  <% end %>
+  <% if next_page %>
+    <p><%= link_to 'Next page', next_page %></p>
+  <% end %>
+<% end %>

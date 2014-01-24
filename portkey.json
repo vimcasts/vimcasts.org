@@ -1,0 +1,40 @@
+{
+    "config.rb": {
+        "type": "config"
+    },
+    "source/*": {
+        "type": "index"
+    },
+    "source/blog/*": {
+        "type": "blog"
+    },
+    "source/episodes/*.md": {
+        "type": "episode",
+        "alternate": "source/transcripts/%s/en.md"
+    },
+    "source/transcripts/*/en.md": {
+        "type": "transcript",
+        "alternate": "source/episodes/%s*.md"
+    },
+    "source/feeds/*": {
+        "type": "feed"
+    },
+    "source/javascripts/*": {
+        "type": "javascript"
+    },
+    "source/layouts/*": {
+        "type": "layout"
+    },
+    "source/paths/*": {
+        "type": "path"
+    },
+    "source/publications/*": {
+        "type": "publication"
+    },
+    "source/stylesheets/*": {
+        "type": "stylesheet"
+    },
+    "source/training/*": {
+        "type": "training"
+    },
+}

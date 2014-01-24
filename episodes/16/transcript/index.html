@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title></title>
+
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <p>Default wrapping unsatisfactory.</p>
+
+<p>Fix it:</p>
+
+<pre><code>:set wrap nolist linebreak
+</code></pre>
+
+<p>Demonstrate that <code>:set list</code> breaks the linebreak.
+Demonstrate that <code>:set nowrap</code> breaks the linebreak.</p>
+
+<p>Add to .vimrc:</p>
+
+<pre><code>nmap &lt;leader&gt;l :set list!&lt;CR&gt;
+nmap &lt;leader&gt;w :set wrap!&lt;CR&gt;
+command! -nargs=* Wrap set wrap linebreak nolist
+</code></pre>
+
+<h2 id="moving-around">Moving around</h2>
+
+<p>Demonstrate that <code>j</code> and <code>k</code> don't work as you might expect. (Also <code>$</code>, <code>^</code> &amp; <code>0</code>).</p>
+
+<p>Expected behaviour from:</p>
+
+<pre><code>gj
+gk
+g0
+g^
+g$
+</code></pre>
+
+<p>Also, cover <code>(</code> and <code>)</code> for moving back/forward through sentences. </p>
+
+<p>Demonstrate delete sentence, and swap sentence order.</p>
+
+<p>Also demonstrate <code>C</code> on last sentence.</p>
+
+<p>Also demonstrate <code>A</code> from anywhere in paragraph.</p>
+
+<h2 id="knowing-whats-what">Knowing what's what</h2>
+
+<p>Either:</p>
+
+<pre><code>:set number
+</code></pre>
+
+<p>or…</p>
+
+<pre><code>:set showbreak=&gt;
+:set showbreak=…
+</code></pre>
+
+<p>To insert the elipsis: <code>ctrl-vu2026</code>.</p>
+
+<p>If I switch line numbering off, it's actually very hard to tell whether you are looking at numbered lines or display lines. By default, the 'showbreak' setting is blank, but if you set this to a string then it will be printed at the beginning of each continued line. I like to use the unicode elipsis character. If you are working with softwrapped text, I would suggest that you enable either line numbering or showbreak to prevent confusion.</p>
+
+<p>The information in this video is summarized in the accompanying shownotes.</p>
+
+<h1 id="fix-width">Fix width</h1>
+
+<p>Demonstrate TextMate's 'Soft Wrap' + 'Use window frame' option. Then show 'Soft Wrap' + 78 and so on. Not possible in Vim with soft wrap.</p>
+
+<p>With vertical split, resize current width with:</p>
+
+<pre><code>N ctrl-|
+</code></pre>
+
+<p>or</p>
+
+<pre><code>:vertical resize N
+</code></pre>
+
+<p>Set the width of the window with:</p>
+
+<pre><code>:set columns=80
+</code></pre>
+
+  </body>
+
+</html>

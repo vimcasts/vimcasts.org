@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Creating colorschemes for Vim</title>
+
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <p>Choosing a colorscheme that you find pleasing to look at is essential if you want to be comfortable working with Vim. There are hundreds of colorschemes available, but what if you can't find one that you like? In this episode, I'll share a few tips that make it easy to create colorschemes for Vim.</p>
+
+<p></p>
+
+<r:snippet name="announcement" />
+
+<h3 id="revealing-syntax-groups">Revealing syntax groups</h3>
+
+<p>If you want to change the color of an element, the first thing you need to know is to which syntax highlighting group it belongs. </p>
+
+<p>In TextMate, you can reveal the <em>scope</em> of any element by pressing the <code>ctrl-shift-p</code> keys. This brings up a tooltip showing information about which <em>scopes</em> the current word belongs to. You can then tweak the style of the selected element in the "Themes" panel of TextMate's preferences.</p>
+
+<p>Vim doesn't have a syntax inspector built in, but it can be added with a small amount of Vimscript. I keep this in my <code>.vimrc</code> file:</p>
+
+<pre class="brush: vimscript">
+&quot; Show syntax highlighting groups for word under cursor
+nmap &lt;C-S-P&gt; :call &lt;SID&gt;SynStack()&lt;CR&gt;
+function! &lt;SID&gt;SynStack()
+  if !exists(&quot;*synstack&quot;)
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, &quot;name&quot;)')
+endfunc
+</pre>
+
+<p>I've set this up to use the same <code>ctrl-shift-p</code> shortcut as TextMate. Now, I can position my cursor on any word, and pressing <code>ctrl-shift-p</code> will reveal the syntax groups to which the element belongs. With that information, it's straightforward to open up a colorscheme file and edit or create a style for the word in question.</p>
+
+<p><strong>UPDATE</strong>: thanks to Gerardo Galindez for bringing <a href="https://github.com/gerw/vim-HiLinkTrace">HiLinkTrace</a> to my attention. This script can reveal a list of <em>all</em> of the matching syntax groups. It's much more powerful than the little snippet of Vimscript above.</p>
+
+<h3 id="default-colors">Default colors</h3>
+
+<p>When you reset the syntax highlighting, it doesn't just set everything to black and white. Instead, it uses the default colors defined in the file <code>$VIMRUNTIME/syntax/syncolor.vim</code>. If you're curious, you can open this file in Vim by running <code>:edit $VIMRUNTIM/syntax/syncolor.vim</code>. </p>
+
+<h3 id="styling-vims-interface">Styling Vim's interface</h3>
+
+<p>You can get a list of the default highlighting groups by looking up <a href="http://vimdoc.sourceforge.net/htmldoc/syntax.html#highlight-groups"><code>:help highlight-groups</code></a>. </p>
+
+<p>It's easy to overlook some elements of Vim's interface, because they may not be continuously visible. Here is a checklist of things that you should consider:</p>
+
+<ul>
+  <li>can you see the cursor?</li>
+  <li>enable line &amp; columns highlighting (<code>:set cul cuc</code>). Can you see a crosshair for the cursor position?</li>
+  <li>enable line numbering (<code>:set number</code>). Can you see the line numbers?</li>
+  <li>split a window with <code>:split</code> and <code>:vsplit</code>. Are the status lines and vertical separators clearly visible? Can you tell which is the current window?</li>
+  <li>enable hlsearch (<code>:set hls</code>) and search for a pattern. Can you see the matches?</li>
+  <li>go into visual mode (shift-V). Can you easily see which line is selected? Can you differentiate between visual mode and highlighted search matches?</li>
+  <li>fold some text (<code>:set foldmethod=manual</code> then make a visual selection and press <code>zf</code>). Can you identify the folded text? </li>
+  <li>bring up the autocomplete popup menu (type the first few characters of a word, then press <code>ctrl-n</code>). Is it clear which item in the list is selected?</li>
+  <li>position your cursor on some brackets. Does the matching bracket stand out in a way that is identifiable? Could the matching bracket be confused with the cursor?</li>
+</ul>
+
+<p>For each of the above questions, you should not just be asking "can I see X", but also "does X look good with the existing colors?". When devising a palette for a colorscheme, you may want to choose a handful of colors that you want to use for syntax coloring, then choose a complimentary set of colors to use for styling Vim's interface.</p>
+
+<h3 id="syntax-highlighting-hex-values">Syntax highlighting hex values</h3>
+
+<p>When working with hex values, it's really helpful if you can see the color that the code represents. Yuri Feldman has created a lightweight <a href="http://www.vim.org/scripts/script.php?script_id=2937">hexHighlight</a> script that allows you to toggle hex color syntax highlighting. If you install the plugin, it maps the toggle function to <code>&lt;leader&gt;&lt;F2&gt;</code>. I prefer to use <code>,h</code> so I keep the following in my .gvimrc:</p>
+
+<pre class="brush: vimscript">
+if exists('*HexHighlight()')
+  nmap &lt;leader&gt;h :call HexHighlight()&lt;Return&gt;
+endif
+</pre>
+
+<p>Note that this plugin requires GVim. If you call the <code>HexHightlight()</code> function while running Vim in a terminal, it will notify you: <em>"hexHighlight only works with a graphical version of Vim"</em>.</p>
+
+<h3 id="coloration">Coloration</h3>
+
+<p><a href="http://github.com/sickill/coloration">Coloration</a> is a tool created by Marcin Kulik, which makes it really easy to convert TextMate themes into Vim colorschemes. You can download the rubygem to use it at the command line, or you can just <a href="http://coloration.sickill.net/">upload the file for a TextMate theme to the webpage</a>.</p>
+
+<p>Note that coloration expects TextMate themes in XML format, whereas TextMate itself tends to save themes in a binary <code>.tmTheme</code> format. The <code>.tmTheme</code> extension is just a nicety - under the hood it's really a property list (plist) file. You can use the <code>plutil</code> tool to convert plist files from binary to XML format as follows:</p>
+
+<pre><code>plutil -convert xml1 Amy.tmTheme
+</code></pre>
+
+<p>This will overwrite the file <code>Amy.tmTheme</code> with an XML representation of the same data, creating a file that Coloration can handle.</p>
+
+<h3 id="making-your-colorscheme-work-on-color-terminals">Making your colorscheme work on color terminals</h3>
+
+<p>Shawn Biddle has created a <a href="http://shawncplus.github.com/Vim-toCterm/">script that updates GVim colorschemes to work in color terminals</a>. Follow the installation instructions on <a href="http://shawncplus.github.com/Vim-toCterm/">the project page</a>. Once installed, you simply open the colorscheme that you want to change in Vim, then source the the <code>tocterm.vim</code> script. For each GUI style (such as <code>guifg=#d7005f</code>), this script will translate the hex value into the corresponding index for a 256 color terminal (e.g. <code>ctermfg=161</code>).</p>
+
+<p>Note that the Vim-toCterm script assumes that the terminal has 256 colors. If you are running Vim inside a terminal with fewer colors (such as OS X Terminal, which has only 16!), then the colorscheme generated by the script will be of no use to you. Mac users can test their colorschemes in <a href="http://iterm.sourceforge.net/">iTerm</a>, which does support 256 colors.</p>
+
+<h3 id="further-reading">Further reading</h3>
+
+<ul>
+  <li><a href="https://github.com/gerw/vim-HiLinkTrace">HiLinkTrace</a> - a plugin for revealing all syntax groups</li>
+  <li><a href="http://stackoverflow.com/questions/1467438/find-out-to-which-highlight-group-a-particular-keyword-symbol-belongs-in-vim">StackOverflow: revealing syntax groups</a></li>
+  <li><a href="http://coloration.sickill.net/">Coloration</a> - a tool for converting TextMate themes to Vim colorschemes</li>
+  <li><a href="http://hints.macworld.com/article.php?story=20050430105126392">Converting plist files from binary to XML format</a></li>
+  <li><a href="http://www.vim.org/scripts/script.php?script_id=2937">HexHighlighter</a> - a plugin to toggle hex colors</li>
+  <li><a href="https://github.com/gorodinskiy/vim-coloresque">coloresque</a> - another plugin to visualize colors (including hsl and named colors)</li>
+  <li><a href="http://shawncplus.github.com/Vim-toCterm/">Vim-toCterm</a> - a script that updates GUI colorschemes to work in color terminals</li>
+  <li><a href="http://github.com/joshuaclayton/palette">palette</a> - an easier way to write Vim color schemes (rubygem)</li>
+</ul>
+
+
+  </body>
+
+</html>
