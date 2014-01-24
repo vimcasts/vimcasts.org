@@ -92,6 +92,10 @@ end
 
 proxy "/episodes/all.html", "/episodes-all.html"
 
+["registers", "fugitive", "vimgolf", "folding"].each do |category|
+  proxy "categories/#{category}.html", "category-aggregate.html", locals: { tagname: category }, ignore: true
+end
+
 ###
 # Helpers
 ###
