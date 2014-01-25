@@ -1,6 +1,6 @@
 Check out this site:
 
-    git clone git@github.com:StudioNelstrom/vimcasts-site.git
+    git clone git@github.com:vimcasts/vimcasts.org.git
     cd vimcasts-site
 
 Install dependencies:
