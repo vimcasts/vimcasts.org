@@ -143,8 +143,8 @@ configure :build do
     redirect "e/a.html", to: "/episodes/all"
     blog(:episodes).articles.each do |episode|
       n = episode.data.number
-      redirect "episodes/#{n}.html", to: episode.path
-      redirect "e/#{n}.html", to: episode.path
+      redirect "episodes/#{n}.html", to: "/#{episode.path}"
+      redirect "e/#{n}.html", to: "/#{episode.path}"
       redirect "e/#{n}/t.html", to: "/episodes/#{n}/transcript"
     end
     # blog(:blog).articles.each do |post|
