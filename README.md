@@ -11,4 +11,4 @@ Launch the middleman server:
 
     bundle exec middleman server
 
-Now you can view the site at [http://localhost:4567][].
+Now you can view the site at [http://localhost:4567](http://localhost:4567).
