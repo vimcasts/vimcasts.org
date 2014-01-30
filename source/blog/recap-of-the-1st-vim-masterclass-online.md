@@ -6,7 +6,7 @@
 
 Yesterday was the [world premiere of my Vimcasts Masterclass Online][1]. It went great! Encouraged by it's success, I'm planning to make this a regular occurrence. Watch out for more dates in the new year.
 
-If you missed the chance to attend the first one, don't worry! I've scheduled [another Vim Masterclass][2] at the same time next week. The EarlyBird discount price of Â£80 (approx. US $128) is available until the end of this week.
+If you missed the chance to attend the first one, don't worry! I've scheduled [another Vim Masterclass][2] at the same time next week. The EarlyBird discount price of £80 (approx. US $128) is available until the end of this week.
 
 [1]: http://vimcasts-online-1.eventbrite.com/
 [2]: http://vimcasts-online-2.eventbrite.com/

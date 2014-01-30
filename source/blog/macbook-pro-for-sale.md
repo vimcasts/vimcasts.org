@@ -21,7 +21,7 @@ READMORE
 
 <img width="480" height="320" src="/images/blog/MBP_2010_screen.jpg"/>
 
-The operating system is licensed to me (not to the machine), so you'll have to purchase your own Mountain Lion license for Â£14.
+The operating system is licensed to me (not to the machine), so you'll have to purchase your own Mountain Lion license for £14.
 
 I purchased this MacBook Pro in April of 2010. It came with 4GB of RAM, and a 320GB hard disk drive. In November 2012, I upgraded to 8GB of RAM, and replaced the hard disk with a solid state drive (SSD). The SSD is smaller than the old hard disk, but it performs much better. These upgrades have given the machine a new lease of life.
 

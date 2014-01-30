@@ -15,7 +15,7 @@ Read about [what to expect from a Vim Masterclass][expect] if you'd like to know
 
 READMORE
 
-The early bird price of Â£85 is available until 7pm on Wednesday, October 17th. After that, the price goes up to Â£100, so get in there fast! Only eight tickets are available for this session. If there's enough demand, then I'll consider running a second workshop that same week, either on the Tuesday or Thursday.
+The early bird price of £85 is available until 7pm on Wednesday, October 17th. After that, the price goes up to £100, so get in there fast! Only eight tickets are available for this session. If there's enough demand, then I'll consider running a second workshop that same week, either on the Tuesday or Thursday.
 
 I've listed the [Bristol Vim Masterclass on Lanyrd][l]. Track the event there, or let the world know that you're coming.
 

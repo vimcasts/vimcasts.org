@@ -23,6 +23,6 @@ Tickets for the Krakow workshops are available here:
 
 [eve]: http://krakow-vimcasts-eve-1.eventbrite.com/?discount=earlybird
 
-The early bird price of Â£40 is available until 6pm on Friday, June 1st. After that, the price goes up to Â£50, so get in there fast!
+The early bird price of £40 is available until 6pm on Friday, June 1st. After that, the price goes up to £50, so get in there fast!
 
 Initially, I'm releasing a batch of 12 tickets. If demand is high, I may consider increasing the class size, or even scheduling a second workshop.

@@ -4,7 +4,7 @@
 :tags: announcements, vim-training
 ---
 
-I'm raising the price for my [online Core Vim Class][class] to Â£160.
+I'm raising the price for my [online Core Vim Class][class] to £160.
 From now on, attendees will receive an exclusive hour-long screencast that summarizes the material from the class.
 The class itself covers similar material to before.
 

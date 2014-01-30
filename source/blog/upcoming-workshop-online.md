@@ -4,7 +4,7 @@
 :tags: announcements, vim-training
 ---
 
-On Wednesday, November 28th, I'm going to teach my [Vim Masterclass online][online]. It will run for 3.5 hours, from [17:00 GMT][tz]. That's 09:00 if you live in San Fransisco, or 12:00 if you live in New York. Tickets cost Â£95 (approximately US $150), but there's an Â£80 earlybird offer (approx. US $127) running until November 21st.
+On Wednesday, November 28th, I'm going to teach my [Vim Masterclass online][online]. It will run for 3.5 hours, from [17:00 GMT][tz]. That's 09:00 if you live in San Fransisco, or 12:00 if you live in New York. Tickets cost £95 (approximately US $150), but there's an £80 earlybird offer (approx. US $127) running until November 21st.
 
 This is a World Premiere! I've run my Vim masterclass over 20 times in meatspace, but never before in cyberspace. I hope that this will be the first of many.
 

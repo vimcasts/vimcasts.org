@@ -25,7 +25,7 @@ Tickets for the London workshops are available here:
 [pm]: http://london-vimcasts-pm-1.eventbrite.com/?discount=earlybird
 [eve]: http://london-vimcasts-eve-1.eventbrite.com/?discount=earlybird
 
-The early bird price of Â£85 is available until 6pm on Friday, April 20th. After that, the price goes up to Â£100, so get in there fast! Eight tickets are available for each session. I'm happy to offer a further discount to the afternoon session for students. Get in touch if you'd like to know more.
+The early bird price of £85 is available until 6pm on Friday, April 20th. After that, the price goes up to £100, so get in there fast! Eight tickets are available for each session. I'm happy to offer a further discount to the afternoon session for students. Get in touch if you'd like to know more.
 
 If you'd like to come to the workshop but can't make it on that date, don't worry. I'll probably run another workshop in London later in the year. If you want to make it happen, sign up to [bring another workshop to London][london].
 

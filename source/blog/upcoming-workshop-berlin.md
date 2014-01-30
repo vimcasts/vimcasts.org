@@ -17,7 +17,7 @@ READMORE
 
 ### Berlin, June 18th
 
-You can [purchase tickets for the Berlin workshop][eve] from EventBrite. The early bird price of Â£75 is available until 7pm on Friday, June 1st. After that, the price goes up to Â£90, so get in there fast!
+You can [purchase tickets for the Berlin workshop][eve] from EventBrite. The early bird price of £75 is available until 7pm on Friday, June 1st. After that, the price goes up to £90, so get in there fast!
 
 Initially, I'm releasing a batch of 12 tickets. If demand is high, I may consider increasing the class size. The workshop lasts 3 hours.
 

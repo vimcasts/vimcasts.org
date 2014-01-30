@@ -29,7 +29,7 @@ The Glasgow masterclass is being held at my alma mater, the University of Glasgo
 
 The Vim masterclass in Newcastle is being held at the [PostOffice][postoffice], thanks to [Paul Lancaster](http://twitter.com/lordlancaster). It's a great location - very central, and handy for public transport.
 
-You can [purchase tickets from EventBrite][workshops]. The early bird price of Â£75 is available until 7pm on Friday, June 22nd (June 29th for the Newcastle workshops). After that, the price goes up to Â£90, so get in there fast!
+You can [purchase tickets from EventBrite][workshops]. The early bird price of £75 is available until 7pm on Friday, June 22nd (June 29th for the Newcastle workshops). After that, the price goes up to £90, so get in there fast!
 
 [ed]: http://edinburgh-vimcasts-eve-1.eventbrite.com/
 [gl]: http://glasgow-vimcasts-eve-1.eventbrite.com/

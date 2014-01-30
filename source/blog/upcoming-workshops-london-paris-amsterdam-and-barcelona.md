@@ -53,7 +53,7 @@ The Barcelona masterclasses are being held in the offices of [Itnig][]. There wi
 
 I'd like to thank Albert Bellonch for letting me use of the conference room at Itnig.
 
-You can [purchase tickets from EventBrite][workshops]. They are priced at Â£95 initially. The earlybird promotion ends 2 weeks before the start time for each individual workshop, after which the price goes up to Â£110. Get in there fast!
+You can [purchase tickets from EventBrite][workshops]. They are priced at £95 initially. The earlybird promotion ends 2 weeks before the start time for each individual workshop, after which the price goes up to £110. Get in there fast!
 
 [workshops]: http://vimcasts.eventbrite.com
 [ln]: http://london-vimcasts-pm-2-eorg.eventbrite.com/

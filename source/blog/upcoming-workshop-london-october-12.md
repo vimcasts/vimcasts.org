@@ -4,7 +4,7 @@
 :tags: announcements, vim-training
 ---
 
-Once again, I'm happy to announce that I'll be running a [Vim Masterclass in London][tix] on October 31st, at [Forward][]. You can [purchase tickets from EventBrite][tix]. The early bird price of Â£85 is available until 7pm on Wednesday, October 24th. After that, the price goes up to Â£100, so get in there fast!
+Once again, I'm happy to announce that I'll be running a [Vim Masterclass in London][tix] on October 31st, at [Forward][]. You can [purchase tickets from EventBrite][tix]. The early bird price of £85 is available until 7pm on Wednesday, October 24th. After that, the price goes up to £100, so get in there fast!
 
 This could become a regular thing, now that I'm living in London.
 

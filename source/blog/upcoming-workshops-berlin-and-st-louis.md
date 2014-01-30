@@ -28,7 +28,7 @@ Tickets for the Berlin workshops are available here:
 [am]: http://berlin-vimcasts-am-1.eventbrite.com/?discount=earlybird
 [pm]: http://berlin-vimcasts-pm-1.eventbrite.com/?discount=earlybird
 
-The early bird price of Â£75 (â‚¬90) is available until 6pm on Friday, April 6th. After that, the price goes up to Â£90 (â‚¬108), so get in there fast! Eight tickets are available for each session. I'm happy to offer a further discount to the morning session for students. Get in touch if you'd like to know more.
+The early bird price of £75 (â‚¬90) is available until 6pm on Friday, April 6th. After that, the price goes up to £90 (â‚¬108), so get in there fast! Eight tickets are available for each session. I'm happy to offer a further discount to the morning session for students. Get in touch if you'd like to know more.
 
 My book, Practical Vim, is set to be released as a Beta Book in mid-April. I'll be in a mood to celebrate, so please join me for drinks in Friedrichshain after the workshops.
 

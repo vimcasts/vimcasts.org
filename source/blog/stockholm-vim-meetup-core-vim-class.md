@@ -12,6 +12,6 @@ I've got two upcoming appearances in Stockholm next month. I'll be running a cop
 
 READMORE
 
-The meetup is free, although capacity is limited. Tickets for the Core Vim Class cost Â£180, which is [about 1890 SEK][180]. If you're in town, I hope you'll come along and say 'Hej!'
+The meetup is free, although capacity is limited. Tickets for the Core Vim Class cost £180, which is [about 1890 SEK][180]. If you're in town, I hope you'll come along and say 'Hej!'
 
 [180]: http://www.xe.com/currencyconverter/convert/?Amount=180&From=GBP&To=SEK
