@@ -11,7 +11,7 @@
 :quicktime: 
   :url: http://media.vimcasts.org/videos/41/meet_arglist.m4v
   :size: 10102190
-
+:tags: arglist
 ---
 
 The arglist feature complements Vim's buffer list. In this episode, we'll learn a handful of commands for traversing the arglist. We'll see that it's useful to think of the arglist as a stable subset of the files in the buffer list.

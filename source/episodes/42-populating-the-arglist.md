@@ -11,7 +11,7 @@
 :quicktime: 
   :url: http://media.vimcasts.org/videos/42/arglist_populate.m4v
   :size: 11150926
-
+:tags: arglist
 ---
 
 The arglist wouldn't be much use if we had to quit and relaunch Vim every time we wanted to change its contents. In this episode, we'll learn how to set the contents of the arglist using the `:args` command, which can receive filepaths, globs, or even backtick expressions.

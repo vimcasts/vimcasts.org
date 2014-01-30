@@ -11,7 +11,7 @@
 :quicktime: 
   :url: http://media.vimcasts.org/videos/11/changelist_and_jumplist.m4v
   :size: 5406874
-
+:tags: jumps, motions, undo
 ---
 
 This episode introduces the changelist and jumplist, demonstrating a couple of situations where they are useful. 

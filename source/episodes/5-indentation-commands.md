@@ -11,7 +11,7 @@
 :quicktime: 
   :url: http://media.vimcasts.org/videos/5/indentation_commands.m4v
   :size: 11037200
-
+:tags: whitespace
 ---
 
 This episode covers the commands for shifting text left and right (`<` and `>`), and also goes over the auto indent command (`=`).

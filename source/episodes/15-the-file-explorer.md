@@ -11,7 +11,7 @@
 :quicktime: 
   :url: http://media.vimcasts.org/videos/15/the_file_explorer.m4v
   :size: 9566713
-
+:tags: opening-files
 ---
 
 This episode demonstrates how Vim's native file browser can be used to explore and manipulate the file system. 

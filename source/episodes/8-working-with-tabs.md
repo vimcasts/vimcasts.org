@@ -11,7 +11,7 @@
 :quicktime: 
   :url: http://media.vimcasts.org/videos/8/working_with_tabs.m4v
   :size: 4395212
-
+:tags: tabs, managing-workspace
 ---
 
 This episode covers the essential commands for working with Vim's tab pages: opening and closing, switching, and moving them.

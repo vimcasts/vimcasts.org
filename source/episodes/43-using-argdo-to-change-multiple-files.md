@@ -11,7 +11,7 @@
 :quicktime: 
   :url: http://media.vimcasts.org/videos/43/argdo.m4v
   :size: 12538524
-
+:tags: arglist
 ---
 
 The `:argdo` command allows us to execute an Ex command across all buffers in the arglist.  To demonstrate, we'll use the example of running the `:substitute` command across multiple files, then we'll see how to revert or save the changes.  We'll also compare the `:argdo` and `:bufdo` commands, and consider when it's appropriate to use each one.

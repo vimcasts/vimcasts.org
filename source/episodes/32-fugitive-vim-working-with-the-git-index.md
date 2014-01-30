@@ -1,7 +1,6 @@
 --- 
 :title: Fugitive.vim - working with the git index
 :date: 2011/04/29
-:tags: fugitive
 :poster: /images/posters/fugitive_2.png
 :flattr_id: "177652"
 :duration: 701
@@ -12,7 +11,7 @@
 :quicktime: 
   :url: http://media.vimcasts.org/videos/32/fugitive_2.m4v
   :size: 25748543
-
+:tags: plugins, fugitive, git, workflow, vimdiff
 ---
 
 The fugitive plugin provides an interactive status window, where you can easily stage and review your changes for the next commit. The `:Gdiff` command visualizes the changes made to a file, by comparing the working copy with the index. In this episode, we'll learn how to stage hunks of changes to the index without using the `git add --patch` command.

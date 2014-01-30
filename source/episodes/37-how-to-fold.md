@@ -1,7 +1,6 @@
 --- 
 :title: How to fold
 :date: 2012/11/19
-:tags: folding
 :poster: /images/posters/how_to_fold.png
 :flattr_id: "1003463"
 :duration: 529
@@ -12,7 +11,7 @@
 :quicktime: 
   :url: http://media.vimcasts.org/videos/37/how-to-fold.m4v
   :size: 27341198
-
+:tags: folding
 ---
 
 Vim's folding feature enables us to expand and collapse regions of a document. Not only does this allow us to organize our workspace, it also makes it easy to navigate around the document, and to rearrange entire sections as though they were single lines.

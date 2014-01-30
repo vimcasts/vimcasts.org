@@ -1,7 +1,6 @@
 --- 
 :title: Pasting from Visual mode
 :date: 2013/10/07
-:tags: registers
 :poster: /images/posters/paste-from-visual.png
 :flattr_id: ""
 :duration: 213
@@ -12,7 +11,7 @@
 :quicktime: 
   :url: http://media.vimcasts.org/videos/54/visual-mode-put.m4v
   :size: 6773573
-
+:tags: registers, copy-and-paste, visual-mode
 ---
 
 When used [in Visual mode the `p` command][v_p] replaces the selection with the contents of a register. This makes for a smooth workflow when you want to overwrite a selection, or swap the order of two regions of text.

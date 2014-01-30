@@ -11,7 +11,7 @@
 :quicktime: 
   :url: http://media.vimcasts.org/videos/44/vimgrep.m4v
   :size: 23175625
-
+:tags: arglist, vimgrep, search
 ---
 
 `vimgrep` is Vim's built-in command for searching across multiple files. It's not so fast as external tools like ack and git-grep, but it has its uses. `vimgrep` uses Vim's built-in regex engine, so you can reuse the patterns that work with Vim's standard search command. 

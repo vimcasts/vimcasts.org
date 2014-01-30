@@ -11,7 +11,7 @@
 :quicktime: 
   :url: http://media.vimcasts.org/videos/14/the_edit_command.m4v
   :size: 7808076
-
+:tags: opening-files
 ---
 
 This episode focuses on the `:edit` command. I demonstrate how to open files whose location is relative to the current working directory, then I show how to create a mapping which makes it easier to open files in the same directory as the one in the active window.

@@ -1,7 +1,6 @@
 --- 
 :title: Fugitive.vim - a complement to command line git
 :date: 2011/04/22
-:tags: fugitive
 :poster: /images/posters/fugitive_1.png
 :flattr_id: "173139"
 :duration: 507
@@ -12,7 +11,7 @@
 :quicktime: 
   :url: http://media.vimcasts.org/videos/31/fugitive_1.m4v
   :size: 22298141
-
+:tags: plugins, fugitive, git, workflow
 ---
 
 [The fugitive plugin][f], by Tim Pope, is a git wrapper for Vim. It  complements the command line interface to git, but doesn't aim to replace it. In this episode, we'll see how some of fugitive's commands can streamline your workflow.

@@ -11,7 +11,7 @@
 :quicktime: 
   :url: http://media.vimcasts.org/videos/29/alignment.m4v
   :size: 9300352
-
+:tags: plugins, alignment
 ---
 
 There are times when you can improve the readability of your code by lining up the elements on neighbouring lines. In this episode, I demonstrate how this can be achieved using the [Tabular][t] plugin.

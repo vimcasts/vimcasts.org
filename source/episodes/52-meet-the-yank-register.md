@@ -1,7 +1,6 @@
 --- 
 :title: Meet the yank register
 :date: 2013/09/30
-:tags: registers
 :poster: /images/posters/yank-register.png
 :flattr_id: ""
 :duration: 269
@@ -12,7 +11,7 @@
 :quicktime: 
   :url: http://media.vimcasts.org/videos/52/yank-register.m4v
   :size: 9394643
-
+:tags: registers, copy-and-paste
 ---
 
 Vim's default register is not a safe place to keep yanked text that you want to paste later. It's all too easy to clobber the default register with a `d` or `x` command. Luckily, the last yanked text is kept safe in Vim's [yank register][quote0].

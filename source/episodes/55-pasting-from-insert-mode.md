@@ -1,7 +1,6 @@
 --- 
 :title: Pasting from Insert mode
 :date: 2013/10/11
-:tags: registers
 :poster: /images/posters/paste-from-insert.png
 :flattr_id: ""
 :duration: 255
@@ -12,7 +11,7 @@
 :quicktime: 
   :url: http://media.vimcasts.org/videos/55/insert-mode-put.m4v
   :size: 9093955
-
+:tags: registers, copy-and-paste, insert-mode
 ---
 
 We don't have to be in Normal mode to paste the contents of a register. The [`<C-r>{reg}`][cr] command lets us paste a register from Insert mode (and it [works in commandline mode too][ccr]!) Using this command allows us to make changes that can be repeated with [the dot command][dot].

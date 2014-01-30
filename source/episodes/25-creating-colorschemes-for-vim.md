@@ -11,7 +11,7 @@
 :quicktime: 
   :url: http://media.vimcasts.org/videos/25/colorschemes.m4v
   :size: 25039525
-
+:tags: colorschemes
 ---
 
 Choosing a colorscheme that you find pleasing to look at is essential if you want to be comfortable working with Vim. There are hundreds of colorschemes available, but what if you can't find one that you like? In this episode, I'll share a few tips that make it easy to create colorschemes for Vim.

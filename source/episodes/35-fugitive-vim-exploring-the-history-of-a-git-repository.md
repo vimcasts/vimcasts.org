@@ -1,7 +1,6 @@
 --- 
 :title: Fugitive.vim - exploring the history of a git repository
 :date: 2011/05/18
-:tags: fugitive
 :poster: /images/posters/fugitive_5.png
 :flattr_id: "277398"
 :duration: 604
@@ -12,7 +11,7 @@
 :quicktime: 
   :url: http://media.vimcasts.org/videos/35/fugitive_5.m4v
   :size: 32349589
-
+:tags: plugins, fugitive, git, workflow
 ---
 
 Git provides tools for searching the contents of files, commit messages, and even whether text was added or removed by a commit. In this episode, we'll see how fugitive's `Ggrep` and `Glog` commands wrap this functionality up so that we can search the contents and history of a git repo from right inside of Vim.

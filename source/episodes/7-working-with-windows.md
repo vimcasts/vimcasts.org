@@ -11,7 +11,7 @@
 :quicktime: 
   :url: http://media.vimcasts.org/videos/7/working_with_windows.m4v
   :size: 8570987
-
+:tags: windows, managing-workspace
 ---
 
 In Vim, you can view several buffers at once by loading them into multiple windows. This episode demonstrates all the essentials of working with windows: opening, closing, resizing, moving between and rearranging them.

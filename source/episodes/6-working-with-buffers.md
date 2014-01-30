@@ -11,7 +11,7 @@
 :quicktime: 
   :url: http://media.vimcasts.org/videos/6/buffers_listed_and_hidden.m4v
   :size: 5715585
-
+:tags: buffers, managing-workspace
 ---
 
 Introducing the buffer list, and commands for switching between buffers. This episode also covers the concept of 'hidden' buffers, and shows how to deal with them.

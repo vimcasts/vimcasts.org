@@ -11,7 +11,7 @@
 :quicktime: 
   :url: http://media.vimcasts.org/videos/21/markdown_macro.m4v
   :size: 20061622
-
+:tags: macros, showcase
 ---
 
 Recording your keystrokes as a macro can be a great timesaver, but you have to be careful that you use commands in such a way that they can be reused. In this episode, I construct a fairly complex macro to build a structural HTML document from markdown.
