@@ -2,6 +2,23 @@ require 'pry'
 require 'lib/aggregator'
 activate :aggregator
 
+require 'lib/temporal_content'
+class Announcements < Middleman::Extension
+  def initialize(app, options_hash={}, &block)
+    super
+  end
+
+  helpers do
+    def announcement(name, now=Date.today)
+      partial TemporalContent.get(name, now).partial_path
+    end
+  end
+
+end
+::Middleman::Extensions.register(:announcements, Announcements)
+
+activate :announcements
+
 I18n.enforce_available_locales = false
 
 ###

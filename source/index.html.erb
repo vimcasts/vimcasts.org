@@ -8,20 +8,7 @@ title: Vimcasts - Free screencasts about the text editor Vim
   <label text="search">Search: <input type="search"/></label>
 </form>
 
-<%
-    now = Date.today
-    # now = Date.parse("2014-02-20")
-    # now = Date.parse("2014-03-06")
-%>
-
-<h2>Next Core Vim Class</h2>
-<% if Date.parse("2014-02-19") > now %>
-  <p>I'll be teaching my <a href="https://ti.to/studio-nelstrom/core-vim-class-online-4">Core Vim Class Online on March 5th</a>. I'm also teaching the class in person on <a href="https://ti.to/studio-nelstrom/core-vim-class-in-london-2">February 19th, in London</a>.</p>
-<% elsif Date.parse("2014-03-05") > now %>
-  <p><a href="https://ti.to/studio-nelstrom/core-vim-class-online-4">Next Core Vim Class</a> is on March 5th</p>
-<% else %>
-  <p>No classes are currently scheduled. <a href="#">Sign up to the mailing list</a> to hear of upcoming core vim classes</p>
-<% end %>
+<%= announcement "next-class" %>
 
 <h2>Training</h2>
 
