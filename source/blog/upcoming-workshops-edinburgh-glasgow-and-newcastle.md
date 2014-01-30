@@ -1,7 +1,7 @@
 --- 
 :title: "Upcoming workshops: Edinburgh, Glasgow, and Newcastle"
 :date: 2012/06/13
-
+:tags: announcements, vim-training
 ---
 
 I'll be back in the UK for a couple of weeks in early July, so I'm running a few [Vim masterclasses][workshops]: [Edinburgh on July 2nd][ed], [Glasgow on July 3rd][gl], and [Newcastle on July 9th][ne].

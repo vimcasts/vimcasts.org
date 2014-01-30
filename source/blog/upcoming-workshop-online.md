@@ -1,7 +1,7 @@
 --- 
 :title: "Upcoming workshop: ONLINE"
 :date: 2012/11/16
-
+:tags: announcements, vim-training
 ---
 
 On Wednesday, November 28th, I'm going to teach my [Vim Masterclass online][online]. It will run for 3.5 hours, from [17:00 GMT][tz]. That's 09:00 if you live in San Fransisco, or 12:00 if you live in New York. Tickets cost Â£95 (approximately US $150), but there's an Â£80 earlybird offer (approx. US $127) running until November 21st.

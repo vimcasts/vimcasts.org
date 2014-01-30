@@ -1,7 +1,7 @@
 --- 
 :title: Navigating Ruby Files with Vim
 :date: 2013/09/13
-
+:tags: ruby, announcements
 ---
 
 I've been collaborating with [thoughtbot][] to produce three screencasts about [Navigating Ruby Files with Vim][vimruby]. There's 40 minutes of material in total, and it's available from today. You can purchase these videos for $19, but they will also be available to thoughtbot Prime subscribers. Check out [learn.thoughtbot.com](https://learn.thoughtbot.com/products/21-navigating-ruby-files-with-vim) for more details.

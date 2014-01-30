@@ -1,7 +1,7 @@
 --- 
 :title: Recap of the 1st Vim Masterclass Online
 :date: 2012/11/29
-
+:tags: vim-training
 ---
 
 Yesterday was the [world premiere of my Vimcasts Masterclass Online][1]. It went great! Encouraged by it's success, I'm planning to make this a regular occurrence. Watch out for more dates in the new year.

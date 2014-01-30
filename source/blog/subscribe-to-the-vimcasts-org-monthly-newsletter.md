@@ -1,7 +1,7 @@
 --- 
 :title: Subscribe to the Vimcasts.org monthly newsletter
 :date: 2013/03/21
-
+:tags: announcements, email
 ---
 
 In case you hadn't noticed, Vimcasts.org is back from hibernation! I'm publishing new screencasts and blog posts regularly. If you can't keep up with the [RSS feeds][feeds], or via [Twitter], then you might want to [subscribe to the Vimcasts.org newsletter][vimcasts-newsletter]. I'll send an email digest once a month containing links to all of the material published over the course of the previous month.

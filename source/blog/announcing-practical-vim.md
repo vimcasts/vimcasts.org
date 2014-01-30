@@ -1,7 +1,7 @@
 --- 
 :title: Announcing Practical Vim (in beta)
 :date: 2012/04/18
-
+:tags: practical-vim
 ---
 
 Breaking news: [Practical Vim is now shipping as a beta book][dnvim]!

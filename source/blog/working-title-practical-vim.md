@@ -1,7 +1,7 @@
 --- 
 :title: "Working title: Practical Vim"
 :date: 2010/11/01
-
+:tags: practical-vim
 ---
 
 I am very pleased to announce that the [Pragmatic Bookshelf][prags] will be publishing my book on Vim. The working title is *Practical Vim*, and I hope to complete it by the spring of 2011. Here is a synopsis:

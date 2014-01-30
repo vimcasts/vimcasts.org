@@ -1,7 +1,7 @@
 --- 
 :title: "Status of US tour: postponed"
 :date: 2012/08/08
-
+:tags: announcements
 ---
 
 I'm sorry to say that I'm unable to take my [workshops on tour around the US this summer][summer]. I'm not allowed to work there on a business/tourist visa, and I was too disorganized to obtain the visa that would permit me to work. It's a shame, because I had set the months of August-September aside for this tour!

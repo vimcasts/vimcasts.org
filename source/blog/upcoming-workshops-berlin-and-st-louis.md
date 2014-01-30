@@ -1,7 +1,7 @@
 --- 
 :title: "Upcoming workshops: Berlin and St Louis"
 :date: 2012/03/30
-
+:tags: announcements, vim-training
 ---
 
 I'm thrilled to announce that I'll be running a [Vim masterclass at Strange Loop][stlouis], in September this year. The conference has a [stellar lineup][sessions], so I'm looking forward to it eagerly. I hope to see you there.

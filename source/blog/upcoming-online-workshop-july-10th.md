@@ -1,7 +1,7 @@
 --- 
 :title: "Upcoming online workshop: July 10th"
 :date: 2013/06/05
-
+:tags: announcements, vim-training
 ---
 
 On Wednesday, July 10th, I’m going to teach my [Core Vim Masterclass Online][class]. It will run for 4 hours, from 18:00 BST. That’s 10:00 if you live in San Fransisco, or 13:00 if you live in New York. [Tickets cost £95][tickets] (approximately US $146), but there’s an £80 earlybird offer (approx. US $122) running until June 28th.

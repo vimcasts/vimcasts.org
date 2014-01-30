@@ -1,7 +1,7 @@
 --- 
 :title: Talks from VimLondon now on Vimeo
 :date: 2013/05/29
-
+:tags: vim-london, presentations
 ---
 
 At the April Vim London meetup, we managed for the first time to record and publish videos of the talks. Check out the [VimLondon Vimeo][vimeo] page to see all talks from our April and May meetups.

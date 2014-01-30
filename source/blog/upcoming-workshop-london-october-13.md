@@ -1,7 +1,7 @@
 --- 
 :title: "Upcoming workshop: London, October '13"
 :date: 2013/09/18
-
+:tags: announcements, vim-training
 ---
 
 I'll be running a [Core Vim Masterclass in London][london] on the afternoon of October 23rd, at [Forward][]. This is a rare opportunity to attend my [Core Vim Masterclass][class] in person, instead of online.

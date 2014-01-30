@@ -1,7 +1,7 @@
 --- 
 :title: "VimLondon January Meetup: Speak Vim - Operators and Motions"
 :date: 2013/01/21
-
+:tags: vim-london, grammar, motions
 ---
 
 On Tuesday 29th January, [VimLondon][] is holding a meetup with a theme: [Speak Vim - Operators and Motions][jan]. We've got 5 short talks lined up:

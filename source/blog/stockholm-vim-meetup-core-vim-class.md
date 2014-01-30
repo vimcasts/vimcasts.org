@@ -1,7 +1,7 @@
 --- 
 :title: Stockholm Vim Meetup & Core Vim Class
 :date: 2013/11/04
-
+:tags: announcements
 ---
 
 I've got two upcoming appearances in Stockholm next month. I'll be running a copy and paste clinic at the [Stockholm Vim meetup][meetup], on 2nd December. Then on the afternoon of December 3rd, I'll be running a [Core Vim Class][tito] at The Park, Stockholm. 

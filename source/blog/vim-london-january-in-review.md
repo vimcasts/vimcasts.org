@@ -1,7 +1,7 @@
 --- 
 :title: Vim London January in review
 :date: 2013/01/31
-
+:tags: vim-london
 ---
 
 On Tuesday, 29th January, we held the 3rd meeting of Vim London. We had 5 short talks on the theme of [Speak Vim - operators and motions][meetup]. The talks weren't recorded, so I'm posting a retrospective here.

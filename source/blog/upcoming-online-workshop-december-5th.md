@@ -1,7 +1,7 @@
 --- 
 :title: "Upcoming online workshop: December 5th"
 :date: 2013/11/01
-
+:tags: announcements, vim-training
 ---
 
 On Thursday, December 5th 2013, I’m going to teach my [Core Vim Class Online][class]. Tickets cost $255, but you can save 10% if you buy a $230 Earlybird ticket by November 29th. You can [buy tickets from tito.io][tickets].

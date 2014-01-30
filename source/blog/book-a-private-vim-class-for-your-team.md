@@ -1,7 +1,7 @@
 --- 
 :title: Book a private Vim class for your team
 :date: 2013/10/07
-
+:tags: announcements, vim-training
 ---
 
 Does your team make heavy use of Vim? Why not [book me for a private Vim training session][info] and give your team a productivity boost? I can deliver my class online for companies based (or distributed) anywhere in the world, or I can teach on-site anywhere except the US. Here are [my prices and terms][prices]. [Get in touch][me] if you have any further enquiries.

@@ -1,7 +1,7 @@
 --- 
 :title: "On tour this Summer: Vim masterclass workshop"
 :date: 2012/05/16
-
+:tags: announcements
 ---
 
 I'm planning to take my Vim Masterclass workshop on tour around Europe and the USA this Summer. If you would like to bring a Vimcasts workshop to your town, [sign up with your email address and location][want]. If there's enough interest, I'll try and schedule something where you live.

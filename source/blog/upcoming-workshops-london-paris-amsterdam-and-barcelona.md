@@ -1,7 +1,7 @@
 --- 
 :title: "Upcoming workshops: London, Paris, Amsterdam, and Barcelona"
 :date: 2012/06/25
-
+:tags: announcements, vim-training
 ---
 
 I'm happy to announce that I'll be taking my [Vim masterclass workshops on tour][workshops] around Europe in July. I'll be running sessions in [London on the 17th][ln], [Paris on the 20th][pa], [Amsterdam on the 23rd][am1] and [24th][am2], and [Barcelona on the 27th][ba1].

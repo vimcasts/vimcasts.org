@@ -1,7 +1,7 @@
 --- 
 :title: "Upcoming workshop: Krakow"
 :date: 2012/05/17
-
+:tags: announcements, vim-training
 ---
 
 I'll be running a [Vim Masterclass in Krakow][workshops] on June 14th, at [Applicake][].

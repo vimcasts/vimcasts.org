@@ -1,7 +1,7 @@
 --- 
 :title: "Vim Workshop: Wroclaw, March 2012"
 :date: 2012/02/09
-
+:tags: announcements, vim-training
 ---
 
 Thanks to the awesome folk behind [wroc\_love.rb][c], I'll be running a couple of [Vim workshops][w] in Wroclaw, Poland. They will take place on the 9th of March; one in [the morning][m], and one in [the afternoon][a]. 

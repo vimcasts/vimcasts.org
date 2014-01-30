@@ -1,7 +1,7 @@
 --- 
 :title: A text-object for ruby blocks
 :date: 2010/12/27
-
+:tags: text-objects, ruby, plugins
 ---
 
 Ever since learning about Vim's [text-objects][] I have wished that there was a way of selecting blocks in ruby code. Well, now there is. Today I am releasing a plugin that creates [a custom text object for selecting ruby blocks][rubyblock]. Merry Christmas!

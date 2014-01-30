@@ -1,7 +1,7 @@
 --- 
 :title: "Upcoming online workshop: January 27th"
 :date: 2013/12/09
-
+:tags: announcements, vim-training
 ---
 
 On Monday, January 27th 2014, I’m going to teach my [Core Vim Class Online][class]. Tickets cost £160, but you can save 10% if you buy a £145 Earlybird ticket by January 24th. You can [buy tickets from tito.io][tickets].

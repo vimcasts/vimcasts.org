@@ -1,7 +1,7 @@
 --- 
 :title: Google vimdocs with a custom search engine
 :date: 2013/02/15
-
+:tags: helpfiles
 ---
 
 Here's a quick tip: if you can't find what you're looking for in Vim's built-in documentation, use a search engine instead. All of Vim's documentation is online at [vimdoc.sourceforge.net][h], so it's indexed by Google & Co. If you create a [custom search engine][chrome] for your browser, then you can easily limit your searches to only return results from [vimdoc.sourceforge.net][h].

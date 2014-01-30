@@ -1,7 +1,7 @@
 --- 
 :title: "Upcoming online workshop: October 28th"
 :date: 2013/09/27
-
+:tags: announcements, vim-training
 ---
 
 On Monday, October 28th 2013, I’m going to teach my [Core Vim Masterclass Online][tickets]. It will run for 4 hours, from [17:00 BST][zones]. That’s 10:00 if you live in San Fransisco, or 13:00 if you live in New York. Tickets cost £160 (approximately US $257), but there’s an £145 earlybird offer (approx. US $233) running until October 23rd. You can [buy tickets from tito.io][tickets].

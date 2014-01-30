@@ -1,7 +1,7 @@
 --- 
 :title: "GitMinutes #8 - Drew Neil on Vim and Workflow"
 :date: 2013/05/27
-
+:tags: interviews, git
 ---
 
 I was pleased to be invited to chat with Thomas Ferris Nicolaisen on the GitMinutes podcast recently. It's now live! Head over to [Episode #8 of Git Minutes][8] and have a listen.

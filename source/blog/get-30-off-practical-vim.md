@@ -1,7 +1,7 @@
 --- 
 :title: Get 30% off Practical Vim
 :date: 2013/02/22
-
+:tags: practical-vim, promotions
 ---
 
 For a limited time, the Pragmatic Bookshelf is offering [a 30% discount on Practical Vim][pv]. To claim this deal, use the coupon: **DrewNeilVimMarchMadness**. The offer runs until midnight (PST) on March 8th. Please help me spread the word wide and far by Tweeting, Liking, +1-ing and so on.

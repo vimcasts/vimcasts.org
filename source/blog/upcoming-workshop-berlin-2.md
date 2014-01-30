@@ -1,7 +1,7 @@
 --- 
 :title: "Upcoming workshop: Berlin"
 :date: 2013/07/29
-
+:tags: announcements, vim-training
 ---
 
 I'll be running a [Core Vim Masterclass in Berlin][berlin] on the afternoon of August 21st, at [LAUNCH/CO][l]. This is a rare opportunity to attend my [Core Vim Masterclass][class] in person, instead of online.

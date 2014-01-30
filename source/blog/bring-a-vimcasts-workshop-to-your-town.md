@@ -1,7 +1,7 @@
 --- 
 :title: Bring a Vimcasts workshop to your town
 :date: 2011/10/05
-
+:tags: announcements, vim-training
 ---
 
 I'm going to run a series of Vim workshops in 2012. If you would like to attend, please [sign up to the Vimcasts workshops mailing list][signup], and tell me where you live. If there is enough interest for your town, then I'll try and schedule it into my tour.

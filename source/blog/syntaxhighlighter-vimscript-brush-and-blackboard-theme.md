@@ -1,7 +1,7 @@
 --- 
 :title: SyntaxHighlighter Vimscript brush and Blackboard theme
 :date: 2010/04/29
-
+:tags: syntax, colorschemes
 ---
 
 Here on Vimcasts.org, I use Alex Gorbatchev's [SyntaxHighlighter][sh] to colorize the code excerpts. I couldn't find a syntax 'brush' for Vimscript, so I wrote my own. I also created a color theme based on the Blackboard scheme that I use in Vim (and TextMate). 

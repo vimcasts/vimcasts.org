@@ -1,7 +1,7 @@
 --- 
 :title: Practical Vim rated 9/10 by Linux Format Magazine
 :date: 2012/10/10
-
+:tags: practical-vim
 ---
 
 In the September issue of [Linux Format magazine][lxf], Jonathan Roberts reviewed Practical Vim (the beta edition) and rated it 9/10.

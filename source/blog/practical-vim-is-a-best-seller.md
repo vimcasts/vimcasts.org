@@ -1,7 +1,7 @@
 --- 
 :title: Practical Vim is a best-seller!
 :date: 2013/04/18
-
+:tags: practical-vim
 ---
 
 One year ago today, [Practical Vim][] was released as a beta book. I'm thrilled with how the book has been received and I'd like to thank everybody who has purchased a copy. After a year of sales, I'm happy to report that Practical Vim is a best-seller!

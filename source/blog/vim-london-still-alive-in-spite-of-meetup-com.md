@@ -1,7 +1,7 @@
 --- 
 :title: Vim London - still alive in spite of meetup.com
 :date: 2012/10/25
-
+:tags: vim-london
 ---
 
 **UPDATE**: [Vim London](http://www.meetup.com/Vim-London/) is back!

@@ -1,7 +1,7 @@
 --- 
 :title: Short form URLs for episodes
 :date: 2010/04/01
-
+:tags: meta
 ---
 
 Vimcasts.org now has it's own short form URLs. You can link to each episode by

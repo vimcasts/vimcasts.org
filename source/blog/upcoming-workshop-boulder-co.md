@@ -1,7 +1,7 @@
 --- 
 :title: "Upcoming workshop: Boulder, CO"
 :date: 2012/09/03
-
+:tags: announcements, vim-training
 ---
 
 I'll be running a [Vim Masterclass in Boulder, Colorado][workshops] on September 19th, as part of the [Rocky Mountain Ruby Charity Workshop day][charity]. This is a rare USA appearance, so don't miss out! Donations will go to local charities in Boulder. Please give generously.

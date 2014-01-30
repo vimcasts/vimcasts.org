@@ -1,7 +1,7 @@
 --- 
 :title: Online Vim classes - sign up for email announcements
 :date: 2013/03/11
-
+:tags: email, announcements
 ---
 
 I always announce my [Online Vim Masterclasses][eb] here on the Vimcasts [blog][] as well as on [Twitter][]. Some of you have indicated that you'd prefer to get announcements in your email inbox, so I've set up [a mailing list for announcements][list]. [Sign up for the newsletter][list] and you'll be the first to hear about upcoming Vim classes.

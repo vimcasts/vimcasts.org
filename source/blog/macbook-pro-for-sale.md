@@ -1,7 +1,7 @@
 --- 
 :title: "Macbook Pro for sale - £900"
 :date: 2013/06/03
-
+:tags: announcements
 ---
 
 I have a 15" MacBook Pro for sale. It's a 2010 model, with upgraded RAM and SSD. Here are the tech specs:

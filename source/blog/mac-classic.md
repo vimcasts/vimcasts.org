@@ -1,7 +1,7 @@
 --- 
 :title: Mac Classic - a light colorscheme
 :date: 2010/09/28
-
+:tags: colorschemes
 ---
 
 I could never find a light colorscheme for Vim that I enjoyed using, so I finally took the time to port the "Mac Classic" theme from TextMate. The [source code is on gitub][github], so feel free to fork it.

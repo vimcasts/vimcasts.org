@@ -1,7 +1,7 @@
 --- 
 :title: Habit breaking, habit making
 :date: 2013/02/06
-
+:tags: articles, motions
 ---
 
 Moving your Vim cursor around using the arrow keys is a bad habit, and like many bad habits it's a difficult one to break! Putting these lines into your vimrc can help:

@@ -1,7 +1,7 @@
 --- 
 :title: "Upcoming workshop: Berlin"
 :date: 2012/05/22
-
+:tags: announcements, vim-training
 ---
 
 I'll be running a [Vim Masterclass in Berlin][workshops] on the evening of June 18th, at [co-up][].

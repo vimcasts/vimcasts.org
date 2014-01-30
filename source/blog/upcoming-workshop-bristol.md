@@ -1,7 +1,7 @@
 --- 
 :title: "Upcoming workshop: Bristol"
 :date: 2012/10/08
-
+:tags: announcements, vim-training
 ---
 
 I'll be running a [Vim Masterclass in Bristol][workshops] on October 24th, at [Beef][].

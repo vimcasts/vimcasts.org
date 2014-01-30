@@ -1,7 +1,7 @@
 --- 
 :title: Amazon reviews of Practical Vim
 :date: 2012/10/12
-
+:tags: practical-vim
 ---
 
 The first five-star [reviews for Practical Vim][reviews] have cropped up, and I'm blushing after reading them. It's been described as *the book Vim has always deserved*, and *a must-have for anybody who types*. Here are a few choice phrases:

@@ -1,7 +1,7 @@
 --- 
 :title: Vimprint - a Vim keystroke parser
 :date: 2013/05/30
-
+:tags: vimprint
 ---
 
 I sometimes get asked what software I use to reveal the Vim keystrokes in my video tutorials here on Vimcasts.org. The fact is that I add them by hand in post-production. It's not fun!

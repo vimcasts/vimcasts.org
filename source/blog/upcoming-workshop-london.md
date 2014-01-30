@@ -1,7 +1,7 @@
 --- 
 :title: "Upcoming workshop: London"
 :date: 2012/04/11
-
+:tags: announcements, vim-training
 ---
 
 I'll be running a [Vim Masterclass in London][workshops] on May 2nd, at [Forward][].

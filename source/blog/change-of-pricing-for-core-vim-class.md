@@ -1,7 +1,7 @@
 --- 
 :title: Change of pricing for Core Vim Class
 :date: 2013/09/26
-
+:tags: announcements, vim-training
 ---
 
 I'm raising the price for my [online Core Vim Class][class] to Â£160.

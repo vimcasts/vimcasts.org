@@ -1,7 +1,7 @@
 --- 
 :title: Should Vimcasts go Pro?
 :date: 2013/07/01
-
+:tags: surveys
 ---
 
 I've just published [episode 50 of Vimcasts][50]. That feels like a significant milestone and a good time to consider the question: what's next?
