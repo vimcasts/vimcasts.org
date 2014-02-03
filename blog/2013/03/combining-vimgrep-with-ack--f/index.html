@@ -15,6 +15,9 @@
   </head>
 
   <body>
+    <div id="logo">
+      <h1><a href="/" title="Go to Vimcasts.org homepage">VimCasts.org</a></h1>
+    </div>
     <p>I love the way that ack let's me specify the files to search inside. For starters, ack does the right thing by ignoring the contents of VCS directories, backup files, core dumps etc., which gives a good signal to noise ratio. On top of that, ack provides a convenient syntax for specifying filetypes to include or exclude from the set (see <code>ack --help-types</code>). I can target ruby files only with the <code>--ruby</code> option, or everything but ruby files with <code>--noruby</code>.</p>
 
 <p>I also love using <code>:vimgrep</code>, because it lets me use Vim's native regular expressions. For me, the ideal project-wide search would combine Vim's regex with ack's method of specifying the set of files to search through. I recently learned about ack's <code>-f</code> flag, which makes this combination possible.</p>
