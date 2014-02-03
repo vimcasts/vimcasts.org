@@ -15,7 +15,13 @@
 
   <body>
     <div id="logo">
-      <h1><a href="/" title="Go to Vimcasts.org homepage">VimCasts.org</a></h1>
+      <h1>
+        <% if current_page.url == "/" %>
+          <span>VimCasts.org</span>
+        <% else %>
+          <a href="/" title="Go to Vimcasts.org homepage">VimCasts.org</a>
+        <% end %>
+      </h1>
     </div>
     <%= yield %>
   </body>

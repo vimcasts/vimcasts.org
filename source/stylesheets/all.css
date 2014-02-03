@@ -3,8 +3,7 @@
 body {
   font-family: sans-serif;
 }
-
-#logo a {
+#logo a, #logo span {
   background-image: url(/images/vimcasts-logo.svg);
   background-repeat: no-repeat;
   display: block;
