@@ -23,6 +23,18 @@
         <% end %>
       </h1>
     </div>
+
+    <nav>
+      <ul>
+        <li><%= link_to "Home", "/" %></li>
+        <li><%= link_to "Episodes", "/episodes" %></li>
+        <li><%= link_to "Blog", "/blog" %></li>
+        <li><%= link_to "Training", "/training" %></li>
+        <li><%= link_to "Pathways", "/paths" %></li>
+        <li><%= link_to "Publications", "/publications" %></li>
+      </ul>
+    </nav>
+
     <%= yield %>
   </body>
 
