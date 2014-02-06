@@ -109,8 +109,11 @@ end
 
 proxy "/episodes/all.html", "/episodes-all.html"
 
-data.categories.each do |category|
-  proxy "categories/#{category}.html", "category-aggregate.html", locals: { tagname: category }, ignore: true
+# Generate data/categories.yml with `rake dump_categories`
+if data.has_key? :categories
+  data.categories.each do |category|
+    proxy "categories/#{category}.html", "category-aggregate.html", locals: { tagname: category }, ignore: true
+  end
 end
 
 ###
@@ -169,15 +172,6 @@ configure :build do
     # end
   end
 
-end
-
-def save_tags_to_yaml
-  tags = (blog(:blog).tags.keys + blog(:episodes).tags.keys).uniq
-  File.open('data/categories.yml', 'w') { |f| f.write tags.to_yaml }
-end
-
-ready do
-  save_tags_to_yaml
 end
 
 # Uncomment next line to use Pry as a console
