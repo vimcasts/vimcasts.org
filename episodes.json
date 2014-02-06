@@ -1260,6 +1260,48 @@
                 "contentType": "video/x-m4v"
             }
         },
+        {
+            "title": "Creating repeatable mappings with repeat.vim",
+            "episode_number": "61",
+            "published_at": "Tue, 21 Jan 2014 00:00:00 GMT",
+            "url": "http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/",
+            "short_url": "http://vimcasts.org/e/61",
+            "poster": "http://vimcasts.org/images/posters/repeatable-mappings.png",
+            "abstract": "<p>The dot command is my all-time favorite Vim trick: it tells Vim to repeat the last change. But the dot command tends not to work well with user-defined mappings. In this episode, we\'ll use repeat.vim to set up a simple mapping so that it can be repeated using the dot command.<\/p>\n\n<p>",
+            "ogg": {
+                "url": "http://media.vimcasts.org/videos/61/map-with-repeat.ogv",
+                "bytes": "7103130",
+                "seconds": "273",
+                "contentType": "video/ogg"
+            },
+            "quicktime": {
+                "url": "http://media.vimcasts.org/videos/61/map-with-repeat.m4v",
+                "bytes": "9958244",
+                "seconds": "273",
+                "contentType": "video/x-m4v"
+            }
+        },
+        {
+            "title": "Creating mappings that accept a count",
+            "episode_number": "62",
+            "published_at": "Thu, 06 Feb 2014 00:00:00 GMT",
+            "url": "http://vimcasts.org/episodes/creating-mappings-that-accept-a-count/",
+            "short_url": "http://vimcasts.org/e/62",
+            "poster": "http://vimcasts.org/images/posters/mappings-with-count.png",
+            "abstract": "<p>Lots of Vim\'s built-in Normal mode commands can be executed multiple times by prefixing them with a count. User-defined Normal mode mappings don\'t usually handle counts the way we might like them to. We\'ll explore a couple of techniques for making our custom mappings respond predictably to a count.<\/p>\n\n<p>",
+            "ogg": {
+                "url": "http://media.vimcasts.org/videos/62/map-with-count.ogv",
+                "bytes": "6859558",
+                "seconds": "242",
+                "contentType": "video/ogg"
+            },
+            "quicktime": {
+                "url": "http://media.vimcasts.org/videos/62/map-with-count.m4v",
+                "bytes": "10336771",
+                "seconds": "242",
+                "contentType": "video/x-m4v"
+            }
+        },
         
     ]
 }

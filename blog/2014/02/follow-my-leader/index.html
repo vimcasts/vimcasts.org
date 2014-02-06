@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Follow my leader</title>
+
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="logo">
+      <h1>
+        
+          <a href="/" title="Go to Vimcasts.org homepage">VimCasts.org</a>
+        
+      </h1>
+    </div>
+    <p>Choosing a key-map for your custom Vim commands can be difficult. The common advice is to use <code>&lt;leader&gt;</code> for user-defined mappings, but that's not the only option. There are dozens of two-key mappings that are not bound to any built-in functionality. These available mappings are easy to find if you follow a simple formula.</p>
+
+<p></p>
+
+<h3 id="vims-key-map-space-appears-to-be-saturated">Vim's key-map space appears to be saturated</h3>
+
+<p>In Vim's Normal mode, every key (with and without shift) is mapped to some built-in functionality. This is visualized clearly by Jon Beltran de Heredia's <a href="http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html">graphical Vim cheat sheet</a>.</p>
+
+<p><a href="http://www.viemu.com/vi-vim-cheat-sheet.gif">&lt;img src="http://www.viemu.com/vi-vim-cheat-sheet.gif" alt="Vim graphical cheat sheet" width=640/&gt;</a></p>
+
+<p>At the same time Vim is highly customizable, which presents a small paradox: if the user adds some custom functionality, how are they supposed to create a key mapping for it if all of the keys are already in use?</p>
+
+<p>Vim's documentation provides a few suggestions at <a href="http://vimdoc.sourceforge.net/htmldoc/map.html#map-which-keys"><code>:h map-which-keys</code></a>. The most common practice is to use the <code>&lt;leader&gt;</code> key, which you can think of as being a namespace reserved for user-defined functionality. Steve Losh has a good <a href="http://learnvimscriptthehardway.stevelosh.com/chapters/06.html">introduction to Vim's leader</a> in Learn Vimscript the Hard Way.</p>
+
+<h3 id="leader-maps-are-lame">Leader maps are lame</h3>
+
+<p>I used leader maps unquestioningly for years. Then one day I read a github issue in which Tim Pope suggests <a href="https://github.com/AndrewRadev/splitjoin.vim/issues/14">adding default mappings to splitjoin.vim</a>. In it, he says:</p>
+
+<blockquote>
+  <p>leader maps are pretty lame</p>
+</blockquote>
+
+<p>That got me scratching my head. I couldn't think of a single Tim Pope plugin that used a <code>&lt;leader&gt;</code> mapping. How does he do it?</p>
+
+<p>Looking closer, I noticed a few patterns in Tim Pope's choice of mappings. Once I'd noticed the pattern, it became clear that Vim's key-map space is not nearly as saturated as I had previously believed. </p>
+
+<h3 id="valid-operations">Valid operations</h3>
+
+<p>The <a href="http://www.viemu.com/vi-vim-cheat-sheet.gif">graphical cheat sheet</a> color-codes commands into a few categories: orange for operators, green for motions, and yellow for just about everything else. I'll borrow that convention for this discussion.</p>
+
+<p>The operator commands (in orange) can be used in two forms: <code>{operator}{operator}</code> will execute the operation on the current line, while <code>{operator}{motion}</code> executes the operation over the range specified by the motion. (In this context, consider <code>{motion}</code> to be a shorthand for "motion or text object".) This table summarises:</p>
+
+<table>
+    <tr>
+        <th>strokes</th>
+        <th>explanation</th>
+    </tr>
+    <tr>
+        <td>
+            <div class="cheatkey operator">operator</div>
+            <div class="cheatkey operator">operator</div>
+        </td>
+        <td>peform linewise operation</td>
+    </tr>
+    <tr>
+        <td>
+            <div class="cheatkey operator">operator</div>
+            <div class="cheatkey motion">motion</div>
+        </td>
+        <td>peform operation on range specified by motion</td>
+    </tr>
+</table>
+
+<p>There's something beautiful about these rules, which define <a href="http://glts.github.io/2013/04/28/vim-normal-mode-grammar.html">Vim's grammar</a> for composing operations.
+Vim allows you to define custom operators and motions (as well as text objects).
+I love the fact that user-defined operators and motions plug right in to Vim's grammar, just as though we were extending our vocabulary with new verbs and nouns. Read my essay on <a href="http://vimcasts.org/blog/2012/08/on-sharpening-the-saw/">sharpening the saw</a> for a few concrete examples</p>
+
+<h3 id="invalid-operations">Invalid operations</h3>
+
+<p>We can describe all valid operations in simple terms: an orange key must be followed directly either by the same orange key, or by any green key. That means there are dozens of two-key combinations starting with an operator (orange key) which don't produce a valid operation. For example, an operator followed by a non-motion (yellow key) does not perform an operation. An operator followed by <em>a different operator</em> also aborts the operation. From these blind-spots in Vim's grammar, we can create a general formula for finding vacant keymaps:</p>
+
+<table>
+    <tr>
+        <th>strokes</th>
+        <th>explanation</th>
+    </tr>
+    <tr>
+        <td>
+            <div class="cheatkey operator">operator</div>
+            <div class="cheatkey non-motion">non-motion</div>
+        </td>
+        <td>Invalid operation</td>
+    </tr>
+    <tr>
+        <td>
+            <div class="cheatkey operator">operator-1</div>
+            <div class="cheatkey operator-2">operator-2</div>
+        </td>
+        <td>Invalid operation</td>
+    </tr>
+</table>
+
+<p>I can't think of any examples of mappings that combine two different operators. Perhaps there's a good reason not to create mappings such as <code>dc</code> and <code>cd</code>. If you can think of one, please let me know in the comments.</p>
+
+<p>Out of the box, Vim has a couple of commands that follow the <code>{operator}{non-motion}</code> pattern. For example, the <a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#dp"><code>dp</code></a> and <a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#do"><code>do</code></a> commands are Normal mode shorthands for <code>:diffput</code> and <code>:diffget</code>.
+I've noticed that a lot of plugins (especially those by <a href="https://github.com/tpope">@tpope</a>) mine this space for available mappings.</p>
+
+<p>For example in <a href="https://github.com/tpope/vim-surround">surround.vim</a>, we can use the <code>cs</code> mapping to change one surrounding pair of symbols for another (mnemonic: "change surrounding"). We can delete a pair of symbols with the <code>ds</code> mapping (mnemonic: "delete surrounding"). And we can use the <code>ys{motion}</code> mapping to add a pair of surrounding symbols to the range specified by the motion (mnemonic: "you surround"). </p>
+
+<p>In Tim Pope's <a href="https://github.com/tpope/vim-unimpaired">unimpaired.vim</a>, the <code>co</code> mapping is used a prefix for toggling various settings on and off (mnemonic: "change option"). For example, <code>cow</code> toggles the <code>'wrap'</code> option, <code>con</code> toggles <code>'number'</code>, <code>cos</code> toggles the spell-checker. I used to use <code>&lt;leader&gt;w</code> to toggle <code>'wrap'</code>, and <code>&lt;leader&gt;s</code> to toggle <code>'spell'</code>, but I much prefer the mappings provided by unimpaired.vim. And whats more, it frees up those leader mappings for something more useful.</p>
+
+<p>In <a href="https://github.com/tpope/vim-abolish">abolish.vim</a>, the <code>cr</code> mapping allows us to coerce text between <code>MixedCase</code>, <code>snake_case</code>, and so on (mnemonic: "CoeRce"). In <a href="https://github.com/tommcdo/vim-exchange">exchange</a>, by Tom McDonald, the <code>cx</code> mapping allows us to swap two regions of text (mnemonic: "eX-Change" - but it's back to front!).</p>
+
+<h3 id="leader-maps-are-ok">Leader maps are ok</h3>
+
+<p>If you are adding custom commands to your vimrc, there's no reason to avoid creating a leader mapping for them. But if you're creating a plugin that modifies the text in your buffer, you can do better. Use the formula above to find a vacant mapping. If you can devise a mnemonic that explains why your two-key mapping triggers your command, your users will thank you.</p>
+
+<p>I gave a presentation on this topic at Vim London last week: <a href="http://lanyrd.com/2014/vimlondon/scwggw/">Follow my leader</a>. My slides are published <a href="https://speakerdeck.com/nelstrom/follow-my-leader">on speakerdeck</a> and you can watch a video of the talk <a href="https://vimeo.com/85343734">on Vimeo</a>.</p>
+
+
+  </body>
+
+</html>

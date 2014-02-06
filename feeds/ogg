@@ -8,6 +8,60 @@
     <language>en-us</language>
     <ttl>40</ttl>
     <item>
+      <title>Creating mappings that accept a count</title>
+      <description>&amp;lt;p&amp;gt;Lots of Vim's built-in Normal mode commands can be executed multiple times by prefixing them with a count. User-defined Normal mode mappings don't usually handle counts the way we might like them to. We'll explore a couple of techniques for making our custom mappings respond predictably to a count.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;</description>
+      <enclosure url="http://media.vimcasts.org/videos/62/map-with-count.ogv" length="" type="video/ogg"/>
+      <pubDate>Thu, 06 Feb 2014 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/creating-mappings-that-accept-a-count/</guid>
+      <link>http://vimcasts.org/episodes/creating-mappings-that-accept-a-count/</link>
+    </item>
+    <item>
+      <title>Follow my leader</title>
+      <description>&amp;lt;p&amp;gt;Choosing a key-map for your custom Vim commands can be difficult. The common advice is to use &amp;lt;code&amp;gt;&amp;amp;lt;leader&amp;amp;gt;&amp;lt;/code&amp;gt; for user-defined mappings, but that's not the only option. There are dozens of two-key mappings that are not bound to any built-in functionality. These available mappings are easy to find if you follow a simple formula.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;</description>
+      <pubDate>Wed, 05 Feb 2014 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2014/02/follow-my-leader/</guid>
+      <link>http://vimcasts.org/blog/2014/02/follow-my-leader/</link>
+    </item>
+    <item>
+      <title>Upcoming online workshop: March 5th</title>
+      <description>&amp;lt;p&amp;gt;On Wednesday, March 5th 2014, Iâ€™m going to teach my &amp;lt;a href=&amp;quot;/classes/core-vim&amp;quot;&amp;gt;Core Vim Class Online&amp;lt;/a&amp;gt;. Tickets cost $255, but you can save 10% if you buy a $230 Earlybird ticket by February 26th. You can &amp;lt;a href=&amp;quot;https://ti.to/studio-nelstrom/core-vim-class-online-4&amp;quot;&amp;gt;buy tickets from tito.io&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;</description>
+      <pubDate>Fri, 31 Jan 2014 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2014/01/upcoming-online-workshop-march-5th/</guid>
+      <link>http://vimcasts.org/blog/2014/01/upcoming-online-workshop-march-5th/</link>
+    </item>
+    <item>
+      <title>Creating repeatable mappings with repeat.vim</title>
+      <description>&amp;lt;p&amp;gt;The dot command is my all-time favorite Vim trick: it tells Vim to repeat the last change. But the dot command tends not to work well with user-defined mappings. In this episode, we'll use repeat.vim to set up a simple mapping so that it can be repeated using the dot command.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;</description>
+      <enclosure url="http://media.vimcasts.org/videos/61/map-with-repeat.ogv" length="" type="video/ogg"/>
+      <pubDate>Tue, 21 Jan 2014 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/</guid>
+      <link>http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/</link>
+    </item>
+    <item>
+      <title>Upcoming Core Vim Class: London, February '14</title>
+      <description>&amp;lt;p&amp;gt;I'll be running a &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-in-london-2&amp;quot;&amp;gt;Core Vim Masterclass in London&amp;lt;/a&amp;gt; on the afternoon of February 19th, at &amp;lt;a href=&amp;quot;http://www.nicholsonspubs.co.uk/doggettscoatandbadgesouthbanklondon/findus/&amp;quot;&amp;gt;Doggett's Coat and Badge&amp;lt;/a&amp;gt;. This is a rare opportunity to attend my &amp;lt;a href=&amp;quot;http://vimcasts.org/classes/core-vim-live&amp;quot;&amp;gt;Core Vim Masterclass&amp;lt;/a&amp;gt; in person, instead of online.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;You can &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-in-london-2&amp;quot;&amp;gt;purchase tickets for the London workshop&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;</description>
+      <pubDate>Mon, 20 Jan 2014 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2014/01/upcoming-core-vim-class-london-february-14/</guid>
+      <link>http://vimcasts.org/blog/2014/01/upcoming-core-vim-class-london-february-14/</link>
+    </item>
+    <item>
+      <title>20% group discount for Core Vim Class, January edition</title>
+      <description>&amp;lt;p&amp;gt;For the month of January only, I'm offering a &amp;lt;strong&amp;gt;20% discount on orders of five or more tickets&amp;lt;/strong&amp;gt; for my &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-online-3&amp;quot;&amp;gt;Core Vim Class&amp;lt;/a&amp;gt;. That's Â£128 per head, a Â£32 saving on full price tickets at Â£160. If your team makes heavy use of Vim, then this is a great opportunity...&amp;lt;/p&amp;gt;</description>
+      <pubDate>Mon, 20 Jan 2014 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2014/01/20-group-discount-for-core-vim-class-january-edition/</guid>
+      <link>http://vimcasts.org/blog/2014/01/20-group-discount-for-core-vim-class-january-edition/</link>
+    </item>
+    <item>
       <title>Comparing buffers with vimdiff</title>
       <description>&amp;lt;p&amp;gt;Vim's diff mode allows us to easily compare the contents of two (or more) buffers. We can start Vim in diff mode using the &amp;lt;code&amp;gt;vimdiff&amp;lt;/code&amp;gt; command, or if Vim is already running we can switch to diff mode using the &amp;lt;code&amp;gt;:diffthis&amp;lt;/code&amp;gt; command. The beauty of the &amp;lt;code&amp;gt;:diffthis&amp;lt;/code&amp;gt; command is that it works with unnamed buffers, whereas &amp;lt;code&amp;gt;vimdiff&amp;lt;/code&amp;gt; can only work with files.&amp;lt;/p&amp;gt;
 
@@ -129,6 +183,15 @@
       <link>http://vimcasts.org/episodes/pasting-from-insert-mode/</link>
     </item>
     <item>
+      <title>Book a private Vim class for your team</title>
+      <description>&amp;lt;p&amp;gt;Does your team make heavy use of Vim? Why not &amp;lt;a href=&amp;quot;http://vimcasts.org/classes/private-training&amp;quot;&amp;gt;book me for a private Vim training session&amp;lt;/a&amp;gt; and give your team a productivity boost? I can deliver my class online for companies based (or distributed) anywhere in the world, or I can teach on-site anywhere except the US. Here are &amp;lt;a href=&amp;quot;http://vimcasts.org/classes/private-training#prices&amp;quot;&amp;gt;my prices and terms&amp;lt;/a&amp;gt;. &amp;lt;a href=&amp;quot;&amp;amp;#109;&amp;amp;#097;&amp;amp;#105;&amp;amp;#108;&amp;amp;#116;&amp;amp;#111;:&amp;amp;#100;&amp;amp;#114;&amp;amp;#101;&amp;amp;#119;&amp;amp;#064;&amp;amp;#118;&amp;amp;#105;&amp;amp;#109;&amp;amp;#099;&amp;amp;#097;&amp;amp;#115;&amp;amp;#116;&amp;amp;#115;&amp;amp;#046;&amp;amp;#111;&amp;amp;#114;&amp;amp;#103;&amp;quot;&amp;gt;Get in touch&amp;lt;/a&amp;gt; if you have any further enquiries.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;</description>
+      <pubDate>Mon, 07 Oct 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/10/book-a-private-vim-class-for-your-team/</guid>
+      <link>http://vimcasts.org/blog/2013/10/book-a-private-vim-class-for-your-team/</link>
+    </item>
+    <item>
       <title>Pasting from Visual mode</title>
       <description>&amp;lt;p&amp;gt;When used &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/change.html#v_p&amp;quot;&amp;gt;in Visual mode the &amp;lt;code&amp;gt;p&amp;lt;/code&amp;gt; command&amp;lt;/a&amp;gt; replaces the selection with the contents of a register. This makes for a smooth workflow when you want to overwrite a selection, or swap the order of two regions of text.&amp;lt;/p&amp;gt;
 
@@ -137,15 +200,6 @@
       <pubDate>Mon, 07 Oct 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/pasting-from-visual-mode/</guid>
       <link>http://vimcasts.org/episodes/pasting-from-visual-mode/</link>
-    </item>
-    <item>
-      <title>Book a private Vim class for your team</title>
-      <description>&amp;lt;p&amp;gt;Does your team make heavy use of Vim? Why not &amp;lt;a href=&amp;quot;http://vimcasts.org/classes/private-training&amp;quot;&amp;gt;book me for a private Vim training session&amp;lt;/a&amp;gt; and give your team a productivity boost? I can deliver my class online for companies based (or distributed) anywhere in the world, or I can teach on-site anywhere except the US. Here are &amp;lt;a href=&amp;quot;http://vimcasts.org/classes/private-training#prices&amp;quot;&amp;gt;my prices and terms&amp;lt;/a&amp;gt;. &amp;lt;a href=&amp;quot;&amp;amp;#109;&amp;amp;#097;&amp;amp;#105;&amp;amp;#108;&amp;amp;#116;&amp;amp;#111;:&amp;amp;#100;&amp;amp;#114;&amp;amp;#101;&amp;amp;#119;&amp;amp;#064;&amp;amp;#118;&amp;amp;#105;&amp;amp;#109;&amp;amp;#099;&amp;amp;#097;&amp;amp;#115;&amp;amp;#116;&amp;amp;#115;&amp;amp;#046;&amp;amp;#111;&amp;amp;#114;&amp;amp;#103;&amp;quot;&amp;gt;Get in touch&amp;lt;/a&amp;gt; if you have any further enquiries.&amp;lt;/p&amp;gt;
-
-&amp;lt;p&amp;gt;</description>
-      <pubDate>Mon, 07 Oct 2013 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2013/10/book-a-private-vim-class-for-your-team/</guid>
-      <link>http://vimcasts.org/blog/2013/10/book-a-private-vim-class-for-your-team/</link>
     </item>
     <item>
       <title>Using Vim's named registers</title>
@@ -168,15 +222,6 @@
       <link>http://vimcasts.org/episodes/meet-the-yank-register/</link>
     </item>
     <item>
-      <title>Upcoming online workshop: October 28th</title>
-      <description>&amp;lt;p&amp;gt;On Monday, October 28th 2013, I’m going to teach my &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-online-1&amp;quot;&amp;gt;Core Vim Masterclass Online&amp;lt;/a&amp;gt;. It will run for 4 hours, from &amp;lt;a href=&amp;quot;http://www.timeanddate.com/worldclock/fixedtime.html?msg=Core+Vim+Class+Online&amp;amp;amp;amp;iso=20131028T17&amp;amp;amp;amp;p1=136&amp;amp;amp;amp;ah=4&amp;quot;&amp;gt;17:00 BST&amp;lt;/a&amp;gt;. That’s 10:00 if you live in San Fransisco, or 13:00 if you live in New York. Tickets cost £160 (approximately US $257), but there’s an £145 earlybird offer (approx. US $233) running until October 23rd. You can &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-online-1&amp;quot;&amp;gt;buy tickets from tito.io&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
-
-&amp;lt;p&amp;gt;</description>
-      <pubDate>Fri, 27 Sep 2013 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2013/09/upcoming-online-workshop-october-28th/</guid>
-      <link>http://vimcasts.org/blog/2013/09/upcoming-online-workshop-october-28th/</link>
-    </item>
-    <item>
       <title>Simple operations using the default register</title>
       <description>&amp;lt;p&amp;gt;Vim's &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote&amp;quot;&amp;gt;default register&amp;lt;/a&amp;gt; makes it easy to perform some of the most basic types of cut, copy, and paste operations. That's partly thanks to the &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/change.html#p&amp;quot;&amp;gt;&amp;lt;code&amp;gt;p&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt; command, which behaves differently depending on whether the default register contains a characterwise or linewise region of text.&amp;lt;/p&amp;gt;
 
@@ -185,6 +230,15 @@
       <pubDate>Fri, 27 Sep 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/simple-operations-using-the-default-register/</guid>
       <link>http://vimcasts.org/episodes/simple-operations-using-the-default-register/</link>
+    </item>
+    <item>
+      <title>Upcoming online workshop: October 28th</title>
+      <description>&amp;lt;p&amp;gt;On Monday, October 28th 2013, I’m going to teach my &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-online-1&amp;quot;&amp;gt;Core Vim Masterclass Online&amp;lt;/a&amp;gt;. It will run for 4 hours, from &amp;lt;a href=&amp;quot;http://www.timeanddate.com/worldclock/fixedtime.html?msg=Core+Vim+Class+Online&amp;amp;amp;amp;iso=20131028T17&amp;amp;amp;amp;p1=136&amp;amp;amp;amp;ah=4&amp;quot;&amp;gt;17:00 BST&amp;lt;/a&amp;gt;. That’s 10:00 if you live in San Fransisco, or 13:00 if you live in New York. Tickets cost £160 (approximately US $257), but there’s an £145 earlybird offer (approx. US $233) running until October 23rd. You can &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-online-1&amp;quot;&amp;gt;buy tickets from tito.io&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;</description>
+      <pubDate>Fri, 27 Sep 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/09/upcoming-online-workshop-october-28th/</guid>
+      <link>http://vimcasts.org/blog/2013/09/upcoming-online-workshop-october-28th/</link>
     </item>
     <item>
       <title>Change of pricing for Core Vim Class</title>
@@ -462,6 +516,15 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
       <link>http://vimcasts.org/episodes/using-argdo-to-change-multiple-files/</link>
     </item>
     <item>
+      <title>Get 30% off Practical Vim</title>
+      <description>&amp;lt;p&amp;gt;For a limited time, the Pragmatic Bookshelf is offering &amp;lt;a href=&amp;quot;http://pragprog.com/book/dnvim/practical-vim&amp;quot;&amp;gt;a 30% discount on Practical Vim&amp;lt;/a&amp;gt;. To claim this deal, use the coupon: &amp;lt;strong&amp;gt;DrewNeilVimMarchMadness&amp;lt;/strong&amp;gt;. The offer runs until midnight (PST) on March 8th. Please help me spread the word wide and far by Tweeting, Liking, +1-ing and so on.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;</description>
+      <pubDate>Fri, 22 Feb 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/02/get-30-off-practical-vim/</guid>
+      <link>http://vimcasts.org/blog/2013/02/get-30-off-practical-vim/</link>
+    </item>
+    <item>
       <title>Populating the arglist</title>
       <description>&amp;lt;p&amp;gt;The arglist wouldn't be much use if we had to quit and relaunch Vim every time we wanted to change its contents. In this episode, we'll learn how to set the contents of the arglist using the &amp;lt;code&amp;gt;:args&amp;lt;/code&amp;gt; command, which can receive filepaths, globs, or even backtick expressions.&amp;lt;/p&amp;gt;
 
@@ -470,15 +533,6 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
       <pubDate>Fri, 22 Feb 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/populating-the-arglist/</guid>
       <link>http://vimcasts.org/episodes/populating-the-arglist/</link>
-    </item>
-    <item>
-      <title>Get 30% off Practical Vim</title>
-      <description>&amp;lt;p&amp;gt;For a limited time, the Pragmatic Bookshelf is offering &amp;lt;a href=&amp;quot;http://pragprog.com/book/dnvim/practical-vim&amp;quot;&amp;gt;a 30% discount on Practical Vim&amp;lt;/a&amp;gt;. To claim this deal, use the coupon: &amp;lt;strong&amp;gt;DrewNeilVimMarchMadness&amp;lt;/strong&amp;gt;. The offer runs until midnight (PST) on March 8th. Please help me spread the word wide and far by Tweeting, Liking, +1-ing and so on.&amp;lt;/p&amp;gt;
-
-&amp;lt;p&amp;gt;</description>
-      <pubDate>Fri, 22 Feb 2013 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2013/02/get-30-off-practical-vim/</guid>
-      <link>http://vimcasts.org/blog/2013/02/get-30-off-practical-vim/</link>
     </item>
     <item>
       <title>Meet the arglist</title>

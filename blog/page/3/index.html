@@ -25,6 +25,68 @@
     <h1>Blog</h1>
 
   <section class="blogpost">
+    <h2><a href="/blog/2013/06/upcoming-online-workshop-july-10th/">Upcoming online workshop: July 10th</a></h2>
+    <time datetime="2013-06-05">Jun 05, 2013</time>
+
+    <p>On Wednesday, July 10th, I’m going to teach my <a href="http://vimcasts.org/classes/core-vim">Core Vim Masterclass Online</a>. It will run for 4 hours, from 18:00 BST. That’s 10:00 if you live in San Fransisco, or 13:00 if you live in New York. <a href="http://vimcasts-online-7.eventbrite.com/">Tickets cost £95</a> (approximately US $146), but there’s an £80 earlybird offer (approx. US $122) running until June 28th.</p>
+
+<p>
+
+    
+    <a href="/blog/2013/06/upcoming-online-workshop-july-10th/">Continue reading&hellip;</a>
+
+  </section>
+  <section class="blogpost">
+    <h2><a href="/blog/2013/06/macbook-pro-for-sale/">Macbook Pro for sale - £900</a></h2>
+    <time datetime="2013-06-03">Jun 03, 2013</time>
+
+    <p>I have a 15" MacBook Pro for sale. It's a 2010 model, with upgraded RAM and SSD. Here are the tech specs:</p>
+
+<ul>
+  <li>15" screen</li>
+  <li>2.4GHz Intel Core i5 processor</li>
+  <li>8GB memory (maxed out)</li>
+  <li>255GB SSD disk storage</li>
+  <li>power supply (UK adapter)</li>
+  <li>Good battery life</li>
+  <li>running Mountain Lion</li>
+</ul>
+
+<p><strong>UPDATE (8 July, 2013) - this MBP has sold already.</strong></p>
+
+<p>
+
+    
+    <a href="/blog/2013/06/macbook-pro-for-sale/">Continue reading&hellip;</a>
+
+  </section>
+  <section class="blogpost">
+    <h2><a href="/blog/2013/05/vimprint---a-vim-keystroke-parser/">Vimprint - a Vim keystroke parser</a></h2>
+    <time datetime="2013-05-30">May 30, 2013</time>
+
+    <p>I sometimes get asked what software I use to reveal the Vim keystrokes in my video tutorials here on Vimcasts.org. The fact is that I add them by hand in post-production. It's not fun!</p>
+
+<p>When I run my <a href="http://vimcasts.org/classes/core-vim">Core Vim Masterclasses</a> I use <a href="https://github.com/sdeken/keycastr/">Keycastr</a> to show what I'm doing in realtime. Keycastr uses Growl-style notifications to show all keystrokes across all applications, including every letter I type while communicating in a chat room, for example. It's not ideal, but it's better than nothing! I would love to have <em>a dedicated program for visualizing my keystrokes in Vim</em>, so I've started building <a href="https://github.com/nelstrom/vimprint">Vimprint</a> to scratch that itch.</p>
+
+<p>
+
+    
+    <a href="/blog/2013/05/vimprint---a-vim-keystroke-parser/">Continue reading&hellip;</a>
+
+  </section>
+  <section class="blogpost">
+    <h2><a href="/blog/2013/05/talks-from-vimlondon-now-on-vimeo/">Talks from VimLondon now on Vimeo</a></h2>
+    <time datetime="2013-05-29">May 29, 2013</time>
+
+    <p>At the April Vim London meetup, we managed for the first time to record and publish videos of the talks. Check out the <a href="https://vimeo.com/vimlondon/videos">VimLondon Vimeo</a> page to see all talks from our April and May meetups.</p>
+
+<p>
+
+    
+    <a href="/blog/2013/05/talks-from-vimlondon-now-on-vimeo/">Continue reading&hellip;</a>
+
+  </section>
+  <section class="blogpost">
     <h2><a href="/blog/2013/05/gitminutes-8---drew-neil-on-vim-and-workflow/">GitMinutes #8 - Drew Neil on Vim and Workflow</a></h2>
     <time datetime="2013-05-27">May 27, 2013</time>
 
@@ -92,56 +154,6 @@
 
     
     <a href="/blog/2013/03/online-vim-classes---sign-up-for-email-announcements/">Continue reading&hellip;</a>
-
-  </section>
-  <section class="blogpost">
-    <h2><a href="/blog/2013/03/combining-vimgrep-with-git-ls-files/">Combining :vimgrep with git ls-files</a></h2>
-    <time datetime="2013-03-07">Mar 07, 2013</time>
-
-    <p>The <code>vimgrep</code> command uses Vim's native regular expressions to search the contents of multiple files. There are several ways that we can specify the list of files to look inside, including <code>*</code> and <code>**</code> wildcards. It would be handy if we could instruct <code>vimgrep</code> to look inside all of the files in the current project, excluding those listed in the <code>.gitignore</code> file. That's where the <a href="https://www.kernel.org/pub/software/scm/git/docs/git-ls-files.html"><code>git ls-files</code></a> command comes in.</p>
-
-<p>
-
-    
-    <a href="/blog/2013/03/combining-vimgrep-with-git-ls-files/">Continue reading&hellip;</a>
-
-  </section>
-  <section class="blogpost">
-    <h2><a href="/blog/2013/03/combining-vimgrep-with-ack--f/">Combining :vimgrep with ack -f</a></h2>
-    <time datetime="2013-03-05">Mar 05, 2013</time>
-
-    <p>I love the way that ack let's me specify the files to search inside. For starters, ack does the right thing by ignoring the contents of VCS directories, backup files, core dumps etc., which gives a good signal to noise ratio. On top of that, ack provides a convenient syntax for specifying filetypes to include or exclude from the set (see <code>ack --help-types</code>). I can target ruby files only with the <code>--ruby</code> option, or everything but ruby files with <code>--noruby</code>.</p>
-
-<p>I also love using <code>:vimgrep</code>, because it lets me use Vim's native regular expressions. For me, the ideal project-wide search would combine Vim's regex with ack's method of specifying the set of files to search through. I recently learned about ack's <code>-f</code> flag, which makes this combination possible.</p>
-
-<p>
-
-    
-    <a href="/blog/2013/03/combining-vimgrep-with-ack--f/">Continue reading&hellip;</a>
-
-  </section>
-  <section class="blogpost">
-    <h2><a href="/blog/2013/02/get-30-off-practical-vim/">Get 30% off Practical Vim</a></h2>
-    <time datetime="2013-02-22">Feb 22, 2013</time>
-
-    <p>For a limited time, the Pragmatic Bookshelf is offering <a href="http://pragprog.com/book/dnvim/practical-vim">a 30% discount on Practical Vim</a>. To claim this deal, use the coupon: <strong>DrewNeilVimMarchMadness</strong>. The offer runs until midnight (PST) on March 8th. Please help me spread the word wide and far by Tweeting, Liking, +1-ing and so on.</p>
-
-<p>
-
-    
-    <a href="/blog/2013/02/get-30-off-practical-vim/">Continue reading&hellip;</a>
-
-  </section>
-  <section class="blogpost">
-    <h2><a href="/blog/2013/02/google-vimdocs-with-a-custom-search-engine/">Google vimdocs with a custom search engine</a></h2>
-    <time datetime="2013-02-15">Feb 15, 2013</time>
-
-    <p>Here's a quick tip: if you can't find what you're looking for in Vim's built-in documentation, use a search engine instead. All of Vim's documentation is online at <a href="http://vimdoc.sourceforge.net/htmldoc/">vimdoc.sourceforge.net</a>, so it's indexed by Google &amp; Co. If you create a <a href="http://support.google.com/chrome/bin/answer.py?hl=en&amp;amp;answer=95653">custom search engine</a> for your browser, then you can easily limit your searches to only return results from <a href="http://vimdoc.sourceforge.net/htmldoc/">vimdoc.sourceforge.net</a>.</p>
-
-<p>
-
-    
-    <a href="/blog/2013/02/google-vimdocs-with-a-custom-search-engine/">Continue reading&hellip;</a>
 
   </section>
 
