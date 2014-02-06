@@ -22,6 +22,18 @@
         
       </h1>
     </div>
+
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/episodes">Episodes</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/training">Training</a></li>
+        <li><a href="/paths">Pathways</a></li>
+        <li><a href="/publications">Publications</a></li>
+      </ul>
+    </nav>
+
     <p>In the previous episode, we saw how to use the quoteplus register to paste text from the system clipboard. Unfortunately, we can't always expect the clipboard feature to be supported. In particular, if we're running an instance of Vim on a remote machine, there's no simple way of accessing the clipboard from our local workstation.</p>
 
 <p>We can use the system paste command: control-v, or command-v on a mac, but this has some issues. Watch what happens if I copy this snippet of javascript, then use the system paste command in Insert mode: the indentation goes haywire!</p>
