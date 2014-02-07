@@ -9,6 +9,9 @@ TODO
 # Ignore bundler config
 /.bundle
 
+# Ignore bundler assets
+/vendor
+
 # Ignore the build directory
 /build
 
