@@ -16,29 +16,38 @@ title: Vimcasts - Free screencasts about the text editor Vim
   </div>
 </div>
 
-<h2>Training</h2>
+<div class="row">
 
-<h2>Publications</h2>
+  <div class="small-12 large-6 columns">
+    <h2>Search the archives</h2>
+    <form>
+      <label text="search">Search: <input type="search"/></label>
+    </form>
+  </div>
 
-<h2>Pro screencasts</h2>
+  <div class="small-12 large-6 columns">
+    <h2>Find by category</h2>
+    <p>
+      Vimcasts contains more than 60 free screencasts and 80 blog posts.
+      <a href="/categories">Browse all content by category</a>.
+  </p>
+  </div>
 
-<h2>Screencasts</h2>
+</div>
 
-<ul>
-  <li>
-  Latest episode:
-  <% latest = blog(:episodes).articles.first %>
-  <%= link_to latest.title, latest.path %>
-  </li>
-  <li><a href="/episodes/all">All episodes</a></li>
-  <li>Pathways</li>
-</ul>
+<div class="row">
+  <div class="small-12 large-6 columns">
+    <h2>Watch latest episode</h2>
+    <% latest = blog(:episodes).articles.first %>
+    <h3><%= link_to latest.title, latest.path %></h3>
+    <%= latest.summary %>
+  </div>
 
-<h2>Categories</h2>
+  <div class="small-12 large-6 columns">
+    <h2>Read latest article</h2>
+    <% latest = blog(:blog).articles.first %>
+    <h3><%= link_to latest.title, latest.path %></h3>
+    <%= latest.summary %>
+  </div>
 
-<ul>
-  <li>registers</li>
-  <li>the dot command</li>
-  <li>whitespace</li>
-  <li>managing your workspace</li>
-</ul>
+</div>
