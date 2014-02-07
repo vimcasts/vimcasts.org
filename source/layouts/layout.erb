@@ -14,7 +14,40 @@
 
   <div class="off-canvas-wrap">
     <div class="inner-wrap">
-      <nav class="tab-bar">
+      <nav class="top-bar hide-for-small" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="/">Vimcasts</a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+        </ul>
+
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <li class="has-form">
+            <div class="row collapse">
+              <div class="large-8 small-9 columns">
+                <input type="text" placeholder="Explore archives">
+              </div>
+              <div class="large-4 small-3 columns">
+                <a href="#" class="alert button expand">Search</a>
+              </div>
+            </div>
+            </li>
+          </ul>
+
+          <!-- Left Nav Section -->
+          <ul class="left">
+          <li><%= link_to "Episodes", "/categories" %></li>
+          <li><%= link_to "Blog", "/blog" %></li>
+          <li><%= link_to "Training", "/training" %></li>
+          <li><%= link_to "Publications", "/publications" %></li>
+          </ul>
+        </section>
+      </nav>
+
+      <nav class="tab-bar show-for-small">
         <section class="left-small">
           <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
         </section>
