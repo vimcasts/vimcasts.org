@@ -2,10 +2,19 @@
 title: Vimcasts - Free screencasts about the text editor Vim
 ---
 
-<h1>Welcome to Vimcasts</h1>
 
-
-<%= announcement "next-class" %>
+<div class="row">
+  <div class="small-12 column">
+    <div class="panel">
+      <%
+          now = Date.today
+          # now = Date.parse("2014-02-20")
+          # now = Date.parse("2014-03-20")
+      %>
+      <%= announcement "next-class", now %>
+    </div>
+  </div>
+</div>
 
 <h2>Training</h2>
 
