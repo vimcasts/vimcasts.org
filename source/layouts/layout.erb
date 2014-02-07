@@ -19,9 +19,7 @@
           <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
         </section>
 
-        <section class="middle tab-bar-section">
-          <h1 class="title">Free screencasts about Vim</h1>
-        </section>
+        <section class="middle tab-bar-section"></section>
       </nav>
 
       <aside class="left-off-canvas-menu">
@@ -42,8 +40,8 @@
 
       <section class="main-section">
 
-        <div class="row">
-          <div id="logo">
+        <div class="row identity-row">
+          <div id="logo" class="small-4 columns">
             <h1>
               <% if current_page.url == "/" %>
                 <span>VimCasts.org</span>
@@ -51,6 +49,13 @@
                 <a href="/" title="Go to Vimcasts.org homepage">VimCasts.org</a>
               <% end %>
             </h1>
+          </div>
+          <div class="small-7 small-offset-1 columns">
+            <span class="show-for-small-only">Free screencasts about Vim, with Drew Neil</span>
+            <span class="show-for-medium-up">
+              Vimcasts publishes free screencasts about the text editor Vim.
+              The site is run by Drew Neil, author of Practical Vim.
+            </span>
           </div>
         </div>
 

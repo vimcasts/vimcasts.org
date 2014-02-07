@@ -29,3 +29,25 @@ header {
   }
 
 }
+
+#logo a, #logo span {
+  background-image: url(/images/vimcasts-logo.svg);
+  background-repeat: no-repeat;
+  display: block;
+  width: 217px;
+  height: 106px;
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.identity-row {
+  margin-top: 1em;
+}
+
+@media #{$small-only} {
+  #logo a, #logo span {
+    width: 108px;
+    height: 53px;
+  }
+}
