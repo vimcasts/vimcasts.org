@@ -1,0 +1,182 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title></title>
+
+    <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/modernizr.js" type="text/javascript"></script>
+  </head>
+
+  <body class="bower_components bower_components_jquery-placeholder bower_components_jquery-placeholder_README bower_components_jquery-placeholder_README_index">
+
+  <div class="off-canvas-wrap">
+    <div class="inner-wrap">
+      <nav class="top-bar show-for-large-up" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="/">Vimcasts</a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+        </ul>
+
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <li class="has-form">
+            <div class="row collapse">
+              <div class="large-8 small-9 columns">
+                <input type="text" placeholder="Explore archives">
+              </div>
+              <div class="large-4 small-3 columns">
+                <a href="#" class="alert button expand">Search</a>
+              </div>
+            </div>
+            </li>
+          </ul>
+
+          <!-- Left Nav Section -->
+          <ul class="left">
+          <li><a href="/categories">Episodes</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/training">Training</a></li>
+          <li><a href="/publications">Publications</a></li>
+          </ul>
+        </section>
+      </nav>
+
+      <nav class="tab-bar hide-for-large-up">
+        <section class="left-small">
+          <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+        </section>
+
+        <section class="middle tab-bar-section"></section>
+      </nav>
+
+      <aside class="left-off-canvas-menu">
+        <ul class="off-canvas-list">
+          <li><label>Vimcasts</label></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/episodes">Episodes</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/training">Training</a></li>
+          <li><a href="/publications">Publications</a></li>
+          <li>
+          <form>
+            <label text="search">Search: <input type="search" disabled/></label>
+          </form>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="main-section">
+
+        <div class="row identity-row">
+          <div id="logo" class="small-4 columns">
+            <h1>
+              
+                <a href="/" title="Go to Vimcasts.org homepage">VimCasts.org</a>
+              
+            </h1>
+          </div>
+          <div class="small-7 small-offset-1 columns">
+            <h4 class="show-for-small-only text-right">
+              Free Vim screencasts<br/>
+              <small>with Drew Neil</small>
+            </h4>
+            <h4 class="show-for-medium-up text-right">
+              Free Vim screencasts<br/>
+              <small>with Drew Neil, author of <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a></small>
+            </h4>
+          </div>
+        </div>
+
+        <h1 id="html5-placeholder-jquery-plugin">HTML5 Placeholder jQuery Plugin</h1>
+
+<h2 id="demo--examples">Demo &amp; Examples</h2>
+
+<p><a href="http://mathiasbynens.be/demo/placeholder">http://mathiasbynens.be/demo/placeholder</a></p>
+
+<h2 id="example-usage">Example Usage</h2>
+
+<h3 id="html">HTML</h3>
+
+<p><code>html
+&lt;input type="text" name="name" placeholder="e.g. John Doe"&gt;
+&lt;input type="email" name="email" placeholder="e.g. address@example.ext"&gt;
+&lt;input type="url" name="url" placeholder="e.g. http://mathiasbynens.be/"&gt;
+&lt;input type="tel" name="tel" placeholder="e.g. +32 472 77 69 88"&gt;
+&lt;input type="password" name="password" placeholder="e.g. h4x0rpr00fz"&gt;
+&lt;input type="search" name="search" placeholder="Search this site…"&gt;
+&lt;textarea name="message" placeholder="Your message goes here"&gt;&lt;/textarea&gt;
+</code></p>
+
+<h3 id="jquery">jQuery</h3>
+
+<p>Use the plugin as follows:</p>
+
+<p><code>js
+$('input, textarea').placeholder();
+</code></p>
+
+<p>You’ll still be able to use <code>jQuery#val()</code> to get and set the input values. If the element is currently showing a placeholder, <code>.val()</code> will return an empty string instead of the placeholder text, just like it does it browsers with a native <code>@placeholder</code> implementation. Calling <code>.val('')</code> to set an element’s value to the empty string will result in the placeholder text (re)appearing.</p>
+
+<h3 id="css">CSS</h3>
+
+<p>The plugin automatically adds <code>class="placeholder"</code> to the elements who are currently showing their placeholder text. You can use this to style placeholder text differently:</p>
+
+<p><code>css
+input, textarea { color: #000; }
+.placeholder { color: #aaa; }
+</code></p>
+
+<p>I’d suggest sticking to the <code>#aaa</code> color for placeholder text, as it’s the default in most browsers that support <code>@placeholder</code>. If you really want to, though, you can <a href="http://stackoverflow.com/questions/2610497/change-an-inputs-html5-placeholder-color-with-css/2610741#2610741">style the placeholder text in some of the browsers that natively support it</a>.</p>
+
+<h2 id="notes">Notes</h2>
+
+<ul>
+  <li>Requires jQuery 1.6+. For an older version of this plugin that works under jQuery 1.4.2+, see <a href="https://github.com/mathiasbynens/jquery-placeholder/tree/1.8.7">v1.8.7</a>.</li>
+  <li>Works in all A-grade browsers, including IE6.</li>
+  <li>Automatically checks if the browser natively supports the HTML5 <code>placeholder</code> attribute for <code>input</code> and <code>textarea</code> elements. If this is the case, the plugin won’t do anything. If <code>@placeholder</code> is only supported for <code>input</code> elements, the plugin will leave those alone and apply to <code>textarea</code>s exclusively. (This is the case for Safari 4, Opera 11.00, and possibly other browsers.)</li>
+  <li>Caches the results of its two feature tests in <code>jQuery.fn.placeholder.input</code> and <code>jQuery.fn.placeholder.textarea</code>. For example, if <code>@placeholder</code> is natively supported for <code>input</code> elements, <code>jQuery.fn.placeholder.input</code> will be <code>true</code>. After loading the plugin, you can re-use these properties in your own code.</li>
+  <li>
+    <p>Makes sure it never causes duplicate IDs in your DOM, even in browsers that need an extra <code>input</code> element to fake <code>@placeholder</code> for password inputs. This means you can safely do stuff like:</p>
+
+    <p><code>html
+  &lt;label for="bar"&gt;Example label&lt;/label&gt;
+  &lt;input type="password" placeholder="foo" id="bar"&gt;
+ </code></p>
+
+    <p>And the <code>&lt;label&gt;</code> will always point to the <code>&lt;input&gt;</code> element you’d expect. Also, all CSS styles based on the ID will just work™.</p>
+  </li>
+</ul>
+
+<h2 id="license">License</h2>
+
+<p>This plugin is dual licensed under the MIT and GPL licenses, just like jQuery itself.</p>
+
+<h2 id="thanks-to">Thanks to…</h2>
+
+<ul>
+  <li><a href="http://paulirish.com/">Paul Irish</a> for his inspiring snippet in <a href="http://jquery14.com/day-05/jquery-1-4-hawtness-1-with-paul-irish">jQuery 1.4 Hawtness #1</a></li>
+  <li>everyone from <a href="http://webchat.freenode.net/?channels=jquery">#jquery</a> for the tips, ideas and patches</li>
+  <li>temp01 for his major contributions</li>
+  <li>anyone who <a href="https://github.com/mathiasbynens/jquery-placeholder/contributors">contributed a patch</a> or <a href="https://github.com/mathiasbynens/jquery-placeholder/issues">made a helpful suggestion</a></li>
+</ul>
+
+<p><em>– <a href="http://mathiasbynens.be/">Mathias</a></em></p>
+
+      </section>
+
+      <a class="exit-off-canvas"></a>
+
+    </div>
+  </div>
+
+
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </body>
+</html>
