@@ -12,28 +12,56 @@
 
   <body class="<%= page_classes %>">
 
-    <div id="logo">
-      <h1>
-        <% if current_page.url == "/" %>
-          <span>VimCasts.org</span>
-        <% else %>
-          <a href="/" title="Go to Vimcasts.org homepage">VimCasts.org</a>
-        <% end %>
-      </h1>
+  <div class="off-canvas-wrap">
+    <div class="inner-wrap">
+      <nav class="tab-bar">
+        <section class="left-small">
+          <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+        </section>
+
+        <section class="middle tab-bar-section">
+          <h1 class="title">Free screencasts about Vim</h1>
+        </section>
+      </nav>
+
+      <aside class="left-off-canvas-menu">
+        <ul class="off-canvas-list">
+          <li><label>Foundation</label></li>
+          <li><%= link_to "Home", "/" %></li>
+          <li><%= link_to "Episodes", "/episodes" %></li>
+          <li><%= link_to "Blog", "/blog" %></li>
+          <li><%= link_to "Training", "/training" %></li>
+          <li><%= link_to "Publications", "/publications" %></li>
+          <li>
+          <form>
+            <label text="search">Search: <input type="search"/></label>
+          </form>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="main-section">
+
+        <div class="row">
+          <div id="logo">
+            <h1>
+              <% if current_page.url == "/" %>
+                <span>VimCasts.org</span>
+              <% else %>
+                <a href="/" title="Go to Vimcasts.org homepage">VimCasts.org</a>
+              <% end %>
+            </h1>
+          </div>
+        </div>
+
+        <%= yield %>
+      </section>
+
+      <a class="exit-off-canvas"></a>
+
     </div>
+  </div>
 
-    <nav>
-      <ul>
-        <li><%= link_to "Home", "/" %></li>
-        <li><%= link_to "Episodes", "/episodes" %></li>
-        <li><%= link_to "Blog", "/blog" %></li>
-        <li><%= link_to "Training", "/training" %></li>
-        <li><%= link_to "Pathways", "/paths" %></li>
-        <li><%= link_to "Publications", "/publications" %></li>
-      </ul>
-    </nav>
-
-    <%= yield %>
 
     <%= javascript_include_tag  "all" %>
   </body>
