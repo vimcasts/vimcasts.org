@@ -28,7 +28,10 @@ title: Vimcasts - Free screencasts about the text editor Vim
   <div class="small-12 large-6 columns">
     <h2>Find by category</h2>
     <p>
-      Vimcasts contains more than 60 free screencasts and 80 blog posts.
+    Vimcasts contains
+    <%= blog(:episodes).articles.count %> free screencasts and
+    <%# TODO: exclude expired promotion blog posts from count %>
+    <%= blog(:blog).articles.count %> articles.
       <a href="/categories">Browse all content by category</a>.
   </p>
   </div>
