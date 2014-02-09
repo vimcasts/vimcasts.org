@@ -84,6 +84,9 @@
             </h1>
           </div>
           <div class="small-7 small-offset-1 columns">
+            <% if content_for?(:header) %>
+              <%= yield_content :header %>
+            <% else %>
             <h4 class="show-for-small-only text-right">
               Free Vim screencasts<br/>
               <small>with Drew Neil</small>
@@ -92,6 +95,7 @@
               Free Vim screencasts<br/>
               <small>with Drew Neil, author of <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a></small>
             </h4>
+            <% end %>
           </div>
         </div>
 
