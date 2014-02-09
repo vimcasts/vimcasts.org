@@ -12,6 +12,9 @@ class Announcements < Middleman::Extension
     def announcement(name, now=Date.today)
       partial TemporalContent.get(name, now).partial_path
     end
+    def number_of_core_vim_attendees
+      data.has_key?(:core_vim) ? data.core_vim.alumni : '500'
+    end
   end
 
 end
