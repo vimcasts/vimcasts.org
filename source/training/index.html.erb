@@ -5,10 +5,28 @@ title: Vimcasts - Free screencasts about the text editor Vim
 <!-- possible header material-->
 
 <section class="">
-    	<h1 id="">Vimcasts publishes free screencasts about Vim, the text editor. The site is run by Drew Neil, author of Practical Vim. </h1>
-      <h2 id="">The next Core Vim workshop taught by Drew Neil is on x. Read more about the Core Vim workshops here.</h2>
   </section>
 
+    <% announcement "next-class" %>
+    <div class="row announcement-banner">
+      <div class="small-12 column show-for-small-only">
+        <div class="panel">
+          <%= yield_content :announcement_text %>
+          <%= yield_content :announcement_button %>
+        </div>
+      </div>
+
+      <div class="panel show-for-medium-up clearfix">
+        <div class="small-8 column">
+          <%= yield_content :announcement_text %>
+        </div>
+
+        <div class="small-4 column">
+          <%= yield_content :announcement_button %>
+        </div>
+      </div>
+
+    </div>
 <!--main content-->
 
 <h1>Vim training with Drew Neil</h1>
