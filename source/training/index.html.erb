@@ -2,54 +2,35 @@
 title: Vimcasts - Free screencasts about the text editor Vim
 ---
 
-<!-- possible header material-->
-
-<section class="">
-  </section>
-
-    <% announcement "next-class" %>
-    <div class="row announcement-banner">
-      <div class="small-12 column show-for-small-only">
-        <div class="panel">
-          <%= yield_content :announcement_text %>
-          <%= yield_content :announcement_button %>
-        </div>
-      </div>
-
-      <div class="panel show-for-medium-up clearfix">
-        <div class="small-8 column">
-          <%= yield_content :announcement_text %>
-        </div>
-
-        <div class="small-4 column">
-          <%= yield_content :announcement_button %>
-        </div>
-      </div>
-
-    </div>
-<!--main content-->
-
-  <div class="row training-signposts">
-    <div class="small-12 large-8 columns">
-      <h2>Core Vim Class</h2>
-      <p>Learn everything that matters in 4 hours.</p>
-    </div>
-    <div class="small-12 large-4 columns">
-      <h2>Book a private class</h2>
-      <p>Give your team a productivity boost.</p>
+<% announcement "next-class" %>
+<div class="row announcement-banner">
+  <div class="small-12 column show-for-small-only">
+    <div class="panel">
+      <%= yield_content :announcement_text %>
+      <%= yield_content :announcement_button %>
     </div>
   </div>
 
-<h1>Vim training with Drew Neil</h1>
+  <div class="panel show-for-medium-up clearfix">
+    <div class="small-8 column">
+      <%= yield_content :announcement_text %>
+    </div>
 
-<p>Drew Neil has taught his Core Vim workshop to more than 500 people worldwide. He teaches the course online, in person (within Europe), at conferences, including Strangeloop, Oredev, Rocky Mountain Ruby Conference, and wroclove.rb. and in-house at companies such as Shopify, Booking.com, and Spilgames. If you'd like to find out more about how the Core Vim course works and who it is designed for you'll find more information <a href="/training/core-vim">here</a>. If you'd like to book a private class for your team you'll find the prices and conditions <a href="/training/private">here</a>.
+    <div class="small-4 column">
+      <%= yield_content :announcement_button %>
+    </div>
+  </div>
 
-<!--visual navigation?-->
+</div>
 
-<ul>
-  <li><a href="/training/core-vim">Core Vim</a></li>
-  <li><a href="/training/code-diving">Code diving</a></li>
-  <li><a href="/training/private">Private classes for your team</a></li>
-</ul>
-
+<div class="row training-signposts">
+  <div class="small-12 large-8 columns">
+    <h2>Core Vim Class</h2>
+    <p>Learn everything that matters in 4 hours.</p>
+  </div>
+  <div class="small-12 large-4 columns">
+    <h2>Book a private class</h2>
+    <p>Give your team a productivity boost.</p>
+  </div>
+</div>
 
