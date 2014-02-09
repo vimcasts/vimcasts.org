@@ -1,0 +1,25 @@
+<% now = Date.today
+# now = Date.parse("2014-02-20")
+# now = Date.parse("2014-03-20")
+announcement "next-class", now %>
+
+<div class="row announcement-banner">
+  <div class="small-12 column show-for-small-only">
+    <div class="panel">
+      <%= yield_content :announcement_text %>
+      <%= yield_content :announcement_button %>
+    </div>
+  </div>
+
+  <div class="panel show-for-medium-up clearfix">
+    <div class="small-8 column">
+      <%= yield_content :announcement_text %>
+    </div>
+
+    <div class="small-4 column">
+      <%= yield_content :announcement_button %>
+    </div>
+  </div>
+
+</div>
+
