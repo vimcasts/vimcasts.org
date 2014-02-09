@@ -2,31 +2,44 @@
 title: Vimcasts - Free screencasts about the text editor Vim
 ---
 
-<!--lead copy-->
+<% content_for :header do %>
+<h4 class="text-right">
+  Vim training: online, in person, or in-house<br/>
+  <small>
+    Drew Neil has coached
+    <%= data.core_vim.alumni || '500' %>
+    people worldwide.
+  </small>
+</h4>
+<% end %>
 
-<h1>Core Vim, with Drew Neil</h1>
+<div class="row">
+  <div class="small-12 columns">
+    <h1>Core Vim, with Drew Neil</h1>
 
-<p>Vim can shred text at the speed of thought, but learning how can take years. Or you can learn everything that matters in 4 hours by taking this Core Vim Masterclass. This course is ideal if you make heavy use of Vim and want to level up. The techniques you learn will boost your productivity, whether you use Vim for editing server config files, source code, or prose.</p>
+    <p>
+    Vim can shred text at the speed of thought, but learning how can take years. Or you can learn everything that matters in 4 hours by taking this Core Vim Masterclass.
+    </p>
+  </div>
 
-<!--book now button-->
+  <div class="small-12 columns">
+    <%= partial "next-class" %>
+  </div>
 
-<a href="">book now</a>
-
-<!--who is the course for-->
-    
-<h3>Who is the course for?</h3>
-<p>This Core Vim masterclass is aimed at the intermediate user who wants to level up.</p>
-<ul>
+  <div class="small-12 columns">
+    <h3>Who is the course for?</h3>
+    <p>This Core Vim masterclass is aimed at the intermediate user who wants to level up.</p>
+    <ul>
       <li>you are familiar with the basics (not sure? Go through vimtutor)</li>
       <li>you have moved beyond using the arrow keys (not sure how? Read habit making, habit breaking)</li>
       <li>you feel that something is holding you back from reaching the next level</li>
-</ul>
-<p>Come and see how Vim can blow your mind, or your money back.</p>
+    </ul>
+    <p>Come and see how Vim can blow your mind, or your money back.</p>
+  </div>
 
-<!--what you will learn-->
-
-<h3>What you will learn</h3>
-<ul>
+  <div class="small-12 columns">
+    <h3>What you will learn</h3>
+    <ul>
       <li>learn how to repeat the last change using the dot command</li>
       <li>meet the dot formula – a 2 step process with 1000 uses</li>
       <li>move your cursor wherever you want it to go with as little as 2 keystrokes</li>
@@ -35,39 +48,66 @@ title: Vimcasts - Free screencasts about the text editor Vim
       <li>attain enlightenment by understanding text objects</li>
       <li>Stop using counts! I will teach you to apply the same change over a visual range with the :normal command.</li>
       <li>learn why old-school vi operators trump Visual mode</li>
-</ul>
-<p>If you’ve already read Practical Vim, then you may be familiar with the concepts covered in this class. The coursework doesn’t correspond to any single chapter of my book, but joins the dots between the most important tips. We learn best by doing (as Confucius put it: “I hear and I forget. I see and I remember. I do and I understand.”). In this class you’ll get your hands dirty, learning best practices by applying them.</p>
+    </ul>
+  </div>
 
-<!--newsletter sign-up form-->
+  <div class="small-12 columns">
+    <h3>Learn by doing</h3>
+    <p>If you’ve already read <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, then you may be familiar with the concepts covered in this class. The coursework doesn’t correspond to any single chapter of my book, but joins the dots between the most important tips.
+    </p>
+    <p>
+    We learn best by doing (as Confucius put it: “I hear and I forget. I see and I remember. I do and I understand.”). In this class you’ll get your hands dirty, learning best practices by applying them.
+    </p>
+  </div>
 
-<p>Sign up for the newsletter and you’ll be the first to hear about upcoming Vim classes.</p>
+  <div class="small-12 columns">
+    <h3>How the class works</h3>
+    <p>I teach this class using a combination of slides and live coding. When you sign up for the masterclass, I’ll ask for your github username. The learning materials are in a private github repository, to which you’ll be granted access. We’ll work through a series of exercises that are designed to teach Vim best practices.</p>
 
-  <!-- how it works -->
+    <p>We’ll be using bare Vim (not vi – we’re not savages). You’ll be asked to leave your .vimrc at the door before entering my Vim Dojo.</p>
+  </div>
 
-      
-<h3>How the class works</h3>
-<p>I teach this class using a combination of slides and live coding. When you sign up for the masterclass, I’ll ask for your github username. The learning materials are in a private github repository, to which you’ll be granted access. We’ll work through a series of exercises that are designed to teach Vim best practices.</p>
+  <div class="small-12 columns">
+    <h3>How the online class works</h3>
+    <p>I’ll broadcast a live stream of my screen and voice using Instant Presenter. We’ll use a text chat room to communicate together as a class. You can ask questions in the chat room at any time, and I’ll pause at the end of each section to answer them.</p>
+    <p>We'll have three short breaks of 5-10 minutes</p>
+  </div>
 
-<p>We’ll be using bare Vim (not vi – we’re not savages). You’ll be asked to leave your .vimrc at the door before entering my Vim Dojo.</p>
-<The class lasts for 4 hours</>
 
-<h3>How the online class works</h3>
-<p>I’ll broadcast a live stream of my screen and voice using Instant Presenter. We’ll use a text chat room to communicate together as a class. You can ask questions in the chat room at any time, and I’ll pause at the end of each section to answer them.</p>
-<p>We'll have three short breaks of 5-10 minutes</p>
-
-      
-      
-<h3>What you will get</h3>
-<ul>
+  <div class="small-12 columns">
+    <h3>What you will get</h3>
+    <ul>
       <li>a 75 minute screencast summarizing key material</li>
       <li>access to the VimDojo – an interactive lesson plan (vimtutor++)</li>
       <li>a copy of the slides used to teach the course, with annotations</li>
       <li>a 25% discount coupon for Practical Vim</li>
-</u>      
-<p>Any questions? Contact me at drew@vimcasts.org</p>
+    </u>
 
-<!--book now button-->
+  </div>
 
-<a href="">book now</a>
+  <div class="small-12 columns">
+    <%= partial "next-class" %>
+    <p>Any questions? Contact me at drew@vimcasts.org</p>
+  </div>
 
+</div>
 
+<div class="row footer">
+
+  <hr/>
+
+  <div class="small-6 columns">
+    <ul class="inline-list">
+      <li><a href="/about">About</a></li>
+      <li><a href="/subscribe">Subscribe</a></li>
+      <li><a href="/categories">Free screencasts</a></li>
+    </ul>
+  </div>
+
+  <div class="small-6 columns">
+    <p class="text-right">
+    Vimcasts.org established MMX
+    </p>
+  </div>
+
+</div>
