@@ -62,3 +62,10 @@ header {
 .book-drew-neil .button {
   margin-bottom: 0;
 }
+
+.top-bar-underlay {
+  width: 100%;
+  height: 45px;
+  background-color: $topbar-bg;
+  position: absolute;
+}
