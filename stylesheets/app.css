@@ -6542,3 +6542,19 @@ header {
   height: 45px;
   background-color: #333333;
   position: absolute; }
+
+/* line 73, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+.buy-practical-vim-now {
+  margin-left: auto;
+  margin-right: auto; }
+
+/* line 78, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+.buy-videos-from-thoughtbot {
+  display: block;
+  width: 125px;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* line 85, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+.publication {
+  margin-bottom: 2.5rem; }
