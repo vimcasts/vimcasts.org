@@ -3,14 +3,14 @@ title: Vimcasts - Free screencasts about the text editor Vim
 ---
 
 <% content_for :header do %>
-<h4 class="text-right">
-  Vim training: online, in person, or in-house<br/>
-  <small>
-    Drew Neil has coached
-    <%= number_of_core_vim_attendees %>
-    people worldwide
-  </small>
-</h4>
+  <h4 class="text-right">
+    Vim training: online, in person, or in-house<br/>
+    <small>
+      Drew Neil has coached
+      <%= number_of_core_vim_attendees %>
+      people worldwide
+    </small>
+  </h4>
 <% end %>
 
 <div class="row">
@@ -21,12 +21,19 @@ title: Vimcasts - Free screencasts about the text editor Vim
     Vim can shred text at the speed of thought, but learning how can take years. Or you can learn everything that matters in 4 hours by taking this Core Vim Masterclass.
     </p>
   </div>
+</div>
+
+<div class="row">
 
   <div class="small-12 columns">
     <%= partial "next-class" %>
   </div>
 
-  <div class="small-12 columns">
+</div>
+
+<div class="row">
+
+  <div class="small-12 large-8 columns">
     <h3>Who is the course for?</h3>
     <p>This Core Vim masterclass is aimed at the intermediate user who wants to level up.</p>
     <ul>
@@ -34,6 +41,13 @@ title: Vimcasts - Free screencasts about the text editor Vim
       <li>you have moved beyond using the arrow keys (not sure how? <a href="http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/">Read habit making, habit breaking</a>)</li>
       <li>you feel that something is holding you back from reaching the next level</li>
     </ul>
+  </div>
+
+  <div class="small-12 large-4 columns show-for-large-up">
+    <% link_to "/training/private" do %>
+      <h3>Book a private class</h3>
+      <p>Give your team a productivity boost.</p>
+    <% end %>
   </div>
 
 </div>
@@ -89,8 +103,9 @@ title: Vimcasts - Free screencasts about the text editor Vim
     <p>I’ll broadcast a live stream of my screen and voice using Instant Presenter. We’ll use a text chat room to communicate together as a class. You can ask questions in the chat room at any time, and I’ll pause at the end of each section to answer them.</p>
     <p>We'll have three short breaks of 5-10 minutes</p>
   </div>
+</div>
 
-
+<div class="row">
   <div class="small-12 columns">
     <h3>What you will get</h3>
     <ul>
@@ -99,13 +114,27 @@ title: Vimcasts - Free screencasts about the text editor Vim
       <li>a copy of the slides used to teach the course, with annotations</li>
       <li>a 25% discount coupon for Practical Vim</li>
     </u>
+  </div>
+</div>
 
+<div class="row">
+  <div class="small-12 columns">
+    <%= partial "next-class" %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-12 columns">
+    <h3>Book a private class</h3>
+    <p>Does your team rely heavily on Vim? Give them a productivity boost: <a href="/training/private">book a private class</a>.</p>
   </div>
 
   <div class="small-12 columns">
-    <%= partial "next-class" %>
-    <p>Any questions? Contact me at drew@vimcasts.org</p>
+    <p>Any questions? Contact me at <a href="mailto:drew@vimcasts.org">drew@vimcasts.org</a></p>
   </div>
+</div>
+
+<div class="row">
 
   <div class="small-12 columns">
     <h3>What people say about the course</h3>
