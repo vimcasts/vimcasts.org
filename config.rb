@@ -16,12 +16,14 @@ class Announcements < Middleman::Extension
       data.has_key?(:core_vim) ? data.core_vim.alumni : '500'
     end
     def tag_stats(tag)
-      [].tap do |stats|
-        [[:videos, 'video'], [:articles, 'article']].each do |key, word|
-          next if (number = tag[key]) == 0
-          stats << pluralize(number, word)
+      [
+        [:videos, 'video'],
+        [:articles, 'article']
+      ].map do |key, word|
+        if (number = tag[key]) > 0
+          pluralize(number, word)
         end
-      end.join(", ")
+      end.compact.join(", ")
     end
 
   end
