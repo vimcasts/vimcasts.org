@@ -1,7 +1,7 @@
 require 'middleman-gh-pages'
 
 desc 'Build a list of tags and save it to data/categories.yml'
-task :dump_categories do
+task :categories do
   require 'middleman-blog'
   @app = ::Middleman::Application.server.inst
   blog_tags = @app.blog(:blog).tags
@@ -21,3 +21,6 @@ task :dump_categories do
     f.write tagdata.to_yaml
   end
 end
+
+desc 'Prepare, build, and publish to gh-pages'
+task :shipit => [:categories, :publish]
