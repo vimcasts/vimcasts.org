@@ -1,6 +1,8 @@
+<%= partial "next-class" %>
+
 <div class="row explore-the-archives">
   <div class="small-12 columns">
-    <h2>Find by category</h2>
+    <h2>Explore the Vimcasts archives</h2>
 
     <p>
     Vimcasts contains
@@ -8,8 +10,9 @@
       <%= blog(:episodes).articles.count %> free screencasts
     <% end %>
     and <%= blog(:blog).articles.count %> articles.
-    Browse <a href="/episodes">recent screencasts</a> or
-    read <a href="/blog">latest articles</a>.
+    Browse <a href="/episodes">recent screencasts</a>,
+    read <a href="/blog">latest articles</a>,
+    or browse by category:
     </p>
 
     <ul class="category-list small-block-grid-2 medium-block-grid-3 large-block-grid-5">
@@ -23,4 +26,24 @@
       <% end %>
     </ul>
   </div>
+</div>
+
+<div class="row footer">
+
+  <hr/>
+
+  <div class="small-6 columns">
+    <ul class="inline-list">
+      <li><a href="/about">About</a></li>
+      <li><a href="/subscribe">Subscribe</a></li>
+      <li><a href="/tipjar">Leave a tip</a></li>
+    </ul>
+  </div>
+
+  <div class="small-6 columns">
+    <p class="text-right">
+      Vimcasts.org established MMX
+    </p>
+  </div>
+
 </div>
