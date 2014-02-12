@@ -6558,3 +6558,18 @@ header {
 /* line 85, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
 .publication {
   margin-bottom: 2.5rem; }
+
+/* line 89, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+.category-list {
+  border-top: 1px solid #d8d8d8;
+  border-left: 1px solid #d8d8d8; }
+  /* line 92, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+  .category-list li {
+    border-bottom: 1px solid #d8d8d8;
+    border-right: 1px solid #d8d8d8; }
+  /* line 96, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+  .category-list li:nth-child(2n) {
+    background-color: #f2f2f2; }
+  /* line 99, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+  .category-list li a {
+    display: block; }
