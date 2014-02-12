@@ -1,12 +1,4 @@
 ---
-- :name: announcements
-  :videos: 0
-  :articles: 33
-  :total: 33
-- :name: vim-training
-  :videos: 0
-  :articles: 27
-  :total: 27
 - :name: plugins
   :videos: 11
   :articles: 3
@@ -43,11 +35,11 @@
   :videos: 5
   :articles: 1
   :total: 6
-- :name: regex
+- :name: whitespace
   :videos: 5
   :articles: 0
   :total: 5
-- :name: whitespace
+- :name: regex
   :videos: 5
   :articles: 0
   :total: 5
@@ -55,11 +47,19 @@
   :videos: 4
   :articles: 0
   :total: 4
-- :name: articles
+- :name: vim-london
   :videos: 0
   :articles: 4
   :total: 4
+- :name: vimgrep
+  :videos: 2
+  :articles: 2
+  :total: 4
 - :name: surveys
+  :videos: 0
+  :articles: 4
+  :total: 4
+- :name: articles
   :videos: 0
   :articles: 4
   :total: 4
@@ -75,27 +75,27 @@
   :videos: 4
   :articles: 0
   :total: 4
-- :name: vim-london
-  :videos: 0
-  :articles: 4
-  :total: 4
-- :name: vimgrep
-  :videos: 2
+- :name: vim-abolish
+  :videos: 3
+  :articles: 0
+  :total: 3
+- :name: ruby
+  :videos: 1
   :articles: 2
-  :total: 4
+  :total: 3
+- :name: colorschemes
+  :videos: 1
+  :articles: 2
+  :total: 3
+- :name: insert-mode
+  :videos: 3
+  :articles: 0
+  :total: 3
 - :name: undo
   :videos: 3
   :articles: 0
   :total: 3
-- :name: promotions
-  :videos: 0
-  :articles: 3
-  :total: 3
 - :name: vimdiff
-  :videos: 3
-  :articles: 0
-  :total: 3
-- :name: vim-abolish
   :videos: 3
   :articles: 0
   :total: 3
@@ -103,22 +103,26 @@
   :videos: 0
   :articles: 3
   :total: 3
-- :name: insert-mode
-  :videos: 3
-  :articles: 0
-  :total: 3
-- :name: colorschemes
-  :videos: 1
-  :articles: 2
-  :total: 3
-- :name: ruby
-  :videos: 1
-  :articles: 2
-  :total: 3
 - :name: motions
   :videos: 1
   :articles: 2
   :total: 3
+- :name: tabs
+  :videos: 2
+  :articles: 0
+  :total: 2
+- :name: macros
+  :videos: 2
+  :articles: 0
+  :total: 2
+- :name: autocommands
+  :videos: 2
+  :articles: 0
+  :total: 2
+- :name: donations
+  :videos: 0
+  :articles: 2
+  :total: 2
 - :name: editing-text
   :videos: 2
   :articles: 0
@@ -127,23 +131,19 @@
   :videos: 2
   :articles: 0
   :total: 2
-- :name: autocommands
-  :videos: 2
-  :articles: 0
-  :total: 2
 - :name: opening-files
   :videos: 2
   :articles: 0
   :total: 2
-- :name: macros
-  :videos: 2
-  :articles: 0
-  :total: 2
-- :name: donations
+- :name: vim-training
   :videos: 0
   :articles: 2
   :total: 2
-- :name: grammar
+- :name: windows
+  :videos: 1
+  :articles: 1
+  :total: 2
+- :name: promotions
   :videos: 0
   :articles: 2
   :total: 2
@@ -159,31 +159,23 @@
   :videos: 2
   :articles: 0
   :total: 2
-- :name: expression-register
-  :videos: 2
-  :articles: 0
+- :name: customizations
+  :videos: 1
+  :articles: 1
   :total: 2
 - :name: syndication
   :videos: 0
   :articles: 2
   :total: 2
+- :name: expression-register
+  :videos: 2
+  :articles: 0
+  :total: 2
 - :name: cmdline-mode
   :videos: 2
   :articles: 0
   :total: 2
-- :name: tabs
-  :videos: 2
-  :articles: 0
-  :total: 2
-- :name: windows
-  :videos: 1
-  :articles: 1
-  :total: 2
-- :name: customizations
-  :videos: 1
-  :articles: 1
-  :total: 2
-- :name: email
+- :name: grammar
   :videos: 0
   :articles: 2
   :total: 2
@@ -195,7 +187,7 @@
   :videos: 0
   :articles: 1
   :total: 1
-- :name: file-explorers
+- :name: email
   :videos: 0
   :articles: 1
   :total: 1
@@ -204,6 +196,10 @@
   :articles: 1
   :total: 1
 - :name: vimprint
+  :videos: 0
+  :articles: 1
+  :total: 1
+- :name: file-explorers
   :videos: 0
   :articles: 1
   :total: 1
@@ -223,14 +219,6 @@
   :videos: 1
   :articles: 0
   :total: 1
-- :name: helpfiles
-  :videos: 0
-  :articles: 1
-  :total: 1
-- :name: interviews
-  :videos: 0
-  :articles: 1
-  :total: 1
 - :name: vimrc
   :videos: 1
   :articles: 0
@@ -239,17 +227,21 @@
   :videos: 1
   :articles: 0
   :total: 1
+- :name: helpfiles
+  :videos: 0
+  :articles: 1
+  :total: 1
+- :name: interviews
+  :videos: 0
+  :articles: 1
+  :total: 1
 - :name: pathogen
   :videos: 1
   :articles: 0
   :total: 1
-- :name: alignment
+- :name: filetypes
   :videos: 1
   :articles: 0
-  :total: 1
-- :name: ack
-  :videos: 0
-  :articles: 1
   :total: 1
 - :name: change-history
   :videos: 1
@@ -258,6 +250,10 @@
 - :name: vimgolf
   :videos: 1
   :articles: 0
+  :total: 1
+- :name: ack
+  :videos: 0
+  :articles: 1
   :total: 1
 - :name: performance
   :videos: 1
@@ -283,7 +279,7 @@
   :videos: 1
   :articles: 0
   :total: 1
-- :name: filetypes
+- :name: alignment
   :videos: 1
   :articles: 0
   :total: 1
