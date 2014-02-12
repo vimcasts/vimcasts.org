@@ -5,7 +5,11 @@ module Middleman
     end
     helpers do
       def aggregate
-        (blog(:episodes).articles + blog(:blog).articles).sort_by(&:date).reverse
+        (
+          blog(:episodes).articles +
+          blog(:blog).articles +
+          blog(:announcements).articles
+        ).sort_by(&:date).reverse
       end
 
       def aggregate_by_tag(tagname)
