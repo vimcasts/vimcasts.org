@@ -16,21 +16,15 @@ class Announcements < Middleman::Extension
       data.has_key?(:core_vim) ? data.core_vim.alumni : '500'
     end
     def tag_stats(tag)
-      stats = []
-      if tag[:videos] == 1
-        stats << "#{tag[:videos]} video"
-      elsif tag[:videos] > 1
-        stats << "#{tag[:videos]} videos"
-      end
-      if tag[:articles] == 1
-        stats << "#{tag[:articles]} article"
-      elsif tag[:articles] > 1
-        stats << "#{tag[:articles]} articles"
-      end
-      stats.join(", ")
+      [].tap do |stats|
+        [[:videos, 'video'], [:articles, 'article']].each do |key, word|
+          next if (number = tag[key]) == 0
+          stats << pluralize(number, word)
+        end
+      end.join(", ")
     end
-  end
 
+  end
 end
 ::Middleman::Extensions.register(:announcements, Announcements)
 
