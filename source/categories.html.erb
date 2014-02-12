@@ -16,11 +16,13 @@
     </p>
 
     <ul class="category-list small-block-grid-2 medium-block-grid-3 large-block-grid-5">
-      <% data.categories.each do |tagname| %>
+      <% data.categories.each do |tag| %>
         <li>
-          <% link_to "/categories/#{tagname}" do %>
-            <h4><%= tagname %></h4>
-            <p>X videos, Y articles</p>
+          <% link_to "/categories/#{tag[:name]}" do %>
+            <h4><%= tag[:name] %></h4>
+            <p>
+              <%= tag_stats(tag) %>
+            </p>
           <% end %>
         </li>
       <% end %>

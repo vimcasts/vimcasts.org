@@ -15,6 +15,20 @@ class Announcements < Middleman::Extension
     def number_of_core_vim_attendees
       data.has_key?(:core_vim) ? data.core_vim.alumni : '500'
     end
+    def tag_stats(tag)
+      stats = []
+      if tag[:videos] == 1
+        stats << "#{tag[:videos]} video"
+      elsif tag[:videos] > 1
+        stats << "#{tag[:videos]} videos"
+      end
+      if tag[:articles] == 1
+        stats << "#{tag[:articles]} article"
+      elsif tag[:articles] > 1
+        stats << "#{tag[:articles]} articles"
+      end
+      stats.join(", ")
+    end
   end
 
 end
@@ -137,7 +151,8 @@ proxy "/episodes/archive.html", "/episodes-all.html"
 
 # Generate data/categories.yml with `rake dump_categories`
 if data.has_key? :categories
-  data.categories.each do |category|
+  data.categories.each do |tag|
+    category = tag[:name]
     proxy "categories/#{category}.html", "category-aggregate.html", locals: { tagname: category }, ignore: true
   end
 end
