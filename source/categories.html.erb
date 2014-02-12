@@ -8,7 +8,7 @@
     <%= blog(:blog).articles.count %> articles.
     </p>
 
-    <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+    <ul class="category-list small-block-grid-2 medium-block-grid-3 large-block-grid-5">
       <% data.categories.each do |tagname| %>
         <li><%= link_to tagname, "/categories/#{tagname}" %></li>
       <% end %>
