@@ -133,7 +133,7 @@ languages.each do |lang|
   end
 end
 
-proxy "/episodes/all.html", "/episodes-all.html"
+proxy "/episodes/archive.html", "/episodes-all.html"
 
 # Generate data/categories.yml with `rake dump_categories`
 if data.has_key? :categories
@@ -192,7 +192,7 @@ configure :build do
 
   # Redirects
   ready do
-    redirect "e/a.html", to: "/episodes/all"
+    redirect "e/a.html", to: "/episodes/archive"
     blog(:episodes).articles.each do |episode|
       n = episode.data.number
       redirect "episodes/#{n}.html", to: "/#{episode.path}"
