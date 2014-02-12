@@ -1,7 +1,17 @@
-<h2>Categories</h2>
+<div class="row explore-the-archives">
+  <div class="small-12 columns">
+    <h2>Find by category</h2>
 
-<ul>
-  <% data.categories.each do |tagname| %>
-    <li><%= link_to tagname, "/categories/#{tagname}" %></li>
-  <% end %>
-</ul>
+    <p>
+    Vimcasts contains
+    <%= blog(:episodes).articles.count %> free screencasts and
+    <%= blog(:blog).articles.count %> articles.
+    </p>
+
+    <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+      <% data.categories.each do |tagname| %>
+        <li><%= link_to tagname, "/categories/#{tagname}" %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
