@@ -10,7 +10,12 @@
 
     <ul class="category-list small-block-grid-2 medium-block-grid-3 large-block-grid-5">
       <% data.categories.each do |tagname| %>
-        <li><%= link_to tagname, "/categories/#{tagname}" %></li>
+        <li>
+          <% link_to "/categories/#{tagname}" do %>
+            <h4><%= tagname %></h4>
+            <p>X videos, Y articles</p>
+          <% end %>
+        </li>
       <% end %>
     </ul>
   </div>
