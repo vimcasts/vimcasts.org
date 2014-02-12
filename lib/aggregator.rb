@@ -4,16 +4,16 @@ module Middleman
       super
     end
     helpers do
-      def aggregate
-        (
-          blog(:episodes).articles +
-          blog(:blog).articles +
-          blog(:announcements).articles
-        ).sort_by(&:date).reverse
+      def aggregate(blogs=[:episodes, :blog, :announcements])
+        all_articles = blogs.map { |name| blog(name).articles }
+        all_articles.flatten.sort_by(&:date).reverse
       end
 
-      def aggregate_by_tag(tagname)
-        (blog(:episodes).tags.fetch(tagname,[]) + blog(:blog).tags.fetch(tagname,[])).sort_by(&:date)
+      def aggregate_by_tag(tagname, blogs=[:episodes, :blog])
+        tagged_articles = blogs.map { |name|
+          blog(name).tags.fetch(tagname,[])
+        }
+        tagged_articles.flatten.sort_by(&:date)
       end
 
       def minute_second(seconds)
