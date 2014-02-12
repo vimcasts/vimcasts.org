@@ -4,8 +4,12 @@
 
     <p>
     Vimcasts contains
-    <%= blog(:episodes).articles.count %> free screencasts and
-    <%= blog(:blog).articles.count %> articles.
+    <% link_to "/episodes/archive" do %>
+      <%= blog(:episodes).articles.count %> free screencasts
+    <% end %>
+    and <%= blog(:blog).articles.count %> articles.
+    Browse <a href="/episodes">recent screencasts</a> or
+    read <a href="/blog">latest articles</a>.
     </p>
 
     <ul class="category-list small-block-grid-2 medium-block-grid-3 large-block-grid-5">
