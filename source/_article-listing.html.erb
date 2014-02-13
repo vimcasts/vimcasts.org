@@ -15,13 +15,13 @@
   <%= article_type(article) %>
 </span>
 
-<% if article.tags.size > 1 %>
+<% if article.tags.size > 0 %>
   <div class="article-tags">
     <p>
     <% if current_tag == :not_specified %>
       Tagged with:
       <%= link_to_article_tags(article) %>
-    <% else %>
+    <% elsif article.tags.size > 1 %>
       Also tagged with:
       <%= link_to_article_tags(article, Array(current_tag)) %>
     <% end %>
