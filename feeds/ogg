@@ -77,8 +77,8 @@
       <title>20% group discount for Core Vim Class, January edition</title>
       <description>&amp;lt;p&amp;gt;For the month of January only, I'm offering a &amp;lt;strong&amp;gt;20% discount on orders of five or more tickets&amp;lt;/strong&amp;gt; for my &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-online-3&amp;quot;&amp;gt;Core Vim Class&amp;lt;/a&amp;gt;. That's £128 per head, a £32 saving on full price tickets at £160. If your team makes heavy use of Vim, then this is a great opportunity...&amp;lt;/p&amp;gt;</description>
       <pubDate>Mon, 20 Jan 2014 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2014/01/20-group-discount-for-core-vim-class-january-edition/</guid>
-      <link>http://vimcasts.org/blog/2014/01/20-group-discount-for-core-vim-class-january-edition/</link>
+      <guid>http://vimcasts.org/announcements/2014/01/20-group-discount-for-core-vim-class-january-edition/</guid>
+      <link>http://vimcasts.org/announcements/2014/01/20-group-discount-for-core-vim-class-january-edition/</link>
     </item>
     <item>
       <title>Comparing buffers with vimdiff</title>
@@ -289,15 +289,6 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
       <link>http://vimcasts.org/announcements/2013/09/upcoming-workshop-london-october-13/</link>
     </item>
     <item>
-      <title>Navigating Ruby Files with Vim</title>
-      <description>&amp;lt;p&amp;gt;I've been collaborating with &amp;lt;a href=&amp;quot;http://www.thoughtbot.com/&amp;quot;&amp;gt;thoughtbot&amp;lt;/a&amp;gt; to produce three screencasts about &amp;lt;a href=&amp;quot;https://learn.thoughtbot.com/products/21-navigating-ruby-files-with-vim&amp;quot;&amp;gt;Navigating Ruby Files with Vim&amp;lt;/a&amp;gt;. There's 40 minutes of material in total, and it's available from today. You can purchase these videos for $19, but they will also be available to thoughtbot Prime subscribers. Check out &amp;lt;a href=&amp;quot;https://learn.thoughtbot.com/products/21-navigating-ruby-files-with-vim&amp;quot;&amp;gt;learn.thoughtbot.com&amp;lt;/a&amp;gt; for more details.&amp;lt;/p&amp;gt;
-
-&amp;lt;p&amp;gt;</description>
-      <pubDate>Fri, 13 Sep 2013 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2013/09/navigating-ruby-files-with-vim/</guid>
-      <link>http://vimcasts.org/blog/2013/09/navigating-ruby-files-with-vim/</link>
-    </item>
-    <item>
       <title>Response to "Should Vimcasts go Pro?" survey</title>
       <description>&amp;lt;p&amp;gt;I'd like to thank everyone who responded to my recent survey about supporting Vimcasts via a subscription model. I've taken your feedback on board and have decided to keep producing free Vimcasts. I can cover this site's running costs and support myself by teaching Vim classes and producing longer video tutorials to sell.&amp;lt;/p&amp;gt;
 
@@ -305,6 +296,15 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
       <pubDate>Fri, 13 Sep 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/blog/2013/09/response-to-should-vimcasts-go-pro-survey/</guid>
       <link>http://vimcasts.org/blog/2013/09/response-to-should-vimcasts-go-pro-survey/</link>
+    </item>
+    <item>
+      <title>Navigating Ruby Files with Vim</title>
+      <description>&amp;lt;p&amp;gt;I've been collaborating with &amp;lt;a href=&amp;quot;http://www.thoughtbot.com/&amp;quot;&amp;gt;thoughtbot&amp;lt;/a&amp;gt; to produce three screencasts about &amp;lt;a href=&amp;quot;https://learn.thoughtbot.com/products/21-navigating-ruby-files-with-vim&amp;quot;&amp;gt;Navigating Ruby Files with Vim&amp;lt;/a&amp;gt;. There's 40 minutes of material in total, and it's available from today. You can purchase these videos for $19, but they will also be available to thoughtbot Prime subscribers. Check out &amp;lt;a href=&amp;quot;https://learn.thoughtbot.com/products/21-navigating-ruby-files-with-vim&amp;quot;&amp;gt;learn.thoughtbot.com&amp;lt;/a&amp;gt; for more details.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;</description>
+      <pubDate>Fri, 13 Sep 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/09/navigating-ruby-files-with-vim/</guid>
+      <link>http://vimcasts.org/blog/2013/09/navigating-ruby-files-with-vim/</link>
     </item>
     <item>
       <title>Upcoming workshop: Berlin</title>
@@ -1096,6 +1096,19 @@ Gary Bernhardt on &amp;lt;a href=&amp;quot;http://rubyrogues.com/040-rr-text-edi
       <link>http://vimcasts.org/episodes/refining-search-patterns-with-the-command-line-window/</link>
     </item>
     <item>
+      <title>Working title: Practical Vim</title>
+      <description>&amp;lt;p&amp;gt;I am very pleased to announce that the &amp;lt;a href=&amp;quot;http://pragprog.com/&amp;quot;&amp;gt;Pragmatic Bookshelf&amp;lt;/a&amp;gt; will be publishing my book on Vim. The working title is &amp;lt;em&amp;gt;Practical Vim&amp;lt;/em&amp;gt;, and I hope to complete it by the spring of 2011. Here is a synopsis:&amp;lt;/p&amp;gt;
+
+&amp;lt;blockquote&amp;gt;
+  &amp;lt;p&amp;gt;For an open source project Vim’s documentation is impressive in scope, but there is still a considerable barrier between the novice and the productive Vim user. Whereas it is possible to improve as a programmer or writer by reading other people’s code, poetry or prose, there are fewer opportunities to learn how to use an editor effectively. Vim’s documentation reads like a dictionary; I propose to write a phrasebook.&amp;lt;/p&amp;gt;
+&amp;lt;/blockquote&amp;gt;
+
+&amp;lt;p&amp;gt;</description>
+      <pubDate>Mon, 01 Nov 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2010/11/working-title-practical-vim/</guid>
+      <link>http://vimcasts.org/blog/2010/11/working-title-practical-vim/</link>
+    </item>
+    <item>
       <title>ArrrrCamp presentation: Vim - walking without crutches</title>
       <description>&amp;lt;p&amp;gt;Last week, I gave a presentation at &amp;lt;a href=&amp;quot;http://arrrrcamp.be/&amp;quot;&amp;gt;ArrrrCamp&amp;lt;/a&amp;gt; called &amp;lt;em&amp;gt;Vim - walking without crutches&amp;lt;/em&amp;gt;. You can now &amp;lt;a href=&amp;quot;http://old.arrrrcamp.be/videos/vim-walking-without-crutches&amp;quot;&amp;gt;watch the video&amp;lt;/a&amp;gt; on their website. Here's the synopsis for my talk:&amp;lt;/p&amp;gt;
 
@@ -1111,19 +1124,6 @@ Gary Bernhardt on &amp;lt;a href=&amp;quot;http://rubyrogues.com/040-rr-text-edi
       <pubDate>Mon, 01 Nov 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/blog/2010/11/arrrrcamp-presentation-vim---walking-without-crutches/</guid>
       <link>http://vimcasts.org/blog/2010/11/arrrrcamp-presentation-vim---walking-without-crutches/</link>
-    </item>
-    <item>
-      <title>Working title: Practical Vim</title>
-      <description>&amp;lt;p&amp;gt;I am very pleased to announce that the &amp;lt;a href=&amp;quot;http://pragprog.com/&amp;quot;&amp;gt;Pragmatic Bookshelf&amp;lt;/a&amp;gt; will be publishing my book on Vim. The working title is &amp;lt;em&amp;gt;Practical Vim&amp;lt;/em&amp;gt;, and I hope to complete it by the spring of 2011. Here is a synopsis:&amp;lt;/p&amp;gt;
-
-&amp;lt;blockquote&amp;gt;
-  &amp;lt;p&amp;gt;For an open source project Vim’s documentation is impressive in scope, but there is still a considerable barrier between the novice and the productive Vim user. Whereas it is possible to improve as a programmer or writer by reading other people’s code, poetry or prose, there are fewer opportunities to learn how to use an editor effectively. Vim’s documentation reads like a dictionary; I propose to write a phrasebook.&amp;lt;/p&amp;gt;
-&amp;lt;/blockquote&amp;gt;
-
-&amp;lt;p&amp;gt;</description>
-      <pubDate>Mon, 01 Nov 2010 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2010/11/working-title-practical-vim/</guid>
-      <link>http://vimcasts.org/blog/2010/11/working-title-practical-vim/</link>
     </item>
     <item>
       <title>Synchronizing plugins with git submodules and pathogen</title>

@@ -120,29 +120,6 @@
     
       
 <section class="article">
-  <h3><a href="/blog/2013/07/should-vimcasts-go-pro/">Should Vimcasts go Pro?</a></h3>
-
-  <span>Jul  1, 2013</span>
-
-  
-<span class="article-type">
-  article
-</span>
-
-
-<p>I've just published <a href="http://vimcasts.org/e/50">episode 50 of Vimcasts</a>. That feels like a significant milestone and a good time to consider the question: what's next?</p>
-
-<p>
-<a href="/blog/2013/07/should-vimcasts-go-pro/">  
-    Continue reading
-  
-</a>
-
-</section>
-
-    
-      
-<section class="article">
   <h3><a href="/blog/2013/05/vimprint---a-vim-keystroke-parser/">Vimprint - a Vim keystroke parser</a></h3>
 
   <span>May 30, 2013</span>
@@ -152,6 +129,14 @@
   article
 </span>
 
+  <div class="article-tags">
+    <p>
+    
+      Tagged with:
+      <a href="/categories/vimprint">vimprint</a>
+    
+    </p>
+  </div>
 
 <p>I sometimes get asked what software I use to reveal the Vim keystrokes in my video tutorials here on Vimcasts.org. The fact is that I add them by hand in post-production. It's not fun!</p>
 
@@ -239,6 +224,14 @@
   article
 </span>
 
+  <div class="article-tags">
+    <p>
+    
+      Tagged with:
+      <a href="/categories/practical-vim">practical-vim</a>
+    
+    </p>
+  </div>
 
 <p>One year ago today, <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> was released as a beta book. I'm thrilled with how the book has been received and I'd like to thank everybody who has purchased a copy. After a year of sales, I'm happy to report that Practical Vim is a best-seller!</p>
 
@@ -262,6 +255,14 @@
   article
 </span>
 
+  <div class="article-tags">
+    <p>
+    
+      Tagged with:
+      <a href="/categories/email">email</a>
+    
+    </p>
+  </div>
 
 <p>I always announce my <a href="http://vimcasts.eventbrite.com/">Online Vim Masterclasses</a> here on the Vimcasts <a href="http://vimcasts.org/blog">blog</a> as well as on <a href="https://twitter.com/vimcasts">Twitter</a>. Some of you have indicated that you'd prefer to get announcements in your email inbox, so I've set up <a href="http://eepurl.com/wBhV5">a mailing list for announcements</a>. <a href="http://eepurl.com/wBhV5">Sign up for the newsletter</a> and you'll be the first to hear about upcoming Vim classes.</p>
 
@@ -380,11 +381,60 @@
   article
 </span>
 
+  <div class="article-tags">
+    <p>
+    
+      Tagged with:
+      <a href="/categories/helpfiles">helpfiles</a>
+    
+    </p>
+  </div>
 
 <p>Here's a quick tip: if you can't find what you're looking for in Vim's built-in documentation, use a search engine instead. All of Vim's documentation is online at <a href="http://vimdoc.sourceforge.net/htmldoc/">vimdoc.sourceforge.net</a>, so it's indexed by Google &amp; Co. If you create a <a href="http://support.google.com/chrome/bin/answer.py?hl=en&amp;amp;answer=95653">custom search engine</a> for your browser, then you can easily limit your searches to only return results from <a href="http://vimdoc.sourceforge.net/htmldoc/">vimdoc.sourceforge.net</a>.</p>
 
 <p>
 <a href="/blog/2013/02/google-vimdocs-with-a-custom-search-engine/">  
+    Continue reading
+  
+</a>
+
+</section>
+
+    
+      
+<section class="article">
+  <h3><a href="/blog/2013/02/habit-breaking-habit-making/">Habit breaking, habit making</a></h3>
+
+  <span>Feb  6, 2013</span>
+
+  
+<span class="article-type">
+  article
+</span>
+
+  <div class="article-tags">
+    <p>
+    
+      Tagged with:
+      <a href="/categories/articles">articles</a>, <a href="/categories/motions">motions</a>
+    
+    </p>
+  </div>
+
+<p>Moving your Vim cursor around using the arrow keys is a bad habit, and like many bad habits it's a difficult one to break! Putting these lines into your vimrc can help:</p>
+
+<pre><code>noremap &lt;Up&gt; &lt;NOP&gt;
+noremap &lt;Down&gt; &lt;NOP&gt;
+noremap &lt;Left&gt; &lt;NOP&gt;
+noremap &lt;Right&gt; &lt;NOP&gt;
+</code></pre>
+
+<p>This snippet causes each of the arrow keys to execute <em>no operation</em>, or in other words: it disables them. Next time you move your hand to the arrow keys you'll find that nothing happens when you press them. That should remind you to move your hand back where it belongs: on the home row, where <code>h</code>, <code>j</code>, <code>k</code>, and <code>l</code> keys are waiting for you. Alternatively, you could use the <a href="http://www.tylercipriani.com/vim.html">konami code</a> version of this snippet.</p>
+
+<p>Learning to operate Vim without leaving the home row is the first rite of passage. If you're still in the habit of moving around using the arrow keys, then you should disable them today.</p>
+
+<p>
+<a href="/blog/2013/02/habit-breaking-habit-making/">  
     Continue reading
   
 </a>
