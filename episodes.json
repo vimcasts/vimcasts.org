@@ -1302,6 +1302,27 @@
                 "contentType": "video/x-m4v"
             }
         },
+        {
+            "title": "Operating on search matches using gn",
+            "episode_number": "63",
+            "published_at": "Tue, 11 Feb 2014 00:00:00 GMT",
+            "url": "http://vimcasts.org/episodes/operating-on-search-matches-using-gn/",
+            "short_url": "http://vimcasts.org/e/63",
+            "poster": "http://vimcasts.orghttp://vimcasts.org/images/posters/gn-command.png",
+            "abstract": "<p>The <code>gn<\/code> command (introduced in Vim 7.4) makes it easy to operate on regions of text that match the current search pattern. It\'s especially useful when used with a regex that matches text regions of variable length.<\/p>\n\n<p>",
+            "ogg": {
+                "url": "http://media.vimcasts.org/videos/63/gn-command.ogv",
+                "bytes": "6813065",
+                "seconds": "275",
+                "contentType": "video/ogg"
+            },
+            "quicktime": {
+                "url": "http://media.vimcasts.org/videos/63/gn-command.m4v",
+                "bytes": "10070454",
+                "seconds": "275",
+                "contentType": "video/x-m4v"
+            }
+        },
         
     ]
 }

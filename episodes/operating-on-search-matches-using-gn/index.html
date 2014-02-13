@@ -1,0 +1,185 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Operating on search matches using gn</title>
+
+    <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/modernizr.js" type="text/javascript"></script>
+  </head>
+
+  <body class="episodes episodes_operating-on-search-matches-using-gn episodes_operating-on-search-matches-using-gn_index">
+
+  <div class="off-canvas-wrap">
+    <div class="inner-wrap">
+
+      <div class="top-bar-underlay"></div>
+
+      <div class="row">
+        <nav class="top-bar show-for-large-up" data-topbar>
+          <ul class="title-area">
+            <li class="name">
+              <h1><a href="/">Vimcasts</a></h1>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+          </ul>
+
+          <section class="top-bar-section">
+            <!-- Right Nav Section -->
+            <ul class="right">
+              <li class="has-form">
+              <div class="row collapse">
+                <div class="large-8 small-9 columns">
+                  <input type="text" placeholder="Explore archives">
+                </div>
+                <div class="large-4 small-3 columns">
+                  <a href="#" class="alert button expand">Search</a>
+                </div>
+              </div>
+              </li>
+            </ul>
+
+            <!-- Left Nav Section -->
+            <ul class="left">
+              <li class="has-dropdown">
+  <a href="/categories">Browse Vimcasts</a>
+  <ul class="dropdown">
+    <li><a href="/episodes">Latest episodes</a></li>
+    <li><a href="/blog">Latest articles</a></li>
+  </ul>
+</li>
+<li><a href="/training">Training</a></li>
+<li><a href="/publications">Publications</a></li>
+
+
+            </ul>
+          </section>
+        </nav>
+      </div>
+
+      <nav class="tab-bar hide-for-large-up">
+        <section class="left-small">
+          <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+        </section>
+
+        <section class="middle tab-bar-section"></section>
+      </nav>
+
+      <aside class="left-off-canvas-menu">
+        <ul class="off-canvas-list">
+          <li><label>Vimcasts</label></li>
+          <li class="has-dropdown">
+  <a href="/categories">Browse Vimcasts</a>
+  <ul class="dropdown">
+    <li><a href="/episodes">Latest episodes</a></li>
+    <li><a href="/blog">Latest articles</a></li>
+  </ul>
+</li>
+<li><a href="/training">Training</a></li>
+<li><a href="/publications">Publications</a></li>
+
+
+          <li>
+          <form>
+            <label text="search">Search: <input type="search" disabled/></label>
+          </form>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="main-section">
+
+        <div class="row identity-row">
+          <div id="logo" class="small-4 columns">
+            <h1>
+              
+                <a href="/" title="Go to Vimcasts.org homepage">VimCasts.org</a>
+              
+            </h1>
+          </div>
+          <div class="small-7 small-offset-1 columns">
+            
+            <h4 class="show-for-small-only text-right">
+              Free Vim screencasts<br/>
+              <small>with Drew Neil</small>
+            </h4>
+            <h4 class="show-for-medium-up text-right">
+              Free Vim screencasts<br/>
+              <small>with Drew Neil, author of <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a></small>
+            </h4>
+            
+          </div>
+        </div>
+
+        <p>The <code>gn</code> command (introduced in Vim 7.4) makes it easy to operate on regions of text that match the current search pattern. It's especially useful when used with a regex that matches text regions of variable length.</p>
+
+<p></p>
+
+<r:snippet name="announcement" />
+
+<p>Here's what Vim's documentation has to say about the <code>gn</code> command (<a href="http://vimhelp.appspot.com/visual.txt.html#gn"><code>:help gn</code></a>):</p>
+
+<blockquote>
+  <p>Search forward for the last used search pattern, like with <code>n</code>, and start
+Visual mode to select the match. If the cursor is on the match, visually
+selects it. If an operator is pending, operates on the match.</p>
+</blockquote>
+
+<p>You know how pressing <code>n</code> tells Vim to jump to the start of the next match?
+Well, <code>gn</code> tells Vim to start visual mode and <em>select the next match</em>.
+When used in this fashion, the <code>gn</code> command makes Vim's search behave like most graphical text editors, where the search command selects the current match.
+As you might expect, the <code>gN</code> command lets you visually select the previous match.</p>
+
+<p>I find the <code>gn</code> command especially useful in <a href="http://vimdoc.sourceforge.net/htmldoc/intro.html#Operator-pending-mode">Operator-pending mode</a>. For example, <code>dgn</code> will delete the next match, <code>cgn</code> will do the same then switch to Insert mode, <code>gUgn</code> will convert the next match to uppercase characters.
+Look up <a href="http://vimhelp.appspot.com/motion.txt.html#operator"><code>:h operator</code></a> for more ideas.</p>
+
+<h3 id="using-gn-with-the-dot-command">Using <code>gn</code> with the dot command</h3>
+
+<p>Suppose that we have a document containing several occurrences of the word 'Normal' and we'd like to change each occurrence to 'Visual'.
+We can run <code>/Normal</code> to search for the word 'Normal', then type <code>cgnVisual&lt;Esc&gt;</code> to change the next match to the word 'Visual'.
+You're probably familiar with the technique of pressing <code>n.</code> to repeat the change for each subsequent match. In <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, I call this pattern of usage <em>The Dot Formula</em>.
+It lets us use two keystrokes per change.</p>
+
+<p>In this context, we can do better.
+The dot command repeats the last change, which is equivalent to typing <code>cgnVisual&lt;Esc&gt;</code>.
+We could translate that into plain English as: "change the next match".
+We don't have to press <code>n.</code> because <code>.</code> does the job by itself.
+That makes it just one keystroke per change!</p>
+
+<h3 id="you-need-vim-74110-to-use-gn">You need Vim 7.4.110 to use <code>gn</code></h3>
+
+<p>You can use the <code>gn</code> command if you are running Vim 7.4 at <a href="http://ftp.vim.org/pub/vim/patches/7.4/7.4.110">patch level 110</a> or greater.</p>
+
+<p>The <code>gn</code> feature was first introduced by Christian Brabandt in Vim 7.3 with patch <a href="http://ftp.vim.org/pub/vim/patches/7.3/7.3.610">610</a>, then the functionality was refined with patches <a href="http://ftp.vim.org/pub/vim/patches/7.3/7.3.625">625</a>, <a href="http://ftp.vim.org/pub/vim/patches/7.3/7.3.636">636</a>, <a href="http://ftp.vim.org/pub/vim/patches/7.3/7.3.645">645</a>, <a href="http://ftp.vim.org/pub/vim/patches/7.3/7.3.647">647</a>, and <a href="http://ftp.vim.org/pub/vim/patches/7.3/7.3.1275">1275</a>. The feature was made widely available in Vim 7.4, but if you are running a version less than patch level 110 then the <code>gUgn</code> command demonstrated in this video won't work.</p>
+
+<h3 id="practical-vim---tip-84">Practical Vim - tip 84</h3>
+
+<p>In the 1st edition of <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, tip 84 goes over a different approach for making this same kind of change, which is nowhere near as tidy! When I wrote this edition, the <code>gn</code> feature hadn't yet been added to Vim. I'll have to revise this tip when the time comes to write a new edition of Practical Vim.</p>
+
+<p>If you're stuck on an older version of Vim, note that you can get similar functionality by installing the <a href="https://github.com/kana/vim-textobj-lastpat">textobj-lastpat</a> plugin by Kana Natsuno.
+I used to consider this to be an essential plugin, but don't now that the <code>gn</code> command is built-in to Vim.</p>
+
+<h3 id="further-reading">Further reading</h3>
+
+<ul>
+  <li><a href="http://vimhelp.appspot.com/visual.txt.html#gn"><code>:help gn</code></a></li>
+  <li><a href="http://vimhelp.appspot.com/motion.txt.html#operator"><code>:help operator</code></a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#."><code>:help .</code></a></li>
+  <li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, tip 84: Operate on a complete search match</li>
+</ul>
+
+
+      </section>
+
+      <a class="exit-off-canvas"></a>
+
+    </div>
+  </div>
+
+
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </body>
+</html>

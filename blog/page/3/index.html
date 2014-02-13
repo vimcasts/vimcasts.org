@@ -120,74 +120,9 @@
     
       
 <section class="article">
-  <h3><a href="/blog/2014/02/follow-my-leader/">Follow my leader</a></h3>
+  <h3><a href="/blog/2013/02/habit-breaking-habit-making/">Habit breaking, habit making</a></h3>
 
-  <span>Feb  5, 2014</span>
-
-  
-<span class="article-type">
-  article
-</span>
-
-
-<p>Choosing a key-map for your custom Vim commands can be difficult. The common advice is to use <code>&lt;leader&gt;</code> for user-defined mappings, but that's not the only option. There are dozens of two-key mappings that are not bound to any built-in functionality. These available mappings are easy to find if you follow a simple formula.</p>
-
-<p>
-<a href="/blog/2014/02/follow-my-leader/">  
-    Continue reading
-  
-</a>
-
-</section>
-
-    
-      
-<section class="article">
-  <h3><a href="/blog/2014/01/20-group-discount-for-core-vim-class-january-edition/">20% group discount for Core Vim Class, January edition</a></h3>
-
-  <span>Jan 20, 2014</span>
-
-  
-<span class="article-type">
-  article
-</span>
-
-
-<p>For the month of January only, I'm offering a <strong>20% discount on orders of five or more tickets</strong> for my <a href="https://tito.io/studio-nelstrom/core-vim-class-online-3">Core Vim Class</a>. That's £128 per head, a £32 saving on full price tickets at £160. If your team makes heavy use of Vim, then this is a great opportunity...</p>
-<a href="/blog/2014/01/20-group-discount-for-core-vim-class-january-edition/">  
-    Continue reading
-  
-</a>
-
-</section>
-
-    
-      
-<section class="article">
-  <h3><a href="/blog/2014/01/help-shape-the-redesign-of-vimcasts-org/">Help shape the redesign of Vimcasts.org</a></h3>
-
-  <span>Jan 10, 2014</span>
-
-  
-<span class="article-type">
-  article
-</span>
-
-
-<p>Vimcasts was launched four years ago, in January 2010. I anticipated making only a dozen screencasts, but there are now over 50, as well as a blog. I'm going to make some changes so you can find what you're looking for more easily. I'd appreciate your...</p>
-<a href="/blog/2014/01/help-shape-the-redesign-of-vimcasts-org/">  
-    Continue reading
-  
-</a>
-
-</section>
-
-    
-      
-<section class="article">
-  <h3><a href="/blog/2013/11/registers-the-good-the-bad-and-the-ugly-parts/">Registers: the Good, the Bad, and the Ugly Parts</a></h3>
-
-  <span>Nov 25, 2013</span>
+  <span>Feb  6, 2013</span>
 
   
 <span class="article-type">
@@ -198,15 +133,25 @@
     <p>
     
       Tagged with:
-      <a href="/categories/registers">registers</a>, <a href="/categories/articles">articles</a>, <a href="/categories/copy-and-paste">copy-and-paste</a>
+      <a href="/categories/articles">articles</a>, <a href="/categories/motions">motions</a>
     
     </p>
   </div>
 
-<p>To the newcomer, Vim's way of doing things may seem strange, but with familiarity it becomes natural. Many of Vim's features seemed odd to me at first, but when I got used to them I recognised that they had their own particular elegance. However, there's one feature of Vim that still feels awkward to me: using registers for copy and paste. The deeper my understanding of registers becomes, the more they frustrate me!</p>
+<p>Moving your Vim cursor around using the arrow keys is a bad habit, and like many bad habits it's a difficult one to break! Putting these lines into your vimrc can help:</p>
+
+<pre><code>noremap &lt;Up&gt; &lt;NOP&gt;
+noremap &lt;Down&gt; &lt;NOP&gt;
+noremap &lt;Left&gt; &lt;NOP&gt;
+noremap &lt;Right&gt; &lt;NOP&gt;
+</code></pre>
+
+<p>This snippet causes each of the arrow keys to execute <em>no operation</em>, or in other words: it disables them. Next time you move your hand to the arrow keys you'll find that nothing happens when you press them. That should remind you to move your hand back where it belongs: on the home row, where <code>h</code>, <code>j</code>, <code>k</code>, and <code>l</code> keys are waiting for you. Alternatively, you could use the <a href="http://www.tylercipriani.com/vim.html">konami code</a> version of this snippet.</p>
+
+<p>Learning to operate Vim without leaving the home row is the first rite of passage. If you're still in the habit of moving around using the arrow keys, then you should disable them today.</p>
 
 <p>
-<a href="/blog/2013/11/registers-the-good-the-bad-and-the-ugly-parts/">  
+<a href="/blog/2013/02/habit-breaking-habit-making/">  
     Continue reading
   
 </a>
@@ -216,9 +161,32 @@
     
       
 <section class="article">
-  <h3><a href="/blog/2013/11/the-copypaste-series-a-retrospective/">The copy/paste series - a retrospective</a></h3>
+  <h3><a href="/blog/2013/01/vim-london-january-in-review/">Vim London January in review</a></h3>
 
-  <span>Nov 18, 2013</span>
+  <span>Jan 31, 2013</span>
+
+  
+<span class="article-type">
+  article
+</span>
+
+
+<p>On Tuesday, 29th January, we held the 3rd meeting of Vim London. We had 5 short talks on the theme of <a href="http://www.meetup.com/Vim-London/events/97866502/">Speak Vim - operators and motions</a>. The talks weren't recorded, so I'm posting a retrospective here.</p>
+
+<p>
+<a href="/blog/2013/01/vim-london-january-in-review/">  
+    Continue reading
+  
+</a>
+
+</section>
+
+    
+      
+<section class="article">
+  <h3><a href="/blog/2013/01/vimlondon-january-meetup-speak-vim---operators-and-motions/">VimLondon January Meetup: Speak Vim - Operators and Motions</a></h3>
+
+  <span>Jan 21, 2013</span>
 
   
 <span class="article-type">
@@ -229,15 +197,21 @@
     <p>
     
       Tagged with:
-      <a href="/categories/registers">registers</a>, <a href="/categories/copy-and-paste">copy-and-paste</a>
+      <a href="/categories/vim-london">vim-london</a>, <a href="/categories/grammar">grammar</a>, <a href="/categories/motions">motions</a>
     
     </p>
   </div>
 
-<p>Episodes <a href="/e/51">51</a>, <a href="/e/52">52</a>, <a href="/e/53">53</a>, <a href="/e/54">54</a>, <a href="/e/55">55</a>, <a href="/e/58">58</a>, and <a href="/e/59">59</a> are all on the topic of copy and paste in Vim. I think that this is one area where Vim is especially confusing, partly because of <a href="http://vimcasts.org/episodes/meet-the-yank-register#vim-jargon">Vim's non-standard jargon for cut, copy and paste operations</a>. It's not the most intuitive copy/paste system, but it's usable when you get the hang of certain concepts and techniques.</p>
+<p>On Tuesday 29th January, <a href="http://www.meetup.com/Vim-London/">VimLondon</a> is holding a meetup with a theme: <a href="http://www.meetup.com/Vim-London/events/97866502/">Speak Vim - Operators and Motions</a>. We've got 5 short talks lined up:</p>
 
-<p>
-<a href="/blog/2013/11/the-copypaste-series-a-retrospective/">  
+<ol>
+<li>
+<a href="http://twitter.com/tea_sea">Tom Cammann</a>, Intro to Vim Grammar</li>
+  <li>
+<a href="http://twitter.com/nelstrom">Drew Neil</a>, When and why you should stay out of visual mode</li>
+  <li><a href="http://twitter.com/Jack_Franklin">Jack Franklin</a></li>
+</ol>
+<a href="/blog/2013/01/vimlondon-january-meetup-speak-vim---operators-and-motions/">  
     Continue reading
   
 </a>
@@ -247,9 +221,9 @@
     
       
 <section class="article">
-  <h3><a href="/blog/2013/11/getting-vim-with-clipboard-support/">Getting Vim with `+clipboard` support</a></h3>
+  <h3><a href="/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/">Oil and vinegar - split windows and the project drawer</a></h3>
 
-  <span>Nov 13, 2013</span>
+  <span>Jan  2, 2013</span>
 
   
 <span class="article-type">
@@ -260,15 +234,15 @@
     <p>
     
       Tagged with:
-      <a href="/categories/registers">registers</a>, <a href="/categories/copy-and-paste">copy-and-paste</a>
+      <a href="/categories/articles">articles</a>, <a href="/categories/windows">windows</a>, <a href="/categories/file-explorers">file-explorers</a>
     
     </p>
   </div>
 
-<p>Many systems ship with a version of Vim that was compiled with the <code>-clipboard</code> feature disabled, which is a damned nuisance! Being able to <a href="http://vimcasts.org/e/58">access the system clipboard from Vim</a> is an essential feature. Let's look at a few ways of getting the <code>+clipboard</code> feature on OS X and Ubuntu.</p>
+<p>Do you avoid using Vim's split windows because they're confusing? That might be a problem of your own devising. If you've bolted a project drawer onto Vim, then you've added unnecessary complexity to Vim's otherwise minimal interface. Split windows and the project drawer go together like oil and vinegar. I don't mean to say that you can combine them to create a delicious salad dressing. I mean that they don't mix well!</p>
 
 <p>
-<a href="/blog/2013/11/getting-vim-with-clipboard-support/">  
+<a href="/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/">  
     Continue reading
   
 </a>
@@ -278,9 +252,9 @@
     
       
 <section class="article">
-  <h3><a href="/blog/2013/09/join-the-vim-community-on-gittip/">Join the Vim community on gittip</a></h3>
+  <h3><a href="/blog/2012/11/recap-of-the-1st-vim-masterclass-online/">Recap of the 1st Vim Masterclass Online</a></h3>
 
-  <span>Sep 20, 2013</span>
+  <span>Nov 29, 2012</span>
 
   
 <span class="article-type">
@@ -288,10 +262,12 @@
 </span>
 
 
-<p><a href="https://www.gittip.com/about/">Gittip</a> is a way to give weekly cash gifts to people whose work inspires you. If you'd like to support the people who help make Vim awesome, why not sign up and join the <a href="https://www.gittip.com/for/vim/">Vim community</a>? (We need 13 more members to hit the 150 threshold.) I've set up a weekly gift for <a href="https://www.gittip.com/tpope/">Tim Pope</a>, whose Vim plugins I use every day.</p>
+<p>Yesterday was the <a href="http://vimcasts-online-1.eventbrite.com/">world premiere of my Vimcasts Masterclass Online</a>. It went great! Encouraged by it's success, I'm planning to make this a regular occurrence. Watch out for more dates in the new year.</p>
+
+<p>If you missed the chance to attend the first one, don't worry! I've scheduled <a href="http://vimcasts-online-2.eventbrite.com/">another Vim Masterclass</a> at the same time next week. The EarlyBird discount price of £80 (approx. US $128) is available until the end of this week.</p>
 
 <p>
-<a href="/blog/2013/09/join-the-vim-community-on-gittip/">  
+<a href="/blog/2012/11/recap-of-the-1st-vim-masterclass-online/">  
     Continue reading
   
 </a>
@@ -301,9 +277,9 @@
     
       
 <section class="article">
-  <h3><a href="/blog/2013/09/response-to-should-vimcasts-go-pro-survey/">Response to "Should Vimcasts go Pro?" survey</a></h3>
+  <h3><a href="/blog/2012/11/oredev-presentation-vim-precision-editing-at-the-speed-of-thought/">Øredev presentation: Vim - precision editing at the speed of thought</a></h3>
 
-  <span>Sep 13, 2013</span>
+  <span>Nov 12, 2012</span>
 
   
 <span class="article-type">
@@ -311,10 +287,16 @@
 </span>
 
 
-<p>I'd like to thank everyone who responded to my recent survey about supporting Vimcasts via a subscription model. I've taken your feedback on board and have decided to keep producing free Vimcasts. I can cover this site's running costs and support myself by teaching Vim classes and producing longer video tutorials to sell.</p>
+<p>Last week, I had the pleasure of speaking at <a href="http://oredev.org/">Øredev</a>, in Sweden. Video from my session, <a href="https://vimeo.com/53144573">Vim - Precision editing at the speed of thought</a> can be found on Vimeo. You can view <a href="https://speakerdeck.com/nelstrom/vim-precision-editing-at-the-speed-of-thought">the slides from my talk</a> on speakerdeck. Here's the synopsis from my talk:</p>
+
+<blockquote>
+  <p>Vim's modal editing model was conceived to meet the constraints of computing in the 1970s. The arrival of the mouse made intuitive point-and-click user interfaces the norm. While this was a boon for the novice computer user, it was a backward step for the power user. For a touch typist, there is no quicker way of editing text than with the keyboard.</p>
+
+  <p>This session won't teach you much in the way of practical hands-on advice - for that, see my <a href="http://oredev.org/2012/sessions/vim-masterclass">Vim masterclass</a>. Instead, it will challenge your preconceptions about Vim, and inspire you to give it a second look. We'll draw analogies with the mechanics of video games such as Quake and Street Fighter II. We'll look at patterns in the game of chess, and see how they relate to the task of editing text. And we'll learn what Vim users have in common with Scrabble players.</p>
+</blockquote>
 
 <p>
-<a href="/blog/2013/09/response-to-should-vimcasts-go-pro-survey/">  
+<a href="/blog/2012/11/oredev-presentation-vim-precision-editing-at-the-speed-of-thought/">  
     Continue reading
   
 </a>
@@ -324,9 +306,9 @@
     
       
 <section class="article">
-  <h3><a href="/blog/2013/09/navigating-ruby-files-with-vim/">Navigating Ruby Files with Vim</a></h3>
+  <h3><a href="/blog/2012/10/vim-london-still-alive-in-spite-of-meetup-com/">Vim London - still alive in spite of meetup.com</a></h3>
 
-  <span>Sep 13, 2013</span>
+  <span>Oct 25, 2012</span>
 
   
 <span class="article-type">
@@ -334,10 +316,18 @@
 </span>
 
 
-<p>I've been collaborating with <a href="http://www.thoughtbot.com/">thoughtbot</a> to produce three screencasts about <a href="https://learn.thoughtbot.com/products/21-navigating-ruby-files-with-vim">Navigating Ruby Files with Vim</a>. There's 40 minutes of material in total, and it's available from today. You can purchase these videos for $19, but they will also be available to thoughtbot Prime subscribers. Check out <a href="https://learn.thoughtbot.com/products/21-navigating-ruby-files-with-vim">learn.thoughtbot.com</a> for more details.</p>
+<p><strong>UPDATE</strong>: <a href="http://www.meetup.com/Vim-London/">Vim London</a> is back!</p>
+
+<p>Yesterday, without warning, Meetup.com deleted the Vim London group. In their words, here's why:</p>
+
+<blockquote>
+  <p>Your Meetup Group, Vim London, was brought to our attention as specifically promoting a product, which is not in compliance with our Terms of Service. Meetup is a community website and not a commercial marketplace… As a result of our inquiry, we've closed your Meetup Group and refunded your Organizer Dues.</p>
+</blockquote>
+
+<p>In their generic message, they don't indicate which product was apparently being promoted. The meetup group that we created has vanished, along with our list of members. That means I can't contact our (already 50+) members to explain what's happened, so I'm announcing it here.</p>
 
 <p>
-<a href="/blog/2013/09/navigating-ruby-files-with-vim/">  
+<a href="/blog/2012/10/vim-london-still-alive-in-spite-of-meetup-com/">  
     Continue reading
   
 </a>
@@ -347,9 +337,38 @@
     
       
 <section class="article">
-  <h3><a href="/blog/2013/07/should-vimcasts-go-pro/">Should Vimcasts go Pro?</a></h3>
+  <h3><a href="/blog/2012/10/command-line-special-40-discount-on-practical-vim/">Command-line Special: 40% discount on Practical Vim</a></h3>
 
-  <span>Jul  1, 2013</span>
+  <span>Oct 23, 2012</span>
+
+  
+<span class="article-type">
+  article
+</span>
+
+  <div class="article-tags">
+    <p>
+    
+      Tagged with:
+      <a href="/categories/practical-vim">practical-vim</a>, <a href="/categories/promotions">promotions</a>
+    
+    </p>
+  </div>
+
+<p>For a limited time, The Pragmatic Bookshelf is running a <a href="http://pragprog.com/news/40-off-command-line%20special">Command-Line Special deal</a>. Use the coupon <strong>CommandLineFTW</strong> to get a 40% discount on <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>. Other titles under offer include <a href="http://pragprog.com/book/bhtmux/tmux">tmux</a> by Brian Hogan, and <a href="http://pragprog.com/book/dccar/build-awesome-command-line-applications-in-ruby">Build Awesome Command-Line Applications</a></p>
+<a href="/blog/2012/10/command-line-special-40-discount-on-practical-vim/">  
+    Continue reading
+  
+</a>
+
+</section>
+
+    
+      
+<section class="article">
+  <h3><a href="/blog/2012/10/amazon-reviews-of-practical-vim/">Amazon reviews of Practical Vim</a></h3>
+
+  <span>Oct 12, 2012</span>
 
   
 <span class="article-type">
@@ -357,10 +376,45 @@
 </span>
 
 
-<p>I've just published <a href="http://vimcasts.org/e/50">episode 50 of Vimcasts</a>. That feels like a significant milestone and a good time to consider the question: what's next?</p>
+<p>The first five-star <a href="http://www.amazon.com/Practical-Vim-Edit-Speed-Thought/product-reviews/1934356980/ref=dp_top_cm_cr_acr_txt?ie=UTF8&amp;amp;showViewpoints=1">reviews for Practical Vim</a> have cropped up, and I'm blushing after reading them. It's been described as <em>the book Vim has always deserved</em>, and <em>a must-have for anybody who types</em>. Here are a few choice phrases:</p>
+
+<blockquote>
+  <p>This is one of the best technical books I've ever read: comprehensive but never dry.
+<a href="http://www.amazon.com/review/R24PEKYDZMZ7HH/ref=cm_cr_pr_perm?ie=UTF8&amp;amp;ASIN=1934356980&amp;amp;linkCode=&amp;amp;nodeID=&amp;amp;tag=">Peter</a></p>
+</blockquote>
+
+<blockquote>
+  <p>If I could give this book 6 stars, I would. …Satisfaction guaranteed.
+<a href="http://www.amazon.com/review/R2VV7TYQKRMB4E/ref=cm_cr_pr_perm?ie=UTF8&amp;amp;ASIN=1934356980&amp;amp;linkCode=&amp;amp;nodeID=&amp;amp;tag=">iynaix</a></p>
+</blockquote>
+
+<p>If you've read Practical Vim, please write a five-star review on Amazon. It makes a real difference. On the day that the first reviews were written, Practical Vim jumped from #16 to #2 on the <a href="http://www.amazon.com/gp/bestsellers/books/3849/ref=pd_zg_hrsr_b_1_4_last">Amazon best-seller list for the Linux category</a>.</p>
 
 <p>
-<a href="/blog/2013/07/should-vimcasts-go-pro/">  
+<a href="/blog/2012/10/amazon-reviews-of-practical-vim/">  
+    Continue reading
+  
+</a>
+
+</section>
+
+    
+      
+<section class="article">
+  <h3><a href="/blog/2012/10/practical-vim-now-shipping/">Practical Vim now shipping</a></h3>
+
+  <span>Oct 11, 2012</span>
+
+  
+<span class="article-type">
+  article
+</span>
+
+
+<p>I'm happy to announce that the paperback edition of <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> is now available. If you've pre-ordered, then your copy should arrive soon. Also, that means Practical Vim is no longer in <em>beta</em>. It's been tech-reviewed, indexed, edited, typeset, and laid out. If you've been holding out for the final cut, then your wait is over. </p>
+
+<p>
+<a href="/blog/2012/10/practical-vim-now-shipping/">  
     Continue reading
   
 </a>
@@ -369,6 +423,13 @@
 
     
 
+    
+      
+        <p><a href="/blog/page/2/">Prev page</a></p>
+      
+      
+        <p><a href="/blog/page/4/">Next page</a></p>
+      
     
 
   </div>

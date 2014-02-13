@@ -8,6 +8,25 @@
     <language>en-us</language>
     <ttl>40</ttl>
     <item>
+      <title>Vimcasts redesign: a work in progress</title>
+      <description>&amp;lt;p&amp;gt;In the not-too-distant future, you can expect to see a revised design for Vimcasts.org. The most significant enhancements will be the addition of tags, site search, and a responsive design for smaller screens. Hannah Adcock, from &amp;lt;a href=&amp;quot;http://contentedstrategy.com&amp;quot;&amp;gt;contentedstrategy.com&amp;lt;/a&amp;gt;, has been helping me out by analysing user feedback, as well as data from Google Analytics.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;</description>
+      <pubDate>Thu, 13 Feb 2014 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2014/02/vimcasts-redesign-a-work-in-progress/</guid>
+      <link>http://vimcasts.org/blog/2014/02/vimcasts-redesign-a-work-in-progress/</link>
+    </item>
+    <item>
+      <title>Operating on search matches using gn</title>
+      <description>&amp;lt;p&amp;gt;The &amp;lt;code&amp;gt;gn&amp;lt;/code&amp;gt; command (introduced in Vim 7.4) makes it easy to operate on regions of text that match the current search pattern. It's especially useful when used with a regex that matches text regions of variable length.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;</description>
+      <enclosure url="http://media.vimcasts.org/videos/63/gn-command.ogv" length="" type="video/ogg"/>
+      <pubDate>Tue, 11 Feb 2014 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/operating-on-search-matches-using-gn/</guid>
+      <link>http://vimcasts.org/episodes/operating-on-search-matches-using-gn/</link>
+    </item>
+    <item>
       <title>Creating mappings that accept a count</title>
       <description>&amp;lt;p&amp;gt;Lots of Vim's built-in Normal mode commands can be executed multiple times by prefixing them with a count. User-defined Normal mode mappings don't usually handle counts the way we might like them to. We'll explore a couple of techniques for making our custom mappings respond predictably to a count.&amp;lt;/p&amp;gt;
 
@@ -554,15 +573,6 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
       <link>http://vimcasts.org/blog/2013/02/google-vimdocs-with-a-custom-search-engine/</link>
     </item>
     <item>
-      <title>Upcoming online workshop: March 4th</title>
-      <description>&amp;lt;p&amp;gt;On Monday, March 4th, I'm going to teach my &amp;lt;a href=&amp;quot;http://vimcasts-online-4.eventbrite.com/&amp;quot;&amp;gt;Vim Masterclass Online&amp;lt;/a&amp;gt;. It will run for 4 hours, from &amp;lt;a href=&amp;quot;http://everytimezone.com/#2013-3-4,300,6be&amp;quot;&amp;gt;17:00 GMT&amp;lt;/a&amp;gt;. That’s 09:00 if you live in San Fransisco, or 12:00 if you live in New York. Tickets cost £95 (approximately US $150), but there’s an £80 earlybird offer (approx. US $127) running until February 25th.&amp;lt;/p&amp;gt;
-
-&amp;lt;p&amp;gt;</description>
-      <pubDate>Wed, 06 Feb 2013 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/announcements/2013/02/upcoming-online-workshop-march-4th/</guid>
-      <link>http://vimcasts.org/announcements/2013/02/upcoming-online-workshop-march-4th/</link>
-    </item>
-    <item>
       <title>Habit breaking, habit making</title>
       <description>&amp;lt;p&amp;gt;Moving your Vim cursor around using the arrow keys is a bad habit, and like many bad habits it's a difficult one to break! Putting these lines into your vimrc can help:&amp;lt;/p&amp;gt;
 
@@ -580,6 +590,15 @@ noremap &amp;amp;lt;Right&amp;amp;gt; &amp;amp;lt;NOP&amp;amp;gt;
       <pubDate>Wed, 06 Feb 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/</guid>
       <link>http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/</link>
+    </item>
+    <item>
+      <title>Upcoming online workshop: March 4th</title>
+      <description>&amp;lt;p&amp;gt;On Monday, March 4th, I'm going to teach my &amp;lt;a href=&amp;quot;http://vimcasts-online-4.eventbrite.com/&amp;quot;&amp;gt;Vim Masterclass Online&amp;lt;/a&amp;gt;. It will run for 4 hours, from &amp;lt;a href=&amp;quot;http://everytimezone.com/#2013-3-4,300,6be&amp;quot;&amp;gt;17:00 GMT&amp;lt;/a&amp;gt;. That’s 09:00 if you live in San Fransisco, or 12:00 if you live in New York. Tickets cost £95 (approximately US $150), but there’s an £80 earlybird offer (approx. US $127) running until February 25th.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;</description>
+      <pubDate>Wed, 06 Feb 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2013/02/upcoming-online-workshop-march-4th/</guid>
+      <link>http://vimcasts.org/announcements/2013/02/upcoming-online-workshop-march-4th/</link>
     </item>
     <item>
       <title>Vim London January in review</title>
@@ -695,8 +714,8 @@ noremap &amp;amp;lt;Right&amp;amp;gt; &amp;amp;lt;NOP&amp;amp;gt;
       <link>http://vimcasts.org/announcements/2012/11/upcoming-workshop-online/</link>
     </item>
     <item>
-      <title>ÃƒËœredev presentation: Vim - precision editing at the speed of thought</title>
-      <description>&amp;lt;p&amp;gt;Last week, I had the pleasure of speaking at &amp;lt;a href=&amp;quot;http://oredev.org/&amp;quot;&amp;gt;Ã˜redev&amp;lt;/a&amp;gt;, in Sweden. Video from my session, &amp;lt;a href=&amp;quot;https://vimeo.com/53144573&amp;quot;&amp;gt;Vim - Precision editing at the speed of thought&amp;lt;/a&amp;gt; can be found on Vimeo. You can view &amp;lt;a href=&amp;quot;https://speakerdeck.com/nelstrom/vim-precision-editing-at-the-speed-of-thought&amp;quot;&amp;gt;the slides from my talk&amp;lt;/a&amp;gt; on speakerdeck. Here's the synopsis from my talk:&amp;lt;/p&amp;gt;
+      <title>Øredev presentation: Vim - precision editing at the speed of thought</title>
+      <description>&amp;lt;p&amp;gt;Last week, I had the pleasure of speaking at &amp;lt;a href=&amp;quot;http://oredev.org/&amp;quot;&amp;gt;Øredev&amp;lt;/a&amp;gt;, in Sweden. Video from my session, &amp;lt;a href=&amp;quot;https://vimeo.com/53144573&amp;quot;&amp;gt;Vim - Precision editing at the speed of thought&amp;lt;/a&amp;gt; can be found on Vimeo. You can view &amp;lt;a href=&amp;quot;https://speakerdeck.com/nelstrom/vim-precision-editing-at-the-speed-of-thought&amp;quot;&amp;gt;the slides from my talk&amp;lt;/a&amp;gt; on speakerdeck. Here's the synopsis from my talk:&amp;lt;/p&amp;gt;
 
 &amp;lt;blockquote&amp;gt;
   &amp;lt;p&amp;gt;Vim's modal editing model was conceived to meet the constraints of computing in the 1970s. The arrival of the mouse made intuitive point-and-click user interfaces the norm. While this was a boon for the novice computer user, it was a backward step for the power user. For a touch typist, there is no quicker way of editing text than with the keyboard.&amp;lt;/p&amp;gt;
