@@ -1,5 +1,20 @@
 require 'middleman-gh-pages'
 
+desc 'List housekeeping chores'
+task :housekeeping do
+  require 'middleman-blog'
+  @app = ::Middleman::Application.server.inst
+  [:episodes, :blog].each do |name|
+    untagged = @app.blog(name).articles.select { |a|
+      a.tags.size == 0
+    }
+    if untagged.size > 0
+      puts "\nAdd tags to these #{name == :blog ? 'blog posts' : name}:"
+      puts untagged.map(&:path)
+    end
+  end
+end
+
 desc 'Build a list of tags and save it to data/categories.yml'
 task :categories do
   require 'middleman-blog'
