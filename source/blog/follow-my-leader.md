@@ -1,7 +1,7 @@
 --- 
 :title: Follow my leader
 :date: 2014/02/05
-
+:tags: mappings, leader, plugins
 ---
 
 Choosing a key-map for your custom Vim commands can be difficult. The common advice is to use `<leader>` for user-defined mappings, but that's not the only option. There are dozens of two-key mappings that are not bound to any built-in functionality. These available mappings are easy to find if you follow a simple formula.

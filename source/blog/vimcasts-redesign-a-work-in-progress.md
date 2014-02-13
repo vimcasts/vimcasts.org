@@ -1,7 +1,7 @@
 --- 
 :title: "Vimcasts redesign: a work in progress"
 :date: 2014/02/13
-
+:tags: meta
 ---
 
 In the not-too-distant future, you can expect to see a revised design for Vimcasts.org. The most significant enhancements will be the addition of tags, site search, and a responsive design for smaller screens. Hannah Adcock, from [contentedstrategy.com][], has been helping me out by analysing user feedback, as well as data from Google Analytics.
