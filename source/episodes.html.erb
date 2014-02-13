@@ -5,22 +5,4 @@ blog: episodes
 per_page: 10
 ---
 
-<div class="row">
-  <div class="small-12 columns">
-
-    <% page_articles.each do |article| %>
-      <%= partial "article-listing",
-        :locals => {article: article} %>
-    <% end %>
-
-    <% if paginate %>
-      <% if prev_page %>
-        <p><%= link_to 'Prev page', prev_page %></p>
-      <% end %>
-      <% if next_page %>
-        <p><%= link_to 'Next page', next_page %></p>
-      <% end %>
-    <% end %>
-
-  </div>
-</div>
+<%= partial "paginated-articles" %>
