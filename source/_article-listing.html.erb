@@ -31,6 +31,7 @@
 
 <%= article.summary %>
 
+<%# TODO: only show 'continue reading' link if there's more to read! %>
 <% link_to article do %>
   <% if article.blog_options[:name] == "episodes" %>
     Watch screencast
