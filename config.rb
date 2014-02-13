@@ -26,7 +26,7 @@ class Announcements < Middleman::Extension
           'episodes' => 'screencast'
         }[article.blog_options[:name]]
     end
-    def tag_stats(tag)
+    def tag_stats(tag, connector=", ")
       [
         [:videos, 'video'],
         [:articles, 'article']
@@ -34,7 +34,7 @@ class Announcements < Middleman::Extension
         if (number = tag[key]) > 0
           pluralize(number, word)
         end
-      end.compact.join(", ")
+      end.compact.join(connector)
     end
 
   end
