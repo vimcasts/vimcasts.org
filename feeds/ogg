@@ -32,8 +32,8 @@
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Fri, 31 Jan 2014 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2014/01/upcoming-online-workshop-march-5th/</guid>
-      <link>http://vimcasts.org/blog/2014/01/upcoming-online-workshop-march-5th/</link>
+      <guid>http://vimcasts.org/announcements/2014/01/upcoming-online-workshop-march-5th/</guid>
+      <link>http://vimcasts.org/announcements/2014/01/upcoming-online-workshop-march-5th/</link>
     </item>
     <item>
       <title>Creating repeatable mappings with repeat.vim</title>
@@ -51,8 +51,8 @@
 
 &amp;lt;p&amp;gt;You can &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-in-london-2&amp;quot;&amp;gt;purchase tickets for the London workshop&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;</description>
       <pubDate>Mon, 20 Jan 2014 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2014/01/upcoming-core-vim-class-london-february-14/</guid>
-      <link>http://vimcasts.org/blog/2014/01/upcoming-core-vim-class-london-february-14/</link>
+      <guid>http://vimcasts.org/announcements/2014/01/upcoming-core-vim-class-london-february-14/</guid>
+      <link>http://vimcasts.org/announcements/2014/01/upcoming-core-vim-class-london-february-14/</link>
     </item>
     <item>
       <title>20% group discount for Core Vim Class, January edition</title>
@@ -84,8 +84,8 @@
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Mon, 09 Dec 2013 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2013/12/upcoming-online-workshop-january-27th/</guid>
-      <link>http://vimcasts.org/blog/2013/12/upcoming-online-workshop-january-27th/</link>
+      <guid>http://vimcasts.org/announcements/2013/12/upcoming-online-workshop-january-27th/</guid>
+      <link>http://vimcasts.org/announcements/2013/12/upcoming-online-workshop-january-27th/</link>
     </item>
     <item>
       <title>Registers: the Good, the Bad, and the Ugly Parts</title>
@@ -140,8 +140,8 @@
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Mon, 04 Nov 2013 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2013/11/stockholm-vim-meetup-core-vim-class/</guid>
-      <link>http://vimcasts.org/blog/2013/11/stockholm-vim-meetup-core-vim-class/</link>
+      <guid>http://vimcasts.org/announcements/2013/11/stockholm-vim-meetup-core-vim-class/</guid>
+      <link>http://vimcasts.org/announcements/2013/11/stockholm-vim-meetup-core-vim-class/</link>
     </item>
     <item>
       <title>Upcoming online workshop: December 5th</title>
@@ -149,8 +149,8 @@
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Fri, 01 Nov 2013 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2013/11/upcoming-online-workshop-december-5th/</guid>
-      <link>http://vimcasts.org/blog/2013/11/upcoming-online-workshop-december-5th/</link>
+      <guid>http://vimcasts.org/announcements/2013/11/upcoming-online-workshop-december-5th/</guid>
+      <link>http://vimcasts.org/announcements/2013/11/upcoming-online-workshop-december-5th/</link>
     </item>
     <item>
       <title>Evaluating scripts with Vim's expression register</title>
@@ -183,15 +183,6 @@
       <link>http://vimcasts.org/episodes/pasting-from-insert-mode/</link>
     </item>
     <item>
-      <title>Book a private Vim class for your team</title>
-      <description>&amp;lt;p&amp;gt;Does your team make heavy use of Vim? Why not &amp;lt;a href=&amp;quot;http://vimcasts.org/classes/private-training&amp;quot;&amp;gt;book me for a private Vim training session&amp;lt;/a&amp;gt; and give your team a productivity boost? I can deliver my class online for companies based (or distributed) anywhere in the world, or I can teach on-site anywhere except the US. Here are &amp;lt;a href=&amp;quot;http://vimcasts.org/classes/private-training#prices&amp;quot;&amp;gt;my prices and terms&amp;lt;/a&amp;gt;. &amp;lt;a href=&amp;quot;&amp;amp;#109;&amp;amp;#097;&amp;amp;#105;&amp;amp;#108;&amp;amp;#116;&amp;amp;#111;:&amp;amp;#100;&amp;amp;#114;&amp;amp;#101;&amp;amp;#119;&amp;amp;#064;&amp;amp;#118;&amp;amp;#105;&amp;amp;#109;&amp;amp;#099;&amp;amp;#097;&amp;amp;#115;&amp;amp;#116;&amp;amp;#115;&amp;amp;#046;&amp;amp;#111;&amp;amp;#114;&amp;amp;#103;&amp;quot;&amp;gt;Get in touch&amp;lt;/a&amp;gt; if you have any further enquiries.&amp;lt;/p&amp;gt;
-
-&amp;lt;p&amp;gt;</description>
-      <pubDate>Mon, 07 Oct 2013 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2013/10/book-a-private-vim-class-for-your-team/</guid>
-      <link>http://vimcasts.org/blog/2013/10/book-a-private-vim-class-for-your-team/</link>
-    </item>
-    <item>
       <title>Pasting from Visual mode</title>
       <description>&amp;lt;p&amp;gt;When used &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/change.html#v_p&amp;quot;&amp;gt;in Visual mode the &amp;lt;code&amp;gt;p&amp;lt;/code&amp;gt; command&amp;lt;/a&amp;gt; replaces the selection with the contents of a register. This makes for a smooth workflow when you want to overwrite a selection, or swap the order of two regions of text.&amp;lt;/p&amp;gt;
 
@@ -200,6 +191,15 @@
       <pubDate>Mon, 07 Oct 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/pasting-from-visual-mode/</guid>
       <link>http://vimcasts.org/episodes/pasting-from-visual-mode/</link>
+    </item>
+    <item>
+      <title>Book a private Vim class for your team</title>
+      <description>&amp;lt;p&amp;gt;Does your team make heavy use of Vim? Why not &amp;lt;a href=&amp;quot;http://vimcasts.org/classes/private-training&amp;quot;&amp;gt;book me for a private Vim training session&amp;lt;/a&amp;gt; and give your team a productivity boost? I can deliver my class online for companies based (or distributed) anywhere in the world, or I can teach on-site anywhere except the US. Here are &amp;lt;a href=&amp;quot;http://vimcasts.org/classes/private-training#prices&amp;quot;&amp;gt;my prices and terms&amp;lt;/a&amp;gt;. &amp;lt;a href=&amp;quot;&amp;amp;#109;&amp;amp;#097;&amp;amp;#105;&amp;amp;#108;&amp;amp;#116;&amp;amp;#111;:&amp;amp;#100;&amp;amp;#114;&amp;amp;#101;&amp;amp;#119;&amp;amp;#064;&amp;amp;#118;&amp;amp;#105;&amp;amp;#109;&amp;amp;#099;&amp;amp;#097;&amp;amp;#115;&amp;amp;#116;&amp;amp;#115;&amp;amp;#046;&amp;amp;#111;&amp;amp;#114;&amp;amp;#103;&amp;quot;&amp;gt;Get in touch&amp;lt;/a&amp;gt; if you have any further enquiries.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;</description>
+      <pubDate>Mon, 07 Oct 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2013/10/book-a-private-vim-class-for-your-team/</guid>
+      <link>http://vimcasts.org/announcements/2013/10/book-a-private-vim-class-for-your-team/</link>
     </item>
     <item>
       <title>Using Vim's named registers</title>
@@ -237,8 +237,8 @@
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Fri, 27 Sep 2013 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2013/09/upcoming-online-workshop-october-28th/</guid>
-      <link>http://vimcasts.org/blog/2013/09/upcoming-online-workshop-october-28th/</link>
+      <guid>http://vimcasts.org/announcements/2013/09/upcoming-online-workshop-october-28th/</guid>
+      <link>http://vimcasts.org/announcements/2013/09/upcoming-online-workshop-october-28th/</link>
     </item>
     <item>
       <title>Change of pricing for Core Vim Class</title>
@@ -248,8 +248,8 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Thu, 26 Sep 2013 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2013/09/change-of-pricing-for-core-vim-class/</guid>
-      <link>http://vimcasts.org/blog/2013/09/change-of-pricing-for-core-vim-class/</link>
+      <guid>http://vimcasts.org/announcements/2013/09/change-of-pricing-for-core-vim-class/</guid>
+      <link>http://vimcasts.org/announcements/2013/09/change-of-pricing-for-core-vim-class/</link>
     </item>
     <item>
       <title>Join the Vim community on gittip</title>
@@ -266,8 +266,8 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;You can &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-in-london-1&amp;quot;&amp;gt;purchase tickets for the London workshop&amp;lt;/a&amp;gt; from tito.io...&amp;lt;/p&amp;gt;</description>
       <pubDate>Wed, 18 Sep 2013 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2013/09/upcoming-workshop-london-october-13/</guid>
-      <link>http://vimcasts.org/blog/2013/09/upcoming-workshop-london-october-13/</link>
+      <guid>http://vimcasts.org/announcements/2013/09/upcoming-workshop-london-october-13/</guid>
+      <link>http://vimcasts.org/announcements/2013/09/upcoming-workshop-london-october-13/</link>
     </item>
     <item>
       <title>Navigating Ruby Files with Vim</title>
@@ -295,8 +295,8 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Mon, 29 Jul 2013 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2013/07/upcoming-workshop-berlin-2/</guid>
-      <link>http://vimcasts.org/blog/2013/07/upcoming-workshop-berlin-2/</link>
+      <guid>http://vimcasts.org/announcements/2013/07/upcoming-workshop-berlin-2/</guid>
+      <link>http://vimcasts.org/announcements/2013/07/upcoming-workshop-berlin-2/</link>
     </item>
     <item>
       <title>Should Vimcasts go Pro?</title>
@@ -323,8 +323,8 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Wed, 05 Jun 2013 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2013/06/upcoming-online-workshop-july-10th/</guid>
-      <link>http://vimcasts.org/blog/2013/06/upcoming-online-workshop-july-10th/</link>
+      <guid>http://vimcasts.org/announcements/2013/06/upcoming-online-workshop-july-10th/</guid>
+      <link>http://vimcasts.org/announcements/2013/06/upcoming-online-workshop-july-10th/</link>
     </item>
     <item>
       <title>Macbook Pro for sale - £900</title>
@@ -344,8 +344,8 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Mon, 03 Jun 2013 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2013/06/macbook-pro-for-sale/</guid>
-      <link>http://vimcasts.org/blog/2013/06/macbook-pro-for-sale/</link>
+      <guid>http://vimcasts.org/announcements/2013/06/macbook-pro-for-sale/</guid>
+      <link>http://vimcasts.org/announcements/2013/06/macbook-pro-for-sale/</link>
     </item>
     <item>
       <title>Vimprint - a Vim keystroke parser</title>
@@ -389,13 +389,6 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
       <link>http://vimcasts.org/episodes/enhanced-abbreviations-with-abolish/</link>
     </item>
     <item>
-      <title>Upcoming online workshop: June 3rd</title>
-      <description>&amp;lt;p&amp;gt;On Monday, June 3rd, I’m going to teach my &amp;lt;a href=&amp;quot;http://vimcasts.org/classes/core-vim&amp;quot;&amp;gt;Core Vim Masterclass Online&amp;lt;/a&amp;gt;. It will run for 4 hours, from 18:00 GMT. That’s 10:00 if you live in San Fransisco, or 13:00 if you live in New York. &amp;lt;a href=&amp;quot;http://vimcasts-online-6.eventbrite.com/&amp;quot;&amp;gt;Tickets cost £95&amp;lt;/a&amp;gt; (approximately US $140), but there’s an ...&amp;lt;/p&amp;gt;</description>
-      <pubDate>Mon, 22 Apr 2013 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2013/04/upcoming-online-workshop-june-3rd/</guid>
-      <link>http://vimcasts.org/blog/2013/04/upcoming-online-workshop-june-3rd/</link>
-    </item>
-    <item>
       <title>Supercharged substitution with :Subvert</title>
       <description>&amp;lt;p&amp;gt;The &amp;lt;a href=&amp;quot;https://github.com/tpope/vim-abolish&amp;quot;&amp;gt;abolish plugin&amp;lt;/a&amp;gt; provides a command called &amp;lt;code&amp;gt;:Subvert&amp;lt;/code&amp;gt;, which is like a supercharged version of Vim's built-in &amp;lt;code&amp;gt;:substitute&amp;lt;/code&amp;gt; command. The &amp;lt;code&amp;gt;:Subvert&amp;lt;/code&amp;gt; command is especially useful for changing singular and plural variants of a word, and for refactoring names that appear in &amp;lt;code&amp;gt;snake_case&amp;lt;/code&amp;gt; and &amp;lt;code&amp;gt;MixedCase&amp;lt;/code&amp;gt;.&amp;lt;/p&amp;gt;
 
@@ -406,6 +399,13 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
       <pubDate>Mon, 22 Apr 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/supercharged-substitution-with-subvert/</guid>
       <link>http://vimcasts.org/episodes/supercharged-substitution-with-subvert/</link>
+    </item>
+    <item>
+      <title>Upcoming online workshop: June 3rd</title>
+      <description>&amp;lt;p&amp;gt;On Monday, June 3rd, I’m going to teach my &amp;lt;a href=&amp;quot;http://vimcasts.org/classes/core-vim&amp;quot;&amp;gt;Core Vim Masterclass Online&amp;lt;/a&amp;gt;. It will run for 4 hours, from 18:00 GMT. That’s 10:00 if you live in San Fransisco, or 13:00 if you live in New York. &amp;lt;a href=&amp;quot;http://vimcasts-online-6.eventbrite.com/&amp;quot;&amp;gt;Tickets cost £95&amp;lt;/a&amp;gt; (approximately US $140), but there’s an ...&amp;lt;/p&amp;gt;</description>
+      <pubDate>Mon, 22 Apr 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2013/04/upcoming-online-workshop-june-3rd/</guid>
+      <link>http://vimcasts.org/announcements/2013/04/upcoming-online-workshop-june-3rd/</link>
     </item>
     <item>
       <title>Practical Vim is a best-seller!</title>
@@ -444,8 +444,8 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Thu, 21 Mar 2013 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2013/03/subscribe-to-the-vimcasts-org-monthly-newsletter/</guid>
-      <link>http://vimcasts.org/blog/2013/03/subscribe-to-the-vimcasts-org-monthly-newsletter/</link>
+      <guid>http://vimcasts.org/announcements/2013/03/subscribe-to-the-vimcasts-org-monthly-newsletter/</guid>
+      <link>http://vimcasts.org/announcements/2013/03/subscribe-to-the-vimcasts-org-monthly-newsletter/</link>
     </item>
     <item>
       <title>Project-wide find and replace</title>
@@ -463,8 +463,8 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Thu, 14 Mar 2013 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2013/03/upcoming-online-workshop-april-16th/</guid>
-      <link>http://vimcasts.org/blog/2013/03/upcoming-online-workshop-april-16th/</link>
+      <guid>http://vimcasts.org/announcements/2013/03/upcoming-online-workshop-april-16th/</guid>
+      <link>http://vimcasts.org/announcements/2013/03/upcoming-online-workshop-april-16th/</link>
     </item>
     <item>
       <title>Online Vim classes - sign up for email announcements</title>
@@ -516,15 +516,6 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
       <link>http://vimcasts.org/episodes/using-argdo-to-change-multiple-files/</link>
     </item>
     <item>
-      <title>Get 30% off Practical Vim</title>
-      <description>&amp;lt;p&amp;gt;For a limited time, the Pragmatic Bookshelf is offering &amp;lt;a href=&amp;quot;http://pragprog.com/book/dnvim/practical-vim&amp;quot;&amp;gt;a 30% discount on Practical Vim&amp;lt;/a&amp;gt;. To claim this deal, use the coupon: &amp;lt;strong&amp;gt;DrewNeilVimMarchMadness&amp;lt;/strong&amp;gt;. The offer runs until midnight (PST) on March 8th. Please help me spread the word wide and far by Tweeting, Liking, +1-ing and so on.&amp;lt;/p&amp;gt;
-
-&amp;lt;p&amp;gt;</description>
-      <pubDate>Fri, 22 Feb 2013 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2013/02/get-30-off-practical-vim/</guid>
-      <link>http://vimcasts.org/blog/2013/02/get-30-off-practical-vim/</link>
-    </item>
-    <item>
       <title>Populating the arglist</title>
       <description>&amp;lt;p&amp;gt;The arglist wouldn't be much use if we had to quit and relaunch Vim every time we wanted to change its contents. In this episode, we'll learn how to set the contents of the arglist using the &amp;lt;code&amp;gt;:args&amp;lt;/code&amp;gt; command, which can receive filepaths, globs, or even backtick expressions.&amp;lt;/p&amp;gt;
 
@@ -533,6 +524,15 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
       <pubDate>Fri, 22 Feb 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/populating-the-arglist/</guid>
       <link>http://vimcasts.org/episodes/populating-the-arglist/</link>
+    </item>
+    <item>
+      <title>Get 30% off Practical Vim</title>
+      <description>&amp;lt;p&amp;gt;For a limited time, the Pragmatic Bookshelf is offering &amp;lt;a href=&amp;quot;http://pragprog.com/book/dnvim/practical-vim&amp;quot;&amp;gt;a 30% discount on Practical Vim&amp;lt;/a&amp;gt;. To claim this deal, use the coupon: &amp;lt;strong&amp;gt;DrewNeilVimMarchMadness&amp;lt;/strong&amp;gt;. The offer runs until midnight (PST) on March 8th. Please help me spread the word wide and far by Tweeting, Liking, +1-ing and so on.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;</description>
+      <pubDate>Fri, 22 Feb 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/02/get-30-off-practical-vim/</guid>
+      <link>http://vimcasts.org/blog/2013/02/get-30-off-practical-vim/</link>
     </item>
     <item>
       <title>Meet the arglist</title>
@@ -554,6 +554,15 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
       <link>http://vimcasts.org/blog/2013/02/google-vimdocs-with-a-custom-search-engine/</link>
     </item>
     <item>
+      <title>Upcoming online workshop: March 4th</title>
+      <description>&amp;lt;p&amp;gt;On Monday, March 4th, I'm going to teach my &amp;lt;a href=&amp;quot;http://vimcasts-online-4.eventbrite.com/&amp;quot;&amp;gt;Vim Masterclass Online&amp;lt;/a&amp;gt;. It will run for 4 hours, from &amp;lt;a href=&amp;quot;http://everytimezone.com/#2013-3-4,300,6be&amp;quot;&amp;gt;17:00 GMT&amp;lt;/a&amp;gt;. That’s 09:00 if you live in San Fransisco, or 12:00 if you live in New York. Tickets cost £95 (approximately US $150), but there’s an £80 earlybird offer (approx. US $127) running until February 25th.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;</description>
+      <pubDate>Wed, 06 Feb 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2013/02/upcoming-online-workshop-march-4th/</guid>
+      <link>http://vimcasts.org/announcements/2013/02/upcoming-online-workshop-march-4th/</link>
+    </item>
+    <item>
       <title>Habit breaking, habit making</title>
       <description>&amp;lt;p&amp;gt;Moving your Vim cursor around using the arrow keys is a bad habit, and like many bad habits it's a difficult one to break! Putting these lines into your vimrc can help:&amp;lt;/p&amp;gt;
 
@@ -571,15 +580,6 @@ noremap &amp;amp;lt;Right&amp;amp;gt; &amp;amp;lt;NOP&amp;amp;gt;
       <pubDate>Wed, 06 Feb 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/</guid>
       <link>http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/</link>
-    </item>
-    <item>
-      <title>Upcoming online workshop: March 4th</title>
-      <description>&amp;lt;p&amp;gt;On Monday, March 4th, I'm going to teach my &amp;lt;a href=&amp;quot;http://vimcasts-online-4.eventbrite.com/&amp;quot;&amp;gt;Vim Masterclass Online&amp;lt;/a&amp;gt;. It will run for 4 hours, from &amp;lt;a href=&amp;quot;http://everytimezone.com/#2013-3-4,300,6be&amp;quot;&amp;gt;17:00 GMT&amp;lt;/a&amp;gt;. That’s 09:00 if you live in San Fransisco, or 12:00 if you live in New York. Tickets cost £95 (approximately US $150), but there’s an £80 earlybird offer (approx. US $127) running until February 25th.&amp;lt;/p&amp;gt;
-
-&amp;lt;p&amp;gt;</description>
-      <pubDate>Wed, 06 Feb 2013 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2013/02/upcoming-online-workshop-march-4th/</guid>
-      <link>http://vimcasts.org/blog/2013/02/upcoming-online-workshop-march-4th/</link>
     </item>
     <item>
       <title>Vim London January in review</title>
@@ -621,8 +621,8 @@ noremap &amp;amp;lt;Right&amp;amp;gt; &amp;amp;lt;NOP&amp;amp;gt;
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Mon, 07 Jan 2013 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2013/01/new-years-discount-on-vim-masterclass/</guid>
-      <link>http://vimcasts.org/blog/2013/01/new-years-discount-on-vim-masterclass/</link>
+      <guid>http://vimcasts.org/announcements/2013/01/new-years-discount-on-vim-masterclass/</guid>
+      <link>http://vimcasts.org/announcements/2013/01/new-years-discount-on-vim-masterclass/</link>
     </item>
     <item>
       <title>Oil and vinegar - split windows and the project drawer</title>
@@ -639,8 +639,8 @@ noremap &amp;amp;lt;Right&amp;amp;gt; &amp;amp;lt;NOP&amp;amp;gt;
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Mon, 17 Dec 2012 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2012/12/upcoming-online-workshop-january-14th/</guid>
-      <link>http://vimcasts.org/blog/2012/12/upcoming-online-workshop-january-14th/</link>
+      <guid>http://vimcasts.org/announcements/2012/12/upcoming-online-workshop-january-14th/</guid>
+      <link>http://vimcasts.org/announcements/2012/12/upcoming-online-workshop-january-14th/</link>
     </item>
     <item>
       <title>Profiling Vimscript performance</title>
@@ -691,8 +691,8 @@ noremap &amp;amp;lt;Right&amp;amp;gt; &amp;amp;lt;NOP&amp;amp;gt;
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Fri, 16 Nov 2012 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2012/11/upcoming-workshop-online/</guid>
-      <link>http://vimcasts.org/blog/2012/11/upcoming-workshop-online/</link>
+      <guid>http://vimcasts.org/announcements/2012/11/upcoming-workshop-online/</guid>
+      <link>http://vimcasts.org/announcements/2012/11/upcoming-workshop-online/</link>
     </item>
     <item>
       <title>ÃƒËœredev presentation: Vim - precision editing at the speed of thought</title>
@@ -737,8 +737,8 @@ noremap &amp;amp;lt;Right&amp;amp;gt; &amp;amp;lt;NOP&amp;amp;gt;
       <title>Upcoming workshop: London, October '12</title>
       <description>&amp;lt;p&amp;gt;Once again, I'm happy to announce that I'll be running a &amp;lt;a href=&amp;quot;http://london-vimcasts-eve-2.eventbrite.com/&amp;quot;&amp;gt;Vim Masterclass in London&amp;lt;/a&amp;gt; on October 31st, at &amp;lt;a href=&amp;quot;http://forwardtechnology.co.uk/venue&amp;quot;&amp;gt;Forward&amp;lt;/a&amp;gt;. You can &amp;lt;a href=&amp;quot;http://london-vimcasts-eve-2.eventbrite.com/&amp;quot;&amp;gt;purchase tickets from EventBrite&amp;lt;/a&amp;gt;. The early bird price of £85 is available until 7pm on Wednesday, October 24th. After that, the...&amp;lt;/p&amp;gt;</description>
       <pubDate>Fri, 12 Oct 2012 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2012/10/upcoming-workshop-london-october-12/</guid>
-      <link>http://vimcasts.org/blog/2012/10/upcoming-workshop-london-october-12/</link>
+      <guid>http://vimcasts.org/announcements/2012/10/upcoming-workshop-london-october-12/</guid>
+      <link>http://vimcasts.org/announcements/2012/10/upcoming-workshop-london-october-12/</link>
     </item>
     <item>
       <title>Amazon reviews of Practical Vim</title>
@@ -789,8 +789,8 @@ noremap &amp;amp;lt;Right&amp;amp;gt; &amp;amp;lt;NOP&amp;amp;gt;
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Mon, 08 Oct 2012 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2012/10/upcoming-workshop-bristol/</guid>
-      <link>http://vimcasts.org/blog/2012/10/upcoming-workshop-bristol/</link>
+      <guid>http://vimcasts.org/announcements/2012/10/upcoming-workshop-bristol/</guid>
+      <link>http://vimcasts.org/announcements/2012/10/upcoming-workshop-bristol/</link>
     </item>
     <item>
       <title>Upcoming workshop: Boulder, CO</title>
@@ -800,8 +800,8 @@ noremap &amp;amp;lt;Right&amp;amp;gt; &amp;amp;lt;NOP&amp;amp;gt;
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Mon, 03 Sep 2012 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2012/09/upcoming-workshop-boulder-co/</guid>
-      <link>http://vimcasts.org/blog/2012/09/upcoming-workshop-boulder-co/</link>
+      <guid>http://vimcasts.org/announcements/2012/09/upcoming-workshop-boulder-co/</guid>
+      <link>http://vimcasts.org/announcements/2012/09/upcoming-workshop-boulder-co/</link>
     </item>
     <item>
       <title>VimGolf - Prime Numbers</title>
@@ -819,8 +819,8 @@ noremap &amp;amp;lt;Right&amp;amp;gt; &amp;amp;lt;NOP&amp;amp;gt;
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Wed, 08 Aug 2012 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2012/08/status-of-us-tour/</guid>
-      <link>http://vimcasts.org/blog/2012/08/status-of-us-tour/</link>
+      <guid>http://vimcasts.org/announcements/2012/08/status-of-us-tour/</guid>
+      <link>http://vimcasts.org/announcements/2012/08/status-of-us-tour/</link>
     </item>
     <item>
       <title>On sharpening the saw</title>
@@ -848,8 +848,8 @@ Gary Bernhardt on &amp;lt;a href=&amp;quot;http://rubyrogues.com/040-rr-text-edi
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Mon, 25 Jun 2012 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2012/06/upcoming-workshops-london-paris-amsterdam-and-barcelona/</guid>
-      <link>http://vimcasts.org/blog/2012/06/upcoming-workshops-london-paris-amsterdam-and-barcelona/</link>
+      <guid>http://vimcasts.org/announcements/2012/06/upcoming-workshops-london-paris-amsterdam-and-barcelona/</guid>
+      <link>http://vimcasts.org/announcements/2012/06/upcoming-workshops-london-paris-amsterdam-and-barcelona/</link>
     </item>
     <item>
       <title>Upcoming workshops: Edinburgh, Glasgow, and Newcastle</title>
@@ -859,8 +859,8 @@ Gary Bernhardt on &amp;lt;a href=&amp;quot;http://rubyrogues.com/040-rr-text-edi
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Wed, 13 Jun 2012 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2012/06/upcoming-workshops-edinburgh-glasgow-and-newcastle/</guid>
-      <link>http://vimcasts.org/blog/2012/06/upcoming-workshops-edinburgh-glasgow-and-newcastle/</link>
+      <guid>http://vimcasts.org/announcements/2012/06/upcoming-workshops-edinburgh-glasgow-and-newcastle/</guid>
+      <link>http://vimcasts.org/announcements/2012/06/upcoming-workshops-edinburgh-glasgow-and-newcastle/</link>
     </item>
     <item>
       <title>Upcoming workshop: Berlin</title>
@@ -870,8 +870,8 @@ Gary Bernhardt on &amp;lt;a href=&amp;quot;http://rubyrogues.com/040-rr-text-edi
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Tue, 22 May 2012 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2012/05/upcoming-workshop-berlin/</guid>
-      <link>http://vimcasts.org/blog/2012/05/upcoming-workshop-berlin/</link>
+      <guid>http://vimcasts.org/announcements/2012/05/upcoming-workshop-berlin/</guid>
+      <link>http://vimcasts.org/announcements/2012/05/upcoming-workshop-berlin/</link>
     </item>
     <item>
       <title>Upcoming workshop: Krakow</title>
@@ -881,8 +881,8 @@ Gary Bernhardt on &amp;lt;a href=&amp;quot;http://rubyrogues.com/040-rr-text-edi
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Thu, 17 May 2012 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2012/05/upcoming-workshop-krakow/</guid>
-      <link>http://vimcasts.org/blog/2012/05/upcoming-workshop-krakow/</link>
+      <guid>http://vimcasts.org/announcements/2012/05/upcoming-workshop-krakow/</guid>
+      <link>http://vimcasts.org/announcements/2012/05/upcoming-workshop-krakow/</link>
     </item>
     <item>
       <title>On tour this Summer: Vim masterclass workshop</title>
@@ -892,8 +892,8 @@ Gary Bernhardt on &amp;lt;a href=&amp;quot;http://rubyrogues.com/040-rr-text-edi
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Wed, 16 May 2012 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2012/05/on-tour-this-summer-vim-masterclass-workshop/</guid>
-      <link>http://vimcasts.org/blog/2012/05/on-tour-this-summer-vim-masterclass-workshop/</link>
+      <guid>http://vimcasts.org/announcements/2012/05/on-tour-this-summer-vim-masterclass-workshop/</guid>
+      <link>http://vimcasts.org/announcements/2012/05/on-tour-this-summer-vim-masterclass-workshop/</link>
     </item>
     <item>
       <title>Announcing Practical Vim (in beta)</title>
@@ -914,8 +914,8 @@ Gary Bernhardt on &amp;lt;a href=&amp;quot;http://rubyrogues.com/040-rr-text-edi
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Wed, 11 Apr 2012 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2012/04/upcoming-workshop-london/</guid>
-      <link>http://vimcasts.org/blog/2012/04/upcoming-workshop-london/</link>
+      <guid>http://vimcasts.org/announcements/2012/04/upcoming-workshop-london/</guid>
+      <link>http://vimcasts.org/announcements/2012/04/upcoming-workshop-london/</link>
     </item>
     <item>
       <title>Upcoming workshops: Berlin and St Louis</title>
@@ -927,8 +927,8 @@ Gary Bernhardt on &amp;lt;a href=&amp;quot;http://rubyrogues.com/040-rr-text-edi
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Fri, 30 Mar 2012 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2012/03/upcoming-workshops-berlin-and-st-louis/</guid>
-      <link>http://vimcasts.org/blog/2012/03/upcoming-workshops-berlin-and-st-louis/</link>
+      <guid>http://vimcasts.org/announcements/2012/03/upcoming-workshops-berlin-and-st-louis/</guid>
+      <link>http://vimcasts.org/announcements/2012/03/upcoming-workshops-berlin-and-st-louis/</link>
     </item>
     <item>
       <title>What to expect from a Vimcasts workshop</title>
@@ -947,8 +947,8 @@ Gary Bernhardt on &amp;lt;a href=&amp;quot;http://rubyrogues.com/040-rr-text-edi
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Thu, 09 Feb 2012 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2012/02/vim-workshop-wroclaw/</guid>
-      <link>http://vimcasts.org/blog/2012/02/vim-workshop-wroclaw/</link>
+      <guid>http://vimcasts.org/announcements/2012/02/vim-workshop-wroclaw/</guid>
+      <link>http://vimcasts.org/announcements/2012/02/vim-workshop-wroclaw/</link>
     </item>
     <item>
       <title>Bring a Vimcasts workshop to your town</title>
@@ -958,8 +958,17 @@ Gary Bernhardt on &amp;lt;a href=&amp;quot;http://rubyrogues.com/040-rr-text-edi
 
 &amp;lt;p&amp;gt;</description>
       <pubDate>Wed, 05 Oct 2011 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2011/10/bring-a-vimcasts-workshop-to-your-town/</guid>
-      <link>http://vimcasts.org/blog/2011/10/bring-a-vimcasts-workshop-to-your-town/</link>
+      <guid>http://vimcasts.org/announcements/2011/10/bring-a-vimcasts-workshop-to-your-town/</guid>
+      <link>http://vimcasts.org/announcements/2011/10/bring-a-vimcasts-workshop-to-your-town/</link>
+    </item>
+    <item>
+      <title>The Fugitive Series - a retrospective</title>
+      <description>&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;Fugitive.vim: a git wrapper so awesome, it should be illegal.&amp;lt;/em&amp;gt; That's how Tim Pope describes his git plugin for Vim. I've had &amp;lt;a href=&amp;quot;http://www.vim.org/scripts/script.php?script_id=2975&amp;quot;&amp;gt;fugitive.vim&amp;lt;/a&amp;gt; installed since it was released, but until recently I never took the time to figure out what was &amp;lt;em&amp;gt;so awesome&amp;lt;/em&amp;gt; that could make it illegal.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;</description>
+      <pubDate>Wed, 18 May 2011 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2011/05/the-fugitive-series/</guid>
+      <link>http://vimcasts.org/blog/2011/05/the-fugitive-series/</link>
     </item>
     <item>
       <title>Fugitive.vim - exploring the history of a git repository</title>
@@ -972,15 +981,6 @@ Gary Bernhardt on &amp;lt;a href=&amp;quot;http://rubyrogues.com/040-rr-text-edi
       <pubDate>Wed, 18 May 2011 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/</guid>
       <link>http://vimcasts.org/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/</link>
-    </item>
-    <item>
-      <title>The Fugitive Series - a retrospective</title>
-      <description>&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;Fugitive.vim: a git wrapper so awesome, it should be illegal.&amp;lt;/em&amp;gt; That's how Tim Pope describes his git plugin for Vim. I've had &amp;lt;a href=&amp;quot;http://www.vim.org/scripts/script.php?script_id=2975&amp;quot;&amp;gt;fugitive.vim&amp;lt;/a&amp;gt; installed since it was released, but until recently I never took the time to figure out what was &amp;lt;em&amp;gt;so awesome&amp;lt;/em&amp;gt; that could make it illegal.&amp;lt;/p&amp;gt;
-
-&amp;lt;p&amp;gt;</description>
-      <pubDate>Wed, 18 May 2011 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2011/05/the-fugitive-series/</guid>
-      <link>http://vimcasts.org/blog/2011/05/the-fugitive-series/</link>
     </item>
     <item>
       <title>Fugitive.vim - browsing the git object database</title>
@@ -1158,15 +1158,6 @@ Drew&amp;lt;/p&amp;gt;
       <link>http://vimcasts.org/blog/2010/09/mac-classic/</link>
     </item>
     <item>
-      <title>Vimcasts on vacation</title>
-      <description>&amp;lt;p&amp;gt;I&amp;amp;#8217;m going to be taking a short break from Vimcasts to travel around India and Indonesia. I&amp;amp;#8217;ll be back in September, and a new season of Vimcasts will follow. If you&amp;amp;#8217;re eager to see more episodes, please show your support by leaving a tip - you can &amp;lt;a href=&amp;quot;http://vimcasts.org/tipjar&amp;quot;&amp;gt;donate with paypal&amp;lt;/a&amp;gt;, or &amp;lt;a href=&amp;quot;http://vimcasts.org/blog/2010/07/vimcasts-adopts-flattr-for-micropayments/&amp;quot;&amp;gt;flattr me&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
-
-&amp;lt;p&amp;gt;</description>
-      <pubDate>Sun, 18 Jul 2010 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2010/07/vimcasts-on-vacation/</guid>
-      <link>http://vimcasts.org/blog/2010/07/vimcasts-on-vacation/</link>
-    </item>
-    <item>
       <title>Updating your vimrc file on the fly</title>
       <description>&amp;lt;p&amp;gt;The vimrc file allows you to preserve your settings so that they are restored each time you launch Vim. But what if you want to update your vimrc file in the middle of an editing session? This episode demonstrates a couple of tricks that make it easy to customize Vim on the fly.&amp;lt;/p&amp;gt;
 
@@ -1175,6 +1166,15 @@ Drew&amp;lt;/p&amp;gt;
       <pubDate>Sun, 18 Jul 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/</guid>
       <link>http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/</link>
+    </item>
+    <item>
+      <title>Vimcasts on vacation</title>
+      <description>&amp;lt;p&amp;gt;I&amp;amp;#8217;m going to be taking a short break from Vimcasts to travel around India and Indonesia. I&amp;amp;#8217;ll be back in September, and a new season of Vimcasts will follow. If you&amp;amp;#8217;re eager to see more episodes, please show your support by leaving a tip - you can &amp;lt;a href=&amp;quot;http://vimcasts.org/tipjar&amp;quot;&amp;gt;donate with paypal&amp;lt;/a&amp;gt;, or &amp;lt;a href=&amp;quot;http://vimcasts.org/blog/2010/07/vimcasts-adopts-flattr-for-micropayments/&amp;quot;&amp;gt;flattr me&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;</description>
+      <pubDate>Sun, 18 Jul 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2010/07/vimcasts-on-vacation/</guid>
+      <link>http://vimcasts.org/announcements/2010/07/vimcasts-on-vacation/</link>
     </item>
     <item>
       <title>Converting HAML to ERB with Vim macros</title>

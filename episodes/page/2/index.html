@@ -16,7 +16,7 @@
   <div class="off-canvas-wrap">
     <div class="inner-wrap">
 
-      <div class="top-bar-underlay">hey</div>
+      <div class="top-bar-underlay"></div>
 
       <div class="row">
         <nav class="top-bar show-for-large-up" data-topbar>
@@ -114,131 +114,342 @@
           </div>
         </div>
 
-        <h1>Episodes of Vimcasts</h1>
+        <div class="row">
+  <div class="small-12 columns">
 
-  <section class="episode">
-    <h2><a href="/episodes/meet-the-yank-register/">Meet the yank register</a></h2>
-    <div class="episode_number"><small>#</small>52</div>
-    <time datetime="2013-09-30">Sep 30, 2013</time>
+    
+      
+<section class="screencast">
+  <h3><a href="/episodes/creating-mappings-that-accept-a-count/">Creating mappings that accept a count</a></h3>
 
-    <p>Vim's default register is not a safe place to keep yanked text that you want to paste later. It's all too easy to clobber the default register with a <code>d</code> or <code>x</code> command. Luckily, the last yanked text is kept safe in Vim's <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0">yank register</a>.</p>
-
-<p>
-    <a href="/episodes/meet-the-yank-register/">Continue reading&hellip;</a>
-
-  </section>
-  <section class="episode">
-    <h2><a href="/episodes/simple-operations-using-the-default-register/">Simple operations using the default register</a></h2>
-    <div class="episode_number"><small>#</small>51</div>
-    <time datetime="2013-09-27">Sep 27, 2013</time>
-
-    <p>Vim's <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote">default register</a> makes it easy to perform some of the most basic types of cut, copy, and paste operations. That's partly thanks to the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#p"><code>p</code></a> command, which behaves differently depending on whether the default register contains a characterwise or linewise region of text.</p>
-
-<p>
-    <a href="/episodes/simple-operations-using-the-default-register/">Continue reading&hellip;</a>
-
-  </section>
-  <section class="episode">
-    <h2><a href="/episodes/an-introduction-to-vspec/">An introduction to vspec</a></h2>
-    <div class="episode_number"><small>#</small>50</div>
-    <time datetime="2013-06-17">Jun 17, 2013</time>
-
-    <p><a href="https://github.com/kana/vim-vspec">Vspec</a> is a library that allows you to test-drive your Vimscript code. In this tutorial, we'll cover the basics: how to inspect the contents of a buffer, how to simulate the actions of a user, and how to invoke user-defined mappings.</p>
-
-<p>
-    <a href="/episodes/an-introduction-to-vspec/">Continue reading&hellip;</a>
-
-  </section>
-  <section class="episode">
-    <h2><a href="/episodes/enhanced-abbreviations-with-abolish/">Enhanced abbreviations with :Abolish</a></h2>
-    <div class="episode_number"><small>#</small>49</div>
-    <time datetime="2013-04-29">Apr 29, 2013</time>
-
-    <p>Vim's built-in abbreviation feature is handy if you want to auto-correct words that you frequently misspell, but it requires a lot of setup. The <code>:Abolish</code> command makes it easy to generate abbreviations that will correct multiple forms of the same word.</p>
-
-<p><em>This is the final of a three-part series on Tim Pope’s <a href="https://github.com/tpope/vim-abolish">abolish</a> plugin.</em></p>
-
-<p>
-    <a href="/episodes/enhanced-abbreviations-with-abolish/">Continue reading&hellip;</a>
-
-  </section>
-  <section class="episode">
-    <h2><a href="/episodes/supercharged-substitution-with-subvert/">Supercharged substitution with :Subvert</a></h2>
-    <div class="episode_number"><small>#</small>48</div>
-    <time datetime="2013-04-22">Apr 22, 2013</time>
-
-    <p>The <a href="https://github.com/tpope/vim-abolish">abolish plugin</a> provides a command called <code>:Subvert</code>, which is like a supercharged version of Vim's built-in <code>:substitute</code> command. The <code>:Subvert</code> command is especially useful for changing singular and plural variants of a word, and for refactoring names that appear in <code>snake_case</code> and <code>MixedCase</code>.</p>
-
-<p><em>This is part two of a three-part series on Tim Pope's <a href="https://github.com/tpope/vim-abolish">abolish</a> plugin.</em></p>
-
-<p>
-    <a href="/episodes/supercharged-substitution-with-subvert/">Continue reading&hellip;</a>
-
-  </section>
-  <section class="episode">
-    <h2><a href="/episodes/smart-search-with-subvert/">Smart search with :Subvert</a></h2>
-    <div class="episode_number"><small>#</small>47</div>
-    <time datetime="2013-04-12">Apr 12, 2013</time>
-
-    <p>The <code>:Subvert</code> command lets us create a particular style of regular expressions with ease. It's great for matching irregular singular and plural words in plain English and also for variable names that come in <code>snake_case</code> and <code>MixedCase</code> forms.</p>
-
-<p><em>This is part one of a three-part series on Tim Pope's abolish plugin.</em></p>
-
-<p>
-    <a href="/episodes/smart-search-with-subvert/">Continue reading&hellip;</a>
-
-  </section>
-  <section class="episode">
-    <h2><a href="/episodes/search-for-the-selected-text/">Search for the selected text</a></h2>
-    <div class="episode_number"><small>#</small>46</div>
-    <time datetime="2013-03-25">Mar 25, 2013</time>
-
-    <p><a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#star">The <code>*</code> command</a> searches for the word under the cursor. That makes sense in Normal mode, but from Visual mode it would be more useful if the star command searched for the current <em>selection</em>, rather than the current word. We can add this feature to Vim using the <a href="https://github.com/nelstrom/vim-visual-star-search">visual star search plugin</a>.</p>
-
-<p>
-    <a href="/episodes/search-for-the-selected-text/">Continue reading&hellip;</a>
-
-  </section>
-  <section class="episode">
-    <h2><a href="/episodes/project-wide-find-and-replace/">Project-wide find and replace</a></h2>
-    <div class="episode_number"><small>#</small>45</div>
-    <time datetime="2013-03-19">Mar 19, 2013</time>
-
-    <p>Vim doesn't have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as <code>:substitute</code>, <code>:argdo</code>, and <code>:vimgrep</code>. We'll look at two possible strategies: first using the arglist, then the quickfix list.</p>
-
-<p>
-    <a href="/episodes/project-wide-find-and-replace/">Continue reading&hellip;</a>
-
-  </section>
-  <section class="episode">
-    <h2><a href="/episodes/search-multiple-files-with-vimgrep/">Search multiple files with :vimgrep</a></h2>
-    <div class="episode_number"><small>#</small>44</div>
-    <time datetime="2013-03-01">Mar 01, 2013</time>
-
-    <p><code>vimgrep</code> is Vim's built-in command for searching across multiple files. It's not so fast as external tools like ack and git-grep, but it has its uses. <code>vimgrep</code> uses Vim's built-in regex engine, so you can reuse the patterns that work with Vim's standard search command. </p>
-
-<p>
-    <a href="/episodes/search-multiple-files-with-vimgrep/">Continue reading&hellip;</a>
-
-  </section>
-  <section class="episode">
-    <h2><a href="/episodes/using-argdo-to-change-multiple-files/">Using :argdo to change multiple files</a></h2>
-    <div class="episode_number"><small>#</small>43</div>
-    <time datetime="2013-02-25">Feb 25, 2013</time>
-
-    <p>The <code>:argdo</code> command allows us to execute an Ex command across all buffers in the arglist.  To demonstrate, we'll use the example of running the <code>:substitute</code> command across multiple files, then we'll see how to revert or save the changes.  We'll also compare the <code>:argdo</code> and <code>:bufdo</code> commands, and consider when it's appropriate to use each one.</p>
-
-<p>
-    <a href="/episodes/using-argdo-to-change-multiple-files/">Continue reading&hellip;</a>
-
-  </section>
+  <span>Feb  6, 2014</span>
 
   
-    <p><a href="/episodes/">Prev page</a></p>
+    <div class="episode_number">
+      <small>#</small>62
+  </div>
+
+<span class="article-type">
+  screencast
+</span>
+
+
+<p>Lots of Vim's built-in Normal mode commands can be executed multiple times by prefixing them with a count. User-defined Normal mode mappings don't usually handle counts the way we might like them to. We'll explore a couple of techniques for making our custom mappings respond predictably to a count.</p>
+
+<p>
+<a href="/episodes/creating-mappings-that-accept-a-count/">  
+    Watch screencast
   
+</a>
+
+</section>
+
+    
+      
+<section class="screencast">
+  <h3><a href="/episodes/creating-repeatable-mappings-with-repeat-vim/">Creating repeatable mappings with repeat.vim</a></h3>
+
+  <span>Jan 21, 2014</span>
+
   
-    <p><a href="/episodes/page/3/">Next page</a></p>
+    <div class="episode_number">
+      <small>#</small>61
+  </div>
+
+<span class="article-type">
+  screencast
+</span>
+
+
+<p>The dot command is my all-time favorite Vim trick: it tells Vim to repeat the last change. But the dot command tends not to work well with user-defined mappings. In this episode, we'll use repeat.vim to set up a simple mapping so that it can be repeated using the dot command.</p>
+
+<p>
+<a href="/episodes/creating-repeatable-mappings-with-repeat-vim/">  
+    Watch screencast
   
+</a>
+
+</section>
+
+    
+      
+<section class="screencast">
+  <h3><a href="/episodes/comparing-buffers-with-vimdiff/">Comparing buffers with vimdiff</a></h3>
+
+  <span>Jan 15, 2014</span>
+
+  
+    <div class="episode_number">
+      <small>#</small>60
+  </div>
+
+<span class="article-type">
+  screencast
+</span>
+
+
+<p>Vim's diff mode allows us to easily compare the contents of two (or more) buffers. We can start Vim in diff mode using the <code>vimdiff</code> command, or if Vim is already running we can switch to diff mode using the <code>:diffthis</code> command. The beauty of the <code>:diffthis</code> command is that it works with unnamed buffers, whereas <code>vimdiff</code> can only work with files.</p>
+
+<p>
+<a href="/episodes/comparing-buffers-with-vimdiff/">  
+    Watch screencast
+  
+</a>
+
+</section>
+
+    
+      
+<section class="screencast">
+  <h3><a href="/episodes/using-vims-paste-mode-with-the-system-paste-command/">Using Vim's paste mode with the system paste command</a></h3>
+
+  <span>Nov 15, 2013</span>
+
+  
+    <div class="episode_number">
+      <small>#</small>59
+  </div>
+
+<span class="article-type">
+  screencast
+</span>
+
+  <div class="article-tags">
+    <p>
+    
+      Tagged with:
+      <a href="/categories/registers">registers</a>, <a href="/categories/copy-and-paste">copy-and-paste</a>
+    
+    </p>
+  </div>
+
+<p>When Vim is compiled without the <code>+clipboard</code> feature, we can still insert text from the clipboard using the system paste command (<code>ctrl-v</code> or <code>cmd-v</code>). This can produce strange effects, but we can avoid them by toggling the <code>paste</code> option each time we use the system paste command.</p>
+
+<p>
+<a href="/episodes/using-vims-paste-mode-with-the-system-paste-command/">  
+    Watch screencast
+  
+</a>
+
+</section>
+
+    
+      
+<section class="screencast">
+  <h3><a href="/episodes/accessing-the-system-clipboard-from-vim/">Accessing the system clipboard from Vim</a></h3>
+
+  <span>Nov 11, 2013</span>
+
+  
+    <div class="episode_number">
+      <small>#</small>58
+  </div>
+
+<span class="article-type">
+  screencast
+</span>
+
+  <div class="article-tags">
+    <p>
+    
+      Tagged with:
+      <a href="/categories/registers">registers</a>, <a href="/categories/copy-and-paste">copy-and-paste</a>
+    
+    </p>
+  </div>
+
+<p>In some environments, Vim lets us access the system clipboard using the quoteplus register, <code>"+</code>. When this feature is enabled, we can use it with the delete, yank and put operations in much the same way that we use Vim's other registers. Pasting from this register usually produces better results than using the system paste command in Insert mode.</p>
+
+<p>
+<a href="/episodes/accessing-the-system-clipboard-from-vim/">  
+    Watch screencast
+  
+</a>
+
+</section>
+
+    
+      
+<section class="screencast">
+  <h3><a href="/episodes/evaluating-scripts-with-vims-expression-register/">Evaluating scripts with Vim's expression register</a></h3>
+
+  <span>Oct 21, 2013</span>
+
+  
+    <div class="episode_number">
+      <small>#</small>57
+  </div>
+
+<span class="article-type">
+  screencast
+</span>
+
+  <div class="article-tags">
+    <p>
+    
+      Tagged with:
+      <a href="/categories/registers">registers</a>, <a href="/categories/expression-register">expression-register</a>, <a href="/categories/insert-mode">insert-mode</a>, <a href="/categories/cmdline-mode">cmdline-mode</a>
+    
+    </p>
+  </div>
+
+<p>In <a href="/e/56">the previous lesson</a> we learned how use the expression register to evaluate simple calculations. We can also call built-in and user-defined Vimscript functions, and thanks to the <code>system()</code> function, we can also fetch output from external scripts.</p>
+
+<p>
+<a href="/episodes/evaluating-scripts-with-vims-expression-register/">  
+    Watch screencast
+  
+</a>
+
+</section>
+
+    
+      
+<section class="screencast">
+  <h3><a href="/episodes/simple-calculations-with-vims-expression-register/">Simple calculations with Vim's expression register</a></h3>
+
+  <span>Oct 16, 2013</span>
+
+  
+    <div class="episode_number">
+      <small>#</small>56
+  </div>
+
+<span class="article-type">
+  screencast
+</span>
+
+  <div class="article-tags">
+    <p>
+    
+      Tagged with:
+      <a href="/categories/registers">registers</a>, <a href="/categories/expression-register">expression-register</a>, <a href="/categories/insert-mode">insert-mode</a>, <a href="/categories/cmdline-mode">cmdline-mode</a>
+    
+    </p>
+  </div>
+
+<p>The <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote=">expression register</a> lets us evaluate a snippet of Vimscript code. This is handy when you need to perform simple calculations and insert the result into the document.</p>
+
+<p>
+<a href="/episodes/simple-calculations-with-vims-expression-register/">  
+    Watch screencast
+  
+</a>
+
+</section>
+
+    
+      
+<section class="screencast">
+  <h3><a href="/episodes/pasting-from-insert-mode/">Pasting from Insert mode</a></h3>
+
+  <span>Oct 11, 2013</span>
+
+  
+    <div class="episode_number">
+      <small>#</small>55
+  </div>
+
+<span class="article-type">
+  screencast
+</span>
+
+  <div class="article-tags">
+    <p>
+    
+      Tagged with:
+      <a href="/categories/registers">registers</a>, <a href="/categories/copy-and-paste">copy-and-paste</a>, <a href="/categories/insert-mode">insert-mode</a>
+    
+    </p>
+  </div>
+
+<p>We don't have to be in Normal mode to paste the contents of a register. The <a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r"><code>&lt;C-r&gt;{reg}</code></a> command lets us paste a register from Insert mode (and it <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-r">works in commandline mode too</a>!) Using this command allows us to make changes that can be repeated with <a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#.">the dot command</a>.</p>
+
+<p>
+<a href="/episodes/pasting-from-insert-mode/">  
+    Watch screencast
+  
+</a>
+
+</section>
+
+    
+      
+<section class="screencast">
+  <h3><a href="/episodes/pasting-from-visual-mode/">Pasting from Visual mode</a></h3>
+
+  <span>Oct  7, 2013</span>
+
+  
+    <div class="episode_number">
+      <small>#</small>54
+  </div>
+
+<span class="article-type">
+  screencast
+</span>
+
+  <div class="article-tags">
+    <p>
+    
+      Tagged with:
+      <a href="/categories/registers">registers</a>, <a href="/categories/copy-and-paste">copy-and-paste</a>, <a href="/categories/visual-mode">visual-mode</a>
+    
+    </p>
+  </div>
+
+<p>When used <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#v_p">in Visual mode the <code>p</code> command</a> replaces the selection with the contents of a register. This makes for a smooth workflow when you want to overwrite a selection, or swap the order of two regions of text.</p>
+
+<p>
+<a href="/episodes/pasting-from-visual-mode/">  
+    Watch screencast
+  
+</a>
+
+</section>
+
+    
+      
+<section class="screencast">
+  <h3><a href="/episodes/using-vims-named-registers/">Using Vim's named registers</a></h3>
+
+  <span>Oct  4, 2013</span>
+
+  
+    <div class="episode_number">
+      <small>#</small>53
+  </div>
+
+<span class="article-type">
+  screencast
+</span>
+
+  <div class="article-tags">
+    <p>
+    
+      Tagged with:
+      <a href="/categories/registers">registers</a>, <a href="/categories/copy-and-paste">copy-and-paste</a>
+    
+    </p>
+  </div>
+
+<p>We've met Vim's <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote">default register</a> and the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0">yank register</a>. This time, we're going to look at the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote_alpha">named registers</a>, which are handy if you want to cut or copy some text that you intend to paste multiple times.</p>
+
+<p>
+<a href="/episodes/using-vims-named-registers/">  
+    Watch screencast
+  
+</a>
+
+</section>
+
+    
+
+    
+
+  </div>
+</div>
+
 
       </section>
 

@@ -16,7 +16,7 @@
   <div class="off-canvas-wrap">
     <div class="inner-wrap">
 
-      <div class="top-bar-underlay">hey</div>
+      <div class="top-bar-underlay"></div>
 
       <div class="row">
         <nav class="top-bar show-for-large-up" data-topbar>
@@ -114,131 +114,342 @@
           </div>
         </div>
 
-        <h1>Episodes of Vimcasts</h1>
+        <div class="row">
+  <div class="small-12 columns">
 
-  <section class="episode">
-    <h2><a href="/episodes/populating-the-arglist/">Populating the arglist</a></h2>
-    <div class="episode_number"><small>#</small>42</div>
-    <time datetime="2013-02-22">Feb 22, 2013</time>
+    
+      
+<section class="screencast">
+  <h3><a href="/episodes/creating-mappings-that-accept-a-count/">Creating mappings that accept a count</a></h3>
 
-    <p>The arglist wouldn't be much use if we had to quit and relaunch Vim every time we wanted to change its contents. In this episode, we'll learn how to set the contents of the arglist using the <code>:args</code> command, which can receive filepaths, globs, or even backtick expressions.</p>
-
-<p>
-    <a href="/episodes/populating-the-arglist/">Continue reading&hellip;</a>
-
-  </section>
-  <section class="episode">
-    <h2><a href="/episodes/meet-the-arglist/">Meet the arglist</a></h2>
-    <div class="episode_number"><small>#</small>41</div>
-    <time datetime="2013-02-19">Feb 19, 2013</time>
-
-    <p>The arglist feature complements Vim's buffer list. In this episode, we'll learn a handful of commands for traversing the arglist. We'll see that it's useful to think of the arglist as a stable subset of the files in the buffer list.</p>
-
-<p>
-    <a href="/episodes/meet-the-arglist/">Continue reading&hellip;</a>
-
-  </section>
-  <section class="episode">
-    <h2><a href="/episodes/long-range-line-duplication/">Long-range line duplication</a></h2>
-    <div class="episode_number"><small>#</small>40</div>
-    <time datetime="2013-01-09">Jan 09, 2013</time>
-
-    <p>When writing code, we can often save time by duplicating a line then changing one or two parts of that line to make it suit our purposes. In this episode, we'll compare a few techniques for duplicating lines, and we'll see that the <code>:copy</code> Ex command is well suited to this task.</p>
-
-<p>
-    <a href="/episodes/long-range-line-duplication/">Continue reading&hellip;</a>
-
-  </section>
-  <section class="episode">
-    <h2><a href="/episodes/profiling-vimscript-performance/">Profiling Vimscript performance</a></h2>
-    <div class="episode_number"><small>#</small>39</div>
-    <time datetime="2012-12-03">Dec 03, 2012</time>
-
-    <p>Vim users are unforgiving of plugins that impair performance. Luckily, Vim provides built-in profiling tools that make it easy to diagnose performance issues. We'll start by looking at how to profile the vimrc file, then move on to a real world scenario where profiling helped to identify and aleviate a performance bottleneck.</p>
-
-<p>
-    <a href="/episodes/profiling-vimscript-performance/">Continue reading&hellip;</a>
-
-  </section>
-  <section class="episode">
-    <h2><a href="/episodes/writing-a-custom-fold-expression/">Writing a custom fold expression</a></h2>
-    <div class="episode_number"><small>#</small>38</div>
-    <time datetime="2012-11-26">Nov 26, 2012</time>
-
-    <p>With a little bit of Vimscript, you can create a custom folding expression for any filetype. We'll start by looking at the mechanics of folding with markers, then go on to create a folding expression for markdown documents.</p>
-
-<p>
-    <a href="/episodes/writing-a-custom-fold-expression/">Continue reading&hellip;</a>
-
-  </section>
-  <section class="episode">
-    <h2><a href="/episodes/how-to-fold/">How to fold</a></h2>
-    <div class="episode_number"><small>#</small>37</div>
-    <time datetime="2012-11-19">Nov 19, 2012</time>
-
-    <p>Vim's folding feature enables us to expand and collapse regions of a document. Not only does this allow us to organize our workspace, it also makes it easy to navigate around the document, and to rearrange entire sections as though they were single lines.</p>
-
-<p>
-    <a href="/episodes/how-to-fold/">Continue reading&hellip;</a>
-
-  </section>
-  <section class="episode">
-    <h2><a href="/episodes/vimgolf-prime-numbers/">VimGolf - Prime Numbers</a></h2>
-    <div class="episode_number"><small>#</small>36</div>
-    <time datetime="2012-08-10">Aug 10, 2012</time>
-
-    <p>For the VimGolf challenge <a href="http://vimgolf.com/challenges/4d1c27940e3d7832db000010">"List the first 100 prime numbers"</a>, there's a solution that uses a regular expression to detect prime numbers. At 43 keystokes, it's not the winning solution, but I think it's the most interesting one. It uses a few clever Vim tricks, including macros, control-a to increment, the very magic pattern switch, and the <code>:global</code> command. There's a lot to learn from those 43 keystrokes, so let's study it!</p>
-
-<p>
-    <a href="/episodes/vimgolf-prime-numbers/">Continue reading&hellip;</a>
-
-  </section>
-  <section class="episode">
-    <h2><a href="/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/">Fugitive.vim - exploring the history of a git repository</a></h2>
-    <div class="episode_number"><small>#</small>35</div>
-    <time datetime="2011-05-18">May 18, 2011</time>
-
-    <p>Git provides tools for searching the contents of files, commit messages, and even whether text was added or removed by a commit. In this episode, we'll see how fugitive's <code>Ggrep</code> and <code>Glog</code> commands wrap this functionality up so that we can search the contents and history of a git repo from right inside of Vim.</p>
-
-<p><em>This is the last of our five part series on fugitive.vim.</em></p>
-
-<p>
-    <a href="/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/">Continue reading&hellip;</a>
-
-  </section>
-  <section class="episode">
-    <h2><a href="/episodes/fugitive-vim-browsing-the-git-object-database/">Fugitive.vim - browsing the git object database</a></h2>
-    <div class="episode_number"><small>#</small>34</div>
-    <time datetime="2011-05-13">May 13, 2011</time>
-
-    <p>With the fugitive plugin, you're not limited to just working with files in your working tree. The <code>:Gedit</code> command allows you to open files in other branches, and to browse any <a href="http://book.git-scm.com/1_the_git_object_model.html">git object</a>, including tags, commits and trees. Plus, if your repository is hosted on github, you can easily bring up the webpage for any git object using the <code>:Gbrowse</code> command.</p>
-
-<p><em>This is the penultimate of a five part series on fugitive.vim.</em></p>
-
-<p>
-    <a href="/episodes/fugitive-vim-browsing-the-git-object-database/">Continue reading&hellip;</a>
-
-  </section>
-  <section class="episode">
-    <h2><a href="/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/">Fugitive.vim - resolving merge conflicts with vimdiff</a></h2>
-    <div class="episode_number"><small>#</small>33</div>
-    <time datetime="2011-05-06">May 06, 2011</time>
-
-    <p>When git branches are merged, there is always the chance of a conflict arising if a file was modified in both the target and merge branches. You can resolve merge conflicts using a combination of fugitive's <code>:Gdiff</code> command, and Vim's built in <code>diffget</code> and <code>diffput</code>. In this episode, we'll find out how.</p>
-
-<p><em>This is the third in a five part series on fugitive.vim.</em></p>
-
-<p>
-    <a href="/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/">Continue reading&hellip;</a>
-
-  </section>
+  <span>Feb  6, 2014</span>
 
   
-    <p><a href="/episodes/page/2/">Prev page</a></p>
+    <div class="episode_number">
+      <small>#</small>62
+  </div>
+
+<span class="article-type">
+  screencast
+</span>
+
+
+<p>Lots of Vim's built-in Normal mode commands can be executed multiple times by prefixing them with a count. User-defined Normal mode mappings don't usually handle counts the way we might like them to. We'll explore a couple of techniques for making our custom mappings respond predictably to a count.</p>
+
+<p>
+<a href="/episodes/creating-mappings-that-accept-a-count/">  
+    Watch screencast
   
+</a>
+
+</section>
+
+    
+      
+<section class="screencast">
+  <h3><a href="/episodes/creating-repeatable-mappings-with-repeat-vim/">Creating repeatable mappings with repeat.vim</a></h3>
+
+  <span>Jan 21, 2014</span>
+
   
-    <p><a href="/episodes/page/4/">Next page</a></p>
+    <div class="episode_number">
+      <small>#</small>61
+  </div>
+
+<span class="article-type">
+  screencast
+</span>
+
+
+<p>The dot command is my all-time favorite Vim trick: it tells Vim to repeat the last change. But the dot command tends not to work well with user-defined mappings. In this episode, we'll use repeat.vim to set up a simple mapping so that it can be repeated using the dot command.</p>
+
+<p>
+<a href="/episodes/creating-repeatable-mappings-with-repeat-vim/">  
+    Watch screencast
   
+</a>
+
+</section>
+
+    
+      
+<section class="screencast">
+  <h3><a href="/episodes/comparing-buffers-with-vimdiff/">Comparing buffers with vimdiff</a></h3>
+
+  <span>Jan 15, 2014</span>
+
+  
+    <div class="episode_number">
+      <small>#</small>60
+  </div>
+
+<span class="article-type">
+  screencast
+</span>
+
+
+<p>Vim's diff mode allows us to easily compare the contents of two (or more) buffers. We can start Vim in diff mode using the <code>vimdiff</code> command, or if Vim is already running we can switch to diff mode using the <code>:diffthis</code> command. The beauty of the <code>:diffthis</code> command is that it works with unnamed buffers, whereas <code>vimdiff</code> can only work with files.</p>
+
+<p>
+<a href="/episodes/comparing-buffers-with-vimdiff/">  
+    Watch screencast
+  
+</a>
+
+</section>
+
+    
+      
+<section class="screencast">
+  <h3><a href="/episodes/using-vims-paste-mode-with-the-system-paste-command/">Using Vim's paste mode with the system paste command</a></h3>
+
+  <span>Nov 15, 2013</span>
+
+  
+    <div class="episode_number">
+      <small>#</small>59
+  </div>
+
+<span class="article-type">
+  screencast
+</span>
+
+  <div class="article-tags">
+    <p>
+    
+      Tagged with:
+      <a href="/categories/registers">registers</a>, <a href="/categories/copy-and-paste">copy-and-paste</a>
+    
+    </p>
+  </div>
+
+<p>When Vim is compiled without the <code>+clipboard</code> feature, we can still insert text from the clipboard using the system paste command (<code>ctrl-v</code> or <code>cmd-v</code>). This can produce strange effects, but we can avoid them by toggling the <code>paste</code> option each time we use the system paste command.</p>
+
+<p>
+<a href="/episodes/using-vims-paste-mode-with-the-system-paste-command/">  
+    Watch screencast
+  
+</a>
+
+</section>
+
+    
+      
+<section class="screencast">
+  <h3><a href="/episodes/accessing-the-system-clipboard-from-vim/">Accessing the system clipboard from Vim</a></h3>
+
+  <span>Nov 11, 2013</span>
+
+  
+    <div class="episode_number">
+      <small>#</small>58
+  </div>
+
+<span class="article-type">
+  screencast
+</span>
+
+  <div class="article-tags">
+    <p>
+    
+      Tagged with:
+      <a href="/categories/registers">registers</a>, <a href="/categories/copy-and-paste">copy-and-paste</a>
+    
+    </p>
+  </div>
+
+<p>In some environments, Vim lets us access the system clipboard using the quoteplus register, <code>"+</code>. When this feature is enabled, we can use it with the delete, yank and put operations in much the same way that we use Vim's other registers. Pasting from this register usually produces better results than using the system paste command in Insert mode.</p>
+
+<p>
+<a href="/episodes/accessing-the-system-clipboard-from-vim/">  
+    Watch screencast
+  
+</a>
+
+</section>
+
+    
+      
+<section class="screencast">
+  <h3><a href="/episodes/evaluating-scripts-with-vims-expression-register/">Evaluating scripts with Vim's expression register</a></h3>
+
+  <span>Oct 21, 2013</span>
+
+  
+    <div class="episode_number">
+      <small>#</small>57
+  </div>
+
+<span class="article-type">
+  screencast
+</span>
+
+  <div class="article-tags">
+    <p>
+    
+      Tagged with:
+      <a href="/categories/registers">registers</a>, <a href="/categories/expression-register">expression-register</a>, <a href="/categories/insert-mode">insert-mode</a>, <a href="/categories/cmdline-mode">cmdline-mode</a>
+    
+    </p>
+  </div>
+
+<p>In <a href="/e/56">the previous lesson</a> we learned how use the expression register to evaluate simple calculations. We can also call built-in and user-defined Vimscript functions, and thanks to the <code>system()</code> function, we can also fetch output from external scripts.</p>
+
+<p>
+<a href="/episodes/evaluating-scripts-with-vims-expression-register/">  
+    Watch screencast
+  
+</a>
+
+</section>
+
+    
+      
+<section class="screencast">
+  <h3><a href="/episodes/simple-calculations-with-vims-expression-register/">Simple calculations with Vim's expression register</a></h3>
+
+  <span>Oct 16, 2013</span>
+
+  
+    <div class="episode_number">
+      <small>#</small>56
+  </div>
+
+<span class="article-type">
+  screencast
+</span>
+
+  <div class="article-tags">
+    <p>
+    
+      Tagged with:
+      <a href="/categories/registers">registers</a>, <a href="/categories/expression-register">expression-register</a>, <a href="/categories/insert-mode">insert-mode</a>, <a href="/categories/cmdline-mode">cmdline-mode</a>
+    
+    </p>
+  </div>
+
+<p>The <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote=">expression register</a> lets us evaluate a snippet of Vimscript code. This is handy when you need to perform simple calculations and insert the result into the document.</p>
+
+<p>
+<a href="/episodes/simple-calculations-with-vims-expression-register/">  
+    Watch screencast
+  
+</a>
+
+</section>
+
+    
+      
+<section class="screencast">
+  <h3><a href="/episodes/pasting-from-insert-mode/">Pasting from Insert mode</a></h3>
+
+  <span>Oct 11, 2013</span>
+
+  
+    <div class="episode_number">
+      <small>#</small>55
+  </div>
+
+<span class="article-type">
+  screencast
+</span>
+
+  <div class="article-tags">
+    <p>
+    
+      Tagged with:
+      <a href="/categories/registers">registers</a>, <a href="/categories/copy-and-paste">copy-and-paste</a>, <a href="/categories/insert-mode">insert-mode</a>
+    
+    </p>
+  </div>
+
+<p>We don't have to be in Normal mode to paste the contents of a register. The <a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r"><code>&lt;C-r&gt;{reg}</code></a> command lets us paste a register from Insert mode (and it <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-r">works in commandline mode too</a>!) Using this command allows us to make changes that can be repeated with <a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#.">the dot command</a>.</p>
+
+<p>
+<a href="/episodes/pasting-from-insert-mode/">  
+    Watch screencast
+  
+</a>
+
+</section>
+
+    
+      
+<section class="screencast">
+  <h3><a href="/episodes/pasting-from-visual-mode/">Pasting from Visual mode</a></h3>
+
+  <span>Oct  7, 2013</span>
+
+  
+    <div class="episode_number">
+      <small>#</small>54
+  </div>
+
+<span class="article-type">
+  screencast
+</span>
+
+  <div class="article-tags">
+    <p>
+    
+      Tagged with:
+      <a href="/categories/registers">registers</a>, <a href="/categories/copy-and-paste">copy-and-paste</a>, <a href="/categories/visual-mode">visual-mode</a>
+    
+    </p>
+  </div>
+
+<p>When used <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#v_p">in Visual mode the <code>p</code> command</a> replaces the selection with the contents of a register. This makes for a smooth workflow when you want to overwrite a selection, or swap the order of two regions of text.</p>
+
+<p>
+<a href="/episodes/pasting-from-visual-mode/">  
+    Watch screencast
+  
+</a>
+
+</section>
+
+    
+      
+<section class="screencast">
+  <h3><a href="/episodes/using-vims-named-registers/">Using Vim's named registers</a></h3>
+
+  <span>Oct  4, 2013</span>
+
+  
+    <div class="episode_number">
+      <small>#</small>53
+  </div>
+
+<span class="article-type">
+  screencast
+</span>
+
+  <div class="article-tags">
+    <p>
+    
+      Tagged with:
+      <a href="/categories/registers">registers</a>, <a href="/categories/copy-and-paste">copy-and-paste</a>
+    
+    </p>
+  </div>
+
+<p>We've met Vim's <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote">default register</a> and the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0">yank register</a>. This time, we're going to look at the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote_alpha">named registers</a>, which are handy if you want to cut or copy some text that you intend to paste multiple times.</p>
+
+<p>
+<a href="/episodes/using-vims-named-registers/">  
+    Watch screencast
+  
+</a>
+
+</section>
+
+    
+
+    
+
+  </div>
+</div>
+
 
       </section>
 
