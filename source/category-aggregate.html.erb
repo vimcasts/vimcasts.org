@@ -1,8 +1,43 @@
-<h1>Articles tagged '<%= tagname %>'</h1>
+<div class="row">
+  <div class="small-12 columns">
+    <h2>Screencasts and articles tagged '<%= tagname %>'</h2>
 
-<ul>
-  <% aggregate_by_tag(tagname).each do |article| %>
-    <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
-  <% end %>
-</ul>
+    <% aggregate_by_tag(tagname).each do |article| %>
+      <section class="<%= article_type(article) %>">
+        <h3><%= link_to article.title, article %></h3>
 
+        <span><%= article.date.strftime('%b %e, %Y') %></span>
+
+        <% if article.data.number %>
+          <div class="episode_number">
+            <small>#</small><%= article.data.number %>
+          </div>
+        <% end %>
+
+        <span class="article-type">
+          <%= article_type(article) %>
+        </span>
+
+        <% if article.tags.size > 1 %>
+          <div class="article-tags">
+            <p>Also tagged with:
+            <%= link_to_article_tags(article, Array(tagname)) %>
+            </p>
+          </div>
+        <% end %>
+
+        <%= article.summary %>
+
+        <% link_to article do %>
+          <% if article.blog_options[:name] == "episodes" %>
+            Watch screencast
+          <% elsif article.blog_options[:name] == "blog" %>
+            Continue reading
+          <% end %>
+        <% end %>
+
+
+      </section>
+    <% end %>
+  </div>
+</div>

@@ -13,7 +13,7 @@ module Middleman
         tagged_articles = blogs.map { |name|
           blog(name).tags.fetch(tagname,[])
         }
-        tagged_articles.flatten.sort_by(&:date)
+        tagged_articles.flatten.sort_by(&:date).reverse
       end
 
       def minute_second(seconds)
