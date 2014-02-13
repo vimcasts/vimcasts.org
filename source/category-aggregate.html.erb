@@ -1,7 +1,7 @@
 <div class="row">
   <div class="small-12 columns">
     <h2>
-      <%= tag_stats(data.categories.select { |c| c["name"] == tagname }.first, " and ") %> tagged "<%= tagname %>"
+      <%= tag_stats(tagname, " and ") %> tagged &ldquo;<%= tagname %>&rdquo;
     </h2>
 
     <% aggregate_by_tag(tagname).each do |article| %>

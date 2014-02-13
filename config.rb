@@ -12,21 +12,26 @@ class Announcements < Middleman::Extension
     def announcement(name, now=Date.today)
       partial TemporalContent.get(name, now).partial_path
     end
+
     def number_of_core_vim_attendees
       data.has_key?(:core_vim) ? data.core_vim.alumni : '500'
     end
+
     def link_to_article_tags(article, reject=[])
       (article.tags - reject).map do |tag|
         link_to tag, "/categories/#{tag}"
       end.join(", ")
     end
+
     def article_type(article)
-        {
-          'blog' => 'article',
-          'episodes' => 'screencast'
-        }[article.blog_options[:name]]
+      {
+        'blog' => 'article',
+        'episodes' => 'screencast'
+      }[article.blog_options[:name]]
     end
+
     def tag_stats(tag, connector=", ")
+      tag = tag_details(tag) if tag.class == String
       [
         [:videos, 'video'],
         [:articles, 'article']
@@ -37,7 +42,12 @@ class Announcements < Middleman::Extension
       end.compact.join(connector)
     end
 
+    def tag_details(name)
+      data.categories.select { |c| c["name"] == name }.first
+    end
+
   end
+
 end
 ::Middleman::Extensions.register(:announcements, Announcements)
 
