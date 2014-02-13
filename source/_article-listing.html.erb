@@ -1,0 +1,43 @@
+<% current_tag ||= :not_specified %>
+
+<section class="<%= article_type(article) %>">
+  <h3><%= link_to article.title, article %></h3>
+
+  <span><%= article.date.strftime('%b %e, %Y') %></span>
+
+  <% if article.data.number %>
+    <div class="episode_number">
+      <small>#</small><%= article.data.number %>
+  </div>
+<% end %>
+
+<span class="article-type">
+  <%= article_type(article) %>
+</span>
+
+<% if article.tags.size > 1 %>
+  <div class="article-tags">
+    <p>
+    <% if current_tag == :not_specified %>
+      Tagged with:
+      <%= link_to_article_tags(article) %>
+    <% else %>
+      Also tagged with:
+      <%= link_to_article_tags(article, Array(current_tag)) %>
+    <% end %>
+    </p>
+  </div>
+<% end %>
+
+<%= article.summary %>
+
+<% link_to article do %>
+  <% if article.blog_options[:name] == "episodes" %>
+    Watch screencast
+  <% elsif article.blog_options[:name] == "blog" %>
+    Continue reading
+  <% end %>
+<% end %>
+
+
+</section>
