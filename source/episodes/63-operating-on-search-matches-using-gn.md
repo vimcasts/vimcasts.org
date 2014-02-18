@@ -12,6 +12,7 @@
   :url: http://media.vimcasts.org/videos/63/gn-command.m4v
   :size: 10070454
 :tags: visual-mode, search, repeat, regex
+:layout: episode
 ---
 
 The `gn` command (introduced in Vim 7.4) makes it easy to operate on regions of text that match the current search pattern. It's especially useful when used with a regex that matches text regions of variable length.

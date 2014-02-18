@@ -12,6 +12,7 @@
   :url: http://media.vimcasts.org/videos/53/named-registers.m4v
   :size: 9269387
 :tags: registers, copy-and-paste
+:layout: episode
 ---
 
 We've met Vim's [default register][quotequote] and the [yank register][quote0]. This time, we're going to look at the [named registers][quote_alpha], which are handy if you want to cut or copy some text that you intend to paste multiple times.

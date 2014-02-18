@@ -12,6 +12,7 @@
   :url: http://media.vimcasts.org/videos/47/abolish-search.m4v
   :size: 12868646
 :tags: search, regex, plugins, vim-abolish
+:layout: episode
 ---
 
 The `:Subvert` command lets us create a particular style of regular expressions with ease. It's great for matching irregular singular and plural words in plain English and also for variable names that come in `snake_case` and `MixedCase` forms.

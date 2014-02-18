@@ -12,6 +12,7 @@
   :url: http://media.vimcasts.org/videos/23/haml_to_erb.m4v
   :size: 16722383
 :tags: macros, showcase
+:layout: episode
 ---
 
 HAML and ERB are two commonly used ruby templating languages. You may have a strong preference for one or the other, but it's not always up to you which one you use. I was recently asked to convert several HAML files to ERB format. In this episode, I will demonstrate a couple of Vim macros that helped make short work of the task. 

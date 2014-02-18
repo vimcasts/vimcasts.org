@@ -12,6 +12,7 @@
   :url: http://media.vimcasts.org/videos/1/show_invisibles.m4v
   :size: 5281290
 :tags: whitespace
+:layout: episode
 ---
 
 Vim's `list` feature can be used to reveal hidden characters, such as tabstops and newlines. In this episode, I demonstrate how to customise the appearance of these characters by tweaking the `listchars` setting. I go on to show how to make these invisible characters blend in with your colortheme.

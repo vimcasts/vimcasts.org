@@ -12,6 +12,7 @@
   :url: http://media.vimcasts.org/videos/34/fugitive_4.m4v
   :size: 28148709
 :tags: plugins, fugitive, git, workflow
+:layout: episode
 ---
 
 With the fugitive plugin, you're not limited to just working with files in your working tree. The `:Gedit` command allows you to open files in other branches, and to browse any [git object][gito], including tags, commits and trees. Plus, if your repository is hosted on github, you can easily bring up the webpage for any git object using the `:Gbrowse` command.

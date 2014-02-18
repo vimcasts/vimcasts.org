@@ -12,6 +12,7 @@
   :url: http://media.vimcasts.org/videos/57/eval-register.m4v
   :size: 9991201
 :tags: registers, expression-register, insert-mode, cmdline-mode
+:layout: episode
 ---
 
 In [the previous lesson][previous] we learned how use the expression register to evaluate simple calculations. We can also call built-in and user-defined Vimscript functions, and thanks to the `system()` function, we can also fetch output from external scripts.

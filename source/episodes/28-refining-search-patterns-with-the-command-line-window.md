@@ -12,6 +12,7 @@
   :url: http://media.vimcasts.org/videos/28/commandline_window.m4v
   :size: 14088176
 :tags: search, regex, workflow
+:layout: episode
 ---
 
 When you need to build a complex command, or devise a non-trivial search pattern, Vim's command-line mode can be rather limiting. In this episode, I will introduce the command-line window, which allows you to use the full power of Vim when editing search queries and commands.

@@ -12,6 +12,7 @@
   :url: http://media.vimcasts.org/videos/45/project_substitute.m4v
   :size: 13422810
 :tags: arglist, vimgrep, search, workflow
+:layout: episode
 ---
 
 Vim doesn't have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as `:substitute`, `:argdo`, and `:vimgrep`. We'll look at two possible strategies: first using the arglist, then the quickfix list.

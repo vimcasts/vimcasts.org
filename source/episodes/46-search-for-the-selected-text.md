@@ -12,6 +12,7 @@
   :url: http://media.vimcasts.org/videos/46/visual_star.m4v
   :size: 9876149
 :tags: search, regex
+:layout: episode
 ---
 
 [The `*` command][star] searches for the word under the cursor. That makes sense in Normal mode, but from Visual mode it would be more useful if the star command searched for the current *selection*, rather than the current word. We can add this feature to Vim using the [visual star search plugin][visual-star].

@@ -12,6 +12,7 @@
   :url: http://media.vimcasts.org/videos/48/abolish-substitute.m4v
   :size: 17311862
 :tags: search, regex, plugins, substitution, vim-abolish
+:layout: episode
 ---
 
 The [abolish plugin][abolish] provides a command called `:Subvert`, which is like a supercharged version of Vim's built-in `:substitute` command. The `:Subvert` command is especially useful for changing singular and plural variants of a word, and for refactoring names that appear in `snake_case` and `MixedCase`.

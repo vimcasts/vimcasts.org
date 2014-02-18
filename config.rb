@@ -85,8 +85,6 @@ activate :blog do |blog|
   blog.tag_template = "category.html"
 end
 
-page "/episodes/*", layout: "episode"
-
 activate :blog do |blog|
   blog.name = "announcements"
   blog.prefix = "announcements"

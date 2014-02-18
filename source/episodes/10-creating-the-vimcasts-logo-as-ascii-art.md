@@ -12,6 +12,7 @@
   :url: http://media.vimcasts.org/videos/10/ascii_art.m4v
   :size: 8248003
 :tags: showcase
+:layout: episode
 ---
 
 Demonstrating miscellaneous tips and tricks gleaned whilst making an ASCII art version of the VimCasts.org logo. Learn how to duplicate lines, copy and paste with visual block mode, search and replace within a visual selection, and how to use macros.

@@ -12,6 +12,7 @@
   :url: http://media.vimcasts.org/videos/9/how_to_use_tabs.m4v
   :size: 9100037
 :tags: tabs, managing-workspace
+:layout: episode
 ---
 
 Vim's treatment of tabs is a little different than what you might be used to if you are coming from another editor. In this episode I demonstrate how Vim's tabs can be used to group split windows together. I also show how to use Vim's tabs like projects in TextMate, by setting a different working directory for each one.
