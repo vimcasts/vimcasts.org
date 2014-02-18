@@ -18,6 +18,12 @@
             <%= minute_second(current_page.data.duration) %>
           </time>
         </div>
+        <% if current_page.tags.size > 0 %>
+          <div class="video-tags">
+            Tagged with:
+            <%= link_to_article_tags(current_page) %>
+          </div>
+        <% end %>
       </header>
 
       <%= current_page.summary %>
