@@ -98,3 +98,7 @@ header {
   }
   li a { display: block; }
 }
+#video-placeholder {
+  margin-bottom: $header-bottom-margin * 5;
+  img { width: 100%; }
+}

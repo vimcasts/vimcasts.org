@@ -13,26 +13,32 @@
 
       <%= current_page.summary %>
 
-      <dl class="accordion" data-accordion>
-        <dd>
+      <div id="video-placeholder">
+        <img src='/images/posters/default.png'/>
+      </div>
+
+      <div class="show-for-small-only">
+        <dl class="accordion" data-accordion>
+          <dd>
           <a href="#shownotes">Shownotes</a>
           <div id="shownotes" class="content">
             <%= yield %>
           </div>
-        </dd>
-        <dd>
+          </dd>
+          <dd>
           <a href="#related">Related content</a>
           <div id="related" class="content">
             RELATED CONTENT
           </div>
-        </dd>
-        <dd>
+          </dd>
+          <dd>
           <a href="#comments">Comments</a>
           <div id="comments" class="content">
             COMMENTS GO HERE
           </div>
-        </dd>
-      </dl>
+          </dd>
+        </dl>
+      </div>
 
     </div>
   </div>
