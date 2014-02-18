@@ -6,9 +6,18 @@
 
       <header>
         <h2><%= current_page.title %></h2>
+        <div class="episode_number">
+          <small>#</small><%= current_page.data.number %>
+        </div>
         <time pubdate="pubdate" datetime="<%= current_page.date.strftime('%Y-%m-%e') %>">
           <%= current_page.date.strftime('%b %e, %Y') %>
         </time>
+        <div class="video-duration">
+          <%# http://wiki.whatwg.org/wiki/Time_element#duration %>
+          Run time: <time datetime="<%= minute_second_datetime(current_page.data.duration) %>">
+            <%= minute_second(current_page.data.duration) %>
+          </time>
+        </div>
       </header>
 
       <%= current_page.summary %>
