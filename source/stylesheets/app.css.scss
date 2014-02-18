@@ -98,7 +98,7 @@ header {
   }
   li a { display: block; }
 }
-#video-placeholder {
-  margin-bottom: $header-bottom-margin * 5;
-  img { width: 100%; }
+video {
+  margin-bottom: $header-bottom-margin * 2;
+  width: 100%;
 }

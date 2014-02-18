@@ -22,9 +22,12 @@
 
       <%= current_page.summary %>
 
-      <div id="video-placeholder">
-        <img src='<%= current_page.data.poster %>'/>
-      </div>
+      <video poster="<%= current_page.data.poster %>"
+        controls="controls" preload="none" class="placeholder"
+        id="episode_<%= current_page.data.number %>_placeholder">
+        <source src="<%= current_page.data.ogg["url"]%>" type="video/ogg" />
+        <source src="<%= current_page.data.quicktime["url"]%>" type="video/x-m4v" />
+      </video>
 
       <aside class="downloads">
         <ul class="inline-list">
@@ -44,10 +47,10 @@
 
       </ul>
 
-      <p>
-      View a <%= link_to 'transcript of the video',
-        transcript_for_episode(current_page.data.number) %>.
-      </p>
+        <p>
+          View a <%= link_to 'transcript of the video',
+          transcript_for_episode(current_page.data.number) %>.
+        </p>
       </aside>
 
       <div class="show-for-small-only">
