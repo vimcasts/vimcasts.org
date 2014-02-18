@@ -25,6 +25,9 @@ module Middleman
         sec = sec.to_s.rjust(2, '0')
         ["P#{min}M", "#{sec}S"].join(',')
       end
+      def transcript_for_episode(number)
+        "/transcripts/#{number}/en/"
+      end
     end
   end
   ::Middleman::Extensions.register(:aggregator, Aggregator)
