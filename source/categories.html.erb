@@ -26,6 +26,13 @@
     or browse by category:
     </p>
 
+
+<dl class="tabs" data-tab>
+  <dd class="active"><a href="#panel2-1">Most first</a></dd>
+  <dd><a href="#panel2-2">Alphabetical</a></dd>
+</dl>
+<div class="tabs-content">
+  <div class="content active" id="panel2-1">
     <ul class="category-list small-block-grid-2 medium-block-grid-3 large-block-grid-5">
       <% data.categories.each do |tag| %>
         <li>
@@ -38,6 +45,23 @@
         </li>
       <% end %>
     </ul>
+  </div>
+  <div class="content" id="panel2-2">
+    <ul class="category-list small-block-grid-2 medium-block-grid-3 large-block-grid-5">
+      <% data.categories.sort_by { |k| k["name"] }.each do |tag| %>
+        <li>
+          <% link_to "/categories/#{tag[:name]}" do %>
+            <h4><%= tag[:name] %></h4>
+            <p>
+              <%= tag_stats(tag) %>
+            </p>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
   </div>
 </div>
 
