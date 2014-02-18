@@ -26,6 +26,25 @@
         <img src='<%= current_page.data.poster %>'/>
       </div>
 
+      <aside class="downloads">
+        <ul class="inline-list">
+          <li>Download: </li>
+
+          <li class="ogg">
+          <% video = current_page.data.ogg %>
+          <a href="<%= video["url"] %>">OGG</a>
+          <span class="stats"><%= number_to_human_size(video["size"]) %></span>
+          </li>
+
+          <li class="quicktime">
+          <% video = current_page.data.quicktime %>
+          <a href="<%= video["url"] %>">Quicktime</a>
+          <span class="stats"><%= number_to_human_size(video["size"]) %></span>
+          </li>
+
+      </ul>
+      </aside>
+
       <div class="show-for-small-only">
         <dl class="accordion" data-accordion>
           <dd>
