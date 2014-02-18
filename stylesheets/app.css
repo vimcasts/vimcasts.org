@@ -6573,3 +6573,8 @@ header {
   /* line 99, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
   .category-list li a {
     display: block; }
+
+/* line 101, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+video {
+  margin-bottom: 1rem;
+  width: 100%; }
