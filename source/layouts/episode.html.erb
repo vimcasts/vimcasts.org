@@ -59,22 +59,20 @@
         </p>
       </aside>
 
-      <div class="show-for-small-only">
-        <dl class="accordion" data-accordion>
-          <dd>
-          <a href="#shownotes">Shownotes</a>
-          <div id="shownotes" class="content">
-            <%= yield %>
-          </div>
-          </dd>
-          <dd>
-          <a href="#comments">Comments</a>
-          <div id="comments" class="content">
-            COMMENTS GO HERE
-          </div>
-          </dd>
-        </dl>
-      </div>
+      <dl class="accordion" data-accordion>
+        <dd>
+        <a href="#shownotes">Shownotes</a>
+        <div id="shownotes" class="content">
+          <%= yield %>
+        </div>
+        </dd>
+        <dd>
+        <a href="#comments">Comments</a>
+        <div id="comments" class="content">
+          COMMENTS GO HERE
+        </div>
+        </dd>
+      </dl>
 
       <div>
         <p>
