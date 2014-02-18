@@ -1,3 +1,39 @@
 <% wrap_layout :layout do %>
-  <%= yield %>
+  <div class="row">
+    <div class="small-12 columns">
+
+      <%= partial "next-class" %>
+
+      <header>
+        <h2><%= current_page.title %></h2>
+        <time pubdate="pubdate" datetime="<%= current_page.date.strftime('%Y-%m-%e') %>">
+          <%= current_page.date.strftime('%b %e, %Y') %>
+        </time>
+      </header>
+
+      <%= current_page.summary %>
+
+      <dl class="accordion" data-accordion>
+        <dd>
+          <a href="#shownotes">Shownotes</a>
+          <div id="shownotes" class="content">
+            <%= yield %>
+          </div>
+        </dd>
+        <dd>
+          <a href="#related">Related content</a>
+          <div id="related" class="content">
+            RELATED CONTENT
+          </div>
+        </dd>
+        <dd>
+          <a href="#comments">Comments</a>
+          <div id="comments" class="content">
+            COMMENTS GO HERE
+          </div>
+        </dd>
+      </dl>
+
+    </div>
+  </div>
 <% end %>
