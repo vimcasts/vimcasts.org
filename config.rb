@@ -249,3 +249,9 @@ end
 
 # Uncomment next line to use Pry as a console
 # ready { binding.pry }
+
+ready do
+  blog(:blog).articles.each do |post|
+    page post.path, layout: 'blogpost'
+  end
+end
