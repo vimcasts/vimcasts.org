@@ -12,7 +12,6 @@
   :url: http://media.vimcasts.org/videos/27/sync_with_git.m4v
   :size: 22671155
 :tags: plugins, git, pathogen
-:layout: episode
 ---
 
 If you use Vim on muliple machines, it can be difficult to keep your configuration files synchronized across them. One solution is to put your dotfiles under version control. In this episode, I demonstrate how to keep your vimrc and plugins synchronized using git submodules and the pathogen plugin.

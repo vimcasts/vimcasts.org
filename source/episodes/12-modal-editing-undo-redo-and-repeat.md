@@ -12,7 +12,6 @@
   :url: http://media.vimcasts.org/videos/12/modal_editing.m4v
   :size: 5453158
 :tags: undo, repeat
-:layout: episode
 ---
 
 Vim's modal editing paradigm - the newbie killer - brings tremendous efficiency if only you can learn to work with it, rather than against it. This episode demonstrates how the undo and repeat commands can benefit from spending short bursts of time in insert mode. 

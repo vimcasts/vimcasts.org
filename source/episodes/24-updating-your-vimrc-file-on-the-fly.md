@@ -12,7 +12,6 @@
   :url: http://media.vimcasts.org/videos/24/vimrc_on_the_fly.m4v
   :size: 5769269
 :tags: vimrc, autocommands
-:layout: episode
 ---
 
 The vimrc file allows you to preserve your settings so that they are restored each time you launch Vim. But what if you want to update your vimrc file in the middle of an editing session? This episode demonstrates a couple of tricks that make it easy to customize Vim on the fly.

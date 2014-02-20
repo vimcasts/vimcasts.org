@@ -12,7 +12,6 @@
   :url: http://media.vimcasts.org/videos/4/tidying_whitespace.m4v
   :size: 5738520
 :tags: whitespace, editing-text, customizations
-:layout: episode
 ---
 
 This episode demonstrates a few techniques for tidying up whitespace.  First, it looks at how to convert between tabs and spaces. Then it shows how to strip trailing whitespace, and finally, how to remove blank lines from a file.

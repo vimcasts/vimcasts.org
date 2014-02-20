@@ -12,7 +12,6 @@
   :url: http://media.vimcasts.org/videos/60/vimdiff.m4v
   :size: 13194774
 :tags: vimdiff
-:layout: episode
 ---
 
 Vim's diff mode allows us to easily compare the contents of two (or more) buffers. We can start Vim in diff mode using the `vimdiff` command, or if Vim is already running we can switch to diff mode using the `:diffthis` command. The beauty of the `:diffthis` command is that it works with unnamed buffers, whereas `vimdiff` can only work with files.

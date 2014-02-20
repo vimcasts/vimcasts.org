@@ -12,7 +12,6 @@
   :url: http://media.vimcasts.org/videos/30/undo_tree.m4v
   :size: 12483269
 :tags: undo, change-history
-:layout: episode
 ---
 
 The undo command is almost universally available in software today. Being able to rollback unwanted changes can be a real timesaver. In most applications you can only go backwards and forwards linearly, but Vim keeps your changes in a tree structure, which means that you can retrieve edits from distant branches in your history. This episode will show you how.

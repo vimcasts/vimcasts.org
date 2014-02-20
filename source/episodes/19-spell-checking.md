@@ -12,7 +12,6 @@
   :url: http://media.vimcasts.org/videos/19/spell_checking.m4v
   :size: 16539933
 :tags: plaintext, wrapping
-:layout: episode
 ---
 
 Using a spell checker is a good habit to get into.  In this episode, I demonstrate how to use Vim's built in spell checking feature.

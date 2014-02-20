@@ -12,7 +12,6 @@
   :url: http://media.vimcasts.org/videos/17/hard_wrapping_text.m4v
   :size: 16752621
 :tags: plaintext, wrapping
-:layout: episode
 ---
 
 It is sometimes preferable to format text with hard wrapped lines, for example when writing emails in plaintext. Vim can apply this style of formatting for you. This episode shows some of the options which allow you to customize Vim's text formatting.

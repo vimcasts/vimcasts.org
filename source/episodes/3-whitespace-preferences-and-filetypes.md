@@ -12,7 +12,6 @@
   :url: http://media.vimcasts.org/videos/3/whitespace_preferences_and_filetypes.m4v
   :size: 6030738
 :tags: whitespace, autocommands, filetypes
-:layout: episode
 ---
 
 Different file types may require particular whitespace settings. For example, YAML files must be indented using spaces, whereas makefiles require indentation with tabs. These preferences can be specified by hooking into the `FileType` event with an autocommand.

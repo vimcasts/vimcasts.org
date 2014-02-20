@@ -251,7 +251,10 @@ end
 # ready { binding.pry }
 
 ready do
-  blog(:blog).articles.each do |post|
-    page post.path, layout: 'blogpost'
+  blog(:episodes).articles.each do |a|
+    page a.path, layout: 'episode'
+  end
+  blog(:blog).articles.each do |a|
+    page a.path, layout: 'blogpost'
   end
 end

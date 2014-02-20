@@ -12,7 +12,6 @@
   :url: http://media.vimcasts.org/videos/49/abolish-abbreviate.m4v
   :size: 8399568
 :tags: abbreviations, plugins, vim-abolish
-:layout: episode
 ---
 
 Vim's built-in abbreviation feature is handy if you want to auto-correct words that you frequently misspell, but it requires a lot of setup. The `:Abolish` command makes it easy to generate abbreviations that will correct multiple forms of the same word.

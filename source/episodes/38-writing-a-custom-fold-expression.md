@@ -12,7 +12,6 @@
   :url: http://media.vimcasts.org/videos/38/writing-a-foldexpr.m4v
   :size: 24983489
 :tags: folding
-:layout: episode
 ---
 
 With a little bit of Vimscript, you can create a custom folding expression for any filetype. We'll start by looking at the mechanics of folding with markers, then go on to create a folding expression for markdown documents.
