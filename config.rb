@@ -257,4 +257,7 @@ ready do
   blog(:blog).articles.each do |a|
     page a.path, layout: 'blogpost'
   end
+  blog(:announcements).articles.each do |a|
+    page a.path, layout: 'announcement'
+  end
 end
