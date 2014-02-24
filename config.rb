@@ -1,4 +1,5 @@
 require 'pry'
+require 'lib/episode'
 require 'lib/aggregator'
 activate :aggregator
 

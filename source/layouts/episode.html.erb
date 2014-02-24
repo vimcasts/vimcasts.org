@@ -1,3 +1,5 @@
+<% episode = Episode.new(current_page) %>
+
 <% wrap_layout :layout do %>
   <div class="row">
     <div class="small-12 columns">
@@ -28,7 +30,7 @@
 
       <%= current_page.summary %>
 
-      <video poster="<%= current_page.data.poster %>"
+      <video poster="<%= episode.poster_url %>"
         controls="controls" preload="none" class="placeholder"
         id="episode_<%= current_page.data.number %>_placeholder">
         <source src="<%= current_page.data.ogg["url"]%>" type="video/ogg" />
