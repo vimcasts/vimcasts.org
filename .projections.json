@@ -5,6 +5,9 @@
     "source/*": {
         "command": "index"
     },
+    "source/index.html.erb": {
+        "command": "index"
+    },
     "source/blog/*": {
         "command": "blog"
     },
