@@ -5,12 +5,6 @@
 :flattr_id: "1189004"
 :duration: 385
 :number: 45
-:ogg: 
-  :url: http://media.vimcasts.org/videos/45/project_substitute.ogv
-  :size: 8171536
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/45/project_substitute.m4v
-  :size: 13422810
 :tags: arglist, vimgrep, search, workflow
 ---
 

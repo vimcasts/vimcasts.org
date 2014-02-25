@@ -5,12 +5,6 @@
 :flattr_id: ""
 :duration: 269
 :number: 52
-:ogg: 
-  :url: http://media.vimcasts.org/videos/52/yank-register.ogv
-  :size: 5415333
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/52/yank-register.m4v
-  :size: 9394643
 :tags: registers, copy-and-paste
 ---
 

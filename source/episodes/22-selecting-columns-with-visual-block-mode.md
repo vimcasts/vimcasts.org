@@ -5,12 +5,6 @@
 :flattr_id: "31947"
 :duration: 261
 :number: 22
-:ogg: 
-  :url: http://media.vimcasts.org/videos/22/visual_block.ogv
-  :size: 5721437
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/22/visual_block.m4v
-  :size: 8418264
 :tags: visual-mode
 ---
 

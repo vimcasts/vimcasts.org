@@ -5,12 +5,6 @@
 :flattr_id: "1248431"
 :duration: 333
 :number: 47
-:ogg: 
-  :url: http://media.vimcasts.org/videos/47/abolish-search.ogv
-  :size: 6849844
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/47/abolish-search.m4v
-  :size: 12868646
 :tags: search, regex, plugins, vim-abolish
 ---
 

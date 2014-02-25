@@ -5,12 +5,6 @@
 :flattr_id: "31930"
 :duration: 197
 :number: 8
-:ogg: 
-  :url: http://media.vimcasts.org/videos/8/working_with_tabs.ogv
-  :size: 4805972
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/8/working_with_tabs.m4v
-  :size: 4395212
 :tags: tabs, managing-workspace
 ---
 

@@ -5,12 +5,6 @@
 :flattr_id: ""
 :duration: 275
 :number: 63
-:ogg: 
-  :url: http://media.vimcasts.org/videos/63/gn-command.ogv
-  :size: 6813065
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/63/gn-command.m4v
-  :size: 10070454
 :tags: visual-mode, search, repeat, regex
 ---
 

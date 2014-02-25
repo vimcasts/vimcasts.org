@@ -5,12 +5,6 @@
 :flattr_id: ""
 :duration: 265
 :number: 59
-:ogg: 
-  :url: http://media.vimcasts.org/videos/59/paste-option-toggle.ogv
-  :size: 5456772
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/59/paste-option-toggle.m4v
-  :size: 9844252
 :tags: registers, copy-and-paste
 ---
 

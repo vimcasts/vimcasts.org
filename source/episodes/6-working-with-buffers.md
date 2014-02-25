@@ -5,12 +5,6 @@
 :flattr_id: "31928"
 :duration: 208
 :number: 6
-:ogg: 
-  :url: http://media.vimcasts.org/videos/6/buffers_listed_and_hidden.ogv
-  :size: 4834378
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/6/buffers_listed_and_hidden.m4v
-  :size: 5715585
 :tags: buffers, managing-workspace
 ---
 

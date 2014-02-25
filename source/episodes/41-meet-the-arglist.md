@@ -5,12 +5,6 @@
 :flattr_id: "1143785"
 :duration: 297
 :number: 41
-:ogg: 
-  :url: http://media.vimcasts.org/videos/41/meet_arglist.ogv
-  :size: 6615244
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/41/meet_arglist.m4v
-  :size: 10102190
 :tags: arglist
 ---
 

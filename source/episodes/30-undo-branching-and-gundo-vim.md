@@ -5,12 +5,6 @@
 :flattr_id: "137468"
 :duration: 390
 :number: 30
-:ogg: 
-  :url: http://media.vimcasts.org/videos/30/undo_tree.ogv
-  :size: 9435598
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/30/undo_tree.m4v
-  :size: 12483269
 :tags: undo, change-history
 ---
 

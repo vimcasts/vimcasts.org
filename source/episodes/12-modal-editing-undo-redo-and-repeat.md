@@ -5,12 +5,6 @@
 :flattr_id: "31936"
 :duration: 326
 :number: 12
-:ogg: 
-  :url: http://media.vimcasts.org/videos/12/modal_editing.ogv
-  :size: 6943276
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/12/modal_editing.m4v
-  :size: 5453158
 :tags: undo, repeat
 ---
 

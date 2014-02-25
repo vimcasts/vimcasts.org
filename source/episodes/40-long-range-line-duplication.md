@@ -5,12 +5,6 @@
 :flattr_id: "1095405"
 :duration: 391
 :number: 40
-:ogg: 
-  :url: http://media.vimcasts.org/videos/40/line_duplication.ogv
-  :size: 7569155
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/40/line_duplication.m4v
-  :size: 9929423
 :tags: ex-commands, jumps
 ---
 

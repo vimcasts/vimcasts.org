@@ -5,12 +5,6 @@
 :flattr_id: "31933"
 :duration: 201
 :number: 11
-:ogg: 
-  :url: http://media.vimcasts.org/videos/11/changelist_and_jumplist.ogv
-  :size: 6286432
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/11/changelist_and_jumplist.m4v
-  :size: 5406874
 :tags: jumps, motions, undo
 ---
 

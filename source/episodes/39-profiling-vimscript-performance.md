@@ -5,12 +5,6 @@
 :flattr_id: "1045993"
 :duration: 489
 :number: 39
-:ogg: 
-  :url: http://media.vimcasts.org/videos/39/profiling.ogv
-  :size: 13627416
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/39/profiling.m4v
-  :size: 16165079
 :tags: vimscript, performance
 ---
 

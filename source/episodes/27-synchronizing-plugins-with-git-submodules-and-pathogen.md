@@ -5,12 +5,6 @@
 :flattr_id: "72257"
 :duration: 564
 :number: 27
-:ogg: 
-  :url: http://media.vimcasts.org/videos/27/sync_with_git.ogv
-  :size: 19428011
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/27/sync_with_git.m4v
-  :size: 22671155
 :tags: plugins, git, pathogen
 ---
 

@@ -5,12 +5,6 @@
 :flattr_id: "86560"
 :duration: 471
 :number: 28
-:ogg: 
-  :url: http://media.vimcasts.org/videos/28/commandline_window.ogv
-  :size: 10505095
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/28/commandline_window.m4v
-  :size: 14088176
 :tags: search, regex, workflow
 ---
 

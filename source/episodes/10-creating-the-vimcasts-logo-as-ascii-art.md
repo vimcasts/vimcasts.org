@@ -5,12 +5,6 @@
 :flattr_id: "31932"
 :duration: 347
 :number: 10
-:ogg: 
-  :url: http://media.vimcasts.org/videos/10/ascii_art.ogv
-  :size: 8082719
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/10/ascii_art.m4v
-  :size: 8248003
 :tags: showcase
 ---
 

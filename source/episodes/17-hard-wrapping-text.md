@@ -5,12 +5,6 @@
 :flattr_id: "31942"
 :duration: 323
 :number: 17
-:ogg: 
-  :url: http://media.vimcasts.org/videos/17/hard_wrapping_text.ogv
-  :size: 12559067
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/17/hard_wrapping_text.m4v
-  :size: 16752621
 :tags: plaintext, wrapping
 ---
 

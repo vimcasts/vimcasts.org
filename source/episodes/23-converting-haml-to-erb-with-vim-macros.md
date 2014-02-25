@@ -5,12 +5,6 @@
 :flattr_id: "33029"
 :duration: 456
 :number: 23
-:ogg: 
-  :url: http://media.vimcasts.org/videos/23/haml_to_erb.ogv
-  :size: 11656496
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/23/haml_to_erb.m4v
-  :size: 16722383
 :tags: macros, showcase
 ---
 

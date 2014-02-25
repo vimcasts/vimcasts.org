@@ -5,12 +5,6 @@
 :flattr_id: "1274469"
 :duration: 429
 :number: 48
-:ogg: 
-  :url: http://media.vimcasts.org/videos/48/abolish-substitute.ogv
-  :size: 9326785
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/48/abolish-substitute.m4v
-  :size: 17311862
 :tags: search, regex, plugins, substitution, vim-abolish
 ---
 

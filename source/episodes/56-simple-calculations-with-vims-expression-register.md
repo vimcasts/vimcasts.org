@@ -5,12 +5,6 @@
 :flattr_id: ""
 :duration: 242
 :number: 56
-:ogg: 
-  :url: http://media.vimcasts.org/videos/56/expression-register.ogv
-  :size: 4704449
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/56/expression-register.m4v
-  :size: 8247836
 :tags: registers, expression-register, insert-mode, cmdline-mode
 ---
 

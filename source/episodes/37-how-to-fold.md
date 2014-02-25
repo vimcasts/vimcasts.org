@@ -5,12 +5,6 @@
 :flattr_id: "1003463"
 :duration: 529
 :number: 37
-:ogg: 
-  :url: http://media.vimcasts.org/videos/37/how-to-fold.ogv
-  :size: 17856957
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/37/how-to-fold.m4v
-  :size: 27341198
 :tags: folding
 ---
 

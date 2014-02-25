@@ -5,12 +5,6 @@
 :flattr_id: ""
 :duration: 273
 :number: 61
-:ogg: 
-  :url: http://media.vimcasts.org/videos/61/map-with-repeat.ogv
-  :size: 7103130
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/61/map-with-repeat.m4v
-  :size: 9958244
 :tags: repeat, mappings, vimscript
 :layout: episode
 ---

@@ -5,12 +5,6 @@
 :flattr_id: "1150023"
 :duration: 340
 :number: 43
-:ogg: 
-  :url: http://media.vimcasts.org/videos/43/argdo.ogv
-  :size: 7790359
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/43/argdo.m4v
-  :size: 12538524
 :tags: arglist
 ---
 

@@ -5,12 +5,6 @@
 :flattr_id: "31929"
 :duration: 332
 :number: 7
-:ogg: 
-  :url: http://media.vimcasts.org/videos/7/working_with_windows.ogv
-  :size: 7579846
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/7/working_with_windows.m4v
-  :size: 8570987
 :tags: windows, managing-workspace
 ---
 

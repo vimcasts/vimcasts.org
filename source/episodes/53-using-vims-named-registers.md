@@ -5,12 +5,6 @@
 :flattr_id: ""
 :duration: 209
 :number: 53
-:ogg: 
-  :url: http://media.vimcasts.org/videos/53/named-registers.ogv
-  :size: 5356368
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/53/named-registers.m4v
-  :size: 9269387
 :tags: registers, copy-and-paste
 ---
 

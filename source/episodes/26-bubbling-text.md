@@ -5,12 +5,6 @@
 :flattr_id: "69651"
 :duration: 383
 :number: 26
-:ogg: 
-  :url: http://media.vimcasts.org/videos/26/bubble_selection.ogv
-  :size: 8959885
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/26/bubble_selection.m4v
-  :size: 17667251
 :tags: customization, editing-text
 ---
 

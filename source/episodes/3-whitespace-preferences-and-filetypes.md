@@ -5,12 +5,6 @@
 :flattr_id: "31925"
 :duration: 209
 :number: 3
-:ogg: 
-  :url: http://media.vimcasts.org/videos/3/whitespace_preferences_and_filetypes.ogv
-  :size: 5436234
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/3/whitespace_preferences_and_filetypes.m4v
-  :size: 6030738
 :tags: whitespace, autocommands, filetypes
 ---
 

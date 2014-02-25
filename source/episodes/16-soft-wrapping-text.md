@@ -5,12 +5,6 @@
 :flattr_id: "31941"
 :duration: 294
 :number: 16
-:ogg: 
-  :url: http://media.vimcasts.org/videos/16/soft_wrap.ogv
-  :size: 9675588
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/16/soft_wrap.m4v
-  :size: 10288332
 :tags: plaintext, wrapping
 ---
 

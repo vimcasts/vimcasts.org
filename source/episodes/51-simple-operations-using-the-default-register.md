@@ -5,12 +5,6 @@
 :flattr_id: ""
 :duration: 247
 :number: 51
-:ogg: 
-  :url: http://media.vimcasts.org/videos/51/default-register.ogv
-  :size: 5676820
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/51/default-register.m4v
-  :size: 9777137
 :tags: registers, copy-and-paste
 ---
 

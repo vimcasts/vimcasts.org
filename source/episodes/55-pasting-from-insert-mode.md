@@ -5,12 +5,6 @@
 :flattr_id: ""
 :duration: 255
 :number: 55
-:ogg: 
-  :url: http://media.vimcasts.org/videos/55/insert-mode-put.ogv
-  :size: 5660879
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/55/insert-mode-put.m4v
-  :size: 9093955
 :tags: registers, copy-and-paste, insert-mode
 ---
 

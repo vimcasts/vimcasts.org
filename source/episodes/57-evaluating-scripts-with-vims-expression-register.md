@@ -5,12 +5,6 @@
 :flattr_id: ""
 :duration: 236
 :number: 57
-:ogg: 
-  :url: http://media.vimcasts.org/videos/57/eval-register.ogv
-  :size: 5514595
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/57/eval-register.m4v
-  :size: 9991201
 :tags: registers, expression-register, insert-mode, cmdline-mode
 ---
 

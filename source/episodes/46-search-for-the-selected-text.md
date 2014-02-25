@@ -5,12 +5,6 @@
 :flattr_id: "1204601"
 :duration: 279
 :number: 46
-:ogg: 
-  :url: http://media.vimcasts.org/videos/46/visual_star.ogv
-  :size: 5534285
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/46/visual_star.m4v
-  :size: 9876149
 :tags: search, regex
 ---
 

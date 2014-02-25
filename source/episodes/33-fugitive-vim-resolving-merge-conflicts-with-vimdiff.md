@@ -5,12 +5,6 @@
 :flattr_id: "184250"
 :duration: 695
 :number: 33
-:ogg: 
-  :url: http://media.vimcasts.org/videos/33/fugitive_3.ogv
-  :size: 17760378
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/33/fugitive_3.m4v
-  :size: 23831068
 :tags: plugins, fugitive, git, workflow, vimdiff
 ---
 

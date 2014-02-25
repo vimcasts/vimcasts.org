@@ -5,12 +5,6 @@
 :flattr_id: "1156445"
 :duration: 445
 :number: 44
-:ogg: 
-  :url: http://media.vimcasts.org/videos/44/vimgrep.ogv
-  :size: 13806112
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/44/vimgrep.m4v
-  :size: 23175625
 :tags: arglist, vimgrep, search
 ---
 

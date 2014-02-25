@@ -5,12 +5,6 @@
 :flattr_id: ""
 :duration: 213
 :number: 54
-:ogg: 
-  :url: http://media.vimcasts.org/videos/54/visual-mode-put.ogv
-  :size: 3955140
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/54/visual-mode-put.m4v
-  :size: 6773573
 :tags: registers, copy-and-paste, visual-mode
 ---
 

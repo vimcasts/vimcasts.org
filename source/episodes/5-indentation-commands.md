@@ -5,12 +5,6 @@
 :flattr_id: "31927"
 :duration: 341
 :number: 5
-:ogg: 
-  :url: http://media.vimcasts.org/videos/5/indentation_commands.ogv
-  :size: 11178639
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/5/indentation_commands.m4v
-  :size: 11037200
 :tags: whitespace
 ---
 

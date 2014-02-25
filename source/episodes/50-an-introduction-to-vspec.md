@@ -5,12 +5,6 @@
 :flattr_id: "1496691"
 :duration: 435
 :number: 50
-:ogg: 
-  :url: http://media.vimcasts.org/videos/50/vspec_intro.ogv
-  :size: 13515400
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/50/vspec_intro.m4v
-  :size: 18859892
 :tags: vimscript, testing, plugins
 ---
 

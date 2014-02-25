@@ -5,12 +5,6 @@
 :flattr_id: "37935"
 :duration: 171
 :number: 24
-:ogg: 
-  :url: http://media.vimcasts.org/videos/24/vimrc_on_the_fly.ogv
-  :size: 2922294
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/24/vimrc_on_the_fly.m4v
-  :size: 5769269
 :tags: vimrc, autocommands
 ---
 

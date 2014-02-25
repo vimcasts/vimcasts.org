@@ -5,12 +5,6 @@
 :flattr_id: "829342"
 :duration: 413
 :number: 36
-:ogg: 
-  :url: http://media.vimcasts.org/videos/36/primes.ogv
-  :size: 7335704
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/36/primes.m4v
-  :size: 11512378
 :tags: vimgolf, showcase, regex
 ---
 

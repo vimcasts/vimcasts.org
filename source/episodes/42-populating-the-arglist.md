@@ -5,12 +5,6 @@
 :flattr_id: "1146839"
 :duration: 331
 :number: 42
-:ogg: 
-  :url: http://media.vimcasts.org/videos/42/arglist_populate.ogv
-  :size: 6533057
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/42/arglist_populate.m4v
-  :size: 11150926
 :tags: arglist
 ---
 

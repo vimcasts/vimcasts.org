@@ -5,12 +5,6 @@
 :flattr_id: ""
 :duration: 256
 :number: 60
-:ogg: 
-  :url: http://media.vimcasts.org/videos/60/vimdiff.ogv
-  :size: 9620942
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/60/vimdiff.m4v
-  :size: 13194774
 :tags: vimdiff
 ---
 

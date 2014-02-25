@@ -5,12 +5,6 @@
 :flattr_id: ""
 :duration: 242
 :number: 62
-:ogg: 
-  :url: http://media.vimcasts.org/videos/62/map-with-count.ogv
-  :size: 6859558
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/62/map-with-count.m4v
-  :size: 10336771
 :tags: count, mappings
 ---
 

@@ -5,12 +5,6 @@
 :flattr_id: "1303220"
 :duration: 189
 :number: 49
-:ogg: 
-  :url: http://media.vimcasts.org/videos/49/abolish-abbreviate.ogv
-  :size: 4705804
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/49/abolish-abbreviate.m4v
-  :size: 8399568
 :tags: abbreviations, plugins, vim-abolish
 ---
 

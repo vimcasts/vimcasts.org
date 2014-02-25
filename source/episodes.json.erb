@@ -1,23 +1,24 @@
 {
     "episodes": [
-        <% blog(:episodes).articles.reverse.each do |e| %>{
-            "title": "<%= e.title %>",
-            "episode_number": "<%= e.data.number %>",
-            "published_at": "<%= e.date.httpdate %>",
-            "url": "http://vimcasts.org<%= e.url %>",
-            "short_url": "http://vimcasts.org/e/<%= e.data.number %>",
-            "poster": "http://vimcasts.org<%= e.data.poster %>",
-            "abstract": "<%= js_escape_html(e.summary) %>",
+        <% blog(:episodes).articles.reverse.each do |page| %>{
+            <% episode = Episode.new(page) %>
+            "title": "<%= page.title %>",
+            "episode_number": "<%= episode.number %>",
+            "published_at": "<%= page.date.httpdate %>",
+            "url": "http://vimcasts.org<%= page.url %>",
+            "short_url": "http://vimcasts.org/e/<%= episode.number %>",
+            "poster": "<%= episode.poster_url %>",
+            "abstract": "<%= js_escape_html(page.summary) %>",
             "ogg": {
-                "url": "<%= e.data.ogg.url %>",
-                "bytes": "<%= e.data.ogg[:size] %>",
-                "seconds": "<%= e.data.duration %>",
+                "url": "<%= episode.ogg.url %>",
+                "bytes": "<%= episode.ogg.size %>",
+                "seconds": "<%= episode.ogg.duration %>",
                 "contentType": "video/ogg"
             },
             "quicktime": {
-                "url": "<%= e.data.quicktime.url %>",
-                "bytes": "<%= e.data.quicktime[:size] %>",
-                "seconds": "<%= e.data.duration %>",
+                "url": "<%= episode.quicktime.url %>",
+                "bytes": "<%= episode.quicktime.size %>",
+                "seconds": "<%= episode.quicktime.duration %>",
                 "contentType": "video/x-m4v"
             }
         },

@@ -5,12 +5,6 @@
 :flattr_id: ""
 :duration: 288
 :number: 58
-:ogg: 
-  :url: http://media.vimcasts.org/videos/58/clipboard-register.ogv
-  :size: 6577643
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/58/clipboard-register.m4v
-  :size: 12031236
 :tags: registers, copy-and-paste
 ---
 

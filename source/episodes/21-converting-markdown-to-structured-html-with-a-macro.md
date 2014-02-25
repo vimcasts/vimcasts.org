@@ -5,12 +5,6 @@
 :flattr_id: "31946"
 :duration: 565
 :number: 21
-:ogg: 
-  :url: http://media.vimcasts.org/videos/21/markdown_macro.ogv
-  :size: 14625008
-:quicktime: 
-  :url: http://media.vimcasts.org/videos/21/markdown_macro.m4v
-  :size: 20061622
 :tags: macros, showcase
 ---
 
