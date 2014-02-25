@@ -1,0 +1,13 @@
+{
+  "12": {
+    "duration": 326,
+    "ogg": {
+      "url": "http://othermedia.vimcasts.org/videos/12/modal_editing.ogv",
+      "size": 1234567
+    },
+    "quicktime": {
+      "url": "http://othermedia.vimcasts.org/videos/12/modal_editing.m4v",
+      "size": 7654321
+    }
+  }
+}
