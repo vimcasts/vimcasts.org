@@ -16,8 +16,8 @@
         </time>
         <div class="video-duration">
           <%# http://wiki.whatwg.org/wiki/Time_element#duration %>
-          Run time: <time datetime="<%= minute_second_datetime(current_page.data.duration) %>">
-            <%= minute_second(current_page.data.duration) %>
+          Run time: <time datetime="<%= episode.running_datetime %>">
+            <%= episode.running_time %>
           </time>
         </div>
         <% if current_page.tags.size > 0 %>

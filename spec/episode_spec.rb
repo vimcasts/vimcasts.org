@@ -33,4 +33,23 @@ describe Episode do
     end
 
   end
+
+  describe 'running_time' do
+
+    it 'converts seconds into mm:ss' do
+      assert_equal  '0:55', Episode.new({duration:  '55'}).running_time
+      assert_equal  '1:01', Episode.new({duration:  '61'}).running_time
+      assert_equal '10:11', Episode.new({duration: '611'}).running_time
+    end
+
+  end
+
+  describe 'running_datetime' do
+
+    it 'converts seconds into mm:ss' do
+      assert_equal  'P0M,55S', Episode.new({duration:  '55'}).running_datetime
+      assert_equal  'P1M,01S', Episode.new({duration:  '61'}).running_datetime
+    end
+
+  end
 end
