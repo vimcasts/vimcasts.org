@@ -9,7 +9,7 @@
       <header>
         <h2><%= current_page.title %></h2>
         <div class="episode_number">
-          <small>#</small><%= current_page.data.number %>
+          <small>#</small><%= episode.number %>
         </div>
         <time pubdate="pubdate" datetime="<%= current_page.date.strftime('%Y-%m-%e') %>">
           <%= current_page.date.strftime('%b %e, %Y') %>
@@ -32,7 +32,7 @@
 
       <video poster="<%= episode.poster_url %>"
         controls="controls" preload="none" class="placeholder"
-        id="episode_<%= current_page.data.number %>_placeholder">
+        id="episode_<%= episode.number %>_placeholder">
         <source src="<%= current_page.data.ogg["url"]%>" type="video/ogg" />
         <source src="<%= current_page.data.quicktime["url"]%>" type="video/x-m4v" />
       </video>
@@ -57,7 +57,7 @@
 
         <p>
           View a <%= link_to 'transcript of the video',
-          transcript_for_episode(current_page.data.number) %>.
+          transcript_for_episode(episode.number) %>.
         </p>
       </aside>
 

@@ -52,4 +52,15 @@ describe Episode do
     end
 
   end
+
+  describe 'number' do
+
+    it 'returns -1 when episode has no number' do
+      assert_equal '-1', Episode.new().number
+    end
+    it 'returns given number' do
+      assert_equal '12', Episode.new({number: 12}).number
+      assert_equal '42', Episode.new(OpenStruct.new(data: {number: 42})).number
+    end
+  end
 end

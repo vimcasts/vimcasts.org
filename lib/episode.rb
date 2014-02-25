@@ -1,13 +1,14 @@
 class Episode
 
-  attr_accessor :poster
+  attr_accessor :poster, :number
 
-  def initialize(options)
+  def initialize(options={})
     if options.respond_to?(:data)
       options = options.data
     end
     @poster = options[:poster]
     @duration = options[:duration].to_i
+    @number = options.fetch(:number, -1).to_s
   end
 
   def poster_url
