@@ -31,6 +31,11 @@ class Announcements < Middleman::Extension
       }[article.blog_options[:name]]
     end
 
+    def extended_article(article)
+      separator = blog(:episodes).options[:summary_separator]
+      article.render(layout: false, keep_separator: true).split(separator).last
+    end
+
     def tag_stats(tag, connector=", ")
       tag = tag_details(tag) if tag.class == String
       [
