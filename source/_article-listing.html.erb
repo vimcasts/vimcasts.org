@@ -6,10 +6,11 @@
   <span><%= article.date.strftime('%b %e, %Y') %></span>
 
   <% if article.data.duration %>
+    <% episode = Episode.new(article) %>
     <div class="video-duration">
       <%# http://wiki.whatwg.org/wiki/Time_element#duration %>
-      Run time: <time datetime="<%= minute_second_datetime(article.data.duration) %>">
-        <%= minute_second(article.data.duration) %>
+      Run time: <time datetime="<%= episode.running_datetime %>">
+        <%= episode.running_time %>
       </time>
     </div>
   <% end %>

@@ -8,12 +8,13 @@ blog: episodes
 <section id="archive">
   <% blog(:episodes).articles.group_by {|a| {year: a.date.year, month: a.date.strftime("%B")} }.each do |date, episodes| %>
     <h3 class="archive"><%= date[:month] %> <%= date[:year] %></h3>
-    <% episodes.each do |episode| %>
+    <% episodes.each do |page| %>
+    <% episode = Episode.new(page) %>
       <div>
-        <span class="episode_number"><small>#</small><%= episode.data.number %></span>
-        <% link_to episode, class: 'archive' do %>
-          <%= episode.title %>
-          <span>(<%= minute_second(episode.data.duration) %>)</span>
+        <span class="episode_number"><small>#</small><%= episode.number %></span>
+        <% link_to page, class: 'archive' do %>
+          <%= page.title %>
+          <span>(<%= episode.running_time %>)</span>
         <% end %>
       </div>
     <% end %>

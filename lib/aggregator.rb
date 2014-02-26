@@ -15,16 +15,6 @@ module Middleman
         }
         tagged_articles.flatten.sort_by(&:date).reverse
       end
-
-      def minute_second(seconds)
-        min, sec = *seconds.divmod(60)
-        [min, sec.to_s.rjust(2, '0')].join(':')
-      end
-      def minute_second_datetime(seconds)
-        min, sec = *seconds.divmod(60)
-        sec = sec.to_s.rjust(2, '0')
-        ["P#{min}M", "#{sec}S"].join(',')
-      end
       def transcript_for_episode(number)
         "/transcripts/#{number}/en/"
       end
