@@ -67,7 +67,7 @@ activate :blog do |blog|
   blog.prefix = "blog"
   blog.sources = "{title}.html"
   blog.permalink = "{year}/{month}/{title}.html"
-  blog.summary_separator = /(READMORE)/
+  blog.summary_separator = /<p>READMORE<\/p>/
   blog.paginate = true
   blog.year_template = "blog-archive-by-year.html"
   blog.month_template = "blog-archive-by-month.html"
@@ -80,7 +80,7 @@ activate :blog do |blog|
   blog.prefix = "episodes"
   blog.sources = "{number}-{title}.html"
   blog.permalink = "{title}.html"
-  blog.summary_separator = /(READMORE)/
+  blog.summary_separator = /<p>READMORE<\/p>/
   blog.paginate = true
   blog.taglink = "categories/{tag}.html"
   blog.tag_template = "category.html"
@@ -91,7 +91,7 @@ activate :blog do |blog|
   blog.prefix = "announcements"
   blog.sources = "{title}.html"
   blog.permalink = "{year}/{month}/{title}.html"
-  blog.summary_separator = /(READMORE)/
+  blog.summary_separator = /<p>READMORE<\/p>/
   blog.paginate = true
 end
 
