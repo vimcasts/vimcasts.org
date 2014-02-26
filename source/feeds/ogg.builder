@@ -14,9 +14,10 @@ xml.rss version: "2.0", "xmlns:atom" => "http://www.w3.org/2005/Atom" do
       xml.item do
         xml.title article.title
         xml.description html_escape(article.summary)
-        if article.data.ogg
-          xml.enclosure url: article.data.ogg.url,
-            length: article.data.ogg.filesize,
+        episode = Episode.new(article)
+        unless episode.number == '-1'
+          xml.enclosure url: episode.ogg.url,
+            length: episode.ogg.size,
             type: "video/ogg"
         end
         xml.pubDate article.date.to_time.httpdate
