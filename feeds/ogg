@@ -21,7 +21,6 @@
       <description>&amp;lt;p&amp;gt;The &amp;lt;code&amp;gt;gn&amp;lt;/code&amp;gt; command (introduced in Vim 7.4) makes it easy to operate on regions of text that match the current search pattern. It's especially useful when used with a regex that matches text regions of variable length.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/63/gn-command.ogv" length="" type="video/ogg"/>
       <pubDate>Tue, 11 Feb 2014 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/operating-on-search-matches-using-gn/</guid>
       <link>http://vimcasts.org/episodes/operating-on-search-matches-using-gn/</link>
@@ -31,7 +30,6 @@
       <description>&amp;lt;p&amp;gt;Lots of Vim's built-in Normal mode commands can be executed multiple times by prefixing them with a count. User-defined Normal mode mappings don't usually handle counts the way we might like them to. We'll explore a couple of techniques for making our custom mappings respond predictably to a count.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/62/map-with-count.ogv" length="" type="video/ogg"/>
       <pubDate>Thu, 06 Feb 2014 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/creating-mappings-that-accept-a-count/</guid>
       <link>http://vimcasts.org/episodes/creating-mappings-that-accept-a-count/</link>
@@ -59,7 +57,6 @@
       <description>&amp;lt;p&amp;gt;The dot command is my all-time favorite Vim trick: it tells Vim to repeat the last change. But the dot command tends not to work well with user-defined mappings. In this episode, we'll use repeat.vim to set up a simple mapping so that it can be repeated using the dot command.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/61/map-with-repeat.ogv" length="" type="video/ogg"/>
       <pubDate>Tue, 21 Jan 2014 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/</guid>
       <link>http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/</link>
@@ -85,7 +82,6 @@
       <description>&amp;lt;p&amp;gt;Vim's diff mode allows us to easily compare the contents of two (or more) buffers. We can start Vim in diff mode using the &amp;lt;code&amp;gt;vimdiff&amp;lt;/code&amp;gt; command, or if Vim is already running we can switch to diff mode using the &amp;lt;code&amp;gt;:diffthis&amp;lt;/code&amp;gt; command. The beauty of the &amp;lt;code&amp;gt;:diffthis&amp;lt;/code&amp;gt; command is that it works with unnamed buffers, whereas &amp;lt;code&amp;gt;vimdiff&amp;lt;/code&amp;gt; can only work with files.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/60/vimdiff.ogv" length="" type="video/ogg"/>
       <pubDate>Wed, 15 Jan 2014 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/comparing-buffers-with-vimdiff/</guid>
       <link>http://vimcasts.org/episodes/comparing-buffers-with-vimdiff/</link>
@@ -129,7 +125,6 @@
       <description>&amp;lt;p&amp;gt;When Vim is compiled without the &amp;lt;code&amp;gt;+clipboard&amp;lt;/code&amp;gt; feature, we can still insert text from the clipboard using the system paste command (&amp;lt;code&amp;gt;ctrl-v&amp;lt;/code&amp;gt; or &amp;lt;code&amp;gt;cmd-v&amp;lt;/code&amp;gt;). This can produce strange effects, but we can avoid them by toggling the &amp;lt;code&amp;gt;paste&amp;lt;/code&amp;gt; option each time we use the system paste command.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/59/paste-option-toggle.ogv" length="" type="video/ogg"/>
       <pubDate>Fri, 15 Nov 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/using-vims-paste-mode-with-the-system-paste-command/</guid>
       <link>http://vimcasts.org/episodes/using-vims-paste-mode-with-the-system-paste-command/</link>
@@ -148,7 +143,6 @@
       <description>&amp;lt;p&amp;gt;In some environments, Vim lets us access the system clipboard using the quoteplus register, &amp;lt;code&amp;gt;&amp;quot;+&amp;lt;/code&amp;gt;. When this feature is enabled, we can use it with the delete, yank and put operations in much the same way that we use Vim's other registers. Pasting from this register usually produces better results than using the system paste command in Insert mode.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/58/clipboard-register.ogv" length="" type="video/ogg"/>
       <pubDate>Mon, 11 Nov 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/accessing-the-system-clipboard-from-vim/</guid>
       <link>http://vimcasts.org/episodes/accessing-the-system-clipboard-from-vim/</link>
@@ -176,7 +170,6 @@
       <description>&amp;lt;p&amp;gt;In &amp;lt;a href=&amp;quot;/e/56&amp;quot;&amp;gt;the previous lesson&amp;lt;/a&amp;gt; we learned how use the expression register to evaluate simple calculations. We can also call built-in and user-defined Vimscript functions, and thanks to the &amp;lt;code&amp;gt;system()&amp;lt;/code&amp;gt; function, we can also fetch output from external scripts.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/57/eval-register.ogv" length="" type="video/ogg"/>
       <pubDate>Mon, 21 Oct 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/evaluating-scripts-with-vims-expression-register/</guid>
       <link>http://vimcasts.org/episodes/evaluating-scripts-with-vims-expression-register/</link>
@@ -186,7 +179,6 @@
       <description>&amp;lt;p&amp;gt;The &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/change.html#quote=&amp;quot;&amp;gt;expression register&amp;lt;/a&amp;gt; lets us evaluate a snippet of Vimscript code. This is handy when you need to perform simple calculations and insert the result into the document.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/56/expression-register.ogv" length="" type="video/ogg"/>
       <pubDate>Wed, 16 Oct 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/simple-calculations-with-vims-expression-register/</guid>
       <link>http://vimcasts.org/episodes/simple-calculations-with-vims-expression-register/</link>
@@ -196,7 +188,6 @@
       <description>&amp;lt;p&amp;gt;We don't have to be in Normal mode to paste the contents of a register. The &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r&amp;quot;&amp;gt;&amp;lt;code&amp;gt;&amp;amp;lt;C-r&amp;amp;gt;{reg}&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt; command lets us paste a register from Insert mode (and it &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-r&amp;quot;&amp;gt;works in commandline mode too&amp;lt;/a&amp;gt;!) Using this command allows us to make changes that can be repeated with &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/repeat.html#.&amp;quot;&amp;gt;the dot command&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/55/insert-mode-put.ogv" length="" type="video/ogg"/>
       <pubDate>Fri, 11 Oct 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/pasting-from-insert-mode/</guid>
       <link>http://vimcasts.org/episodes/pasting-from-insert-mode/</link>
@@ -206,7 +197,6 @@
       <description>&amp;lt;p&amp;gt;When used &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/change.html#v_p&amp;quot;&amp;gt;in Visual mode the &amp;lt;code&amp;gt;p&amp;lt;/code&amp;gt; command&amp;lt;/a&amp;gt; replaces the selection with the contents of a register. This makes for a smooth workflow when you want to overwrite a selection, or swap the order of two regions of text.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/54/visual-mode-put.ogv" length="" type="video/ogg"/>
       <pubDate>Mon, 07 Oct 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/pasting-from-visual-mode/</guid>
       <link>http://vimcasts.org/episodes/pasting-from-visual-mode/</link>
@@ -225,7 +215,6 @@
       <description>&amp;lt;p&amp;gt;We've met Vim's &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote&amp;quot;&amp;gt;default register&amp;lt;/a&amp;gt; and the &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/change.html#quote0&amp;quot;&amp;gt;yank register&amp;lt;/a&amp;gt;. This time, we're going to look at the &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/change.html#quote_alpha&amp;quot;&amp;gt;named registers&amp;lt;/a&amp;gt;, which are handy if you want to cut or copy some text that you intend to paste multiple times.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/53/named-registers.ogv" length="" type="video/ogg"/>
       <pubDate>Fri, 04 Oct 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/using-vims-named-registers/</guid>
       <link>http://vimcasts.org/episodes/using-vims-named-registers/</link>
@@ -235,7 +224,6 @@
       <description>&amp;lt;p&amp;gt;Vim's default register is not a safe place to keep yanked text that you want to paste later. It's all too easy to clobber the default register with a &amp;lt;code&amp;gt;d&amp;lt;/code&amp;gt; or &amp;lt;code&amp;gt;x&amp;lt;/code&amp;gt; command. Luckily, the last yanked text is kept safe in Vim's &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/change.html#quote0&amp;quot;&amp;gt;yank register&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/52/yank-register.ogv" length="" type="video/ogg"/>
       <pubDate>Mon, 30 Sep 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/meet-the-yank-register/</guid>
       <link>http://vimcasts.org/episodes/meet-the-yank-register/</link>
@@ -245,7 +233,6 @@
       <description>&amp;lt;p&amp;gt;Vim's &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote&amp;quot;&amp;gt;default register&amp;lt;/a&amp;gt; makes it easy to perform some of the most basic types of cut, copy, and paste operations. That's partly thanks to the &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/change.html#p&amp;quot;&amp;gt;&amp;lt;code&amp;gt;p&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt; command, which behaves differently depending on whether the default register contains a characterwise or linewise region of text.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/51/default-register.ogv" length="" type="video/ogg"/>
       <pubDate>Fri, 27 Sep 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/simple-operations-using-the-default-register/</guid>
       <link>http://vimcasts.org/episodes/simple-operations-using-the-default-register/</link>
@@ -331,7 +318,6 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
       <description>&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;https://github.com/kana/vim-vspec&amp;quot;&amp;gt;Vspec&amp;lt;/a&amp;gt; is a library that allows you to test-drive your Vimscript code. In this tutorial, we'll cover the basics: how to inspect the contents of a buffer, how to simulate the actions of a user, and how to invoke user-defined mappings.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/50/vspec_intro.ogv" length="" type="video/ogg"/>
       <pubDate>Mon, 17 Jun 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/an-introduction-to-vspec/</guid>
       <link>http://vimcasts.org/episodes/an-introduction-to-vspec/</link>
@@ -402,7 +388,6 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
 &amp;lt;p&amp;gt;&amp;lt;em&amp;gt;This is the final of a three-part series on Tim Pope’s &amp;lt;a href=&amp;quot;https://github.com/tpope/vim-abolish&amp;quot;&amp;gt;abolish&amp;lt;/a&amp;gt; plugin.&amp;lt;/em&amp;gt;&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/49/abolish-abbreviate.ogv" length="" type="video/ogg"/>
       <pubDate>Mon, 29 Apr 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/enhanced-abbreviations-with-abolish/</guid>
       <link>http://vimcasts.org/episodes/enhanced-abbreviations-with-abolish/</link>
@@ -414,7 +399,6 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
 &amp;lt;p&amp;gt;&amp;lt;em&amp;gt;This is part two of a three-part series on Tim Pope's &amp;lt;a href=&amp;quot;https://github.com/tpope/vim-abolish&amp;quot;&amp;gt;abolish&amp;lt;/a&amp;gt; plugin.&amp;lt;/em&amp;gt;&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/48/abolish-substitute.ogv" length="" type="video/ogg"/>
       <pubDate>Mon, 22 Apr 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/supercharged-substitution-with-subvert/</guid>
       <link>http://vimcasts.org/episodes/supercharged-substitution-with-subvert/</link>
@@ -442,7 +426,6 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
 &amp;lt;p&amp;gt;&amp;lt;em&amp;gt;This is part one of a three-part series on Tim Pope's abolish plugin.&amp;lt;/em&amp;gt;&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/47/abolish-search.ogv" length="" type="video/ogg"/>
       <pubDate>Fri, 12 Apr 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/smart-search-with-subvert/</guid>
       <link>http://vimcasts.org/episodes/smart-search-with-subvert/</link>
@@ -452,7 +435,6 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
       <description>&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/pattern.html#star&amp;quot;&amp;gt;The &amp;lt;code&amp;gt;*&amp;lt;/code&amp;gt; command&amp;lt;/a&amp;gt; searches for the word under the cursor. That makes sense in Normal mode, but from Visual mode it would be more useful if the star command searched for the current &amp;lt;em&amp;gt;selection&amp;lt;/em&amp;gt;, rather than the current word. We can add this feature to Vim using the &amp;lt;a href=&amp;quot;https://github.com/nelstrom/vim-visual-star-search&amp;quot;&amp;gt;visual star search plugin&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/46/visual_star.ogv" length="" type="video/ogg"/>
       <pubDate>Mon, 25 Mar 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/search-for-the-selected-text/</guid>
       <link>http://vimcasts.org/episodes/search-for-the-selected-text/</link>
@@ -471,7 +453,6 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
       <description>&amp;lt;p&amp;gt;Vim doesn't have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as &amp;lt;code&amp;gt;:substitute&amp;lt;/code&amp;gt;, &amp;lt;code&amp;gt;:argdo&amp;lt;/code&amp;gt;, and &amp;lt;code&amp;gt;:vimgrep&amp;lt;/code&amp;gt;. We'll look at two possible strategies: first using the arglist, then the quickfix list.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/45/project_substitute.ogv" length="" type="video/ogg"/>
       <pubDate>Tue, 19 Mar 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/project-wide-find-and-replace/</guid>
       <link>http://vimcasts.org/episodes/project-wide-find-and-replace/</link>
@@ -519,7 +500,6 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
       <description>&amp;lt;p&amp;gt;&amp;lt;code&amp;gt;vimgrep&amp;lt;/code&amp;gt; is Vim's built-in command for searching across multiple files. It's not so fast as external tools like ack and git-grep, but it has its uses. &amp;lt;code&amp;gt;vimgrep&amp;lt;/code&amp;gt; uses Vim's built-in regex engine, so you can reuse the patterns that work with Vim's standard search command. &amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/44/vimgrep.ogv" length="" type="video/ogg"/>
       <pubDate>Fri, 01 Mar 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/search-multiple-files-with-vimgrep/</guid>
       <link>http://vimcasts.org/episodes/search-multiple-files-with-vimgrep/</link>
@@ -529,7 +509,6 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
       <description>&amp;lt;p&amp;gt;The &amp;lt;code&amp;gt;:argdo&amp;lt;/code&amp;gt; command allows us to execute an Ex command across all buffers in the arglist.  To demonstrate, we'll use the example of running the &amp;lt;code&amp;gt;:substitute&amp;lt;/code&amp;gt; command across multiple files, then we'll see how to revert or save the changes.  We'll also compare the &amp;lt;code&amp;gt;:argdo&amp;lt;/code&amp;gt; and &amp;lt;code&amp;gt;:bufdo&amp;lt;/code&amp;gt; commands, and consider when it's appropriate to use each one.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/43/argdo.ogv" length="" type="video/ogg"/>
       <pubDate>Mon, 25 Feb 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/using-argdo-to-change-multiple-files/</guid>
       <link>http://vimcasts.org/episodes/using-argdo-to-change-multiple-files/</link>
@@ -539,7 +518,6 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
       <description>&amp;lt;p&amp;gt;The arglist wouldn't be much use if we had to quit and relaunch Vim every time we wanted to change its contents. In this episode, we'll learn how to set the contents of the arglist using the &amp;lt;code&amp;gt;:args&amp;lt;/code&amp;gt; command, which can receive filepaths, globs, or even backtick expressions.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/42/arglist_populate.ogv" length="" type="video/ogg"/>
       <pubDate>Fri, 22 Feb 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/populating-the-arglist/</guid>
       <link>http://vimcasts.org/episodes/populating-the-arglist/</link>
@@ -558,7 +536,6 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
       <description>&amp;lt;p&amp;gt;The arglist feature complements Vim's buffer list. In this episode, we'll learn a handful of commands for traversing the arglist. We'll see that it's useful to think of the arglist as a stable subset of the files in the buffer list.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/41/meet_arglist.ogv" length="" type="video/ogg"/>
       <pubDate>Tue, 19 Feb 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/meet-the-arglist/</guid>
       <link>http://vimcasts.org/episodes/meet-the-arglist/</link>
@@ -629,7 +606,6 @@ noremap &amp;amp;lt;Right&amp;amp;gt; &amp;amp;lt;NOP&amp;amp;gt;
       <description>&amp;lt;p&amp;gt;When writing code, we can often save time by duplicating a line then changing one or two parts of that line to make it suit our purposes. In this episode, we'll compare a few techniques for duplicating lines, and we'll see that the &amp;lt;code&amp;gt;:copy&amp;lt;/code&amp;gt; Ex command is well suited to this task.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/40/line_duplication.ogv" length="" type="video/ogg"/>
       <pubDate>Wed, 09 Jan 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/long-range-line-duplication/</guid>
       <link>http://vimcasts.org/episodes/long-range-line-duplication/</link>
@@ -666,7 +642,6 @@ noremap &amp;amp;lt;Right&amp;amp;gt; &amp;amp;lt;NOP&amp;amp;gt;
       <description>&amp;lt;p&amp;gt;Vim users are unforgiving of plugins that impair performance. Luckily, Vim provides built-in profiling tools that make it easy to diagnose performance issues. We'll start by looking at how to profile the vimrc file, then move on to a real world scenario where profiling helped to identify and aleviate a performance bottleneck.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/39/profiling.ogv" length="" type="video/ogg"/>
       <pubDate>Mon, 03 Dec 2012 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/profiling-vimscript-performance/</guid>
       <link>http://vimcasts.org/episodes/profiling-vimscript-performance/</link>
@@ -687,7 +662,6 @@ noremap &amp;amp;lt;Right&amp;amp;gt; &amp;amp;lt;NOP&amp;amp;gt;
       <description>&amp;lt;p&amp;gt;With a little bit of Vimscript, you can create a custom folding expression for any filetype. We'll start by looking at the mechanics of folding with markers, then go on to create a folding expression for markdown documents.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/38/writing-a-foldexpr.ogv" length="" type="video/ogg"/>
       <pubDate>Mon, 26 Nov 2012 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/writing-a-custom-fold-expression/</guid>
       <link>http://vimcasts.org/episodes/writing-a-custom-fold-expression/</link>
@@ -697,7 +671,6 @@ noremap &amp;amp;lt;Right&amp;amp;gt; &amp;amp;lt;NOP&amp;amp;gt;
       <description>&amp;lt;p&amp;gt;Vim's folding feature enables us to expand and collapse regions of a document. Not only does this allow us to organize our workspace, it also makes it easy to navigate around the document, and to rearrange entire sections as though they were single lines.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/37/how-to-fold.ogv" length="" type="video/ogg"/>
       <pubDate>Mon, 19 Nov 2012 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/how-to-fold/</guid>
       <link>http://vimcasts.org/episodes/how-to-fold/</link>
@@ -827,7 +800,6 @@ noremap &amp;amp;lt;Right&amp;amp;gt; &amp;amp;lt;NOP&amp;amp;gt;
       <description>&amp;lt;p&amp;gt;For the VimGolf challenge &amp;lt;a href=&amp;quot;http://vimgolf.com/challenges/4d1c27940e3d7832db000010&amp;quot;&amp;gt;&amp;quot;List the first 100 prime numbers&amp;quot;&amp;lt;/a&amp;gt;, there's a solution that uses a regular expression to detect prime numbers. At 43 keystokes, it's not the winning solution, but I think it's the most interesting one. It uses a few clever Vim tricks, including macros, control-a to increment, the very magic pattern switch, and the &amp;lt;code&amp;gt;:global&amp;lt;/code&amp;gt; command. There's a lot to learn from those 43 keystrokes, so let's study it!&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/36/primes.ogv" length="" type="video/ogg"/>
       <pubDate>Fri, 10 Aug 2012 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/vimgolf-prime-numbers/</guid>
       <link>http://vimcasts.org/episodes/vimgolf-prime-numbers/</link>
@@ -996,7 +968,6 @@ Gary Bernhardt on &amp;lt;a href=&amp;quot;http://rubyrogues.com/040-rr-text-edi
 &amp;lt;p&amp;gt;&amp;lt;em&amp;gt;This is the last of our five part series on fugitive.vim.&amp;lt;/em&amp;gt;&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/35/fugitive_5.ogv" length="" type="video/ogg"/>
       <pubDate>Wed, 18 May 2011 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/</guid>
       <link>http://vimcasts.org/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/</link>
@@ -1008,7 +979,6 @@ Gary Bernhardt on &amp;lt;a href=&amp;quot;http://rubyrogues.com/040-rr-text-edi
 &amp;lt;p&amp;gt;&amp;lt;em&amp;gt;This is the penultimate of a five part series on fugitive.vim.&amp;lt;/em&amp;gt;&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/34/fugitive_4.ogv" length="" type="video/ogg"/>
       <pubDate>Fri, 13 May 2011 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/</guid>
       <link>http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/</link>
@@ -1020,7 +990,6 @@ Gary Bernhardt on &amp;lt;a href=&amp;quot;http://rubyrogues.com/040-rr-text-edi
 &amp;lt;p&amp;gt;&amp;lt;em&amp;gt;This is the third in a five part series on fugitive.vim.&amp;lt;/em&amp;gt;&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/33/fugitive_3.ogv" length="" type="video/ogg"/>
       <pubDate>Fri, 06 May 2011 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/</guid>
       <link>http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/</link>
@@ -1032,7 +1001,6 @@ Gary Bernhardt on &amp;lt;a href=&amp;quot;http://rubyrogues.com/040-rr-text-edi
 &amp;lt;p&amp;gt;&amp;lt;em&amp;gt;This is the second of a five part series on fugitive.vim. In the next episode, we'll learn how to resolve a git merge conflict by performing a 3-way vimdiff.&amp;lt;/em&amp;gt;&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/32/fugitive_2.ogv" length="" type="video/ogg"/>
       <pubDate>Fri, 29 Apr 2011 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/fugitive-vim-working-with-the-git-index/</guid>
       <link>http://vimcasts.org/episodes/fugitive-vim-working-with-the-git-index/</link>
@@ -1044,7 +1012,6 @@ Gary Bernhardt on &amp;lt;a href=&amp;quot;http://rubyrogues.com/040-rr-text-edi
 &amp;lt;p&amp;gt;&amp;lt;em&amp;gt;This is the first of a five part series on fugitive.&amp;lt;/em&amp;gt;&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/31/fugitive_1.ogv" length="" type="video/ogg"/>
       <pubDate>Fri, 22 Apr 2011 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/</guid>
       <link>http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/</link>
@@ -1061,7 +1028,6 @@ Gary Bernhardt on &amp;lt;a href=&amp;quot;http://rubyrogues.com/040-rr-text-edi
       <description>&amp;lt;p&amp;gt;The undo command is almost universally available in software today. Being able to rollback unwanted changes can be a real timesaver. In most applications you can only go backwards and forwards linearly, but Vim keeps your changes in a tree structure, which means that you can retrieve edits from distant branches in your history. This episode will show you how.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/30/undo_tree.ogv" length="" type="video/ogg"/>
       <pubDate>Wed, 23 Feb 2011 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/undo-branching-and-gundo-vim/</guid>
       <link>http://vimcasts.org/episodes/undo-branching-and-gundo-vim/</link>
@@ -1071,7 +1037,6 @@ Gary Bernhardt on &amp;lt;a href=&amp;quot;http://rubyrogues.com/040-rr-text-edi
       <description>&amp;lt;p&amp;gt;There are times when you can improve the readability of your code by lining up the elements on neighbouring lines. In this episode, I demonstrate how this can be achieved using the &amp;lt;a href=&amp;quot;https://github.com/godlygeek/tabular&amp;quot;&amp;gt;Tabular&amp;lt;/a&amp;gt; plugin.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/29/alignment.ogv" length="" type="video/ogg"/>
       <pubDate>Mon, 17 Jan 2011 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/aligning-text-with-tabular-vim/</guid>
       <link>http://vimcasts.org/episodes/aligning-text-with-tabular-vim/</link>
@@ -1090,7 +1055,6 @@ Gary Bernhardt on &amp;lt;a href=&amp;quot;http://rubyrogues.com/040-rr-text-edi
       <description>&amp;lt;p&amp;gt;When you need to build a complex command, or devise a non-trivial search pattern, Vim's command-line mode can be rather limiting. In this episode, I will introduce the command-line window, which allows you to use the full power of Vim when editing search queries and commands.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/28/commandline_window.ogv" length="" type="video/ogg"/>
       <pubDate>Sun, 21 Nov 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/refining-search-patterns-with-the-command-line-window/</guid>
       <link>http://vimcasts.org/episodes/refining-search-patterns-with-the-command-line-window/</link>
@@ -1130,7 +1094,6 @@ Gary Bernhardt on &amp;lt;a href=&amp;quot;http://rubyrogues.com/040-rr-text-edi
       <description>&amp;lt;p&amp;gt;If you use Vim on muliple machines, it can be difficult to keep your configuration files synchronized across them. One solution is to put your dotfiles under version control. In this episode, I demonstrate how to keep your vimrc and plugins synchronized using git submodules and the pathogen plugin.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/27/sync_with_git.ogv" length="" type="video/ogg"/>
       <pubDate>Tue, 12 Oct 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/</guid>
       <link>http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/</link>
@@ -1140,7 +1103,6 @@ Gary Bernhardt on &amp;lt;a href=&amp;quot;http://rubyrogues.com/040-rr-text-edi
       <description>&amp;lt;p&amp;gt;TextMate has a few built in commands for moving selected text around a document. The end end result of using these commands can be achieved by cutting and pasting, but the visual feedback they provide is quite helpful. In this episode, I will show how to replicate these commands in Vim.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/26/bubble_selection.ogv" length="" type="video/ogg"/>
       <pubDate>Tue, 05 Oct 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/bubbling-text/</guid>
       <link>http://vimcasts.org/episodes/bubbling-text/</link>
@@ -1162,7 +1124,6 @@ Drew&amp;lt;/p&amp;gt;
       <description>&amp;lt;p&amp;gt;Choosing a colorscheme that you find pleasing to look at is essential if you want to be comfortable working with Vim. There are hundreds of colorschemes available, but what if you can't find one that you like? In this episode, I'll share a few tips that make it easy to create colorschemes for Vim.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/25/colorschemes.ogv" length="" type="video/ogg"/>
       <pubDate>Tue, 28 Sep 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/creating-colorschemes-for-vim/</guid>
       <link>http://vimcasts.org/episodes/creating-colorschemes-for-vim/</link>
@@ -1181,7 +1142,6 @@ Drew&amp;lt;/p&amp;gt;
       <description>&amp;lt;p&amp;gt;The vimrc file allows you to preserve your settings so that they are restored each time you launch Vim. But what if you want to update your vimrc file in the middle of an editing session? This episode demonstrates a couple of tricks that make it easy to customize Vim on the fly.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/24/vimrc_on_the_fly.ogv" length="" type="video/ogg"/>
       <pubDate>Sun, 18 Jul 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/</guid>
       <link>http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/</link>
@@ -1200,7 +1160,6 @@ Drew&amp;lt;/p&amp;gt;
       <description>&amp;lt;p&amp;gt;HAML and ERB are two commonly used ruby templating languages. You may have a strong preference for one or the other, but it's not always up to you which one you use. I was recently asked to convert several HAML files to ERB format. In this episode, I will demonstrate a couple of Vim macros that helped make short work of the task. &amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/23/haml_to_erb.ogv" length="" type="video/ogg"/>
       <pubDate>Thu, 08 Jul 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/converting-haml-to-erb-with-vim-macros/</guid>
       <link>http://vimcasts.org/episodes/converting-haml-to-erb-with-vim-macros/</link>
@@ -1228,7 +1187,6 @@ Drew&amp;lt;/p&amp;gt;
       <description>&amp;lt;p&amp;gt;If you want to edit several adjacent lines with a similar format, you might save a lot of time by making a columnar selection. This episode will demonstrate how to achieve this using Vim's visual block mode.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/22/visual_block.ogv" length="" type="video/ogg"/>
       <pubDate>Sun, 20 Jun 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/selecting-columns-with-visual-block-mode/</guid>
       <link>http://vimcasts.org/episodes/selecting-columns-with-visual-block-mode/</link>
@@ -1238,7 +1196,6 @@ Drew&amp;lt;/p&amp;gt;
       <description>&amp;lt;p&amp;gt;Recording your keystrokes as a macro can be a great timesaver, but you have to be careful that you use commands in such a way that they can be reused. In this episode, I construct a fairly complex macro to build a structural HTML document from markdown.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/21/markdown_macro.ogv" length="" type="video/ogg"/>
       <pubDate>Wed, 02 Jun 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/converting-markdown-to-structured-html-with-a-macro/</guid>
       <link>http://vimcasts.org/episodes/converting-markdown-to-structured-html-with-a-macro/</link>
@@ -1248,7 +1205,6 @@ Drew&amp;lt;/p&amp;gt;
       <description>&amp;lt;p&amp;gt;If you work with ruby you will know that the interactive ruby shell, or 'IRB' for short, is a useful sketchpad for coding. But the command line interface of IRB can feel quite limiting in comparison with the power of your text editor. In this episode, I'm going to demonstrate how you can get the best of both worlds, by loading Vim from inside IRB.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/20/irb_and_vim.ogv" length="" type="video/ogg"/>
       <pubDate>Sun, 16 May 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/running-vim-within-irb/</guid>
       <link>http://vimcasts.org/episodes/running-vim-within-irb/</link>
@@ -1258,7 +1214,6 @@ Drew&amp;lt;/p&amp;gt;
       <description>&amp;lt;p&amp;gt;Using a spell checker is a good habit to get into.  In this episode, I demonstrate how to use Vim's built in spell checking feature.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/19/spell_checking.ogv" length="" type="video/ogg"/>
       <pubDate>Mon, 10 May 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/spell-checking/</guid>
       <link>http://vimcasts.org/episodes/spell-checking/</link>
@@ -1268,7 +1223,6 @@ Drew&amp;lt;/p&amp;gt;
       <description>&amp;lt;p&amp;gt;'Do one thing and do it well' is the principle of the Unix toolkit. Editing text is a broad domain, and there are many related tasks with which it overlaps. Vim acknowledges this by enabling certain tasks to be outsourced to external programs which do that one thing, and do it well. This episode will demonstrate how the &amp;lt;em&amp;gt;par&amp;lt;/em&amp;gt; program can be used for formatting text.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/18/formatting_with_par.ogv" length="" type="video/ogg"/>
       <pubDate>Mon, 03 May 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/formatting-text-with-par/</guid>
       <link>http://vimcasts.org/episodes/formatting-text-with-par/</link>
@@ -1287,7 +1241,6 @@ Drew&amp;lt;/p&amp;gt;
       <description>&amp;lt;p&amp;gt;It is sometimes preferable to format text with hard wrapped lines, for example when writing emails in plaintext. Vim can apply this style of formatting for you. This episode shows some of the options which allow you to customize Vim's text formatting.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/17/hard_wrapping_text.ogv" length="" type="video/ogg"/>
       <pubDate>Mon, 26 Apr 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/hard-wrapping-text/</guid>
       <link>http://vimcasts.org/episodes/hard-wrapping-text/</link>
@@ -1297,7 +1250,6 @@ Drew&amp;lt;/p&amp;gt;
       <description>&amp;lt;p&amp;gt;Long lines of text can be wrapped if they don't fit inside the window. By default, Vim will happily split in the middle of a word. This episode demonstrates how to use the 'linebreak' option to make Vim break lines without breaking words.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/16/soft_wrap.ogv" length="" type="video/ogg"/>
       <pubDate>Tue, 20 Apr 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/soft-wrapping-text/</guid>
       <link>http://vimcasts.org/episodes/soft-wrapping-text/</link>
@@ -1307,7 +1259,6 @@ Drew&amp;lt;/p&amp;gt;
       <description>&amp;lt;p&amp;gt;This episode demonstrates how Vim's native file browser can be used to explore and manipulate the file system. &amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/15/the_file_explorer.ogv" length="" type="video/ogg"/>
       <pubDate>Mon, 12 Apr 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/the-file-explorer/</guid>
       <link>http://vimcasts.org/episodes/the-file-explorer/</link>
@@ -1317,7 +1268,6 @@ Drew&amp;lt;/p&amp;gt;
       <description>&amp;lt;p&amp;gt;This episode focuses on the &amp;lt;code&amp;gt;:edit&amp;lt;/code&amp;gt; command. I demonstrate how to open files whose location is relative to the current working directory, then I show how to create a mapping which makes it easier to open files in the same directory as the one in the active window.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/14/the_edit_command.ogv" length="" type="video/ogg"/>
       <pubDate>Mon, 05 Apr 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/the-edit-command/</guid>
       <link>http://vimcasts.org/episodes/the-edit-command/</link>
@@ -1329,7 +1279,6 @@ Drew&amp;lt;/p&amp;gt;
 &amp;lt;p&amp;gt;Try Vim - Extra whitening classic scourer. Vim gets the job done faster. Take short easy strokes for lemon fresh scripts. Fast, bold, Vim.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/13/cleaning_up.ogv" length="" type="video/ogg"/>
       <pubDate>Thu, 01 Apr 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/cleaning-up-with-vim/</guid>
       <link>http://vimcasts.org/episodes/cleaning-up-with-vim/</link>
@@ -1350,7 +1299,6 @@ episodes archive with the trailing path &amp;lt;a href=&amp;quot;http://vimcasts
       <description>&amp;lt;p&amp;gt;Vim's modal editing paradigm - the newbie killer - brings tremendous efficiency if only you can learn to work with it, rather than against it. This episode demonstrates how the undo and repeat commands can benefit from spending short bursts of time in insert mode. &amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/12/modal_editing.ogv" length="" type="video/ogg"/>
       <pubDate>Sun, 28 Mar 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/modal-editing-undo-redo-and-repeat/</guid>
       <link>http://vimcasts.org/episodes/modal-editing-undo-redo-and-repeat/</link>
@@ -1360,7 +1308,6 @@ episodes archive with the trailing path &amp;lt;a href=&amp;quot;http://vimcasts
       <description>&amp;lt;p&amp;gt;This episode introduces the changelist and jumplist, demonstrating a couple of situations where they are useful. &amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/11/changelist_and_jumplist.ogv" length="" type="video/ogg"/>
       <pubDate>Tue, 23 Mar 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/using-the-changelist-and-jumplist/</guid>
       <link>http://vimcasts.org/episodes/using-the-changelist-and-jumplist/</link>
@@ -1370,7 +1317,6 @@ episodes archive with the trailing path &amp;lt;a href=&amp;quot;http://vimcasts
       <description>&amp;lt;p&amp;gt;Demonstrating miscellaneous tips and tricks gleaned whilst making an ASCII art version of the VimCasts.org logo. Learn how to duplicate lines, copy and paste with visual block mode, search and replace within a visual selection, and how to use macros.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/10/ascii_art.ogv" length="" type="video/ogg"/>
       <pubDate>Sun, 14 Mar 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/creating-the-vimcasts-logo-as-ascii-art/</guid>
       <link>http://vimcasts.org/episodes/creating-the-vimcasts-logo-as-ascii-art/</link>
@@ -1380,7 +1326,6 @@ episodes archive with the trailing path &amp;lt;a href=&amp;quot;http://vimcasts
       <description>&amp;lt;p&amp;gt;Vim's treatment of tabs is a little different than what you might be used to if you are coming from another editor. In this episode I demonstrate how Vim's tabs can be used to group split windows together. I also show how to use Vim's tabs like projects in TextMate, by setting a different working directory for each one.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/9/how_to_use_tabs.ogv" length="" type="video/ogg"/>
       <pubDate>Mon, 08 Mar 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/how-to-use-tabs/</guid>
       <link>http://vimcasts.org/episodes/how-to-use-tabs/</link>
@@ -1390,7 +1335,6 @@ episodes archive with the trailing path &amp;lt;a href=&amp;quot;http://vimcasts
       <description>&amp;lt;p&amp;gt;This episode covers the essential commands for working with Vim's tab pages: opening and closing, switching, and moving them.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/8/working_with_tabs.ogv" length="" type="video/ogg"/>
       <pubDate>Sun, 28 Feb 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/working-with-tabs/</guid>
       <link>http://vimcasts.org/episodes/working-with-tabs/</link>
@@ -1400,7 +1344,6 @@ episodes archive with the trailing path &amp;lt;a href=&amp;quot;http://vimcasts
       <description>&amp;lt;p&amp;gt;In Vim, you can view several buffers at once by loading them into multiple windows. This episode demonstrates all the essentials of working with windows: opening, closing, resizing, moving between and rearranging them.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/7/working_with_windows.ogv" length="" type="video/ogg"/>
       <pubDate>Sun, 21 Feb 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/working-with-windows/</guid>
       <link>http://vimcasts.org/episodes/working-with-windows/</link>
@@ -1410,7 +1353,6 @@ episodes archive with the trailing path &amp;lt;a href=&amp;quot;http://vimcasts
       <description>&amp;lt;p&amp;gt;Introducing the buffer list, and commands for switching between buffers. This episode also covers the concept of 'hidden' buffers, and shows how to deal with them.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/6/buffers_listed_and_hidden.ogv" length="" type="video/ogg"/>
       <pubDate>Sun, 14 Feb 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/working-with-buffers/</guid>
       <link>http://vimcasts.org/episodes/working-with-buffers/</link>
@@ -1420,7 +1362,6 @@ episodes archive with the trailing path &amp;lt;a href=&amp;quot;http://vimcasts
       <description>&amp;lt;p&amp;gt;This episode covers the commands for shifting text left and right (&amp;lt;code&amp;gt;&amp;amp;lt;&amp;lt;/code&amp;gt; and &amp;lt;code&amp;gt;&amp;amp;gt;&amp;lt;/code&amp;gt;), and also goes over the auto indent command (&amp;lt;code&amp;gt;=&amp;lt;/code&amp;gt;).&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/5/indentation_commands.ogv" length="" type="video/ogg"/>
       <pubDate>Mon, 08 Feb 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/indentation-commands/</guid>
       <link>http://vimcasts.org/episodes/indentation-commands/</link>
@@ -1430,7 +1371,6 @@ episodes archive with the trailing path &amp;lt;a href=&amp;quot;http://vimcasts
       <description>&amp;lt;p&amp;gt;This episode demonstrates a few techniques for tidying up whitespace.  First, it looks at how to convert between tabs and spaces. Then it shows how to strip trailing whitespace, and finally, how to remove blank lines from a file.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/4/tidying_whitespace.ogv" length="" type="video/ogg"/>
       <pubDate>Sun, 24 Jan 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/tidying-whitespace/</guid>
       <link>http://vimcasts.org/episodes/tidying-whitespace/</link>
@@ -1440,7 +1380,6 @@ episodes archive with the trailing path &amp;lt;a href=&amp;quot;http://vimcasts
       <description>&amp;lt;p&amp;gt;Different file types may require particular whitespace settings. For example, YAML files must be indented using spaces, whereas makefiles require indentation with tabs. These preferences can be specified by hooking into the &amp;lt;code&amp;gt;FileType&amp;lt;/code&amp;gt; event with an autocommand.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/3/whitespace_preferences_and_filetypes.ogv" length="" type="video/ogg"/>
       <pubDate>Sun, 17 Jan 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/whitespace-preferences-and-filetypes/</guid>
       <link>http://vimcasts.org/episodes/whitespace-preferences-and-filetypes/</link>
@@ -1450,7 +1389,6 @@ episodes archive with the trailing path &amp;lt;a href=&amp;quot;http://vimcasts
       <description>&amp;lt;p&amp;gt;Vim offers very granular control over whitespace. This episode explains the purpose of &amp;lt;code&amp;gt;tabstop&amp;lt;/code&amp;gt;, &amp;lt;code&amp;gt;softtabstop&amp;lt;/code&amp;gt;, &amp;lt;code&amp;gt;shiftwidth&amp;lt;/code&amp;gt; and &amp;lt;code&amp;gt;expandtab&amp;lt;/code&amp;gt; settings, and illustrates how Vim behaves using various combinations of these.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/2/tabs_and_spaces.ogv" length="" type="video/ogg"/>
       <pubDate>Tue, 05 Jan 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/tabs-and-spaces/</guid>
       <link>http://vimcasts.org/episodes/tabs-and-spaces/</link>
@@ -1460,7 +1398,6 @@ episodes archive with the trailing path &amp;lt;a href=&amp;quot;http://vimcasts
       <description>&amp;lt;p&amp;gt;Vim's &amp;lt;code&amp;gt;list&amp;lt;/code&amp;gt; feature can be used to reveal hidden characters, such as tabstops and newlines. In this episode, I demonstrate how to customise the appearance of these characters by tweaking the &amp;lt;code&amp;gt;listchars&amp;lt;/code&amp;gt; setting. I go on to show how to make these invisible characters blend in with your colortheme.&amp;lt;/p&amp;gt;
 
 &amp;lt;p&amp;gt;</description>
-      <enclosure url="http://media.vimcasts.org/videos/1/show_invisibles.ogv" length="" type="video/ogg"/>
       <pubDate>Mon, 04 Jan 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/show-invisibles/</guid>
       <link>http://vimcasts.org/episodes/show-invisibles/</link>

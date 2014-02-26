@@ -1,6 +1,7 @@
 {
     "episodes": [
         {
+            
             "title": "Show invisibles",
             "episode_number": "1",
             "published_at": "Mon, 04 Jan 2010 00:00:00 GMT",
@@ -22,6 +23,7 @@
             }
         },
         {
+            
             "title": "Tabs and Spaces",
             "episode_number": "2",
             "published_at": "Tue, 05 Jan 2010 00:00:00 GMT",
@@ -43,6 +45,7 @@
             }
         },
         {
+            
             "title": "Whitespace preferences and filetypes",
             "episode_number": "3",
             "published_at": "Sun, 17 Jan 2010 00:00:00 GMT",
@@ -64,6 +67,7 @@
             }
         },
         {
+            
             "title": "Tidying whitespace",
             "episode_number": "4",
             "published_at": "Sun, 24 Jan 2010 00:00:00 GMT",
@@ -85,6 +89,7 @@
             }
         },
         {
+            
             "title": "Indentation commands",
             "episode_number": "5",
             "published_at": "Mon, 08 Feb 2010 00:00:00 GMT",
@@ -106,6 +111,7 @@
             }
         },
         {
+            
             "title": "Working with buffers",
             "episode_number": "6",
             "published_at": "Sun, 14 Feb 2010 00:00:00 GMT",
@@ -127,6 +133,7 @@
             }
         },
         {
+            
             "title": "Working with windows",
             "episode_number": "7",
             "published_at": "Sun, 21 Feb 2010 00:00:00 GMT",
@@ -148,6 +155,7 @@
             }
         },
         {
+            
             "title": "Working with tabs",
             "episode_number": "8",
             "published_at": "Sun, 28 Feb 2010 00:00:00 GMT",
@@ -169,6 +177,7 @@
             }
         },
         {
+            
             "title": "How to use tabs",
             "episode_number": "9",
             "published_at": "Mon, 08 Mar 2010 00:00:00 GMT",
@@ -190,6 +199,7 @@
             }
         },
         {
+            
             "title": "Creating the Vimcasts logo as ASCII art",
             "episode_number": "10",
             "published_at": "Sun, 14 Mar 2010 00:00:00 GMT",
@@ -211,6 +221,7 @@
             }
         },
         {
+            
             "title": "Using the changelist and jumplist",
             "episode_number": "11",
             "published_at": "Tue, 23 Mar 2010 00:00:00 GMT",
@@ -232,6 +243,7 @@
             }
         },
         {
+            
             "title": "Modal editing: undo, redo and repeat",
             "episode_number": "12",
             "published_at": "Sun, 28 Mar 2010 00:00:00 GMT",
@@ -253,6 +265,7 @@
             }
         },
         {
+            
             "title": "Cleaning up with Vim",
             "episode_number": "13",
             "published_at": "Thu, 01 Apr 2010 00:00:00 GMT",
@@ -274,6 +287,7 @@
             }
         },
         {
+            
             "title": "The :edit command",
             "episode_number": "14",
             "published_at": "Mon, 05 Apr 2010 00:00:00 GMT",
@@ -295,6 +309,7 @@
             }
         },
         {
+            
             "title": "The file explorer",
             "episode_number": "15",
             "published_at": "Mon, 12 Apr 2010 00:00:00 GMT",
@@ -316,6 +331,7 @@
             }
         },
         {
+            
             "title": "Soft wrapping text",
             "episode_number": "16",
             "published_at": "Tue, 20 Apr 2010 00:00:00 GMT",
@@ -337,6 +353,7 @@
             }
         },
         {
+            
             "title": "Hard wrapping text",
             "episode_number": "17",
             "published_at": "Mon, 26 Apr 2010 00:00:00 GMT",
@@ -358,6 +375,7 @@
             }
         },
         {
+            
             "title": "Formatting text with par",
             "episode_number": "18",
             "published_at": "Mon, 03 May 2010 00:00:00 GMT",
@@ -379,6 +397,7 @@
             }
         },
         {
+            
             "title": "Spell checking",
             "episode_number": "19",
             "published_at": "Mon, 10 May 2010 00:00:00 GMT",
@@ -400,6 +419,7 @@
             }
         },
         {
+            
             "title": "Running Vim within IRB",
             "episode_number": "20",
             "published_at": "Sun, 16 May 2010 00:00:00 GMT",
@@ -421,6 +441,7 @@
             }
         },
         {
+            
             "title": "Converting markdown to structured HTML with a macro",
             "episode_number": "21",
             "published_at": "Wed, 02 Jun 2010 00:00:00 GMT",
@@ -442,6 +463,7 @@
             }
         },
         {
+            
             "title": "Selecting columns with visual block mode",
             "episode_number": "22",
             "published_at": "Sun, 20 Jun 2010 00:00:00 GMT",
@@ -463,6 +485,7 @@
             }
         },
         {
+            
             "title": "Converting HAML to ERB with Vim macros",
             "episode_number": "23",
             "published_at": "Thu, 08 Jul 2010 00:00:00 GMT",
@@ -484,6 +507,7 @@
             }
         },
         {
+            
             "title": "Updating your vimrc file on the fly",
             "episode_number": "24",
             "published_at": "Sun, 18 Jul 2010 00:00:00 GMT",
@@ -505,6 +529,7 @@
             }
         },
         {
+            
             "title": "Creating colorschemes for Vim",
             "episode_number": "25",
             "published_at": "Tue, 28 Sep 2010 00:00:00 GMT",
@@ -526,6 +551,7 @@
             }
         },
         {
+            
             "title": "Bubbling text",
             "episode_number": "26",
             "published_at": "Tue, 05 Oct 2010 00:00:00 GMT",
@@ -547,6 +573,7 @@
             }
         },
         {
+            
             "title": "Synchronizing plugins with git submodules and pathogen",
             "episode_number": "27",
             "published_at": "Tue, 12 Oct 2010 00:00:00 GMT",
@@ -568,6 +595,7 @@
             }
         },
         {
+            
             "title": "Refining search patterns with the command-line window",
             "episode_number": "28",
             "published_at": "Sun, 21 Nov 2010 00:00:00 GMT",
@@ -589,6 +617,7 @@
             }
         },
         {
+            
             "title": "Aligning text with Tabular.vim",
             "episode_number": "29",
             "published_at": "Mon, 17 Jan 2011 00:00:00 GMT",
@@ -610,6 +639,7 @@
             }
         },
         {
+            
             "title": "Undo branching and Gundo.vim",
             "episode_number": "30",
             "published_at": "Wed, 23 Feb 2011 00:00:00 GMT",
@@ -631,6 +661,7 @@
             }
         },
         {
+            
             "title": "Fugitive.vim - a complement to command line git",
             "episode_number": "31",
             "published_at": "Fri, 22 Apr 2011 00:00:00 GMT",
@@ -652,6 +683,7 @@
             }
         },
         {
+            
             "title": "Fugitive.vim - working with the git index",
             "episode_number": "32",
             "published_at": "Fri, 29 Apr 2011 00:00:00 GMT",
@@ -673,6 +705,7 @@
             }
         },
         {
+            
             "title": "Fugitive.vim - resolving merge conflicts with vimdiff",
             "episode_number": "33",
             "published_at": "Fri, 06 May 2011 00:00:00 GMT",
@@ -694,6 +727,7 @@
             }
         },
         {
+            
             "title": "Fugitive.vim - browsing the git object database",
             "episode_number": "34",
             "published_at": "Fri, 13 May 2011 00:00:00 GMT",
@@ -715,6 +749,7 @@
             }
         },
         {
+            
             "title": "Fugitive.vim - exploring the history of a git repository",
             "episode_number": "35",
             "published_at": "Wed, 18 May 2011 00:00:00 GMT",
@@ -736,6 +771,7 @@
             }
         },
         {
+            
             "title": "VimGolf - Prime Numbers",
             "episode_number": "36",
             "published_at": "Fri, 10 Aug 2012 00:00:00 GMT",
@@ -757,6 +793,7 @@
             }
         },
         {
+            
             "title": "How to fold",
             "episode_number": "37",
             "published_at": "Mon, 19 Nov 2012 00:00:00 GMT",
@@ -778,6 +815,7 @@
             }
         },
         {
+            
             "title": "Writing a custom fold expression",
             "episode_number": "38",
             "published_at": "Mon, 26 Nov 2012 00:00:00 GMT",
@@ -799,6 +837,7 @@
             }
         },
         {
+            
             "title": "Profiling Vimscript performance",
             "episode_number": "39",
             "published_at": "Mon, 03 Dec 2012 00:00:00 GMT",
@@ -820,6 +859,7 @@
             }
         },
         {
+            
             "title": "Long-range line duplication",
             "episode_number": "40",
             "published_at": "Wed, 09 Jan 2013 00:00:00 GMT",
@@ -841,6 +881,7 @@
             }
         },
         {
+            
             "title": "Meet the arglist",
             "episode_number": "41",
             "published_at": "Tue, 19 Feb 2013 00:00:00 GMT",
@@ -862,6 +903,7 @@
             }
         },
         {
+            
             "title": "Populating the arglist",
             "episode_number": "42",
             "published_at": "Fri, 22 Feb 2013 00:00:00 GMT",
@@ -883,6 +925,7 @@
             }
         },
         {
+            
             "title": "Using :argdo to change multiple files",
             "episode_number": "43",
             "published_at": "Mon, 25 Feb 2013 00:00:00 GMT",
@@ -904,6 +947,7 @@
             }
         },
         {
+            
             "title": "Search multiple files with :vimgrep",
             "episode_number": "44",
             "published_at": "Fri, 01 Mar 2013 00:00:00 GMT",
@@ -925,6 +969,7 @@
             }
         },
         {
+            
             "title": "Project-wide find and replace",
             "episode_number": "45",
             "published_at": "Tue, 19 Mar 2013 00:00:00 GMT",
@@ -946,6 +991,7 @@
             }
         },
         {
+            
             "title": "Search for the selected text",
             "episode_number": "46",
             "published_at": "Mon, 25 Mar 2013 00:00:00 GMT",
@@ -967,6 +1013,7 @@
             }
         },
         {
+            
             "title": "Smart search with :Subvert",
             "episode_number": "47",
             "published_at": "Fri, 12 Apr 2013 00:00:00 GMT",
@@ -988,6 +1035,7 @@
             }
         },
         {
+            
             "title": "Supercharged substitution with :Subvert",
             "episode_number": "48",
             "published_at": "Mon, 22 Apr 2013 00:00:00 GMT",
@@ -1009,6 +1057,7 @@
             }
         },
         {
+            
             "title": "Enhanced abbreviations with :Abolish",
             "episode_number": "49",
             "published_at": "Mon, 29 Apr 2013 00:00:00 GMT",
@@ -1030,6 +1079,7 @@
             }
         },
         {
+            
             "title": "An introduction to vspec",
             "episode_number": "50",
             "published_at": "Mon, 17 Jun 2013 00:00:00 GMT",
@@ -1051,6 +1101,7 @@
             }
         },
         {
+            
             "title": "Simple operations using the default register",
             "episode_number": "51",
             "published_at": "Fri, 27 Sep 2013 00:00:00 GMT",
@@ -1072,6 +1123,7 @@
             }
         },
         {
+            
             "title": "Meet the yank register",
             "episode_number": "52",
             "published_at": "Mon, 30 Sep 2013 00:00:00 GMT",
@@ -1093,6 +1145,7 @@
             }
         },
         {
+            
             "title": "Using Vim's named registers",
             "episode_number": "53",
             "published_at": "Fri, 04 Oct 2013 00:00:00 GMT",
@@ -1114,6 +1167,7 @@
             }
         },
         {
+            
             "title": "Pasting from Visual mode",
             "episode_number": "54",
             "published_at": "Mon, 07 Oct 2013 00:00:00 GMT",
@@ -1135,6 +1189,7 @@
             }
         },
         {
+            
             "title": "Pasting from Insert mode",
             "episode_number": "55",
             "published_at": "Fri, 11 Oct 2013 00:00:00 GMT",
@@ -1156,6 +1211,7 @@
             }
         },
         {
+            
             "title": "Simple calculations with Vim's expression register",
             "episode_number": "56",
             "published_at": "Wed, 16 Oct 2013 00:00:00 GMT",
@@ -1177,6 +1233,7 @@
             }
         },
         {
+            
             "title": "Evaluating scripts with Vim's expression register",
             "episode_number": "57",
             "published_at": "Mon, 21 Oct 2013 00:00:00 GMT",
@@ -1198,6 +1255,7 @@
             }
         },
         {
+            
             "title": "Accessing the system clipboard from Vim",
             "episode_number": "58",
             "published_at": "Mon, 11 Nov 2013 00:00:00 GMT",
@@ -1219,6 +1277,7 @@
             }
         },
         {
+            
             "title": "Using Vim's paste mode with the system paste command",
             "episode_number": "59",
             "published_at": "Fri, 15 Nov 2013 00:00:00 GMT",
@@ -1240,6 +1299,7 @@
             }
         },
         {
+            
             "title": "Comparing buffers with vimdiff",
             "episode_number": "60",
             "published_at": "Wed, 15 Jan 2014 00:00:00 GMT",
@@ -1261,6 +1321,7 @@
             }
         },
         {
+            
             "title": "Creating repeatable mappings with repeat.vim",
             "episode_number": "61",
             "published_at": "Tue, 21 Jan 2014 00:00:00 GMT",
@@ -1282,6 +1343,7 @@
             }
         },
         {
+            
             "title": "Creating mappings that accept a count",
             "episode_number": "62",
             "published_at": "Thu, 06 Feb 2014 00:00:00 GMT",
@@ -1303,12 +1365,13 @@
             }
         },
         {
+            
             "title": "Operating on search matches using gn",
             "episode_number": "63",
             "published_at": "Tue, 11 Feb 2014 00:00:00 GMT",
             "url": "http://vimcasts.org/episodes/operating-on-search-matches-using-gn/",
             "short_url": "http://vimcasts.org/e/63",
-            "poster": "http://vimcasts.orghttp://vimcasts.org/images/posters/gn-command.png",
+            "poster": "http://vimcasts.org/images/posters/gn-command.png",
             "abstract": "<p>The <code>gn<\/code> command (introduced in Vim 7.4) makes it easy to operate on regions of text that match the current search pattern. It\'s especially useful when used with a regex that matches text regions of variable length.<\/p>\n\n<p>",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/63/gn-command.ogv",
