@@ -1,4 +1,5 @@
 require 'middleman-gh-pages'
+require 'json'
 
 desc 'List housekeeping chores'
 task :housekeeping do
@@ -34,6 +35,29 @@ task :categories do
   end.sort_by { |k| k[:total] }.reverse
   File.open('data/categories.yml', 'w') do |f|
     f.write tagdata.to_yaml
+  end
+end
+
+desc 'Create a data/videos.yml file from episodes frontmatter'
+task :video_metadata do
+  require 'middleman-blog'
+  @app = ::Middleman::Application.server.inst
+  metadata = {}
+  @app.blog(:episodes).articles.each do |e|
+    metadata[e.data.number] = {
+      duration: e.data.duration,
+      ogg: {
+        url: e.data.ogg.url,
+        size: e.data.ogg[:size],
+      },
+      quicktime: {
+        url: e.data.quicktime.url,
+        size: e.data.quicktime[:size],
+      }
+    }
+  end
+  File.open('data/videos.json', 'w') do |f|
+    f.write JSON.pretty_generate metadata
   end
 end
 
