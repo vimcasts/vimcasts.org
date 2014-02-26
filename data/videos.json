@@ -1,13 +1,695 @@
 {
+  "63": {
+    "duration": 275,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/63/gn-command.ogv",
+      "size": 6813065
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/63/gn-command.m4v",
+      "size": 10070454
+    }
+  },
+  "62": {
+    "duration": 242,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/62/map-with-count.ogv",
+      "size": 6859558
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/62/map-with-count.m4v",
+      "size": 10336771
+    }
+  },
+  "61": {
+    "duration": 273,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/61/map-with-repeat.ogv",
+      "size": 7103130
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/61/map-with-repeat.m4v",
+      "size": 9958244
+    }
+  },
+  "60": {
+    "duration": 256,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/60/vimdiff.ogv",
+      "size": 9620942
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/60/vimdiff.m4v",
+      "size": 13194774
+    }
+  },
+  "59": {
+    "duration": 265,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/59/paste-option-toggle.ogv",
+      "size": 5456772
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/59/paste-option-toggle.m4v",
+      "size": 9844252
+    }
+  },
+  "58": {
+    "duration": 288,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/58/clipboard-register.ogv",
+      "size": 6577643
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/58/clipboard-register.m4v",
+      "size": 12031236
+    }
+  },
+  "57": {
+    "duration": 236,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/57/eval-register.ogv",
+      "size": 5514595
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/57/eval-register.m4v",
+      "size": 9991201
+    }
+  },
+  "56": {
+    "duration": 242,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/56/expression-register.ogv",
+      "size": 4704449
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/56/expression-register.m4v",
+      "size": 8247836
+    }
+  },
+  "55": {
+    "duration": 255,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/55/insert-mode-put.ogv",
+      "size": 5660879
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/55/insert-mode-put.m4v",
+      "size": 9093955
+    }
+  },
+  "54": {
+    "duration": 213,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/54/visual-mode-put.ogv",
+      "size": 3955140
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/54/visual-mode-put.m4v",
+      "size": 6773573
+    }
+  },
+  "53": {
+    "duration": 209,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/53/named-registers.ogv",
+      "size": 5356368
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/53/named-registers.m4v",
+      "size": 9269387
+    }
+  },
+  "52": {
+    "duration": 269,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/52/yank-register.ogv",
+      "size": 5415333
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/52/yank-register.m4v",
+      "size": 9394643
+    }
+  },
+  "51": {
+    "duration": 247,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/51/default-register.ogv",
+      "size": 5676820
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/51/default-register.m4v",
+      "size": 9777137
+    }
+  },
+  "50": {
+    "duration": 435,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/50/vspec_intro.ogv",
+      "size": 13515400
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/50/vspec_intro.m4v",
+      "size": 18859892
+    }
+  },
+  "49": {
+    "duration": 189,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/49/abolish-abbreviate.ogv",
+      "size": 4705804
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/49/abolish-abbreviate.m4v",
+      "size": 8399568
+    }
+  },
+  "48": {
+    "duration": 429,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/48/abolish-substitute.ogv",
+      "size": 9326785
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/48/abolish-substitute.m4v",
+      "size": 17311862
+    }
+  },
+  "47": {
+    "duration": 333,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/47/abolish-search.ogv",
+      "size": 6849844
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/47/abolish-search.m4v",
+      "size": 12868646
+    }
+  },
+  "46": {
+    "duration": 279,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/46/visual_star.ogv",
+      "size": 5534285
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/46/visual_star.m4v",
+      "size": 9876149
+    }
+  },
+  "45": {
+    "duration": 385,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/45/project_substitute.ogv",
+      "size": 8171536
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/45/project_substitute.m4v",
+      "size": 13422810
+    }
+  },
+  "44": {
+    "duration": 445,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/44/vimgrep.ogv",
+      "size": 13806112
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/44/vimgrep.m4v",
+      "size": 23175625
+    }
+  },
+  "43": {
+    "duration": 340,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/43/argdo.ogv",
+      "size": 7790359
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/43/argdo.m4v",
+      "size": 12538524
+    }
+  },
+  "42": {
+    "duration": 331,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/42/arglist_populate.ogv",
+      "size": 6533057
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/42/arglist_populate.m4v",
+      "size": 11150926
+    }
+  },
+  "41": {
+    "duration": 297,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/41/meet_arglist.ogv",
+      "size": 6615244
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/41/meet_arglist.m4v",
+      "size": 10102190
+    }
+  },
+  "40": {
+    "duration": 391,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/40/line_duplication.ogv",
+      "size": 7569155
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/40/line_duplication.m4v",
+      "size": 9929423
+    }
+  },
+  "39": {
+    "duration": 489,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/39/profiling.ogv",
+      "size": 13627416
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/39/profiling.m4v",
+      "size": 16165079
+    }
+  },
+  "38": {
+    "duration": 727,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/38/writing-a-foldexpr.ogv",
+      "size": 19003361
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/38/writing-a-foldexpr.m4v",
+      "size": 24983489
+    }
+  },
+  "37": {
+    "duration": 529,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/37/how-to-fold.ogv",
+      "size": 17856957
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/37/how-to-fold.m4v",
+      "size": 27341198
+    }
+  },
+  "36": {
+    "duration": 413,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/36/primes.ogv",
+      "size": 7335704
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/36/primes.m4v",
+      "size": 11512378
+    }
+  },
+  "35": {
+    "duration": 604,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/35/fugitive_5.ogv",
+      "size": 26702522
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/35/fugitive_5.m4v",
+      "size": 32349589
+    }
+  },
+  "34": {
+    "duration": 585,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/34/fugitive_4.ogv",
+      "size": 23102160
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/34/fugitive_4.m4v",
+      "size": 28148709
+    }
+  },
+  "33": {
+    "duration": 695,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/33/fugitive_3.ogv",
+      "size": 17760378
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/33/fugitive_3.m4v",
+      "size": 23831068
+    }
+  },
+  "32": {
+    "duration": 701,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/32/fugitive_2.ogv",
+      "size": 19217222
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/32/fugitive_2.m4v",
+      "size": 25748543
+    }
+  },
+  "31": {
+    "duration": 507,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/31/fugitive_1.ogv",
+      "size": 17353898
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/31/fugitive_1.m4v",
+      "size": 22298141
+    }
+  },
+  "30": {
+    "duration": 390,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/30/undo_tree.ogv",
+      "size": 9435598
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/30/undo_tree.m4v",
+      "size": 12483269
+    }
+  },
+  "29": {
+    "duration": 311,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/29/alignment.ogv",
+      "size": 6556323
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/29/alignment.m4v",
+      "size": 9300352
+    }
+  },
+  "28": {
+    "duration": 471,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/28/commandline_window.ogv",
+      "size": 10505095
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/28/commandline_window.m4v",
+      "size": 14088176
+    }
+  },
+  "27": {
+    "duration": 564,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/27/sync_with_git.ogv",
+      "size": 19428011
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/27/sync_with_git.m4v",
+      "size": 22671155
+    }
+  },
+  "26": {
+    "duration": 383,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/26/bubble_selection.ogv",
+      "size": 8959885
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/26/bubble_selection.m4v",
+      "size": 17667251
+    }
+  },
+  "25": {
+    "duration": 584,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/25/colorschemes.ogv",
+      "size": 18548209
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/25/colorschemes.m4v",
+      "size": 25039525
+    }
+  },
+  "24": {
+    "duration": 171,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/24/vimrc_on_the_fly.ogv",
+      "size": 2922294
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/24/vimrc_on_the_fly.m4v",
+      "size": 5769269
+    }
+  },
+  "23": {
+    "duration": 456,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/23/haml_to_erb.ogv",
+      "size": 11656496
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/23/haml_to_erb.m4v",
+      "size": 16722383
+    }
+  },
+  "22": {
+    "duration": 261,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/22/visual_block.ogv",
+      "size": 5721437
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/22/visual_block.m4v",
+      "size": 8418264
+    }
+  },
+  "21": {
+    "duration": 565,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/21/markdown_macro.ogv",
+      "size": 14625008
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/21/markdown_macro.m4v",
+      "size": 20061622
+    }
+  },
+  "20": {
+    "duration": 275,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/20/irb_and_vim.ogv",
+      "size": 6114279
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/20/irb_and_vim.m4v",
+      "size": 9043637
+    }
+  },
+  "19": {
+    "duration": 342,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/19/spell_checking.ogv",
+      "size": 7475923
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/19/spell_checking.m4v",
+      "size": 16539933
+    }
+  },
+  "18": {
+    "duration": 312,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/18/formatting_with_par.ogv",
+      "size": 7937415
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/18/formatting_with_par.m4v",
+      "size": 17975374
+    }
+  },
+  "17": {
+    "duration": 323,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/17/hard_wrapping_text.ogv",
+      "size": 12559067
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/17/hard_wrapping_text.m4v",
+      "size": 16752621
+    }
+  },
+  "16": {
+    "duration": 294,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/16/soft_wrap.ogv",
+      "size": 9675588
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/16/soft_wrap.m4v",
+      "size": 10288332
+    }
+  },
+  "15": {
+    "duration": 336,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/15/the_file_explorer.ogv",
+      "size": 9156710
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/15/the_file_explorer.m4v",
+      "size": 9566713
+    }
+  },
+  "14": {
+    "duration": 230,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/14/the_edit_command.ogv",
+      "size": 7333302
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/14/the_edit_command.m4v",
+      "size": 7808076
+    }
+  },
+  "13": {
+    "duration": 36,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/13/cleaning_up.ogv",
+      "size": 1724552
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/13/cleaning_up.m4v",
+      "size": 6953835
+    }
+  },
   "12": {
     "duration": 326,
     "ogg": {
-      "url": "http://othermedia.vimcasts.org/videos/12/modal_editing.ogv",
-      "size": 1234567
+      "url": "http://media.vimcasts.org/videos/12/modal_editing.ogv",
+      "size": 6943276
     },
     "quicktime": {
-      "url": "http://othermedia.vimcasts.org/videos/12/modal_editing.m4v",
-      "size": 7654321
+      "url": "http://media.vimcasts.org/videos/12/modal_editing.m4v",
+      "size": 5453158
+    }
+  },
+  "11": {
+    "duration": 201,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/11/changelist_and_jumplist.ogv",
+      "size": 6286432
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/11/changelist_and_jumplist.m4v",
+      "size": 5406874
+    }
+  },
+  "10": {
+    "duration": 347,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/10/ascii_art.ogv",
+      "size": 8082719
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/10/ascii_art.m4v",
+      "size": 8248003
+    }
+  },
+  "9": {
+    "duration": 328,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/9/how_to_use_tabs.ogv",
+      "size": 8326271
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/9/how_to_use_tabs.m4v",
+      "size": 9100037
+    }
+  },
+  "8": {
+    "duration": 197,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/8/working_with_tabs.ogv",
+      "size": 4805972
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/8/working_with_tabs.m4v",
+      "size": 4395212
+    }
+  },
+  "7": {
+    "duration": 332,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/7/working_with_windows.ogv",
+      "size": 7579846
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/7/working_with_windows.m4v",
+      "size": 8570987
+    }
+  },
+  "6": {
+    "duration": 208,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/6/buffers_listed_and_hidden.ogv",
+      "size": 4834378
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/6/buffers_listed_and_hidden.m4v",
+      "size": 5715585
+    }
+  },
+  "5": {
+    "duration": 341,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/5/indentation_commands.ogv",
+      "size": 11178639
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/5/indentation_commands.m4v",
+      "size": 11037200
+    }
+  },
+  "4": {
+    "duration": 273,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/4/tidying_whitespace.ogv",
+      "size": 4917979
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/4/tidying_whitespace.m4v",
+      "size": 5738520
+    }
+  },
+  "3": {
+    "duration": 209,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/3/whitespace_preferences_and_filetypes.ogv",
+      "size": 5436234
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/3/whitespace_preferences_and_filetypes.m4v",
+      "size": 6030738
+    }
+  },
+  "2": {
+    "duration": 382,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/2/tabs_and_spaces.ogv",
+      "size": 8675696
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/2/tabs_and_spaces.m4v",
+      "size": 9362665
+    }
+  },
+  "1": {
+    "duration": 172,
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/1/show_invisibles.ogv",
+      "size": 5036160
+    },
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/1/show_invisibles.m4v",
+      "size": 5281290
     }
   }
 }
