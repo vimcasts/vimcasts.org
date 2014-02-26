@@ -8,7 +8,7 @@
             "url": "http://vimcasts.org/episodes/show-invisibles/",
             "short_url": "http://vimcasts.org/e/1",
             "poster": "http://vimcasts.org/images/posters/show_invisibles.png",
-            "abstract": "<p>Vim\'s <code>list<\/code> feature can be used to reveal hidden characters, such as tabstops and newlines. In this episode, I demonstrate how to customise the appearance of these characters by tweaking the <code>listchars<\/code> setting. I go on to show how to make these invisible characters blend in with your colortheme.<\/p>\n\n<p>",
+            "abstract": "<p>Vim\'s <code>list<\/code> feature can be used to reveal hidden characters, such as tabstops and newlines. In this episode, I demonstrate how to customise the appearance of these characters by tweaking the <code>listchars<\/code> setting. I go on to show how to make these invisible characters blend in with your colortheme.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/1/show_invisibles.ogv",
                 "bytes": "5036160",
@@ -30,7 +30,7 @@
             "url": "http://vimcasts.org/episodes/tabs-and-spaces/",
             "short_url": "http://vimcasts.org/e/2",
             "poster": "http://vimcasts.org/images/posters/tabs_and_spaces.png",
-            "abstract": "<p>Vim offers very granular control over whitespace. This episode explains the purpose of <code>tabstop<\/code>, <code>softtabstop<\/code>, <code>shiftwidth<\/code> and <code>expandtab<\/code> settings, and illustrates how Vim behaves using various combinations of these.<\/p>\n\n<p>",
+            "abstract": "<p>Vim offers very granular control over whitespace. This episode explains the purpose of <code>tabstop<\/code>, <code>softtabstop<\/code>, <code>shiftwidth<\/code> and <code>expandtab<\/code> settings, and illustrates how Vim behaves using various combinations of these.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/2/tabs_and_spaces.ogv",
                 "bytes": "8675696",
@@ -52,7 +52,7 @@
             "url": "http://vimcasts.org/episodes/whitespace-preferences-and-filetypes/",
             "short_url": "http://vimcasts.org/e/3",
             "poster": "http://vimcasts.org/images/posters/whitespace_preferences_and_filetypes.png",
-            "abstract": "<p>Different file types may require particular whitespace settings. For example, YAML files must be indented using spaces, whereas makefiles require indentation with tabs. These preferences can be specified by hooking into the <code>FileType<\/code> event with an autocommand.<\/p>\n\n<p>",
+            "abstract": "<p>Different file types may require particular whitespace settings. For example, YAML files must be indented using spaces, whereas makefiles require indentation with tabs. These preferences can be specified by hooking into the <code>FileType<\/code> event with an autocommand.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/3/whitespace_preferences_and_filetypes.ogv",
                 "bytes": "5436234",
@@ -74,7 +74,7 @@
             "url": "http://vimcasts.org/episodes/tidying-whitespace/",
             "short_url": "http://vimcasts.org/e/4",
             "poster": "http://vimcasts.org/images/posters/tidying_whitespace.png",
-            "abstract": "<p>This episode demonstrates a few techniques for tidying up whitespace.  First, it looks at how to convert between tabs and spaces. Then it shows how to strip trailing whitespace, and finally, how to remove blank lines from a file.<\/p>\n\n<p>",
+            "abstract": "<p>This episode demonstrates a few techniques for tidying up whitespace.  First, it looks at how to convert between tabs and spaces. Then it shows how to strip trailing whitespace, and finally, how to remove blank lines from a file.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/4/tidying_whitespace.ogv",
                 "bytes": "4917979",
@@ -96,7 +96,7 @@
             "url": "http://vimcasts.org/episodes/indentation-commands/",
             "short_url": "http://vimcasts.org/e/5",
             "poster": "http://vimcasts.org/images/posters/indentation_commands.png",
-            "abstract": "<p>This episode covers the commands for shifting text left and right (<code>&lt;<\/code> and <code>&gt;<\/code>), and also goes over the auto indent command (<code>=<\/code>).<\/p>\n\n<p>",
+            "abstract": "<p>This episode covers the commands for shifting text left and right (<code>&lt;<\/code> and <code>&gt;<\/code>), and also goes over the auto indent command (<code>=<\/code>).<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/5/indentation_commands.ogv",
                 "bytes": "11178639",
@@ -118,7 +118,7 @@
             "url": "http://vimcasts.org/episodes/working-with-buffers/",
             "short_url": "http://vimcasts.org/e/6",
             "poster": "http://vimcasts.org/images/posters/working_with_buffers.png",
-            "abstract": "<p>Introducing the buffer list, and commands for switching between buffers. This episode also covers the concept of \'hidden\' buffers, and shows how to deal with them.<\/p>\n\n<p>",
+            "abstract": "<p>Introducing the buffer list, and commands for switching between buffers. This episode also covers the concept of \'hidden\' buffers, and shows how to deal with them.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/6/buffers_listed_and_hidden.ogv",
                 "bytes": "4834378",
@@ -140,7 +140,7 @@
             "url": "http://vimcasts.org/episodes/working-with-windows/",
             "short_url": "http://vimcasts.org/e/7",
             "poster": "http://vimcasts.org/images/posters/working_with_windows.png",
-            "abstract": "<p>In Vim, you can view several buffers at once by loading them into multiple windows. This episode demonstrates all the essentials of working with windows: opening, closing, resizing, moving between and rearranging them.<\/p>\n\n<p>",
+            "abstract": "<p>In Vim, you can view several buffers at once by loading them into multiple windows. This episode demonstrates all the essentials of working with windows: opening, closing, resizing, moving between and rearranging them.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/7/working_with_windows.ogv",
                 "bytes": "7579846",
@@ -162,7 +162,7 @@
             "url": "http://vimcasts.org/episodes/working-with-tabs/",
             "short_url": "http://vimcasts.org/e/8",
             "poster": "http://vimcasts.org/images/posters/working_with_tabs.png",
-            "abstract": "<p>This episode covers the essential commands for working with Vim\'s tab pages: opening and closing, switching, and moving them.<\/p>\n\n<p>",
+            "abstract": "<p>This episode covers the essential commands for working with Vim\'s tab pages: opening and closing, switching, and moving them.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/8/working_with_tabs.ogv",
                 "bytes": "4805972",
@@ -184,7 +184,7 @@
             "url": "http://vimcasts.org/episodes/how-to-use-tabs/",
             "short_url": "http://vimcasts.org/e/9",
             "poster": "http://vimcasts.org/images/posters/how_to_use_tabs.png",
-            "abstract": "<p>Vim\'s treatment of tabs is a little different than what you might be used to if you are coming from another editor. In this episode I demonstrate how Vim\'s tabs can be used to group split windows together. I also show how to use Vim\'s tabs like projects in TextMate, by setting a different working directory for each one.<\/p>\n\n<p>",
+            "abstract": "<p>Vim\'s treatment of tabs is a little different than what you might be used to if you are coming from another editor. In this episode I demonstrate how Vim\'s tabs can be used to group split windows together. I also show how to use Vim\'s tabs like projects in TextMate, by setting a different working directory for each one.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/9/how_to_use_tabs.ogv",
                 "bytes": "8326271",
@@ -206,7 +206,7 @@
             "url": "http://vimcasts.org/episodes/creating-the-vimcasts-logo-as-ascii-art/",
             "short_url": "http://vimcasts.org/e/10",
             "poster": "http://vimcasts.org/images/posters/ascii.png",
-            "abstract": "<p>Demonstrating miscellaneous tips and tricks gleaned whilst making an ASCII art version of the VimCasts.org logo. Learn how to duplicate lines, copy and paste with visual block mode, search and replace within a visual selection, and how to use macros.<\/p>\n\n<p>",
+            "abstract": "<p>Demonstrating miscellaneous tips and tricks gleaned whilst making an ASCII art version of the VimCasts.org logo. Learn how to duplicate lines, copy and paste with visual block mode, search and replace within a visual selection, and how to use macros.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/10/ascii_art.ogv",
                 "bytes": "8082719",
@@ -228,7 +228,7 @@
             "url": "http://vimcasts.org/episodes/using-the-changelist-and-jumplist/",
             "short_url": "http://vimcasts.org/e/11",
             "poster": "http://vimcasts.org/images/posters/vimlists.png",
-            "abstract": "<p>This episode introduces the changelist and jumplist, demonstrating a couple of situations where they are useful. <\/p>\n\n<p>",
+            "abstract": "<p>This episode introduces the changelist and jumplist, demonstrating a couple of situations where they are useful. <\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/11/changelist_and_jumplist.ogv",
                 "bytes": "6286432",
@@ -250,7 +250,7 @@
             "url": "http://vimcasts.org/episodes/modal-editing-undo-redo-and-repeat/",
             "short_url": "http://vimcasts.org/e/12",
             "poster": "http://vimcasts.org/images/posters/modal_editing.png",
-            "abstract": "<p>Vim\'s modal editing paradigm - the newbie killer - brings tremendous efficiency if only you can learn to work with it, rather than against it. This episode demonstrates how the undo and repeat commands can benefit from spending short bursts of time in insert mode. <\/p>\n\n<p>",
+            "abstract": "<p>Vim\'s modal editing paradigm - the newbie killer - brings tremendous efficiency if only you can learn to work with it, rather than against it. This episode demonstrates how the undo and repeat commands can benefit from spending short bursts of time in insert mode. <\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/12/modal_editing.ogv",
                 "bytes": "6943276",
@@ -272,7 +272,7 @@
             "url": "http://vimcasts.org/episodes/cleaning-up-with-vim/",
             "short_url": "http://vimcasts.org/e/13",
             "poster": "http://vimcasts.org/images/posters/cleaning_up.png",
-            "abstract": "<p>Do you have trouble cleaning up with your text editor? Does it cut through the toughest grease, grime and syntax errors? Are you burning your hands on too many hotkeys?<\/p>\n\n<p>Try Vim - Extra whitening classic scourer. Vim gets the job done faster. Take short easy strokes for lemon fresh scripts. Fast, bold, Vim.<\/p>\n\n<p>",
+            "abstract": "<p>Do you have trouble cleaning up with your text editor? Does it cut through the toughest grease, grime and syntax errors? Are you burning your hands on too many hotkeys?<\/p>\n\n<p>Try Vim - Extra whitening classic scourer. Vim gets the job done faster. Take short easy strokes for lemon fresh scripts. Fast, bold, Vim.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/13/cleaning_up.ogv",
                 "bytes": "1724552",
@@ -294,7 +294,7 @@
             "url": "http://vimcasts.org/episodes/the-edit-command/",
             "short_url": "http://vimcasts.org/e/14",
             "poster": "http://vimcasts.org/images/posters/edit_command.png",
-            "abstract": "<p>This episode focuses on the <code>:edit<\/code> command. I demonstrate how to open files whose location is relative to the current working directory, then I show how to create a mapping which makes it easier to open files in the same directory as the one in the active window.<\/p>\n\n<p>",
+            "abstract": "<p>This episode focuses on the <code>:edit<\/code> command. I demonstrate how to open files whose location is relative to the current working directory, then I show how to create a mapping which makes it easier to open files in the same directory as the one in the active window.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/14/the_edit_command.ogv",
                 "bytes": "7333302",
@@ -316,7 +316,7 @@
             "url": "http://vimcasts.org/episodes/the-file-explorer/",
             "short_url": "http://vimcasts.org/e/15",
             "poster": "http://vimcasts.org/images/posters/the_file_explorer.png",
-            "abstract": "<p>This episode demonstrates how Vim\'s native file browser can be used to explore and manipulate the file system. <\/p>\n\n<p>",
+            "abstract": "<p>This episode demonstrates how Vim\'s native file browser can be used to explore and manipulate the file system. <\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/15/the_file_explorer.ogv",
                 "bytes": "9156710",
@@ -338,7 +338,7 @@
             "url": "http://vimcasts.org/episodes/soft-wrapping-text/",
             "short_url": "http://vimcasts.org/e/16",
             "poster": "http://vimcasts.org/images/posters/soft_wrapping_text.png",
-            "abstract": "<p>Long lines of text can be wrapped if they don\'t fit inside the window. By default, Vim will happily split in the middle of a word. This episode demonstrates how to use the \'linebreak\' option to make Vim break lines without breaking words.<\/p>\n\n<p>",
+            "abstract": "<p>Long lines of text can be wrapped if they don\'t fit inside the window. By default, Vim will happily split in the middle of a word. This episode demonstrates how to use the \'linebreak\' option to make Vim break lines without breaking words.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/16/soft_wrap.ogv",
                 "bytes": "9675588",
@@ -360,7 +360,7 @@
             "url": "http://vimcasts.org/episodes/hard-wrapping-text/",
             "short_url": "http://vimcasts.org/e/17",
             "poster": "http://vimcasts.org/images/posters/hard_wrapping_text.png",
-            "abstract": "<p>It is sometimes preferable to format text with hard wrapped lines, for example when writing emails in plaintext. Vim can apply this style of formatting for you. This episode shows some of the options which allow you to customize Vim\'s text formatting.<\/p>\n\n<p>",
+            "abstract": "<p>It is sometimes preferable to format text with hard wrapped lines, for example when writing emails in plaintext. Vim can apply this style of formatting for you. This episode shows some of the options which allow you to customize Vim\'s text formatting.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/17/hard_wrapping_text.ogv",
                 "bytes": "12559067",
@@ -382,7 +382,7 @@
             "url": "http://vimcasts.org/episodes/formatting-text-with-par/",
             "short_url": "http://vimcasts.org/e/18",
             "poster": "http://vimcasts.org/images/posters/formatting_text_with_par.png",
-            "abstract": "<p>\'Do one thing and do it well\' is the principle of the Unix toolkit. Editing text is a broad domain, and there are many related tasks with which it overlaps. Vim acknowledges this by enabling certain tasks to be outsourced to external programs which do that one thing, and do it well. This episode will demonstrate how the <em>par<\/em> program can be used for formatting text.<\/p>\n\n<p>",
+            "abstract": "<p>\'Do one thing and do it well\' is the principle of the Unix toolkit. Editing text is a broad domain, and there are many related tasks with which it overlaps. Vim acknowledges this by enabling certain tasks to be outsourced to external programs which do that one thing, and do it well. This episode will demonstrate how the <em>par<\/em> program can be used for formatting text.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/18/formatting_with_par.ogv",
                 "bytes": "7937415",
@@ -404,7 +404,7 @@
             "url": "http://vimcasts.org/episodes/spell-checking/",
             "short_url": "http://vimcasts.org/e/19",
             "poster": "http://vimcasts.org/images/posters/spell_checking.png",
-            "abstract": "<p>Using a spell checker is a good habit to get into.  In this episode, I demonstrate how to use Vim\'s built in spell checking feature.<\/p>\n\n<p>",
+            "abstract": "<p>Using a spell checker is a good habit to get into.  In this episode, I demonstrate how to use Vim\'s built in spell checking feature.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/19/spell_checking.ogv",
                 "bytes": "7475923",
@@ -426,7 +426,7 @@
             "url": "http://vimcasts.org/episodes/running-vim-within-irb/",
             "short_url": "http://vimcasts.org/e/20",
             "poster": "http://vimcasts.org/images/posters/irb_and_vim.png",
-            "abstract": "<p>If you work with ruby you will know that the interactive ruby shell, or \'IRB\' for short, is a useful sketchpad for coding. But the command line interface of IRB can feel quite limiting in comparison with the power of your text editor. In this episode, I\'m going to demonstrate how you can get the best of both worlds, by loading Vim from inside IRB.<\/p>\n\n<p>",
+            "abstract": "<p>If you work with ruby you will know that the interactive ruby shell, or \'IRB\' for short, is a useful sketchpad for coding. But the command line interface of IRB can feel quite limiting in comparison with the power of your text editor. In this episode, I\'m going to demonstrate how you can get the best of both worlds, by loading Vim from inside IRB.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/20/irb_and_vim.ogv",
                 "bytes": "6114279",
@@ -448,7 +448,7 @@
             "url": "http://vimcasts.org/episodes/converting-markdown-to-structured-html-with-a-macro/",
             "short_url": "http://vimcasts.org/e/21",
             "poster": "http://vimcasts.org/images/posters/markdown_macro.png",
-            "abstract": "<p>Recording your keystrokes as a macro can be a great timesaver, but you have to be careful that you use commands in such a way that they can be reused. In this episode, I construct a fairly complex macro to build a structural HTML document from markdown.<\/p>\n\n<p>",
+            "abstract": "<p>Recording your keystrokes as a macro can be a great timesaver, but you have to be careful that you use commands in such a way that they can be reused. In this episode, I construct a fairly complex macro to build a structural HTML document from markdown.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/21/markdown_macro.ogv",
                 "bytes": "14625008",
@@ -470,7 +470,7 @@
             "url": "http://vimcasts.org/episodes/selecting-columns-with-visual-block-mode/",
             "short_url": "http://vimcasts.org/e/22",
             "poster": "http://vimcasts.org/images/posters/visual_block.png",
-            "abstract": "<p>If you want to edit several adjacent lines with a similar format, you might save a lot of time by making a columnar selection. This episode will demonstrate how to achieve this using Vim\'s visual block mode.<\/p>\n\n<p>",
+            "abstract": "<p>If you want to edit several adjacent lines with a similar format, you might save a lot of time by making a columnar selection. This episode will demonstrate how to achieve this using Vim\'s visual block mode.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/22/visual_block.ogv",
                 "bytes": "5721437",
@@ -492,7 +492,7 @@
             "url": "http://vimcasts.org/episodes/converting-haml-to-erb-with-vim-macros/",
             "short_url": "http://vimcasts.org/e/23",
             "poster": "http://vimcasts.org/images/posters/haml_to_erb.png",
-            "abstract": "<p>HAML and ERB are two commonly used ruby templating languages. You may have a strong preference for one or the other, but it\'s not always up to you which one you use. I was recently asked to convert several HAML files to ERB format. In this episode, I will demonstrate a couple of Vim macros that helped make short work of the task. <\/p>\n\n<p>",
+            "abstract": "<p>HAML and ERB are two commonly used ruby templating languages. You may have a strong preference for one or the other, but it\'s not always up to you which one you use. I was recently asked to convert several HAML files to ERB format. In this episode, I will demonstrate a couple of Vim macros that helped make short work of the task. <\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/23/haml_to_erb.ogv",
                 "bytes": "11656496",
@@ -514,7 +514,7 @@
             "url": "http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/",
             "short_url": "http://vimcasts.org/e/24",
             "poster": "http://vimcasts.org/images/posters/vimrc_on_the_fly.png",
-            "abstract": "<p>The vimrc file allows you to preserve your settings so that they are restored each time you launch Vim. But what if you want to update your vimrc file in the middle of an editing session? This episode demonstrates a couple of tricks that make it easy to customize Vim on the fly.<\/p>\n\n<p>",
+            "abstract": "<p>The vimrc file allows you to preserve your settings so that they are restored each time you launch Vim. But what if you want to update your vimrc file in the middle of an editing session? This episode demonstrates a couple of tricks that make it easy to customize Vim on the fly.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/24/vimrc_on_the_fly.ogv",
                 "bytes": "2922294",
@@ -536,7 +536,7 @@
             "url": "http://vimcasts.org/episodes/creating-colorschemes-for-vim/",
             "short_url": "http://vimcasts.org/e/25",
             "poster": "http://vimcasts.org/images/posters/colorschemes.png",
-            "abstract": "<p>Choosing a colorscheme that you find pleasing to look at is essential if you want to be comfortable working with Vim. There are hundreds of colorschemes available, but what if you can\'t find one that you like? In this episode, I\'ll share a few tips that make it easy to create colorschemes for Vim.<\/p>\n\n<p>",
+            "abstract": "<p>Choosing a colorscheme that you find pleasing to look at is essential if you want to be comfortable working with Vim. There are hundreds of colorschemes available, but what if you can\'t find one that you like? In this episode, I\'ll share a few tips that make it easy to create colorschemes for Vim.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/25/colorschemes.ogv",
                 "bytes": "18548209",
@@ -558,7 +558,7 @@
             "url": "http://vimcasts.org/episodes/bubbling-text/",
             "short_url": "http://vimcasts.org/e/26",
             "poster": "http://vimcasts.org/images/posters/bubbling_text.png",
-            "abstract": "<p>TextMate has a few built in commands for moving selected text around a document. The end end result of using these commands can be achieved by cutting and pasting, but the visual feedback they provide is quite helpful. In this episode, I will show how to replicate these commands in Vim.<\/p>\n\n<p>",
+            "abstract": "<p>TextMate has a few built in commands for moving selected text around a document. The end end result of using these commands can be achieved by cutting and pasting, but the visual feedback they provide is quite helpful. In this episode, I will show how to replicate these commands in Vim.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/26/bubble_selection.ogv",
                 "bytes": "8959885",
@@ -580,7 +580,7 @@
             "url": "http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/",
             "short_url": "http://vimcasts.org/e/27",
             "poster": "http://vimcasts.org/images/posters/sync_with_git.png",
-            "abstract": "<p>If you use Vim on muliple machines, it can be difficult to keep your configuration files synchronized across them. One solution is to put your dotfiles under version control. In this episode, I demonstrate how to keep your vimrc and plugins synchronized using git submodules and the pathogen plugin.<\/p>\n\n<p>",
+            "abstract": "<p>If you use Vim on muliple machines, it can be difficult to keep your configuration files synchronized across them. One solution is to put your dotfiles under version control. In this episode, I demonstrate how to keep your vimrc and plugins synchronized using git submodules and the pathogen plugin.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/27/sync_with_git.ogv",
                 "bytes": "19428011",
@@ -602,7 +602,7 @@
             "url": "http://vimcasts.org/episodes/refining-search-patterns-with-the-command-line-window/",
             "short_url": "http://vimcasts.org/e/28",
             "poster": "http://vimcasts.org/images/posters/commandline_window.png",
-            "abstract": "<p>When you need to build a complex command, or devise a non-trivial search pattern, Vim\'s command-line mode can be rather limiting. In this episode, I will introduce the command-line window, which allows you to use the full power of Vim when editing search queries and commands.<\/p>\n\n<p>",
+            "abstract": "<p>When you need to build a complex command, or devise a non-trivial search pattern, Vim\'s command-line mode can be rather limiting. In this episode, I will introduce the command-line window, which allows you to use the full power of Vim when editing search queries and commands.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/28/commandline_window.ogv",
                 "bytes": "10505095",
@@ -624,7 +624,7 @@
             "url": "http://vimcasts.org/episodes/aligning-text-with-tabular-vim/",
             "short_url": "http://vimcasts.org/e/29",
             "poster": "http://vimcasts.org/images/posters/alignment.png",
-            "abstract": "<p>There are times when you can improve the readability of your code by lining up the elements on neighbouring lines. In this episode, I demonstrate how this can be achieved using the <a href=\"https://github.com/godlygeek/tabular\">Tabular<\/a> plugin.<\/p>\n\n<p>",
+            "abstract": "<p>There are times when you can improve the readability of your code by lining up the elements on neighbouring lines. In this episode, I demonstrate how this can be achieved using the <a href=\"https://github.com/godlygeek/tabular\">Tabular<\/a> plugin.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/29/alignment.ogv",
                 "bytes": "6556323",
@@ -646,7 +646,7 @@
             "url": "http://vimcasts.org/episodes/undo-branching-and-gundo-vim/",
             "short_url": "http://vimcasts.org/e/30",
             "poster": "http://vimcasts.org/images/posters/undo_tree.png",
-            "abstract": "<p>The undo command is almost universally available in software today. Being able to rollback unwanted changes can be a real timesaver. In most applications you can only go backwards and forwards linearly, but Vim keeps your changes in a tree structure, which means that you can retrieve edits from distant branches in your history. This episode will show you how.<\/p>\n\n<p>",
+            "abstract": "<p>The undo command is almost universally available in software today. Being able to rollback unwanted changes can be a real timesaver. In most applications you can only go backwards and forwards linearly, but Vim keeps your changes in a tree structure, which means that you can retrieve edits from distant branches in your history. This episode will show you how.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/30/undo_tree.ogv",
                 "bytes": "9435598",
@@ -668,7 +668,7 @@
             "url": "http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/",
             "short_url": "http://vimcasts.org/e/31",
             "poster": "http://vimcasts.org/images/posters/fugitive_1.png",
-            "abstract": "<p><a href=\"https://github.com/tpope/vim-fugitive\">The fugitive plugin<\/a>, by Tim Pope, is a git wrapper for Vim. It  complements the command line interface to git, but doesn\'t aim to replace it. In this episode, we\'ll see how some of fugitive\'s commands can streamline your workflow.<\/p>\n\n<p><em>This is the first of a five part series on fugitive.<\/em><\/p>\n\n<p>",
+            "abstract": "<p><a href=\"https://github.com/tpope/vim-fugitive\">The fugitive plugin<\/a>, by Tim Pope, is a git wrapper for Vim. It  complements the command line interface to git, but doesn\'t aim to replace it. In this episode, we\'ll see how some of fugitive\'s commands can streamline your workflow.<\/p>\n\n<p><em>This is the first of a five part series on fugitive.<\/em><\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/31/fugitive_1.ogv",
                 "bytes": "17353898",
@@ -690,7 +690,7 @@
             "url": "http://vimcasts.org/episodes/fugitive-vim-working-with-the-git-index/",
             "short_url": "http://vimcasts.org/e/32",
             "poster": "http://vimcasts.org/images/posters/fugitive_2.png",
-            "abstract": "<p>The fugitive plugin provides an interactive status window, where you can easily stage and review your changes for the next commit. The <code>:Gdiff<\/code> command visualizes the changes made to a file, by comparing the working copy with the index. In this episode, we\'ll learn how to stage hunks of changes to the index without using the <code>git add --patch<\/code> command.<\/p>\n\n<p><em>This is the second of a five part series on fugitive.vim. In the next episode, we\'ll learn how to resolve a git merge conflict by performing a 3-way vimdiff.<\/em><\/p>\n\n<p>",
+            "abstract": "<p>The fugitive plugin provides an interactive status window, where you can easily stage and review your changes for the next commit. The <code>:Gdiff<\/code> command visualizes the changes made to a file, by comparing the working copy with the index. In this episode, we\'ll learn how to stage hunks of changes to the index without using the <code>git add --patch<\/code> command.<\/p>\n\n<p><em>This is the second of a five part series on fugitive.vim. In the next episode, we\'ll learn how to resolve a git merge conflict by performing a 3-way vimdiff.<\/em><\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/32/fugitive_2.ogv",
                 "bytes": "19217222",
@@ -712,7 +712,7 @@
             "url": "http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/",
             "short_url": "http://vimcasts.org/e/33",
             "poster": "http://vimcasts.org/images/posters/fugitive_3.png",
-            "abstract": "<p>When git branches are merged, there is always the chance of a conflict arising if a file was modified in both the target and merge branches. You can resolve merge conflicts using a combination of fugitive\'s <code>:Gdiff<\/code> command, and Vim\'s built in <code>diffget<\/code> and <code>diffput<\/code>. In this episode, we\'ll find out how.<\/p>\n\n<p><em>This is the third in a five part series on fugitive.vim.<\/em><\/p>\n\n<p>",
+            "abstract": "<p>When git branches are merged, there is always the chance of a conflict arising if a file was modified in both the target and merge branches. You can resolve merge conflicts using a combination of fugitive\'s <code>:Gdiff<\/code> command, and Vim\'s built in <code>diffget<\/code> and <code>diffput<\/code>. In this episode, we\'ll find out how.<\/p>\n\n<p><em>This is the third in a five part series on fugitive.vim.<\/em><\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/33/fugitive_3.ogv",
                 "bytes": "17760378",
@@ -734,7 +734,7 @@
             "url": "http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/",
             "short_url": "http://vimcasts.org/e/34",
             "poster": "http://vimcasts.org/images/posters/fugitive_4.png",
-            "abstract": "<p>With the fugitive plugin, you\'re not limited to just working with files in your working tree. The <code>:Gedit<\/code> command allows you to open files in other branches, and to browse any <a href=\"http://book.git-scm.com/1_the_git_object_model.html\">git object<\/a>, including tags, commits and trees. Plus, if your repository is hosted on github, you can easily bring up the webpage for any git object using the <code>:Gbrowse<\/code> command.<\/p>\n\n<p><em>This is the penultimate of a five part series on fugitive.vim.<\/em><\/p>\n\n<p>",
+            "abstract": "<p>With the fugitive plugin, you\'re not limited to just working with files in your working tree. The <code>:Gedit<\/code> command allows you to open files in other branches, and to browse any <a href=\"http://book.git-scm.com/1_the_git_object_model.html\">git object<\/a>, including tags, commits and trees. Plus, if your repository is hosted on github, you can easily bring up the webpage for any git object using the <code>:Gbrowse<\/code> command.<\/p>\n\n<p><em>This is the penultimate of a five part series on fugitive.vim.<\/em><\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/34/fugitive_4.ogv",
                 "bytes": "23102160",
@@ -756,7 +756,7 @@
             "url": "http://vimcasts.org/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/",
             "short_url": "http://vimcasts.org/e/35",
             "poster": "http://vimcasts.org/images/posters/fugitive_5.png",
-            "abstract": "<p>Git provides tools for searching the contents of files, commit messages, and even whether text was added or removed by a commit. In this episode, we\'ll see how fugitive\'s <code>Ggrep<\/code> and <code>Glog<\/code> commands wrap this functionality up so that we can search the contents and history of a git repo from right inside of Vim.<\/p>\n\n<p><em>This is the last of our five part series on fugitive.vim.<\/em><\/p>\n\n<p>",
+            "abstract": "<p>Git provides tools for searching the contents of files, commit messages, and even whether text was added or removed by a commit. In this episode, we\'ll see how fugitive\'s <code>Ggrep<\/code> and <code>Glog<\/code> commands wrap this functionality up so that we can search the contents and history of a git repo from right inside of Vim.<\/p>\n\n<p><em>This is the last of our five part series on fugitive.vim.<\/em><\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/35/fugitive_5.ogv",
                 "bytes": "26702522",
@@ -778,7 +778,7 @@
             "url": "http://vimcasts.org/episodes/vimgolf-prime-numbers/",
             "short_url": "http://vimcasts.org/e/36",
             "poster": "http://vimcasts.org/images/posters/primes.png",
-            "abstract": "<p>For the VimGolf challenge <a href=\"http://vimgolf.com/challenges/4d1c27940e3d7832db000010\">\"List the first 100 prime numbers\"<\/a>, there\'s a solution that uses a regular expression to detect prime numbers. At 43 keystokes, it\'s not the winning solution, but I think it\'s the most interesting one. It uses a few clever Vim tricks, including macros, control-a to increment, the very magic pattern switch, and the <code>:global<\/code> command. There\'s a lot to learn from those 43 keystrokes, so let\'s study it!<\/p>\n\n<p>",
+            "abstract": "<p>For the VimGolf challenge <a href=\"http://vimgolf.com/challenges/4d1c27940e3d7832db000010\">\"List the first 100 prime numbers\"<\/a>, there\'s a solution that uses a regular expression to detect prime numbers. At 43 keystokes, it\'s not the winning solution, but I think it\'s the most interesting one. It uses a few clever Vim tricks, including macros, control-a to increment, the very magic pattern switch, and the <code>:global<\/code> command. There\'s a lot to learn from those 43 keystrokes, so let\'s study it!<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/36/primes.ogv",
                 "bytes": "7335704",
@@ -800,7 +800,7 @@
             "url": "http://vimcasts.org/episodes/how-to-fold/",
             "short_url": "http://vimcasts.org/e/37",
             "poster": "http://vimcasts.org/images/posters/how_to_fold.png",
-            "abstract": "<p>Vim\'s folding feature enables us to expand and collapse regions of a document. Not only does this allow us to organize our workspace, it also makes it easy to navigate around the document, and to rearrange entire sections as though they were single lines.<\/p>\n\n<p>",
+            "abstract": "<p>Vim\'s folding feature enables us to expand and collapse regions of a document. Not only does this allow us to organize our workspace, it also makes it easy to navigate around the document, and to rearrange entire sections as though they were single lines.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/37/how-to-fold.ogv",
                 "bytes": "17856957",
@@ -822,7 +822,7 @@
             "url": "http://vimcasts.org/episodes/writing-a-custom-fold-expression/",
             "short_url": "http://vimcasts.org/e/38",
             "poster": "http://vimcasts.org/images/posters/custom_foldexpr.png",
-            "abstract": "<p>With a little bit of Vimscript, you can create a custom folding expression for any filetype. We\'ll start by looking at the mechanics of folding with markers, then go on to create a folding expression for markdown documents.<\/p>\n\n<p>",
+            "abstract": "<p>With a little bit of Vimscript, you can create a custom folding expression for any filetype. We\'ll start by looking at the mechanics of folding with markers, then go on to create a folding expression for markdown documents.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/38/writing-a-foldexpr.ogv",
                 "bytes": "19003361",
@@ -844,7 +844,7 @@
             "url": "http://vimcasts.org/episodes/profiling-vimscript-performance/",
             "short_url": "http://vimcasts.org/e/39",
             "poster": "http://vimcasts.org/images/posters/profiling.png",
-            "abstract": "<p>Vim users are unforgiving of plugins that impair performance. Luckily, Vim provides built-in profiling tools that make it easy to diagnose performance issues. We\'ll start by looking at how to profile the vimrc file, then move on to a real world scenario where profiling helped to identify and aleviate a performance bottleneck.<\/p>\n\n<p>",
+            "abstract": "<p>Vim users are unforgiving of plugins that impair performance. Luckily, Vim provides built-in profiling tools that make it easy to diagnose performance issues. We\'ll start by looking at how to profile the vimrc file, then move on to a real world scenario where profiling helped to identify and aleviate a performance bottleneck.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/39/profiling.ogv",
                 "bytes": "13627416",
@@ -866,7 +866,7 @@
             "url": "http://vimcasts.org/episodes/long-range-line-duplication/",
             "short_url": "http://vimcasts.org/e/40",
             "poster": "http://vimcasts.org/images/posters/line_duplication.png",
-            "abstract": "<p>When writing code, we can often save time by duplicating a line then changing one or two parts of that line to make it suit our purposes. In this episode, we\'ll compare a few techniques for duplicating lines, and we\'ll see that the <code>:copy<\/code> Ex command is well suited to this task.<\/p>\n\n<p>",
+            "abstract": "<p>When writing code, we can often save time by duplicating a line then changing one or two parts of that line to make it suit our purposes. In this episode, we\'ll compare a few techniques for duplicating lines, and we\'ll see that the <code>:copy<\/code> Ex command is well suited to this task.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/40/line_duplication.ogv",
                 "bytes": "7569155",
@@ -888,7 +888,7 @@
             "url": "http://vimcasts.org/episodes/meet-the-arglist/",
             "short_url": "http://vimcasts.org/e/41",
             "poster": "http://vimcasts.org/images/posters/meet_arglist.png",
-            "abstract": "<p>The arglist feature complements Vim\'s buffer list. In this episode, we\'ll learn a handful of commands for traversing the arglist. We\'ll see that it\'s useful to think of the arglist as a stable subset of the files in the buffer list.<\/p>\n\n<p>",
+            "abstract": "<p>The arglist feature complements Vim\'s buffer list. In this episode, we\'ll learn a handful of commands for traversing the arglist. We\'ll see that it\'s useful to think of the arglist as a stable subset of the files in the buffer list.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/41/meet_arglist.ogv",
                 "bytes": "6615244",
@@ -910,7 +910,7 @@
             "url": "http://vimcasts.org/episodes/populating-the-arglist/",
             "short_url": "http://vimcasts.org/e/42",
             "poster": "http://vimcasts.org/images/posters/arglist_populate.png",
-            "abstract": "<p>The arglist wouldn\'t be much use if we had to quit and relaunch Vim every time we wanted to change its contents. In this episode, we\'ll learn how to set the contents of the arglist using the <code>:args<\/code> command, which can receive filepaths, globs, or even backtick expressions.<\/p>\n\n<p>",
+            "abstract": "<p>The arglist wouldn\'t be much use if we had to quit and relaunch Vim every time we wanted to change its contents. In this episode, we\'ll learn how to set the contents of the arglist using the <code>:args<\/code> command, which can receive filepaths, globs, or even backtick expressions.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/42/arglist_populate.ogv",
                 "bytes": "6533057",
@@ -932,7 +932,7 @@
             "url": "http://vimcasts.org/episodes/using-argdo-to-change-multiple-files/",
             "short_url": "http://vimcasts.org/e/43",
             "poster": "http://vimcasts.org/images/posters/argdo.png",
-            "abstract": "<p>The <code>:argdo<\/code> command allows us to execute an Ex command across all buffers in the arglist.  To demonstrate, we\'ll use the example of running the <code>:substitute<\/code> command across multiple files, then we\'ll see how to revert or save the changes.  We\'ll also compare the <code>:argdo<\/code> and <code>:bufdo<\/code> commands, and consider when it\'s appropriate to use each one.<\/p>\n\n<p>",
+            "abstract": "<p>The <code>:argdo<\/code> command allows us to execute an Ex command across all buffers in the arglist.  To demonstrate, we\'ll use the example of running the <code>:substitute<\/code> command across multiple files, then we\'ll see how to revert or save the changes.  We\'ll also compare the <code>:argdo<\/code> and <code>:bufdo<\/code> commands, and consider when it\'s appropriate to use each one.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/43/argdo.ogv",
                 "bytes": "7790359",
@@ -954,7 +954,7 @@
             "url": "http://vimcasts.org/episodes/search-multiple-files-with-vimgrep/",
             "short_url": "http://vimcasts.org/e/44",
             "poster": "http://vimcasts.org/images/posters/vimgrep.png",
-            "abstract": "<p><code>vimgrep<\/code> is Vim\'s built-in command for searching across multiple files. It\'s not so fast as external tools like ack and git-grep, but it has its uses. <code>vimgrep<\/code> uses Vim\'s built-in regex engine, so you can reuse the patterns that work with Vim\'s standard search command. <\/p>\n\n<p>",
+            "abstract": "<p><code>vimgrep<\/code> is Vim\'s built-in command for searching across multiple files. It\'s not so fast as external tools like ack and git-grep, but it has its uses. <code>vimgrep<\/code> uses Vim\'s built-in regex engine, so you can reuse the patterns that work with Vim\'s standard search command. <\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/44/vimgrep.ogv",
                 "bytes": "13806112",
@@ -976,7 +976,7 @@
             "url": "http://vimcasts.org/episodes/project-wide-find-and-replace/",
             "short_url": "http://vimcasts.org/e/45",
             "poster": "http://vimcasts.org/images/posters/project_substitute.png",
-            "abstract": "<p>Vim doesn\'t have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as <code>:substitute<\/code>, <code>:argdo<\/code>, and <code>:vimgrep<\/code>. We\'ll look at two possible strategies: first using the arglist, then the quickfix list.<\/p>\n\n<p>",
+            "abstract": "<p>Vim doesn\'t have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as <code>:substitute<\/code>, <code>:argdo<\/code>, and <code>:vimgrep<\/code>. We\'ll look at two possible strategies: first using the arglist, then the quickfix list.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/45/project_substitute.ogv",
                 "bytes": "8171536",
@@ -998,7 +998,7 @@
             "url": "http://vimcasts.org/episodes/search-for-the-selected-text/",
             "short_url": "http://vimcasts.org/e/46",
             "poster": "http://vimcasts.org/images/posters/visual_star.png",
-            "abstract": "<p><a href=\"http://vimdoc.sourceforge.net/htmldoc/pattern.html#star\">The <code>*<\/code> command<\/a> searches for the word under the cursor. That makes sense in Normal mode, but from Visual mode it would be more useful if the star command searched for the current <em>selection<\/em>, rather than the current word. We can add this feature to Vim using the <a href=\"https://github.com/nelstrom/vim-visual-star-search\">visual star search plugin<\/a>.<\/p>\n\n<p>",
+            "abstract": "<p><a href=\"http://vimdoc.sourceforge.net/htmldoc/pattern.html#star\">The <code>*<\/code> command<\/a> searches for the word under the cursor. That makes sense in Normal mode, but from Visual mode it would be more useful if the star command searched for the current <em>selection<\/em>, rather than the current word. We can add this feature to Vim using the <a href=\"https://github.com/nelstrom/vim-visual-star-search\">visual star search plugin<\/a>.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/46/visual_star.ogv",
                 "bytes": "5534285",
@@ -1020,7 +1020,7 @@
             "url": "http://vimcasts.org/episodes/smart-search-with-subvert/",
             "short_url": "http://vimcasts.org/e/47",
             "poster": "http://vimcasts.org/images/posters/abolish-search.png",
-            "abstract": "<p>The <code>:Subvert<\/code> command lets us create a particular style of regular expressions with ease. It\'s great for matching irregular singular and plural words in plain English and also for variable names that come in <code>snake_case<\/code> and <code>MixedCase<\/code> forms.<\/p>\n\n<p><em>This is part one of a three-part series on Tim Pope\'s abolish plugin.<\/em><\/p>\n\n<p>",
+            "abstract": "<p>The <code>:Subvert<\/code> command lets us create a particular style of regular expressions with ease. It\'s great for matching irregular singular and plural words in plain English and also for variable names that come in <code>snake_case<\/code> and <code>MixedCase<\/code> forms.<\/p>\n\n<p><em>This is part one of a three-part series on Tim Pope\'s abolish plugin.<\/em><\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/47/abolish-search.ogv",
                 "bytes": "6849844",
@@ -1042,7 +1042,7 @@
             "url": "http://vimcasts.org/episodes/supercharged-substitution-with-subvert/",
             "short_url": "http://vimcasts.org/e/48",
             "poster": "http://vimcasts.org/images/posters/abolish-substitute.png",
-            "abstract": "<p>The <a href=\"https://github.com/tpope/vim-abolish\">abolish plugin<\/a> provides a command called <code>:Subvert<\/code>, which is like a supercharged version of Vim\'s built-in <code>:substitute<\/code> command. The <code>:Subvert<\/code> command is especially useful for changing singular and plural variants of a word, and for refactoring names that appear in <code>snake_case<\/code> and <code>MixedCase<\/code>.<\/p>\n\n<p><em>This is part two of a three-part series on Tim Pope\'s <a href=\"https://github.com/tpope/vim-abolish\">abolish<\/a> plugin.<\/em><\/p>\n\n<p>",
+            "abstract": "<p>The <a href=\"https://github.com/tpope/vim-abolish\">abolish plugin<\/a> provides a command called <code>:Subvert<\/code>, which is like a supercharged version of Vim\'s built-in <code>:substitute<\/code> command. The <code>:Subvert<\/code> command is especially useful for changing singular and plural variants of a word, and for refactoring names that appear in <code>snake_case<\/code> and <code>MixedCase<\/code>.<\/p>\n\n<p><em>This is part two of a three-part series on Tim Pope\'s <a href=\"https://github.com/tpope/vim-abolish\">abolish<\/a> plugin.<\/em><\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/48/abolish-substitute.ogv",
                 "bytes": "9326785",
@@ -1064,7 +1064,7 @@
             "url": "http://vimcasts.org/episodes/enhanced-abbreviations-with-abolish/",
             "short_url": "http://vimcasts.org/e/49",
             "poster": "http://vimcasts.org/images/posters/abolish-abbrev.png",
-            "abstract": "<p>Vim\'s built-in abbreviation feature is handy if you want to auto-correct words that you frequently misspell, but it requires a lot of setup. The <code>:Abolish<\/code> command makes it easy to generate abbreviations that will correct multiple forms of the same word.<\/p>\n\n<p><em>This is the final of a three-part series on Tim Pope’s <a href=\"https://github.com/tpope/vim-abolish\">abolish<\/a> plugin.<\/em><\/p>\n\n<p>",
+            "abstract": "<p>Vim\'s built-in abbreviation feature is handy if you want to auto-correct words that you frequently misspell, but it requires a lot of setup. The <code>:Abolish<\/code> command makes it easy to generate abbreviations that will correct multiple forms of the same word.<\/p>\n\n<p><em>This is the final of a three-part series on Tim Pope’s <a href=\"https://github.com/tpope/vim-abolish\">abolish<\/a> plugin.<\/em><\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/49/abolish-abbreviate.ogv",
                 "bytes": "4705804",
@@ -1086,7 +1086,7 @@
             "url": "http://vimcasts.org/episodes/an-introduction-to-vspec/",
             "short_url": "http://vimcasts.org/e/50",
             "poster": "http://vimcasts.org/images/posters/vspec-intro.png",
-            "abstract": "<p><a href=\"https://github.com/kana/vim-vspec\">Vspec<\/a> is a library that allows you to test-drive your Vimscript code. In this tutorial, we\'ll cover the basics: how to inspect the contents of a buffer, how to simulate the actions of a user, and how to invoke user-defined mappings.<\/p>\n\n<p>",
+            "abstract": "<p><a href=\"https://github.com/kana/vim-vspec\">Vspec<\/a> is a library that allows you to test-drive your Vimscript code. In this tutorial, we\'ll cover the basics: how to inspect the contents of a buffer, how to simulate the actions of a user, and how to invoke user-defined mappings.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/50/vspec_intro.ogv",
                 "bytes": "13515400",
@@ -1108,7 +1108,7 @@
             "url": "http://vimcasts.org/episodes/simple-operations-using-the-default-register/",
             "short_url": "http://vimcasts.org/e/51",
             "poster": "http://vimcasts.org/images/posters/default-register.png",
-            "abstract": "<p>Vim\'s <a href=\"http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote\">default register<\/a> makes it easy to perform some of the most basic types of cut, copy, and paste operations. That\'s partly thanks to the <a href=\"http://vimdoc.sourceforge.net/htmldoc/change.html#p\"><code>p<\/code><\/a> command, which behaves differently depending on whether the default register contains a characterwise or linewise region of text.<\/p>\n\n<p>",
+            "abstract": "<p>Vim\'s <a href=\"http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote\">default register<\/a> makes it easy to perform some of the most basic types of cut, copy, and paste operations. That\'s partly thanks to the <a href=\"http://vimdoc.sourceforge.net/htmldoc/change.html#p\"><code>p<\/code><\/a> command, which behaves differently depending on whether the default register contains a characterwise or linewise region of text.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/51/default-register.ogv",
                 "bytes": "5676820",
@@ -1130,7 +1130,7 @@
             "url": "http://vimcasts.org/episodes/meet-the-yank-register/",
             "short_url": "http://vimcasts.org/e/52",
             "poster": "http://vimcasts.org/images/posters/yank-register.png",
-            "abstract": "<p>Vim\'s default register is not a safe place to keep yanked text that you want to paste later. It\'s all too easy to clobber the default register with a <code>d<\/code> or <code>x<\/code> command. Luckily, the last yanked text is kept safe in Vim\'s <a href=\"http://vimdoc.sourceforge.net/htmldoc/change.html#quote0\">yank register<\/a>.<\/p>\n\n<p>",
+            "abstract": "<p>Vim\'s default register is not a safe place to keep yanked text that you want to paste later. It\'s all too easy to clobber the default register with a <code>d<\/code> or <code>x<\/code> command. Luckily, the last yanked text is kept safe in Vim\'s <a href=\"http://vimdoc.sourceforge.net/htmldoc/change.html#quote0\">yank register<\/a>.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/52/yank-register.ogv",
                 "bytes": "5415333",
@@ -1152,7 +1152,7 @@
             "url": "http://vimcasts.org/episodes/using-vims-named-registers/",
             "short_url": "http://vimcasts.org/e/53",
             "poster": "http://vimcasts.org/images/posters/named-registers.png",
-            "abstract": "<p>We\'ve met Vim\'s <a href=\"http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote\">default register<\/a> and the <a href=\"http://vimdoc.sourceforge.net/htmldoc/change.html#quote0\">yank register<\/a>. This time, we\'re going to look at the <a href=\"http://vimdoc.sourceforge.net/htmldoc/change.html#quote_alpha\">named registers<\/a>, which are handy if you want to cut or copy some text that you intend to paste multiple times.<\/p>\n\n<p>",
+            "abstract": "<p>We\'ve met Vim\'s <a href=\"http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote\">default register<\/a> and the <a href=\"http://vimdoc.sourceforge.net/htmldoc/change.html#quote0\">yank register<\/a>. This time, we\'re going to look at the <a href=\"http://vimdoc.sourceforge.net/htmldoc/change.html#quote_alpha\">named registers<\/a>, which are handy if you want to cut or copy some text that you intend to paste multiple times.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/53/named-registers.ogv",
                 "bytes": "5356368",
@@ -1174,7 +1174,7 @@
             "url": "http://vimcasts.org/episodes/pasting-from-visual-mode/",
             "short_url": "http://vimcasts.org/e/54",
             "poster": "http://vimcasts.org/images/posters/paste-from-visual.png",
-            "abstract": "<p>When used <a href=\"http://vimdoc.sourceforge.net/htmldoc/change.html#v_p\">in Visual mode the <code>p<\/code> command<\/a> replaces the selection with the contents of a register. This makes for a smooth workflow when you want to overwrite a selection, or swap the order of two regions of text.<\/p>\n\n<p>",
+            "abstract": "<p>When used <a href=\"http://vimdoc.sourceforge.net/htmldoc/change.html#v_p\">in Visual mode the <code>p<\/code> command<\/a> replaces the selection with the contents of a register. This makes for a smooth workflow when you want to overwrite a selection, or swap the order of two regions of text.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/54/visual-mode-put.ogv",
                 "bytes": "3955140",
@@ -1196,7 +1196,7 @@
             "url": "http://vimcasts.org/episodes/pasting-from-insert-mode/",
             "short_url": "http://vimcasts.org/e/55",
             "poster": "http://vimcasts.org/images/posters/paste-from-insert.png",
-            "abstract": "<p>We don\'t have to be in Normal mode to paste the contents of a register. The <a href=\"http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r\"><code>&lt;C-r&gt;{reg}<\/code><\/a> command lets us paste a register from Insert mode (and it <a href=\"http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-r\">works in commandline mode too<\/a>!) Using this command allows us to make changes that can be repeated with <a href=\"http://vimdoc.sourceforge.net/htmldoc/repeat.html#.\">the dot command<\/a>.<\/p>\n\n<p>",
+            "abstract": "<p>We don\'t have to be in Normal mode to paste the contents of a register. The <a href=\"http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r\"><code>&lt;C-r&gt;{reg}<\/code><\/a> command lets us paste a register from Insert mode (and it <a href=\"http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-r\">works in commandline mode too<\/a>!) Using this command allows us to make changes that can be repeated with <a href=\"http://vimdoc.sourceforge.net/htmldoc/repeat.html#.\">the dot command<\/a>.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/55/insert-mode-put.ogv",
                 "bytes": "5660879",
@@ -1218,7 +1218,7 @@
             "url": "http://vimcasts.org/episodes/simple-calculations-with-vims-expression-register/",
             "short_url": "http://vimcasts.org/e/56",
             "poster": "http://vimcasts.org/images/posters/expression-register-maths.png",
-            "abstract": "<p>The <a href=\"http://vimdoc.sourceforge.net/htmldoc/change.html#quote=\">expression register<\/a> lets us evaluate a snippet of Vimscript code. This is handy when you need to perform simple calculations and insert the result into the document.<\/p>\n\n<p>",
+            "abstract": "<p>The <a href=\"http://vimdoc.sourceforge.net/htmldoc/change.html#quote=\">expression register<\/a> lets us evaluate a snippet of Vimscript code. This is handy when you need to perform simple calculations and insert the result into the document.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/56/expression-register.ogv",
                 "bytes": "4704449",
@@ -1240,7 +1240,7 @@
             "url": "http://vimcasts.org/episodes/evaluating-scripts-with-vims-expression-register/",
             "short_url": "http://vimcasts.org/e/57",
             "poster": "http://vimcasts.org/images/posters/expression-register-eval.png",
-            "abstract": "<p>In <a href=\"/e/56\">the previous lesson<\/a> we learned how use the expression register to evaluate simple calculations. We can also call built-in and user-defined Vimscript functions, and thanks to the <code>system()<\/code> function, we can also fetch output from external scripts.<\/p>\n\n<p>",
+            "abstract": "<p>In <a href=\"/e/56\">the previous lesson<\/a> we learned how use the expression register to evaluate simple calculations. We can also call built-in and user-defined Vimscript functions, and thanks to the <code>system()<\/code> function, we can also fetch output from external scripts.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/57/eval-register.ogv",
                 "bytes": "5514595",
@@ -1262,7 +1262,7 @@
             "url": "http://vimcasts.org/episodes/accessing-the-system-clipboard-from-vim/",
             "short_url": "http://vimcasts.org/e/58",
             "poster": "http://vimcasts.org/images/posters/clipboard-register.png",
-            "abstract": "<p>In some environments, Vim lets us access the system clipboard using the quoteplus register, <code>\"+<\/code>. When this feature is enabled, we can use it with the delete, yank and put operations in much the same way that we use Vim\'s other registers. Pasting from this register usually produces better results than using the system paste command in Insert mode.<\/p>\n\n<p>",
+            "abstract": "<p>In some environments, Vim lets us access the system clipboard using the quoteplus register, <code>\"+<\/code>. When this feature is enabled, we can use it with the delete, yank and put operations in much the same way that we use Vim\'s other registers. Pasting from this register usually produces better results than using the system paste command in Insert mode.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/58/clipboard-register.ogv",
                 "bytes": "6577643",
@@ -1284,7 +1284,7 @@
             "url": "http://vimcasts.org/episodes/using-vims-paste-mode-with-the-system-paste-command/",
             "short_url": "http://vimcasts.org/e/59",
             "poster": "http://vimcasts.org/images/posters/paste-option-toggle.png",
-            "abstract": "<p>When Vim is compiled without the <code>+clipboard<\/code> feature, we can still insert text from the clipboard using the system paste command (<code>ctrl-v<\/code> or <code>cmd-v<\/code>). This can produce strange effects, but we can avoid them by toggling the <code>paste<\/code> option each time we use the system paste command.<\/p>\n\n<p>",
+            "abstract": "<p>When Vim is compiled without the <code>+clipboard<\/code> feature, we can still insert text from the clipboard using the system paste command (<code>ctrl-v<\/code> or <code>cmd-v<\/code>). This can produce strange effects, but we can avoid them by toggling the <code>paste<\/code> option each time we use the system paste command.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/59/paste-option-toggle.ogv",
                 "bytes": "5456772",
@@ -1306,7 +1306,7 @@
             "url": "http://vimcasts.org/episodes/comparing-buffers-with-vimdiff/",
             "short_url": "http://vimcasts.org/e/60",
             "poster": "http://vimcasts.org/images/posters/vimdiff-buffers.png",
-            "abstract": "<p>Vim\'s diff mode allows us to easily compare the contents of two (or more) buffers. We can start Vim in diff mode using the <code>vimdiff<\/code> command, or if Vim is already running we can switch to diff mode using the <code>:diffthis<\/code> command. The beauty of the <code>:diffthis<\/code> command is that it works with unnamed buffers, whereas <code>vimdiff<\/code> can only work with files.<\/p>\n\n<p>",
+            "abstract": "<p>Vim\'s diff mode allows us to easily compare the contents of two (or more) buffers. We can start Vim in diff mode using the <code>vimdiff<\/code> command, or if Vim is already running we can switch to diff mode using the <code>:diffthis<\/code> command. The beauty of the <code>:diffthis<\/code> command is that it works with unnamed buffers, whereas <code>vimdiff<\/code> can only work with files.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/60/vimdiff.ogv",
                 "bytes": "9620942",
@@ -1328,7 +1328,7 @@
             "url": "http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/",
             "short_url": "http://vimcasts.org/e/61",
             "poster": "http://vimcasts.org/images/posters/repeatable-mappings.png",
-            "abstract": "<p>The dot command is my all-time favorite Vim trick: it tells Vim to repeat the last change. But the dot command tends not to work well with user-defined mappings. In this episode, we\'ll use repeat.vim to set up a simple mapping so that it can be repeated using the dot command.<\/p>\n\n<p>",
+            "abstract": "<p>The dot command is my all-time favorite Vim trick: it tells Vim to repeat the last change. But the dot command tends not to work well with user-defined mappings. In this episode, we\'ll use repeat.vim to set up a simple mapping so that it can be repeated using the dot command.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/61/map-with-repeat.ogv",
                 "bytes": "7103130",
@@ -1350,7 +1350,7 @@
             "url": "http://vimcasts.org/episodes/creating-mappings-that-accept-a-count/",
             "short_url": "http://vimcasts.org/e/62",
             "poster": "http://vimcasts.org/images/posters/mappings-with-count.png",
-            "abstract": "<p>Lots of Vim\'s built-in Normal mode commands can be executed multiple times by prefixing them with a count. User-defined Normal mode mappings don\'t usually handle counts the way we might like them to. We\'ll explore a couple of techniques for making our custom mappings respond predictably to a count.<\/p>\n\n<p>",
+            "abstract": "<p>Lots of Vim\'s built-in Normal mode commands can be executed multiple times by prefixing them with a count. User-defined Normal mode mappings don\'t usually handle counts the way we might like them to. We\'ll explore a couple of techniques for making our custom mappings respond predictably to a count.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/62/map-with-count.ogv",
                 "bytes": "6859558",
@@ -1372,7 +1372,7 @@
             "url": "http://vimcasts.org/episodes/operating-on-search-matches-using-gn/",
             "short_url": "http://vimcasts.org/e/63",
             "poster": "http://vimcasts.org/images/posters/gn-command.png",
-            "abstract": "<p>The <code>gn<\/code> command (introduced in Vim 7.4) makes it easy to operate on regions of text that match the current search pattern. It\'s especially useful when used with a regex that matches text regions of variable length.<\/p>\n\n<p>",
+            "abstract": "<p>The <code>gn<\/code> command (introduced in Vim 7.4) makes it easy to operate on regions of text that match the current search pattern. It\'s especially useful when used with a regex that matches text regions of variable length.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/63/gn-command.ogv",
                 "bytes": "6813065",

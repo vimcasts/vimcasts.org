@@ -154,7 +154,7 @@
 
 <p>Vim doesn't have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as <code>:substitute</code>, <code>:argdo</code>, and <code>:vimgrep</code>. We'll look at two possible strategies: first using the arglist, then the quickfix list.</p>
 
-<p>
+
 <a href="/episodes/project-wide-find-and-replace/">  
     Watch screencast
   
@@ -188,7 +188,7 @@
 
 <p>The <code>vimgrep</code> command uses Vim's native regular expressions to search the contents of multiple files. There are several ways that we can specify the list of files to look inside, including <code>*</code> and <code>**</code> wildcards. It would be handy if we could instruct <code>vimgrep</code> to look inside all of the files in the current project, excluding those listed in the <code>.gitignore</code> file. That's where the <a href="https://www.kernel.org/pub/software/scm/git/docs/git-ls-files.html"><code>git ls-files</code></a> command comes in.</p>
 
-<p>
+
 <a href="/blog/2013/03/combining-vimgrep-with-git-ls-files/">  
     Continue reading
   
@@ -224,7 +224,7 @@
 
 <p>I also love using <code>:vimgrep</code>, because it lets me use Vim's native regular expressions. For me, the ideal project-wide search would combine Vim's regex with ack's method of specifying the set of files to search through. I recently learned about ack's <code>-f</code> flag, which makes this combination possible.</p>
 
-<p>
+
 <a href="/blog/2013/03/combining-vimgrep-with-ack--f/">  
     Continue reading
   
@@ -270,7 +270,7 @@
 
 <p><code>vimgrep</code> is Vim's built-in command for searching across multiple files. It's not so fast as external tools like ack and git-grep, but it has its uses. <code>vimgrep</code> uses Vim's built-in regex engine, so you can reuse the patterns that work with Vim's standard search command. </p>
 
-<p>
+
 <a href="/episodes/search-multiple-files-with-vimgrep/">  
     Watch screencast
   
