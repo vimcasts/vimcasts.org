@@ -61,5 +61,16 @@ task :video_metadata do
   end
 end
 
+namespace :data do
+  desc 'Fetch current data/videos.json from Vimcasts media server'
+  task :videos do
+    require 'net/http'
+    Net::HTTP.start("media.vimcasts.org") do |http|
+      resp = http.get("/videos/index.json")
+      open("data/videos.json", "w") { |file| file.write(resp.body) }
+    end
+  end
+end
+
 desc 'Prepare, build, and publish to gh-pages'
 task :shipit => [:categories, :publish]
