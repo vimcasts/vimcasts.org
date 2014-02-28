@@ -73,4 +73,4 @@ namespace :data do
 end
 
 desc 'Prepare, build, and publish to gh-pages'
-task :shipit => [:categories, :publish]
+task :shipit => ["data:videos", :categories, :publish]
