@@ -1350,7 +1350,7 @@ episodes archive with the trailing path &amp;lt;a href=&amp;quot;http://vimcasts
       <description>&amp;lt;p&amp;gt;Vim's modal editing paradigm - the newbie killer - brings tremendous efficiency if only you can learn to work with it, rather than against it. This episode demonstrates how the undo and repeat commands can benefit from spending short bursts of time in insert mode. &amp;lt;/p&amp;gt;
 
 </description>
-      <enclosure url="http://media.vimcasts.org/videos/12/modal_editing.m4v" length="5453158" type="video/x-m4v"/>
+      <enclosure url="http://media.vimcasts.org/videos/12/modal_editing.m4v" length="7379090" type="video/x-m4v"/>
       <pubDate>Sun, 28 Mar 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/modal-editing-undo-redo-and-repeat/</guid>
       <link>http://vimcasts.org/episodes/modal-editing-undo-redo-and-repeat/</link>
@@ -1390,7 +1390,7 @@ episodes archive with the trailing path &amp;lt;a href=&amp;quot;http://vimcasts
       <description>&amp;lt;p&amp;gt;This episode covers the essential commands for working with Vim's tab pages: opening and closing, switching, and moving them.&amp;lt;/p&amp;gt;
 
 </description>
-      <enclosure url="http://media.vimcasts.org/videos/8/working_with_tabs.m4v" length="4395212" type="video/x-m4v"/>
+      <enclosure url="http://media.vimcasts.org/videos/8/working_with_tabs.m4v" length="4805972" type="video/x-m4v"/>
       <pubDate>Sun, 28 Feb 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/working-with-tabs/</guid>
       <link>http://vimcasts.org/episodes/working-with-tabs/</link>
@@ -1460,7 +1460,7 @@ episodes archive with the trailing path &amp;lt;a href=&amp;quot;http://vimcasts
       <description>&amp;lt;p&amp;gt;Vim's &amp;lt;code&amp;gt;list&amp;lt;/code&amp;gt; feature can be used to reveal hidden characters, such as tabstops and newlines. In this episode, I demonstrate how to customise the appearance of these characters by tweaking the &amp;lt;code&amp;gt;listchars&amp;lt;/code&amp;gt; setting. I go on to show how to make these invisible characters blend in with your colortheme.&amp;lt;/p&amp;gt;
 
 </description>
-      <enclosure url="http://media.vimcasts.org/videos/1/show_invisibles.m4v" length="5281290" type="video/x-m4v"/>
+      <enclosure url="http://media.vimcasts.org/videos/1/show_invisibles.m4v" length="7498364" type="video/x-m4v"/>
       <pubDate>Mon, 04 Jan 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/show-invisibles/</guid>
       <link>http://vimcasts.org/episodes/show-invisibles/</link>

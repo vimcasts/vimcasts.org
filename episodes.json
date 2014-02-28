@@ -17,7 +17,7 @@
             },
             "quicktime": {
                 "url": "http://media.vimcasts.org/videos/1/show_invisibles.m4v",
-                "bytes": "5281290",
+                "bytes": "7498364",
                 "seconds": "172",
                 "contentType": "video/x-m4v"
             }
@@ -34,13 +34,13 @@
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/2/tabs_and_spaces.ogv",
                 "bytes": "8675696",
-                "seconds": "382",
+                "seconds": "380",
                 "contentType": "video/ogg"
             },
             "quicktime": {
                 "url": "http://media.vimcasts.org/videos/2/tabs_and_spaces.m4v",
                 "bytes": "9362665",
-                "seconds": "382",
+                "seconds": "380",
                 "contentType": "video/x-m4v"
             }
         },
@@ -100,13 +100,13 @@
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/5/indentation_commands.ogv",
                 "bytes": "11178639",
-                "seconds": "341",
+                "seconds": "340",
                 "contentType": "video/ogg"
             },
             "quicktime": {
                 "url": "http://media.vimcasts.org/videos/5/indentation_commands.m4v",
                 "bytes": "11037200",
-                "seconds": "341",
+                "seconds": "340",
                 "contentType": "video/x-m4v"
             }
         },
@@ -165,14 +165,14 @@
             "abstract": "<p>This episode covers the essential commands for working with Vim\'s tab pages: opening and closing, switching, and moving them.<\/p>\n\n",
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/8/working_with_tabs.ogv",
-                "bytes": "4805972",
-                "seconds": "197",
+                "bytes": "4395212",
+                "seconds": "196",
                 "contentType": "video/ogg"
             },
             "quicktime": {
                 "url": "http://media.vimcasts.org/videos/8/working_with_tabs.m4v",
-                "bytes": "4395212",
-                "seconds": "197",
+                "bytes": "4805972",
+                "seconds": "196",
                 "contentType": "video/x-m4v"
             }
         },
@@ -259,7 +259,7 @@
             },
             "quicktime": {
                 "url": "http://media.vimcasts.org/videos/12/modal_editing.m4v",
-                "bytes": "5453158",
+                "bytes": "7379090",
                 "seconds": "326",
                 "contentType": "video/x-m4v"
             }
@@ -320,13 +320,13 @@
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/15/the_file_explorer.ogv",
                 "bytes": "9156710",
-                "seconds": "336",
+                "seconds": "335",
                 "contentType": "video/ogg"
             },
             "quicktime": {
                 "url": "http://media.vimcasts.org/videos/15/the_file_explorer.m4v",
                 "bytes": "9566713",
-                "seconds": "336",
+                "seconds": "335",
                 "contentType": "video/x-m4v"
             }
         },
@@ -672,13 +672,13 @@
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/31/fugitive_1.ogv",
                 "bytes": "17353898",
-                "seconds": "507",
+                "seconds": "506",
                 "contentType": "video/ogg"
             },
             "quicktime": {
                 "url": "http://media.vimcasts.org/videos/31/fugitive_1.m4v",
                 "bytes": "22298141",
-                "seconds": "507",
+                "seconds": "506",
                 "contentType": "video/x-m4v"
             }
         },
@@ -782,13 +782,13 @@
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/36/primes.ogv",
                 "bytes": "7335704",
-                "seconds": "413",
+                "seconds": "457",
                 "contentType": "video/ogg"
             },
             "quicktime": {
                 "url": "http://media.vimcasts.org/videos/36/primes.m4v",
                 "bytes": "11512378",
-                "seconds": "413",
+                "seconds": "457",
                 "contentType": "video/x-m4v"
             }
         },
@@ -936,13 +936,13 @@
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/43/argdo.ogv",
                 "bytes": "7790359",
-                "seconds": "340",
+                "seconds": "339",
                 "contentType": "video/ogg"
             },
             "quicktime": {
                 "url": "http://media.vimcasts.org/videos/43/argdo.m4v",
                 "bytes": "12538524",
-                "seconds": "340",
+                "seconds": "339",
                 "contentType": "video/x-m4v"
             }
         },
@@ -958,13 +958,13 @@
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/44/vimgrep.ogv",
                 "bytes": "13806112",
-                "seconds": "445",
+                "seconds": "444",
                 "contentType": "video/ogg"
             },
             "quicktime": {
                 "url": "http://media.vimcasts.org/videos/44/vimgrep.m4v",
                 "bytes": "23175625",
-                "seconds": "445",
+                "seconds": "444",
                 "contentType": "video/x-m4v"
             }
         },
@@ -1068,13 +1068,13 @@
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/49/abolish-abbreviate.ogv",
                 "bytes": "4705804",
-                "seconds": "189",
+                "seconds": "268",
                 "contentType": "video/ogg"
             },
             "quicktime": {
                 "url": "http://media.vimcasts.org/videos/49/abolish-abbreviate.m4v",
                 "bytes": "8399568",
-                "seconds": "189",
+                "seconds": "268",
                 "contentType": "video/x-m4v"
             }
         },
@@ -1090,13 +1090,13 @@
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/50/vspec_intro.ogv",
                 "bytes": "13515400",
-                "seconds": "435",
+                "seconds": "434",
                 "contentType": "video/ogg"
             },
             "quicktime": {
                 "url": "http://media.vimcasts.org/videos/50/vspec_intro.m4v",
                 "bytes": "18859892",
-                "seconds": "435",
+                "seconds": "434",
                 "contentType": "video/x-m4v"
             }
         },
@@ -1112,13 +1112,13 @@
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/51/default-register.ogv",
                 "bytes": "5676820",
-                "seconds": "247",
+                "seconds": "246",
                 "contentType": "video/ogg"
             },
             "quicktime": {
                 "url": "http://media.vimcasts.org/videos/51/default-register.m4v",
                 "bytes": "9777137",
-                "seconds": "247",
+                "seconds": "246",
                 "contentType": "video/x-m4v"
             }
         },
@@ -1178,13 +1178,13 @@
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/54/visual-mode-put.ogv",
                 "bytes": "3955140",
-                "seconds": "213",
+                "seconds": "212",
                 "contentType": "video/ogg"
             },
             "quicktime": {
                 "url": "http://media.vimcasts.org/videos/54/visual-mode-put.m4v",
                 "bytes": "6773573",
-                "seconds": "213",
+                "seconds": "212",
                 "contentType": "video/x-m4v"
             }
         },
@@ -1288,13 +1288,13 @@
             "ogg": {
                 "url": "http://media.vimcasts.org/videos/59/paste-option-toggle.ogv",
                 "bytes": "5456772",
-                "seconds": "265",
+                "seconds": "264",
                 "contentType": "video/ogg"
             },
             "quicktime": {
                 "url": "http://media.vimcasts.org/videos/59/paste-option-toggle.m4v",
                 "bytes": "9844252",
-                "seconds": "265",
+                "seconds": "264",
                 "contentType": "video/x-m4v"
             }
         },
