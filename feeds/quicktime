@@ -1,0 +1,1469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vimcasts Quicktime Feed</title>
+    <description>Vimcasts - Free screencasts about the text editor Vim</description>
+    <link>http://vimcasts.org/feeds/quicktime/</link>
+    <atom:link href="http://vimcasts.org/feeds/quicktime/" rel="self" type="application/rss+xml"/>
+    <language>en-us</language>
+    <ttl>40</ttl>
+    <item>
+      <title>Vimcasts redesign: a work in progress</title>
+      <description>&amp;lt;p&amp;gt;In the not-too-distant future, you can expect to see a revised design for Vimcasts.org. The most significant enhancements will be the addition of tags, site search, and a responsive design for smaller screens. Hannah Adcock, from &amp;lt;a href=&amp;quot;http://contentedstrategy.com&amp;quot;&amp;gt;contentedstrategy.com&amp;lt;/a&amp;gt;, has been helping me out by analysing user feedback, as well as data from Google Analytics.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Thu, 13 Feb 2014 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2014/02/vimcasts-redesign-a-work-in-progress/</guid>
+      <link>http://vimcasts.org/blog/2014/02/vimcasts-redesign-a-work-in-progress/</link>
+    </item>
+    <item>
+      <title>Operating on search matches using gn</title>
+      <description>&amp;lt;p&amp;gt;The &amp;lt;code&amp;gt;gn&amp;lt;/code&amp;gt; command (introduced in Vim 7.4) makes it easy to operate on regions of text that match the current search pattern. It's especially useful when used with a regex that matches text regions of variable length.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/63/gn-command.m4v" length="10070454" type="video/x-m4v"/>
+      <pubDate>Tue, 11 Feb 2014 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/operating-on-search-matches-using-gn/</guid>
+      <link>http://vimcasts.org/episodes/operating-on-search-matches-using-gn/</link>
+    </item>
+    <item>
+      <title>Creating mappings that accept a count</title>
+      <description>&amp;lt;p&amp;gt;Lots of Vim's built-in Normal mode commands can be executed multiple times by prefixing them with a count. User-defined Normal mode mappings don't usually handle counts the way we might like them to. We'll explore a couple of techniques for making our custom mappings respond predictably to a count.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/62/map-with-count.m4v" length="10336771" type="video/x-m4v"/>
+      <pubDate>Thu, 06 Feb 2014 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/creating-mappings-that-accept-a-count/</guid>
+      <link>http://vimcasts.org/episodes/creating-mappings-that-accept-a-count/</link>
+    </item>
+    <item>
+      <title>Follow my leader</title>
+      <description>&amp;lt;p&amp;gt;Choosing a key-map for your custom Vim commands can be difficult. The common advice is to use &amp;lt;code&amp;gt;&amp;amp;lt;leader&amp;amp;gt;&amp;lt;/code&amp;gt; for user-defined mappings, but that's not the only option. There are dozens of two-key mappings that are not bound to any built-in functionality. These available mappings are easy to find if you follow a simple formula.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Wed, 05 Feb 2014 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2014/02/follow-my-leader/</guid>
+      <link>http://vimcasts.org/blog/2014/02/follow-my-leader/</link>
+    </item>
+    <item>
+      <title>Upcoming online workshop: March 5th</title>
+      <description>&amp;lt;p&amp;gt;On Wednesday, March 5th 2014, I’m going to teach my &amp;lt;a href=&amp;quot;/classes/core-vim&amp;quot;&amp;gt;Core Vim Class Online&amp;lt;/a&amp;gt;. Tickets cost $255, but you can save 10% if you buy a $230 Earlybird ticket by February 26th. You can &amp;lt;a href=&amp;quot;https://ti.to/studio-nelstrom/core-vim-class-online-4&amp;quot;&amp;gt;buy tickets from tito.io&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Fri, 31 Jan 2014 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2014/01/upcoming-online-workshop-march-5th/</guid>
+      <link>http://vimcasts.org/announcements/2014/01/upcoming-online-workshop-march-5th/</link>
+    </item>
+    <item>
+      <title>Creating repeatable mappings with repeat.vim</title>
+      <description>&amp;lt;p&amp;gt;The dot command is my all-time favorite Vim trick: it tells Vim to repeat the last change. But the dot command tends not to work well with user-defined mappings. In this episode, we'll use repeat.vim to set up a simple mapping so that it can be repeated using the dot command.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/61/map-with-repeat.m4v" length="9958244" type="video/x-m4v"/>
+      <pubDate>Tue, 21 Jan 2014 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/</guid>
+      <link>http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/</link>
+    </item>
+    <item>
+      <title>Upcoming Core Vim Class: London, February '14</title>
+      <description>&amp;lt;p&amp;gt;I'll be running a &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-in-london-2&amp;quot;&amp;gt;Core Vim Masterclass in London&amp;lt;/a&amp;gt; on the afternoon of February 19th, at &amp;lt;a href=&amp;quot;http://www.nicholsonspubs.co.uk/doggettscoatandbadgesouthbanklondon/findus/&amp;quot;&amp;gt;Doggett's Coat and Badge&amp;lt;/a&amp;gt;. This is a rare opportunity to attend my &amp;lt;a href=&amp;quot;http://vimcasts.org/classes/core-vim-live&amp;quot;&amp;gt;Core Vim Masterclass&amp;lt;/a&amp;gt; in person, instead of online.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;You can &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-in-london-2&amp;quot;&amp;gt;purchase tickets for the London workshop&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;</description>
+      <pubDate>Mon, 20 Jan 2014 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2014/01/upcoming-core-vim-class-london-february-14/</guid>
+      <link>http://vimcasts.org/announcements/2014/01/upcoming-core-vim-class-london-february-14/</link>
+    </item>
+    <item>
+      <title>20% group discount for Core Vim Class, January edition</title>
+      <description>&amp;lt;p&amp;gt;For the month of January only, I'm offering a &amp;lt;strong&amp;gt;20% discount on orders of five or more tickets&amp;lt;/strong&amp;gt; for my &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-online-3&amp;quot;&amp;gt;Core Vim Class&amp;lt;/a&amp;gt;. That's £128 per head, a £32 saving on full price tickets at £160. If your team makes heavy use of Vim, then this is a great opportunity...&amp;lt;/p&amp;gt;</description>
+      <pubDate>Mon, 20 Jan 2014 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2014/01/20-group-discount-for-core-vim-class-january-edition/</guid>
+      <link>http://vimcasts.org/announcements/2014/01/20-group-discount-for-core-vim-class-january-edition/</link>
+    </item>
+    <item>
+      <title>Comparing buffers with vimdiff</title>
+      <description>&amp;lt;p&amp;gt;Vim's diff mode allows us to easily compare the contents of two (or more) buffers. We can start Vim in diff mode using the &amp;lt;code&amp;gt;vimdiff&amp;lt;/code&amp;gt; command, or if Vim is already running we can switch to diff mode using the &amp;lt;code&amp;gt;:diffthis&amp;lt;/code&amp;gt; command. The beauty of the &amp;lt;code&amp;gt;:diffthis&amp;lt;/code&amp;gt; command is that it works with unnamed buffers, whereas &amp;lt;code&amp;gt;vimdiff&amp;lt;/code&amp;gt; can only work with files.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/60/vimdiff.m4v" length="13194774" type="video/x-m4v"/>
+      <pubDate>Wed, 15 Jan 2014 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/comparing-buffers-with-vimdiff/</guid>
+      <link>http://vimcasts.org/episodes/comparing-buffers-with-vimdiff/</link>
+    </item>
+    <item>
+      <title>Help shape the redesign of Vimcasts.org</title>
+      <description>&amp;lt;p&amp;gt;Vimcasts was launched four years ago, in January 2010. I anticipated making only a dozen screencasts, but there are now over 50, as well as a blog. I'm going to make some changes so you can find what you're looking for more easily. I'd appreciate your...&amp;lt;/p&amp;gt;</description>
+      <pubDate>Fri, 10 Jan 2014 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2014/01/help-shape-the-redesign-of-vimcasts-org/</guid>
+      <link>http://vimcasts.org/blog/2014/01/help-shape-the-redesign-of-vimcasts-org/</link>
+    </item>
+    <item>
+      <title>Upcoming online workshop: January 27th</title>
+      <description>&amp;lt;p&amp;gt;On Monday, January 27th 2014, I’m going to teach my &amp;lt;a href=&amp;quot;/classes/core-vim&amp;quot;&amp;gt;Core Vim Class Online&amp;lt;/a&amp;gt;. Tickets cost £160, but you can save 10% if you buy a £145 Earlybird ticket by January 24th. You can &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-online-3&amp;quot;&amp;gt;buy tickets from tito.io&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Mon, 09 Dec 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2013/12/upcoming-online-workshop-january-27th/</guid>
+      <link>http://vimcasts.org/announcements/2013/12/upcoming-online-workshop-january-27th/</link>
+    </item>
+    <item>
+      <title>Registers: the Good, the Bad, and the Ugly Parts</title>
+      <description>&amp;lt;p&amp;gt;To the newcomer, Vim's way of doing things may seem strange, but with familiarity it becomes natural. Many of Vim's features seemed odd to me at first, but when I got used to them I recognised that they had their own particular elegance. However, there's one feature of Vim that still feels awkward to me: using registers for copy and paste. The deeper my understanding of registers becomes, the more they frustrate me!&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Mon, 25 Nov 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/11/registers-the-good-the-bad-and-the-ugly-parts/</guid>
+      <link>http://vimcasts.org/blog/2013/11/registers-the-good-the-bad-and-the-ugly-parts/</link>
+    </item>
+    <item>
+      <title>The copy/paste series - a retrospective</title>
+      <description>&amp;lt;p&amp;gt;Episodes &amp;lt;a href=&amp;quot;/e/51&amp;quot;&amp;gt;51&amp;lt;/a&amp;gt;, &amp;lt;a href=&amp;quot;/e/52&amp;quot;&amp;gt;52&amp;lt;/a&amp;gt;, &amp;lt;a href=&amp;quot;/e/53&amp;quot;&amp;gt;53&amp;lt;/a&amp;gt;, &amp;lt;a href=&amp;quot;/e/54&amp;quot;&amp;gt;54&amp;lt;/a&amp;gt;, &amp;lt;a href=&amp;quot;/e/55&amp;quot;&amp;gt;55&amp;lt;/a&amp;gt;, &amp;lt;a href=&amp;quot;/e/58&amp;quot;&amp;gt;58&amp;lt;/a&amp;gt;, and &amp;lt;a href=&amp;quot;/e/59&amp;quot;&amp;gt;59&amp;lt;/a&amp;gt; are all on the topic of copy and paste in Vim. I think that this is one area where Vim is especially confusing, partly because of &amp;lt;a href=&amp;quot;http://vimcasts.org/episodes/meet-the-yank-register#vim-jargon&amp;quot;&amp;gt;Vim's non-standard jargon for cut, copy and paste operations&amp;lt;/a&amp;gt;. It's not the most intuitive copy/paste system, but it's usable when you get the hang of certain concepts and techniques.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/11/the-copypaste-series-a-retrospective/</guid>
+      <link>http://vimcasts.org/blog/2013/11/the-copypaste-series-a-retrospective/</link>
+    </item>
+    <item>
+      <title>Using Vim's paste mode with the system paste command</title>
+      <description>&amp;lt;p&amp;gt;When Vim is compiled without the &amp;lt;code&amp;gt;+clipboard&amp;lt;/code&amp;gt; feature, we can still insert text from the clipboard using the system paste command (&amp;lt;code&amp;gt;ctrl-v&amp;lt;/code&amp;gt; or &amp;lt;code&amp;gt;cmd-v&amp;lt;/code&amp;gt;). This can produce strange effects, but we can avoid them by toggling the &amp;lt;code&amp;gt;paste&amp;lt;/code&amp;gt; option each time we use the system paste command.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/59/paste-option-toggle.m4v" length="9844252" type="video/x-m4v"/>
+      <pubDate>Fri, 15 Nov 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/using-vims-paste-mode-with-the-system-paste-command/</guid>
+      <link>http://vimcasts.org/episodes/using-vims-paste-mode-with-the-system-paste-command/</link>
+    </item>
+    <item>
+      <title>Getting Vim with `+clipboard` support</title>
+      <description>&amp;lt;p&amp;gt;Many systems ship with a version of Vim that was compiled with the &amp;lt;code&amp;gt;-clipboard&amp;lt;/code&amp;gt; feature disabled, which is a damned nuisance! Being able to &amp;lt;a href=&amp;quot;http://vimcasts.org/e/58&amp;quot;&amp;gt;access the system clipboard from Vim&amp;lt;/a&amp;gt; is an essential feature. Let's look at a few ways of getting the &amp;lt;code&amp;gt;+clipboard&amp;lt;/code&amp;gt; feature on OS X and Ubuntu.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Wed, 13 Nov 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/11/getting-vim-with-clipboard-support/</guid>
+      <link>http://vimcasts.org/blog/2013/11/getting-vim-with-clipboard-support/</link>
+    </item>
+    <item>
+      <title>Accessing the system clipboard from Vim</title>
+      <description>&amp;lt;p&amp;gt;In some environments, Vim lets us access the system clipboard using the quoteplus register, &amp;lt;code&amp;gt;&amp;quot;+&amp;lt;/code&amp;gt;. When this feature is enabled, we can use it with the delete, yank and put operations in much the same way that we use Vim's other registers. Pasting from this register usually produces better results than using the system paste command in Insert mode.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/58/clipboard-register.m4v" length="12031236" type="video/x-m4v"/>
+      <pubDate>Mon, 11 Nov 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/accessing-the-system-clipboard-from-vim/</guid>
+      <link>http://vimcasts.org/episodes/accessing-the-system-clipboard-from-vim/</link>
+    </item>
+    <item>
+      <title>Stockholm Vim Meetup &amp; Core Vim Class</title>
+      <description>&amp;lt;p&amp;gt;I've got two upcoming appearances in Stockholm next month. I'll be running a copy and paste clinic at the &amp;lt;a href=&amp;quot;http://www.meetup.com/Stockholm-Vim/events/148578812/&amp;quot;&amp;gt;Stockholm Vim meetup&amp;lt;/a&amp;gt;, on 2nd December. Then on the afternoon of December 3rd, I'll be running a &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-in-stockholm-1&amp;quot;&amp;gt;Core Vim Class&amp;lt;/a&amp;gt; at The Park, Stockholm. &amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Mon, 04 Nov 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2013/11/stockholm-vim-meetup-core-vim-class/</guid>
+      <link>http://vimcasts.org/announcements/2013/11/stockholm-vim-meetup-core-vim-class/</link>
+    </item>
+    <item>
+      <title>Upcoming online workshop: December 5th</title>
+      <description>&amp;lt;p&amp;gt;On Thursday, December 5th 2013, I’m going to teach my &amp;lt;a href=&amp;quot;/classes/core-vim&amp;quot;&amp;gt;Core Vim Class Online&amp;lt;/a&amp;gt;. Tickets cost $255, but you can save 10% if you buy a $230 Earlybird ticket by November 29th. You can &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-online-2&amp;quot;&amp;gt;buy tickets from tito.io&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Fri, 01 Nov 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2013/11/upcoming-online-workshop-december-5th/</guid>
+      <link>http://vimcasts.org/announcements/2013/11/upcoming-online-workshop-december-5th/</link>
+    </item>
+    <item>
+      <title>Evaluating scripts with Vim's expression register</title>
+      <description>&amp;lt;p&amp;gt;In &amp;lt;a href=&amp;quot;/e/56&amp;quot;&amp;gt;the previous lesson&amp;lt;/a&amp;gt; we learned how use the expression register to evaluate simple calculations. We can also call built-in and user-defined Vimscript functions, and thanks to the &amp;lt;code&amp;gt;system()&amp;lt;/code&amp;gt; function, we can also fetch output from external scripts.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/57/eval-register.m4v" length="9991201" type="video/x-m4v"/>
+      <pubDate>Mon, 21 Oct 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/evaluating-scripts-with-vims-expression-register/</guid>
+      <link>http://vimcasts.org/episodes/evaluating-scripts-with-vims-expression-register/</link>
+    </item>
+    <item>
+      <title>Simple calculations with Vim's expression register</title>
+      <description>&amp;lt;p&amp;gt;The &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/change.html#quote=&amp;quot;&amp;gt;expression register&amp;lt;/a&amp;gt; lets us evaluate a snippet of Vimscript code. This is handy when you need to perform simple calculations and insert the result into the document.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/56/expression-register.m4v" length="8247836" type="video/x-m4v"/>
+      <pubDate>Wed, 16 Oct 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/simple-calculations-with-vims-expression-register/</guid>
+      <link>http://vimcasts.org/episodes/simple-calculations-with-vims-expression-register/</link>
+    </item>
+    <item>
+      <title>Pasting from Insert mode</title>
+      <description>&amp;lt;p&amp;gt;We don't have to be in Normal mode to paste the contents of a register. The &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r&amp;quot;&amp;gt;&amp;lt;code&amp;gt;&amp;amp;lt;C-r&amp;amp;gt;{reg}&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt; command lets us paste a register from Insert mode (and it &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-r&amp;quot;&amp;gt;works in commandline mode too&amp;lt;/a&amp;gt;!) Using this command allows us to make changes that can be repeated with &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/repeat.html#.&amp;quot;&amp;gt;the dot command&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/55/insert-mode-put.m4v" length="9093955" type="video/x-m4v"/>
+      <pubDate>Fri, 11 Oct 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/pasting-from-insert-mode/</guid>
+      <link>http://vimcasts.org/episodes/pasting-from-insert-mode/</link>
+    </item>
+    <item>
+      <title>Pasting from Visual mode</title>
+      <description>&amp;lt;p&amp;gt;When used &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/change.html#v_p&amp;quot;&amp;gt;in Visual mode the &amp;lt;code&amp;gt;p&amp;lt;/code&amp;gt; command&amp;lt;/a&amp;gt; replaces the selection with the contents of a register. This makes for a smooth workflow when you want to overwrite a selection, or swap the order of two regions of text.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/54/visual-mode-put.m4v" length="6773573" type="video/x-m4v"/>
+      <pubDate>Mon, 07 Oct 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/pasting-from-visual-mode/</guid>
+      <link>http://vimcasts.org/episodes/pasting-from-visual-mode/</link>
+    </item>
+    <item>
+      <title>Book a private Vim class for your team</title>
+      <description>&amp;lt;p&amp;gt;Does your team make heavy use of Vim? Why not &amp;lt;a href=&amp;quot;http://vimcasts.org/classes/private-training&amp;quot;&amp;gt;book me for a private Vim training session&amp;lt;/a&amp;gt; and give your team a productivity boost? I can deliver my class online for companies based (or distributed) anywhere in the world, or I can teach on-site anywhere except the US. Here are &amp;lt;a href=&amp;quot;http://vimcasts.org/classes/private-training#prices&amp;quot;&amp;gt;my prices and terms&amp;lt;/a&amp;gt;. &amp;lt;a href=&amp;quot;&amp;amp;#109;&amp;amp;#097;&amp;amp;#105;&amp;amp;#108;&amp;amp;#116;&amp;amp;#111;:&amp;amp;#100;&amp;amp;#114;&amp;amp;#101;&amp;amp;#119;&amp;amp;#064;&amp;amp;#118;&amp;amp;#105;&amp;amp;#109;&amp;amp;#099;&amp;amp;#097;&amp;amp;#115;&amp;amp;#116;&amp;amp;#115;&amp;amp;#046;&amp;amp;#111;&amp;amp;#114;&amp;amp;#103;&amp;quot;&amp;gt;Get in touch&amp;lt;/a&amp;gt; if you have any further enquiries.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Mon, 07 Oct 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2013/10/book-a-private-vim-class-for-your-team/</guid>
+      <link>http://vimcasts.org/announcements/2013/10/book-a-private-vim-class-for-your-team/</link>
+    </item>
+    <item>
+      <title>Using Vim's named registers</title>
+      <description>&amp;lt;p&amp;gt;We've met Vim's &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote&amp;quot;&amp;gt;default register&amp;lt;/a&amp;gt; and the &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/change.html#quote0&amp;quot;&amp;gt;yank register&amp;lt;/a&amp;gt;. This time, we're going to look at the &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/change.html#quote_alpha&amp;quot;&amp;gt;named registers&amp;lt;/a&amp;gt;, which are handy if you want to cut or copy some text that you intend to paste multiple times.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/53/named-registers.m4v" length="9269387" type="video/x-m4v"/>
+      <pubDate>Fri, 04 Oct 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/using-vims-named-registers/</guid>
+      <link>http://vimcasts.org/episodes/using-vims-named-registers/</link>
+    </item>
+    <item>
+      <title>Meet the yank register</title>
+      <description>&amp;lt;p&amp;gt;Vim's default register is not a safe place to keep yanked text that you want to paste later. It's all too easy to clobber the default register with a &amp;lt;code&amp;gt;d&amp;lt;/code&amp;gt; or &amp;lt;code&amp;gt;x&amp;lt;/code&amp;gt; command. Luckily, the last yanked text is kept safe in Vim's &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/change.html#quote0&amp;quot;&amp;gt;yank register&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/52/yank-register.m4v" length="9394643" type="video/x-m4v"/>
+      <pubDate>Mon, 30 Sep 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/meet-the-yank-register/</guid>
+      <link>http://vimcasts.org/episodes/meet-the-yank-register/</link>
+    </item>
+    <item>
+      <title>Simple operations using the default register</title>
+      <description>&amp;lt;p&amp;gt;Vim's &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote&amp;quot;&amp;gt;default register&amp;lt;/a&amp;gt; makes it easy to perform some of the most basic types of cut, copy, and paste operations. That's partly thanks to the &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/change.html#p&amp;quot;&amp;gt;&amp;lt;code&amp;gt;p&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt; command, which behaves differently depending on whether the default register contains a characterwise or linewise region of text.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/51/default-register.m4v" length="9777137" type="video/x-m4v"/>
+      <pubDate>Fri, 27 Sep 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/simple-operations-using-the-default-register/</guid>
+      <link>http://vimcasts.org/episodes/simple-operations-using-the-default-register/</link>
+    </item>
+    <item>
+      <title>Upcoming online workshop: October 28th</title>
+      <description>&amp;lt;p&amp;gt;On Monday, October 28th 2013, I’m going to teach my &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-online-1&amp;quot;&amp;gt;Core Vim Masterclass Online&amp;lt;/a&amp;gt;. It will run for 4 hours, from &amp;lt;a href=&amp;quot;http://www.timeanddate.com/worldclock/fixedtime.html?msg=Core+Vim+Class+Online&amp;amp;amp;amp;iso=20131028T17&amp;amp;amp;amp;p1=136&amp;amp;amp;amp;ah=4&amp;quot;&amp;gt;17:00 BST&amp;lt;/a&amp;gt;. That’s 10:00 if you live in San Fransisco, or 13:00 if you live in New York. Tickets cost £160 (approximately US $257), but there’s an £145 earlybird offer (approx. US $233) running until October 23rd. You can &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-online-1&amp;quot;&amp;gt;buy tickets from tito.io&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Fri, 27 Sep 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2013/09/upcoming-online-workshop-october-28th/</guid>
+      <link>http://vimcasts.org/announcements/2013/09/upcoming-online-workshop-october-28th/</link>
+    </item>
+    <item>
+      <title>Change of pricing for Core Vim Class</title>
+      <description>&amp;lt;p&amp;gt;I'm raising the price for my &amp;lt;a href=&amp;quot;http://vimcasts.org/classes/core-vim&amp;quot;&amp;gt;online Core Vim Class&amp;lt;/a&amp;gt; to £160.
+From now on, attendees will receive an exclusive hour-long screencast that summarizes the material from the class.
+The class itself covers similar material to before.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Thu, 26 Sep 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2013/09/change-of-pricing-for-core-vim-class/</guid>
+      <link>http://vimcasts.org/announcements/2013/09/change-of-pricing-for-core-vim-class/</link>
+    </item>
+    <item>
+      <title>Join the Vim community on gittip</title>
+      <description>&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;https://www.gittip.com/about/&amp;quot;&amp;gt;Gittip&amp;lt;/a&amp;gt; is a way to give weekly cash gifts to people whose work inspires you. If you'd like to support the people who help make Vim awesome, why not sign up and join the &amp;lt;a href=&amp;quot;https://www.gittip.com/for/vim/&amp;quot;&amp;gt;Vim community&amp;lt;/a&amp;gt;? (We need 13 more members to hit the 150 threshold.) I've set up a weekly gift for &amp;lt;a href=&amp;quot;https://www.gittip.com/tpope/&amp;quot;&amp;gt;Tim Pope&amp;lt;/a&amp;gt;, whose Vim plugins I use every day.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Fri, 20 Sep 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/09/join-the-vim-community-on-gittip/</guid>
+      <link>http://vimcasts.org/blog/2013/09/join-the-vim-community-on-gittip/</link>
+    </item>
+    <item>
+      <title>Upcoming workshop: London, October '13</title>
+      <description>&amp;lt;p&amp;gt;I'll be running a &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-in-london-1&amp;quot;&amp;gt;Core Vim Masterclass in London&amp;lt;/a&amp;gt; on the afternoon of October 23rd, at &amp;lt;a href=&amp;quot;http://www.forward.co.uk/contact/&amp;quot;&amp;gt;Forward&amp;lt;/a&amp;gt;. This is a rare opportunity to attend my &amp;lt;a href=&amp;quot;http://vimcasts.org/classes/core-vim&amp;quot;&amp;gt;Core Vim Masterclass&amp;lt;/a&amp;gt; in person, instead of online.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;You can &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-in-london-1&amp;quot;&amp;gt;purchase tickets for the London workshop&amp;lt;/a&amp;gt; from tito.io...&amp;lt;/p&amp;gt;</description>
+      <pubDate>Wed, 18 Sep 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2013/09/upcoming-workshop-london-october-13/</guid>
+      <link>http://vimcasts.org/announcements/2013/09/upcoming-workshop-london-october-13/</link>
+    </item>
+    <item>
+      <title>Response to "Should Vimcasts go Pro?" survey</title>
+      <description>&amp;lt;p&amp;gt;I'd like to thank everyone who responded to my recent survey about supporting Vimcasts via a subscription model. I've taken your feedback on board and have decided to keep producing free Vimcasts. I can cover this site's running costs and support myself by teaching Vim classes and producing longer video tutorials to sell.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Fri, 13 Sep 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/09/response-to-should-vimcasts-go-pro-survey/</guid>
+      <link>http://vimcasts.org/blog/2013/09/response-to-should-vimcasts-go-pro-survey/</link>
+    </item>
+    <item>
+      <title>Navigating Ruby Files with Vim</title>
+      <description>&amp;lt;p&amp;gt;I've been collaborating with &amp;lt;a href=&amp;quot;http://www.thoughtbot.com/&amp;quot;&amp;gt;thoughtbot&amp;lt;/a&amp;gt; to produce three screencasts about &amp;lt;a href=&amp;quot;https://learn.thoughtbot.com/products/21-navigating-ruby-files-with-vim&amp;quot;&amp;gt;Navigating Ruby Files with Vim&amp;lt;/a&amp;gt;. There's 40 minutes of material in total, and it's available from today. You can purchase these videos for $19, but they will also be available to thoughtbot Prime subscribers. Check out &amp;lt;a href=&amp;quot;https://learn.thoughtbot.com/products/21-navigating-ruby-files-with-vim&amp;quot;&amp;gt;learn.thoughtbot.com&amp;lt;/a&amp;gt; for more details.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Fri, 13 Sep 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/09/navigating-ruby-files-with-vim/</guid>
+      <link>http://vimcasts.org/blog/2013/09/navigating-ruby-files-with-vim/</link>
+    </item>
+    <item>
+      <title>Upcoming workshop: Berlin</title>
+      <description>&amp;lt;p&amp;gt;I'll be running a &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-masterclass-berlin&amp;quot;&amp;gt;Core Vim Masterclass in Berlin&amp;lt;/a&amp;gt; on the afternoon of August 21st, at &amp;lt;a href=&amp;quot;https://launchco.com/etc/#coworking&amp;quot;&amp;gt;LAUNCH/CO&amp;lt;/a&amp;gt;. This is a rare opportunity to attend my &amp;lt;a href=&amp;quot;http://vimcasts.org/classes/core-vim&amp;quot;&amp;gt;Core Vim Masterclass&amp;lt;/a&amp;gt; in person, instead of online.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;You can &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-masterclass-berlin&amp;quot;&amp;gt;purchase tickets for the Berlin workshop&amp;lt;/a&amp;gt; from tito.io. The early bird price of £85 is available until midnight on Wednesday, August 14th. After that, the price goes up to £100, so get in there fast!&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Mon, 29 Jul 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2013/07/upcoming-workshop-berlin-2/</guid>
+      <link>http://vimcasts.org/announcements/2013/07/upcoming-workshop-berlin-2/</link>
+    </item>
+    <item>
+      <title>Should Vimcasts go Pro?</title>
+      <description>&amp;lt;p&amp;gt;I've just published &amp;lt;a href=&amp;quot;http://vimcasts.org/e/50&amp;quot;&amp;gt;episode 50 of Vimcasts&amp;lt;/a&amp;gt;. That feels like a significant milestone and a good time to consider the question: what's next?&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/07/should-vimcasts-go-pro/</guid>
+      <link>http://vimcasts.org/blog/2013/07/should-vimcasts-go-pro/</link>
+    </item>
+    <item>
+      <title>An introduction to vspec</title>
+      <description>&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;https://github.com/kana/vim-vspec&amp;quot;&amp;gt;Vspec&amp;lt;/a&amp;gt; is a library that allows you to test-drive your Vimscript code. In this tutorial, we'll cover the basics: how to inspect the contents of a buffer, how to simulate the actions of a user, and how to invoke user-defined mappings.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/50/vspec_intro.m4v" length="18859892" type="video/x-m4v"/>
+      <pubDate>Mon, 17 Jun 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/an-introduction-to-vspec/</guid>
+      <link>http://vimcasts.org/episodes/an-introduction-to-vspec/</link>
+    </item>
+    <item>
+      <title>Upcoming online workshop: July 10th</title>
+      <description>&amp;lt;p&amp;gt;On Wednesday, July 10th, I’m going to teach my &amp;lt;a href=&amp;quot;http://vimcasts.org/classes/core-vim&amp;quot;&amp;gt;Core Vim Masterclass Online&amp;lt;/a&amp;gt;. It will run for 4 hours, from 18:00 BST. That’s 10:00 if you live in San Fransisco, or 13:00 if you live in New York. &amp;lt;a href=&amp;quot;http://vimcasts-online-7.eventbrite.com/&amp;quot;&amp;gt;Tickets cost £95&amp;lt;/a&amp;gt; (approximately US $146), but there’s an £80 earlybird offer (approx. US $122) running until June 28th.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Wed, 05 Jun 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2013/06/upcoming-online-workshop-july-10th/</guid>
+      <link>http://vimcasts.org/announcements/2013/06/upcoming-online-workshop-july-10th/</link>
+    </item>
+    <item>
+      <title>Macbook Pro for sale - £900</title>
+      <description>&amp;lt;p&amp;gt;I have a 15&amp;quot; MacBook Pro for sale. It's a 2010 model, with upgraded RAM and SSD. Here are the tech specs:&amp;lt;/p&amp;gt;
+
+&amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;15&amp;quot; screen&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;2.4GHz Intel Core i5 processor&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;8GB memory (maxed out)&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;255GB SSD disk storage&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;power supply (UK adapter)&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;Good battery life&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;running Mountain Lion&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;UPDATE (8 July, 2013) - this MBP has sold already.&amp;lt;/strong&amp;gt;&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Mon, 03 Jun 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2013/06/macbook-pro-for-sale/</guid>
+      <link>http://vimcasts.org/announcements/2013/06/macbook-pro-for-sale/</link>
+    </item>
+    <item>
+      <title>Vimprint - a Vim keystroke parser</title>
+      <description>&amp;lt;p&amp;gt;I sometimes get asked what software I use to reveal the Vim keystrokes in my video tutorials here on Vimcasts.org. The fact is that I add them by hand in post-production. It's not fun!&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;When I run my &amp;lt;a href=&amp;quot;http://vimcasts.org/classes/core-vim&amp;quot;&amp;gt;Core Vim Masterclasses&amp;lt;/a&amp;gt; I use &amp;lt;a href=&amp;quot;https://github.com/sdeken/keycastr/&amp;quot;&amp;gt;Keycastr&amp;lt;/a&amp;gt; to show what I'm doing in realtime. Keycastr uses Growl-style notifications to show all keystrokes across all applications, including every letter I type while communicating in a chat room, for example. It's not ideal, but it's better than nothing! I would love to have &amp;lt;em&amp;gt;a dedicated program for visualizing my keystrokes in Vim&amp;lt;/em&amp;gt;, so I've started building &amp;lt;a href=&amp;quot;https://github.com/nelstrom/vimprint&amp;quot;&amp;gt;Vimprint&amp;lt;/a&amp;gt; to scratch that itch.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Thu, 30 May 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/05/vimprint---a-vim-keystroke-parser/</guid>
+      <link>http://vimcasts.org/blog/2013/05/vimprint---a-vim-keystroke-parser/</link>
+    </item>
+    <item>
+      <title>Talks from VimLondon now on Vimeo</title>
+      <description>&amp;lt;p&amp;gt;At the April Vim London meetup, we managed for the first time to record and publish videos of the talks. Check out the &amp;lt;a href=&amp;quot;https://vimeo.com/vimlondon/videos&amp;quot;&amp;gt;VimLondon Vimeo&amp;lt;/a&amp;gt; page to see all talks from our April and May meetups.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Wed, 29 May 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/05/talks-from-vimlondon-now-on-vimeo/</guid>
+      <link>http://vimcasts.org/blog/2013/05/talks-from-vimlondon-now-on-vimeo/</link>
+    </item>
+    <item>
+      <title>GitMinutes #8 - Drew Neil on Vim and Workflow</title>
+      <description>&amp;lt;p&amp;gt;I was pleased to be invited to chat with Thomas Ferris Nicolaisen on the GitMinutes podcast recently. It's now live! Head over to &amp;lt;a href=&amp;quot;http://episodes.gitminutes.com/2013/05/gitminutes-08-drew-neil-on-vim-and.html&amp;quot;&amp;gt;Episode #8 of Git Minutes&amp;lt;/a&amp;gt; and have a listen.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Mon, 27 May 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/05/gitminutes-8---drew-neil-on-vim-and-workflow/</guid>
+      <link>http://vimcasts.org/blog/2013/05/gitminutes-8---drew-neil-on-vim-and-workflow/</link>
+    </item>
+    <item>
+      <title>Enhanced abbreviations with :Abolish</title>
+      <description>&amp;lt;p&amp;gt;Vim's built-in abbreviation feature is handy if you want to auto-correct words that you frequently misspell, but it requires a lot of setup. The &amp;lt;code&amp;gt;:Abolish&amp;lt;/code&amp;gt; command makes it easy to generate abbreviations that will correct multiple forms of the same word.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;This is the final of a three-part series on Tim Pope’s &amp;lt;a href=&amp;quot;https://github.com/tpope/vim-abolish&amp;quot;&amp;gt;abolish&amp;lt;/a&amp;gt; plugin.&amp;lt;/em&amp;gt;&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/49/abolish-abbreviate.m4v" length="8399568" type="video/x-m4v"/>
+      <pubDate>Mon, 29 Apr 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/enhanced-abbreviations-with-abolish/</guid>
+      <link>http://vimcasts.org/episodes/enhanced-abbreviations-with-abolish/</link>
+    </item>
+    <item>
+      <title>Supercharged substitution with :Subvert</title>
+      <description>&amp;lt;p&amp;gt;The &amp;lt;a href=&amp;quot;https://github.com/tpope/vim-abolish&amp;quot;&amp;gt;abolish plugin&amp;lt;/a&amp;gt; provides a command called &amp;lt;code&amp;gt;:Subvert&amp;lt;/code&amp;gt;, which is like a supercharged version of Vim's built-in &amp;lt;code&amp;gt;:substitute&amp;lt;/code&amp;gt; command. The &amp;lt;code&amp;gt;:Subvert&amp;lt;/code&amp;gt; command is especially useful for changing singular and plural variants of a word, and for refactoring names that appear in &amp;lt;code&amp;gt;snake_case&amp;lt;/code&amp;gt; and &amp;lt;code&amp;gt;MixedCase&amp;lt;/code&amp;gt;.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;This is part two of a three-part series on Tim Pope's &amp;lt;a href=&amp;quot;https://github.com/tpope/vim-abolish&amp;quot;&amp;gt;abolish&amp;lt;/a&amp;gt; plugin.&amp;lt;/em&amp;gt;&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/48/abolish-substitute.m4v" length="17311862" type="video/x-m4v"/>
+      <pubDate>Mon, 22 Apr 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/supercharged-substitution-with-subvert/</guid>
+      <link>http://vimcasts.org/episodes/supercharged-substitution-with-subvert/</link>
+    </item>
+    <item>
+      <title>Upcoming online workshop: June 3rd</title>
+      <description>&amp;lt;p&amp;gt;On Monday, June 3rd, I’m going to teach my &amp;lt;a href=&amp;quot;http://vimcasts.org/classes/core-vim&amp;quot;&amp;gt;Core Vim Masterclass Online&amp;lt;/a&amp;gt;. It will run for 4 hours, from 18:00 GMT. That’s 10:00 if you live in San Fransisco, or 13:00 if you live in New York. &amp;lt;a href=&amp;quot;http://vimcasts-online-6.eventbrite.com/&amp;quot;&amp;gt;Tickets cost £95&amp;lt;/a&amp;gt; (approximately US $140), but there’s an ...&amp;lt;/p&amp;gt;</description>
+      <pubDate>Mon, 22 Apr 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2013/04/upcoming-online-workshop-june-3rd/</guid>
+      <link>http://vimcasts.org/announcements/2013/04/upcoming-online-workshop-june-3rd/</link>
+    </item>
+    <item>
+      <title>Practical Vim is a best-seller!</title>
+      <description>&amp;lt;p&amp;gt;One year ago today, &amp;lt;a href=&amp;quot;http://pragprog.com/book/dnvim/practical-vim&amp;quot;&amp;gt;Practical Vim&amp;lt;/a&amp;gt; was released as a beta book. I'm thrilled with how the book has been received and I'd like to thank everybody who has purchased a copy. After a year of sales, I'm happy to report that Practical Vim is a best-seller!&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Thu, 18 Apr 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/04/practical-vim-is-a-best-seller/</guid>
+      <link>http://vimcasts.org/blog/2013/04/practical-vim-is-a-best-seller/</link>
+    </item>
+    <item>
+      <title>Smart search with :Subvert</title>
+      <description>&amp;lt;p&amp;gt;The &amp;lt;code&amp;gt;:Subvert&amp;lt;/code&amp;gt; command lets us create a particular style of regular expressions with ease. It's great for matching irregular singular and plural words in plain English and also for variable names that come in &amp;lt;code&amp;gt;snake_case&amp;lt;/code&amp;gt; and &amp;lt;code&amp;gt;MixedCase&amp;lt;/code&amp;gt; forms.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;This is part one of a three-part series on Tim Pope's abolish plugin.&amp;lt;/em&amp;gt;&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/47/abolish-search.m4v" length="12868646" type="video/x-m4v"/>
+      <pubDate>Fri, 12 Apr 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/smart-search-with-subvert/</guid>
+      <link>http://vimcasts.org/episodes/smart-search-with-subvert/</link>
+    </item>
+    <item>
+      <title>Search for the selected text</title>
+      <description>&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/pattern.html#star&amp;quot;&amp;gt;The &amp;lt;code&amp;gt;*&amp;lt;/code&amp;gt; command&amp;lt;/a&amp;gt; searches for the word under the cursor. That makes sense in Normal mode, but from Visual mode it would be more useful if the star command searched for the current &amp;lt;em&amp;gt;selection&amp;lt;/em&amp;gt;, rather than the current word. We can add this feature to Vim using the &amp;lt;a href=&amp;quot;https://github.com/nelstrom/vim-visual-star-search&amp;quot;&amp;gt;visual star search plugin&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/46/visual_star.m4v" length="9876149" type="video/x-m4v"/>
+      <pubDate>Mon, 25 Mar 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/search-for-the-selected-text/</guid>
+      <link>http://vimcasts.org/episodes/search-for-the-selected-text/</link>
+    </item>
+    <item>
+      <title>Subscribe to the Vimcasts.org monthly newsletter</title>
+      <description>&amp;lt;p&amp;gt;In case you hadn't noticed, Vimcasts.org is back from hibernation! I'm publishing new screencasts and blog posts regularly. If you can't keep up with the &amp;lt;a href=&amp;quot;http://vimcasts.org/feeds&amp;quot;&amp;gt;RSS feeds&amp;lt;/a&amp;gt;, or via &amp;lt;a href=&amp;quot;http://twitter.com/vimcasts&amp;quot;&amp;gt;Twitter&amp;lt;/a&amp;gt;, then you might want to &amp;lt;a href=&amp;quot;http://eepurl.com/w5A7P&amp;quot;&amp;gt;subscribe to the Vimcasts.org newsletter&amp;lt;/a&amp;gt;. I'll send an email digest once a month containing links to all of the material published over the course of the previous month.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Thu, 21 Mar 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2013/03/subscribe-to-the-vimcasts-org-monthly-newsletter/</guid>
+      <link>http://vimcasts.org/announcements/2013/03/subscribe-to-the-vimcasts-org-monthly-newsletter/</link>
+    </item>
+    <item>
+      <title>Project-wide find and replace</title>
+      <description>&amp;lt;p&amp;gt;Vim doesn't have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as &amp;lt;code&amp;gt;:substitute&amp;lt;/code&amp;gt;, &amp;lt;code&amp;gt;:argdo&amp;lt;/code&amp;gt;, and &amp;lt;code&amp;gt;:vimgrep&amp;lt;/code&amp;gt;. We'll look at two possible strategies: first using the arglist, then the quickfix list.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/45/project_substitute.m4v" length="13422810" type="video/x-m4v"/>
+      <pubDate>Tue, 19 Mar 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/project-wide-find-and-replace/</guid>
+      <link>http://vimcasts.org/episodes/project-wide-find-and-replace/</link>
+    </item>
+    <item>
+      <title>Upcoming online workshop: April 16th</title>
+      <description>&amp;lt;p&amp;gt;On Tuesday, April 16th, I'm going to teach my &amp;lt;a href=&amp;quot;http://vimcasts-online-5.eventbrite.com/&amp;quot;&amp;gt;Vim Masterclass Online&amp;lt;/a&amp;gt;. It will run for 4 hours, from &amp;lt;a href=&amp;quot;http://everytimezone.com/#2013-4-16,240,6be&amp;quot;&amp;gt;17:00 GMT&amp;lt;/a&amp;gt;. That’s 09:00 if you live in San Fransisco, or 12:00 if you live in New York. Tickets cost £95 (approximately US $140), but there’s an £80 earlybird offer (approx. US $120) running until April 5th.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Thu, 14 Mar 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2013/03/upcoming-online-workshop-april-16th/</guid>
+      <link>http://vimcasts.org/announcements/2013/03/upcoming-online-workshop-april-16th/</link>
+    </item>
+    <item>
+      <title>Online Vim classes - sign up for email announcements</title>
+      <description>&amp;lt;p&amp;gt;I always announce my &amp;lt;a href=&amp;quot;http://vimcasts.eventbrite.com/&amp;quot;&amp;gt;Online Vim Masterclasses&amp;lt;/a&amp;gt; here on the Vimcasts &amp;lt;a href=&amp;quot;http://vimcasts.org/blog&amp;quot;&amp;gt;blog&amp;lt;/a&amp;gt; as well as on &amp;lt;a href=&amp;quot;https://twitter.com/vimcasts&amp;quot;&amp;gt;Twitter&amp;lt;/a&amp;gt;. Some of you have indicated that you'd prefer to get announcements in your email inbox, so I've set up &amp;lt;a href=&amp;quot;http://eepurl.com/wBhV5&amp;quot;&amp;gt;a mailing list for announcements&amp;lt;/a&amp;gt;. &amp;lt;a href=&amp;quot;http://eepurl.com/wBhV5&amp;quot;&amp;gt;Sign up for the newsletter&amp;lt;/a&amp;gt; and you'll be the first to hear about upcoming Vim classes.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Mon, 11 Mar 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/03/online-vim-classes---sign-up-for-email-announcements/</guid>
+      <link>http://vimcasts.org/blog/2013/03/online-vim-classes---sign-up-for-email-announcements/</link>
+    </item>
+    <item>
+      <title>Combining :vimgrep with git ls-files</title>
+      <description>&amp;lt;p&amp;gt;The &amp;lt;code&amp;gt;vimgrep&amp;lt;/code&amp;gt; command uses Vim's native regular expressions to search the contents of multiple files. There are several ways that we can specify the list of files to look inside, including &amp;lt;code&amp;gt;*&amp;lt;/code&amp;gt; and &amp;lt;code&amp;gt;**&amp;lt;/code&amp;gt; wildcards. It would be handy if we could instruct &amp;lt;code&amp;gt;vimgrep&amp;lt;/code&amp;gt; to look inside all of the files in the current project, excluding those listed in the &amp;lt;code&amp;gt;.gitignore&amp;lt;/code&amp;gt; file. That's where the &amp;lt;a href=&amp;quot;https://www.kernel.org/pub/software/scm/git/docs/git-ls-files.html&amp;quot;&amp;gt;&amp;lt;code&amp;gt;git ls-files&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt; command comes in.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Thu, 07 Mar 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/03/combining-vimgrep-with-git-ls-files/</guid>
+      <link>http://vimcasts.org/blog/2013/03/combining-vimgrep-with-git-ls-files/</link>
+    </item>
+    <item>
+      <title>Combining :vimgrep with ack -f</title>
+      <description>&amp;lt;p&amp;gt;I love the way that ack let's me specify the files to search inside. For starters, ack does the right thing by ignoring the contents of VCS directories, backup files, core dumps etc., which gives a good signal to noise ratio. On top of that, ack provides a convenient syntax for specifying filetypes to include or exclude from the set (see &amp;lt;code&amp;gt;ack --help-types&amp;lt;/code&amp;gt;). I can target ruby files only with the &amp;lt;code&amp;gt;--ruby&amp;lt;/code&amp;gt; option, or everything but ruby files with &amp;lt;code&amp;gt;--noruby&amp;lt;/code&amp;gt;.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;I also love using &amp;lt;code&amp;gt;:vimgrep&amp;lt;/code&amp;gt;, because it lets me use Vim's native regular expressions. For me, the ideal project-wide search would combine Vim's regex with ack's method of specifying the set of files to search through. I recently learned about ack's &amp;lt;code&amp;gt;-f&amp;lt;/code&amp;gt; flag, which makes this combination possible.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Tue, 05 Mar 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/03/combining-vimgrep-with-ack--f/</guid>
+      <link>http://vimcasts.org/blog/2013/03/combining-vimgrep-with-ack--f/</link>
+    </item>
+    <item>
+      <title>Search multiple files with :vimgrep</title>
+      <description>&amp;lt;p&amp;gt;&amp;lt;code&amp;gt;vimgrep&amp;lt;/code&amp;gt; is Vim's built-in command for searching across multiple files. It's not so fast as external tools like ack and git-grep, but it has its uses. &amp;lt;code&amp;gt;vimgrep&amp;lt;/code&amp;gt; uses Vim's built-in regex engine, so you can reuse the patterns that work with Vim's standard search command. &amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/44/vimgrep.m4v" length="23175625" type="video/x-m4v"/>
+      <pubDate>Fri, 01 Mar 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/search-multiple-files-with-vimgrep/</guid>
+      <link>http://vimcasts.org/episodes/search-multiple-files-with-vimgrep/</link>
+    </item>
+    <item>
+      <title>Using :argdo to change multiple files</title>
+      <description>&amp;lt;p&amp;gt;The &amp;lt;code&amp;gt;:argdo&amp;lt;/code&amp;gt; command allows us to execute an Ex command across all buffers in the arglist.  To demonstrate, we'll use the example of running the &amp;lt;code&amp;gt;:substitute&amp;lt;/code&amp;gt; command across multiple files, then we'll see how to revert or save the changes.  We'll also compare the &amp;lt;code&amp;gt;:argdo&amp;lt;/code&amp;gt; and &amp;lt;code&amp;gt;:bufdo&amp;lt;/code&amp;gt; commands, and consider when it's appropriate to use each one.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/43/argdo.m4v" length="12538524" type="video/x-m4v"/>
+      <pubDate>Mon, 25 Feb 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/using-argdo-to-change-multiple-files/</guid>
+      <link>http://vimcasts.org/episodes/using-argdo-to-change-multiple-files/</link>
+    </item>
+    <item>
+      <title>Populating the arglist</title>
+      <description>&amp;lt;p&amp;gt;The arglist wouldn't be much use if we had to quit and relaunch Vim every time we wanted to change its contents. In this episode, we'll learn how to set the contents of the arglist using the &amp;lt;code&amp;gt;:args&amp;lt;/code&amp;gt; command, which can receive filepaths, globs, or even backtick expressions.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/42/arglist_populate.m4v" length="11150926" type="video/x-m4v"/>
+      <pubDate>Fri, 22 Feb 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/populating-the-arglist/</guid>
+      <link>http://vimcasts.org/episodes/populating-the-arglist/</link>
+    </item>
+    <item>
+      <title>Get 30% off Practical Vim</title>
+      <description>&amp;lt;p&amp;gt;For a limited time, the Pragmatic Bookshelf is offering &amp;lt;a href=&amp;quot;http://pragprog.com/book/dnvim/practical-vim&amp;quot;&amp;gt;a 30% discount on Practical Vim&amp;lt;/a&amp;gt;. To claim this deal, use the coupon: &amp;lt;strong&amp;gt;DrewNeilVimMarchMadness&amp;lt;/strong&amp;gt;. The offer runs until midnight (PST) on March 8th. Please help me spread the word wide and far by Tweeting, Liking, +1-ing and so on.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Fri, 22 Feb 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/02/get-30-off-practical-vim/</guid>
+      <link>http://vimcasts.org/blog/2013/02/get-30-off-practical-vim/</link>
+    </item>
+    <item>
+      <title>Meet the arglist</title>
+      <description>&amp;lt;p&amp;gt;The arglist feature complements Vim's buffer list. In this episode, we'll learn a handful of commands for traversing the arglist. We'll see that it's useful to think of the arglist as a stable subset of the files in the buffer list.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/41/meet_arglist.m4v" length="10102190" type="video/x-m4v"/>
+      <pubDate>Tue, 19 Feb 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/meet-the-arglist/</guid>
+      <link>http://vimcasts.org/episodes/meet-the-arglist/</link>
+    </item>
+    <item>
+      <title>Google vimdocs with a custom search engine</title>
+      <description>&amp;lt;p&amp;gt;Here's a quick tip: if you can't find what you're looking for in Vim's built-in documentation, use a search engine instead. All of Vim's documentation is online at &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/&amp;quot;&amp;gt;vimdoc.sourceforge.net&amp;lt;/a&amp;gt;, so it's indexed by Google &amp;amp;amp; Co. If you create a &amp;lt;a href=&amp;quot;http://support.google.com/chrome/bin/answer.py?hl=en&amp;amp;amp;amp;answer=95653&amp;quot;&amp;gt;custom search engine&amp;lt;/a&amp;gt; for your browser, then you can easily limit your searches to only return results from &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/&amp;quot;&amp;gt;vimdoc.sourceforge.net&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Fri, 15 Feb 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/02/google-vimdocs-with-a-custom-search-engine/</guid>
+      <link>http://vimcasts.org/blog/2013/02/google-vimdocs-with-a-custom-search-engine/</link>
+    </item>
+    <item>
+      <title>Habit breaking, habit making</title>
+      <description>&amp;lt;p&amp;gt;Moving your Vim cursor around using the arrow keys is a bad habit, and like many bad habits it's a difficult one to break! Putting these lines into your vimrc can help:&amp;lt;/p&amp;gt;
+
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;noremap &amp;amp;lt;Up&amp;amp;gt; &amp;amp;lt;NOP&amp;amp;gt;
+noremap &amp;amp;lt;Down&amp;amp;gt; &amp;amp;lt;NOP&amp;amp;gt;
+noremap &amp;amp;lt;Left&amp;amp;gt; &amp;amp;lt;NOP&amp;amp;gt;
+noremap &amp;amp;lt;Right&amp;amp;gt; &amp;amp;lt;NOP&amp;amp;gt;
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
+
+&amp;lt;p&amp;gt;This snippet causes each of the arrow keys to execute &amp;lt;em&amp;gt;no operation&amp;lt;/em&amp;gt;, or in other words: it disables them. Next time you move your hand to the arrow keys you'll find that nothing happens when you press them. That should remind you to move your hand back where it belongs: on the home row, where &amp;lt;code&amp;gt;h&amp;lt;/code&amp;gt;, &amp;lt;code&amp;gt;j&amp;lt;/code&amp;gt;, &amp;lt;code&amp;gt;k&amp;lt;/code&amp;gt;, and &amp;lt;code&amp;gt;l&amp;lt;/code&amp;gt; keys are waiting for you. Alternatively, you could use the &amp;lt;a href=&amp;quot;http://www.tylercipriani.com/vim.html&amp;quot;&amp;gt;konami code&amp;lt;/a&amp;gt; version of this snippet.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;Learning to operate Vim without leaving the home row is the first rite of passage. If you're still in the habit of moving around using the arrow keys, then you should disable them today.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Wed, 06 Feb 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/</guid>
+      <link>http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/</link>
+    </item>
+    <item>
+      <title>Upcoming online workshop: March 4th</title>
+      <description>&amp;lt;p&amp;gt;On Monday, March 4th, I'm going to teach my &amp;lt;a href=&amp;quot;http://vimcasts-online-4.eventbrite.com/&amp;quot;&amp;gt;Vim Masterclass Online&amp;lt;/a&amp;gt;. It will run for 4 hours, from &amp;lt;a href=&amp;quot;http://everytimezone.com/#2013-3-4,300,6be&amp;quot;&amp;gt;17:00 GMT&amp;lt;/a&amp;gt;. That’s 09:00 if you live in San Fransisco, or 12:00 if you live in New York. Tickets cost £95 (approximately US $150), but there’s an £80 earlybird offer (approx. US $127) running until February 25th.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Wed, 06 Feb 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2013/02/upcoming-online-workshop-march-4th/</guid>
+      <link>http://vimcasts.org/announcements/2013/02/upcoming-online-workshop-march-4th/</link>
+    </item>
+    <item>
+      <title>Vim London January in review</title>
+      <description>&amp;lt;p&amp;gt;On Tuesday, 29th January, we held the 3rd meeting of Vim London. We had 5 short talks on the theme of &amp;lt;a href=&amp;quot;http://www.meetup.com/Vim-London/events/97866502/&amp;quot;&amp;gt;Speak Vim - operators and motions&amp;lt;/a&amp;gt;. The talks weren't recorded, so I'm posting a retrospective here.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Thu, 31 Jan 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/01/vim-london-january-in-review/</guid>
+      <link>http://vimcasts.org/blog/2013/01/vim-london-january-in-review/</link>
+    </item>
+    <item>
+      <title>VimLondon January Meetup: Speak Vim - Operators and Motions</title>
+      <description>&amp;lt;p&amp;gt;On Tuesday 29th January, &amp;lt;a href=&amp;quot;http://www.meetup.com/Vim-London/&amp;quot;&amp;gt;VimLondon&amp;lt;/a&amp;gt; is holding a meetup with a theme: &amp;lt;a href=&amp;quot;http://www.meetup.com/Vim-London/events/97866502/&amp;quot;&amp;gt;Speak Vim - Operators and Motions&amp;lt;/a&amp;gt;. We've got 5 short talks lined up:&amp;lt;/p&amp;gt;
+
+&amp;lt;ol&amp;gt;
+&amp;lt;li&amp;gt;
+&amp;lt;a href=&amp;quot;http://twitter.com/tea_sea&amp;quot;&amp;gt;Tom Cammann&amp;lt;/a&amp;gt;, Intro to Vim Grammar&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;
+&amp;lt;a href=&amp;quot;http://twitter.com/nelstrom&amp;quot;&amp;gt;Drew Neil&amp;lt;/a&amp;gt;, When and why you should stay out of visual mode&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://twitter.com/Jack_Franklin&amp;quot;&amp;gt;Jack Franklin&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ol&amp;gt;</description>
+      <pubDate>Mon, 21 Jan 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/01/vimlondon-january-meetup-speak-vim---operators-and-motions/</guid>
+      <link>http://vimcasts.org/blog/2013/01/vimlondon-january-meetup-speak-vim---operators-and-motions/</link>
+    </item>
+    <item>
+      <title>Long-range line duplication</title>
+      <description>&amp;lt;p&amp;gt;When writing code, we can often save time by duplicating a line then changing one or two parts of that line to make it suit our purposes. In this episode, we'll compare a few techniques for duplicating lines, and we'll see that the &amp;lt;code&amp;gt;:copy&amp;lt;/code&amp;gt; Ex command is well suited to this task.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/40/line_duplication.m4v" length="9929423" type="video/x-m4v"/>
+      <pubDate>Wed, 09 Jan 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/long-range-line-duplication/</guid>
+      <link>http://vimcasts.org/episodes/long-range-line-duplication/</link>
+    </item>
+    <item>
+      <title>New Year's discount on Vim Masterclass</title>
+      <description>&amp;lt;p&amp;gt;Make it your New Year's resolution to use Vim more effectively. The quickest way to level up is by attending my Vim Masterclass, which will be online &amp;lt;a href=&amp;quot;http://vimcasts-online-3.eventbrite.com/?discount=2013-resolution-vim&amp;quot;&amp;gt;next Monday at 9am PST&amp;lt;/a&amp;gt;. As a one-off New Year's treat, you can use the coupon: &amp;lt;a href=&amp;quot;http://vimcasts-online-3.eventbrite.com/?discount=2013-resolution-vim&amp;quot;&amp;gt;2013-resolution-vim&amp;lt;/a&amp;gt; to get your ticket for £75. That's a £20 discount! The coupon is valid until midnight (PST) on Friday, 11 January.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Mon, 07 Jan 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2013/01/new-years-discount-on-vim-masterclass/</guid>
+      <link>http://vimcasts.org/announcements/2013/01/new-years-discount-on-vim-masterclass/</link>
+    </item>
+    <item>
+      <title>Oil and vinegar - split windows and the project drawer</title>
+      <description>&amp;lt;p&amp;gt;Do you avoid using Vim's split windows because they're confusing? That might be a problem of your own devising. If you've bolted a project drawer onto Vim, then you've added unnecessary complexity to Vim's otherwise minimal interface. Split windows and the project drawer go together like oil and vinegar. I don't mean to say that you can combine them to create a delicious salad dressing. I mean that they don't mix well!&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Wed, 02 Jan 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/</guid>
+      <link>http://vimcasts.org/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/</link>
+    </item>
+    <item>
+      <title>Upcoming online workshop: January 14th</title>
+      <description>&amp;lt;p&amp;gt;On Monday, January 14th, I'm going to teach my &amp;lt;a href=&amp;quot;http://vimcasts-online-3.eventbrite.com/&amp;quot;&amp;gt;Vim Masterclass Online&amp;lt;/a&amp;gt;. It will run for 3.5 hours, from &amp;lt;a href=&amp;quot;http://everytimezone.com/#2013-1-14,300,6be&amp;quot;&amp;gt;17:00 GMT&amp;lt;/a&amp;gt;. That’s 09:00 if you live in San Fransisco, or 12:00 if you live in New York. Tickets cost £95 (approximately US $150), but there’s an £80 earlybird offer (approx. US $127) running until January 4th.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Mon, 17 Dec 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2012/12/upcoming-online-workshop-january-14th/</guid>
+      <link>http://vimcasts.org/announcements/2012/12/upcoming-online-workshop-january-14th/</link>
+    </item>
+    <item>
+      <title>Profiling Vimscript performance</title>
+      <description>&amp;lt;p&amp;gt;Vim users are unforgiving of plugins that impair performance. Luckily, Vim provides built-in profiling tools that make it easy to diagnose performance issues. We'll start by looking at how to profile the vimrc file, then move on to a real world scenario where profiling helped to identify and aleviate a performance bottleneck.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/39/profiling.m4v" length="16165079" type="video/x-m4v"/>
+      <pubDate>Mon, 03 Dec 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/profiling-vimscript-performance/</guid>
+      <link>http://vimcasts.org/episodes/profiling-vimscript-performance/</link>
+    </item>
+    <item>
+      <title>Recap of the 1st Vim Masterclass Online</title>
+      <description>&amp;lt;p&amp;gt;Yesterday was the &amp;lt;a href=&amp;quot;http://vimcasts-online-1.eventbrite.com/&amp;quot;&amp;gt;world premiere of my Vimcasts Masterclass Online&amp;lt;/a&amp;gt;. It went great! Encouraged by it's success, I'm planning to make this a regular occurrence. Watch out for more dates in the new year.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;If you missed the chance to attend the first one, don't worry! I've scheduled &amp;lt;a href=&amp;quot;http://vimcasts-online-2.eventbrite.com/&amp;quot;&amp;gt;another Vim Masterclass&amp;lt;/a&amp;gt; at the same time next week. The EarlyBird discount price of £80 (approx. US $128) is available until the end of this week.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Thu, 29 Nov 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2012/11/recap-of-the-1st-vim-masterclass-online/</guid>
+      <link>http://vimcasts.org/blog/2012/11/recap-of-the-1st-vim-masterclass-online/</link>
+    </item>
+    <item>
+      <title>Writing a custom fold expression</title>
+      <description>&amp;lt;p&amp;gt;With a little bit of Vimscript, you can create a custom folding expression for any filetype. We'll start by looking at the mechanics of folding with markers, then go on to create a folding expression for markdown documents.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/38/writing-a-foldexpr.m4v" length="24983489" type="video/x-m4v"/>
+      <pubDate>Mon, 26 Nov 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/writing-a-custom-fold-expression/</guid>
+      <link>http://vimcasts.org/episodes/writing-a-custom-fold-expression/</link>
+    </item>
+    <item>
+      <title>How to fold</title>
+      <description>&amp;lt;p&amp;gt;Vim's folding feature enables us to expand and collapse regions of a document. Not only does this allow us to organize our workspace, it also makes it easy to navigate around the document, and to rearrange entire sections as though they were single lines.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/37/how-to-fold.m4v" length="27341198" type="video/x-m4v"/>
+      <pubDate>Mon, 19 Nov 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/how-to-fold/</guid>
+      <link>http://vimcasts.org/episodes/how-to-fold/</link>
+    </item>
+    <item>
+      <title>Upcoming workshop: ONLINE</title>
+      <description>&amp;lt;p&amp;gt;On Wednesday, November 28th, I'm going to teach my &amp;lt;a href=&amp;quot;http://vimcasts-online-1.eventbrite.com/&amp;quot;&amp;gt;Vim Masterclass online&amp;lt;/a&amp;gt;. It will run for 3.5 hours, from &amp;lt;a href=&amp;quot;http://everytimezone.com/#2012-11-28,300,6be&amp;quot;&amp;gt;17:00 GMT&amp;lt;/a&amp;gt;. That's 09:00 if you live in San Fransisco, or 12:00 if you live in New York. Tickets cost £95 (approximately US $150), but there's an £80 earlybird offer (approx. US $127) running until November 21st.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;This is a World Premiere! I've run my Vim masterclass over 20 times in meatspace, but never before in cyberspace. I hope that this will be the first of many.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Fri, 16 Nov 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2012/11/upcoming-workshop-online/</guid>
+      <link>http://vimcasts.org/announcements/2012/11/upcoming-workshop-online/</link>
+    </item>
+    <item>
+      <title>Øredev presentation: Vim - precision editing at the speed of thought</title>
+      <description>&amp;lt;p&amp;gt;Last week, I had the pleasure of speaking at &amp;lt;a href=&amp;quot;http://oredev.org/&amp;quot;&amp;gt;Øredev&amp;lt;/a&amp;gt;, in Sweden. Video from my session, &amp;lt;a href=&amp;quot;https://vimeo.com/53144573&amp;quot;&amp;gt;Vim - Precision editing at the speed of thought&amp;lt;/a&amp;gt; can be found on Vimeo. You can view &amp;lt;a href=&amp;quot;https://speakerdeck.com/nelstrom/vim-precision-editing-at-the-speed-of-thought&amp;quot;&amp;gt;the slides from my talk&amp;lt;/a&amp;gt; on speakerdeck. Here's the synopsis from my talk:&amp;lt;/p&amp;gt;
+
+&amp;lt;blockquote&amp;gt;
+  &amp;lt;p&amp;gt;Vim's modal editing model was conceived to meet the constraints of computing in the 1970s. The arrival of the mouse made intuitive point-and-click user interfaces the norm. While this was a boon for the novice computer user, it was a backward step for the power user. For a touch typist, there is no quicker way of editing text than with the keyboard.&amp;lt;/p&amp;gt;
+
+  &amp;lt;p&amp;gt;This session won't teach you much in the way of practical hands-on advice - for that, see my &amp;lt;a href=&amp;quot;http://oredev.org/2012/sessions/vim-masterclass&amp;quot;&amp;gt;Vim masterclass&amp;lt;/a&amp;gt;. Instead, it will challenge your preconceptions about Vim, and inspire you to give it a second look. We'll draw analogies with the mechanics of video games such as Quake and Street Fighter II. We'll look at patterns in the game of chess, and see how they relate to the task of editing text. And we'll learn what Vim users have in common with Scrabble players.&amp;lt;/p&amp;gt;
+&amp;lt;/blockquote&amp;gt;
+
+</description>
+      <pubDate>Mon, 12 Nov 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2012/11/oredev-presentation-vim-precision-editing-at-the-speed-of-thought/</guid>
+      <link>http://vimcasts.org/blog/2012/11/oredev-presentation-vim-precision-editing-at-the-speed-of-thought/</link>
+    </item>
+    <item>
+      <title>Vim London - still alive in spite of meetup.com</title>
+      <description>&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;UPDATE&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;http://www.meetup.com/Vim-London/&amp;quot;&amp;gt;Vim London&amp;lt;/a&amp;gt; is back!&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;Yesterday, without warning, Meetup.com deleted the Vim London group. In their words, here's why:&amp;lt;/p&amp;gt;
+
+&amp;lt;blockquote&amp;gt;
+  &amp;lt;p&amp;gt;Your Meetup Group, Vim London, was brought to our attention as specifically promoting a product, which is not in compliance with our Terms of Service. Meetup is a community website and not a commercial marketplace… As a result of our inquiry, we've closed your Meetup Group and refunded your Organizer Dues.&amp;lt;/p&amp;gt;
+&amp;lt;/blockquote&amp;gt;
+
+&amp;lt;p&amp;gt;In their generic message, they don't indicate which product was apparently being promoted. The meetup group that we created has vanished, along with our list of members. That means I can't contact our (already 50+) members to explain what's happened, so I'm announcing it here.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Thu, 25 Oct 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2012/10/vim-london-still-alive-in-spite-of-meetup-com/</guid>
+      <link>http://vimcasts.org/blog/2012/10/vim-london-still-alive-in-spite-of-meetup-com/</link>
+    </item>
+    <item>
+      <title>Command-line Special: 40% discount on Practical Vim</title>
+      <description>&amp;lt;p&amp;gt;For a limited time, The Pragmatic Bookshelf is running a &amp;lt;a href=&amp;quot;http://pragprog.com/news/40-off-command-line%20special&amp;quot;&amp;gt;Command-Line Special deal&amp;lt;/a&amp;gt;. Use the coupon &amp;lt;strong&amp;gt;CommandLineFTW&amp;lt;/strong&amp;gt; to get a 40% discount on &amp;lt;a href=&amp;quot;http://pragprog.com/book/dnvim/practical-vim&amp;quot;&amp;gt;Practical Vim&amp;lt;/a&amp;gt;. Other titles under offer include &amp;lt;a href=&amp;quot;http://pragprog.com/book/bhtmux/tmux&amp;quot;&amp;gt;tmux&amp;lt;/a&amp;gt; by Brian Hogan, and &amp;lt;a href=&amp;quot;http://pragprog.com/book/dccar/build-awesome-command-line-applications-in-ruby&amp;quot;&amp;gt;Build Awesome Command-Line Applications&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;</description>
+      <pubDate>Tue, 23 Oct 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2012/10/command-line-special-40-discount-on-practical-vim/</guid>
+      <link>http://vimcasts.org/blog/2012/10/command-line-special-40-discount-on-practical-vim/</link>
+    </item>
+    <item>
+      <title>Upcoming workshop: London, October '12</title>
+      <description>&amp;lt;p&amp;gt;Once again, I'm happy to announce that I'll be running a &amp;lt;a href=&amp;quot;http://london-vimcasts-eve-2.eventbrite.com/&amp;quot;&amp;gt;Vim Masterclass in London&amp;lt;/a&amp;gt; on October 31st, at &amp;lt;a href=&amp;quot;http://forwardtechnology.co.uk/venue&amp;quot;&amp;gt;Forward&amp;lt;/a&amp;gt;. You can &amp;lt;a href=&amp;quot;http://london-vimcasts-eve-2.eventbrite.com/&amp;quot;&amp;gt;purchase tickets from EventBrite&amp;lt;/a&amp;gt;. The early bird price of £85 is available until 7pm on Wednesday, October 24th. After that, the...&amp;lt;/p&amp;gt;</description>
+      <pubDate>Fri, 12 Oct 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2012/10/upcoming-workshop-london-october-12/</guid>
+      <link>http://vimcasts.org/announcements/2012/10/upcoming-workshop-london-october-12/</link>
+    </item>
+    <item>
+      <title>Amazon reviews of Practical Vim</title>
+      <description>&amp;lt;p&amp;gt;The first five-star &amp;lt;a href=&amp;quot;http://www.amazon.com/Practical-Vim-Edit-Speed-Thought/product-reviews/1934356980/ref=dp_top_cm_cr_acr_txt?ie=UTF8&amp;amp;amp;amp;showViewpoints=1&amp;quot;&amp;gt;reviews for Practical Vim&amp;lt;/a&amp;gt; have cropped up, and I'm blushing after reading them. It's been described as &amp;lt;em&amp;gt;the book Vim has always deserved&amp;lt;/em&amp;gt;, and &amp;lt;em&amp;gt;a must-have for anybody who types&amp;lt;/em&amp;gt;. Here are a few choice phrases:&amp;lt;/p&amp;gt;
+
+&amp;lt;blockquote&amp;gt;
+  &amp;lt;p&amp;gt;This is one of the best technical books I've ever read: comprehensive but never dry.
+&amp;lt;a href=&amp;quot;http://www.amazon.com/review/R24PEKYDZMZ7HH/ref=cm_cr_pr_perm?ie=UTF8&amp;amp;amp;amp;ASIN=1934356980&amp;amp;amp;amp;linkCode=&amp;amp;amp;amp;nodeID=&amp;amp;amp;amp;tag=&amp;quot;&amp;gt;Peter&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;/blockquote&amp;gt;
+
+&amp;lt;blockquote&amp;gt;
+  &amp;lt;p&amp;gt;If I could give this book 6 stars, I would. …Satisfaction guaranteed.
+&amp;lt;a href=&amp;quot;http://www.amazon.com/review/R2VV7TYQKRMB4E/ref=cm_cr_pr_perm?ie=UTF8&amp;amp;amp;amp;ASIN=1934356980&amp;amp;amp;amp;linkCode=&amp;amp;amp;amp;nodeID=&amp;amp;amp;amp;tag=&amp;quot;&amp;gt;iynaix&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;/blockquote&amp;gt;
+
+&amp;lt;p&amp;gt;If you've read Practical Vim, please write a five-star review on Amazon. It makes a real difference. On the day that the first reviews were written, Practical Vim jumped from #16 to #2 on the &amp;lt;a href=&amp;quot;http://www.amazon.com/gp/bestsellers/books/3849/ref=pd_zg_hrsr_b_1_4_last&amp;quot;&amp;gt;Amazon best-seller list for the Linux category&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Fri, 12 Oct 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2012/10/amazon-reviews-of-practical-vim/</guid>
+      <link>http://vimcasts.org/blog/2012/10/amazon-reviews-of-practical-vim/</link>
+    </item>
+    <item>
+      <title>Practical Vim now shipping</title>
+      <description>&amp;lt;p&amp;gt;I'm happy to announce that the paperback edition of &amp;lt;a href=&amp;quot;http://pragprog.com/book/dnvim/practical-vim&amp;quot;&amp;gt;Practical Vim&amp;lt;/a&amp;gt; is now available. If you've pre-ordered, then your copy should arrive soon. Also, that means Practical Vim is no longer in &amp;lt;em&amp;gt;beta&amp;lt;/em&amp;gt;. It's been tech-reviewed, indexed, edited, typeset, and laid out. If you've been holding out for the final cut, then your wait is over. &amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Thu, 11 Oct 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2012/10/practical-vim-now-shipping/</guid>
+      <link>http://vimcasts.org/blog/2012/10/practical-vim-now-shipping/</link>
+    </item>
+    <item>
+      <title>Practical Vim rated 9/10 by Linux Format Magazine</title>
+      <description>&amp;lt;p&amp;gt;In the September issue of &amp;lt;a href=&amp;quot;http://www.linuxformat.com/&amp;quot;&amp;gt;Linux Format magazine&amp;lt;/a&amp;gt;, Jonathan Roberts reviewed Practical Vim (the beta edition) and rated it 9/10.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;img alt=&amp;quot;The best book available to move you on from being a novice Vim user.&amp;quot; src=&amp;quot;http://vimcasts.org/images/blog/linux-format-practical-vim-verdict.png&amp;quot; /&amp;gt;&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Wed, 10 Oct 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2012/10/practical-vim-in-linux-format-magazine/</guid>
+      <link>http://vimcasts.org/blog/2012/10/practical-vim-in-linux-format-magazine/</link>
+    </item>
+    <item>
+      <title>Upcoming workshop: Bristol</title>
+      <description>&amp;lt;p&amp;gt;I'll be running a &amp;lt;a href=&amp;quot;http://bristol-vimcasts-eve.eventbrite.com/&amp;quot;&amp;gt;Vim Masterclass in Bristol&amp;lt;/a&amp;gt; on October 24th, at &amp;lt;a href=&amp;quot;http://wearebeef.co.uk/&amp;quot;&amp;gt;Beef&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;Read about &amp;lt;a href=&amp;quot;http://vimcasts.org/blog/2012/02/what-to-expect-from-a-vimcasts-workshop/&amp;quot;&amp;gt;what to expect from a Vim Masterclass&amp;lt;/a&amp;gt; if you'd like to know more about the format of my workshops.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Mon, 08 Oct 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2012/10/upcoming-workshop-bristol/</guid>
+      <link>http://vimcasts.org/announcements/2012/10/upcoming-workshop-bristol/</link>
+    </item>
+    <item>
+      <title>Upcoming workshop: Boulder, CO</title>
+      <description>&amp;lt;p&amp;gt;I'll be running a &amp;lt;a href=&amp;quot;http://rmr2012-vim.eventbrite.com/&amp;quot;&amp;gt;Vim Masterclass in Boulder, Colorado&amp;lt;/a&amp;gt; on September 19th, as part of the &amp;lt;a href=&amp;quot;http://rockymtnruby.com/workshop&amp;quot;&amp;gt;Rocky Mountain Ruby Charity Workshop day&amp;lt;/a&amp;gt;. This is a rare USA appearance, so don't miss out! Donations will go to local charities in Boulder. Please give generously.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;Read about &amp;lt;a href=&amp;quot;http://vimcasts.org/blog/2012/02/what-to-expect-from-a-vimcasts-workshop/&amp;quot;&amp;gt;what to expect from a Vim Masterclass&amp;lt;/a&amp;gt; if you'd like to know more about the format of my workshops.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Mon, 03 Sep 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2012/09/upcoming-workshop-boulder-co/</guid>
+      <link>http://vimcasts.org/announcements/2012/09/upcoming-workshop-boulder-co/</link>
+    </item>
+    <item>
+      <title>VimGolf - Prime Numbers</title>
+      <description>&amp;lt;p&amp;gt;For the VimGolf challenge &amp;lt;a href=&amp;quot;http://vimgolf.com/challenges/4d1c27940e3d7832db000010&amp;quot;&amp;gt;&amp;quot;List the first 100 prime numbers&amp;quot;&amp;lt;/a&amp;gt;, there's a solution that uses a regular expression to detect prime numbers. At 43 keystokes, it's not the winning solution, but I think it's the most interesting one. It uses a few clever Vim tricks, including macros, control-a to increment, the very magic pattern switch, and the &amp;lt;code&amp;gt;:global&amp;lt;/code&amp;gt; command. There's a lot to learn from those 43 keystrokes, so let's study it!&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/36/primes.m4v" length="11512378" type="video/x-m4v"/>
+      <pubDate>Fri, 10 Aug 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/vimgolf-prime-numbers/</guid>
+      <link>http://vimcasts.org/episodes/vimgolf-prime-numbers/</link>
+    </item>
+    <item>
+      <title>Status of US tour: postponed</title>
+      <description>&amp;lt;p&amp;gt;I'm sorry to say that I'm unable to take my &amp;lt;a href=&amp;quot;/blog/2012/05/on-tour-this-summer-vim-masterclass-workshop/&amp;quot;&amp;gt;workshops on tour around the US this summer&amp;lt;/a&amp;gt;. I'm not allowed to work there on a business/tourist visa, and I was too disorganized to obtain the visa that would permit me to work. It's a shame, because I had set the months of August-September aside for this tour!&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Wed, 08 Aug 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2012/08/status-of-us-tour/</guid>
+      <link>http://vimcasts.org/announcements/2012/08/status-of-us-tour/</link>
+    </item>
+    <item>
+      <title>On sharpening the saw</title>
+      <description>&amp;lt;p&amp;gt;Vim users sit somewhere on a spectrum, based on how much they customize their editor. At one end of the spectrum, there are those who use Vim with no customizations whatsoever. At the other end are those who customize Vim to the point where it barely resembles the stock install.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;https://www.destroyallsoftware.com/screencasts&amp;quot;&amp;gt;Gary Bernhardt&amp;lt;/a&amp;gt; advocates using stock Vim, with very few customizations.&amp;lt;/p&amp;gt;
+
+&amp;lt;blockquote&amp;gt;
+  &amp;lt;p&amp;gt;Vim is a chainsaw, and the last thing you want on a chainsaw is controls that are not the controls you're used to, because then you will cut your hand off.&amp;lt;br /&amp;gt;
+Gary Bernhardt on &amp;lt;a href=&amp;quot;http://rubyrogues.com/040-rr-text-editors-and-ides/&amp;quot;&amp;gt;Ruby Rogues episode 40&amp;lt;/a&amp;gt; (17:35)&amp;lt;/p&amp;gt;
+&amp;lt;/blockquote&amp;gt;
+
+&amp;lt;p&amp;gt;Gary's chainsaw metaphor warns against the practice of over-customizing Vim. But I would also warn against using Vim without any customizations. Vim is highly configurable, and some of the default settings are suboptimal. If you don't have a basic vimrc, then you're putting up with inconveniences that were fixed decades ago.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Mon, 06 Aug 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2012/08/on-sharpening-the-saw/</guid>
+      <link>http://vimcasts.org/blog/2012/08/on-sharpening-the-saw/</link>
+    </item>
+    <item>
+      <title>Upcoming workshops: London, Paris, Amsterdam, and Barcelona</title>
+      <description>&amp;lt;p&amp;gt;I'm happy to announce that I'll be taking my &amp;lt;a href=&amp;quot;http://vimcasts.eventbrite.com&amp;quot;&amp;gt;Vim masterclass workshops on tour&amp;lt;/a&amp;gt; around Europe in July. I'll be running sessions in &amp;lt;a href=&amp;quot;http://london-vimcasts-pm-2-eorg.eventbrite.com/&amp;quot;&amp;gt;London on the 17th&amp;lt;/a&amp;gt;, &amp;lt;a href=&amp;quot;http://paris-vimcasts-am-1-eorg.eventbrite.com/&amp;quot;&amp;gt;Paris on the 20th&amp;lt;/a&amp;gt;, &amp;lt;a href=&amp;quot;http://amsterdam-vimcasts-eve-1-eorg.eventbrite.com/&amp;quot;&amp;gt;Amsterdam on the 23rd&amp;lt;/a&amp;gt; and &amp;lt;a href=&amp;quot;http://amsterdam-vimcasts-eve-2-eorg.eventbrite.com/&amp;quot;&amp;gt;24th&amp;lt;/a&amp;gt;, and &amp;lt;a href=&amp;quot;http://barcelona-vimcasts-am-1-eorg.eventbrite.com/&amp;quot;&amp;gt;Barcelona on the 27th&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;Read about &amp;lt;a href=&amp;quot;http://vimcasts.org/blog/2012/02/what-to-expect-from-a-vimcasts-workshop/&amp;quot;&amp;gt;what to expect from a Vim Masterclass&amp;lt;/a&amp;gt; if you'd like to know more about the format of my workshops.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Mon, 25 Jun 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2012/06/upcoming-workshops-london-paris-amsterdam-and-barcelona/</guid>
+      <link>http://vimcasts.org/announcements/2012/06/upcoming-workshops-london-paris-amsterdam-and-barcelona/</link>
+    </item>
+    <item>
+      <title>Upcoming workshops: Edinburgh, Glasgow, and Newcastle</title>
+      <description>&amp;lt;p&amp;gt;I'll be back in the UK for a couple of weeks in early July, so I'm running a few &amp;lt;a href=&amp;quot;http://vimcasts.eventbrite.com&amp;quot;&amp;gt;Vim masterclasses&amp;lt;/a&amp;gt;: &amp;lt;a href=&amp;quot;http://edinburgh-vimcasts-eve-1.eventbrite.com/&amp;quot;&amp;gt;Edinburgh on July 2nd&amp;lt;/a&amp;gt;, &amp;lt;a href=&amp;quot;http://glasgow-vimcasts-eve-1.eventbrite.com/&amp;quot;&amp;gt;Glasgow on July 3rd&amp;lt;/a&amp;gt;, and &amp;lt;a href=&amp;quot;http://newcastle-vimcasts-eve-1.eventbrite.com/&amp;quot;&amp;gt;Newcastle on July 9th&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;Read about &amp;lt;a href=&amp;quot;http://vimcasts.org/blog/2012/02/what-to-expect-from-a-vimcasts-workshop/&amp;quot;&amp;gt;what to expect from a Vim Masterclass&amp;lt;/a&amp;gt; if you'd like to know more about the format of my workshops.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Wed, 13 Jun 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2012/06/upcoming-workshops-edinburgh-glasgow-and-newcastle/</guid>
+      <link>http://vimcasts.org/announcements/2012/06/upcoming-workshops-edinburgh-glasgow-and-newcastle/</link>
+    </item>
+    <item>
+      <title>Upcoming workshop: Berlin</title>
+      <description>&amp;lt;p&amp;gt;I'll be running a &amp;lt;a href=&amp;quot;http://vimcasts.eventbrite.com&amp;quot;&amp;gt;Vim Masterclass in Berlin&amp;lt;/a&amp;gt; on the evening of June 18th, at &amp;lt;a href=&amp;quot;http://co-up.de/&amp;quot;&amp;gt;co-up&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;Read about &amp;lt;a href=&amp;quot;http://vimcasts.org/blog/2012/02/what-to-expect-from-a-vimcasts-workshop/&amp;quot;&amp;gt;what to expect from a Vim Masterclass&amp;lt;/a&amp;gt; if you'd like to know more about the format of my workshops.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Tue, 22 May 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2012/05/upcoming-workshop-berlin/</guid>
+      <link>http://vimcasts.org/announcements/2012/05/upcoming-workshop-berlin/</link>
+    </item>
+    <item>
+      <title>Upcoming workshop: Krakow</title>
+      <description>&amp;lt;p&amp;gt;I'll be running a &amp;lt;a href=&amp;quot;http://vimcasts.eventbrite.com&amp;quot;&amp;gt;Vim Masterclass in Krakow&amp;lt;/a&amp;gt; on June 14th, at &amp;lt;a href=&amp;quot;http://applicake.com/&amp;quot;&amp;gt;Applicake&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;Read about &amp;lt;a href=&amp;quot;http://vimcasts.org/blog/2012/02/what-to-expect-from-a-vimcasts-workshop/&amp;quot;&amp;gt;what to expect from a Vim Masterclass&amp;lt;/a&amp;gt; if you'd like to know more about the format of my workshops.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Thu, 17 May 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2012/05/upcoming-workshop-krakow/</guid>
+      <link>http://vimcasts.org/announcements/2012/05/upcoming-workshop-krakow/</link>
+    </item>
+    <item>
+      <title>On tour this Summer: Vim masterclass workshop</title>
+      <description>&amp;lt;p&amp;gt;I'm planning to take my Vim Masterclass workshop on tour around Europe and the USA this Summer. If you would like to bring a Vimcasts workshop to your town, &amp;lt;a href=&amp;quot;http://www.wantworkshop.com/workshops/vimcasts_workshop&amp;quot;&amp;gt;sign up with your email address and location&amp;lt;/a&amp;gt;. If there's enough interest, I'll try and schedule something where you live.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;I'm going to need help. Can you recommend a suitable venue in your town? Are there any local meetups or user groups that might be interested in a Vim workshop? If you can host an event, or help me connect with the right audience, then I would love to hear from you. Please get in touch with drew@vimcasts.org.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Wed, 16 May 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2012/05/on-tour-this-summer-vim-masterclass-workshop/</guid>
+      <link>http://vimcasts.org/announcements/2012/05/on-tour-this-summer-vim-masterclass-workshop/</link>
+    </item>
+    <item>
+      <title>Announcing Practical Vim (in beta)</title>
+      <description>&amp;lt;p&amp;gt;Breaking news: &amp;lt;a href=&amp;quot;http://pragprog.com/book/dnvim/practical-vim&amp;quot;&amp;gt;Practical Vim is now shipping as a beta book&amp;lt;/a&amp;gt;!&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;http://pragprog.com/book/dnvim/practical-vim&amp;quot;&amp;gt;&amp;lt;img alt=&amp;quot;Practical Vim&amp;quot; src=&amp;quot;http://vimcasts.org/images/practical-vim-cover.png&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Wed, 18 Apr 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2012/04/announcing-practical-vim/</guid>
+      <link>http://vimcasts.org/blog/2012/04/announcing-practical-vim/</link>
+    </item>
+    <item>
+      <title>Upcoming workshop: London</title>
+      <description>&amp;lt;p&amp;gt;I'll be running a &amp;lt;a href=&amp;quot;http://vimcasts.eventbrite.com&amp;quot;&amp;gt;Vim Masterclass in London&amp;lt;/a&amp;gt; on May 2nd, at &amp;lt;a href=&amp;quot;http://forwardtechnology.co.uk/venue&amp;quot;&amp;gt;Forward&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;Read about &amp;lt;a href=&amp;quot;http://vimcasts.org/blog/2012/02/what-to-expect-from-a-vimcasts-workshop/&amp;quot;&amp;gt;what to expect from a Vim Masterclass&amp;lt;/a&amp;gt; if you'd like to know more about the format of my workshops.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Wed, 11 Apr 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2012/04/upcoming-workshop-london/</guid>
+      <link>http://vimcasts.org/announcements/2012/04/upcoming-workshop-london/</link>
+    </item>
+    <item>
+      <title>Upcoming workshops: Berlin and St Louis</title>
+      <description>&amp;lt;p&amp;gt;I'm thrilled to announce that I'll be running a &amp;lt;a href=&amp;quot;https://thestrangeloop.com/sessions/vim-masterclass&amp;quot;&amp;gt;Vim masterclass at Strange Loop&amp;lt;/a&amp;gt;, in September this year. The conference has a &amp;lt;a href=&amp;quot;https://thestrangeloop.com/sessions&amp;quot;&amp;gt;stellar lineup&amp;lt;/a&amp;gt;, so I'm looking forward to it eagerly. I hope to see you there.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;Closer to home (for me anyway), I'll also be running a &amp;lt;a href=&amp;quot;http://vimcasts.eventbrite.com&amp;quot;&amp;gt;Vim Masterclass in Berlin&amp;lt;/a&amp;gt; on April 20th, at LAUNCH/CO.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;Read about &amp;lt;a href=&amp;quot;http://vimcasts.org/blog/2012/02/what-to-expect-from-a-vimcasts-workshop/&amp;quot;&amp;gt;what to expect from a Vim Masterclass&amp;lt;/a&amp;gt; if you'd like to know more about the format of my workshops.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Fri, 30 Mar 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2012/03/upcoming-workshops-berlin-and-st-louis/</guid>
+      <link>http://vimcasts.org/announcements/2012/03/upcoming-workshops-berlin-and-st-louis/</link>
+    </item>
+    <item>
+      <title>What to expect from a Vimcasts workshop</title>
+      <description>&amp;lt;p&amp;gt;You've already worked your way through the &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/usr_01.html#tutor&amp;quot;&amp;gt;Vimtutor&amp;lt;/a&amp;gt;, right? I've prepared a series of lessons that follow a similar format: plain text files containing simple problems, with instructions on how to complete them. The tasks are carefully designed to demonstrate tips and tricks that will boost your productivity. We'll work through them as a class, but you can take them at your own pace.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Fri, 24 Feb 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2012/02/what-to-expect-from-a-vimcasts-workshop/</guid>
+      <link>http://vimcasts.org/blog/2012/02/what-to-expect-from-a-vimcasts-workshop/</link>
+    </item>
+    <item>
+      <title>Vim Workshop: Wroclaw, March 2012</title>
+      <description>&amp;lt;p&amp;gt;Thanks to the awesome folk behind &amp;lt;a href=&amp;quot;http://wrocloverb.com/&amp;quot;&amp;gt;wroc_love.rb&amp;lt;/a&amp;gt;, I'll be running a couple of &amp;lt;a href=&amp;quot;http://vimcasts.eventbrite.com/&amp;quot;&amp;gt;Vim workshops&amp;lt;/a&amp;gt; in Wroclaw, Poland. They will take place on the 9th of March; one in &amp;lt;a href=&amp;quot;http://wroclaw-vimcasts-am.eventbrite.com/&amp;quot;&amp;gt;the morning&amp;lt;/a&amp;gt;, and one in &amp;lt;a href=&amp;quot;http://wroclaw-vimcasts-pm.eventbrite.com/&amp;quot;&amp;gt;the afternoon&amp;lt;/a&amp;gt;. &amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;A &amp;lt;a href=&amp;quot;http://blog.wrocloverb.com/post/17322745303/vim-workshop&amp;quot;&amp;gt;20% discount&amp;lt;/a&amp;gt; is available for anyone attending the wroc_love.rb conference.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Thu, 09 Feb 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2012/02/vim-workshop-wroclaw/</guid>
+      <link>http://vimcasts.org/announcements/2012/02/vim-workshop-wroclaw/</link>
+    </item>
+    <item>
+      <title>Bring a Vimcasts workshop to your town</title>
+      <description>&amp;lt;p&amp;gt;I'm going to run a series of Vim workshops in 2012. If you would like to attend, please &amp;lt;a href=&amp;quot;http://eepurl.com/geHtT&amp;quot;&amp;gt;sign up to the Vimcasts workshops mailing list&amp;lt;/a&amp;gt;, and tell me where you live. If there is enough interest for your town, then I'll try and schedule it into my tour.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;What can you expect from a Vimcasts workshop? Dirty hands. We learn best by doing, so I won't lecture you. Instead, we'll work through excercises designed to reveal the best practices of working with Vim. The material will tie in with my upcoming book, &amp;lt;a href=&amp;quot;http://vimcasts.org/blog/2010/11/working-title-practical-vim&amp;quot;&amp;gt;Practical Vim&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Wed, 05 Oct 2011 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2011/10/bring-a-vimcasts-workshop-to-your-town/</guid>
+      <link>http://vimcasts.org/announcements/2011/10/bring-a-vimcasts-workshop-to-your-town/</link>
+    </item>
+    <item>
+      <title>The Fugitive Series - a retrospective</title>
+      <description>&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;Fugitive.vim: a git wrapper so awesome, it should be illegal.&amp;lt;/em&amp;gt; That's how Tim Pope describes his git plugin for Vim. I've had &amp;lt;a href=&amp;quot;http://www.vim.org/scripts/script.php?script_id=2975&amp;quot;&amp;gt;fugitive.vim&amp;lt;/a&amp;gt; installed since it was released, but until recently I never took the time to figure out what was &amp;lt;em&amp;gt;so awesome&amp;lt;/em&amp;gt; that could make it illegal.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Wed, 18 May 2011 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2011/05/the-fugitive-series/</guid>
+      <link>http://vimcasts.org/blog/2011/05/the-fugitive-series/</link>
+    </item>
+    <item>
+      <title>Fugitive.vim - exploring the history of a git repository</title>
+      <description>&amp;lt;p&amp;gt;Git provides tools for searching the contents of files, commit messages, and even whether text was added or removed by a commit. In this episode, we'll see how fugitive's &amp;lt;code&amp;gt;Ggrep&amp;lt;/code&amp;gt; and &amp;lt;code&amp;gt;Glog&amp;lt;/code&amp;gt; commands wrap this functionality up so that we can search the contents and history of a git repo from right inside of Vim.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;This is the last of our five part series on fugitive.vim.&amp;lt;/em&amp;gt;&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/35/fugitive_5.m4v" length="32349589" type="video/x-m4v"/>
+      <pubDate>Wed, 18 May 2011 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/</guid>
+      <link>http://vimcasts.org/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/</link>
+    </item>
+    <item>
+      <title>Fugitive.vim - browsing the git object database</title>
+      <description>&amp;lt;p&amp;gt;With the fugitive plugin, you're not limited to just working with files in your working tree. The &amp;lt;code&amp;gt;:Gedit&amp;lt;/code&amp;gt; command allows you to open files in other branches, and to browse any &amp;lt;a href=&amp;quot;http://book.git-scm.com/1_the_git_object_model.html&amp;quot;&amp;gt;git object&amp;lt;/a&amp;gt;, including tags, commits and trees. Plus, if your repository is hosted on github, you can easily bring up the webpage for any git object using the &amp;lt;code&amp;gt;:Gbrowse&amp;lt;/code&amp;gt; command.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;This is the penultimate of a five part series on fugitive.vim.&amp;lt;/em&amp;gt;&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/34/fugitive_4.m4v" length="28148709" type="video/x-m4v"/>
+      <pubDate>Fri, 13 May 2011 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/</guid>
+      <link>http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/</link>
+    </item>
+    <item>
+      <title>Fugitive.vim - resolving merge conflicts with vimdiff</title>
+      <description>&amp;lt;p&amp;gt;When git branches are merged, there is always the chance of a conflict arising if a file was modified in both the target and merge branches. You can resolve merge conflicts using a combination of fugitive's &amp;lt;code&amp;gt;:Gdiff&amp;lt;/code&amp;gt; command, and Vim's built in &amp;lt;code&amp;gt;diffget&amp;lt;/code&amp;gt; and &amp;lt;code&amp;gt;diffput&amp;lt;/code&amp;gt;. In this episode, we'll find out how.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;This is the third in a five part series on fugitive.vim.&amp;lt;/em&amp;gt;&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/33/fugitive_3.m4v" length="23831068" type="video/x-m4v"/>
+      <pubDate>Fri, 06 May 2011 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/</guid>
+      <link>http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/</link>
+    </item>
+    <item>
+      <title>Fugitive.vim - working with the git index</title>
+      <description>&amp;lt;p&amp;gt;The fugitive plugin provides an interactive status window, where you can easily stage and review your changes for the next commit. The &amp;lt;code&amp;gt;:Gdiff&amp;lt;/code&amp;gt; command visualizes the changes made to a file, by comparing the working copy with the index. In this episode, we'll learn how to stage hunks of changes to the index without using the &amp;lt;code&amp;gt;git add --patch&amp;lt;/code&amp;gt; command.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;This is the second of a five part series on fugitive.vim. In the next episode, we'll learn how to resolve a git merge conflict by performing a 3-way vimdiff.&amp;lt;/em&amp;gt;&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/32/fugitive_2.m4v" length="25748543" type="video/x-m4v"/>
+      <pubDate>Fri, 29 Apr 2011 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/fugitive-vim-working-with-the-git-index/</guid>
+      <link>http://vimcasts.org/episodes/fugitive-vim-working-with-the-git-index/</link>
+    </item>
+    <item>
+      <title>Fugitive.vim - a complement to command line git</title>
+      <description>&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;https://github.com/tpope/vim-fugitive&amp;quot;&amp;gt;The fugitive plugin&amp;lt;/a&amp;gt;, by Tim Pope, is a git wrapper for Vim. It  complements the command line interface to git, but doesn't aim to replace it. In this episode, we'll see how some of fugitive's commands can streamline your workflow.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;This is the first of a five part series on fugitive.&amp;lt;/em&amp;gt;&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/31/fugitive_1.m4v" length="22298141" type="video/x-m4v"/>
+      <pubDate>Fri, 22 Apr 2011 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/</guid>
+      <link>http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/</link>
+    </item>
+    <item>
+      <title>Vimcasts plugin for Plex now available</title>
+      <description>&amp;lt;p&amp;gt;Fans of the &amp;lt;a href=&amp;quot;http://plexapp.com/&amp;quot;&amp;gt;Plex media center&amp;lt;/a&amp;gt; will be happy to know that there is now a &amp;lt;a href=&amp;quot;https://github.com/ches/plex-vimcasts&amp;quot;&amp;gt;Vimcasts plugin&amp;lt;/a&amp;gt;, available from the Plex online app store. It was built by &amp;lt;a href=&amp;quot;http://chesmart.in/&amp;quot;&amp;gt;Ches Martin&amp;lt;/a&amp;gt;, who was inspired when he saw that there was a &amp;lt;a href=&amp;quot;http://vimcasts.org/blog/2010/07/vimcasts-now-available-on-boxee/&amp;quot;&amp;gt;Vimcasts plugin for Boxee&amp;lt;/a&amp;gt;. So now you can...&amp;lt;/p&amp;gt;</description>
+      <pubDate>Wed, 23 Feb 2011 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2011/02/vimcasts-plugin-for-plex-now-available/</guid>
+      <link>http://vimcasts.org/blog/2011/02/vimcasts-plugin-for-plex-now-available/</link>
+    </item>
+    <item>
+      <title>Undo branching and Gundo.vim</title>
+      <description>&amp;lt;p&amp;gt;The undo command is almost universally available in software today. Being able to rollback unwanted changes can be a real timesaver. In most applications you can only go backwards and forwards linearly, but Vim keeps your changes in a tree structure, which means that you can retrieve edits from distant branches in your history. This episode will show you how.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/30/undo_tree.m4v" length="12483269" type="video/x-m4v"/>
+      <pubDate>Wed, 23 Feb 2011 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/undo-branching-and-gundo-vim/</guid>
+      <link>http://vimcasts.org/episodes/undo-branching-and-gundo-vim/</link>
+    </item>
+    <item>
+      <title>Aligning text with Tabular.vim</title>
+      <description>&amp;lt;p&amp;gt;There are times when you can improve the readability of your code by lining up the elements on neighbouring lines. In this episode, I demonstrate how this can be achieved using the &amp;lt;a href=&amp;quot;https://github.com/godlygeek/tabular&amp;quot;&amp;gt;Tabular&amp;lt;/a&amp;gt; plugin.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/29/alignment.m4v" length="9300352" type="video/x-m4v"/>
+      <pubDate>Mon, 17 Jan 2011 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/aligning-text-with-tabular-vim/</guid>
+      <link>http://vimcasts.org/episodes/aligning-text-with-tabular-vim/</link>
+    </item>
+    <item>
+      <title>A text-object for ruby blocks</title>
+      <description>&amp;lt;p&amp;gt;Ever since learning about Vim's &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/motion.html#text-objects&amp;quot;&amp;gt;text-objects&amp;lt;/a&amp;gt; I have wished that there was a way of selecting blocks in ruby code. Well, now there is. Today I am releasing a plugin that creates &amp;lt;a href=&amp;quot;http://www.vim.org/scripts/script.php?script_id=3382&amp;quot;&amp;gt;a custom text object for selecting ruby blocks&amp;lt;/a&amp;gt;. Merry Christmas!&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Mon, 27 Dec 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2010/12/a-text-object-for-ruby-blocks/</guid>
+      <link>http://vimcasts.org/blog/2010/12/a-text-object-for-ruby-blocks/</link>
+    </item>
+    <item>
+      <title>Refining search patterns with the command-line window</title>
+      <description>&amp;lt;p&amp;gt;When you need to build a complex command, or devise a non-trivial search pattern, Vim's command-line mode can be rather limiting. In this episode, I will introduce the command-line window, which allows you to use the full power of Vim when editing search queries and commands.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/28/commandline_window.m4v" length="14088176" type="video/x-m4v"/>
+      <pubDate>Sun, 21 Nov 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/refining-search-patterns-with-the-command-line-window/</guid>
+      <link>http://vimcasts.org/episodes/refining-search-patterns-with-the-command-line-window/</link>
+    </item>
+    <item>
+      <title>Working title: Practical Vim</title>
+      <description>&amp;lt;p&amp;gt;I am very pleased to announce that the &amp;lt;a href=&amp;quot;http://pragprog.com/&amp;quot;&amp;gt;Pragmatic Bookshelf&amp;lt;/a&amp;gt; will be publishing my book on Vim. The working title is &amp;lt;em&amp;gt;Practical Vim&amp;lt;/em&amp;gt;, and I hope to complete it by the spring of 2011. Here is a synopsis:&amp;lt;/p&amp;gt;
+
+&amp;lt;blockquote&amp;gt;
+  &amp;lt;p&amp;gt;For an open source project Vim’s documentation is impressive in scope, but there is still a considerable barrier between the novice and the productive Vim user. Whereas it is possible to improve as a programmer or writer by reading other people’s code, poetry or prose, there are fewer opportunities to learn how to use an editor effectively. Vim’s documentation reads like a dictionary; I propose to write a phrasebook.&amp;lt;/p&amp;gt;
+&amp;lt;/blockquote&amp;gt;
+
+</description>
+      <pubDate>Mon, 01 Nov 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2010/11/working-title-practical-vim/</guid>
+      <link>http://vimcasts.org/blog/2010/11/working-title-practical-vim/</link>
+    </item>
+    <item>
+      <title>ArrrrCamp presentation: Vim - walking without crutches</title>
+      <description>&amp;lt;p&amp;gt;Last week, I gave a presentation at &amp;lt;a href=&amp;quot;http://arrrrcamp.be/&amp;quot;&amp;gt;ArrrrCamp&amp;lt;/a&amp;gt; called &amp;lt;em&amp;gt;Vim - walking without crutches&amp;lt;/em&amp;gt;. You can now &amp;lt;a href=&amp;quot;http://old.arrrrcamp.be/videos/vim-walking-without-crutches&amp;quot;&amp;gt;watch the video&amp;lt;/a&amp;gt; on their website. Here's the synopsis for my talk:&amp;lt;/p&amp;gt;
+
+&amp;lt;blockquote&amp;gt;
+  &amp;lt;p&amp;gt;In his provocatively titled blog post &amp;lt;a href=&amp;quot;http://yehudakatz.com/2010/07/29/everyone-who-tried-to-convince-me-to-use-vim-was-wrong/&amp;quot;&amp;gt;&amp;quot;Everyone Who Tried to Convince Me to use Vim was Wrong&amp;quot;&amp;lt;/a&amp;gt;, Yehuda Katz showed how he switched from TextMate to Vim without experiencing an initial dip in productivity. Begin by emulating the working environment that you are comfortable with, then adopt Vims idioms as and when you discover them. This is a welcome alternative to the hazing &amp;quot;do everything the Vim way from day 1&amp;quot; approach, which is widely advocated by veterans. Anything that offers a leg-up Vims infamous learning curve is to be commended. But be careful not to get too comfortable. Mastering Vim requires a change in mindset and if you don't break some of your old habits you could miss out.&amp;lt;/p&amp;gt;
+
+  &amp;lt;p&amp;gt;I will begin by showing how a TextMate user can make Vim feel almost like home. I will show what preferences you can set in your vimrc file, and which plugins you can install to emulate the TextMate experience. Like walking with crutches, some of these features are useful while you build your strength, but if you can learn to walk without them you will be able to move faster. I will show how.&amp;lt;/p&amp;gt;
+&amp;lt;/blockquote&amp;gt;
+
+&amp;lt;p&amp;gt;Note that you have to have Silverlight installed to watch the video. A &amp;lt;a href=&amp;quot;http://twitter.com/sabiddle/statuses/29376586331&amp;quot;&amp;gt;few&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;quot;http://twitter.com/paraseba/statuses/29384741780&amp;quot;&amp;gt;people&amp;lt;/a&amp;gt; on &amp;lt;a href=&amp;quot;http://twitter.com/peteraronoff/statuses/29386426740&amp;quot;&amp;gt;Twitter&amp;lt;/a&amp;gt; have &amp;lt;a href=&amp;quot;http://twitter.com/bwinton/statuses/29388224325&amp;quot;&amp;gt;asked&amp;lt;/a&amp;gt; if it will be made available in another format. The organisers said that &amp;lt;a href=&amp;quot;http://twitter.com/arrrrcamp/status/29306852110&amp;quot;&amp;gt;&amp;quot;it was this or no videos at all&amp;quot;&amp;lt;/a&amp;gt;, so you can like it or lump it.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Mon, 01 Nov 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2010/11/arrrrcamp-presentation-vim---walking-without-crutches/</guid>
+      <link>http://vimcasts.org/blog/2010/11/arrrrcamp-presentation-vim---walking-without-crutches/</link>
+    </item>
+    <item>
+      <title>Synchronizing plugins with git submodules and pathogen</title>
+      <description>&amp;lt;p&amp;gt;If you use Vim on muliple machines, it can be difficult to keep your configuration files synchronized across them. One solution is to put your dotfiles under version control. In this episode, I demonstrate how to keep your vimrc and plugins synchronized using git submodules and the pathogen plugin.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/27/sync_with_git.m4v" length="22671155" type="video/x-m4v"/>
+      <pubDate>Tue, 12 Oct 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/</guid>
+      <link>http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/</link>
+    </item>
+    <item>
+      <title>Bubbling text</title>
+      <description>&amp;lt;p&amp;gt;TextMate has a few built in commands for moving selected text around a document. The end end result of using these commands can be achieved by cutting and pasting, but the visual feedback they provide is quite helpful. In this episode, I will show how to replicate these commands in Vim.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/26/bubble_selection.m4v" length="17667251" type="video/x-m4v"/>
+      <pubDate>Tue, 05 Oct 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/bubbling-text/</guid>
+      <link>http://vimcasts.org/episodes/bubbling-text/</link>
+    </item>
+    <item>
+      <title>Fill out the Vim user survey</title>
+      <description>&amp;lt;p&amp;gt;I am considering writing a book on Vim. By &amp;lt;a href=&amp;quot;https://spreadsheets0.google.com/a/vimcasts.org/viewform?formkey=dHYyTUhqVVo4WDhuVTR2M1cwbEJNSVE6MQ&amp;quot;&amp;gt;filling out this survey&amp;lt;/a&amp;gt;, you can help me to gauge interest and target the book at the right level.&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;Thanks,
+Drew&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Fri, 01 Oct 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2010/10/vim-user-survey/</guid>
+      <link>http://vimcasts.org/blog/2010/10/vim-user-survey/</link>
+    </item>
+    <item>
+      <title>Creating colorschemes for Vim</title>
+      <description>&amp;lt;p&amp;gt;Choosing a colorscheme that you find pleasing to look at is essential if you want to be comfortable working with Vim. There are hundreds of colorschemes available, but what if you can't find one that you like? In this episode, I'll share a few tips that make it easy to create colorschemes for Vim.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/25/colorschemes.m4v" length="25039525" type="video/x-m4v"/>
+      <pubDate>Tue, 28 Sep 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/creating-colorschemes-for-vim/</guid>
+      <link>http://vimcasts.org/episodes/creating-colorschemes-for-vim/</link>
+    </item>
+    <item>
+      <title>Mac Classic - a light colorscheme</title>
+      <description>&amp;lt;p&amp;gt;I could never find a light colorscheme for Vim that I enjoyed using, so I finally took the time to port the &amp;quot;Mac Classic&amp;quot; theme from TextMate. The &amp;lt;a href=&amp;quot;http://github.com/nelstrom/vim-mac-classic-theme&amp;quot;&amp;gt;source code is on gitub&amp;lt;/a&amp;gt;, so feel free to fork it.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Tue, 28 Sep 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2010/09/mac-classic/</guid>
+      <link>http://vimcasts.org/blog/2010/09/mac-classic/</link>
+    </item>
+    <item>
+      <title>Updating your vimrc file on the fly</title>
+      <description>&amp;lt;p&amp;gt;The vimrc file allows you to preserve your settings so that they are restored each time you launch Vim. But what if you want to update your vimrc file in the middle of an editing session? This episode demonstrates a couple of tricks that make it easy to customize Vim on the fly.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/24/vimrc_on_the_fly.m4v" length="5769269" type="video/x-m4v"/>
+      <pubDate>Sun, 18 Jul 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/</guid>
+      <link>http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/</link>
+    </item>
+    <item>
+      <title>Vimcasts on vacation</title>
+      <description>&amp;lt;p&amp;gt;I&amp;amp;#8217;m going to be taking a short break from Vimcasts to travel around India and Indonesia. I&amp;amp;#8217;ll be back in September, and a new season of Vimcasts will follow. If you&amp;amp;#8217;re eager to see more episodes, please show your support by leaving a tip - you can &amp;lt;a href=&amp;quot;http://vimcasts.org/tipjar&amp;quot;&amp;gt;donate with paypal&amp;lt;/a&amp;gt;, or &amp;lt;a href=&amp;quot;http://vimcasts.org/blog/2010/07/vimcasts-adopts-flattr-for-micropayments/&amp;quot;&amp;gt;flattr me&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Sun, 18 Jul 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2010/07/vimcasts-on-vacation/</guid>
+      <link>http://vimcasts.org/announcements/2010/07/vimcasts-on-vacation/</link>
+    </item>
+    <item>
+      <title>Converting HAML to ERB with Vim macros</title>
+      <description>&amp;lt;p&amp;gt;HAML and ERB are two commonly used ruby templating languages. You may have a strong preference for one or the other, but it's not always up to you which one you use. I was recently asked to convert several HAML files to ERB format. In this episode, I will demonstrate a couple of Vim macros that helped make short work of the task. &amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/23/haml_to_erb.m4v" length="16722383" type="video/x-m4v"/>
+      <pubDate>Thu, 08 Jul 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/converting-haml-to-erb-with-vim-macros/</guid>
+      <link>http://vimcasts.org/episodes/converting-haml-to-erb-with-vim-macros/</link>
+    </item>
+    <item>
+      <title>Vimcasts adopts Flattr for micropayments</title>
+      <description>&amp;lt;p&amp;gt;A number of people have contacted me to say that they would love to leave a tip, but object to using PayPal - the only method I provided for making donations. I had never heard of &amp;lt;a href=&amp;quot;https://flattr.com/&amp;quot;&amp;gt;Flattr&amp;lt;/a&amp;gt; until recently, but a &amp;lt;a href=&amp;quot;http://twitter.com/_043/status/14843669835&amp;quot;&amp;gt;few&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;quot;http://twitter.com/Groxx/status/15972933626&amp;quot;&amp;gt;people&amp;lt;/a&amp;gt; have requested that I integrate it into Vimcasts.org. I've always liked the idea of micro payments, so I thought I would give it a shot.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Thu, 08 Jul 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2010/07/vimcasts-adopts-flattr-for-micropayments/</guid>
+      <link>http://vimcasts.org/blog/2010/07/vimcasts-adopts-flattr-for-micropayments/</link>
+    </item>
+    <item>
+      <title>Vimcasts now available on Boxee</title>
+      <description>&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;http://www.boxee.tv/&amp;quot;&amp;gt;Boxee&amp;lt;/a&amp;gt; allows you to watch movies, TV shows and clips from the Internet on your TV. Ever since Vimcasts launched, people have been saying &amp;quot;&amp;lt;a href=&amp;quot;http://www.reddit.com/r/vim/comments/aqrx2/such_a_soooothing_voice/c0jdosy&amp;quot;&amp;gt;get it added to boxee&amp;lt;/a&amp;gt;&amp;quot;. Thanks to &amp;lt;a href=&amp;quot;http://claytron.com/&amp;quot;&amp;gt;Clayton Parker&amp;lt;/a&amp;gt; I am happy to announce that there is now a &amp;lt;a href=&amp;quot;http://github.com/claytron/boxee-vimcasts&amp;quot;&amp;gt;Vimcasts app for Boxee&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Tue, 06 Jul 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2010/07/vimcasts-now-available-on-boxee/</guid>
+      <link>http://vimcasts.org/blog/2010/07/vimcasts-now-available-on-boxee/</link>
+    </item>
+    <item>
+      <title>Selecting columns with visual block mode</title>
+      <description>&amp;lt;p&amp;gt;If you want to edit several adjacent lines with a similar format, you might save a lot of time by making a columnar selection. This episode will demonstrate how to achieve this using Vim's visual block mode.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/22/visual_block.m4v" length="8418264" type="video/x-m4v"/>
+      <pubDate>Sun, 20 Jun 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/selecting-columns-with-visual-block-mode/</guid>
+      <link>http://vimcasts.org/episodes/selecting-columns-with-visual-block-mode/</link>
+    </item>
+    <item>
+      <title>Converting markdown to structured HTML with a macro</title>
+      <description>&amp;lt;p&amp;gt;Recording your keystrokes as a macro can be a great timesaver, but you have to be careful that you use commands in such a way that they can be reused. In this episode, I construct a fairly complex macro to build a structural HTML document from markdown.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/21/markdown_macro.m4v" length="20061622" type="video/x-m4v"/>
+      <pubDate>Wed, 02 Jun 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/converting-markdown-to-structured-html-with-a-macro/</guid>
+      <link>http://vimcasts.org/episodes/converting-markdown-to-structured-html-with-a-macro/</link>
+    </item>
+    <item>
+      <title>Running Vim within IRB</title>
+      <description>&amp;lt;p&amp;gt;If you work with ruby you will know that the interactive ruby shell, or 'IRB' for short, is a useful sketchpad for coding. But the command line interface of IRB can feel quite limiting in comparison with the power of your text editor. In this episode, I'm going to demonstrate how you can get the best of both worlds, by loading Vim from inside IRB.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/20/irb_and_vim.m4v" length="9043637" type="video/x-m4v"/>
+      <pubDate>Sun, 16 May 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/running-vim-within-irb/</guid>
+      <link>http://vimcasts.org/episodes/running-vim-within-irb/</link>
+    </item>
+    <item>
+      <title>Spell checking</title>
+      <description>&amp;lt;p&amp;gt;Using a spell checker is a good habit to get into.  In this episode, I demonstrate how to use Vim's built in spell checking feature.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/19/spell_checking.m4v" length="16539933" type="video/x-m4v"/>
+      <pubDate>Mon, 10 May 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/spell-checking/</guid>
+      <link>http://vimcasts.org/episodes/spell-checking/</link>
+    </item>
+    <item>
+      <title>Formatting text with par</title>
+      <description>&amp;lt;p&amp;gt;'Do one thing and do it well' is the principle of the Unix toolkit. Editing text is a broad domain, and there are many related tasks with which it overlaps. Vim acknowledges this by enabling certain tasks to be outsourced to external programs which do that one thing, and do it well. This episode will demonstrate how the &amp;lt;em&amp;gt;par&amp;lt;/em&amp;gt; program can be used for formatting text.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/18/formatting_with_par.m4v" length="17975374" type="video/x-m4v"/>
+      <pubDate>Mon, 03 May 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/formatting-text-with-par/</guid>
+      <link>http://vimcasts.org/episodes/formatting-text-with-par/</link>
+    </item>
+    <item>
+      <title>SyntaxHighlighter Vimscript brush and Blackboard theme</title>
+      <description>&amp;lt;p&amp;gt;Here on Vimcasts.org, I use Alex Gorbatchev's &amp;lt;a href=&amp;quot;http://alexgorbatchev.com/wiki/SyntaxHighlighter&amp;quot;&amp;gt;SyntaxHighlighter&amp;lt;/a&amp;gt; to colorize the code excerpts. I couldn't find a syntax 'brush' for Vimscript, so I wrote my own. I also created a color theme based on the Blackboard scheme that I use in Vim (and TextMate). &amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Thu, 29 Apr 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2010/04/syntaxhighlighter-vimscript-brush-and-blackboard-theme/</guid>
+      <link>http://vimcasts.org/blog/2010/04/syntaxhighlighter-vimscript-brush-and-blackboard-theme/</link>
+    </item>
+    <item>
+      <title>Hard wrapping text</title>
+      <description>&amp;lt;p&amp;gt;It is sometimes preferable to format text with hard wrapped lines, for example when writing emails in plaintext. Vim can apply this style of formatting for you. This episode shows some of the options which allow you to customize Vim's text formatting.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/17/hard_wrapping_text.m4v" length="16752621" type="video/x-m4v"/>
+      <pubDate>Mon, 26 Apr 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/hard-wrapping-text/</guid>
+      <link>http://vimcasts.org/episodes/hard-wrapping-text/</link>
+    </item>
+    <item>
+      <title>Soft wrapping text</title>
+      <description>&amp;lt;p&amp;gt;Long lines of text can be wrapped if they don't fit inside the window. By default, Vim will happily split in the middle of a word. This episode demonstrates how to use the 'linebreak' option to make Vim break lines without breaking words.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/16/soft_wrap.m4v" length="10288332" type="video/x-m4v"/>
+      <pubDate>Tue, 20 Apr 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/soft-wrapping-text/</guid>
+      <link>http://vimcasts.org/episodes/soft-wrapping-text/</link>
+    </item>
+    <item>
+      <title>The file explorer</title>
+      <description>&amp;lt;p&amp;gt;This episode demonstrates how Vim's native file browser can be used to explore and manipulate the file system. &amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/15/the_file_explorer.m4v" length="9566713" type="video/x-m4v"/>
+      <pubDate>Mon, 12 Apr 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/the-file-explorer/</guid>
+      <link>http://vimcasts.org/episodes/the-file-explorer/</link>
+    </item>
+    <item>
+      <title>The :edit command</title>
+      <description>&amp;lt;p&amp;gt;This episode focuses on the &amp;lt;code&amp;gt;:edit&amp;lt;/code&amp;gt; command. I demonstrate how to open files whose location is relative to the current working directory, then I show how to create a mapping which makes it easier to open files in the same directory as the one in the active window.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/14/the_edit_command.m4v" length="7808076" type="video/x-m4v"/>
+      <pubDate>Mon, 05 Apr 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/the-edit-command/</guid>
+      <link>http://vimcasts.org/episodes/the-edit-command/</link>
+    </item>
+    <item>
+      <title>Cleaning up with Vim</title>
+      <description>&amp;lt;p&amp;gt;Do you have trouble cleaning up with your text editor? Does it cut through the toughest grease, grime and syntax errors? Are you burning your hands on too many hotkeys?&amp;lt;/p&amp;gt;
+
+&amp;lt;p&amp;gt;Try Vim - Extra whitening classic scourer. Vim gets the job done faster. Take short easy strokes for lemon fresh scripts. Fast, bold, Vim.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/13/cleaning_up.m4v" length="6953835" type="video/x-m4v"/>
+      <pubDate>Thu, 01 Apr 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/cleaning-up-with-vim/</guid>
+      <link>http://vimcasts.org/episodes/cleaning-up-with-vim/</link>
+    </item>
+    <item>
+      <title>Short form URLs for episodes</title>
+      <description>&amp;lt;p&amp;gt;Vimcasts.org now has it's own short form URLs. You can link to each episode by
+number, using the form &amp;lt;a href=&amp;quot;http://vimcasts.org/episodes/creating-the-vimcasts-logo-as-ascii-art&amp;quot;&amp;gt;&amp;lt;code&amp;gt;/e/10&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt; to link to episode 10. You can also link to the
+episodes archive with the trailing path &amp;lt;a href=&amp;quot;http://vimcasts.org/episodes/archive&amp;quot;&amp;gt;&amp;lt;code&amp;gt;/e/a&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Thu, 01 Apr 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2010/04/short-form-urls-for-episodes/</guid>
+      <link>http://vimcasts.org/blog/2010/04/short-form-urls-for-episodes/</link>
+    </item>
+    <item>
+      <title>Modal editing: undo, redo and repeat</title>
+      <description>&amp;lt;p&amp;gt;Vim's modal editing paradigm - the newbie killer - brings tremendous efficiency if only you can learn to work with it, rather than against it. This episode demonstrates how the undo and repeat commands can benefit from spending short bursts of time in insert mode. &amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/12/modal_editing.m4v" length="5453158" type="video/x-m4v"/>
+      <pubDate>Sun, 28 Mar 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/modal-editing-undo-redo-and-repeat/</guid>
+      <link>http://vimcasts.org/episodes/modal-editing-undo-redo-and-repeat/</link>
+    </item>
+    <item>
+      <title>Using the changelist and jumplist</title>
+      <description>&amp;lt;p&amp;gt;This episode introduces the changelist and jumplist, demonstrating a couple of situations where they are useful. &amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/11/changelist_and_jumplist.m4v" length="5406874" type="video/x-m4v"/>
+      <pubDate>Tue, 23 Mar 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/using-the-changelist-and-jumplist/</guid>
+      <link>http://vimcasts.org/episodes/using-the-changelist-and-jumplist/</link>
+    </item>
+    <item>
+      <title>Creating the Vimcasts logo as ASCII art</title>
+      <description>&amp;lt;p&amp;gt;Demonstrating miscellaneous tips and tricks gleaned whilst making an ASCII art version of the VimCasts.org logo. Learn how to duplicate lines, copy and paste with visual block mode, search and replace within a visual selection, and how to use macros.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/10/ascii_art.m4v" length="8248003" type="video/x-m4v"/>
+      <pubDate>Sun, 14 Mar 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/creating-the-vimcasts-logo-as-ascii-art/</guid>
+      <link>http://vimcasts.org/episodes/creating-the-vimcasts-logo-as-ascii-art/</link>
+    </item>
+    <item>
+      <title>How to use tabs</title>
+      <description>&amp;lt;p&amp;gt;Vim's treatment of tabs is a little different than what you might be used to if you are coming from another editor. In this episode I demonstrate how Vim's tabs can be used to group split windows together. I also show how to use Vim's tabs like projects in TextMate, by setting a different working directory for each one.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/9/how_to_use_tabs.m4v" length="9100037" type="video/x-m4v"/>
+      <pubDate>Mon, 08 Mar 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/how-to-use-tabs/</guid>
+      <link>http://vimcasts.org/episodes/how-to-use-tabs/</link>
+    </item>
+    <item>
+      <title>Working with tabs</title>
+      <description>&amp;lt;p&amp;gt;This episode covers the essential commands for working with Vim's tab pages: opening and closing, switching, and moving them.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/8/working_with_tabs.m4v" length="4395212" type="video/x-m4v"/>
+      <pubDate>Sun, 28 Feb 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/working-with-tabs/</guid>
+      <link>http://vimcasts.org/episodes/working-with-tabs/</link>
+    </item>
+    <item>
+      <title>Working with windows</title>
+      <description>&amp;lt;p&amp;gt;In Vim, you can view several buffers at once by loading them into multiple windows. This episode demonstrates all the essentials of working with windows: opening, closing, resizing, moving between and rearranging them.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/7/working_with_windows.m4v" length="8570987" type="video/x-m4v"/>
+      <pubDate>Sun, 21 Feb 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/working-with-windows/</guid>
+      <link>http://vimcasts.org/episodes/working-with-windows/</link>
+    </item>
+    <item>
+      <title>Working with buffers</title>
+      <description>&amp;lt;p&amp;gt;Introducing the buffer list, and commands for switching between buffers. This episode also covers the concept of 'hidden' buffers, and shows how to deal with them.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/6/buffers_listed_and_hidden.m4v" length="5715585" type="video/x-m4v"/>
+      <pubDate>Sun, 14 Feb 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/working-with-buffers/</guid>
+      <link>http://vimcasts.org/episodes/working-with-buffers/</link>
+    </item>
+    <item>
+      <title>Indentation commands</title>
+      <description>&amp;lt;p&amp;gt;This episode covers the commands for shifting text left and right (&amp;lt;code&amp;gt;&amp;amp;lt;&amp;lt;/code&amp;gt; and &amp;lt;code&amp;gt;&amp;amp;gt;&amp;lt;/code&amp;gt;), and also goes over the auto indent command (&amp;lt;code&amp;gt;=&amp;lt;/code&amp;gt;).&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/5/indentation_commands.m4v" length="11037200" type="video/x-m4v"/>
+      <pubDate>Mon, 08 Feb 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/indentation-commands/</guid>
+      <link>http://vimcasts.org/episodes/indentation-commands/</link>
+    </item>
+    <item>
+      <title>Tidying whitespace</title>
+      <description>&amp;lt;p&amp;gt;This episode demonstrates a few techniques for tidying up whitespace.  First, it looks at how to convert between tabs and spaces. Then it shows how to strip trailing whitespace, and finally, how to remove blank lines from a file.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/4/tidying_whitespace.m4v" length="5738520" type="video/x-m4v"/>
+      <pubDate>Sun, 24 Jan 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/tidying-whitespace/</guid>
+      <link>http://vimcasts.org/episodes/tidying-whitespace/</link>
+    </item>
+    <item>
+      <title>Whitespace preferences and filetypes</title>
+      <description>&amp;lt;p&amp;gt;Different file types may require particular whitespace settings. For example, YAML files must be indented using spaces, whereas makefiles require indentation with tabs. These preferences can be specified by hooking into the &amp;lt;code&amp;gt;FileType&amp;lt;/code&amp;gt; event with an autocommand.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/3/whitespace_preferences_and_filetypes.m4v" length="6030738" type="video/x-m4v"/>
+      <pubDate>Sun, 17 Jan 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/whitespace-preferences-and-filetypes/</guid>
+      <link>http://vimcasts.org/episodes/whitespace-preferences-and-filetypes/</link>
+    </item>
+    <item>
+      <title>Tabs and Spaces</title>
+      <description>&amp;lt;p&amp;gt;Vim offers very granular control over whitespace. This episode explains the purpose of &amp;lt;code&amp;gt;tabstop&amp;lt;/code&amp;gt;, &amp;lt;code&amp;gt;softtabstop&amp;lt;/code&amp;gt;, &amp;lt;code&amp;gt;shiftwidth&amp;lt;/code&amp;gt; and &amp;lt;code&amp;gt;expandtab&amp;lt;/code&amp;gt; settings, and illustrates how Vim behaves using various combinations of these.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/2/tabs_and_spaces.m4v" length="9362665" type="video/x-m4v"/>
+      <pubDate>Tue, 05 Jan 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/tabs-and-spaces/</guid>
+      <link>http://vimcasts.org/episodes/tabs-and-spaces/</link>
+    </item>
+    <item>
+      <title>Show invisibles</title>
+      <description>&amp;lt;p&amp;gt;Vim's &amp;lt;code&amp;gt;list&amp;lt;/code&amp;gt; feature can be used to reveal hidden characters, such as tabstops and newlines. In this episode, I demonstrate how to customise the appearance of these characters by tweaking the &amp;lt;code&amp;gt;listchars&amp;lt;/code&amp;gt; setting. I go on to show how to make these invisible characters blend in with your colortheme.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/1/show_invisibles.m4v" length="5281290" type="video/x-m4v"/>
+      <pubDate>Mon, 04 Jan 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/show-invisibles/</guid>
+      <link>http://vimcasts.org/episodes/show-invisibles/</link>
+    </item>
+  </channel>
+</rss>
