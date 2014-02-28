@@ -100,7 +100,24 @@ activate :blog do |blog|
   blog.paginate = true
 end
 
-page "/feeds/ogg", layout: false
+[
+  {
+    name: "ogg",
+    title: "Vimcasts OGG Feed",
+    type: "video/ogg",
+  },
+  {
+    name: "quicktime",
+    title: "Vimcasts Quicktime Feed",
+    type: "video/x-m4v",
+  }
+].each do |feed|
+  proxy "/feeds/#{feed[:name]}", "/feeds/all.xml",
+    :locals => { :feed => feed },
+    :ignore => true,
+    layout: false
+end
+
 page "/episodes.json", layout: false
 
 ###
