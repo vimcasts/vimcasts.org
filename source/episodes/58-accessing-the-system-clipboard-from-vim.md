@@ -13,7 +13,6 @@ In some environments, Vim lets us access the system clipboard using the quoteplu
 
 READMORE
 
-
 This is an abridged quote from Vim's documentation (see [`:h quoteplus`][quoteplus]):
 
 > CLIPBOARD is expected to be used for cut, copy and paste operations.
@@ -89,13 +88,15 @@ If your Vim was compiled with `+clipboard` and `-xterm_clipboard` (as my Vim is)
 
 If you'd like to make it easier to interact with the system clipboard, try out this setting:
 
-    :set clipboard=unnamed
+    set clipboard=unnamed
 
 That tells Vim to use the [quotestar register][quotestar] for all yank, delete, change, and put operations that have no register explicitly specified. In effect, the system clipboard becomes the default register. Beware that with this setting, the `x` command will write a single character to the system clipboard, overwriting whatever was in there previously.
 
 If your version of Vim supports both the `+clipboard` and `+xterm_clipboard` features, then you might prefer to use this setting instead:
 
-    :set clipboard=unnamed,unnamedplus
+    if has('unnamedplus')
+      set clipboard=unnamed,unnamedplus
+    endif
 
 Read `:h clipboard-unnamedplus` for more details.
 
