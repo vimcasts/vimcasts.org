@@ -1,0 +1,175 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title></title>
+
+    <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/modernizr.js" type="text/javascript"></script>
+  </head>
+
+  <body class="episodes episodes_63 episodes_63_transcript episodes_63_transcript_index">
+
+  <div class="off-canvas-wrap">
+    <div class="inner-wrap">
+
+      <div class="top-bar-underlay"></div>
+
+      <div class="row">
+        <nav class="top-bar show-for-large-up" data-topbar>
+          <ul class="title-area">
+            <li class="name">
+              <h1><a href="/">Vimcasts</a></h1>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+          </ul>
+
+          <section class="top-bar-section">
+            <!-- Right Nav Section -->
+            <ul class="right">
+              <li class="has-form">
+              <div class="row collapse">
+                <div class="large-8 small-9 columns">
+                  <input type="text" placeholder="Explore archives">
+                </div>
+                <div class="large-4 small-3 columns">
+                  <a href="#" class="alert button expand">Search</a>
+                </div>
+              </div>
+              </li>
+            </ul>
+
+            <!-- Left Nav Section -->
+            <ul class="left">
+              <li class="has-dropdown">
+  <a href="/categories">Browse Vimcasts</a>
+  <ul class="dropdown">
+    <li><a href="/episodes">Latest episodes</a></li>
+    <li><a href="/blog">Latest articles</a></li>
+  </ul>
+</li>
+<li><a href="/training">Training</a></li>
+<li><a href="/publications">Publications</a></li>
+
+
+            </ul>
+          </section>
+        </nav>
+      </div>
+
+      <nav class="tab-bar hide-for-large-up">
+        <section class="left-small">
+          <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+        </section>
+
+        <section class="middle tab-bar-section"></section>
+      </nav>
+
+      <aside class="left-off-canvas-menu">
+        <ul class="off-canvas-list">
+          <li><label>Vimcasts</label></li>
+          <li class="has-dropdown">
+  <a href="/categories">Browse Vimcasts</a>
+  <ul class="dropdown">
+    <li><a href="/episodes">Latest episodes</a></li>
+    <li><a href="/blog">Latest articles</a></li>
+  </ul>
+</li>
+<li><a href="/training">Training</a></li>
+<li><a href="/publications">Publications</a></li>
+
+
+          <li>
+          <form>
+            <label text="search">Search: <input type="search" disabled/></label>
+          </form>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="main-section">
+
+        <div class="row identity-row">
+          <div id="logo" class="small-4 columns">
+            <h1>
+              
+                <a href="/" title="Go to Vimcasts.org homepage">VimCasts.org</a>
+              
+            </h1>
+          </div>
+          <div class="small-7 small-offset-1 columns">
+            
+            <h4 class="text-right">
+              Level-up your Vim<br/>
+              <small>with Drew Neil, author of <a href="http://pragprog.com/book/dnvim/practical-vim">Practical&nbsp;Vim</a></small>
+            </h4>
+            
+          </div>
+        </div>
+
+        <h3 id="operating-with-gn">Operating with gn</h3>
+
+<p>In this text, I'd like to change each occurrence of the word <code>Normal</code> to <code>Visual</code>.
+In Vim, when we want to change a word, a common pattern is to use <code>cw</code>.
+But in this case, that deletes too much (I'll undo that).
+So how else could we do it?</p>
+
+<p>One solution would be to press <code>6s</code> - which deletes 6 characters and switches to Insert mode. That works, but in general I prefer to avoid counting characters (I'll undo that change).
+Another approach would be to use the <code>f</code> motion, to change up to (and including) the <code>l</code> character, which is the last letter of the region we want to delete.</p>
+
+<p>It would be great if we could just tell Vim to change the highlighted search match.
+Since version 7.4 of Vim, we can do this using the <code>gn</code> motion: which selects the next search match.</p>
+
+<pre><code>:h gn
+</code></pre>
+
+<p>Pressing <code>cgn</code> tells Vim to change the next search match. That's a much neater solution!</p>
+
+<p>Now I could jump to the next match with <code>n</code> and repeat the change with dot, again and again. That's a pretty familiar workflow. But in this case we can shave off one more keystroke. (Let me just undo those changes…)</p>
+
+<p>The dot command repeats the last change, which in this case can be read as: "change the next match". We don't even need to have our cursor on the match for this to work! So we can finish the job just by pressing dot once for each change.</p>
+
+<h3 id="using-gn-to-select-the-next-match">Using gn to select the next match</h3>
+
+<p>The <code>gn</code> command can be used as a motion following operator commands such as <code>d</code>, <code>c</code>, <code>y</code>, and so on. But we can also use it in Normal mode.
+You know how pressing <code>n</code> tells Vim to jump to the start of the next match?
+Well, <code>gn</code> tells Vim to start visual mode and select the next match.
+And as you might expect, the <code>gN</code> gee-shift-N command lets you visually select the previous match.
+When used in this fashion, the <code>gn</code> command makes Vim's search behave like most graphical text editors, where the search command selects the current match.</p>
+
+<h3 id="variable-length-matches">Variable length matches</h3>
+
+<p>The <code>gn</code> command really comes into it's own when we search for a regular expression that matches text regions of variable length. For example, here I have a document with variables that begin both Xml and Xhtml. I can prepare a search pattern that matches both words:</p>
+
+<pre><code>/\vX(ht)?ml\C
+</code></pre>
+
+<p>Some of the matches are 3 characters long, while others are 5 characters long. But that doesn't matter if we operate on them using <code>gn</code>.</p>
+
+<pre><code>:h gU
+</code></pre>
+
+<p>Suppose, for example, that we wanted to transform both Xml and Xhtml to uppercase. We could do so with the <code>gU</code> gee-shift-you operator. Pressing <code>gUgn</code> gee-shift-you-gee-N instructs Vim to upcase the next search match.</p>
+
+<p>Pressing dot repeats the change, and with only a few keystrokes the remaining edits have been completed.</p>
+
+<h3 id="practical-vim">Practical Vim</h3>
+
+<p>In the 1st edition of Practical Vim, tip 84 goes over a different approach for making this same kind of change, which is nowhere near as tidy! When I wrote this edition, the <code>gn</code> feature hadn't yet been added to Vim. I'll have to revise this tip when the time comes to write a new edition of Practical Vim.</p>
+
+
+
+      </section>
+
+      <a class="exit-off-canvas"></a>
+
+    </div>
+  </div>
+
+
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </body>
+</html>

@@ -282,14 +282,16 @@ Vim uses CLIPBOARD when reading and writing the "+ register.  </p>
 
 <p>If you'd like to make it easier to interact with the system clipboard, try out this setting:</p>
 
-<pre><code>:set clipboard=unnamed
+<pre><code>set clipboard=unnamed
 </code></pre>
 
 <p>That tells Vim to use the <a href="http://vimdoc.sourceforge.net/htmldoc/gui.html#quotestar">quotestar register</a> for all yank, delete, change, and put operations that have no register explicitly specified. In effect, the system clipboard becomes the default register. Beware that with this setting, the <code>x</code> command will write a single character to the system clipboard, overwriting whatever was in there previously.</p>
 
 <p>If your version of Vim supports both the <code>+clipboard</code> and <code>+xterm_clipboard</code> features, then you might prefer to use this setting instead:</p>
 
-<pre><code>:set clipboard=unnamed,unnamedplus
+<pre><code>if has('unnamedplus')
+  set clipboard=unnamed,unnamedplus
+endif
 </code></pre>
 
 <p>Read <code>:h clipboard-unnamedplus</code> for more details.</p>
@@ -372,8 +374,8 @@ Vim uses CLIPBOARD when reading and writing the "+ register.  </p>
           <h4><a href="/categories">Find by category</a></h4>
           <p>
           Vimcasts contains
-          63 free screencasts and
-          44 articles.
+          65 free screencasts and
+          45 articles.
           <a href="/categories">Browse all content by category</a>.
           </p>
           </li>

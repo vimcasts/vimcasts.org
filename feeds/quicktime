@@ -8,6 +8,39 @@
     <language>en-us</language>
     <ttl>40</ttl>
     <item>
+      <title>Support Neovim!</title>
+      <description>&amp;lt;p&amp;gt;I've sometimes wondered what could lure me to switch from Vim to another text editor.
+On the whole I'm happy with Vim, but the one thing that bothers me is the cruft that has accumulated over the course of 20+ years.
+Imagine Vim, but without &amp;lt;a title=&amp;quot;nocp&amp;quot; href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;quot;&amp;gt;the &amp;lt;code&amp;gt;nocompatible&amp;lt;/code&amp;gt; option&amp;lt;/a&amp;gt;.
+That is the promise of &amp;lt;a href=&amp;quot;https://github.com/neovim/neovim&amp;quot;&amp;gt;Neovim&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Mon, 03 Mar 2014 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2014/03/support-neovim/</guid>
+      <link>http://vimcasts.org/blog/2014/03/support-neovim/</link>
+    </item>
+    <item>
+      <title>Swapping two regions of text with exchange.vim</title>
+      <description>&amp;lt;p&amp;gt;Swapping two regions of text is a common task, which normally requires that we make two separate changes to the document.
+Tom McDonald's &amp;lt;a href=&amp;quot;https://github.com/tommcdo/vim-exchange&amp;quot;&amp;gt;exchange plugin&amp;lt;/a&amp;gt; offers an elegant alternative, by providing an operator that swaps two regions of text in one go.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/65/exchange.m4v" length="8784485" type="video/x-m4v"/>
+      <pubDate>Mon, 24 Feb 2014 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/swapping-two-regions-of-text-with-exchange-vim/</guid>
+      <link>http://vimcasts.org/episodes/swapping-two-regions-of-text-with-exchange-vim/</link>
+    </item>
+    <item>
+      <title>Using external filter commands to reformat HTML</title>
+      <description>&amp;lt;p&amp;gt;We can use pandoc as a &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/change.html#filter&amp;quot;&amp;gt;filter&amp;lt;/a&amp;gt; to clean up &amp;lt;abbr title=&amp;quot;what you see is what you get&amp;quot;&amp;gt;WYSIWYG&amp;lt;/abbr&amp;gt;-generated HTML. Pandoc is a commandline program, but we can call it from inside Vim either using the &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/various.html#:!&amp;quot;&amp;gt;bang Ex command&amp;lt;/a&amp;gt;, or by configuring &amp;lt;a title=&amp;quot;formatprg&amp;quot; href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;quot;&amp;gt;the &amp;lt;code&amp;gt;formatprg&amp;lt;/code&amp;gt; option&amp;lt;/a&amp;gt; to make the &amp;lt;code&amp;gt;gq&amp;lt;/code&amp;gt; operator invoke pandoc.&amp;lt;/p&amp;gt;
+
+</description>
+      <enclosure url="http://media.vimcasts.org/videos/64/pandoc-filter.m4v" length="17071215" type="video/x-m4v"/>
+      <pubDate>Tue, 18 Feb 2014 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/episodes/using-external-filter-commands-to-reformat-html/</guid>
+      <link>http://vimcasts.org/episodes/using-external-filter-commands-to-reformat-html/</link>
+    </item>
+    <item>
       <title>Vimcasts redesign: a work in progress</title>
       <description>&amp;lt;p&amp;gt;In the not-too-distant future, you can expect to see a revised design for Vimcasts.org. The most significant enhancements will be the addition of tags, site search, and a responsive design for smaller screens. Hannah Adcock, from &amp;lt;a href=&amp;quot;http://contentedstrategy.com&amp;quot;&amp;gt;contentedstrategy.com&amp;lt;/a&amp;gt;, has been helping me out by analysing user feedback, as well as data from Google Analytics.&amp;lt;/p&amp;gt;
 
@@ -65,6 +98,13 @@
       <link>http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/</link>
     </item>
     <item>
+      <title>20% group discount for Core Vim Class, January edition</title>
+      <description>&amp;lt;p&amp;gt;For the month of January only, I'm offering a &amp;lt;strong&amp;gt;20% discount on orders of five or more tickets&amp;lt;/strong&amp;gt; for my &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-online-3&amp;quot;&amp;gt;Core Vim Class&amp;lt;/a&amp;gt;. That's £128 per head, a £32 saving on full price tickets at £160. If your team makes heavy use of Vim, then this is a great opportunity...&amp;lt;/p&amp;gt;</description>
+      <pubDate>Mon, 20 Jan 2014 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2014/01/20-group-discount-for-core-vim-class-january-edition/</guid>
+      <link>http://vimcasts.org/announcements/2014/01/20-group-discount-for-core-vim-class-january-edition/</link>
+    </item>
+    <item>
       <title>Upcoming Core Vim Class: London, February '14</title>
       <description>&amp;lt;p&amp;gt;I'll be running a &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-in-london-2&amp;quot;&amp;gt;Core Vim Masterclass in London&amp;lt;/a&amp;gt; on the afternoon of February 19th, at &amp;lt;a href=&amp;quot;http://www.nicholsonspubs.co.uk/doggettscoatandbadgesouthbanklondon/findus/&amp;quot;&amp;gt;Doggett's Coat and Badge&amp;lt;/a&amp;gt;. This is a rare opportunity to attend my &amp;lt;a href=&amp;quot;http://vimcasts.org/classes/core-vim-live&amp;quot;&amp;gt;Core Vim Masterclass&amp;lt;/a&amp;gt; in person, instead of online.&amp;lt;/p&amp;gt;
 
@@ -72,13 +112,6 @@
       <pubDate>Mon, 20 Jan 2014 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/announcements/2014/01/upcoming-core-vim-class-london-february-14/</guid>
       <link>http://vimcasts.org/announcements/2014/01/upcoming-core-vim-class-london-february-14/</link>
-    </item>
-    <item>
-      <title>20% group discount for Core Vim Class, January edition</title>
-      <description>&amp;lt;p&amp;gt;For the month of January only, I'm offering a &amp;lt;strong&amp;gt;20% discount on orders of five or more tickets&amp;lt;/strong&amp;gt; for my &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-online-3&amp;quot;&amp;gt;Core Vim Class&amp;lt;/a&amp;gt;. That's £128 per head, a £32 saving on full price tickets at £160. If your team makes heavy use of Vim, then this is a great opportunity...&amp;lt;/p&amp;gt;</description>
-      <pubDate>Mon, 20 Jan 2014 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/announcements/2014/01/20-group-discount-for-core-vim-class-january-edition/</guid>
-      <link>http://vimcasts.org/announcements/2014/01/20-group-discount-for-core-vim-class-january-edition/</link>
     </item>
     <item>
       <title>Comparing buffers with vimdiff</title>
@@ -241,6 +274,15 @@
       <link>http://vimcasts.org/episodes/meet-the-yank-register/</link>
     </item>
     <item>
+      <title>Upcoming online workshop: October 28th</title>
+      <description>&amp;lt;p&amp;gt;On Monday, October 28th 2013, I’m going to teach my &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-online-1&amp;quot;&amp;gt;Core Vim Masterclass Online&amp;lt;/a&amp;gt;. It will run for 4 hours, from &amp;lt;a href=&amp;quot;http://www.timeanddate.com/worldclock/fixedtime.html?msg=Core+Vim+Class+Online&amp;amp;amp;amp;iso=20131028T17&amp;amp;amp;amp;p1=136&amp;amp;amp;amp;ah=4&amp;quot;&amp;gt;17:00 BST&amp;lt;/a&amp;gt;. That’s 10:00 if you live in San Fransisco, or 13:00 if you live in New York. Tickets cost £160 (approximately US $257), but there’s an £145 earlybird offer (approx. US $233) running until October 23rd. You can &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-online-1&amp;quot;&amp;gt;buy tickets from tito.io&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Fri, 27 Sep 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2013/09/upcoming-online-workshop-october-28th/</guid>
+      <link>http://vimcasts.org/announcements/2013/09/upcoming-online-workshop-october-28th/</link>
+    </item>
+    <item>
       <title>Simple operations using the default register</title>
       <description>&amp;lt;p&amp;gt;Vim's &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote&amp;quot;&amp;gt;default register&amp;lt;/a&amp;gt; makes it easy to perform some of the most basic types of cut, copy, and paste operations. That's partly thanks to the &amp;lt;a href=&amp;quot;http://vimdoc.sourceforge.net/htmldoc/change.html#p&amp;quot;&amp;gt;&amp;lt;code&amp;gt;p&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt; command, which behaves differently depending on whether the default register contains a characterwise or linewise region of text.&amp;lt;/p&amp;gt;
 
@@ -249,15 +291,6 @@
       <pubDate>Fri, 27 Sep 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/simple-operations-using-the-default-register/</guid>
       <link>http://vimcasts.org/episodes/simple-operations-using-the-default-register/</link>
-    </item>
-    <item>
-      <title>Upcoming online workshop: October 28th</title>
-      <description>&amp;lt;p&amp;gt;On Monday, October 28th 2013, I’m going to teach my &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-online-1&amp;quot;&amp;gt;Core Vim Masterclass Online&amp;lt;/a&amp;gt;. It will run for 4 hours, from &amp;lt;a href=&amp;quot;http://www.timeanddate.com/worldclock/fixedtime.html?msg=Core+Vim+Class+Online&amp;amp;amp;amp;iso=20131028T17&amp;amp;amp;amp;p1=136&amp;amp;amp;amp;ah=4&amp;quot;&amp;gt;17:00 BST&amp;lt;/a&amp;gt;. That’s 10:00 if you live in San Fransisco, or 13:00 if you live in New York. Tickets cost £160 (approximately US $257), but there’s an £145 earlybird offer (approx. US $233) running until October 23rd. You can &amp;lt;a href=&amp;quot;https://tito.io/studio-nelstrom/core-vim-class-online-1&amp;quot;&amp;gt;buy tickets from tito.io&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
-
-</description>
-      <pubDate>Fri, 27 Sep 2013 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/announcements/2013/09/upcoming-online-workshop-october-28th/</guid>
-      <link>http://vimcasts.org/announcements/2013/09/upcoming-online-workshop-october-28th/</link>
     </item>
     <item>
       <title>Change of pricing for Core Vim Class</title>
@@ -289,15 +322,6 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
       <link>http://vimcasts.org/announcements/2013/09/upcoming-workshop-london-october-13/</link>
     </item>
     <item>
-      <title>Response to "Should Vimcasts go Pro?" survey</title>
-      <description>&amp;lt;p&amp;gt;I'd like to thank everyone who responded to my recent survey about supporting Vimcasts via a subscription model. I've taken your feedback on board and have decided to keep producing free Vimcasts. I can cover this site's running costs and support myself by teaching Vim classes and producing longer video tutorials to sell.&amp;lt;/p&amp;gt;
-
-</description>
-      <pubDate>Fri, 13 Sep 2013 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2013/09/response-to-should-vimcasts-go-pro-survey/</guid>
-      <link>http://vimcasts.org/blog/2013/09/response-to-should-vimcasts-go-pro-survey/</link>
-    </item>
-    <item>
       <title>Navigating Ruby Files with Vim</title>
       <description>&amp;lt;p&amp;gt;I've been collaborating with &amp;lt;a href=&amp;quot;http://www.thoughtbot.com/&amp;quot;&amp;gt;thoughtbot&amp;lt;/a&amp;gt; to produce three screencasts about &amp;lt;a href=&amp;quot;https://learn.thoughtbot.com/products/21-navigating-ruby-files-with-vim&amp;quot;&amp;gt;Navigating Ruby Files with Vim&amp;lt;/a&amp;gt;. There's 40 minutes of material in total, and it's available from today. You can purchase these videos for $19, but they will also be available to thoughtbot Prime subscribers. Check out &amp;lt;a href=&amp;quot;https://learn.thoughtbot.com/products/21-navigating-ruby-files-with-vim&amp;quot;&amp;gt;learn.thoughtbot.com&amp;lt;/a&amp;gt; for more details.&amp;lt;/p&amp;gt;
 
@@ -305,6 +329,15 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
       <pubDate>Fri, 13 Sep 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/blog/2013/09/navigating-ruby-files-with-vim/</guid>
       <link>http://vimcasts.org/blog/2013/09/navigating-ruby-files-with-vim/</link>
+    </item>
+    <item>
+      <title>Response to "Should Vimcasts go Pro?" survey</title>
+      <description>&amp;lt;p&amp;gt;I'd like to thank everyone who responded to my recent survey about supporting Vimcasts via a subscription model. I've taken your feedback on board and have decided to keep producing free Vimcasts. I can cover this site's running costs and support myself by teaching Vim classes and producing longer video tutorials to sell.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Fri, 13 Sep 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/09/response-to-should-vimcasts-go-pro-survey/</guid>
+      <link>http://vimcasts.org/blog/2013/09/response-to-should-vimcasts-go-pro-survey/</link>
     </item>
     <item>
       <title>Upcoming workshop: Berlin</title>
@@ -535,6 +568,15 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
       <link>http://vimcasts.org/episodes/using-argdo-to-change-multiple-files/</link>
     </item>
     <item>
+      <title>Get 30% off Practical Vim</title>
+      <description>&amp;lt;p&amp;gt;For a limited time, the Pragmatic Bookshelf is offering &amp;lt;a href=&amp;quot;http://pragprog.com/book/dnvim/practical-vim&amp;quot;&amp;gt;a 30% discount on Practical Vim&amp;lt;/a&amp;gt;. To claim this deal, use the coupon: &amp;lt;strong&amp;gt;DrewNeilVimMarchMadness&amp;lt;/strong&amp;gt;. The offer runs until midnight (PST) on March 8th. Please help me spread the word wide and far by Tweeting, Liking, +1-ing and so on.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Fri, 22 Feb 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2013/02/get-30-off-practical-vim/</guid>
+      <link>http://vimcasts.org/blog/2013/02/get-30-off-practical-vim/</link>
+    </item>
+    <item>
       <title>Populating the arglist</title>
       <description>&amp;lt;p&amp;gt;The arglist wouldn't be much use if we had to quit and relaunch Vim every time we wanted to change its contents. In this episode, we'll learn how to set the contents of the arglist using the &amp;lt;code&amp;gt;:args&amp;lt;/code&amp;gt; command, which can receive filepaths, globs, or even backtick expressions.&amp;lt;/p&amp;gt;
 
@@ -543,15 +585,6 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
       <pubDate>Fri, 22 Feb 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/populating-the-arglist/</guid>
       <link>http://vimcasts.org/episodes/populating-the-arglist/</link>
-    </item>
-    <item>
-      <title>Get 30% off Practical Vim</title>
-      <description>&amp;lt;p&amp;gt;For a limited time, the Pragmatic Bookshelf is offering &amp;lt;a href=&amp;quot;http://pragprog.com/book/dnvim/practical-vim&amp;quot;&amp;gt;a 30% discount on Practical Vim&amp;lt;/a&amp;gt;. To claim this deal, use the coupon: &amp;lt;strong&amp;gt;DrewNeilVimMarchMadness&amp;lt;/strong&amp;gt;. The offer runs until midnight (PST) on March 8th. Please help me spread the word wide and far by Tweeting, Liking, +1-ing and so on.&amp;lt;/p&amp;gt;
-
-</description>
-      <pubDate>Fri, 22 Feb 2013 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2013/02/get-30-off-practical-vim/</guid>
-      <link>http://vimcasts.org/blog/2013/02/get-30-off-practical-vim/</link>
     </item>
     <item>
       <title>Meet the arglist</title>
@@ -573,6 +606,15 @@ The class itself covers similar material to before.&amp;lt;/p&amp;gt;
       <link>http://vimcasts.org/blog/2013/02/google-vimdocs-with-a-custom-search-engine/</link>
     </item>
     <item>
+      <title>Upcoming online workshop: March 4th</title>
+      <description>&amp;lt;p&amp;gt;On Monday, March 4th, I'm going to teach my &amp;lt;a href=&amp;quot;http://vimcasts-online-4.eventbrite.com/&amp;quot;&amp;gt;Vim Masterclass Online&amp;lt;/a&amp;gt;. It will run for 4 hours, from &amp;lt;a href=&amp;quot;http://everytimezone.com/#2013-3-4,300,6be&amp;quot;&amp;gt;17:00 GMT&amp;lt;/a&amp;gt;. That’s 09:00 if you live in San Fransisco, or 12:00 if you live in New York. Tickets cost £95 (approximately US $150), but there’s an £80 earlybird offer (approx. US $127) running until February 25th.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Wed, 06 Feb 2013 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2013/02/upcoming-online-workshop-march-4th/</guid>
+      <link>http://vimcasts.org/announcements/2013/02/upcoming-online-workshop-march-4th/</link>
+    </item>
+    <item>
       <title>Habit breaking, habit making</title>
       <description>&amp;lt;p&amp;gt;Moving your Vim cursor around using the arrow keys is a bad habit, and like many bad habits it's a difficult one to break! Putting these lines into your vimrc can help:&amp;lt;/p&amp;gt;
 
@@ -590,15 +632,6 @@ noremap &amp;amp;lt;Right&amp;amp;gt; &amp;amp;lt;NOP&amp;amp;gt;
       <pubDate>Wed, 06 Feb 2013 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/</guid>
       <link>http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/</link>
-    </item>
-    <item>
-      <title>Upcoming online workshop: March 4th</title>
-      <description>&amp;lt;p&amp;gt;On Monday, March 4th, I'm going to teach my &amp;lt;a href=&amp;quot;http://vimcasts-online-4.eventbrite.com/&amp;quot;&amp;gt;Vim Masterclass Online&amp;lt;/a&amp;gt;. It will run for 4 hours, from &amp;lt;a href=&amp;quot;http://everytimezone.com/#2013-3-4,300,6be&amp;quot;&amp;gt;17:00 GMT&amp;lt;/a&amp;gt;. That’s 09:00 if you live in San Fransisco, or 12:00 if you live in New York. Tickets cost £95 (approximately US $150), but there’s an £80 earlybird offer (approx. US $127) running until February 25th.&amp;lt;/p&amp;gt;
-
-</description>
-      <pubDate>Wed, 06 Feb 2013 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/announcements/2013/02/upcoming-online-workshop-march-4th/</guid>
-      <link>http://vimcasts.org/announcements/2013/02/upcoming-online-workshop-march-4th/</link>
     </item>
     <item>
       <title>Vim London January in review</title>
@@ -753,13 +786,6 @@ noremap &amp;amp;lt;Right&amp;amp;gt; &amp;amp;lt;NOP&amp;amp;gt;
       <link>http://vimcasts.org/blog/2012/10/command-line-special-40-discount-on-practical-vim/</link>
     </item>
     <item>
-      <title>Upcoming workshop: London, October '12</title>
-      <description>&amp;lt;p&amp;gt;Once again, I'm happy to announce that I'll be running a &amp;lt;a href=&amp;quot;http://london-vimcasts-eve-2.eventbrite.com/&amp;quot;&amp;gt;Vim Masterclass in London&amp;lt;/a&amp;gt; on October 31st, at &amp;lt;a href=&amp;quot;http://forwardtechnology.co.uk/venue&amp;quot;&amp;gt;Forward&amp;lt;/a&amp;gt;. You can &amp;lt;a href=&amp;quot;http://london-vimcasts-eve-2.eventbrite.com/&amp;quot;&amp;gt;purchase tickets from EventBrite&amp;lt;/a&amp;gt;. The early bird price of £85 is available until 7pm on Wednesday, October 24th. After that, the...&amp;lt;/p&amp;gt;</description>
-      <pubDate>Fri, 12 Oct 2012 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/announcements/2012/10/upcoming-workshop-london-october-12/</guid>
-      <link>http://vimcasts.org/announcements/2012/10/upcoming-workshop-london-october-12/</link>
-    </item>
-    <item>
       <title>Amazon reviews of Practical Vim</title>
       <description>&amp;lt;p&amp;gt;The first five-star &amp;lt;a href=&amp;quot;http://www.amazon.com/Practical-Vim-Edit-Speed-Thought/product-reviews/1934356980/ref=dp_top_cm_cr_acr_txt?ie=UTF8&amp;amp;amp;amp;showViewpoints=1&amp;quot;&amp;gt;reviews for Practical Vim&amp;lt;/a&amp;gt; have cropped up, and I'm blushing after reading them. It's been described as &amp;lt;em&amp;gt;the book Vim has always deserved&amp;lt;/em&amp;gt;, and &amp;lt;em&amp;gt;a must-have for anybody who types&amp;lt;/em&amp;gt;. Here are a few choice phrases:&amp;lt;/p&amp;gt;
 
@@ -779,6 +805,13 @@ noremap &amp;amp;lt;Right&amp;amp;gt; &amp;amp;lt;NOP&amp;amp;gt;
       <pubDate>Fri, 12 Oct 2012 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/blog/2012/10/amazon-reviews-of-practical-vim/</guid>
       <link>http://vimcasts.org/blog/2012/10/amazon-reviews-of-practical-vim/</link>
+    </item>
+    <item>
+      <title>Upcoming workshop: London, October '12</title>
+      <description>&amp;lt;p&amp;gt;Once again, I'm happy to announce that I'll be running a &amp;lt;a href=&amp;quot;http://london-vimcasts-eve-2.eventbrite.com/&amp;quot;&amp;gt;Vim Masterclass in London&amp;lt;/a&amp;gt; on October 31st, at &amp;lt;a href=&amp;quot;http://forwardtechnology.co.uk/venue&amp;quot;&amp;gt;Forward&amp;lt;/a&amp;gt;. You can &amp;lt;a href=&amp;quot;http://london-vimcasts-eve-2.eventbrite.com/&amp;quot;&amp;gt;purchase tickets from EventBrite&amp;lt;/a&amp;gt;. The early bird price of £85 is available until 7pm on Wednesday, October 24th. After that, the...&amp;lt;/p&amp;gt;</description>
+      <pubDate>Fri, 12 Oct 2012 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/announcements/2012/10/upcoming-workshop-london-october-12/</guid>
+      <link>http://vimcasts.org/announcements/2012/10/upcoming-workshop-london-october-12/</link>
     </item>
     <item>
       <title>Practical Vim now shipping</title>
@@ -1096,19 +1129,6 @@ Gary Bernhardt on &amp;lt;a href=&amp;quot;http://rubyrogues.com/040-rr-text-edi
       <link>http://vimcasts.org/episodes/refining-search-patterns-with-the-command-line-window/</link>
     </item>
     <item>
-      <title>Working title: Practical Vim</title>
-      <description>&amp;lt;p&amp;gt;I am very pleased to announce that the &amp;lt;a href=&amp;quot;http://pragprog.com/&amp;quot;&amp;gt;Pragmatic Bookshelf&amp;lt;/a&amp;gt; will be publishing my book on Vim. The working title is &amp;lt;em&amp;gt;Practical Vim&amp;lt;/em&amp;gt;, and I hope to complete it by the spring of 2011. Here is a synopsis:&amp;lt;/p&amp;gt;
-
-&amp;lt;blockquote&amp;gt;
-  &amp;lt;p&amp;gt;For an open source project Vim’s documentation is impressive in scope, but there is still a considerable barrier between the novice and the productive Vim user. Whereas it is possible to improve as a programmer or writer by reading other people’s code, poetry or prose, there are fewer opportunities to learn how to use an editor effectively. Vim’s documentation reads like a dictionary; I propose to write a phrasebook.&amp;lt;/p&amp;gt;
-&amp;lt;/blockquote&amp;gt;
-
-</description>
-      <pubDate>Mon, 01 Nov 2010 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2010/11/working-title-practical-vim/</guid>
-      <link>http://vimcasts.org/blog/2010/11/working-title-practical-vim/</link>
-    </item>
-    <item>
       <title>ArrrrCamp presentation: Vim - walking without crutches</title>
       <description>&amp;lt;p&amp;gt;Last week, I gave a presentation at &amp;lt;a href=&amp;quot;http://arrrrcamp.be/&amp;quot;&amp;gt;ArrrrCamp&amp;lt;/a&amp;gt; called &amp;lt;em&amp;gt;Vim - walking without crutches&amp;lt;/em&amp;gt;. You can now &amp;lt;a href=&amp;quot;http://old.arrrrcamp.be/videos/vim-walking-without-crutches&amp;quot;&amp;gt;watch the video&amp;lt;/a&amp;gt; on their website. Here's the synopsis for my talk:&amp;lt;/p&amp;gt;
 
@@ -1124,6 +1144,19 @@ Gary Bernhardt on &amp;lt;a href=&amp;quot;http://rubyrogues.com/040-rr-text-edi
       <pubDate>Mon, 01 Nov 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/blog/2010/11/arrrrcamp-presentation-vim---walking-without-crutches/</guid>
       <link>http://vimcasts.org/blog/2010/11/arrrrcamp-presentation-vim---walking-without-crutches/</link>
+    </item>
+    <item>
+      <title>Working title: Practical Vim</title>
+      <description>&amp;lt;p&amp;gt;I am very pleased to announce that the &amp;lt;a href=&amp;quot;http://pragprog.com/&amp;quot;&amp;gt;Pragmatic Bookshelf&amp;lt;/a&amp;gt; will be publishing my book on Vim. The working title is &amp;lt;em&amp;gt;Practical Vim&amp;lt;/em&amp;gt;, and I hope to complete it by the spring of 2011. Here is a synopsis:&amp;lt;/p&amp;gt;
+
+&amp;lt;blockquote&amp;gt;
+  &amp;lt;p&amp;gt;For an open source project Vim’s documentation is impressive in scope, but there is still a considerable barrier between the novice and the productive Vim user. Whereas it is possible to improve as a programmer or writer by reading other people’s code, poetry or prose, there are fewer opportunities to learn how to use an editor effectively. Vim’s documentation reads like a dictionary; I propose to write a phrasebook.&amp;lt;/p&amp;gt;
+&amp;lt;/blockquote&amp;gt;
+
+</description>
+      <pubDate>Mon, 01 Nov 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2010/11/working-title-practical-vim/</guid>
+      <link>http://vimcasts.org/blog/2010/11/working-title-practical-vim/</link>
     </item>
     <item>
       <title>Synchronizing plugins with git submodules and pathogen</title>
@@ -1158,6 +1191,15 @@ Drew&amp;lt;/p&amp;gt;
       <link>http://vimcasts.org/blog/2010/10/vim-user-survey/</link>
     </item>
     <item>
+      <title>Mac Classic - a light colorscheme</title>
+      <description>&amp;lt;p&amp;gt;I could never find a light colorscheme for Vim that I enjoyed using, so I finally took the time to port the &amp;quot;Mac Classic&amp;quot; theme from TextMate. The &amp;lt;a href=&amp;quot;http://github.com/nelstrom/vim-mac-classic-theme&amp;quot;&amp;gt;source code is on gitub&amp;lt;/a&amp;gt;, so feel free to fork it.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Tue, 28 Sep 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2010/09/mac-classic/</guid>
+      <link>http://vimcasts.org/blog/2010/09/mac-classic/</link>
+    </item>
+    <item>
       <title>Creating colorschemes for Vim</title>
       <description>&amp;lt;p&amp;gt;Choosing a colorscheme that you find pleasing to look at is essential if you want to be comfortable working with Vim. There are hundreds of colorschemes available, but what if you can't find one that you like? In this episode, I'll share a few tips that make it easy to create colorschemes for Vim.&amp;lt;/p&amp;gt;
 
@@ -1166,15 +1208,6 @@ Drew&amp;lt;/p&amp;gt;
       <pubDate>Tue, 28 Sep 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/creating-colorschemes-for-vim/</guid>
       <link>http://vimcasts.org/episodes/creating-colorschemes-for-vim/</link>
-    </item>
-    <item>
-      <title>Mac Classic - a light colorscheme</title>
-      <description>&amp;lt;p&amp;gt;I could never find a light colorscheme for Vim that I enjoyed using, so I finally took the time to port the &amp;quot;Mac Classic&amp;quot; theme from TextMate. The &amp;lt;a href=&amp;quot;http://github.com/nelstrom/vim-mac-classic-theme&amp;quot;&amp;gt;source code is on gitub&amp;lt;/a&amp;gt;, so feel free to fork it.&amp;lt;/p&amp;gt;
-
-</description>
-      <pubDate>Tue, 28 Sep 2010 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2010/09/mac-classic/</guid>
-      <link>http://vimcasts.org/blog/2010/09/mac-classic/</link>
     </item>
     <item>
       <title>Updating your vimrc file on the fly</title>
@@ -1323,6 +1356,17 @@ Drew&amp;lt;/p&amp;gt;
       <link>http://vimcasts.org/episodes/the-edit-command/</link>
     </item>
     <item>
+      <title>Short form URLs for episodes</title>
+      <description>&amp;lt;p&amp;gt;Vimcasts.org now has it's own short form URLs. You can link to each episode by
+number, using the form &amp;lt;a href=&amp;quot;http://vimcasts.org/episodes/creating-the-vimcasts-logo-as-ascii-art&amp;quot;&amp;gt;&amp;lt;code&amp;gt;/e/10&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt; to link to episode 10. You can also link to the
+episodes archive with the trailing path &amp;lt;a href=&amp;quot;http://vimcasts.org/episodes/archive&amp;quot;&amp;gt;&amp;lt;code&amp;gt;/e/a&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+
+</description>
+      <pubDate>Thu, 01 Apr 2010 00:00:00 GMT</pubDate>
+      <guid>http://vimcasts.org/blog/2010/04/short-form-urls-for-episodes/</guid>
+      <link>http://vimcasts.org/blog/2010/04/short-form-urls-for-episodes/</link>
+    </item>
+    <item>
       <title>Cleaning up with Vim</title>
       <description>&amp;lt;p&amp;gt;Do you have trouble cleaning up with your text editor? Does it cut through the toughest grease, grime and syntax errors? Are you burning your hands on too many hotkeys?&amp;lt;/p&amp;gt;
 
@@ -1333,17 +1377,6 @@ Drew&amp;lt;/p&amp;gt;
       <pubDate>Thu, 01 Apr 2010 00:00:00 GMT</pubDate>
       <guid>http://vimcasts.org/episodes/cleaning-up-with-vim/</guid>
       <link>http://vimcasts.org/episodes/cleaning-up-with-vim/</link>
-    </item>
-    <item>
-      <title>Short form URLs for episodes</title>
-      <description>&amp;lt;p&amp;gt;Vimcasts.org now has it's own short form URLs. You can link to each episode by
-number, using the form &amp;lt;a href=&amp;quot;http://vimcasts.org/episodes/creating-the-vimcasts-logo-as-ascii-art&amp;quot;&amp;gt;&amp;lt;code&amp;gt;/e/10&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt; to link to episode 10. You can also link to the
-episodes archive with the trailing path &amp;lt;a href=&amp;quot;http://vimcasts.org/episodes/archive&amp;quot;&amp;gt;&amp;lt;code&amp;gt;/e/a&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
-
-</description>
-      <pubDate>Thu, 01 Apr 2010 00:00:00 GMT</pubDate>
-      <guid>http://vimcasts.org/blog/2010/04/short-form-urls-for-episodes/</guid>
-      <link>http://vimcasts.org/blog/2010/04/short-form-urls-for-episodes/</link>
     </item>
     <item>
       <title>Modal editing: undo, redo and repeat</title>

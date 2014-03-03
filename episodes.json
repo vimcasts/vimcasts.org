@@ -1386,6 +1386,50 @@
                 "contentType": "video/x-m4v"
             }
         },
+        {
+            
+            "title": "Using external filter commands to reformat HTML",
+            "episode_number": "64",
+            "published_at": "Tue, 18 Feb 2014 00:00:00 GMT",
+            "url": "http://vimcasts.org/episodes/using-external-filter-commands-to-reformat-html/",
+            "short_url": "http://vimcasts.org/e/64",
+            "poster": "http://vimcasts.org/images/posters/formatprg-pandoc.png",
+            "abstract": "<p>We can use pandoc as a <a href=\"http://vimdoc.sourceforge.net/htmldoc/change.html#filter\">filter<\/a> to clean up <abbr title=\"what you see is what you get\">WYSIWYG<\/abbr>-generated HTML. Pandoc is a commandline program, but we can call it from inside Vim either using the <a href=\"http://vimdoc.sourceforge.net/htmldoc/various.html#:!\">bang Ex command<\/a>, or by configuring <a title=\"formatprg\" href=\"http://vimdoc.sourceforge.net/htmldoc/options.html#\">the <code>formatprg<\/code> option<\/a> to make the <code>gq<\/code> operator invoke pandoc.<\/p>\n\n",
+            "ogg": {
+                "url": "http://media.vimcasts.org/videos/64/pandoc-filter.ogv",
+                "bytes": "9317646",
+                "seconds": "271",
+                "contentType": "video/ogg"
+            },
+            "quicktime": {
+                "url": "http://media.vimcasts.org/videos/64/pandoc-filter.m4v",
+                "bytes": "17071215",
+                "seconds": "271",
+                "contentType": "video/x-m4v"
+            }
+        },
+        {
+            
+            "title": "Swapping two regions of text with exchange.vim",
+            "episode_number": "65",
+            "published_at": "Mon, 24 Feb 2014 00:00:00 GMT",
+            "url": "http://vimcasts.org/episodes/swapping-two-regions-of-text-with-exchange-vim/",
+            "short_url": "http://vimcasts.org/e/65",
+            "poster": "http://vimcasts.org/images/posters/exchange.png",
+            "abstract": "<p>Swapping two regions of text is a common task, which normally requires that we make two separate changes to the document.\nTom McDonald\'s <a href=\"https://github.com/tommcdo/vim-exchange\">exchange plugin<\/a> offers an elegant alternative, by providing an operator that swaps two regions of text in one go.<\/p>\n\n",
+            "ogg": {
+                "url": "http://media.vimcasts.org/videos/65/exchange.ogv",
+                "bytes": "4467390",
+                "seconds": "244",
+                "contentType": "video/ogg"
+            },
+            "quicktime": {
+                "url": "http://media.vimcasts.org/videos/65/exchange.m4v",
+                "bytes": "8784485",
+                "seconds": "244",
+                "contentType": "video/x-m4v"
+            }
+        },
         
     ]
 }
