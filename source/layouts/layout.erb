@@ -33,19 +33,19 @@
           </ul>
 
           <section class="top-bar-section">
-            <!-- Right Nav Section -->
-            <ul class="right">
-              <li class="has-form">
-              <div class="row collapse">
-                <div class="large-8 small-9 columns">
-                  <input type="text" placeholder="Explore archives">
+
+            <% unless current_page.data.searchfeature %>
+              <!-- Right Nav Section -->
+              <ul class="right">
+                <li class="has-form">
+                <div class="row collapse">
+                  <div class="large-12 columns">
+                    <%= partial 'search-form' %>
+                  </div>
                 </div>
-                <div class="large-4 small-3 columns">
-                  <a href="#" class="alert button expand">Search</a>
-                </div>
-              </div>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            <% end %>
 
             <!-- Left Nav Section -->
             <ul class="left">
@@ -67,11 +67,12 @@
         <ul class="off-canvas-list">
           <li><label>Vimcasts</label></li>
           <%= partial "navigation-items" %>
-          <li>
-          <form>
-            <label text="search">Search: <input type="search" disabled/></label>
-          </form>
-          </li>
+
+          <% unless current_page.data.searchfeature %>
+            <li>
+              <%= partial 'search-form' %>
+            </li>
+          <% end %>
         </ul>
       </aside>
 
@@ -108,7 +109,7 @@
     </div>
   </div>
 
-
+    <%= partial "swiftype-script" %>
     <%= javascript_include_tag  "all" %>
   </body>
 </html>

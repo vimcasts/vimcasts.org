@@ -1,5 +1,6 @@
 ---
 title: Vimcasts - Free screencasts about the text editor Vim
+searchfeature: true
 ---
 
 <%= partial "next-class" %>
@@ -18,9 +19,7 @@ title: Vimcasts - Free screencasts about the text editor Vim
 
   <div class="small-12 large-6 columns">
     <h2>Search the archives</h2>
-    <form>
-      <label text="search">Search: <input type="search" disabled/></label>
-    </form>
+    <%= partial 'search-form' %>
   </div>
 
 </div>
