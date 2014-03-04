@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -7,12 +8,17 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>Search for the selected text</title>
 
+    
+        <meta name="st:robots" content="follow, index">
+
+    
+
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
-  <body class="episodes episodes_search-for-the-selected-text episodes_search-for-the-selected-text_index">
+  <body class="episodes episodes_search-for-the-selected-text episodes_search-for-the-selected-text_index" data-swiftype-index='false'>
 
   <div class="off-canvas-wrap">
     <div class="inner-wrap">
@@ -168,9 +174,11 @@ I'll be teaching my Core Vim Class Online on March 5th.
         
       </header>
 
-      <p><a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#star">The <code>*</code> command</a> searches for the word under the cursor. That makes sense in Normal mode, but from Visual mode it would be more useful if the star command searched for the current <em>selection</em>, rather than the current word. We can add this feature to Vim using the <a href="https://github.com/nelstrom/vim-visual-star-search">visual star search plugin</a>.</p>
+      <div data-swiftype-index="true">
+        <p><a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#star">The <code>*</code> command</a> searches for the word under the cursor. That makes sense in Normal mode, but from Visual mode it would be more useful if the star command searched for the current <em>selection</em>, rather than the current word. We can add this feature to Vim using the <a href="https://github.com/nelstrom/vim-visual-star-search">visual star search plugin</a>.</p>
 
 
+      </div>
 
       <video poster="http://vimcasts.org/images/posters/visual_star.png"
         controls="controls" preload="none" class="placeholder"
@@ -203,7 +211,7 @@ I'll be teaching my Core Vim Class Online on March 5th.
       <dl class="accordion" data-accordion>
         <dd>
         <a href="#shownotes">Shownotes</a>
-        <div id="shownotes" class="content">
+        <div id="shownotes" class="content" data-swiftype-index="true">
           
 
 <p>Look up <a href="http://vimdoc.sourceforge.net/htmldoc/visual.html#visual-search"><code>:help visual-search</code></a> in Vim's documentation, and you'll find a suggestion for this simple mapping:</p>

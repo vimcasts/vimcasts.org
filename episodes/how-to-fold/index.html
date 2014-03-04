@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -7,12 +8,17 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>How to fold</title>
 
+    
+        <meta name="st:robots" content="follow, index">
+
+    
+
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
-  <body class="episodes episodes_how-to-fold episodes_how-to-fold_index">
+  <body class="episodes episodes_how-to-fold episodes_how-to-fold_index" data-swiftype-index='false'>
 
   <div class="off-canvas-wrap">
     <div class="inner-wrap">
@@ -168,9 +174,11 @@ I'll be teaching my Core Vim Class Online on March 5th.
         
       </header>
 
-      <p>Vim's folding feature enables us to expand and collapse regions of a document. Not only does this allow us to organize our workspace, it also makes it easy to navigate around the document, and to rearrange entire sections as though they were single lines.</p>
+      <div data-swiftype-index="true">
+        <p>Vim's folding feature enables us to expand and collapse regions of a document. Not only does this allow us to organize our workspace, it also makes it easy to navigate around the document, and to rearrange entire sections as though they were single lines.</p>
 
 
+      </div>
 
       <video poster="http://vimcasts.org/images/posters/how_to_fold.png"
         controls="controls" preload="none" class="placeholder"
@@ -203,7 +211,7 @@ I'll be teaching my Core Vim Class Online on March 5th.
       <dl class="accordion" data-accordion>
         <dd>
         <a href="#shownotes">Shownotes</a>
-        <div id="shownotes" class="content">
+        <div id="shownotes" class="content" data-swiftype-index="true">
           
 
 <h2 id="methods-of-folding">Methods of folding</h2>

@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -7,12 +8,17 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>Whitespace preferences and filetypes</title>
 
+    
+        <meta name="st:robots" content="follow, index">
+
+    
+
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
-  <body class="episodes episodes_whitespace-preferences-and-filetypes episodes_whitespace-preferences-and-filetypes_index">
+  <body class="episodes episodes_whitespace-preferences-and-filetypes episodes_whitespace-preferences-and-filetypes_index" data-swiftype-index='false'>
 
   <div class="off-canvas-wrap">
     <div class="inner-wrap">
@@ -168,9 +174,11 @@ I'll be teaching my Core Vim Class Online on March 5th.
         
       </header>
 
-      <p>Different file types may require particular whitespace settings. For example, YAML files must be indented using spaces, whereas makefiles require indentation with tabs. These preferences can be specified by hooking into the <code>FileType</code> event with an autocommand.</p>
+      <div data-swiftype-index="true">
+        <p>Different file types may require particular whitespace settings. For example, YAML files must be indented using spaces, whereas makefiles require indentation with tabs. These preferences can be specified by hooking into the <code>FileType</code> event with an autocommand.</p>
 
 
+      </div>
 
       <video poster="http://vimcasts.org/images/posters/whitespace_preferences_and_filetypes.png"
         controls="controls" preload="none" class="placeholder"
@@ -203,7 +211,7 @@ I'll be teaching my Core Vim Class Online on March 5th.
       <dl class="accordion" data-accordion>
         <dd>
         <a href="#shownotes">Shownotes</a>
-        <div id="shownotes" class="content">
+        <div id="shownotes" class="content" data-swiftype-index="true">
           
 
 <p>Put the following in your <code>.vimrc</code> file:</p>

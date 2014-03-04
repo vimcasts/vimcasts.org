@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -7,12 +8,17 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>Using Vim's paste mode with the system paste command</title>
 
+    
+        <meta name="st:robots" content="follow, index">
+
+    
+
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
-  <body class="episodes episodes_using-vims-paste-mode-with-the-system-paste-command episodes_using-vims-paste-mode-with-the-system-paste-command_index">
+  <body class="episodes episodes_using-vims-paste-mode-with-the-system-paste-command episodes_using-vims-paste-mode-with-the-system-paste-command_index" data-swiftype-index='false'>
 
   <div class="off-canvas-wrap">
     <div class="inner-wrap">
@@ -168,9 +174,11 @@ I'll be teaching my Core Vim Class Online on March 5th.
         
       </header>
 
-      <p>When Vim is compiled without the <code>+clipboard</code> feature, we can still insert text from the clipboard using the system paste command (<code>ctrl-v</code> or <code>cmd-v</code>). This can produce strange effects, but we can avoid them by toggling the <code>paste</code> option each time we use the system paste command.</p>
+      <div data-swiftype-index="true">
+        <p>When Vim is compiled without the <code>+clipboard</code> feature, we can still insert text from the clipboard using the system paste command (<code>ctrl-v</code> or <code>cmd-v</code>). This can produce strange effects, but we can avoid them by toggling the <code>paste</code> option each time we use the system paste command.</p>
 
 
+      </div>
 
       <video poster="http://vimcasts.org/images/posters/paste-option-toggle.png"
         controls="controls" preload="none" class="placeholder"
@@ -203,7 +211,7 @@ I'll be teaching my Core Vim Class Online on March 5th.
       <dl class="accordion" data-accordion>
         <dd>
         <a href="#shownotes">Shownotes</a>
-        <div id="shownotes" class="content">
+        <div id="shownotes" class="content" data-swiftype-index="true">
           
 
 <p>If you <a href="https://gist.github.com/nelstrom/7416573">copy this snippet of JavaScript</a>, then use the system paste command (<code>ctrl-v</code>, or <code>cmd-v</code> for mac users) to paste it into a Vim session running in the terminal, you might end up with something that looks like this:</p>

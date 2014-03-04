@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -7,12 +8,17 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>Bubbling text</title>
 
+    
+        <meta name="st:robots" content="follow, index">
+
+    
+
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
-  <body class="episodes episodes_bubbling-text episodes_bubbling-text_index">
+  <body class="episodes episodes_bubbling-text episodes_bubbling-text_index" data-swiftype-index='false'>
 
   <div class="off-canvas-wrap">
     <div class="inner-wrap">
@@ -168,9 +174,11 @@ I'll be teaching my Core Vim Class Online on March 5th.
         
       </header>
 
-      <p>TextMate has a few built in commands for moving selected text around a document. The end end result of using these commands can be achieved by cutting and pasting, but the visual feedback they provide is quite helpful. In this episode, I will show how to replicate these commands in Vim.</p>
+      <div data-swiftype-index="true">
+        <p>TextMate has a few built in commands for moving selected text around a document. The end end result of using these commands can be achieved by cutting and pasting, but the visual feedback they provide is quite helpful. In this episode, I will show how to replicate these commands in Vim.</p>
 
 
+      </div>
 
       <video poster="http://vimcasts.org/images/posters/bubbling_text.png"
         controls="controls" preload="none" class="placeholder"
@@ -203,7 +211,7 @@ I'll be teaching my Core Vim Class Online on March 5th.
       <dl class="accordion" data-accordion>
         <dd>
         <a href="#shownotes">Shownotes</a>
-        <div id="shownotes" class="content">
+        <div id="shownotes" class="content" data-swiftype-index="true">
           
 
 <p>In TextMate, the commands for moving selected text can be found under the "Text &gt; Move Selection" menu. I find "move selected line up" to be an acurate but dull description. Personally, I prefer to call this feature <em>text bubbling</em>. </p>

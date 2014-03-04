@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -6,12 +7,17 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>Combining :vimgrep with git ls-files</title>
 
+    
+        <meta name="st:robots" content="follow, index">
+
+    
+
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
-  <body class="blog blog_2013 blog_2013_03 blog_2013_03_combining-vimgrep-with-git-ls-files blog_2013_03_combining-vimgrep-with-git-ls-files_index">
+  <body class="blog blog_2013 blog_2013_03 blog_2013_03_combining-vimgrep-with-git-ls-files blog_2013_03_combining-vimgrep-with-git-ls-files_index" data-swiftype-index='false'>
 
   <div class="off-canvas-wrap">
     <div class="inner-wrap">
@@ -158,7 +164,8 @@ I'll be teaching my Core Vim Class Online on March 5th.
         
       </header>
 
-      <p>The <code>vimgrep</code> command uses Vim's native regular expressions to search the contents of multiple files. There are several ways that we can specify the list of files to look inside, including <code>*</code> and <code>**</code> wildcards. It would be handy if we could instruct <code>vimgrep</code> to look inside all of the files in the current project, excluding those listed in the <code>.gitignore</code> file. That's where the <a href="https://www.kernel.org/pub/software/scm/git/docs/git-ls-files.html"><code>git ls-files</code></a> command comes in.</p>
+      <div data-swiftype-index="true">
+        <p>The <code>vimgrep</code> command uses Vim's native regular expressions to search the contents of multiple files. There are several ways that we can specify the list of files to look inside, including <code>*</code> and <code>**</code> wildcards. It would be handy if we could instruct <code>vimgrep</code> to look inside all of the files in the current project, excluding those listed in the <code>.gitignore</code> file. That's where the <a href="https://www.kernel.org/pub/software/scm/git/docs/git-ls-files.html"><code>git ls-files</code></a> command comes in.</p>
 
 
 
@@ -202,6 +209,7 @@ I'll be teaching my Core Vim Class Online on March 5th.
 <p>Of course, git also provides the <a href="https://www.kernel.org/pub/software/scm/git/docs/git-grep.html"><code>git-grep</code></a> command, and the [fugitive][] plugin provides a <code>:Ggrep</code> wrapper for it. <a href="/e/35">Episode 35</a> covers <code>:Ggrep</code> in more detail. Even so, it's handy to know that <code>git ls-files</code> can be combined with <code>vimgrep</code>, for those times when you've got a complex Vim regular expression, and you want to test it against multiple files.</p>
 
 
+      </div>
 
       <dl class="accordion" data-accordion>
         <dd>

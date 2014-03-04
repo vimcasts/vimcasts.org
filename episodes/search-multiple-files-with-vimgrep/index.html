@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -7,12 +8,17 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>Search multiple files with :vimgrep</title>
 
+    
+        <meta name="st:robots" content="follow, index">
+
+    
+
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
-  <body class="episodes episodes_search-multiple-files-with-vimgrep episodes_search-multiple-files-with-vimgrep_index">
+  <body class="episodes episodes_search-multiple-files-with-vimgrep episodes_search-multiple-files-with-vimgrep_index" data-swiftype-index='false'>
 
   <div class="off-canvas-wrap">
     <div class="inner-wrap">
@@ -168,9 +174,11 @@ I'll be teaching my Core Vim Class Online on March 5th.
         
       </header>
 
-      <p><code>vimgrep</code> is Vim's built-in command for searching across multiple files. It's not so fast as external tools like ack and git-grep, but it has its uses. <code>vimgrep</code> uses Vim's built-in regex engine, so you can reuse the patterns that work with Vim's standard search command. </p>
+      <div data-swiftype-index="true">
+        <p><code>vimgrep</code> is Vim's built-in command for searching across multiple files. It's not so fast as external tools like ack and git-grep, but it has its uses. <code>vimgrep</code> uses Vim's built-in regex engine, so you can reuse the patterns that work with Vim's standard search command. </p>
 
 
+      </div>
 
       <video poster="http://vimcasts.org/images/posters/vimgrep.png"
         controls="controls" preload="none" class="placeholder"
@@ -203,7 +211,7 @@ I'll be teaching my Core Vim Class Online on March 5th.
       <dl class="accordion" data-accordion>
         <dd>
         <a href="#shownotes">Shownotes</a>
-        <div id="shownotes" class="content">
+        <div id="shownotes" class="content" data-swiftype-index="true">
           
 
 <p>Have you ever wished that Vim would report your position as you navigate through search matches? For example, by saying: 'match 2 out of 5'.</p>

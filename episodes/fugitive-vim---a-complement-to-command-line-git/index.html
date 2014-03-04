@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -7,12 +8,17 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>Fugitive.vim - a complement to command line git</title>
 
+    
+        <meta name="st:robots" content="follow, index">
+
+    
+
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
-  <body class="episodes episodes_fugitive-vim---a-complement-to-command-line-git episodes_fugitive-vim---a-complement-to-command-line-git_index">
+  <body class="episodes episodes_fugitive-vim---a-complement-to-command-line-git episodes_fugitive-vim---a-complement-to-command-line-git_index" data-swiftype-index='false'>
 
   <div class="off-canvas-wrap">
     <div class="inner-wrap">
@@ -168,11 +174,13 @@ I'll be teaching my Core Vim Class Online on March 5th.
         
       </header>
 
-      <p><a href="https://github.com/tpope/vim-fugitive">The fugitive plugin</a>, by Tim Pope, is a git wrapper for Vim. It  complements the command line interface to git, but doesn't aim to replace it. In this episode, we'll see how some of fugitive's commands can streamline your workflow.</p>
+      <div data-swiftype-index="true">
+        <p><a href="https://github.com/tpope/vim-fugitive">The fugitive plugin</a>, by Tim Pope, is a git wrapper for Vim. It  complements the command line interface to git, but doesn't aim to replace it. In this episode, we'll see how some of fugitive's commands can streamline your workflow.</p>
 
 <p><em>This is the first of a five part series on fugitive.</em></p>
 
 
+      </div>
 
       <video poster="http://vimcasts.org/images/posters/fugitive_1.png"
         controls="controls" preload="none" class="placeholder"
@@ -205,7 +213,7 @@ I'll be teaching my Core Vim Class Online on March 5th.
       <dl class="accordion" data-accordion>
         <dd>
         <a href="#shownotes">Shownotes</a>
-        <div id="shownotes" class="content">
+        <div id="shownotes" class="content" data-swiftype-index="true">
           
 
 <p>Using the <code>:Git</code> command, you can run any arbitrary git command from inside Vim. I prefer to switch to the shell for anything that generates a log of output, such as <code>git log</code> for example. But commands that generate little or no output are fair game for running from inside Vim (<code>:Git checkout -b experimental</code> for example).</p>

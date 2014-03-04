@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -7,12 +8,17 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>The file explorer</title>
 
+    
+        <meta name="st:robots" content="follow, index">
+
+    
+
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
-  <body class="episodes episodes_the-file-explorer episodes_the-file-explorer_index">
+  <body class="episodes episodes_the-file-explorer episodes_the-file-explorer_index" data-swiftype-index='false'>
 
   <div class="off-canvas-wrap">
     <div class="inner-wrap">
@@ -168,9 +174,11 @@ I'll be teaching my Core Vim Class Online on March 5th.
         
       </header>
 
-      <p>This episode demonstrates how Vim's native file browser can be used to explore and manipulate the file system. </p>
+      <div data-swiftype-index="true">
+        <p>This episode demonstrates how Vim's native file browser can be used to explore and manipulate the file system. </p>
 
 
+      </div>
 
       <video poster="http://vimcasts.org/images/posters/the_file_explorer.png"
         controls="controls" preload="none" class="placeholder"
@@ -203,7 +211,7 @@ I'll be teaching my Core Vim Class Online on March 5th.
       <dl class="accordion" data-accordion>
         <dd>
         <a href="#shownotes">Shownotes</a>
-        <div id="shownotes" class="content">
+        <div id="shownotes" class="content" data-swiftype-index="true">
           
 
 <p>The video demonstrates some of the functionality of the <a href="http://www.vim.org/scripts/script.php?script_id=1075">netrw</a> plugin, which is usually distributed with Vim. Note that if the <a href="http://www.vim.org/scripts/script.php?script_id=1658">NERD_tree</a> is installed, then the functionality described in this episode won't work for you.</p>
