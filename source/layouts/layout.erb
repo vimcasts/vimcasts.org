@@ -9,7 +9,7 @@
     <% if content_for?(:swiftype_robot) %>
       <%= yield_content :swiftype_robot %>
     <% else %>
-      <meta name="st:robots" content="follow, noindex">
+      <meta name="st:robots" content="follow, index">
     <% end %>
 
     <%= stylesheet_link_tag "app", "style" %>
