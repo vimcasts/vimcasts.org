@@ -8,6 +8,9 @@
     "source/index.html.erb": {
         "command": "index"
     },
+    "source/_*": {
+        "command": "partial"
+    },
     "source/blog/*": {
         "command": "blog"
     },
@@ -26,6 +29,9 @@
         "command": "javascript"
     },
     "source/layouts/*": {
+        "command": "layout"
+    },
+    "source/layouts/layout.erb": {
         "command": "layout"
     },
     "source/paths/*": {
