@@ -1021,6 +1021,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://proof.vimcasts.org/results/</loc>
+    <lastmod>2014-03-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://proof.vimcasts.org/subscribe/</loc>
     <lastmod>2014-03-04T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
