@@ -52,6 +52,10 @@ class Announcements < Middleman::Extension
       data.categories.select { |c| c["name"] == name }.first
     end
 
+    def domain
+      environment == :development ? 'http://localhost:4567' : 'http://proof.vimcasts.org'
+    end
+
   end
 
 end
@@ -119,6 +123,7 @@ end
 end
 
 page "/episodes.json", layout: false
+page "sitemap.xml",    layout: false
 
 ###
 # Compass
