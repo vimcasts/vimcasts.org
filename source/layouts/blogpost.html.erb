@@ -1,3 +1,7 @@
+<% content_for :swiftype_robot do %>
+  <meta name="st:robots" content="follow, index">
+<% end %>
+
 <% wrap_layout :layout do %>
   <div class="row">
     <div class="small-12 columns">
@@ -17,7 +21,9 @@
         <% end %>
       </header>
 
-      <%= yield %>
+      <div data-swiftype-index="true">
+        <%= yield %>
+      </div>
 
       <dl class="accordion" data-accordion>
         <dd>

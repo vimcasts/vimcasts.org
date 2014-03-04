@@ -6,11 +6,17 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || yield_content(:title) %></title>
 
+    <% if content_for?(:swiftype_robot) %>
+      <%= yield_content :swiftype_robot %>
+    <% else %>
+      <meta name="st:robots" content="follow, noindex">
+    <% end %>
+
     <%= stylesheet_link_tag "app", "style" %>
     <%= javascript_include_tag "modernizr" %>
   </head>
 
-  <body class="<%= page_classes %>">
+  <body class="<%= page_classes %>" data-swiftype-index='false'>
 
   <div class="off-canvas-wrap">
     <div class="inner-wrap">

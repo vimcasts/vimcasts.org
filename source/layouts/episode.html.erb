@@ -1,3 +1,7 @@
+<% content_for :swiftype_robot do %>
+  <meta name="st:robots" content="follow, index">
+<% end %>
+
 <% episode = Episode.new(current_page) %>
 
 <% wrap_layout :layout do %>
@@ -28,7 +32,9 @@
         <% end %>
       </header>
 
-      <%= current_page.summary %>
+      <div data-swiftype-index="true">
+        <%= current_page.summary %>
+      </div>
 
       <video poster="<%= episode.poster_url %>"
         controls="controls" preload="none" class="placeholder"
@@ -62,7 +68,7 @@
       <dl class="accordion" data-accordion>
         <dd>
         <a href="#shownotes">Shownotes</a>
-        <div id="shownotes" class="content">
+        <div id="shownotes" class="content" data-swiftype-index="true">
           <%= extended_article(current_page) %>
         </div>
         </dd>
