@@ -4,4 +4,5 @@
 //= require jquery.swiftype.search
 //= require foundation/js/foundation.min
 
+//= require swiftype-template
 //= require app
