@@ -268,6 +268,14 @@ configure :build do
       redirect "e/#{n}.html", to: "/#{episode.path}"
       redirect "e/#{n}/t.html", to: "/episodes/#{n}/transcript"
     end
+
+    # FIXME: this raises an error:
+    #   needs a date in its filename or frontmatter (RuntimeError)
+    # blog(:announcements).articles.each do |a|
+    #   year, month = a.date.strftime('%Y %m').split(' ')
+    #   redirect "blog/#{year}/#{month}/#{a.slug}.html", to: "/#{a.path}"
+    # end
+
     # blog(:blog).articles.each do |post|
     #   redirect post.path, to: post.destination_path
     # end
