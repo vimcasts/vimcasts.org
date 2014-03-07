@@ -80,8 +80,7 @@ activate :blog do |blog|
   blog.paginate = true
   blog.year_template = "blog-archive-by-year.html"
   blog.month_template = "blog-archive-by-month.html"
-  blog.taglink = "categories/{tag}.html"
-  blog.tag_template = "category.html"
+  blog.taglink = "/categories/{tag}.html"
 end
 
 activate :blog do |blog|
@@ -91,8 +90,7 @@ activate :blog do |blog|
   blog.permalink = "{title}.html"
   blog.summary_separator = /<p>READMORE<\/p>/
   blog.paginate = true
-  blog.taglink = "categories/{tag}.html"
-  blog.tag_template = "category.html"
+  blog.taglink = "/categories/{tag}.html"
 end
 
 activate :blog do |blog|
