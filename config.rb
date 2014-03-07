@@ -102,7 +102,7 @@ activate :blog do |blog|
   blog.paginate = true
 end
 
-[
+set :feeds, [
   {
     name: "ogg",
     title: "Vimcasts OGG Feed",
@@ -113,7 +113,9 @@ end
     title: "Vimcasts Quicktime Feed",
     type: "video/x-m4v",
   }
-].each do |feed|
+]
+
+feeds.each do |feed|
   proxy "/feeds/#{feed[:name]}", "/feeds/all.xml",
     :locals => { :feed => feed },
     :ignore => true,

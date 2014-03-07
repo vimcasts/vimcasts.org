@@ -12,6 +12,14 @@
       <meta name="st:robots" content="follow, index">
     <% end %>
 
+    <% feeds.each do |feed| %>
+      <%= tag :link,
+        href: "/feeds/#{feed[:name]}",
+        title: feed[:title],
+        rel: "alternate",
+        type: "application/rss+xml" %>
+    <% end %>
+
     <%= stylesheet_link_tag "app", "autocomplete", "style" %>
     <%= javascript_include_tag "modernizr" %>
   </head>
