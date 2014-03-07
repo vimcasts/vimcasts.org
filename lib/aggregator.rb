@@ -15,9 +15,6 @@ module Middleman
         }
         tagged_articles.flatten.sort_by(&:date).reverse
       end
-      def transcript_for_episode(number)
-        "/transcripts/#{number}/en/"
-      end
     end
   end
   ::Middleman::Extensions.register(:aggregator, Aggregator)
