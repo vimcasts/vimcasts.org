@@ -22,4 +22,19 @@ $(document).ready(function() {
     var query = $(".swiftype-search-input", this).val();
     window.location = "/results#stq=" + query;
   });
+
+  $(".search-results .swiftype-search-input").val(extractSearchQuery);
+
+  if (location.pathname == "/results") {
+    $(window).hashchange(function() {
+      $(".search-results .swiftype-search-input").val(extractSearchQuery);
+    });
+  }
+
 });
+
+function extractSearchQuery() {
+  // Example location:
+  //   /results#stq=vim&stp=2
+  return location.hash.split('&')[0].split('=')[1];
+};
