@@ -201,7 +201,7 @@ languages.each do |lang|
   end
 end
 
-proxy "/episodes/archive.html", "/episodes-all.html"
+proxy "/episodes/archive.html", "/episodes-all.html", ignore: true
 
 # Generate data/categories.yml with `rake dump_categories`
 if data.has_key? :categories
