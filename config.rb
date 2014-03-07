@@ -125,6 +125,8 @@ end
 page "/episodes.json", layout: false
 page "sitemap.xml",    layout: false
 
+ignore 'bower_components/*'
+
 ###
 # Compass
 ###
