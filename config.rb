@@ -22,6 +22,7 @@ activate :blog do |blog|
   blog.year_template = "archive-by-year.html"
   blog.month_template = "archive-by-month.html"
   blog.taglink = "/categories/{tag}.html"
+  blog.summary_length = nil
 end
 
 activate :blog do |blog|
@@ -32,6 +33,7 @@ activate :blog do |blog|
   blog.summary_separator = /<p>READMORE<\/p>/
   blog.paginate = true
   blog.taglink = "/categories/{tag}.html"
+  blog.summary_length = nil
 end
 
 activate :blog do |blog|
@@ -43,6 +45,7 @@ activate :blog do |blog|
   blog.paginate = true
   blog.year_template = "archive-by-year.html"
   blog.month_template = "archive-by-month.html"
+  blog.summary_length = nil
 end
 
 set :feeds, [
