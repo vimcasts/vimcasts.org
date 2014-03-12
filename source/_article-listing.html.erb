@@ -41,14 +41,8 @@
 
 <%= article.summary %>
 
-<%# TODO: only show 'continue reading' link if there's more to read! %>
-<% link_to article do %>
-  <% if article.blog_options[:name] == "episodes" %>
-    Watch screencast
-  <% elsif article.blog_options[:name] == "blog" %>
-    Continue reading
-  <% end %>
+<% if readmore = continue?(article) %>
+  <%= link_to readmore, article %>
 <% end %>
-
 
 </section>

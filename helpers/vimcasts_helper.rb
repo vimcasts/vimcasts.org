@@ -50,4 +50,18 @@ module VimcastsHelper
     partial TemporalContent.get(name, now).partial_path
   end
 
+  def continue?(article)
+    return false unless has_extended_text?(article)
+    if article.blog_options[:name] == "episodes"
+      "Watch screencast"
+    else
+      "Continue reading"
+    end
+  end
+
+  def has_extended_text?(article)
+    File.readlines(article.source_file).any? do |line|
+      line.match /READMORE/
+    end
+  end
 end
