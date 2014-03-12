@@ -19,8 +19,8 @@ activate :blog do |blog|
   blog.permalink = "{year}/{month}/{title}.html"
   blog.summary_separator = /<p>READMORE<\/p>/
   blog.paginate = true
-  blog.year_template = "blog-archive-by-year.html"
-  blog.month_template = "blog-archive-by-month.html"
+  blog.year_template = "archive-by-year.html"
+  blog.month_template = "archive-by-month.html"
   blog.taglink = "/categories/{tag}.html"
 end
 
@@ -41,6 +41,8 @@ activate :blog do |blog|
   blog.permalink = "{year}/{month}/{title}.html"
   blog.summary_separator = /<p>READMORE<\/p>/
   blog.paginate = true
+  blog.year_template = "archive-by-year.html"
+  blog.month_template = "archive-by-month.html"
 end
 
 set :feeds, [

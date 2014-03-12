@@ -1,7 +1,10 @@
-<% content_for(:title, "Blog archive for #{Date::MONTHNAMES[month]} #{year}") %>
+<% content_for(:title) do %>
+  Archive for <%= "#{Date::MONTHNAMES[month]} #{year}" %>
+<% end %>
 
 <div class="row">
   <div class="small-12 columns">
+
     <h2><%= "#{Date::MONTHNAMES[month]} #{year}" %></h2>
 
     <ul>
