@@ -24,7 +24,7 @@
 
     <% (related + constant).sort_by { rand }.each do |related| %>
       <li>
-        <h4><%= link_to related.title, "/#{related.path}" %></h4>
+        <h4><%= link_to related.title, "#{related.path}" %></h4>
         <%= related.summary %>
       </li>
     <% end %>
