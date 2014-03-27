@@ -236,6 +236,8 @@ end
 # Uncomment next line to use Pry as a console
 # ready { binding.pry }
 
+# Layouts:
+page "/transcripts/*/en.html", layout: "transcript"
 ready do
   blog(:episodes).articles.each do |a|
     page a.path, layout: 'episode'
