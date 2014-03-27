@@ -1,6 +1,14 @@
 <% wrap_layout :layout do %>
   <div class="row">
     <div class="small-12 columns">
+
+      <% if episode = episode_from_transcript(current_page) %>
+        <h1><%= link_to episode.title, episode.url %></h1>
+        <h2>Transcript for episode #<%= episode.data.number %></h2>
+
+        <%= episode.summary %>
+      <% end %>
+
       <%= yield %>
     </div>
   </div>

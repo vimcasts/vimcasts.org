@@ -64,4 +64,10 @@ module VimcastsHelper
       line.match /READMORE/
     end
   end
+
+  def episode_from_transcript(page)
+    number = page.path.slice(/\d+/).to_i
+    blog(:episodes).articles.select { |a| a.data["number"] == number }.first
+  end
+
 end
