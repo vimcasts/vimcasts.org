@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -142,82 +143,71 @@
 
       
 
-      <p>Let's work through the same example we used in the previous lessons:</p>
-
-<pre><code>collection = getCollection();
+      <p>Let&rsquo;s work through the same example we used in the previous lessons:</p>
+<pre class="highlight plaintext">collection = getCollection();
 process(obstacleToBeRemoved, target);
 apply(obstacleToBeRemoved, target);
-</code></pre>
+</pre>
 
-<p>Once again, we'll replace <code>obstacleToBeRemoved</code> with the word <code>collection</code> by copying the word from the previous line and pasting where we need it.</p>
+<p>Once again, we&rsquo;ll replace <code>obstacleToBeRemoved</code> with the word <code>collection</code> by copying the word from the previous line and pasting where we need it.</p>
 
-<p><code>yiw</code> "wye-eye-doubleyou" copies the current word into the default register and the yank register:  </p>
-
-<pre><code>:reg "0
+<p><code>yiw</code> &ldquo;wye-eye-doubleyou&rdquo; copies the current word into the default register and the yank register:  </p>
+<pre class="highlight plaintext">:reg "0
 "" collection
 "0 collection
-</code></pre>
+</pre>
 
-<p>Now watch this: I'll use <code>viw</code> "vee-eye-doubleyou" to select the <code>obstacleToBeRemoved</code>. In Visual mode, the <code>p</code> command will get the text from default register and use it to overwrite the selection.</p>
+<p>Now watch this: I&rsquo;ll use <code>viw</code> &ldquo;vee-eye-doubleyou&rdquo; to select the <code>obstacleToBeRemoved</code>. In Visual mode, the <code>p</code> command will get the text from default register and use it to overwrite the selection.</p>
 
-<p>That's a pretty smooth workflow. In our previous attempts to solve this, we've always deleted the <code>obstacleToBeRemoved</code> before pasting its replacement. The visual mode put command combines both of these steps into one. Note that this command has a side-effect: the text that was originally selected is copied to the default register:</p>
-
-<pre><code>:reg "0
+<p>That&rsquo;s a pretty smooth workflow. In our previous attempts to solve this, we&rsquo;ve always deleted the <code>obstacleToBeRemoved</code> before pasting its replacement. The visual mode put command combines both of these steps into one. Note that this command has a side-effect: the text that was originally selected is copied to the default register:</p>
+<pre class="highlight plaintext">:reg "0
 "" obstacleToBeRemoved
 "0 collection
-</code></pre>
+</pre>
 
-<p>If we attempt to use the same technique to overwrite a second <code>obstacleToBeRemoved</code>, it doesn't work.</p>
+<p>If we attempt to use the same technique to overwrite a second <code>obstacleToBeRemoved</code>, it doesn&rsquo;t work.</p>
+<pre class="highlight plaintext">viwp
+</pre>
 
-<pre><code>viwp
-</code></pre>
+<p>That&rsquo;s because the <code>p</code> command gets its text from the default register, which now contains the word <code>obstacleToBeRemoved</code>. However, the yank register still contains the text that we want to use. We can get at it by prefixing the <code>p</code> command with the yank register:</p>
+<pre class="highlight plaintext">viw"0p
+</pre>
 
-<p>That's because the <code>p</code> command gets its text from the default register, which now contains the word <code>obstacleToBeRemoved</code>. However, the yank register still contains the text that we want to use. We can get at it by prefixing the <code>p</code> command with the yank register:</p>
-
-<pre><code>viw"0p
-</code></pre>
-
-<hr />
+<hr>
 
 <p>Think about it this way: when we use the <code>p</code> command in visual mode, the selected text and the default register swap places. That turns out to be quite handy if you want to swap the order of two items of text.</p>
 
 <p>Take this example:</p>
+<pre class="highlight plaintext">execute(second, first)
+</pre>
 
-<pre><code>execute(second, first)
-</code></pre>
+<p>We&rsquo;ll switch the two arguments to read: first then second.</p>
 
-<p>We'll switch the two arguments to read: first then second.</p>
-
-<p>To begin with, we'll yank the word <code>second</code>:</p>
-
-<pre><code>yiw
-</code></pre>
+<p>To begin with, we&rsquo;ll yank the word <code>second</code>:</p>
+<pre class="highlight plaintext">yiw
+</pre>
 
 <p>That writes the word <code>second</code> into the default and yank registers:</p>
-
-<pre><code>:reg "0
+<pre class="highlight plaintext">:reg "0
 "" second
 "0 second
-</code></pre>
+</pre>
 
-<p>Then we'll select the word <code>first</code> and use <code>p</code> to overwrite it with the text from the default register.</p>
-
-<pre><code>viwp
-</code></pre>
+<p>Then we&rsquo;ll select the word <code>first</code> and use <code>p</code> to overwrite it with the text from the default register.</p>
+<pre class="highlight plaintext">viwp
+</pre>
 
 <p>In addition to changing the document, that command writes the word <code>first</code> into the default register:</p>
-
-<pre><code>:reg "0
+<pre class="highlight plaintext">:reg "0
 "" first
 "0 second
-</code></pre>
+</pre>
 
-<p>Quick tip: we can use <code>#</code> "hash" key to search backwards for the word under the cursor, which gets us back to the first argument. Select the word, and paste:</p>
+<p>Quick tip: we can use <code>#</code> &ldquo;hash&rdquo; key to search backwards for the word under the cursor, which gets us back to the first argument. Select the word, and paste:</p>
+<pre class="highlight plaintext">viwp
+</pre>
 
-<pre><code>viwp
-</code></pre>
-
-<p>That overwrites the selection with the contents of the default register. The end result is that we've swapped the order of the two arguments. That's pretty nifty!</p>
+<p>That overwrites the selection with the contents of the default register. The end result is that we&rsquo;ve swapped the order of the two arguments. That&rsquo;s pretty nifty!</p>
 
     </div>
   </div>

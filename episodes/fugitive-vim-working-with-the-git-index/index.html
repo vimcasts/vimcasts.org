@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -187,9 +188,9 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>The fugitive plugin provides an interactive status window, where you can easily stage and review your changes for the next commit. The <code>:Gdiff</code> command visualizes the changes made to a file, by comparing the working copy with the index. In this episode, we'll learn how to stage hunks of changes to the index without using the <code>git add --patch</code> command.</p>
+        <p>The fugitive plugin provides an interactive status window, where you can easily stage and review your changes for the next commit. The <code>:Gdiff</code> command visualizes the changes made to a file, by comparing the working copy with the index. In this episode, we&rsquo;ll learn how to stage hunks of changes to the index without using the <code>git add --patch</code> command.</p>
 
-<p><em>This is the second of a five part series on fugitive.vim. In the next episode, we'll learn how to resolve a git merge conflict by performing a 3-way vimdiff.</em></p>
+<p><em>This is the second of a five part series on fugitive.vim. In the next episode, we&rsquo;ll learn how to resolve a git merge conflict by performing a 3-way vimdiff.</em></p>
 
 
       </div>
@@ -228,7 +229,7 @@
         <div id="shownotes" class="content" data-swiftype-index="true">
           
 
-<h3 id="the-gstatus-window">The Gstatus window</h3>
+<h3>The Gstatus window</h3>
 
 <p>The <code>:Gstatus</code> command opens a status window. The contents closely resemble the output from running <code>git status</code> in the shell, but fugitive makes the window interactive. You can jump directly between files with <code>ctrl-n</code> and <code>ctrl-p</code>.</p>
 
@@ -247,7 +248,7 @@
   </tr>
   <tr>
     <td><code>p</code></td>
-    <td>run `git add --patch` for current file</td>
+    <td>run `git add &ndash;patch` for current file</td>
   </tr>
   <tr>
     <td><code>C</code></td>
@@ -255,35 +256,32 @@
   </tr>
 </table>
 
-<h3 id="working-with-the-git-index">Working with the git index</h3>
+<h3>Working with the git index</h3>
 
 <p>The git index is where you put changes that you want to be included in the next commit. If you are used to working with the command line git client, you might think of the index as an abstract concept. But with fugitive, you can actually read the index version of a file into a buffer by running:</p>
-
-<pre><code>:Gedit :path/to/file
-</code></pre>
+<pre class="highlight plaintext">:Gedit :path/to/file
+</pre>
 
 <p>If you run <code>:Gedit</code> with no arguments from a working tree file, it will open the index version of that file. 
 You can always open the index version of the current file by running any one of the following:</p>
-
-<pre><code>:Gedit
+<pre class="highlight plaintext">:Gedit
 :Gedit :0
 :Gedit :%
-</code></pre>
+</pre>
 
 <p>It helps to understand the lifecycle of the index file between two commits. To begin with, the contents of the index and working copy files will be exactly the same as the most recent commit. As you make changes to your working copy, its contents begin to diverge from those of the index file. Staging a file updates the contents of the index file to match those of the working copy. When you commit your work, it is the contents of the index file that are saved with that commit object.</p>
 
 <p><img alt="Index Lifecycle" src="/images/blog/index-lifecycle.png" /></p>
 
-<h3 id="comparing-working-copy-with-index-version-using-gdiff">Comparing working copy with index version using <code>:Gdiff</code></h3>
+<h3>Comparing working copy with index version using <code>:Gdiff</code></h3>
 
 <p>When you run:</p>
-
-<pre><code>:Gdiff
-</code></pre>
+<pre class="highlight plaintext">:Gdiff
+</pre>
 
 <p>on a work tree file without any arguments, fugitive performs a vimdiff against the index version of the file. This opens a vertical split window, with the index file on the left and the working copy on the right. The files always appear in that order, so you can commit that to memory.</p>
 
-<h3 id="wholesale-reconciliation">Wholesale reconciliation</h3>
+<h3>Wholesale reconciliation</h3>
 
 <p>The <code>:Gread</code> and <code>:Gwrite</code> commands can either add a file to the index or reset the file, depending on where they are called from. The following table and diagrams summarize the possibilities:</p>
 
@@ -317,9 +315,9 @@ You can always open the index version of the current file by running any one of 
 
 <p><img alt="Gread Gwrite Matrix" src="/images/blog/Gread-Gwrite-matrix.png" /></p>
 
-<h3 id="piecemeal-reconciliation">Piecemeal reconciliation</h3>
+<h3>Piecemeal reconciliation</h3>
 
-<p>Vim's built in <code>:diffget</code> and <code>:diffput</code> commands work a bit like <code>:Gread</code> and <code>:Gwrite</code>, except that they are more granular. Whereas <code>:Gread</code> will completely overwrite the current buffer with the contents of the other buffer, <code>:diffget</code> will only pull in a patch at a time.</p>
+<p>Vim&rsquo;s built in <code>:diffget</code> and <code>:diffput</code> commands work a bit like <code>:Gread</code> and <code>:Gwrite</code>, except that they are more granular. Whereas <code>:Gread</code> will completely overwrite the current buffer with the contents of the other buffer, <code>:diffget</code> will only pull in a patch at a time.</p>
 
 <table>
 <tr>
@@ -351,17 +349,16 @@ You can always open the index version of the current file by running any one of 
 
 <p><img alt="Diffget Diffput Matrix" src="/images/blog/diffget-diffput-matrix.png" /></p>
 
-<h3 id="further-reading">Further reading</h3>
+<h3>Further reading</h3>
 
 <ul>
-  <li><a href="http://book.git-scm.com/1_the_git_index.html">the git index</a> (<a href="http://book.git-scm.com/7_the_git_index.html">more</a>)</li>
-  <li><a href="http://ethanschoonover.com/solarized">solarized colorscheme</a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#:diffget"><code>:help :diffget</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#:diffput"><code>:help :diffput</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#do"><code>:help do</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#dp"><code>:help dp</code></a></li>
+<li><a href="http://book.git-scm.com/1_the_git_index.html">the git index</a> (<a href="http://book.git-scm.com/7_the_git_index.html">more</a>)</li>
+<li><a href="http://ethanschoonover.com/solarized">solarized colorscheme</a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#:diffget"><code>:help :diffget</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#:diffput"><code>:help :diffput</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#do"><code>:help do</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#dp"><code>:help dp</code></a></li>
 </ul>
-
 
         </div>
         </dd>
@@ -406,8 +403,12 @@ You can always open the index version of the current file by running any one of 
 
     
       <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+        <h4><a href="/episodes/fugitive-vim-browsing-the-git-object-database/">Fugitive.vim - browsing the git object database</a></h4>
+        <p>With the fugitive plugin, you&rsquo;re not limited to just working with files in your working tree. The <code>:Gedit</code> command allows you to open files in other branches, and to browse any <a href="http://book.git-scm.com/1_the_git_object_model.html">git object</a>, including tags, commits and trees. Plus, if your repository is hosted on github, you can easily bring up the webpage for any git object using the <code>:Gbrowse</code> command.</p>
+
+<p><em>This is the penultimate of a five part series on fugitive.vim.</em></p>
+
+
       </li>
     
       <li>
@@ -416,13 +417,8 @@ You can always open the index version of the current file by running any one of 
       </li>
     
       <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
-      </li>
-    
-      <li>
         <h4><a href="/episodes/fugitive-vim---a-complement-to-command-line-git/">Fugitive.vim - a complement to command line git</a></h4>
-        <p><a href="https://github.com/tpope/vim-fugitive">The fugitive plugin</a>, by Tim Pope, is a git wrapper for Vim. It  complements the command line interface to git, but doesn't aim to replace it. In this episode, we'll see how some of fugitive's commands can streamline your workflow.</p>
+        <p><a href="https://github.com/tpope/vim-fugitive">The fugitive plugin</a>, by Tim Pope, is a git wrapper for Vim. It  complements the command line interface to git, but doesn&rsquo;t aim to replace it. In this episode, we&rsquo;ll see how some of fugitive&rsquo;s commands can streamline your workflow.</p>
 
 <p><em>This is the first of a five part series on fugitive.</em></p>
 
@@ -430,8 +426,13 @@ You can always open the index version of the current file by running any one of 
       </li>
     
       <li>
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+      </li>
+    
+      <li>
         <h4><a href="/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/">Fugitive.vim - resolving merge conflicts with vimdiff</a></h4>
-        <p>When git branches are merged, there is always the chance of a conflict arising if a file was modified in both the target and merge branches. You can resolve merge conflicts using a combination of fugitive's <code>:Gdiff</code> command, and Vim's built in <code>diffget</code> and <code>diffput</code>. In this episode, we'll find out how.</p>
+        <p>When git branches are merged, there is always the chance of a conflict arising if a file was modified in both the target and merge branches. You can resolve merge conflicts using a combination of fugitive&rsquo;s <code>:Gdiff</code> command, and Vim&rsquo;s built in <code>diffget</code> and <code>diffput</code>. In this episode, we&rsquo;ll find out how.</p>
 
 <p><em>This is the third in a five part series on fugitive.vim.</em></p>
 
@@ -439,12 +440,8 @@ You can always open the index version of the current file by running any one of 
       </li>
     
       <li>
-        <h4><a href="/episodes/fugitive-vim-browsing-the-git-object-database/">Fugitive.vim - browsing the git object database</a></h4>
-        <p>With the fugitive plugin, you're not limited to just working with files in your working tree. The <code>:Gedit</code> command allows you to open files in other branches, and to browse any <a href="http://book.git-scm.com/1_the_git_object_model.html">git object</a>, including tags, commits and trees. Plus, if your repository is hosted on github, you can easily bring up the webpage for any git object using the <code>:Gbrowse</code> command.</p>
-
-<p><em>This is the penultimate of a five part series on fugitive.vim.</em></p>
-
-
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
 

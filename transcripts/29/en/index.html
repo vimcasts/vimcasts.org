@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -144,27 +145,25 @@
 
       <p>There are a couple of plugins for Vim that make it easy to align text. There is the <a href="http://www.vim.org/scripts/script.php?script_id=294">Align.vim</a> plugin by Charles Campbell, and then there is <a href="https://github.com/godlygeek/tabular">Tabular.vim</a> by Matt Wozniski. They differ slightly in their patterns of use, but both achieve a similar result. In this episode, I will demonstrate how to use Tabular.vim.</p>
 
-<h1 id="aligning-assignments">Aligning assignments</h1>
+<h1>Aligning assignments</h1>
 
-<p>Here's a fairly typical example where I have assignments on multiple lines. I want to line them up so that the equals sign is positioned in the same column on each line.</p>
+<p>Here&rsquo;s a fairly typical example where I have assignments on multiple lines. I want to line them up so that the equals sign is positioned in the same column on each line.</p>
 
-<p>The Tabular plugin provides a command called <code>Tabularize</code>, which accepts a regular expression as an argument. If I begin by enabling visual line mode and selecting a range, then when I press the colon key and call <code>Tabularize</code> it will act only on the selected lines. In this case, the pattern that I want to align is simply an equals sign, so I pass the argument <code>/=</code> 'slash equals'.</p>
-
-<pre><code>one = 1
+<p>The Tabular plugin provides a command called <code>Tabularize</code>, which accepts a regular expression as an argument. If I begin by enabling visual line mode and selecting a range, then when I press the colon key and call <code>Tabularize</code> it will act only on the selected lines. In this case, the pattern that I want to align is simply an equals sign, so I pass the argument <code>/=</code> &lsquo;slash equals&rsquo;.</p>
+<pre class="highlight plaintext">one = 1
 two = 2
 three = 3
 four = 4
-</code></pre>
+</pre>
 
 <p>And when I hit enter, the range is modified so that the equals signs all line up vertically.</p>
 
-<h3 id="range-detection">Range detection</h3>
+<h3>Range detection</h3>
 
 <p>In this example, I manually highlighted the lines that I wanted to act upon, but the tabularize command is actually pretty smart about ranges. If I undo that last edit, then run the tabularize command again, but this time without specifying a range, it actually achieves the same result. When activated from normal mode, the command searches up and down from the current line, automatically creating a range from all of the lines that match the specified pattern.</p>
 
 <p>There are times when the automatic range detection can be fooled.</p>
-
-<pre><code>var video = {
+<pre class="highlight plaintext">var video = {
     metadata: {
         title: "Aligning assignments"
         h264Src: "/media/alignment.mov",
@@ -173,36 +172,32 @@ four = 4
         duration: 320,
     }
 }
-</code></pre>
+</pre>
 
 <p>In this javascript example, I want to align the colon characters. Watch what happens if when I invoke <code>Tabularize</code> without specifying a range:</p>
+<pre class="highlight plaintext">:Tab/:
+</pre>
 
-<pre><code>:Tab/:
-</code></pre>
-
-<p>This is not the effect that I was looking for. I only want the colons to line up inside of the metadata object, leaving this line untouched. I'll just undo that change, and this time I'll make a visual selection to explicitly specify the range. Note that the selection can be made rapidly using the <code>vi}</code> text object. And this time, when I run:</p>
-
-<pre><code>:'[,']Tab/:
-</code></pre>
+<p>This is not the effect that I was looking for. I only want the colons to line up inside of the metadata object, leaving this line untouched. I&rsquo;ll just undo that change, and this time I&rsquo;ll make a visual selection to explicitly specify the range. Note that the selection can be made rapidly using the <code>vi}</code> text object. And this time, when I run:</p>
+<pre class="highlight plaintext">:'[,']Tab/:
+</pre>
 
 <p>it achieves the desired effect.</p>
 
-<h1 id="the-zs-atom">The <code>\zs</code> atom</h1>
+<h1>The <code>\zs</code> atom</h1>
 
-<p>Here, I've aligned the colon characters in a column, just as I did previously using the equals sign. This is valid JavaScript, but there is another way that we could have aligned the properties, which some people might prefer. This style keeps the colon next to the identifier and uses spaces to pad the assigned values so that they all line up.</p>
+<p>Here, I&rsquo;ve aligned the colon characters in a column, just as I did previously using the equals sign. This is valid JavaScript, but there is another way that we could have aligned the properties, which some people might prefer. This style keeps the colon next to the identifier and uses spaces to pad the assigned values so that they all line up.</p>
 
-<p>We can create this effect by modifing the regular expression to use the <code>\zs</code> 'backslash-z-s' atom. This is particular to Vim's regular expression engine, but if you are familiar with the positive-lookbehind assertion, then you might recognise the effect it has. In practice, it means that the first character after the colon is used as the alignment delimiter. In this case, the first character after the colon is a space. </p>
-
-<pre><code>:Tab/:\zs
-</code></pre>
+<p>We can create this effect by modifing the regular expression to use the <code>\zs</code> &lsquo;backslash-z-s&rsquo; atom. This is particular to Vim&rsquo;s regular expression engine, but if you are familiar with the positive-lookbehind assertion, then you might recognise the effect it has. In practice, it means that the first character after the colon is used as the alignment delimiter. In this case, the first character after the colon is a space. </p>
+<pre class="highlight plaintext">:Tab/:\zs
+</pre>
 
 <p>By passing this pattern to the <code>:Tabularize</code> command, the assignements are aligned while leaving the colons together with the identifiers.</p>
 
-<h1 id="aligning-multiple-tokens">Aligning multiple tokens</h1>
+<h1>Aligning multiple tokens</h1>
 
 <p>Lets take a slightly more complex example now.</p>
-
-<pre><code>Scenario Outline: eating
+<pre class="highlight plaintext">Scenario Outline: eating
   Given there are &lt;start&gt; cucumbers
   When I eat &lt;eat&gt; cucumbers
   Then I should have &lt;left&gt; cucumbers
@@ -211,25 +206,22 @@ four = 4
     |start|eat|left|
     |12|5|7|
     |20|5|15|
-</code></pre>
+</pre>
 
 <p>This is a scenario outline for cucumber steps. I would like to pad each cell of the table with whitespace to match the widest item in the same column. Even though this example requires alignment of multiple tokens per line, the interface for the Tabularize command is just the same as before. I only need to change the pattern to use a pipe symbol:</p>
-
-<pre><code>:Tab/|
-</code></pre>
+<pre class="highlight plaintext">:Tab/|
+</pre>
 
 <p>If you find yourself using a particular pattern with the <code>:Tabular</code> command often, you might want to save yourself a few keystrokes by creating normal and visual mode mappings. </p>
-
-<pre><code>if exists(":Tabularize")
+<pre class="highlight plaintext">if exists(":Tabularize")
   nmap &lt;Leader&gt;a= :Tabularize /=&lt;CR&gt;
   vmap &lt;Leader&gt;a= :Tabularize /=&lt;CR&gt;
   nmap &lt;Leader&gt;a: :Tabularize /:\zs&lt;CR&gt;
   vmap &lt;Leader&gt;a: :Tabularize /:\zs&lt;CR&gt;
 endif
-</code></pre>
+</pre>
 
-<p>Or you could take it a step further, by creating an insert mode mapping which triggers the <code>:Tabular</code> command when you type the character that you want to align. Tim Pope shows us how in this <a href="https://gist.github.com/287147">gist</a>, which calls tabularize each time a pipe character is inserted. If I copy this into my .vimrc file and reload it, then you'll see that my cucumber table is automatically realigned as I create it. Pretty neat!</p>
-
+<p>Or you could take it a step further, by creating an insert mode mapping which triggers the <code>:Tabular</code> command when you type the character that you want to align. Tim Pope shows us how in this <a href="https://gist.github.com/287147">gist</a>, which calls tabularize each time a pipe character is inserted. If I copy this into my .vimrc file and reload it, then you&rsquo;ll see that my cucumber table is automatically realigned as I create it. Pretty neat!</p>
 
     </div>
   </div>

@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -130,184 +131,169 @@
           </div>
         </div>
 
-        <h2 id="using-markers-for-folding">Using markers for folding</h2>
+        <h2>Using markers for folding</h2>
 
-<p>Here's an excerpt from a <code>vimrc</code> file. The comments hint at some kind of structure: we have a section where preferences are set, and another where custom mappings are defined. Let's add some fold markers to describe this heirarchy.</p>
+<p>Here&rsquo;s an excerpt from a <code>vimrc</code> file. The comments hint at some kind of structure: we have a section where preferences are set, and another where custom mappings are defined. Let&rsquo;s add some fold markers to describe this heirarchy.</p>
 
-<p>Before we begin, I'm going to set the <code>foldcolumn</code> option to three:</p>
+<p>Before we begin, I&rsquo;m going to set the <code>foldcolumn</code> option to three:</p>
+<pre class="highlight plaintext">set foldcolumn=3
+</pre>
 
-<pre><code>set foldcolumn=3
-</code></pre>
+<p>Pay attention to the gutter containing the line numbers. When I apply this setting, the gutter becomes wider by three columns. There&rsquo;s nothing to see there yet, but we&rsquo;ll soon change that.</p>
 
-<p>Pay attention to the gutter containing the line numbers. When I apply this setting, the gutter becomes wider by three columns. There's nothing to see there yet, but we'll soon change that.</p>
-
-<p>Next, we're going to set the <code>foldmethod</code> option to <code>marker</code>:</p>
-
-<pre><code>set foldmethod=marker
-</code></pre>
+<p>Next, we&rsquo;re going to set the <code>foldmethod</code> option to <code>marker</code>:</p>
+<pre class="highlight plaintext">set foldmethod=marker
+</pre>
 
 <p>We still have no visible changes, but now we can insert markers into the document that instruct Vim to start and end folds.</p>
 
-<p>Let's try it. The default syntax for starting a fold is three consecutive opening curly braces. I'll insert them here, to create a fold for the last section. The foldcolumn in the gutter indicates that something has happened, and if I press <code>za</code> I can toggle this new fold closed and open.</p>
+<p>Let&rsquo;s try it. The default syntax for starting a fold is three consecutive opening curly braces. I&rsquo;ll insert them here, to create a fold for the last section. The foldcolumn in the gutter indicates that something has happened, and if I press <code>za</code> I can toggle this new fold closed and open.</p>
 
-<p>Now let's try inserting the same marker to create a fold for the top section. If we close this new fold, it collapses everything up to the end of the file. Looking at the notation in the foldcolumn, it appears that our new fold <em>contains</em> the one below it.</p>
+<p>Now let&rsquo;s try inserting the same marker to create a fold for the top section. If we close this new fold, it collapses everything up to the end of the file. Looking at the notation in the foldcolumn, it appears that our new fold <em>contains</em> the one below it.</p>
 
 <p>By the way, this notation illustrates the <code>foldlevel</code> of each line by the number of pipe symbols. A dash symbol indicates where a fold begins.</p>
 
-<p>That's not the effect I'm looking for. I'd prefer to have these two sections as siblings: equals in the document heirarchy. There are a couple of ways that we could do this.</p>
+<p>That&rsquo;s not the effect I&rsquo;m looking for. I&rsquo;d prefer to have these two sections as siblings: equals in the document heirarchy. There are a couple of ways that we could do this.</p>
 
 <p>We could manually close the first fold, by inserting three consecutive closing curly braces. Looking at the foldcolumn, you can see the effect of this immediately, but I can also demonstrate by pressing <code>zM</code> to close all folds. The two sections now sit alongside one another.</p>
 
-<p>This produces the desired effect, but I don't relish the idea of having to manage closing markers as well as opening markers. Let's revert that change. An alternative approach is to explicitly specify the foldlevel when you create a fold, by appending a digit.</p>
+<p>This produces the desired effect, but I don&rsquo;t relish the idea of having to manage closing markers as well as opening markers. Let&rsquo;s revert that change. An alternative approach is to explicitly specify the foldlevel when you create a fold, by appending a digit.</p>
 
 <p>When we explicitly create a new level-one fold, Vim automatically closes any level one folds that were already open. This also produces the desired effect.</p>
 
-<p>When the <code>{{{</code> (opening marker) is given without a digit, it simply instructs Vim to add one to the current foldlevel. In this case, the document starts of with <code>foldlevel=0</code>, so this opening marker works fine. Let's make that one explicit too.</p>
+<p>When the <code>{{{</code> (opening marker) is given without a digit, it simply instructs Vim to add one to the current foldlevel. In this case, the document starts of with <code>foldlevel=0</code>, so this opening marker works fine. Let&rsquo;s make that one explicit too.</p>
 
 <p>Next, we can add more structure to our document by adding a level two fold marker to delimit these subsections. Keep an eye on the foldcolumn as I add each of these markers.</p>
 
 <p>Now if I collapse all the folds with <code>zM</code>, I can drill down one fold at a time.</p>
 
-<p>If I close Vim and launch again with the same file, the folding behaviour appears to have gone away. That's because Vim's default <code>foldmethod</code> is <code>manual</code>. </p>
-
-<pre><code>:set foldmethod?
+<p>If I close Vim and launch again with the same file, the folding behaviour appears to have gone away. That&rsquo;s because Vim&rsquo;s default <code>foldmethod</code> is <code>manual</code>. </p>
+<pre class="highlight plaintext">:set foldmethod?
 manual
-</code></pre>
+</pre>
 
 <p>We can use a modeline to tell Vim that we always want to use the marker foldmethod with this file. </p>
-
-<pre><code>" vim: nowrap fdm=marker
-</code></pre>
+<pre class="highlight plaintext">" vim: nowrap fdm=marker
+</pre>
 
 <p>Now if I quit Vim, and reopen it with the same file, the folding kicks in as it did before.</p>
 
-<p>In general, I don't encourage using modelines and foldmarkers, because I believe that source code should leave no clues as to which text editor was used in its creation. But Vimscript files are one of the few places where these techniques are admissable. It's safe to assume that anyone interested in the contents of a Vimscript file is probably using Vim anyway.</p>
+<p>In general, I don&rsquo;t encourage using modelines and foldmarkers, because I believe that source code should leave no clues as to which text editor was used in its creation. But Vimscript files are one of the few places where these techniques are admissable. It&rsquo;s safe to assume that anyone interested in the contents of a Vimscript file is probably using Vim anyway.</p>
 
 <p>Duration: 4:20</p>
 
-<h2 id="using-markers-with-markdown-not-recommended">Using markers with Markdown (not recommended)</h2>
+<h2>Using markers with Markdown (not recommended)</h2>
 
-<p>I have a markdown file here, and I'd like to be able to fold it so that I can navigate its sections more easily. I could apply the exact same technique as we used for the vimrc file, by setting the foldmethod to marker:</p>
-
-<pre><code>:set foldcolumn=3
+<p>I have a markdown file here, and I&rsquo;d like to be able to fold it so that I can navigate its sections more easily. I could apply the exact same technique as we used for the vimrc file, by setting the foldmethod to marker:</p>
+<pre class="highlight plaintext">:set foldcolumn=3
 :set foldmethod=marker
-</code></pre>
+</pre>
 
 <p>Then adding markers for the level one and level two headings:</p>
+<pre class="highlight plaintext">    :g/^#/normal A {{{1
+</pre>
 
-<pre><code>	:g/^#/normal A {{{1
-</code></pre>
+<p>Here I&rsquo;m using the <code>:global</code> command to append a level-one marker at the end of every line that begins with a hash symbol.</p>
 
-<p>Here I'm using the <code>:global</code> command to append a level-one marker at the end of every line that begins with a hash symbol.</p>
+<p>Now we can fold away all of the sections, leaving only an outline of headings. That&rsquo;s useful, but you don&rsquo;t really want to litter your markdown files with these markers. After all, if this document was compiled to HTML, the markers would end up in the output.</p>
 
-<p>Now we can fold away all of the sections, leaving only an outline of headings. That's useful, but you don't really want to litter your markdown files with these markers. After all, if this document was compiled to HTML, the markers would end up in the output.</p>
+<p>But if we look at the structure of this document, it&rsquo;s easy to describe the pattern that we want the folds to trace: for each line that begins with a hash symbol, create a new fold. Now let&rsquo;s write an expression that makes this happen.</p>
 
-<p>But if we look at the structure of this document, it's easy to describe the pattern that we want the folds to trace: for each line that begins with a hash symbol, create a new fold. Now let's write an expression that makes this happen.</p>
+<h2>Creating a script to define foldexpr</h2>
 
-<h2 id="creating-a-script-to-define-foldexpr">Creating a script to define foldexpr</h2>
-
-<p>We want to apply our expression to markdown files, so we'll create a file with the path:</p>
-
-<pre><code>:e ~/.vim/after/ftplugin/markdown/folding.vim
-</code></pre>
+<p>We want to apply our expression to markdown files, so we&rsquo;ll create a file with the path:</p>
+<pre class="highlight plaintext">:e ~/.vim/after/ftplugin/markdown/folding.vim
+</pre>
 
 <p>This file will be sourced automatically each time we open or create a markdown file.</p>
 
-<h2 id="the-mechanics-of-a-fold-expression">The mechanics of a fold expression</h2>
+<h2>The mechanics of a fold expression</h2>
 
-<p>We'll start off with a little boilerplate code, which instructs Vim to use a custom expression to generate the folds for a document.</p>
-
-<pre><code>function! MarkdownFolds()
+<p>We&rsquo;ll start off with a little boilerplate code, which instructs Vim to use a custom expression to generate the folds for a document.</p>
+<pre class="highlight plaintext">function! MarkdownFolds()
   return "0"
 endfunction
 setlocal foldmethod=expr
 setlocal foldexpr=MarkdownFolds()
-</code></pre>
+</pre>
 
-<p>Let's save this buffer, then switch back to the markdown file. I'm going to call <code>:edit!</code>, which reverts my unsaved changes (removing the markers), and sources the folding script. Now the foldmethod is set to <code>expr</code>, and the foldexpression is set to our custom function.</p>
-
-<pre><code>:set foldmethod?
+<p>Let&rsquo;s save this buffer, then switch back to the markdown file. I&rsquo;m going to call <code>:edit!</code>, which reverts my unsaved changes (removing the markers), and sources the folding script. Now the foldmethod is set to <code>expr</code>, and the foldexpression is set to our custom function.</p>
+<pre class="highlight plaintext">:set foldmethod?
 expr
 :set foldexpr?
 MarkdownFold()
-</code></pre>
+</pre>
 
-<p>This is how it works: the <code>MarkdownFolds()</code> function is called one time <em>for each line</em> in the document. If the function returns zero, it indicates that the line is not part of a fold. If the function returns one, it indicates that the line has a fold level of one. Let's change this function so that it always returns one, and see what happens…</p>
+<p>This is how it works: the <code>MarkdownFolds()</code> function is called one time <em>for each line</em> in the document. If the function returns zero, it indicates that the line is not part of a fold. If the function returns one, it indicates that the line has a fold level of one. Let&rsquo;s change this function so that it always returns one, and see what happens&hellip;</p>
 
-<p>I'll run the <code>:edit</code> command with no arguments to reload the current buffer, and that should apply the updated fold expression. Now every line in the file reports that it has foldlevel equal to one, so we get one giant fold. That's not very useful, but we're making progress.</p>
+<p>I&rsquo;ll run the <code>:edit</code> command with no arguments to reload the current buffer, and that should apply the updated fold expression. Now every line in the file reports that it has foldlevel equal to one, so we get one giant fold. That&rsquo;s not very useful, but we&rsquo;re making progress.</p>
 
-<h2 id="a-foldexpression-for-flat-folds">A foldexpression for flat folds</h2>
+<h2>A foldexpression for flat folds</h2>
 
 <p>What we really want is to <em>open a new</em> level-one fold for each line that begins with a hash symbol, and to do that, we need to examine the contents of each line.</p>
 
 <p>We can get the contents of the current line by calling the <code>getline()</code> function, and passing it the <code>v:lnum</code> variable. This is a special read-only variable that Vim predefines for us when calling a foldexpression function.</p>
-
-<pre><code>let thisline = getline(v:lnum)
-</code></pre>
+<pre class="highlight plaintext">let thisline = getline(v:lnum)
+</pre>
 
 <p>Now we can simply check whether <code>thisline</code> matches against a regular expression:</p>
-
-<pre><code>if match(thisline, '^#') &gt;= 0
+<pre class="highlight plaintext">if match(thisline, '^#') &gt;= 0
   return "&gt;1"
 endif
 return "1"
-</code></pre>
+</pre>
 
 <p>If we return one, it tells Vim that thisline has a foldlevel of one. But if we return greater-than-one, it tells Vim that thisline <em>starts</em> a level-one fold. As we saw before, when a levelone fold begins, Vim automatically closes any folds that came before it.</p>
 
 <p>The equals sign has a special meaning in this context: it tells Vim that thisline should have the same foldlevel as its predecessor.</p>
-
-<pre><code>if match(thisline, '^#') &gt;= 0
+<pre class="highlight plaintext">if match(thisline, '^#') &gt;= 0
   return "&gt;1"
 else
   return "="
 endif
-</code></pre>
+</pre>
 
-<p>Let's save that foldexpression, and reload our markdown file. How about that? Each header line creates a new level-one fold. The result is just the same as when we used markers, except we haven't had to pepper the document with unwanted symbols.</p>
+<p>Let&rsquo;s save that foldexpression, and reload our markdown file. How about that? Each header line creates a new level-one fold. The result is just the same as when we used markers, except we haven&rsquo;t had to pepper the document with unwanted symbols.</p>
 
-<h2 id="a-foldexpression-for-nested-folds">A foldexpression for nested folds</h2>
+<h2>A foldexpression for nested folds</h2>
 
 <p>With the document completely folded, we get an overview that resembles a table of contents. It shows all h1 and h2 titles, and it would show h3s and beyond if this document contained them.</p>
 
-<p>There's an implicit heirarchy in this outline. Let's change our fold expression so that it tests first to see if a line begins with two hashes. In that case, it starts a level-two fold.</p>
-
-<pre><code>if match(thisline, '^##') &gt;= 0
+<p>There&rsquo;s an implicit heirarchy in this outline. Let&rsquo;s change our fold expression so that it tests first to see if a line begins with two hashes. In that case, it starts a level-two fold.</p>
+<pre class="highlight plaintext">if match(thisline, '^##') &gt;= 0
   return "&gt;2"
 elseif match(thisline, '^#') &gt;= 0
   return "&gt;1"
 else
   return "="
 endif
-</code></pre>
+</pre>
 
 <p>When we re-load our markdown document, the folding structure reflects the heirarchy of the document: with h2 sections nested beneath h1s.</p>
 
-<h2 id="setting-the-foldtext"> Setting the foldtext</h2>
+<h2> Setting the foldtext</h2>
 
 <p>For each of these folds, Vim shows the text of the first line, and the number of lines that have been hidden. We can customize this by defining a second function, then assigning it to the <code>foldtext</code> option:</p>
-
-<pre><code>function! s:MarkdownFoldText()
+<pre class="highlight plaintext">function! s:MarkdownFoldText()
   return getline(v:foldstart)
 endfunction
 setlocal foldtext='MarkdownFoldText()'
-</code></pre>
+</pre>
 
 <p>We can get the line numbers of the first and last lines for the current fold from two read-only variables: <code>v:foldstart</code> and <code>v:foldend</code>. We could use these, for example, to calculate the number of lines that the fold contains. Then we could include that in the foldtext.</p>
-
-<pre><code>function! s:MarkdownFoldText()
+<pre class="highlight plaintext">function! s:MarkdownFoldText()
   let foldsize = (v:foldend-v:foldstart)
   return getline(v:foldstart).' ('.foldsize.' lines)'
 endfunction
-</code></pre>
+</pre>
 
-<p>Let's switch to the markdown file and reload the folding plugin… and there we go: our custom foldtext has been applied.</p>
+<p>Let&rsquo;s switch to the markdown file and reload the folding plugin&hellip; and there we go: our custom foldtext has been applied.</p>
 
-<h2 id="markdown-folding-plugin">Markdown-folding plugin</h2>
+<h2>Markdown-folding plugin</h2>
 
-<p>I've written a plugin that encapsulates the ideas demonstrated in this tutorial. It supports both the flat and nested folding styles, with a toggle command that lets you easily switch between them. Also, it recognises both of Markdown's heading styles: with hashes or an underline.</p>
+<p>I&rsquo;ve written a plugin that encapsulates the ideas demonstrated in this tutorial. It supports both the flat and nested folding styles, with a toggle command that lets you easily switch between them. Also, it recognises both of Markdown&rsquo;s heading styles: with hashes or an underline.</p>
 
-<p>I hope that this tutorial has demonstrated that it's pretty easy to create a custom folding expression. If you often work with a language or library that doesn't have folding support baked in to Vim, I encourage you to try writing a folding expression of your own.</p>
+<p>I hope that this tutorial has demonstrated that it&rsquo;s pretty easy to create a custom folding expression. If you often work with a language or library that doesn&rsquo;t have folding support baked in to Vim, I encourage you to try writing a folding expression of your own.</p>
 
 
       </section>

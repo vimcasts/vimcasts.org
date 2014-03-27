@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -177,11 +178,11 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>Ever since learning about Vim's <a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#text-objects">text-objects</a> I have wished that there was a way of selecting blocks in ruby code. Well, now there is. Today I am releasing a plugin that creates <a href="http://www.vim.org/scripts/script.php?script_id=3382">a custom text object for selecting ruby blocks</a>. Merry Christmas!</p>
+        <p>Ever since learning about Vim&rsquo;s <a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#text-objects">text-objects</a> I have wished that there was a way of selecting blocks in ruby code. Well, now there is. Today I am releasing a plugin that creates <a href="http://www.vim.org/scripts/script.php?script_id=3382">a custom text object for selecting ruby blocks</a>. Merry Christmas!</p>
 
 
 
-<h3 id="usage">Usage</h3>
+<h3>Usage</h3>
 
 <p>In ruby, a block is always closed with the <code>end</code> keyword. Ruby blocks may be opened using one of several keywords, including <code>module</code>, <code>class</code>, <code>def</code> <code>if</code> and <code>do</code>. The <a href="http://www.vim.org/scripts/script.php?script_id=3382">rubyblock</a> plugin is aware of each of these.</p>
 
@@ -197,11 +198,11 @@
 
 <p><img alt="You can expand or contract your selection by repeating 'ar' and 'ir' commands" src="/images/blog/rubyblock-scissorkick.png" /></p>
 
-<h3 id="installation">Installation</h3>
+<h3>Installation</h3>
 
 <p>If you like to <a href="http://vimcasts.org/e/27">keep your plugins under version control with pathogen</a>, then you will want to clone the <a href="https://github.com/kana/vim-textobj-user">textobj-user</a> and <a href="https://github.com/nelstrom/vim-textobj-rubyblock">textobj-rubyblock</a> plugins from github.</p>
 
-<p>If you're old-school, you can get the <a href="http://www.vim.org/scripts/script.php?script_id=2100">textobj-user</a> and <a href="http://www.vim.org/scripts/script.php?script_id=3382">textobj-rubyblock</a> plugins from <a href="http://www.vim.org/scripts/index.php">vim.org</a>.</p>
+<p>If you&rsquo;re old-school, you can get the <a href="http://www.vim.org/scripts/script.php?script_id=2100">textobj-user</a> and <a href="http://www.vim.org/scripts/script.php?script_id=3382">textobj-rubyblock</a> plugins from <a href="http://www.vim.org/scripts/index.php">vim.org</a>.</p>
 
 <p>Note that the rubyblock plugin currently requires that the <a href="http://www.vim.org/scripts/script.php?script_id=39">matchit.vim</a> plugin is enabled. This can be done by adding the following line to your vimrc:</p>
 
@@ -209,18 +210,17 @@
 runtime macros/matchit.vim
 </pre>
 
-<p>Also note, that there is a plugin called ruby-matchit, which calls itself 'matchit for ruby'. If you have this installed, it may interfere with the operation of the rubyblock plugin. Also, matchit.vim supports ruby now (which was not the case when ruby-matchit was written), so there's no need to install them both.</p>
+<p>Also note, that there is a plugin called ruby-matchit, which calls itself &lsquo;matchit for ruby&rsquo;. If you have this installed, it may interfere with the operation of the rubyblock plugin. Also, matchit.vim supports ruby now (which was not the case when ruby-matchit was written), so there&rsquo;s no need to install them both.</p>
 
 <p>Morgan Prior took the time to explain <a href="http://amaras-tech.co.uk/people/morgan/article/84">how to install the rubyblock plugin</a> on his blog, so go read that if my instructions are too brief. Thanks Morgan!</p>
 
-<h3 id="issues">Issues</h3>
+<h3>Issues</h3>
 
 <p>If you notice any unexpected behaviour, I would appreciate if you could report it on the <a href="https://github.com/nelstrom/vim-textobj-rubyblock/issues">github issue tracker</a> for this project.</p>
 
-<h3 id="thanks">Thanks</h3>
+<h3>Thanks</h3>
 
-<p>I never thought I had the vimscript chops to put this plugin together, but the <a href="http://www.vim.org/scripts/script.php?script_id=2100">textobj-user</a> framework made it possible. So I'd like to say a big thankyou to <a href="http://whileimautomaton.net/">Kana</a> for his excellent work. </p>
-
+<p>I never thought I had the vimscript chops to put this plugin together, but the <a href="http://www.vim.org/scripts/script.php?script_id=2100">textobj-user</a> framework made it possible. So I&rsquo;d like to say a big thankyou to <a href="http://whileimautomaton.net/">Kana</a> for his excellent work. </p>
 
       </div>
 
@@ -265,20 +265,29 @@ runtime macros/matchit.vim
 
     
       <li>
+        <h4><a href="/episodes/aligning-text-with-tabular-vim/">Aligning text with Tabular.vim</a></h4>
+        <p>There are times when you can improve the readability of your code by lining up the elements on neighbouring lines. In this episode, I demonstrate how this can be achieved using the <a href="https://github.com/godlygeek/tabular">Tabular</a> plugin.</p>
+
+
+      </li>
+    
+      <li>
         <h4><a href="/categories">Find by category</a></h4>
         <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
       <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+        <h4><a href="/episodes/fugitive-vim---a-complement-to-command-line-git/">Fugitive.vim - a complement to command line git</a></h4>
+        <p><a href="https://github.com/tpope/vim-fugitive">The fugitive plugin</a>, by Tim Pope, is a git wrapper for Vim. It  complements the command line interface to git, but doesn&rsquo;t aim to replace it. In this episode, we&rsquo;ll see how some of fugitive&rsquo;s commands can streamline your workflow.</p>
+
+<p><em>This is the first of a five part series on fugitive.</em></p>
+
+
       </li>
     
       <li>
-        <h4><a href="/episodes/fugitive-vim---a-complement-to-command-line-git/">Fugitive.vim - a complement to command line git</a></h4>
-        <p><a href="https://github.com/tpope/vim-fugitive">The fugitive plugin</a>, by Tim Pope, is a git wrapper for Vim. It  complements the command line interface to git, but doesn't aim to replace it. In this episode, we'll see how some of fugitive's commands can streamline your workflow.</p>
-
-<p><em>This is the first of a five part series on fugitive.</em></p>
+        <h4><a href="/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/">Synchronizing plugins with git submodules and pathogen</a></h4>
+        <p>If you use Vim on muliple machines, it can be difficult to keep your configuration files synchronized across them. One solution is to put your dotfiles under version control. In this episode, I demonstrate how to keep your vimrc and plugins synchronized using git submodules and the pathogen plugin.</p>
 
 
       </li>
@@ -289,17 +298,8 @@ runtime macros/matchit.vim
       </li>
     
       <li>
-        <h4><a href="/episodes/aligning-text-with-tabular-vim/">Aligning text with Tabular.vim</a></h4>
-        <p>There are times when you can improve the readability of your code by lining up the elements on neighbouring lines. In this episode, I demonstrate how this can be achieved using the <a href="https://github.com/godlygeek/tabular">Tabular</a> plugin.</p>
-
-
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/">Synchronizing plugins with git submodules and pathogen</a></h4>
-        <p>If you use Vim on muliple machines, it can be difficult to keep your configuration files synchronized across them. One solution is to put your dotfiles under version control. In this episode, I demonstrate how to keep your vimrc and plugins synchronized using git submodules and the pathogen plugin.</p>
-
-
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
       </li>
     
 

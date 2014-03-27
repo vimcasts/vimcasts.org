@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -226,114 +227,103 @@
         <div id="shownotes" class="content" data-swiftype-index="true">
           
 
-<h2 id="keep-your-dotfiles-in-git">Keep your dotfiles in git</h2>
+<h2>Keep your dotfiles in git</h2>
 
 <p>The following instructions assume that your home directory contains a <code>.vimrc</code> file, a <code>.vim</code> directory and a <code>.gvimrc</code> file (optional).</p>
 
 <p>Move the <code>.vimrc</code> and <code>.gvimrc</code> files into the <code>.vim</code> directory:</p>
-
-<pre><code>mv .vimrc ~/.vim/vimrc
+<pre class="highlight plaintext">mv .vimrc ~/.vim/vimrc
 mv .gvimrc ~/.vim/gvimrc
-</code></pre>
+</pre>
 
 <p>Create symbolic links so that <code>~/.vimrc</code> points to the <code>~/.vim/vimrc</code> file:</p>
-
-<pre><code>ln -s ~/.vim/vimrc ~/.vimrc
+<pre class="highlight plaintext">ln -s ~/.vim/vimrc ~/.vimrc
 ln -s ~/.vim/gvimrc ~/.gvimrc
-</code></pre>
+</pre>
 
 <p>Change to the <code>.vim</code> directory, and initialize it as a git repository:</p>
-
-<pre><code>cd ~/.vim
+<pre class="highlight plaintext">cd ~/.vim
 git init
-</code></pre>
+</pre>
 
 <p>Create a <code>README</code> file, and paste installation instructions into it (see <a href="http://github.com/nelstrom/dotvim/raw/master/README">example README</a>).</p>
 
 <p>Add all files, and make an initial commit:</p>
-
-<pre><code>git add .
+<pre class="highlight plaintext">git add .
 git commit -m "Initial commit"
-</code></pre>
+</pre>
 
-<p>I suggest publishing your dotvim files to github: it's really easy to set up an account, and they host open source projects for free. In the video, I demonstrate how to publish a git repository to github.</p>
+<p>I suggest publishing your dotvim files to github: it&rsquo;s really easy to set up an account, and they host open source projects for free. In the video, I demonstrate how to publish a git repository to github.</p>
 
-<h2 id="keep-your-plugins-in-git">Keep your plugins in git</h2>
+<h2>Keep your plugins in git</h2>
 
 <p>The traditional method for installing Vim plugins is to copy each script that is distributed with the plugin into the corresponding <code>.vim</code> subdirectory. For example, if you wanted to install Fugitive.vim (a git wrapper for Vim), you would copy the <a href="http://github.com/tpope/vim-fugitive/blob/master/doc/fugitive.txt">documentation file</a> into <code>.vim/doc</code>, and copy the <a href="http://github.com/tpope/vim-fugitive/blob/master/plugin/fugitive.vim">plugin file</a> into <code>.vim/plugin</code>. You could then check these in to your git repository, and they could be syncronised across machines as easily as the rest of your configuration files. But you lose something by doing this. The Fugitive plugin itself is kept under version control with git. It would be much better if you could keep it that way.</p>
 
-<h3 id="pathogenvim">Pathogen.vim</h3>
+<h3>Pathogen.vim</h3>
 
 <p>The <a href="http://www.vim.org/scripts/script.php?script_id=2332">pathogen plugin</a> makes it possible to cleanly install plugins as a bundle. Rather than having to place all of your plugins side by side in the same directory, you can keep all of the files for each individual plugin together in one directory. This makes installation more straightforward, and also simplifies the tasks of upgrading and even removing a plugin if you decide you no longer need it.</p>
 
-<p>To install Pathogen, download the script and place it in your <code>.vim/autoload</code> directory (if the directory doesn't exist, you'll have to create it).</p>
+<p>To install Pathogen, download the script and place it in your <code>.vim/autoload</code> directory (if the directory doesn&rsquo;t exist, you&rsquo;ll have to create it).</p>
 
 <p>There are a couple of lines that you should add to your .vimrc file to activate pathogen.</p>
-
-<pre class="brush: vimscript">
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+<pre class="highlight viml"><span class="k">call</span> pathogen#runtime_append_all_bundles<span class="p">()</span>
+<span class="k">call</span> pathogen#<span class="k">helptags</span><span class="p">()</span>
 </pre>
 
 <p>It is essential that these lines are called before enabling filetype detection, so I would recommend putting them at the top of your vimrc file. </p>
 
-<h3 id="install-plugins-as-submodules">Install plugins as submodules</h3>
+<h3>Install plugins as submodules</h3>
 
-<p>With pathogen installed, it's now possible to keep the files for each plugin together, which means that every plugin can be kept in its own git repository. The best way to do this is to use git submodules, which are designed especially for the purpose of keeping git repositories within a git repository.</p>
+<p>With pathogen installed, it&rsquo;s now possible to keep the files for each plugin together, which means that every plugin can be kept in its own git repository. The best way to do this is to use git submodules, which are designed especially for the purpose of keeping git repositories within a git repository.</p>
 
 <p>To install the <a href="http://github.com/tpope/vim-fugitive">fugitive</a> plugin as a git submodule, take the following steps:</p>
-
-<pre><code>cd ~/.vim
+<pre class="highlight plaintext">cd ~/.vim
 mkdir ~/.vim/bundle
 git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive
 git add .
 git commit -m "Install Fugitive.vim bundle as a submodule."
-</code></pre>
+</pre>
 
-<h2 id="installing-your-vim-environment-on-another-machine">Installing your Vim environment on another machine</h2>
+<h2>Installing your Vim environment on another machine</h2>
 
-<p>Once your vim configuration is under version control, it's quite straightforward to import your settings to any machine that has git installed. If you followed the instructions above to put your vimrc and plugins in a <code>dotvim</code> directory, then you can follow these steps to synchronise them to another machine:</p>
-
-<pre><code>cd ~
+<p>Once your vim configuration is under version control, it&rsquo;s quite straightforward to import your settings to any machine that has git installed. If you followed the instructions above to put your vimrc and plugins in a <code>dotvim</code> directory, then you can follow these steps to synchronise them to another machine:</p>
+<pre class="highlight plaintext">cd ~
 git clone http://github.com/username/dotvim.git ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc
 ln -s ~/.vim/gvimrc ~/.gvimrc
 cd ~/.vim
 git submodule init
 git submodule update
-</code></pre>
+</pre>
 
 <p>As Marcin Kulik <a href="http://disq.us/ot9va">points out in the comments</a> below, the last two git commands can be rolled in to one: <code>git submodule update --init</code>.</p>
 
-<h3 id="upgrading-a-plugin-bundle">Upgrading a plugin bundle</h3>
+<h3>Upgrading a plugin bundle</h3>
 
 <p>At some point in the future, the fugitive plugin might be updated. To fetch the latest changes, go into the fugitive repository, and pull the latest version:</p>
-
-<pre><code>cd ~/.vim/bundle/fugitive
+<pre class="highlight plaintext">cd ~/.vim/bundle/fugitive
 git pull origin master
-</code></pre>
+</pre>
 
-<h3 id="upgrading-all-bundled-plugins">Upgrading all bundled plugins</h3>
+<h3>Upgrading all bundled plugins</h3>
 
 <p>You can use the <code>foreach</code> command to execute any shell script in from the root of all submodule directories. To update to the latest version of each plugin bundle, run the following:</p>
+<pre class="highlight plaintext">git submodule foreach git pull origin master
+</pre>
 
-<pre><code>git submodule foreach git pull origin master
-</code></pre>
-
-<h3 id="further-reading">Further reading</h3>
+<h3>Further reading</h3>
 
 <ul>
-  <li><a href="http://github.com/">github</a> - free git hosting for open source projects</li>
-  <li><a href="http://blip.tv/file/4218925">GitCasts screencast on git submodules</a></li>
-  <li><a href="http://www.vim.org/scripts/script.php?script_id=2332">Pathogen.vim</a> - allows Vim plugins to be installed as bundles</li>
-  <li><a href="http://github.com/tpope/vim-fugitive">Fugitive.vim</a> - a git wrapper for Vim</li>
-  <li><a href="http://www.kernel.org/pub/software/scm/git/docs/v1.7.5.4/git-submodule.html">git-submodule(1) Manual Page</a></li>
+<li><a href="http://github.com/">github</a> - free git hosting for open source projects</li>
+<li><a href="http://blip.tv/file/4218925">GitCasts screencast on git submodules</a></li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=2332">Pathogen.vim</a> - allows Vim plugins to be installed as bundles</li>
+<li><a href="http://github.com/tpope/vim-fugitive">Fugitive.vim</a> - a git wrapper for Vim</li>
+<li><a href="http://www.kernel.org/pub/software/scm/git/docs/v1.7.5.4/git-submodule.html">git-submodule(1) Manual Page</a></li>
 </ul>
 
-<h3 id="updates">Updates</h3>
+<h3>Updates</h3>
 
-<p><a href="http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/#comment-86512237">Matt noted in the comments</a> that when you follow this method, generating helptags dirties the submodule's git repository tree. Several other people chimed in with suggestions on how to fix this. Nils Haldenwang has written a <a href="http://www.nils-haldenwang.de/frameworks-and-tools/git/how-to-ignore-changes-in-git-submodules">blog post</a> describing a simple fix, which just involves adding the line <code>ignore = dirty</code> to the .gitmodules file for each submodule that reports a dirty tree when you run <code>git status</code>. Go and <a href="http://www.nils-haldenwang.de/frameworks-and-tools/git/how-to-ignore-changes-in-git-submodules">read Nils's blog post</a>, which goes into a bit more detail.</p>
-
+<p><a href="http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/#comment-86512237">Matt noted in the comments</a> that when you follow this method, generating helptags dirties the submodule&rsquo;s git repository tree. Several other people chimed in with suggestions on how to fix this. Nils Haldenwang has written a <a href="http://www.nils-haldenwang.de/frameworks-and-tools/git/how-to-ignore-changes-in-git-submodules">blog post</a> describing a simple fix, which just involves adding the line <code>ignore = dirty</code> to the .gitmodules file for each submodule that reports a dirty tree when you run <code>git status</code>. Go and <a href="http://www.nils-haldenwang.de/frameworks-and-tools/git/how-to-ignore-changes-in-git-submodules">read Nils&rsquo;s blog post</a>, which goes into a bit more detail.</p>
 
         </div>
         </dd>
@@ -378,28 +368,22 @@ git pull origin master
 
     
       <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
       </li>
     
       <li>
-        <h4><a href="/episodes/swapping-two-regions-of-text-with-exchange-vim/">Swapping two regions of text with exchange.vim</a></h4>
-        <p>Swapping two regions of text is a common task, which normally requires that we make two separate changes to the document.
-Tom McDonald's <a href="https://github.com/tommcdo/vim-exchange">exchange plugin</a> offers an elegant alternative, by providing an operator that swaps two regions of text in one go.</p>
+        <h4><a href="/episodes/aligning-text-with-tabular-vim/">Aligning text with Tabular.vim</a></h4>
+        <p>There are times when you can improve the readability of your code by lining up the elements on neighbouring lines. In this episode, I demonstrate how this can be achieved using the <a href="https://github.com/godlygeek/tabular">Tabular</a> plugin.</p>
 
 
       </li>
     
       <li>
         <h4><a href="/blog/2010/12/a-text-object-for-ruby-blocks/">A text-object for ruby blocks</a></h4>
-        <p>Ever since learning about Vim's <a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#text-objects">text-objects</a> I have wished that there was a way of selecting blocks in ruby code. Well, now there is. Today I am releasing a plugin that creates <a href="http://www.vim.org/scripts/script.php?script_id=3382">a custom text object for selecting ruby blocks</a>. Merry Christmas!</p>
+        <p>Ever since learning about Vim&rsquo;s <a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#text-objects">text-objects</a> I have wished that there was a way of selecting blocks in ruby code. Well, now there is. Today I am releasing a plugin that creates <a href="http://www.vim.org/scripts/script.php?script_id=3382">a custom text object for selecting ruby blocks</a>. Merry Christmas!</p>
 
 
-      </li>
-    
-      <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
       </li>
     
       <li>
@@ -408,8 +392,14 @@ Tom McDonald's <a href="https://github.com/tommcdo/vim-exchange">exchange plugin
       </li>
     
       <li>
-        <h4><a href="/episodes/aligning-text-with-tabular-vim/">Aligning text with Tabular.vim</a></h4>
-        <p>There are times when you can improve the readability of your code by lining up the elements on neighbouring lines. In this episode, I demonstrate how this can be achieved using the <a href="https://github.com/godlygeek/tabular">Tabular</a> plugin.</p>
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/swapping-two-regions-of-text-with-exchange-vim/">Swapping two regions of text with exchange.vim</a></h4>
+        <p>Swapping two regions of text is a common task, which normally requires that we make two separate changes to the document.
+Tom McDonald&rsquo;s <a href="https://github.com/tommcdo/vim-exchange">exchange plugin</a> offers an elegant alternative, by providing an operator that swaps two regions of text in one go.</p>
 
 
       </li>

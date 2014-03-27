@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -188,7 +189,7 @@
 
       <div data-swiftype-index="true">
         <p>Swapping two regions of text is a common task, which normally requires that we make two separate changes to the document.
-Tom McDonald's <a href="https://github.com/tommcdo/vim-exchange">exchange plugin</a> offers an elegant alternative, by providing an operator that swaps two regions of text in one go.</p>
+Tom McDonald&rsquo;s <a href="https://github.com/tommcdo/vim-exchange">exchange plugin</a> offers an elegant alternative, by providing an operator that swaps two regions of text in one go.</p>
 
 
       </div>
@@ -227,47 +228,42 @@ Tom McDonald's <a href="https://github.com/tommcdo/vim-exchange">exchange plugin
         <div id="shownotes" class="content" data-swiftype-index="true">
           
 
-<r:snippet name="announcement" />
-
-<p>In <a href="/e/54">episode 54</a>, I covered a technique for swapping two regions of text using the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#v_p">Visual mode put command</a>. It's a neat workflow, but there's room for some improvement.
+<p>In <a href="/e/54">episode 54</a>, I covered a technique for swapping two regions of text using the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#v_p">Visual mode put command</a>. It&rsquo;s a neat workflow, but there&rsquo;s room for some improvement.
 This technique requires that we make two changes to the document, and consequently we have to press undo twice if we want to revert the swap.</p>
 
 <p>For an alternative approach, check out <a href="https://github.com/tommcdo/vim-exchange">exchange</a>, by Tom McDonald. This is a little gem of a plugin! It provides one extra operation, which is mapped to <code>cx</code> by default.</p>
-
-<pre><code>Used in pairs.
+<pre class="highlight plaintext">Used in pairs.
 FIRST USE: define the first region of text to be
 exchanged. Any valid {motion} can be used.
 SECOND USE: define the second region of text and
 perform the exchange.
-</code></pre>
+</pre>
 
 <p>One pleasing consequence to this approach is that we can revert the change by pressing undo one time.</p>
 
-<h3 id="on-the-default-mappings">On the default mappings</h3>
+<h3>On the default mappings</h3>
 
 <p>I like the default mappings for exchange.vim. I think of it as a back-to-front mnemonic for <em>Ex-Change</em>, and that seems appropriate considering what the mapping does!</p>
 
 <p>In the video, I began by demonstrating <code>{Visual}cx</code>, then went on to demonstrate the <code>cx{motion}</code> operator. There were some <a href="https://github.com/tommcdo/vim-exchange/issues/14">problems with using <code>cx</code> as a Visual mode mapping</a>. These have now been resolved by <a href="https://github.com/tommcdo/vim-exchange/pull/20">using X as the Visual mode mapping</a>.</p>
 
 <p>Previously, I recommended setting this up by putting this in your vimrc:</p>
-
-<pre><code>let g:exchange_no_mappings=1
-nmap cx &lt;Plug&gt;(Exchange)
-vmap X &lt;Plug&gt;(Exchange)
-nmap cxc &lt;Plug&gt;(ExchangeClear)
-nmap cxx &lt;Plug&gt;(ExchangeLine)
-</code></pre>
+<pre class="highlight viml"><span class="k">let</span> <span class="nv">g:exchange_no_mappings</span><span class="p">=</span><span class="m">1</span>
+nmap cx <span class="p">&lt;</span>Plug<span class="p">&gt;(</span>Exchange<span class="p">)</span>
+vmap <span class="k">X</span> <span class="p">&lt;</span>Plug<span class="p">&gt;(</span>Exchange<span class="p">)</span>
+nmap cxc <span class="p">&lt;</span>Plug<span class="p">&gt;(</span>ExchangeClear<span class="p">)</span>
+nmap cxx <span class="p">&lt;</span>Plug<span class="p">&gt;(</span>ExchangeLine<span class="p">)</span>
+</pre>
 
 <p>This snippet of Vimscript is no longer necessary - you can get this behaviour by installing the latest version of <a href="https://github.com/tommcdo/vim-exchange">exchange.vim</a>.</p>
 
-<h3 id="further-reading">Further reading</h3>
+<h3>Further reading</h3>
 
 <ul>
-  <li><a href="https://github.com/tommcdo/vim-exchange">exchange.vim</a> by Tom McDonald</li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#v_p"><code>:h v_p</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#v_c"><code>:h v_c</code></a></li>
+<li><a href="https://github.com/tommcdo/vim-exchange">exchange.vim</a> by Tom McDonald</li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#v_p"><code>:h v_p</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#v_c"><code>:h v_c</code></a></li>
 </ul>
-
 
         </div>
         </dd>
@@ -319,25 +315,6 @@ nmap cxx &lt;Plug&gt;(ExchangeLine)
       </li>
     
       <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/selecting-columns-with-visual-block-mode/">Selecting columns with visual block mode</a></h4>
-        <p>If you want to edit several adjacent lines with a similar format, you might save a lot of time by making a columnar selection. This episode will demonstrate how to achieve this using Vim's visual block mode.</p>
-
-
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/operating-on-search-matches-using-gn/">Operating on search matches using gn</a></h4>
-        <p>The <code>gn</code> command (introduced in Vim 7.4) makes it easy to operate on regions of text that match the current search pattern. It's especially useful when used with a regex that matches text regions of variable length.</p>
-
-
-      </li>
-    
-      <li>
         <h4><a href="/publications">Publications</a></h4>
         <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
       </li>
@@ -345,6 +322,25 @@ nmap cxx &lt;Plug&gt;(ExchangeLine)
       <li>
         <h4><a href="/training">Vim Training</a></h4>
         <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/selecting-columns-with-visual-block-mode/">Selecting columns with visual block mode</a></h4>
+        <p>If you want to edit several adjacent lines with a similar format, you might save a lot of time by making a columnar selection. This episode will demonstrate how to achieve this using Vim&rsquo;s visual block mode.</p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/operating-on-search-matches-using-gn/">Operating on search matches using gn</a></h4>
+        <p>The <code>gn</code> command (introduced in Vim 7.4) makes it easy to operate on regions of text that match the current search pattern. It&rsquo;s especially useful when used with a regex that matches text regions of variable length.</p>
+
+
       </li>
     
 

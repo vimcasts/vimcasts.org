@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -177,39 +178,39 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>To the newcomer, Vim's way of doing things may seem strange, but with familiarity it becomes natural. Many of Vim's features seemed odd to me at first, but when I got used to them I recognised that they had their own particular elegance. However, there's one feature of Vim that still feels awkward to me: using registers for copy and paste. The deeper my understanding of registers becomes, the more they frustrate me!</p>
+        <p>To the newcomer, Vim&rsquo;s way of doing things may seem strange, but with familiarity it becomes natural. Many of Vim&rsquo;s features seemed odd to me at first, but when I got used to them I recognised that they had their own particular elegance. However, there&rsquo;s one feature of Vim that still feels awkward to me: using registers for copy and paste. The deeper my understanding of registers becomes, the more they frustrate me!</p>
 
 
 
-<h3 id="the-good-parts">The Good Parts</h3>
+<h3>The Good Parts</h3>
 
-<p>There's plenty to like about Vim's registers. I've produced <a href="http://vimcasts.org/blog/2013/11/the-copypaste-series-a-retrospective/">a series of 7 screencasts</a> that go into depth about how registers can be used for copy and paste. As far as I'm concerned, that's all good stuff. But registers aren't only useful for copy and paste. We can also create and execute macros, by recording our keystrokes into a register then playing back those keystrokes later.</p>
+<p>There&rsquo;s plenty to like about Vim&rsquo;s registers. I&rsquo;ve produced <a href="http://vimcasts.org/blog/2013/11/the-copypaste-series-a-retrospective/">a series of 7 screencasts</a> that go into depth about how registers can be used for copy and paste. As far as I&rsquo;m concerned, that&rsquo;s all good stuff. But registers aren&rsquo;t only useful for copy and paste. We can also create and execute macros, by recording our keystrokes into a register then playing back those keystrokes later.</p>
 
 <p>The fact that registers are multi-purpose means that after recording a macro we can easily make changes to it. For example, we could record our keystrokes into a register, then paste that register into the document, edit the keystrokes in place, then yank the modified version back into a register. (See <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, tip 71: <em>Edit the contents of a macro</em> for a demonstration.) I like that flexibility.</p>
 
 <p>I also like how Vim exposes useful information through the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote_/">search</a> and <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote_.">read-only registers</a>: <code>@/</code> contains the current search pattern, <code>@:</code> contains the last Ex command, <code>@.</code> contains the last inserted text, and <code>@%</code> contains the filename of the current buffer.</p>
 
-<h3 id="the-bad-parts">The Bad Parts</h3>
+<h3>The Bad Parts</h3>
 
-<p>The registers numbered <code>"1</code> through <code>"9</code> are a source of frustration for me. If you skim-read <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote1">the documentation for Vim's numbered registers</a> they sound promising:</p>
-
-<blockquote>
-  <p>Vim shifts the previous contents of register 1 into register 2, 2 into 3, and so forth, losing the previous contents of register 9.</p>
-</blockquote>
-
-<p>It seems as though the registers numbered <code>"1</code> - <code>"9</code> provide something like a clipboard history, which sounds handy. This would be further enhanced by a little-known feature of the <code>.</code> command: when used to repeat <code>"1p</code>, the dot command increments the register number (see <a href="http://vimdoc.sourceforge.net/htmldoc/undo.html#redo-register">:help redo-register</a>):</p>
+<p>The registers numbered <code>&quot;1</code> through <code>&quot;9</code> are a source of frustration for me. If you skim-read <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote1">the documentation for Vim&rsquo;s numbered registers</a> they sound promising:</p>
 
 <blockquote>
-  <p>you can use a special feature of the repeat command <code>.</code>. It will increase the number of the register used. So if you first do <code>"1P</code>, the following <code>.</code> will result in a <code>"2P</code>. Repeating this will result in all numbered registers being inserted.</p>
+<p>Vim shifts the previous contents of register 1 into register 2, 2 into 3, and so forth, losing the previous contents of register 9.</p>
 </blockquote>
 
-<p>Not only does Vim maintain a sort of clipboard history, but it also provides a convenient method for iterating through the clipboard history. That sounds like a good thing, so why have I filed this under 'The Bad Parts'?</p>
+<p>It seems as though the registers numbered <code>&quot;1</code> - <code>&quot;9</code> provide something like a clipboard history, which sounds handy. This would be further enhanced by a little-known feature of the <code>.</code> command: when used to repeat <code>&quot;1p</code>, the dot command increments the register number (see <a href="http://vimdoc.sourceforge.net/htmldoc/undo.html#redo-register">:help redo-register</a>):</p>
 
-<p>There's a catch: Vim never writes yank operations to register <code>"1</code>. Instead, yanked text is written to register <code>"0</code>, which is isolated from the mechanism that propagates values through <code>"1</code> to <code>"9</code>. That means that the clipboard history is incomplete. Registers <code>"1</code> - <code>"9</code> only record deletions, not yanks.</p>
+<blockquote>
+<p>you can use a special feature of the repeat command <code>.</code>. It will increase the number of the register used. So if you first do <code>&quot;1P</code>, the following <code>.</code> will result in a <code>&quot;2P</code>. Repeating this will result in all numbered registers being inserted.</p>
+</blockquote>
 
-<p>And when I say that registers <code>"1</code> - <code>"9</code> only record deletions, I have to add a further caveat: if the range of text being deleted spans less than one line, it will be written to <code>"-</code>, the <em>small delete register</em>. That is, unless you prefix the delete operation with a named register. In that case, the text will be written to the named register and to register <code>"1</code>, but not to <code>"-</code>.</p>
+<p>Not only does Vim maintain a sort of clipboard history, but it also provides a convenient method for iterating through the clipboard history. That sounds like a good thing, so why have I filed this under &lsquo;The Bad Parts&rsquo;?</p>
 
-<p>I've compiled a table showing which registers are populated by various combinations of yank/delete operations, over a characterwise/linewise range, with or without a named register (see <a href="https://gist.github.com/nelstrom/7615833">this gist</a> for details of how I compiled this information):</p>
+<p>There&rsquo;s a catch: Vim never writes yank operations to register <code>&quot;1</code>. Instead, yanked text is written to register <code>&quot;0</code>, which is isolated from the mechanism that propagates values through <code>&quot;1</code> to <code>&quot;9</code>. That means that the clipboard history is incomplete. Registers <code>&quot;1</code> - <code>&quot;9</code> only record deletions, not yanks.</p>
+
+<p>And when I say that registers <code>&quot;1</code> - <code>&quot;9</code> only record deletions, I have to add a further caveat: if the range of text being deleted spans less than one line, it will be written to <code>&quot;-</code>, the <em>small delete register</em>. That is, unless you prefix the delete operation with a named register. In that case, the text will be written to the named register and to register <code>&quot;1</code>, but not to <code>&quot;-</code>.</p>
+
+<p>I&rsquo;ve compiled a table showing which registers are populated by various combinations of yank/delete operations, over a characterwise/linewise range, with or without a named register (see <a href="https://gist.github.com/nelstrom/7615833">this gist</a> for details of how I compiled this information):</p>
 
 <table>
   <tr>
@@ -294,30 +295,29 @@
   </tr>
 </table>
 
-<p>There are so many idiosyncrasies in this table that it's hard to decide what's a rule and what's an exception! It's needlessly complicated. If you're considering committing this chart to memory, I would urge you not to bother.</p>
+<p>There are so many idiosyncrasies in this table that it&rsquo;s hard to decide what&rsquo;s a rule and what&rsquo;s an exception! It&rsquo;s needlessly complicated. If you&rsquo;re considering committing this chart to memory, I would urge you not to bother.</p>
 
-<h3 id="the-ugly-parts">The Ugly Parts</h3>
+<h3>The Ugly Parts</h3>
 
-<p>Vim uses non-standard terminology to describe cut, copy, and paste operations. As I've <a href="http://vimcasts.org/episodes/meet-the-yank-register#vim-jargon">noted before</a>: 'put' and 'paste' are easily interchangeable, and the word 'yank' becomes synonymous with 'copy' when you get used to it, but Vim's use of the word ‘delete’ is problematic. </p>
+<p>Vim uses non-standard terminology to describe cut, copy, and paste operations. As I&rsquo;ve <a href="http://vimcasts.org/episodes/meet-the-yank-register#vim-jargon">noted before</a>: &lsquo;put&rsquo; and &lsquo;paste&rsquo; are easily interchangeable, and the word &lsquo;yank&rsquo; becomes synonymous with &lsquo;copy&rsquo; when you get used to it, but Vim&rsquo;s use of the word ‘delete’ is problematic. </p>
 
-<p>In most text editing contexts the word delete means <em>remove</em>. But Vim's delete operation copies the text into a register, then removes it from the document. In other words, Vim's delete operation behaves like the standard cut command. I find Vim's terminology to be unhelpful, so I try to make a point of describing the <code>d{motion}</code> command as “cut the specified text” (rather than “delete the specified text”). Likewise for <code>x</code>, <code>c</code>, <code>s</code>, and so on.</p>
+<p>In most text editing contexts the word delete means <em>remove</em>. But Vim&rsquo;s delete operation copies the text into a register, then removes it from the document. In other words, Vim&rsquo;s delete operation behaves like the standard cut command. I find Vim&rsquo;s terminology to be unhelpful, so I try to make a point of describing the <code>d{motion}</code> command as “cut the specified text” (rather than “delete the specified text”). Likewise for <code>x</code>, <code>c</code>, <code>s</code>, and so on.</p>
 
-<p>The fact that <code>x</code>, <code>s</code>, <code>d</code>, and <code>c</code> all <em>cut by default</em> makes it awkward to perform a true deletion. To really delete text (without writing to a register), we have to prefix each of these commands with <code>"_</code>, the blackhole register. That's bizarre! More often than not, when I use Vim's delete operation, I only want to remove the text from the document. I don't want to write it to a register and I consider that to be an unfortunate side-effect.</p>
+<p>The fact that <code>x</code>, <code>s</code>, <code>d</code>, and <code>c</code> all <em>cut by default</em> makes it awkward to perform a true deletion. To really delete text (without writing to a register), we have to prefix each of these commands with <code>&quot;_</code>, the blackhole register. That&rsquo;s bizarre! More often than not, when I use Vim&rsquo;s delete operation, I only want to remove the text from the document. I don&rsquo;t want to write it to a register and I consider that to be an unfortunate side-effect.</p>
 
-<p>On the other hand, I definitely want to write the text to a register when I use the yank command (after all, that's the only thing it does!). It's frustrating that the yank command writes to <code>"0</code>, overwriting my previous yank. Whereas the delete command writes text that I may not even want to keep to <code>"1</code>, preserving the previous eight deletions in registers <code>"2</code> - <code>"9</code>.</p>
+<p>On the other hand, I definitely want to write the text to a register when I use the yank command (after all, that&rsquo;s the only thing it does!). It&rsquo;s frustrating that the yank command writes to <code>&quot;0</code>, overwriting my previous yank. Whereas the delete command writes text that I may not even want to keep to <code>&quot;1</code>, preserving the previous eight deletions in registers <code>&quot;2</code> - <code>&quot;9</code>.</p>
 
-<h3 id="so-what">So what?</h3>
+<h3>So what?</h3>
 
-<p><em>Cut</em> is not a sensible default behaviour for a command named 'delete'. The terminology is misleading, but the behaviour itself is also unfortunate. Vimcasts episode #52, <a href="/e/52">Meet the yank register</a>, shows an example workflow where this behaviour acts as an impediment. It would be better if Vim provided two distinct commands: the delete operation would only remove text from the document, while the cut operation would remove text from the document and write it to a register. That Vim's <code>x</code>, <code>s</code>, <code>d</code>, and <code>c</code> "delete operations" write text to a register is ugly.</p>
+<p><em>Cut</em> is not a sensible default behaviour for a command named &lsquo;delete&rsquo;. The terminology is misleading, but the behaviour itself is also unfortunate. Vimcasts episode #52, <a href="/e/52">Meet the yank register</a>, shows an example workflow where this behaviour acts as an impediment. It would be better if Vim provided two distinct commands: the delete operation would only remove text from the document, while the cut operation would remove text from the document and write it to a register. That Vim&rsquo;s <code>x</code>, <code>s</code>, <code>d</code>, and <code>c</code> &ldquo;delete operations&rdquo; write text to a register is ugly.</p>
 
-<p>I can't find any redeeming features in the behaviour of Vim's numbered registers, which makes me think they're just plain bad. They get almost half-way to behaving as a proper clipboard history, but that's not good enough. A half-cooked feature is a feature wasted.</p>
+<p>I can&rsquo;t find any redeeming features in the behaviour of Vim&rsquo;s numbered registers, which makes me think they&rsquo;re just plain bad. They get almost half-way to behaving as a proper clipboard history, but that&rsquo;s not good enough. A half-cooked feature is a feature wasted.</p>
 
-<p>I've learned to live with the good parts of Vim's copy/paste feature set.
-The good parts are good enough to get by with, but they're not as good as they could be.
+<p>I&rsquo;ve learned to live with the good parts of Vim&rsquo;s copy/paste feature set.
+The good parts are good enough to get by with, but they&rsquo;re not as good as they could be.
 That frustrates me.</p>
 
-<p>I have written my thoughts on how to fix Vim's registers in the form of a <a href="https://github.com/nelstrom/vim-cutlass">README for cutlass.vim</a> - a plugin that doesn't yet exist. I'd also like to give a shout out to Steve Vermeulen, who has already implemented some of the same features that I sketched (and many more features besides) in his <a href="https://github.com/svermeulen/vim-easyclip">vim-easyclip</a> plugin, which you can install and use today.</p>
-
+<p>I have written my thoughts on how to fix Vim&rsquo;s registers in the form of a <a href="https://github.com/nelstrom/vim-cutlass">README for cutlass.vim</a> - a plugin that doesn&rsquo;t yet exist. I&rsquo;d also like to give a shout out to Steve Vermeulen, who has already implemented some of the same features that I sketched (and many more features besides) in his <a href="https://github.com/svermeulen/vim-easyclip">vim-easyclip</a> plugin, which you can install and use today.</p>
 
       </div>
 
@@ -362,13 +362,19 @@ That frustrates me.</p>
 
     
       <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
+        <h4><a href="/blog/2012/08/on-sharpening-the-saw/">On sharpening the saw</a></h4>
+        <p>Vim users sit somewhere on a spectrum, based on how much they customize their editor. At one end of the spectrum, there are those who use Vim with no customizations whatsoever. At the other end are those who customize Vim to the point where it barely resembles the stock install.</p>
+
+<p><a href="https://www.destroyallsoftware.com/screencasts">Gary Bernhardt</a> advocates using stock Vim, with very few customizations.</p>
+
+<blockquote>
+<p>Vim is a chainsaw, and the last thing you want on a chainsaw is controls that are not the controls you&rsquo;re used to, because then you will cut your hand off.<br>
+Gary Bernhardt on <a href="http://rubyrogues.com/040-rr-text-editors-and-ides/">Ruby Rogues episode 40</a> (17:35)</p>
+</blockquote>
+
+<p>Gary&rsquo;s chainsaw metaphor warns against the practice of over-customizing Vim. But I would also warn against using Vim without any customizations. Vim is highly configurable, and some of the default settings are suboptimal. If you don&rsquo;t have a basic vimrc, then you&rsquo;re putting up with inconveniences that were fixed decades ago.</p>
+
+
       </li>
     
       <li>
@@ -378,30 +384,24 @@ That frustrates me.</p>
     
       <li>
         <h4><a href="/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/">Oil and vinegar - split windows and the project drawer</a></h4>
-        <p>Do you avoid using Vim's split windows because they're confusing? That might be a problem of your own devising. If you've bolted a project drawer onto Vim, then you've added unnecessary complexity to Vim's otherwise minimal interface. Split windows and the project drawer go together like oil and vinegar. I don't mean to say that you can combine them to create a delicious salad dressing. I mean that they don't mix well!</p>
+        <p>Do you avoid using Vim&rsquo;s split windows because they&rsquo;re confusing? That might be a problem of your own devising. If you&rsquo;ve bolted a project drawer onto Vim, then you&rsquo;ve added unnecessary complexity to Vim&rsquo;s otherwise minimal interface. Split windows and the project drawer go together like oil and vinegar. I don&rsquo;t mean to say that you can combine them to create a delicious salad dressing. I mean that they don&rsquo;t mix well!</p>
 
 
       </li>
     
       <li>
-        <h4><a href="/blog/2012/08/on-sharpening-the-saw/">On sharpening the saw</a></h4>
-        <p>Vim users sit somewhere on a spectrum, based on how much they customize their editor. At one end of the spectrum, there are those who use Vim with no customizations whatsoever. At the other end are those who customize Vim to the point where it barely resembles the stock install.</p>
-
-<p><a href="https://www.destroyallsoftware.com/screencasts">Gary Bernhardt</a> advocates using stock Vim, with very few customizations.</p>
-
-<blockquote>
-  <p>Vim is a chainsaw, and the last thing you want on a chainsaw is controls that are not the controls you're used to, because then you will cut your hand off.<br />
-Gary Bernhardt on <a href="http://rubyrogues.com/040-rr-text-editors-and-ides/">Ruby Rogues episode 40</a> (17:35)</p>
-</blockquote>
-
-<p>Gary's chainsaw metaphor warns against the practice of over-customizing Vim. But I would also warn against using Vim without any customizations. Vim is highly configurable, and some of the default settings are suboptimal. If you don't have a basic vimrc, then you're putting up with inconveniences that were fixed decades ago.</p>
-
-
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
       </li>
     
       <li>
         <h4><a href="/blog/2013/11/the-copypaste-series-a-retrospective/">The copy/paste series - a retrospective</a></h4>
-        <p>Episodes <a href="/e/51">51</a>, <a href="/e/52">52</a>, <a href="/e/53">53</a>, <a href="/e/54">54</a>, <a href="/e/55">55</a>, <a href="/e/58">58</a>, and <a href="/e/59">59</a> are all on the topic of copy and paste in Vim. I think that this is one area where Vim is especially confusing, partly because of <a href="http://vimcasts.org/episodes/meet-the-yank-register#vim-jargon">Vim's non-standard jargon for cut, copy and paste operations</a>. It's not the most intuitive copy/paste system, but it's usable when you get the hang of certain concepts and techniques.</p>
+        <p>Episodes <a href="/e/51">51</a>, <a href="/e/52">52</a>, <a href="/e/53">53</a>, <a href="/e/54">54</a>, <a href="/e/55">55</a>, <a href="/e/58">58</a>, and <a href="/e/59">59</a> are all on the topic of copy and paste in Vim. I think that this is one area where Vim is especially confusing, partly because of <a href="http://vimcasts.org/episodes/meet-the-yank-register#vim-jargon">Vim&rsquo;s non-standard jargon for cut, copy and paste operations</a>. It&rsquo;s not the most intuitive copy/paste system, but it&rsquo;s usable when you get the hang of certain concepts and techniques.</p>
 
 
       </li>

@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -187,7 +188,7 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>When you need to build a complex command, or devise a non-trivial search pattern, Vim's command-line mode can be rather limiting. In this episode, I will introduce the command-line window, which allows you to use the full power of Vim when editing search queries and commands.</p>
+        <p>When you need to build a complex command, or devise a non-trivial search pattern, Vim&rsquo;s command-line mode can be rather limiting. In this episode, I will introduce the command-line window, which allows you to use the full power of Vim when editing search queries and commands.</p>
 
 
       </div>
@@ -226,7 +227,7 @@
         <div id="shownotes" class="content" data-swiftype-index="true">
           
 
-<h2 id="commandline-mode">Commandline mode</h2>
+<h2>Commandline mode</h2>
 
 <p>When you press <code>:</code> or <code>/</code> in Vim, you go into commandline mode. This opens up a prompt at the bottom of the screen, where you can enter a command or a search pattern.</p>
 
@@ -253,13 +254,13 @@
 
 <p>If you need to make extensive edits to a command, change to the commandline window by pressing <code>ctrl-f</code>.</p>
 
-<p>Note that <code>ctrl-f</code> is the default, but it can be customized using the <code>cedit</code> option. Read <a title="cedit" href="http://vimdoc.sourceforge.net/htmldoc/options.html#"><code>:help cedit</code></a> for more information.</p>
+<p>Note that <code>ctrl-f</code> is the default, but it can be customized using the <code>cedit</code> option. Read <a href="http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;#x27;cedit&amp;#x27;"><code>:help cedit</code></a> for more information.</p>
 
-<h2 id="the-commandline-window">The commandline window</h2>
+<h2>The commandline window</h2>
 
 <p>The commandline window shows your last 20 search patterns or commands. You can move up and down through them with the <code>k</code> and <code>j</code> keys, and when you press <code>&lt;enter&gt;</code> it executes the command underneath the cursor.</p>
 
-<p>The cool thing about the command-line window is that it's a regular Vim buffer, so all of the editing commands that you are used to are available to you. This makes it extremely useful if you need to iterate on a search pattern.</p>
+<p>The cool thing about the command-line window is that it&rsquo;s a regular Vim buffer, so all of the editing commands that you are used to are available to you. This makes it extremely useful if you need to iterate on a search pattern.</p>
 
 <table>
    <tr>
@@ -280,64 +281,57 @@
    </tr>
 </table>
 
-<p>Note that you can customize the number of commands that Vim remembers with the <a title="hi" href="http://vimdoc.sourceforge.net/htmldoc/options.html#"><code>history</code></a> setting.</p>
+<p>Note that you can customize the number of commands that Vim remembers with the <a href="http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;#x27;hi&amp;#x27;"><code>history</code></a> setting.</p>
 
-<h2 id="replacing-prime-marks-with-curly-quotes">Replacing prime marks with curly quotes</h2>
+<h2>Replacing prime marks with curly quotes</h2>
 
 <p>In the video, I use the following example as a demonstration:</p>
-
-<pre><code>This string contains a 'quoted' word.
+<pre class="highlight plaintext">This string contains a 'quoted' word.
 This string contains 'two' quoted 'words'.
 This 'string doesn't make things easy'.
-</code></pre>
+</pre>
 
 <p>My intention is to replace the prime marks with curly double quotes, so that it looks like this:</p>
-
-<pre><code>This string contains a â€œquotedâ€ word.
+<pre class="highlight plaintext">This string contains a â€œquotedâ€ word.
 This string contains â€œtwoâ€ quoted â€œwordsâ€.
 This â€œstring doesn't make things easyâ€.
-</code></pre>
+</pre>
 
 <p>To create a suitable search pattern, I went through the following iterations:</p>
-
-<pre><code>\v'.+'
+<pre class="highlight plaintext">\v'.+'
 \v'[^']+'
 \v'('\w|[^'])+'
 \v'(('\w|[^'])+)'
-</code></pre>
+</pre>
 
 <p>The final pattern works for each of my test cases, so I can use it for a substitution command as follows:</p>
-
-<pre><code>/\v'(('\w|[^'])+)'
+<pre class="highlight plaintext">/\v'(('\w|[^'])+)'
 :%s//â€œ\1â€/gc
-</code></pre>
+</pre>
 
-<p>Here, I've left the search field blank in the substitution command, which tells Vim to use the most recent search. Alternatively, I could hard code the search pattern into the substitution command:</p>
-
-<pre><code>:%s/\v'(('\w|[^'])+)'/â€œ\1â€/gc
-</code></pre>
+<p>Here, I&rsquo;ve left the search field blank in the substitution command, which tells Vim to use the most recent search. Alternatively, I could hard code the search pattern into the substitution command:</p>
+<pre class="highlight plaintext">:%s/\v'(('\w|[^'])+)'/â€œ\1â€/gc
+</pre>
 
 <p>When making this substitution on an entire document, I use the <code>c</code> flag so that I can inspect each substitution before either doing it or skipping it.</p>
 
-<h3 id="homework">Homework</h3>
+<h3>Homework</h3>
 
 <p>Note that this substitution command is not a complete solution for replacing prime marks with curly double quotes. It works for my 3 test cases, but there are other situations where it will fail. Here is one:</p>
-
-<pre><code>This string doesn't contain any quotes, isn't it.
-</code></pre>
+<pre class="highlight plaintext">This string doesn't contain any quotes, isn't it.
+</pre>
 
 <p>Your homework, should you choose to accept it, is to refine the search pattern so that it handles this case appropriately. See if you can think up other failing test cases, and hone the substitution command to work for those as well. </p>
 
-<h3 id="further-reading">Further reading</h3>
+<h3>Further reading</h3>
 
 <ul>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#q:">:help q:</a> - the command line window</li>
-  <li><a title="cedit" href="http://vimdoc.sourceforge.net/htmldoc/options.html#">:help cedit</a> - the key used in Command-line mode to open the command-line window</li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:s">:help :s[ubstitute]</a> - the substitute command</li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:s_flags">:help :s_flags</a> - the flags for the substitute command</li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/magic">:help /magic</a> - searching with <em>very magic</em> mode</li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#q:">:help q:</a> - the command line window</li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;#x27;cedit&amp;#x27;">:help cedit</a> - the key used in Command-line mode to open the command-line window</li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:s">:help :s[ubstitute]</a> - the substitute command</li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:s_flags">:help :s_flags</a> - the flags for the substitute command</li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/magic">:help /magic</a> - searching with <em>very magic</em> mode</li>
 </ul>
-
 
         </div>
         </dd>
@@ -382,24 +376,8 @@ This â€œstring doesn't make things easyâ€.
 
     
       <li>
-        <h4><a href="/episodes/fugitive-vim-working-with-the-git-index/">Fugitive.vim - working with the git index</a></h4>
-        <p>The fugitive plugin provides an interactive status window, where you can easily stage and review your changes for the next commit. The <code>:Gdiff</code> command visualizes the changes made to a file, by comparing the working copy with the index. In this episode, we'll learn how to stage hunks of changes to the index without using the <code>git add --patch</code> command.</p>
-
-<p><em>This is the second of a five part series on fugitive.vim. In the next episode, we'll learn how to resolve a git merge conflict by performing a 3-way vimdiff.</em></p>
-
-
-      </li>
-    
-      <li>
         <h4><a href="/categories">Find by category</a></h4>
         <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/operating-on-search-matches-using-gn/">Operating on search matches using gn</a></h4>
-        <p>The <code>gn</code> command (introduced in Vim 7.4) makes it easy to operate on regions of text that match the current search pattern. It's especially useful when used with a regex that matches text regions of variable length.</p>
-
-
       </li>
     
       <li>
@@ -408,17 +386,33 @@ This â€œstring doesn't make things easyâ€.
       </li>
     
       <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
+        <h4><a href="/episodes/fugitive-vim-working-with-the-git-index/">Fugitive.vim - working with the git index</a></h4>
+        <p>The fugitive plugin provides an interactive status window, where you can easily stage and review your changes for the next commit. The <code>:Gdiff</code> command visualizes the changes made to a file, by comparing the working copy with the index. In this episode, we&rsquo;ll learn how to stage hunks of changes to the index without using the <code>git add --patch</code> command.</p>
+
+<p><em>This is the second of a five part series on fugitive.vim. In the next episode, we&rsquo;ll learn how to resolve a git merge conflict by performing a 3-way vimdiff.</em></p>
+
+
       </li>
     
       <li>
         <h4><a href="/episodes/fugitive-vim---a-complement-to-command-line-git/">Fugitive.vim - a complement to command line git</a></h4>
-        <p><a href="https://github.com/tpope/vim-fugitive">The fugitive plugin</a>, by Tim Pope, is a git wrapper for Vim. It  complements the command line interface to git, but doesn't aim to replace it. In this episode, we'll see how some of fugitive's commands can streamline your workflow.</p>
+        <p><a href="https://github.com/tpope/vim-fugitive">The fugitive plugin</a>, by Tim Pope, is a git wrapper for Vim. It  complements the command line interface to git, but doesn&rsquo;t aim to replace it. In this episode, we&rsquo;ll see how some of fugitive&rsquo;s commands can streamline your workflow.</p>
 
 <p><em>This is the first of a five part series on fugitive.</em></p>
 
 
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/operating-on-search-matches-using-gn/">Operating on search matches using gn</a></h4>
+        <p>The <code>gn</code> command (introduced in Vim 7.4) makes it easy to operate on regions of text that match the current search pattern. It&rsquo;s especially useful when used with a regex that matches text regions of variable length.</p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
       </li>
     
 

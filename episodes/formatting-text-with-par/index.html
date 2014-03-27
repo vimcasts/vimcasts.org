@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -187,7 +188,7 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>'Do one thing and do it well' is the principle of the Unix toolkit. Editing text is a broad domain, and there are many related tasks with which it overlaps. Vim acknowledges this by enabling certain tasks to be outsourced to external programs which do that one thing, and do it well. This episode will demonstrate how the <em>par</em> program can be used for formatting text.</p>
+        <p>&lsquo;Do one thing and do it well&rsquo; is the principle of the Unix toolkit. Editing text is a broad domain, and there are many related tasks with which it overlaps. Vim acknowledges this by enabling certain tasks to be outsourced to external programs which do that one thing, and do it well. This episode will demonstrate how the <em>par</em> program can be used for formatting text.</p>
 
 
       </div>
@@ -229,53 +230,49 @@
 <p><a href="http://www.nicemice.net/par/">Par</a> was written by Adam Costello in 1993, aiming to do one narrow task: reformat a single paragraph that might have a border on either side. The <a href="http://www.nicemice.net/par/par-doc.var">documentation</a> is terse, and the author apologises for the implementation being unclean. Nevertheless, the program is stable, portable, and most important of all, extremely useful.</p>
 
 <p>The <code>formatprg</code> option allows you to specify an external program that will be called when you run the <code>gq</code> command. The simplest possible configuration would be:</p>
-
-<pre><code>:set formatprg=par
-</code></pre>
+<pre class="highlight plaintext">:set formatprg=par
+</pre>
 
 <p>By default, par sets line width at 72 columns. You can alter this by passing the <code>-w</code> flag with a number, for example:</p>
-
-<pre><code>:set formatprg=par\ -w50
-</code></pre>
+<pre class="highlight plaintext">:set formatprg=par\ -w50
+</pre>
 
 <p>This sets the line width to 50 columns. The backslash is necessary to escape the space at the command line. There are many different flags that can be passed to the par program in this fashion. You can view a summary of these by running <code>par help</code> at the command line. </p>
 
 <p>In the video, I give a quick overview of the following options:</p>
 
 <ul>
-  <li>w - specify line length</li>
-  <li>r - repeat characters in bodiless lines</li>
-  <li>j - justifies text</li>
-  <li>e - remove 'superflous' lines</li>
-  <li>q - handle nested quotations in plaintext email</li>
+<li>w - specify line length</li>
+<li>r - repeat characters in bodiless lines</li>
+<li>j - justifies text</li>
+<li>e - remove &lsquo;superflous&rsquo; lines</li>
+<li>q - handle nested quotations in plaintext email</li>
 </ul>
 
-<h2 id="installing-par">Installing par</h2>
+<h2>Installing par</h2>
 
 <p>Before you can call par from Vim, you will have to make sure that it is installed on your system. </p>
 
-<h3 id="installing-par-on-os-x-with-macports">Installing Par on OS X with macports</h3>
+<h3>Installing Par on OS X with macports</h3>
 
 <p>If you have macports installed, you can <a href="http://par.darwinports.com/">install par on OS X</a> by running:</p>
-
-<pre><code>sudo port install par
-</code></pre>
+<pre class="highlight plaintext">sudo port install par
+</pre>
 
 <p>You will be prompted for your password.</p>
 
-<h3 id="installing-par-on-other-platforms">Installing par on other platforms</h3>
+<h3>Installing par on other platforms</h3>
 
-<p>I haven't had time to try this out on either Linux or Windows. Please leave a comment if you find an article on the web with good instructions on how to install par, or build it from source.</p>
+<p>I haven&rsquo;t had time to try this out on either Linux or Windows. Please leave a comment if you find an article on the web with good instructions on how to install par, or build it from source.</p>
 
-<h3 id="further-reading">Further reading</h3>
+<h3>Further reading</h3>
 
 <ul>
-  <li><a title="formatprg" href="http://vimdoc.sourceforge.net/htmldoc/options.html#"><code>:help formatprg</code></a></li>
-  <li><a href="http://www.nicemice.net/par/">Par homepage</a></li>
-  <li><a href="http://www.nicemice.net/par/par-doc.var">Par documentation</a></li>
-  <li><a href="http://par.darwinports.com/">Installing par on OS X</a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;#x27;formatprg&amp;#x27;"><code>:help formatprg</code></a></li>
+<li><a href="http://www.nicemice.net/par/">Par homepage</a></li>
+<li><a href="http://www.nicemice.net/par/par-doc.var">Par documentation</a></li>
+<li><a href="http://par.darwinports.com/">Installing par on OS X</a></li>
 </ul>
-
 
         </div>
         </dd>
@@ -320,15 +317,15 @@
 
     
       <li>
-        <h4><a href="/episodes/using-external-filter-commands-to-reformat-html/">Using external filter commands to reformat HTML</a></h4>
-        <p>We can use pandoc as a <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#filter">filter</a> to clean up <abbr title="what you see is what you get">WYSIWYG</abbr>-generated HTML. Pandoc is a commandline program, but we can call it from inside Vim either using the <a href="http://vimdoc.sourceforge.net/htmldoc/various.html#:!">bang Ex command</a>, or by configuring <a title="formatprg" href="http://vimdoc.sourceforge.net/htmldoc/options.html#">the <code>formatprg</code> option</a> to make the <code>gq</code> operator invoke pandoc.</p>
-
-
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
       </li>
     
       <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+        <h4><a href="/episodes/hard-wrapping-text/">Hard wrapping text</a></h4>
+        <p>It is sometimes preferable to format text with hard wrapped lines, for example when writing emails in plaintext. Vim can apply this style of formatting for you. This episode shows some of the options which allow you to customize Vim&rsquo;s text formatting.</p>
+
+
       </li>
     
       <li>
@@ -337,22 +334,22 @@
       </li>
     
       <li>
-        <h4><a href="/episodes/hard-wrapping-text/">Hard wrapping text</a></h4>
-        <p>It is sometimes preferable to format text with hard wrapped lines, for example when writing emails in plaintext. Vim can apply this style of formatting for you. This episode shows some of the options which allow you to customize Vim's text formatting.</p>
-
-
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
       <li>
         <h4><a href="/episodes/spell-checking/">Spell checking</a></h4>
-        <p>Using a spell checker is a good habit to get into.  In this episode, I demonstrate how to use Vim's built in spell checking feature.</p>
+        <p>Using a spell checker is a good habit to get into.  In this episode, I demonstrate how to use Vim&rsquo;s built in spell checking feature.</p>
 
 
       </li>
     
       <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+        <h4><a href="/episodes/using-external-filter-commands-to-reformat-html/">Using external filter commands to reformat HTML</a></h4>
+        <p>We can use pandoc as a <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#filter">filter</a> to clean up <abbr title="what you see is what you get">WYSIWYG</abbr>-generated HTML. Pandoc is a commandline program, but we can call it from inside Vim either using the <a href="http://vimdoc.sourceforge.net/htmldoc/various.html#:!">bang Ex command</a>, or by configuring <a href="http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;#x27;formatprg&amp;#x27;">the <code>formatprg</code> option</a> to make the <code>gq</code> operator invoke pandoc.</p>
+
+
       </li>
     
 

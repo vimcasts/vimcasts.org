@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -157,7 +158,7 @@
     <item>
       <title>Swapping two regions of text with exchange.vim</title>
       <description>&lt;p&gt;Swapping two regions of text is a common task, which normally requires that we make two separate changes to the document.
-Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange plugin&lt;/a&gt; offers an elegant alternative, by providing an operator that swaps two regions of text in one go.&lt;/p&gt;
+Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange plugin&lt;/a&gt; offers an elegant alternative, by providing an operator that swaps two regions of text in one go.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 24 Feb 2014 00:00:00 +0000</pubDate>
@@ -166,9 +167,9 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <guid isPermaLink="false">episodes/65-swapping-two-regions-of-text-with-exchange-vim.html</guid>
       <itunes:author>Drew Neil</itunes:author>
       <itunes:subtitle>&lt;p&gt;Swapping two regions of text is a common task, which normally requires that we make two separate changes to the document.
-Tom McDonald's &lt;a href...</itunes:subtitle>
+Tom McDonald&amp;rsquo;s &lt;...</itunes:subtitle>
       <itunes:summary>&lt;p&gt;Swapping two regions of text is a common task, which normally requires that we make two separate changes to the document.
-Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange plugin&lt;/a&gt; offers an elegant alternative, by providing an operator that swaps two regions of text in one go.&lt;/p&gt;
+Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange plugin&lt;/a&gt; offers an elegant alternative, by providing an operator that swaps two regions of text in one go.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -176,7 +177,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Using external filter commands to reformat HTML</title>
-      <description>&lt;p&gt;We can use pandoc as a &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#filter"&gt;filter&lt;/a&gt; to clean up &lt;abbr title="what you see is what you get"&gt;WYSIWYG&lt;/abbr&gt;-generated HTML. Pandoc is a commandline program, but we can call it from inside Vim either using the &lt;a href="http://vimdoc.sourceforge.net/htmldoc/various.html#:!"&gt;bang Ex command&lt;/a&gt;, or by configuring &lt;a title="formatprg" href="http://vimdoc.sourceforge.net/htmldoc/options.html#"&gt;the &lt;code&gt;formatprg&lt;/code&gt; option&lt;/a&gt; to make the &lt;code&gt;gq&lt;/code&gt; operator invoke pandoc.&lt;/p&gt;
+      <description>&lt;p&gt;We can use pandoc as a &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#filter"&gt;filter&lt;/a&gt; to clean up &lt;abbr title="what you see is what you get"&gt;WYSIWYG&lt;/abbr&gt;-generated HTML. Pandoc is a commandline program, but we can call it from inside Vim either using the &lt;a href="http://vimdoc.sourceforge.net/htmldoc/various.html#:!"&gt;bang Ex command&lt;/a&gt;, or by configuring &lt;a href="http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;amp;#x27;formatprg&amp;amp;#x27;"&gt;the &lt;code&gt;formatprg&lt;/code&gt; option&lt;/a&gt; to make the &lt;code&gt;gq&lt;/code&gt; operator invoke pandoc.&lt;/p&gt;
 
 </description>
       <pubDate>Tue, 18 Feb 2014 00:00:00 +0000</pubDate>
@@ -185,7 +186,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <guid isPermaLink="false">episodes/64-using-external-filter-commands-to-reformat-html.html</guid>
       <itunes:author>Drew Neil</itunes:author>
       <itunes:subtitle>&lt;p&gt;We can use pandoc as a &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#filter"&gt;filter&lt;/a&gt; to clean up &lt;abbr title="what you see is wh...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;We can use pandoc as a &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#filter"&gt;filter&lt;/a&gt; to clean up &lt;abbr title="what you see is what you get"&gt;WYSIWYG&lt;/abbr&gt;-generated HTML. Pandoc is a commandline program, but we can call it from inside Vim either using the &lt;a href="http://vimdoc.sourceforge.net/htmldoc/various.html#:!"&gt;bang Ex command&lt;/a&gt;, or by configuring &lt;a title="formatprg" href="http://vimdoc.sourceforge.net/htmldoc/options.html#"&gt;the &lt;code&gt;formatprg&lt;/code&gt; option&lt;/a&gt; to make the &lt;code&gt;gq&lt;/code&gt; operator invoke pandoc.&lt;/p&gt;
+      <itunes:summary>&lt;p&gt;We can use pandoc as a &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#filter"&gt;filter&lt;/a&gt; to clean up &lt;abbr title="what you see is what you get"&gt;WYSIWYG&lt;/abbr&gt;-generated HTML. Pandoc is a commandline program, but we can call it from inside Vim either using the &lt;a href="http://vimdoc.sourceforge.net/htmldoc/various.html#:!"&gt;bang Ex command&lt;/a&gt;, or by configuring &lt;a href="http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;amp;#x27;formatprg&amp;amp;#x27;"&gt;the &lt;code&gt;formatprg&lt;/code&gt; option&lt;/a&gt; to make the &lt;code&gt;gq&lt;/code&gt; operator invoke pandoc.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -193,7 +194,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Operating on search matches using gn</title>
-      <description>&lt;p&gt;The &lt;code&gt;gn&lt;/code&gt; command (introduced in Vim 7.4) makes it easy to operate on regions of text that match the current search pattern. It's especially useful when used with a regex that matches text regions of variable length.&lt;/p&gt;
+      <description>&lt;p&gt;The &lt;code&gt;gn&lt;/code&gt; command (introduced in Vim 7.4) makes it easy to operate on regions of text that match the current search pattern. It&amp;rsquo;s especially useful when used with a regex that matches text regions of variable length.&lt;/p&gt;
 
 </description>
       <pubDate>Tue, 11 Feb 2014 00:00:00 +0000</pubDate>
@@ -201,8 +202,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/63-operating-on-search-matches-using-gn.html</link>
       <guid isPermaLink="false">episodes/63-operating-on-search-matches-using-gn.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;The &lt;code&gt;gn&lt;/code&gt; command (introduced in Vim 7.4) makes it easy to operate on regions of text that match the current search pattern. It's espe...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;The &lt;code&gt;gn&lt;/code&gt; command (introduced in Vim 7.4) makes it easy to operate on regions of text that match the current search pattern. It's especially useful when used with a regex that matches text regions of variable length.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;The &lt;code&gt;gn&lt;/code&gt; command (introduced in Vim 7.4) makes it easy to operate on regions of text that match the current search pattern. It&amp;rsquo;...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;The &lt;code&gt;gn&lt;/code&gt; command (introduced in Vim 7.4) makes it easy to operate on regions of text that match the current search pattern. It&amp;rsquo;s especially useful when used with a regex that matches text regions of variable length.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -210,7 +211,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Creating mappings that accept a count</title>
-      <description>&lt;p&gt;Lots of Vim's built-in Normal mode commands can be executed multiple times by prefixing them with a count. User-defined Normal mode mappings don't usually handle counts the way we might like them to. We'll explore a couple of techniques for making our custom mappings respond predictably to a count.&lt;/p&gt;
+      <description>&lt;p&gt;Lots of Vim&amp;rsquo;s built-in Normal mode commands can be executed multiple times by prefixing them with a count. User-defined Normal mode mappings don&amp;rsquo;t usually handle counts the way we might like them to. We&amp;rsquo;ll explore a couple of techniques for making our custom mappings respond predictably to a count.&lt;/p&gt;
 
 </description>
       <pubDate>Thu, 06 Feb 2014 00:00:00 +0000</pubDate>
@@ -218,8 +219,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/62-creating-mappings-that-accept-a-count.html</link>
       <guid isPermaLink="false">episodes/62-creating-mappings-that-accept-a-count.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;Lots of Vim's built-in Normal mode commands can be executed multiple times by prefixing them with a count. User-defined Normal mode mappings don...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;Lots of Vim's built-in Normal mode commands can be executed multiple times by prefixing them with a count. User-defined Normal mode mappings don't usually handle counts the way we might like them to. We'll explore a couple of techniques for making our custom mappings respond predictably to a count.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;Lots of Vim&amp;rsquo;s built-in Normal mode commands can be executed multiple times by prefixing them with a count. User-defined Normal mode mappin...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;Lots of Vim&amp;rsquo;s built-in Normal mode commands can be executed multiple times by prefixing them with a count. User-defined Normal mode mappings don&amp;rsquo;t usually handle counts the way we might like them to. We&amp;rsquo;ll explore a couple of techniques for making our custom mappings respond predictably to a count.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -227,7 +228,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Creating repeatable mappings with repeat.vim</title>
-      <description>&lt;p&gt;The dot command is my all-time favorite Vim trick: it tells Vim to repeat the last change. But the dot command tends not to work well with user-defined mappings. In this episode, we'll use repeat.vim to set up a simple mapping so that it can be repeated using the dot command.&lt;/p&gt;
+      <description>&lt;p&gt;The dot command is my all-time favorite Vim trick: it tells Vim to repeat the last change. But the dot command tends not to work well with user-defined mappings. In this episode, we&amp;rsquo;ll use repeat.vim to set up a simple mapping so that it can be repeated using the dot command.&lt;/p&gt;
 
 </description>
       <pubDate>Tue, 21 Jan 2014 00:00:00 +0000</pubDate>
@@ -236,7 +237,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <guid isPermaLink="false">episodes/61-creating-repeatable-mappings-with-repeat-vim.html</guid>
       <itunes:author>Drew Neil</itunes:author>
       <itunes:subtitle>&lt;p&gt;The dot command is my all-time favorite Vim trick: it tells Vim to repeat the last change. But the dot command tends not to work well with user-...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;The dot command is my all-time favorite Vim trick: it tells Vim to repeat the last change. But the dot command tends not to work well with user-defined mappings. In this episode, we'll use repeat.vim to set up a simple mapping so that it can be repeated using the dot command.&lt;/p&gt;
+      <itunes:summary>&lt;p&gt;The dot command is my all-time favorite Vim trick: it tells Vim to repeat the last change. But the dot command tends not to work well with user-defined mappings. In this episode, we&amp;rsquo;ll use repeat.vim to set up a simple mapping so that it can be repeated using the dot command.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -244,7 +245,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Comparing buffers with vimdiff</title>
-      <description>&lt;p&gt;Vim's diff mode allows us to easily compare the contents of two (or more) buffers. We can start Vim in diff mode using the &lt;code&gt;vimdiff&lt;/code&gt; command, or if Vim is already running we can switch to diff mode using the &lt;code&gt;:diffthis&lt;/code&gt; command. The beauty of the &lt;code&gt;:diffthis&lt;/code&gt; command is that it works with unnamed buffers, whereas &lt;code&gt;vimdiff&lt;/code&gt; can only work with files.&lt;/p&gt;
+      <description>&lt;p&gt;Vim&amp;rsquo;s diff mode allows us to easily compare the contents of two (or more) buffers. We can start Vim in diff mode using the &lt;code&gt;vimdiff&lt;/code&gt; command, or if Vim is already running we can switch to diff mode using the &lt;code&gt;:diffthis&lt;/code&gt; command. The beauty of the &lt;code&gt;:diffthis&lt;/code&gt; command is that it works with unnamed buffers, whereas &lt;code&gt;vimdiff&lt;/code&gt; can only work with files.&lt;/p&gt;
 
 </description>
       <pubDate>Wed, 15 Jan 2014 00:00:00 +0000</pubDate>
@@ -252,8 +253,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/60-comparing-buffers-with-vimdiff.html</link>
       <guid isPermaLink="false">episodes/60-comparing-buffers-with-vimdiff.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;Vim's diff mode allows us to easily compare the contents of two (or more) buffers. We can start Vim in diff mode using the &lt;code&gt;vimdiff&lt;/code&gt; ...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;Vim's diff mode allows us to easily compare the contents of two (or more) buffers. We can start Vim in diff mode using the &lt;code&gt;vimdiff&lt;/code&gt; command, or if Vim is already running we can switch to diff mode using the &lt;code&gt;:diffthis&lt;/code&gt; command. The beauty of the &lt;code&gt;:diffthis&lt;/code&gt; command is that it works with unnamed buffers, whereas &lt;code&gt;vimdiff&lt;/code&gt; can only work with files.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;Vim&amp;rsquo;s diff mode allows us to easily compare the contents of two (or more) buffers. We can start Vim in diff mode using the &lt;code&gt;vimdiff&lt;/...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;Vim&amp;rsquo;s diff mode allows us to easily compare the contents of two (or more) buffers. We can start Vim in diff mode using the &lt;code&gt;vimdiff&lt;/code&gt; command, or if Vim is already running we can switch to diff mode using the &lt;code&gt;:diffthis&lt;/code&gt; command. The beauty of the &lt;code&gt;:diffthis&lt;/code&gt; command is that it works with unnamed buffers, whereas &lt;code&gt;vimdiff&lt;/code&gt; can only work with files.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -278,7 +279,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Accessing the system clipboard from Vim</title>
-      <description>&lt;p&gt;In some environments, Vim lets us access the system clipboard using the quoteplus register, &lt;code&gt;"+&lt;/code&gt;. When this feature is enabled, we can use it with the delete, yank and put operations in much the same way that we use Vim's other registers. Pasting from this register usually produces better results than using the system paste command in Insert mode.&lt;/p&gt;
+      <description>&lt;p&gt;In some environments, Vim lets us access the system clipboard using the quoteplus register, &lt;code&gt;&amp;quot;+&lt;/code&gt;. When this feature is enabled, we can use it with the delete, yank and put operations in much the same way that we use Vim&amp;rsquo;s other registers. Pasting from this register usually produces better results than using the system paste command in Insert mode.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 11 Nov 2013 00:00:00 +0000</pubDate>
@@ -286,8 +287,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/58-accessing-the-system-clipboard-from-vim.html</link>
       <guid isPermaLink="false">episodes/58-accessing-the-system-clipboard-from-vim.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;In some environments, Vim lets us access the system clipboard using the quoteplus register, &lt;code&gt;"+&lt;/code&gt;. When this feature is enabled, we ca...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;In some environments, Vim lets us access the system clipboard using the quoteplus register, &lt;code&gt;"+&lt;/code&gt;. When this feature is enabled, we can use it with the delete, yank and put operations in much the same way that we use Vim's other registers. Pasting from this register usually produces better results than using the system paste command in Insert mode.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;In some environments, Vim lets us access the system clipboard using the quoteplus register, &lt;code&gt;&amp;quot;+&lt;/code&gt;. When this feature is enabled, ...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;In some environments, Vim lets us access the system clipboard using the quoteplus register, &lt;code&gt;&amp;quot;+&lt;/code&gt;. When this feature is enabled, we can use it with the delete, yank and put operations in much the same way that we use Vim&amp;rsquo;s other registers. Pasting from this register usually produces better results than using the system paste command in Insert mode.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -329,7 +330,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Pasting from Insert mode</title>
-      <description>&lt;p&gt;We don't have to be in Normal mode to paste the contents of a register. The &lt;a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r"&gt;&lt;code&gt;&amp;lt;C-r&amp;gt;{reg}&lt;/code&gt;&lt;/a&gt; command lets us paste a register from Insert mode (and it &lt;a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-r"&gt;works in commandline mode too&lt;/a&gt;!) Using this command allows us to make changes that can be repeated with &lt;a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#."&gt;the dot command&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;We don&amp;rsquo;t have to be in Normal mode to paste the contents of a register. The &lt;a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r"&gt;&lt;code&gt;&amp;lt;C-r&amp;gt;{reg}&lt;/code&gt;&lt;/a&gt; command lets us paste a register from Insert mode (and it &lt;a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-r"&gt;works in commandline mode too&lt;/a&gt;!) Using this command allows us to make changes that can be repeated with &lt;a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#."&gt;the dot command&lt;/a&gt;.&lt;/p&gt;
 
 </description>
       <pubDate>Fri, 11 Oct 2013 00:00:00 +0000</pubDate>
@@ -337,8 +338,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/55-pasting-from-insert-mode.html</link>
       <guid isPermaLink="false">episodes/55-pasting-from-insert-mode.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;We don't have to be in Normal mode to paste the contents of a register. The &lt;a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r"...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;We don't have to be in Normal mode to paste the contents of a register. The &lt;a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r"&gt;&lt;code&gt;&amp;lt;C-r&amp;gt;{reg}&lt;/code&gt;&lt;/a&gt; command lets us paste a register from Insert mode (and it &lt;a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-r"&gt;works in commandline mode too&lt;/a&gt;!) Using this command allows us to make changes that can be repeated with &lt;a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#."&gt;the dot command&lt;/a&gt;.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;We don&amp;rsquo;t have to be in Normal mode to paste the contents of a register. The &lt;a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_C...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;We don&amp;rsquo;t have to be in Normal mode to paste the contents of a register. The &lt;a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r"&gt;&lt;code&gt;&amp;lt;C-r&amp;gt;{reg}&lt;/code&gt;&lt;/a&gt; command lets us paste a register from Insert mode (and it &lt;a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-r"&gt;works in commandline mode too&lt;/a&gt;!) Using this command allows us to make changes that can be repeated with &lt;a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#."&gt;the dot command&lt;/a&gt;.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -363,7 +364,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Using Vim's named registers</title>
-      <description>&lt;p&gt;We've met Vim's &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote"&gt;default register&lt;/a&gt; and the &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0"&gt;yank register&lt;/a&gt;. This time, we're going to look at the &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote_alpha"&gt;named registers&lt;/a&gt;, which are handy if you want to cut or copy some text that you intend to paste multiple times.&lt;/p&gt;
+      <description>&lt;p&gt;We&amp;rsquo;ve met Vim&amp;rsquo;s &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote"&gt;default register&lt;/a&gt; and the &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0"&gt;yank register&lt;/a&gt;. This time, we&amp;rsquo;re going to look at the &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote_alpha"&gt;named registers&lt;/a&gt;, which are handy if you want to cut or copy some text that you intend to paste multiple times.&lt;/p&gt;
 
 </description>
       <pubDate>Fri, 04 Oct 2013 00:00:00 +0000</pubDate>
@@ -371,8 +372,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/53-using-vims-named-registers.html</link>
       <guid isPermaLink="false">episodes/53-using-vims-named-registers.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;We've met Vim's &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote"&gt;default register&lt;/a&gt; and the &lt;a href="http://vimdoc.sourc...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;We've met Vim's &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote"&gt;default register&lt;/a&gt; and the &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0"&gt;yank register&lt;/a&gt;. This time, we're going to look at the &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote_alpha"&gt;named registers&lt;/a&gt;, which are handy if you want to cut or copy some text that you intend to paste multiple times.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;We&amp;rsquo;ve met Vim&amp;rsquo;s &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote"&gt;default register&lt;/a&gt; and the &lt;a href="http://...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;We&amp;rsquo;ve met Vim&amp;rsquo;s &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote"&gt;default register&lt;/a&gt; and the &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0"&gt;yank register&lt;/a&gt;. This time, we&amp;rsquo;re going to look at the &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote_alpha"&gt;named registers&lt;/a&gt;, which are handy if you want to cut or copy some text that you intend to paste multiple times.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -380,7 +381,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Meet the yank register</title>
-      <description>&lt;p&gt;Vim's default register is not a safe place to keep yanked text that you want to paste later. It's all too easy to clobber the default register with a &lt;code&gt;d&lt;/code&gt; or &lt;code&gt;x&lt;/code&gt; command. Luckily, the last yanked text is kept safe in Vim's &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0"&gt;yank register&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;Vim&amp;rsquo;s default register is not a safe place to keep yanked text that you want to paste later. It&amp;rsquo;s all too easy to clobber the default register with a &lt;code&gt;d&lt;/code&gt; or &lt;code&gt;x&lt;/code&gt; command. Luckily, the last yanked text is kept safe in Vim&amp;rsquo;s &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0"&gt;yank register&lt;/a&gt;.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 30 Sep 2013 00:00:00 +0000</pubDate>
@@ -388,8 +389,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/52-meet-the-yank-register.html</link>
       <guid isPermaLink="false">episodes/52-meet-the-yank-register.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;Vim's default register is not a safe place to keep yanked text that you want to paste later. It's all too easy to clobber the default register w...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;Vim's default register is not a safe place to keep yanked text that you want to paste later. It's all too easy to clobber the default register with a &lt;code&gt;d&lt;/code&gt; or &lt;code&gt;x&lt;/code&gt; command. Luckily, the last yanked text is kept safe in Vim's &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0"&gt;yank register&lt;/a&gt;.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;Vim&amp;rsquo;s default register is not a safe place to keep yanked text that you want to paste later. It&amp;rsquo;s all too easy to clobber the defaul...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;Vim&amp;rsquo;s default register is not a safe place to keep yanked text that you want to paste later. It&amp;rsquo;s all too easy to clobber the default register with a &lt;code&gt;d&lt;/code&gt; or &lt;code&gt;x&lt;/code&gt; command. Luckily, the last yanked text is kept safe in Vim&amp;rsquo;s &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0"&gt;yank register&lt;/a&gt;.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -397,7 +398,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Simple operations using the default register</title>
-      <description>&lt;p&gt;Vim's &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote"&gt;default register&lt;/a&gt; makes it easy to perform some of the most basic types of cut, copy, and paste operations. That's partly thanks to the &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#p"&gt;&lt;code&gt;p&lt;/code&gt;&lt;/a&gt; command, which behaves differently depending on whether the default register contains a characterwise or linewise region of text.&lt;/p&gt;
+      <description>&lt;p&gt;Vim&amp;rsquo;s &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote"&gt;default register&lt;/a&gt; makes it easy to perform some of the most basic types of cut, copy, and paste operations. That&amp;rsquo;s partly thanks to the &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#p"&gt;&lt;code&gt;p&lt;/code&gt;&lt;/a&gt; command, which behaves differently depending on whether the default register contains a characterwise or linewise region of text.&lt;/p&gt;
 
 </description>
       <pubDate>Fri, 27 Sep 2013 00:00:00 +0000</pubDate>
@@ -405,8 +406,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/51-simple-operations-using-the-default-register.html</link>
       <guid isPermaLink="false">episodes/51-simple-operations-using-the-default-register.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;Vim's &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote"&gt;default register&lt;/a&gt; makes it easy to perform some of the most basi...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;Vim's &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote"&gt;default register&lt;/a&gt; makes it easy to perform some of the most basic types of cut, copy, and paste operations. That's partly thanks to the &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#p"&gt;&lt;code&gt;p&lt;/code&gt;&lt;/a&gt; command, which behaves differently depending on whether the default register contains a characterwise or linewise region of text.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;Vim&amp;rsquo;s &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote"&gt;default register&lt;/a&gt; makes it easy to perform some of the mos...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;Vim&amp;rsquo;s &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote"&gt;default register&lt;/a&gt; makes it easy to perform some of the most basic types of cut, copy, and paste operations. That&amp;rsquo;s partly thanks to the &lt;a href="http://vimdoc.sourceforge.net/htmldoc/change.html#p"&gt;&lt;code&gt;p&lt;/code&gt;&lt;/a&gt; command, which behaves differently depending on whether the default register contains a characterwise or linewise region of text.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -414,7 +415,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>An introduction to vspec</title>
-      <description>&lt;p&gt;&lt;a href="https://github.com/kana/vim-vspec"&gt;Vspec&lt;/a&gt; is a library that allows you to test-drive your Vimscript code. In this tutorial, we'll cover the basics: how to inspect the contents of a buffer, how to simulate the actions of a user, and how to invoke user-defined mappings.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href="https://github.com/kana/vim-vspec"&gt;Vspec&lt;/a&gt; is a library that allows you to test-drive your Vimscript code. In this tutorial, we&amp;rsquo;ll cover the basics: how to inspect the contents of a buffer, how to simulate the actions of a user, and how to invoke user-defined mappings.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 17 Jun 2013 00:00:00 +0000</pubDate>
@@ -422,8 +423,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/50-an-introduction-to-vspec.html</link>
       <guid isPermaLink="false">episodes/50-an-introduction-to-vspec.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;&lt;a href="https://github.com/kana/vim-vspec"&gt;Vspec&lt;/a&gt; is a library that allows you to test-drive your Vimscript code. In this tutorial, we'll co...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;&lt;a href="https://github.com/kana/vim-vspec"&gt;Vspec&lt;/a&gt; is a library that allows you to test-drive your Vimscript code. In this tutorial, we'll cover the basics: how to inspect the contents of a buffer, how to simulate the actions of a user, and how to invoke user-defined mappings.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;&lt;a href="https://github.com/kana/vim-vspec"&gt;Vspec&lt;/a&gt; is a library that allows you to test-drive your Vimscript code. In this tutorial, we&amp;rsquo...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;&lt;a href="https://github.com/kana/vim-vspec"&gt;Vspec&lt;/a&gt; is a library that allows you to test-drive your Vimscript code. In this tutorial, we&amp;rsquo;ll cover the basics: how to inspect the contents of a buffer, how to simulate the actions of a user, and how to invoke user-defined mappings.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -431,7 +432,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Enhanced abbreviations with :Abolish</title>
-      <description>&lt;p&gt;Vim's built-in abbreviation feature is handy if you want to auto-correct words that you frequently misspell, but it requires a lot of setup. The &lt;code&gt;:Abolish&lt;/code&gt; command makes it easy to generate abbreviations that will correct multiple forms of the same word.&lt;/p&gt;
+      <description>&lt;p&gt;Vim&amp;rsquo;s built-in abbreviation feature is handy if you want to auto-correct words that you frequently misspell, but it requires a lot of setup. The &lt;code&gt;:Abolish&lt;/code&gt; command makes it easy to generate abbreviations that will correct multiple forms of the same word.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;This is the final of a three-part series on Tim Pope’s &lt;a href="https://github.com/tpope/vim-abolish"&gt;abolish&lt;/a&gt; plugin.&lt;/em&gt;&lt;/p&gt;
 
@@ -441,8 +442,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/49-enhanced-abbreviations-with-abolish.html</link>
       <guid isPermaLink="false">episodes/49-enhanced-abbreviations-with-abolish.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;Vim's built-in abbreviation feature is handy if you want to auto-correct words that you frequently misspell, but it requires a lot of setup. The...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;Vim's built-in abbreviation feature is handy if you want to auto-correct words that you frequently misspell, but it requires a lot of setup. The &lt;code&gt;:Abolish&lt;/code&gt; command makes it easy to generate abbreviations that will correct multiple forms of the same word.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;Vim&amp;rsquo;s built-in abbreviation feature is handy if you want to auto-correct words that you frequently misspell, but it requires a lot of setu...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;Vim&amp;rsquo;s built-in abbreviation feature is handy if you want to auto-correct words that you frequently misspell, but it requires a lot of setup. The &lt;code&gt;:Abolish&lt;/code&gt; command makes it easy to generate abbreviations that will correct multiple forms of the same word.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;This is the final of a three-part series on Tim Pope’s &lt;a href="https://github.com/tpope/vim-abolish"&gt;abolish&lt;/a&gt; plugin.&lt;/em&gt;&lt;/p&gt;
 
@@ -452,9 +453,9 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Supercharged substitution with :Subvert</title>
-      <description>&lt;p&gt;The &lt;a href="https://github.com/tpope/vim-abolish"&gt;abolish plugin&lt;/a&gt; provides a command called &lt;code&gt;:Subvert&lt;/code&gt;, which is like a supercharged version of Vim's built-in &lt;code&gt;:substitute&lt;/code&gt; command. The &lt;code&gt;:Subvert&lt;/code&gt; command is especially useful for changing singular and plural variants of a word, and for refactoring names that appear in &lt;code&gt;snake_case&lt;/code&gt; and &lt;code&gt;MixedCase&lt;/code&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;The &lt;a href="https://github.com/tpope/vim-abolish"&gt;abolish plugin&lt;/a&gt; provides a command called &lt;code&gt;:Subvert&lt;/code&gt;, which is like a supercharged version of Vim&amp;rsquo;s built-in &lt;code&gt;:substitute&lt;/code&gt; command. The &lt;code&gt;:Subvert&lt;/code&gt; command is especially useful for changing singular and plural variants of a word, and for refactoring names that appear in &lt;code&gt;snake_case&lt;/code&gt; and &lt;code&gt;MixedCase&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;This is part two of a three-part series on Tim Pope's &lt;a href="https://github.com/tpope/vim-abolish"&gt;abolish&lt;/a&gt; plugin.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This is part two of a three-part series on Tim Pope&amp;rsquo;s &lt;a href="https://github.com/tpope/vim-abolish"&gt;abolish&lt;/a&gt; plugin.&lt;/em&gt;&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 22 Apr 2013 00:00:00 +0000</pubDate>
@@ -463,9 +464,9 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <guid isPermaLink="false">episodes/48-supercharged-substitution-with-subvert.html</guid>
       <itunes:author>Drew Neil</itunes:author>
       <itunes:subtitle>&lt;p&gt;The &lt;a href="https://github.com/tpope/vim-abolish"&gt;abolish plugin&lt;/a&gt; provides a command called &lt;code&gt;:Subvert&lt;/code&gt;, which is like a superchar...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;The &lt;a href="https://github.com/tpope/vim-abolish"&gt;abolish plugin&lt;/a&gt; provides a command called &lt;code&gt;:Subvert&lt;/code&gt;, which is like a supercharged version of Vim's built-in &lt;code&gt;:substitute&lt;/code&gt; command. The &lt;code&gt;:Subvert&lt;/code&gt; command is especially useful for changing singular and plural variants of a word, and for refactoring names that appear in &lt;code&gt;snake_case&lt;/code&gt; and &lt;code&gt;MixedCase&lt;/code&gt;.&lt;/p&gt;
+      <itunes:summary>&lt;p&gt;The &lt;a href="https://github.com/tpope/vim-abolish"&gt;abolish plugin&lt;/a&gt; provides a command called &lt;code&gt;:Subvert&lt;/code&gt;, which is like a supercharged version of Vim&amp;rsquo;s built-in &lt;code&gt;:substitute&lt;/code&gt; command. The &lt;code&gt;:Subvert&lt;/code&gt; command is especially useful for changing singular and plural variants of a word, and for refactoring names that appear in &lt;code&gt;snake_case&lt;/code&gt; and &lt;code&gt;MixedCase&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;This is part two of a three-part series on Tim Pope's &lt;a href="https://github.com/tpope/vim-abolish"&gt;abolish&lt;/a&gt; plugin.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This is part two of a three-part series on Tim Pope&amp;rsquo;s &lt;a href="https://github.com/tpope/vim-abolish"&gt;abolish&lt;/a&gt; plugin.&lt;/em&gt;&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -473,9 +474,9 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Smart search with :Subvert</title>
-      <description>&lt;p&gt;The &lt;code&gt;:Subvert&lt;/code&gt; command lets us create a particular style of regular expressions with ease. It's great for matching irregular singular and plural words in plain English and also for variable names that come in &lt;code&gt;snake_case&lt;/code&gt; and &lt;code&gt;MixedCase&lt;/code&gt; forms.&lt;/p&gt;
+      <description>&lt;p&gt;The &lt;code&gt;:Subvert&lt;/code&gt; command lets us create a particular style of regular expressions with ease. It&amp;rsquo;s great for matching irregular singular and plural words in plain English and also for variable names that come in &lt;code&gt;snake_case&lt;/code&gt; and &lt;code&gt;MixedCase&lt;/code&gt; forms.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;This is part one of a three-part series on Tim Pope's abolish plugin.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This is part one of a three-part series on Tim Pope&amp;rsquo;s abolish plugin.&lt;/em&gt;&lt;/p&gt;
 
 </description>
       <pubDate>Fri, 12 Apr 2013 00:00:00 +0000</pubDate>
@@ -483,10 +484,10 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/47-smart-search-with-subvert.html</link>
       <guid isPermaLink="false">episodes/47-smart-search-with-subvert.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;The &lt;code&gt;:Subvert&lt;/code&gt; command lets us create a particular style of regular expressions with ease. It's great for matching irregular singular...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;The &lt;code&gt;:Subvert&lt;/code&gt; command lets us create a particular style of regular expressions with ease. It's great for matching irregular singular and plural words in plain English and also for variable names that come in &lt;code&gt;snake_case&lt;/code&gt; and &lt;code&gt;MixedCase&lt;/code&gt; forms.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;The &lt;code&gt;:Subvert&lt;/code&gt; command lets us create a particular style of regular expressions with ease. It&amp;rsquo;s great for matching irregular si...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;The &lt;code&gt;:Subvert&lt;/code&gt; command lets us create a particular style of regular expressions with ease. It&amp;rsquo;s great for matching irregular singular and plural words in plain English and also for variable names that come in &lt;code&gt;snake_case&lt;/code&gt; and &lt;code&gt;MixedCase&lt;/code&gt; forms.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;This is part one of a three-part series on Tim Pope's abolish plugin.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This is part one of a three-part series on Tim Pope&amp;rsquo;s abolish plugin.&lt;/em&gt;&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -511,7 +512,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Project-wide find and replace</title>
-      <description>&lt;p&gt;Vim doesn't have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as &lt;code&gt;:substitute&lt;/code&gt;, &lt;code&gt;:argdo&lt;/code&gt;, and &lt;code&gt;:vimgrep&lt;/code&gt;. We'll look at two possible strategies: first using the arglist, then the quickfix list.&lt;/p&gt;
+      <description>&lt;p&gt;Vim doesn&amp;rsquo;t have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as &lt;code&gt;:substitute&lt;/code&gt;, &lt;code&gt;:argdo&lt;/code&gt;, and &lt;code&gt;:vimgrep&lt;/code&gt;. We&amp;rsquo;ll look at two possible strategies: first using the arglist, then the quickfix list.&lt;/p&gt;
 
 </description>
       <pubDate>Tue, 19 Mar 2013 00:00:00 +0000</pubDate>
@@ -519,8 +520,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/45-project-wide-find-and-replace.html</link>
       <guid isPermaLink="false">episodes/45-project-wide-find-and-replace.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;Vim doesn't have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex command...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;Vim doesn't have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as &lt;code&gt;:substitute&lt;/code&gt;, &lt;code&gt;:argdo&lt;/code&gt;, and &lt;code&gt;:vimgrep&lt;/code&gt;. We'll look at two possible strategies: first using the arglist, then the quickfix list.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;Vim doesn&amp;rsquo;t have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex c...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;Vim doesn&amp;rsquo;t have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as &lt;code&gt;:substitute&lt;/code&gt;, &lt;code&gt;:argdo&lt;/code&gt;, and &lt;code&gt;:vimgrep&lt;/code&gt;. We&amp;rsquo;ll look at two possible strategies: first using the arglist, then the quickfix list.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -528,7 +529,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Search multiple files with :vimgrep</title>
-      <description>&lt;p&gt;&lt;code&gt;vimgrep&lt;/code&gt; is Vim's built-in command for searching across multiple files. It's not so fast as external tools like ack and git-grep, but it has its uses. &lt;code&gt;vimgrep&lt;/code&gt; uses Vim's built-in regex engine, so you can reuse the patterns that work with Vim's standard search command. &lt;/p&gt;
+      <description>&lt;p&gt;&lt;code&gt;vimgrep&lt;/code&gt; is Vim&amp;rsquo;s built-in command for searching across multiple files. It&amp;rsquo;s not so fast as external tools like ack and git-grep, but it has its uses. &lt;code&gt;vimgrep&lt;/code&gt; uses Vim&amp;rsquo;s built-in regex engine, so you can reuse the patterns that work with Vim&amp;rsquo;s standard search command. &lt;/p&gt;
 
 </description>
       <pubDate>Fri, 01 Mar 2013 00:00:00 +0000</pubDate>
@@ -536,8 +537,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/44-search-multiple-files-with-vimgrep.html</link>
       <guid isPermaLink="false">episodes/44-search-multiple-files-with-vimgrep.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;&lt;code&gt;vimgrep&lt;/code&gt; is Vim's built-in command for searching across multiple files. It's not so fast as external tools like ack and git-grep, bu...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;&lt;code&gt;vimgrep&lt;/code&gt; is Vim's built-in command for searching across multiple files. It's not so fast as external tools like ack and git-grep, but it has its uses. &lt;code&gt;vimgrep&lt;/code&gt; uses Vim's built-in regex engine, so you can reuse the patterns that work with Vim's standard search command. &lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;&lt;code&gt;vimgrep&lt;/code&gt; is Vim&amp;rsquo;s built-in command for searching across multiple files. It&amp;rsquo;s not so fast as external tools like ack and ...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;&lt;code&gt;vimgrep&lt;/code&gt; is Vim&amp;rsquo;s built-in command for searching across multiple files. It&amp;rsquo;s not so fast as external tools like ack and git-grep, but it has its uses. &lt;code&gt;vimgrep&lt;/code&gt; uses Vim&amp;rsquo;s built-in regex engine, so you can reuse the patterns that work with Vim&amp;rsquo;s standard search command. &lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -545,7 +546,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Using :argdo to change multiple files</title>
-      <description>&lt;p&gt;The &lt;code&gt;:argdo&lt;/code&gt; command allows us to execute an Ex command across all buffers in the arglist.  To demonstrate, we'll use the example of running the &lt;code&gt;:substitute&lt;/code&gt; command across multiple files, then we'll see how to revert or save the changes.  We'll also compare the &lt;code&gt;:argdo&lt;/code&gt; and &lt;code&gt;:bufdo&lt;/code&gt; commands, and consider when it's appropriate to use each one.&lt;/p&gt;
+      <description>&lt;p&gt;The &lt;code&gt;:argdo&lt;/code&gt; command allows us to execute an Ex command across all buffers in the arglist.  To demonstrate, we&amp;rsquo;ll use the example of running the &lt;code&gt;:substitute&lt;/code&gt; command across multiple files, then we&amp;rsquo;ll see how to revert or save the changes.  We&amp;rsquo;ll also compare the &lt;code&gt;:argdo&lt;/code&gt; and &lt;code&gt;:bufdo&lt;/code&gt; commands, and consider when it&amp;rsquo;s appropriate to use each one.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 25 Feb 2013 00:00:00 +0000</pubDate>
@@ -553,8 +554,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/43-using-argdo-to-change-multiple-files.html</link>
       <guid isPermaLink="false">episodes/43-using-argdo-to-change-multiple-files.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;The &lt;code&gt;:argdo&lt;/code&gt; command allows us to execute an Ex command across all buffers in the arglist.  To demonstrate, we'll use the example of ...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;The &lt;code&gt;:argdo&lt;/code&gt; command allows us to execute an Ex command across all buffers in the arglist.  To demonstrate, we'll use the example of running the &lt;code&gt;:substitute&lt;/code&gt; command across multiple files, then we'll see how to revert or save the changes.  We'll also compare the &lt;code&gt;:argdo&lt;/code&gt; and &lt;code&gt;:bufdo&lt;/code&gt; commands, and consider when it's appropriate to use each one.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;The &lt;code&gt;:argdo&lt;/code&gt; command allows us to execute an Ex command across all buffers in the arglist.  To demonstrate, we&amp;rsquo;ll use the examp...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;The &lt;code&gt;:argdo&lt;/code&gt; command allows us to execute an Ex command across all buffers in the arglist.  To demonstrate, we&amp;rsquo;ll use the example of running the &lt;code&gt;:substitute&lt;/code&gt; command across multiple files, then we&amp;rsquo;ll see how to revert or save the changes.  We&amp;rsquo;ll also compare the &lt;code&gt;:argdo&lt;/code&gt; and &lt;code&gt;:bufdo&lt;/code&gt; commands, and consider when it&amp;rsquo;s appropriate to use each one.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -562,7 +563,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Populating the arglist</title>
-      <description>&lt;p&gt;The arglist wouldn't be much use if we had to quit and relaunch Vim every time we wanted to change its contents. In this episode, we'll learn how to set the contents of the arglist using the &lt;code&gt;:args&lt;/code&gt; command, which can receive filepaths, globs, or even backtick expressions.&lt;/p&gt;
+      <description>&lt;p&gt;The arglist wouldn&amp;rsquo;t be much use if we had to quit and relaunch Vim every time we wanted to change its contents. In this episode, we&amp;rsquo;ll learn how to set the contents of the arglist using the &lt;code&gt;:args&lt;/code&gt; command, which can receive filepaths, globs, or even backtick expressions.&lt;/p&gt;
 
 </description>
       <pubDate>Fri, 22 Feb 2013 00:00:00 +0000</pubDate>
@@ -570,8 +571,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/42-populating-the-arglist.html</link>
       <guid isPermaLink="false">episodes/42-populating-the-arglist.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;The arglist wouldn't be much use if we had to quit and relaunch Vim every time we wanted to change its contents. In this episode, we'll learn ho...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;The arglist wouldn't be much use if we had to quit and relaunch Vim every time we wanted to change its contents. In this episode, we'll learn how to set the contents of the arglist using the &lt;code&gt;:args&lt;/code&gt; command, which can receive filepaths, globs, or even backtick expressions.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;The arglist wouldn&amp;rsquo;t be much use if we had to quit and relaunch Vim every time we wanted to change its contents. In this episode, we&amp;rsquo...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;The arglist wouldn&amp;rsquo;t be much use if we had to quit and relaunch Vim every time we wanted to change its contents. In this episode, we&amp;rsquo;ll learn how to set the contents of the arglist using the &lt;code&gt;:args&lt;/code&gt; command, which can receive filepaths, globs, or even backtick expressions.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -579,7 +580,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Meet the arglist</title>
-      <description>&lt;p&gt;The arglist feature complements Vim's buffer list. In this episode, we'll learn a handful of commands for traversing the arglist. We'll see that it's useful to think of the arglist as a stable subset of the files in the buffer list.&lt;/p&gt;
+      <description>&lt;p&gt;The arglist feature complements Vim&amp;rsquo;s buffer list. In this episode, we&amp;rsquo;ll learn a handful of commands for traversing the arglist. We&amp;rsquo;ll see that it&amp;rsquo;s useful to think of the arglist as a stable subset of the files in the buffer list.&lt;/p&gt;
 
 </description>
       <pubDate>Tue, 19 Feb 2013 00:00:00 +0000</pubDate>
@@ -587,8 +588,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/41-meet-the-arglist.html</link>
       <guid isPermaLink="false">episodes/41-meet-the-arglist.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;The arglist feature complements Vim's buffer list. In this episode, we'll learn a handful of commands for traversing the arglist. We'll see that...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;The arglist feature complements Vim's buffer list. In this episode, we'll learn a handful of commands for traversing the arglist. We'll see that it's useful to think of the arglist as a stable subset of the files in the buffer list.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;The arglist feature complements Vim&amp;rsquo;s buffer list. In this episode, we&amp;rsquo;ll learn a handful of commands for traversing the arglist. We...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;The arglist feature complements Vim&amp;rsquo;s buffer list. In this episode, we&amp;rsquo;ll learn a handful of commands for traversing the arglist. We&amp;rsquo;ll see that it&amp;rsquo;s useful to think of the arglist as a stable subset of the files in the buffer list.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -596,7 +597,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Long-range line duplication</title>
-      <description>&lt;p&gt;When writing code, we can often save time by duplicating a line then changing one or two parts of that line to make it suit our purposes. In this episode, we'll compare a few techniques for duplicating lines, and we'll see that the &lt;code&gt;:copy&lt;/code&gt; Ex command is well suited to this task.&lt;/p&gt;
+      <description>&lt;p&gt;When writing code, we can often save time by duplicating a line then changing one or two parts of that line to make it suit our purposes. In this episode, we&amp;rsquo;ll compare a few techniques for duplicating lines, and we&amp;rsquo;ll see that the &lt;code&gt;:copy&lt;/code&gt; Ex command is well suited to this task.&lt;/p&gt;
 
 </description>
       <pubDate>Wed, 09 Jan 2013 00:00:00 +0000</pubDate>
@@ -605,7 +606,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <guid isPermaLink="false">episodes/40-long-range-line-duplication.html</guid>
       <itunes:author>Drew Neil</itunes:author>
       <itunes:subtitle>&lt;p&gt;When writing code, we can often save time by duplicating a line then changing one or two parts of that line to make it suit our purposes. In thi...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;When writing code, we can often save time by duplicating a line then changing one or two parts of that line to make it suit our purposes. In this episode, we'll compare a few techniques for duplicating lines, and we'll see that the &lt;code&gt;:copy&lt;/code&gt; Ex command is well suited to this task.&lt;/p&gt;
+      <itunes:summary>&lt;p&gt;When writing code, we can often save time by duplicating a line then changing one or two parts of that line to make it suit our purposes. In this episode, we&amp;rsquo;ll compare a few techniques for duplicating lines, and we&amp;rsquo;ll see that the &lt;code&gt;:copy&lt;/code&gt; Ex command is well suited to this task.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -613,7 +614,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Profiling Vimscript performance</title>
-      <description>&lt;p&gt;Vim users are unforgiving of plugins that impair performance. Luckily, Vim provides built-in profiling tools that make it easy to diagnose performance issues. We'll start by looking at how to profile the vimrc file, then move on to a real world scenario where profiling helped to identify and aleviate a performance bottleneck.&lt;/p&gt;
+      <description>&lt;p&gt;Vim users are unforgiving of plugins that impair performance. Luckily, Vim provides built-in profiling tools that make it easy to diagnose performance issues. We&amp;rsquo;ll start by looking at how to profile the vimrc file, then move on to a real world scenario where profiling helped to identify and aleviate a performance bottleneck.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 03 Dec 2012 00:00:00 +0000</pubDate>
@@ -622,7 +623,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <guid isPermaLink="false">episodes/39-profiling-vimscript-performance.html</guid>
       <itunes:author>Drew Neil</itunes:author>
       <itunes:subtitle>&lt;p&gt;Vim users are unforgiving of plugins that impair performance. Luckily, Vim provides built-in profiling tools that make it easy to diagnose perfo...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;Vim users are unforgiving of plugins that impair performance. Luckily, Vim provides built-in profiling tools that make it easy to diagnose performance issues. We'll start by looking at how to profile the vimrc file, then move on to a real world scenario where profiling helped to identify and aleviate a performance bottleneck.&lt;/p&gt;
+      <itunes:summary>&lt;p&gt;Vim users are unforgiving of plugins that impair performance. Luckily, Vim provides built-in profiling tools that make it easy to diagnose performance issues. We&amp;rsquo;ll start by looking at how to profile the vimrc file, then move on to a real world scenario where profiling helped to identify and aleviate a performance bottleneck.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -630,7 +631,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Writing a custom fold expression</title>
-      <description>&lt;p&gt;With a little bit of Vimscript, you can create a custom folding expression for any filetype. We'll start by looking at the mechanics of folding with markers, then go on to create a folding expression for markdown documents.&lt;/p&gt;
+      <description>&lt;p&gt;With a little bit of Vimscript, you can create a custom folding expression for any filetype. We&amp;rsquo;ll start by looking at the mechanics of folding with markers, then go on to create a folding expression for markdown documents.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 26 Nov 2012 00:00:00 +0000</pubDate>
@@ -638,8 +639,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/38-writing-a-custom-fold-expression.html</link>
       <guid isPermaLink="false">episodes/38-writing-a-custom-fold-expression.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;With a little bit of Vimscript, you can create a custom folding expression for any filetype. We'll start by looking at the mechanics of folding ...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;With a little bit of Vimscript, you can create a custom folding expression for any filetype. We'll start by looking at the mechanics of folding with markers, then go on to create a folding expression for markdown documents.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;With a little bit of Vimscript, you can create a custom folding expression for any filetype. We&amp;rsquo;ll start by looking at the mechanics of fo...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;With a little bit of Vimscript, you can create a custom folding expression for any filetype. We&amp;rsquo;ll start by looking at the mechanics of folding with markers, then go on to create a folding expression for markdown documents.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -647,7 +648,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>How to fold</title>
-      <description>&lt;p&gt;Vim's folding feature enables us to expand and collapse regions of a document. Not only does this allow us to organize our workspace, it also makes it easy to navigate around the document, and to rearrange entire sections as though they were single lines.&lt;/p&gt;
+      <description>&lt;p&gt;Vim&amp;rsquo;s folding feature enables us to expand and collapse regions of a document. Not only does this allow us to organize our workspace, it also makes it easy to navigate around the document, and to rearrange entire sections as though they were single lines.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 19 Nov 2012 00:00:00 +0000</pubDate>
@@ -655,8 +656,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/37-how-to-fold.html</link>
       <guid isPermaLink="false">episodes/37-how-to-fold.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;Vim's folding feature enables us to expand and collapse regions of a document. Not only does this allow us to organize our workspace, it also ma...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;Vim's folding feature enables us to expand and collapse regions of a document. Not only does this allow us to organize our workspace, it also makes it easy to navigate around the document, and to rearrange entire sections as though they were single lines.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;Vim&amp;rsquo;s folding feature enables us to expand and collapse regions of a document. Not only does this allow us to organize our workspace, it a...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;Vim&amp;rsquo;s folding feature enables us to expand and collapse regions of a document. Not only does this allow us to organize our workspace, it also makes it easy to navigate around the document, and to rearrange entire sections as though they were single lines.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -664,7 +665,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>VimGolf - Prime Numbers</title>
-      <description>&lt;p&gt;For the VimGolf challenge &lt;a href="http://vimgolf.com/challenges/4d1c27940e3d7832db000010"&gt;"List the first 100 prime numbers"&lt;/a&gt;, there's a solution that uses a regular expression to detect prime numbers. At 43 keystokes, it's not the winning solution, but I think it's the most interesting one. It uses a few clever Vim tricks, including macros, control-a to increment, the very magic pattern switch, and the &lt;code&gt;:global&lt;/code&gt; command. There's a lot to learn from those 43 keystrokes, so let's study it!&lt;/p&gt;
+      <description>&lt;p&gt;For the VimGolf challenge &lt;a href="http://vimgolf.com/challenges/4d1c27940e3d7832db000010"&gt;&amp;ldquo;List the first 100 prime numbers&amp;rdquo;&lt;/a&gt;, there&amp;rsquo;s a solution that uses a regular expression to detect prime numbers. At 43 keystokes, it&amp;rsquo;s not the winning solution, but I think it&amp;rsquo;s the most interesting one. It uses a few clever Vim tricks, including macros, control-a to increment, the very magic pattern switch, and the &lt;code&gt;:global&lt;/code&gt; command. There&amp;rsquo;s a lot to learn from those 43 keystrokes, so let&amp;rsquo;s study it!&lt;/p&gt;
 
 </description>
       <pubDate>Fri, 10 Aug 2012 00:00:00 +0000</pubDate>
@@ -672,8 +673,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/36-vimgolf-prime-numbers.html</link>
       <guid isPermaLink="false">episodes/36-vimgolf-prime-numbers.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;For the VimGolf challenge &lt;a href="http://vimgolf.com/challenges/4d1c27940e3d7832db000010"&gt;"List the first 100 prime numbers"&lt;/a&gt;, there's a sol...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;For the VimGolf challenge &lt;a href="http://vimgolf.com/challenges/4d1c27940e3d7832db000010"&gt;"List the first 100 prime numbers"&lt;/a&gt;, there's a solution that uses a regular expression to detect prime numbers. At 43 keystokes, it's not the winning solution, but I think it's the most interesting one. It uses a few clever Vim tricks, including macros, control-a to increment, the very magic pattern switch, and the &lt;code&gt;:global&lt;/code&gt; command. There's a lot to learn from those 43 keystrokes, so let's study it!&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;For the VimGolf challenge &lt;a href="http://vimgolf.com/challenges/4d1c27940e3d7832db000010"&gt;&amp;ldquo;List the first 100 prime numbers&amp;rdquo;&lt;/a&gt;, t...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;For the VimGolf challenge &lt;a href="http://vimgolf.com/challenges/4d1c27940e3d7832db000010"&gt;&amp;ldquo;List the first 100 prime numbers&amp;rdquo;&lt;/a&gt;, there&amp;rsquo;s a solution that uses a regular expression to detect prime numbers. At 43 keystokes, it&amp;rsquo;s not the winning solution, but I think it&amp;rsquo;s the most interesting one. It uses a few clever Vim tricks, including macros, control-a to increment, the very magic pattern switch, and the &lt;code&gt;:global&lt;/code&gt; command. There&amp;rsquo;s a lot to learn from those 43 keystrokes, so let&amp;rsquo;s study it!&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -681,7 +682,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Fugitive.vim - exploring the history of a git repository</title>
-      <description>&lt;p&gt;Git provides tools for searching the contents of files, commit messages, and even whether text was added or removed by a commit. In this episode, we'll see how fugitive's &lt;code&gt;Ggrep&lt;/code&gt; and &lt;code&gt;Glog&lt;/code&gt; commands wrap this functionality up so that we can search the contents and history of a git repo from right inside of Vim.&lt;/p&gt;
+      <description>&lt;p&gt;Git provides tools for searching the contents of files, commit messages, and even whether text was added or removed by a commit. In this episode, we&amp;rsquo;ll see how fugitive&amp;rsquo;s &lt;code&gt;Ggrep&lt;/code&gt; and &lt;code&gt;Glog&lt;/code&gt; commands wrap this functionality up so that we can search the contents and history of a git repo from right inside of Vim.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;This is the last of our five part series on fugitive.vim.&lt;/em&gt;&lt;/p&gt;
 
@@ -692,7 +693,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <guid isPermaLink="false">episodes/35-fugitive-vim-exploring-the-history-of-a-git-repository.html</guid>
       <itunes:author>Drew Neil</itunes:author>
       <itunes:subtitle>&lt;p&gt;Git provides tools for searching the contents of files, commit messages, and even whether text was added or removed by a commit. In this episode...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;Git provides tools for searching the contents of files, commit messages, and even whether text was added or removed by a commit. In this episode, we'll see how fugitive's &lt;code&gt;Ggrep&lt;/code&gt; and &lt;code&gt;Glog&lt;/code&gt; commands wrap this functionality up so that we can search the contents and history of a git repo from right inside of Vim.&lt;/p&gt;
+      <itunes:summary>&lt;p&gt;Git provides tools for searching the contents of files, commit messages, and even whether text was added or removed by a commit. In this episode, we&amp;rsquo;ll see how fugitive&amp;rsquo;s &lt;code&gt;Ggrep&lt;/code&gt; and &lt;code&gt;Glog&lt;/code&gt; commands wrap this functionality up so that we can search the contents and history of a git repo from right inside of Vim.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;This is the last of our five part series on fugitive.vim.&lt;/em&gt;&lt;/p&gt;
 
@@ -702,7 +703,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Fugitive.vim - browsing the git object database</title>
-      <description>&lt;p&gt;With the fugitive plugin, you're not limited to just working with files in your working tree. The &lt;code&gt;:Gedit&lt;/code&gt; command allows you to open files in other branches, and to browse any &lt;a href="http://book.git-scm.com/1_the_git_object_model.html"&gt;git object&lt;/a&gt;, including tags, commits and trees. Plus, if your repository is hosted on github, you can easily bring up the webpage for any git object using the &lt;code&gt;:Gbrowse&lt;/code&gt; command.&lt;/p&gt;
+      <description>&lt;p&gt;With the fugitive plugin, you&amp;rsquo;re not limited to just working with files in your working tree. The &lt;code&gt;:Gedit&lt;/code&gt; command allows you to open files in other branches, and to browse any &lt;a href="http://book.git-scm.com/1_the_git_object_model.html"&gt;git object&lt;/a&gt;, including tags, commits and trees. Plus, if your repository is hosted on github, you can easily bring up the webpage for any git object using the &lt;code&gt;:Gbrowse&lt;/code&gt; command.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;This is the penultimate of a five part series on fugitive.vim.&lt;/em&gt;&lt;/p&gt;
 
@@ -712,8 +713,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/34-fugitive-vim-browsing-the-git-object-database.html</link>
       <guid isPermaLink="false">episodes/34-fugitive-vim-browsing-the-git-object-database.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;With the fugitive plugin, you're not limited to just working with files in your working tree. The &lt;code&gt;:Gedit&lt;/code&gt; command allows you to open...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;With the fugitive plugin, you're not limited to just working with files in your working tree. The &lt;code&gt;:Gedit&lt;/code&gt; command allows you to open files in other branches, and to browse any &lt;a href="http://book.git-scm.com/1_the_git_object_model.html"&gt;git object&lt;/a&gt;, including tags, commits and trees. Plus, if your repository is hosted on github, you can easily bring up the webpage for any git object using the &lt;code&gt;:Gbrowse&lt;/code&gt; command.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;With the fugitive plugin, you&amp;rsquo;re not limited to just working with files in your working tree. The &lt;code&gt;:Gedit&lt;/code&gt; command allows you t...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;With the fugitive plugin, you&amp;rsquo;re not limited to just working with files in your working tree. The &lt;code&gt;:Gedit&lt;/code&gt; command allows you to open files in other branches, and to browse any &lt;a href="http://book.git-scm.com/1_the_git_object_model.html"&gt;git object&lt;/a&gt;, including tags, commits and trees. Plus, if your repository is hosted on github, you can easily bring up the webpage for any git object using the &lt;code&gt;:Gbrowse&lt;/code&gt; command.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;This is the penultimate of a five part series on fugitive.vim.&lt;/em&gt;&lt;/p&gt;
 
@@ -723,7 +724,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Fugitive.vim - resolving merge conflicts with vimdiff</title>
-      <description>&lt;p&gt;When git branches are merged, there is always the chance of a conflict arising if a file was modified in both the target and merge branches. You can resolve merge conflicts using a combination of fugitive's &lt;code&gt;:Gdiff&lt;/code&gt; command, and Vim's built in &lt;code&gt;diffget&lt;/code&gt; and &lt;code&gt;diffput&lt;/code&gt;. In this episode, we'll find out how.&lt;/p&gt;
+      <description>&lt;p&gt;When git branches are merged, there is always the chance of a conflict arising if a file was modified in both the target and merge branches. You can resolve merge conflicts using a combination of fugitive&amp;rsquo;s &lt;code&gt;:Gdiff&lt;/code&gt; command, and Vim&amp;rsquo;s built in &lt;code&gt;diffget&lt;/code&gt; and &lt;code&gt;diffput&lt;/code&gt;. In this episode, we&amp;rsquo;ll find out how.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;This is the third in a five part series on fugitive.vim.&lt;/em&gt;&lt;/p&gt;
 
@@ -734,7 +735,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <guid isPermaLink="false">episodes/33-fugitive-vim-resolving-merge-conflicts-with-vimdiff.html</guid>
       <itunes:author>Drew Neil</itunes:author>
       <itunes:subtitle>&lt;p&gt;When git branches are merged, there is always the chance of a conflict arising if a file was modified in both the target and merge branches. You...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;When git branches are merged, there is always the chance of a conflict arising if a file was modified in both the target and merge branches. You can resolve merge conflicts using a combination of fugitive's &lt;code&gt;:Gdiff&lt;/code&gt; command, and Vim's built in &lt;code&gt;diffget&lt;/code&gt; and &lt;code&gt;diffput&lt;/code&gt;. In this episode, we'll find out how.&lt;/p&gt;
+      <itunes:summary>&lt;p&gt;When git branches are merged, there is always the chance of a conflict arising if a file was modified in both the target and merge branches. You can resolve merge conflicts using a combination of fugitive&amp;rsquo;s &lt;code&gt;:Gdiff&lt;/code&gt; command, and Vim&amp;rsquo;s built in &lt;code&gt;diffget&lt;/code&gt; and &lt;code&gt;diffput&lt;/code&gt;. In this episode, we&amp;rsquo;ll find out how.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;This is the third in a five part series on fugitive.vim.&lt;/em&gt;&lt;/p&gt;
 
@@ -744,9 +745,9 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Fugitive.vim - working with the git index</title>
-      <description>&lt;p&gt;The fugitive plugin provides an interactive status window, where you can easily stage and review your changes for the next commit. The &lt;code&gt;:Gdiff&lt;/code&gt; command visualizes the changes made to a file, by comparing the working copy with the index. In this episode, we'll learn how to stage hunks of changes to the index without using the &lt;code&gt;git add --patch&lt;/code&gt; command.&lt;/p&gt;
+      <description>&lt;p&gt;The fugitive plugin provides an interactive status window, where you can easily stage and review your changes for the next commit. The &lt;code&gt;:Gdiff&lt;/code&gt; command visualizes the changes made to a file, by comparing the working copy with the index. In this episode, we&amp;rsquo;ll learn how to stage hunks of changes to the index without using the &lt;code&gt;git add --patch&lt;/code&gt; command.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;This is the second of a five part series on fugitive.vim. In the next episode, we'll learn how to resolve a git merge conflict by performing a 3-way vimdiff.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This is the second of a five part series on fugitive.vim. In the next episode, we&amp;rsquo;ll learn how to resolve a git merge conflict by performing a 3-way vimdiff.&lt;/em&gt;&lt;/p&gt;
 
 </description>
       <pubDate>Fri, 29 Apr 2011 00:00:00 +0000</pubDate>
@@ -755,9 +756,9 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <guid isPermaLink="false">episodes/32-fugitive-vim-working-with-the-git-index.html</guid>
       <itunes:author>Drew Neil</itunes:author>
       <itunes:subtitle>&lt;p&gt;The fugitive plugin provides an interactive status window, where you can easily stage and review your changes for the next commit. The &lt;code&gt;:Gd...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;The fugitive plugin provides an interactive status window, where you can easily stage and review your changes for the next commit. The &lt;code&gt;:Gdiff&lt;/code&gt; command visualizes the changes made to a file, by comparing the working copy with the index. In this episode, we'll learn how to stage hunks of changes to the index without using the &lt;code&gt;git add --patch&lt;/code&gt; command.&lt;/p&gt;
+      <itunes:summary>&lt;p&gt;The fugitive plugin provides an interactive status window, where you can easily stage and review your changes for the next commit. The &lt;code&gt;:Gdiff&lt;/code&gt; command visualizes the changes made to a file, by comparing the working copy with the index. In this episode, we&amp;rsquo;ll learn how to stage hunks of changes to the index without using the &lt;code&gt;git add --patch&lt;/code&gt; command.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;This is the second of a five part series on fugitive.vim. In the next episode, we'll learn how to resolve a git merge conflict by performing a 3-way vimdiff.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This is the second of a five part series on fugitive.vim. In the next episode, we&amp;rsquo;ll learn how to resolve a git merge conflict by performing a 3-way vimdiff.&lt;/em&gt;&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -765,7 +766,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Fugitive.vim - a complement to command line git</title>
-      <description>&lt;p&gt;&lt;a href="https://github.com/tpope/vim-fugitive"&gt;The fugitive plugin&lt;/a&gt;, by Tim Pope, is a git wrapper for Vim. It  complements the command line interface to git, but doesn't aim to replace it. In this episode, we'll see how some of fugitive's commands can streamline your workflow.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href="https://github.com/tpope/vim-fugitive"&gt;The fugitive plugin&lt;/a&gt;, by Tim Pope, is a git wrapper for Vim. It  complements the command line interface to git, but doesn&amp;rsquo;t aim to replace it. In this episode, we&amp;rsquo;ll see how some of fugitive&amp;rsquo;s commands can streamline your workflow.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;This is the first of a five part series on fugitive.&lt;/em&gt;&lt;/p&gt;
 
@@ -776,7 +777,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <guid isPermaLink="false">episodes/31-fugitive-vim---a-complement-to-command-line-git.html</guid>
       <itunes:author>Drew Neil</itunes:author>
       <itunes:subtitle>&lt;p&gt;&lt;a href="https://github.com/tpope/vim-fugitive"&gt;The fugitive plugin&lt;/a&gt;, by Tim Pope, is a git wrapper for Vim. It  complements the command line...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;&lt;a href="https://github.com/tpope/vim-fugitive"&gt;The fugitive plugin&lt;/a&gt;, by Tim Pope, is a git wrapper for Vim. It  complements the command line interface to git, but doesn't aim to replace it. In this episode, we'll see how some of fugitive's commands can streamline your workflow.&lt;/p&gt;
+      <itunes:summary>&lt;p&gt;&lt;a href="https://github.com/tpope/vim-fugitive"&gt;The fugitive plugin&lt;/a&gt;, by Tim Pope, is a git wrapper for Vim. It  complements the command line interface to git, but doesn&amp;rsquo;t aim to replace it. In this episode, we&amp;rsquo;ll see how some of fugitive&amp;rsquo;s commands can streamline your workflow.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;This is the first of a five part series on fugitive.&lt;/em&gt;&lt;/p&gt;
 
@@ -820,7 +821,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Refining search patterns with the command-line window</title>
-      <description>&lt;p&gt;When you need to build a complex command, or devise a non-trivial search pattern, Vim's command-line mode can be rather limiting. In this episode, I will introduce the command-line window, which allows you to use the full power of Vim when editing search queries and commands.&lt;/p&gt;
+      <description>&lt;p&gt;When you need to build a complex command, or devise a non-trivial search pattern, Vim&amp;rsquo;s command-line mode can be rather limiting. In this episode, I will introduce the command-line window, which allows you to use the full power of Vim when editing search queries and commands.&lt;/p&gt;
 
 </description>
       <pubDate>Sun, 21 Nov 2010 00:00:00 +0000</pubDate>
@@ -828,8 +829,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/28-refining-search-patterns-with-the-command-line-window.html</link>
       <guid isPermaLink="false">episodes/28-refining-search-patterns-with-the-command-line-window.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;When you need to build a complex command, or devise a non-trivial search pattern, Vim's command-line mode can be rather limiting. In this episod...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;When you need to build a complex command, or devise a non-trivial search pattern, Vim's command-line mode can be rather limiting. In this episode, I will introduce the command-line window, which allows you to use the full power of Vim when editing search queries and commands.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;When you need to build a complex command, or devise a non-trivial search pattern, Vim&amp;rsquo;s command-line mode can be rather limiting. In this ...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;When you need to build a complex command, or devise a non-trivial search pattern, Vim&amp;rsquo;s command-line mode can be rather limiting. In this episode, I will introduce the command-line window, which allows you to use the full power of Vim when editing search queries and commands.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -871,7 +872,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Creating colorschemes for Vim</title>
-      <description>&lt;p&gt;Choosing a colorscheme that you find pleasing to look at is essential if you want to be comfortable working with Vim. There are hundreds of colorschemes available, but what if you can't find one that you like? In this episode, I'll share a few tips that make it easy to create colorschemes for Vim.&lt;/p&gt;
+      <description>&lt;p&gt;Choosing a colorscheme that you find pleasing to look at is essential if you want to be comfortable working with Vim. There are hundreds of colorschemes available, but what if you can&amp;rsquo;t find one that you like? In this episode, I&amp;rsquo;ll share a few tips that make it easy to create colorschemes for Vim.&lt;/p&gt;
 
 </description>
       <pubDate>Tue, 28 Sep 2010 00:00:00 +0000</pubDate>
@@ -880,7 +881,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <guid isPermaLink="false">episodes/25-creating-colorschemes-for-vim.html</guid>
       <itunes:author>Drew Neil</itunes:author>
       <itunes:subtitle>&lt;p&gt;Choosing a colorscheme that you find pleasing to look at is essential if you want to be comfortable working with Vim. There are hundreds of colo...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;Choosing a colorscheme that you find pleasing to look at is essential if you want to be comfortable working with Vim. There are hundreds of colorschemes available, but what if you can't find one that you like? In this episode, I'll share a few tips that make it easy to create colorschemes for Vim.&lt;/p&gt;
+      <itunes:summary>&lt;p&gt;Choosing a colorscheme that you find pleasing to look at is essential if you want to be comfortable working with Vim. There are hundreds of colorschemes available, but what if you can&amp;rsquo;t find one that you like? In this episode, I&amp;rsquo;ll share a few tips that make it easy to create colorschemes for Vim.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -905,7 +906,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Converting HAML to ERB with Vim macros</title>
-      <description>&lt;p&gt;HAML and ERB are two commonly used ruby templating languages. You may have a strong preference for one or the other, but it's not always up to you which one you use. I was recently asked to convert several HAML files to ERB format. In this episode, I will demonstrate a couple of Vim macros that helped make short work of the task. &lt;/p&gt;
+      <description>&lt;p&gt;HAML and ERB are two commonly used ruby templating languages. You may have a strong preference for one or the other, but it&amp;rsquo;s not always up to you which one you use. I was recently asked to convert several HAML files to ERB format. In this episode, I will demonstrate a couple of Vim macros that helped make short work of the task. &lt;/p&gt;
 
 </description>
       <pubDate>Thu, 08 Jul 2010 00:00:00 +0000</pubDate>
@@ -913,8 +914,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/23-converting-haml-to-erb-with-vim-macros.html</link>
       <guid isPermaLink="false">episodes/23-converting-haml-to-erb-with-vim-macros.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;HAML and ERB are two commonly used ruby templating languages. You may have a strong preference for one or the other, but it's not always up to y...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;HAML and ERB are two commonly used ruby templating languages. You may have a strong preference for one or the other, but it's not always up to you which one you use. I was recently asked to convert several HAML files to ERB format. In this episode, I will demonstrate a couple of Vim macros that helped make short work of the task. &lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;HAML and ERB are two commonly used ruby templating languages. You may have a strong preference for one or the other, but it&amp;rsquo;s not always u...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;HAML and ERB are two commonly used ruby templating languages. You may have a strong preference for one or the other, but it&amp;rsquo;s not always up to you which one you use. I was recently asked to convert several HAML files to ERB format. In this episode, I will demonstrate a couple of Vim macros that helped make short work of the task. &lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -922,7 +923,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Selecting columns with visual block mode</title>
-      <description>&lt;p&gt;If you want to edit several adjacent lines with a similar format, you might save a lot of time by making a columnar selection. This episode will demonstrate how to achieve this using Vim's visual block mode.&lt;/p&gt;
+      <description>&lt;p&gt;If you want to edit several adjacent lines with a similar format, you might save a lot of time by making a columnar selection. This episode will demonstrate how to achieve this using Vim&amp;rsquo;s visual block mode.&lt;/p&gt;
 
 </description>
       <pubDate>Sun, 20 Jun 2010 00:00:00 +0000</pubDate>
@@ -931,7 +932,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <guid isPermaLink="false">episodes/22-selecting-columns-with-visual-block-mode.html</guid>
       <itunes:author>Drew Neil</itunes:author>
       <itunes:subtitle>&lt;p&gt;If you want to edit several adjacent lines with a similar format, you might save a lot of time by making a columnar selection. This episode will...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;If you want to edit several adjacent lines with a similar format, you might save a lot of time by making a columnar selection. This episode will demonstrate how to achieve this using Vim's visual block mode.&lt;/p&gt;
+      <itunes:summary>&lt;p&gt;If you want to edit several adjacent lines with a similar format, you might save a lot of time by making a columnar selection. This episode will demonstrate how to achieve this using Vim&amp;rsquo;s visual block mode.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -956,7 +957,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Running Vim within IRB</title>
-      <description>&lt;p&gt;If you work with ruby you will know that the interactive ruby shell, or 'IRB' for short, is a useful sketchpad for coding. But the command line interface of IRB can feel quite limiting in comparison with the power of your text editor. In this episode, I'm going to demonstrate how you can get the best of both worlds, by loading Vim from inside IRB.&lt;/p&gt;
+      <description>&lt;p&gt;If you work with ruby you will know that the interactive ruby shell, or &amp;lsquo;IRB&amp;rsquo; for short, is a useful sketchpad for coding. But the command line interface of IRB can feel quite limiting in comparison with the power of your text editor. In this episode, I&amp;rsquo;m going to demonstrate how you can get the best of both worlds, by loading Vim from inside IRB.&lt;/p&gt;
 
 </description>
       <pubDate>Sun, 16 May 2010 00:00:00 +0000</pubDate>
@@ -964,8 +965,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/20-running-vim-within-irb.html</link>
       <guid isPermaLink="false">episodes/20-running-vim-within-irb.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;If you work with ruby you will know that the interactive ruby shell, or 'IRB' for short, is a useful sketchpad for coding. But the command line ...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;If you work with ruby you will know that the interactive ruby shell, or 'IRB' for short, is a useful sketchpad for coding. But the command line interface of IRB can feel quite limiting in comparison with the power of your text editor. In this episode, I'm going to demonstrate how you can get the best of both worlds, by loading Vim from inside IRB.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;If you work with ruby you will know that the interactive ruby shell, or &amp;lsquo;IRB&amp;rsquo; for short, is a useful sketchpad for coding. But the c...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;If you work with ruby you will know that the interactive ruby shell, or &amp;lsquo;IRB&amp;rsquo; for short, is a useful sketchpad for coding. But the command line interface of IRB can feel quite limiting in comparison with the power of your text editor. In this episode, I&amp;rsquo;m going to demonstrate how you can get the best of both worlds, by loading Vim from inside IRB.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -973,7 +974,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Spell checking</title>
-      <description>&lt;p&gt;Using a spell checker is a good habit to get into.  In this episode, I demonstrate how to use Vim's built in spell checking feature.&lt;/p&gt;
+      <description>&lt;p&gt;Using a spell checker is a good habit to get into.  In this episode, I demonstrate how to use Vim&amp;rsquo;s built in spell checking feature.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 10 May 2010 00:00:00 +0000</pubDate>
@@ -981,10 +982,10 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/19-spell-checking.html</link>
       <guid isPermaLink="false">episodes/19-spell-checking.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;Using a spell checker is a good habit to get into.  In this episode, I demonstrate how to use Vim's built in spell checking feature.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;Using a spell checker is a good habit to get into.  In this episode, I demonstrate how to use Vim&amp;rsquo;s built in spell checking feature.&lt;/p&gt;
 
 </itunes:subtitle>
-      <itunes:summary>&lt;p&gt;Using a spell checker is a good habit to get into.  In this episode, I demonstrate how to use Vim's built in spell checking feature.&lt;/p&gt;
+      <itunes:summary>&lt;p&gt;Using a spell checker is a good habit to get into.  In this episode, I demonstrate how to use Vim&amp;rsquo;s built in spell checking feature.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -992,7 +993,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Formatting text with par</title>
-      <description>&lt;p&gt;'Do one thing and do it well' is the principle of the Unix toolkit. Editing text is a broad domain, and there are many related tasks with which it overlaps. Vim acknowledges this by enabling certain tasks to be outsourced to external programs which do that one thing, and do it well. This episode will demonstrate how the &lt;em&gt;par&lt;/em&gt; program can be used for formatting text.&lt;/p&gt;
+      <description>&lt;p&gt;&amp;lsquo;Do one thing and do it well&amp;rsquo; is the principle of the Unix toolkit. Editing text is a broad domain, and there are many related tasks with which it overlaps. Vim acknowledges this by enabling certain tasks to be outsourced to external programs which do that one thing, and do it well. This episode will demonstrate how the &lt;em&gt;par&lt;/em&gt; program can be used for formatting text.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 03 May 2010 00:00:00 +0000</pubDate>
@@ -1000,8 +1001,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/18-formatting-text-with-par.html</link>
       <guid isPermaLink="false">episodes/18-formatting-text-with-par.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;'Do one thing and do it well' is the principle of the Unix toolkit. Editing text is a broad domain, and there are many related tasks with which ...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;'Do one thing and do it well' is the principle of the Unix toolkit. Editing text is a broad domain, and there are many related tasks with which it overlaps. Vim acknowledges this by enabling certain tasks to be outsourced to external programs which do that one thing, and do it well. This episode will demonstrate how the &lt;em&gt;par&lt;/em&gt; program can be used for formatting text.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;&amp;lsquo;Do one thing and do it well&amp;rsquo; is the principle of the Unix toolkit. Editing text is a broad domain, and there are many related tasks...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;&amp;lsquo;Do one thing and do it well&amp;rsquo; is the principle of the Unix toolkit. Editing text is a broad domain, and there are many related tasks with which it overlaps. Vim acknowledges this by enabling certain tasks to be outsourced to external programs which do that one thing, and do it well. This episode will demonstrate how the &lt;em&gt;par&lt;/em&gt; program can be used for formatting text.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -1009,7 +1010,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Hard wrapping text</title>
-      <description>&lt;p&gt;It is sometimes preferable to format text with hard wrapped lines, for example when writing emails in plaintext. Vim can apply this style of formatting for you. This episode shows some of the options which allow you to customize Vim's text formatting.&lt;/p&gt;
+      <description>&lt;p&gt;It is sometimes preferable to format text with hard wrapped lines, for example when writing emails in plaintext. Vim can apply this style of formatting for you. This episode shows some of the options which allow you to customize Vim&amp;rsquo;s text formatting.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 26 Apr 2010 00:00:00 +0000</pubDate>
@@ -1018,7 +1019,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <guid isPermaLink="false">episodes/17-hard-wrapping-text.html</guid>
       <itunes:author>Drew Neil</itunes:author>
       <itunes:subtitle>&lt;p&gt;It is sometimes preferable to format text with hard wrapped lines, for example when writing emails in plaintext. Vim can apply this style of for...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;It is sometimes preferable to format text with hard wrapped lines, for example when writing emails in plaintext. Vim can apply this style of formatting for you. This episode shows some of the options which allow you to customize Vim's text formatting.&lt;/p&gt;
+      <itunes:summary>&lt;p&gt;It is sometimes preferable to format text with hard wrapped lines, for example when writing emails in plaintext. Vim can apply this style of formatting for you. This episode shows some of the options which allow you to customize Vim&amp;rsquo;s text formatting.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -1026,7 +1027,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Soft wrapping text</title>
-      <description>&lt;p&gt;Long lines of text can be wrapped if they don't fit inside the window. By default, Vim will happily split in the middle of a word. This episode demonstrates how to use the 'linebreak' option to make Vim break lines without breaking words.&lt;/p&gt;
+      <description>&lt;p&gt;Long lines of text can be wrapped if they don&amp;rsquo;t fit inside the window. By default, Vim will happily split in the middle of a word. This episode demonstrates how to use the &amp;lsquo;linebreak&amp;rsquo; option to make Vim break lines without breaking words.&lt;/p&gt;
 
 </description>
       <pubDate>Tue, 20 Apr 2010 00:00:00 +0000</pubDate>
@@ -1034,8 +1035,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/16-soft-wrapping-text.html</link>
       <guid isPermaLink="false">episodes/16-soft-wrapping-text.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;Long lines of text can be wrapped if they don't fit inside the window. By default, Vim will happily split in the middle of a word. This episode ...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;Long lines of text can be wrapped if they don't fit inside the window. By default, Vim will happily split in the middle of a word. This episode demonstrates how to use the 'linebreak' option to make Vim break lines without breaking words.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;Long lines of text can be wrapped if they don&amp;rsquo;t fit inside the window. By default, Vim will happily split in the middle of a word. This ep...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;Long lines of text can be wrapped if they don&amp;rsquo;t fit inside the window. By default, Vim will happily split in the middle of a word. This episode demonstrates how to use the &amp;lsquo;linebreak&amp;rsquo; option to make Vim break lines without breaking words.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -1043,7 +1044,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>The file explorer</title>
-      <description>&lt;p&gt;This episode demonstrates how Vim's native file browser can be used to explore and manipulate the file system. &lt;/p&gt;
+      <description>&lt;p&gt;This episode demonstrates how Vim&amp;rsquo;s native file browser can be used to explore and manipulate the file system. &lt;/p&gt;
 
 </description>
       <pubDate>Mon, 12 Apr 2010 00:00:00 +0000</pubDate>
@@ -1051,10 +1052,10 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/15-the-file-explorer.html</link>
       <guid isPermaLink="false">episodes/15-the-file-explorer.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;This episode demonstrates how Vim's native file browser can be used to explore and manipulate the file system. &lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;This episode demonstrates how Vim&amp;rsquo;s native file browser can be used to explore and manipulate the file system. &lt;/p&gt;
 
 </itunes:subtitle>
-      <itunes:summary>&lt;p&gt;This episode demonstrates how Vim's native file browser can be used to explore and manipulate the file system. &lt;/p&gt;
+      <itunes:summary>&lt;p&gt;This episode demonstrates how Vim&amp;rsquo;s native file browser can be used to explore and manipulate the file system. &lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -1100,7 +1101,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Modal editing: undo, redo and repeat</title>
-      <description>&lt;p&gt;Vim's modal editing paradigm - the newbie killer - brings tremendous efficiency if only you can learn to work with it, rather than against it. This episode demonstrates how the undo and repeat commands can benefit from spending short bursts of time in insert mode. &lt;/p&gt;
+      <description>&lt;p&gt;Vim&amp;rsquo;s modal editing paradigm - the newbie killer - brings tremendous efficiency if only you can learn to work with it, rather than against it. This episode demonstrates how the undo and repeat commands can benefit from spending short bursts of time in insert mode. &lt;/p&gt;
 
 </description>
       <pubDate>Sun, 28 Mar 2010 00:00:00 +0000</pubDate>
@@ -1108,8 +1109,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/12-modal-editing-undo-redo-and-repeat.html</link>
       <guid isPermaLink="false">episodes/12-modal-editing-undo-redo-and-repeat.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;Vim's modal editing paradigm - the newbie killer - brings tremendous efficiency if only you can learn to work with it, rather than against it. T...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;Vim's modal editing paradigm - the newbie killer - brings tremendous efficiency if only you can learn to work with it, rather than against it. This episode demonstrates how the undo and repeat commands can benefit from spending short bursts of time in insert mode. &lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;Vim&amp;rsquo;s modal editing paradigm - the newbie killer - brings tremendous efficiency if only you can learn to work with it, rather than against...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;Vim&amp;rsquo;s modal editing paradigm - the newbie killer - brings tremendous efficiency if only you can learn to work with it, rather than against it. This episode demonstrates how the undo and repeat commands can benefit from spending short bursts of time in insert mode. &lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -1153,7 +1154,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>How to use tabs</title>
-      <description>&lt;p&gt;Vim's treatment of tabs is a little different than what you might be used to if you are coming from another editor. In this episode I demonstrate how Vim's tabs can be used to group split windows together. I also show how to use Vim's tabs like projects in TextMate, by setting a different working directory for each one.&lt;/p&gt;
+      <description>&lt;p&gt;Vim&amp;rsquo;s treatment of tabs is a little different than what you might be used to if you are coming from another editor. In this episode I demonstrate how Vim&amp;rsquo;s tabs can be used to group split windows together. I also show how to use Vim&amp;rsquo;s tabs like projects in TextMate, by setting a different working directory for each one.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 08 Mar 2010 00:00:00 +0000</pubDate>
@@ -1161,8 +1162,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/9-how-to-use-tabs.html</link>
       <guid isPermaLink="false">episodes/9-how-to-use-tabs.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;Vim's treatment of tabs is a little different than what you might be used to if you are coming from another editor. In this episode I demonstrat...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;Vim's treatment of tabs is a little different than what you might be used to if you are coming from another editor. In this episode I demonstrate how Vim's tabs can be used to group split windows together. I also show how to use Vim's tabs like projects in TextMate, by setting a different working directory for each one.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;Vim&amp;rsquo;s treatment of tabs is a little different than what you might be used to if you are coming from another editor. In this episode I demo...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;Vim&amp;rsquo;s treatment of tabs is a little different than what you might be used to if you are coming from another editor. In this episode I demonstrate how Vim&amp;rsquo;s tabs can be used to group split windows together. I also show how to use Vim&amp;rsquo;s tabs like projects in TextMate, by setting a different working directory for each one.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -1170,7 +1171,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Working with tabs</title>
-      <description>&lt;p&gt;This episode covers the essential commands for working with Vim's tab pages: opening and closing, switching, and moving them.&lt;/p&gt;
+      <description>&lt;p&gt;This episode covers the essential commands for working with Vim&amp;rsquo;s tab pages: opening and closing, switching, and moving them.&lt;/p&gt;
 
 </description>
       <pubDate>Sun, 28 Feb 2010 00:00:00 +0000</pubDate>
@@ -1178,10 +1179,10 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/8-working-with-tabs.html</link>
       <guid isPermaLink="false">episodes/8-working-with-tabs.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;This episode covers the essential commands for working with Vim's tab pages: opening and closing, switching, and moving them.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;This episode covers the essential commands for working with Vim&amp;rsquo;s tab pages: opening and closing, switching, and moving them.&lt;/p&gt;
 
 </itunes:subtitle>
-      <itunes:summary>&lt;p&gt;This episode covers the essential commands for working with Vim's tab pages: opening and closing, switching, and moving them.&lt;/p&gt;
+      <itunes:summary>&lt;p&gt;This episode covers the essential commands for working with Vim&amp;rsquo;s tab pages: opening and closing, switching, and moving them.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -1206,7 +1207,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Working with buffers</title>
-      <description>&lt;p&gt;Introducing the buffer list, and commands for switching between buffers. This episode also covers the concept of 'hidden' buffers, and shows how to deal with them.&lt;/p&gt;
+      <description>&lt;p&gt;Introducing the buffer list, and commands for switching between buffers. This episode also covers the concept of &amp;lsquo;hidden&amp;rsquo; buffers, and shows how to deal with them.&lt;/p&gt;
 
 </description>
       <pubDate>Sun, 14 Feb 2010 00:00:00 +0000</pubDate>
@@ -1214,8 +1215,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/6-working-with-buffers.html</link>
       <guid isPermaLink="false">episodes/6-working-with-buffers.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;Introducing the buffer list, and commands for switching between buffers. This episode also covers the concept of 'hidden' buffers, and shows how...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;Introducing the buffer list, and commands for switching between buffers. This episode also covers the concept of 'hidden' buffers, and shows how to deal with them.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;Introducing the buffer list, and commands for switching between buffers. This episode also covers the concept of &amp;lsquo;hidden&amp;rsquo; buffers, a...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;Introducing the buffer list, and commands for switching between buffers. This episode also covers the concept of &amp;lsquo;hidden&amp;rsquo; buffers, and shows how to deal with them.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>
@@ -1291,7 +1292,7 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
     </item>
     <item>
       <title>Show invisibles</title>
-      <description>&lt;p&gt;Vim's &lt;code&gt;list&lt;/code&gt; feature can be used to reveal hidden characters, such as tabstops and newlines. In this episode, I demonstrate how to customise the appearance of these characters by tweaking the &lt;code&gt;listchars&lt;/code&gt; setting. I go on to show how to make these invisible characters blend in with your colortheme.&lt;/p&gt;
+      <description>&lt;p&gt;Vim&amp;rsquo;s &lt;code&gt;list&lt;/code&gt; feature can be used to reveal hidden characters, such as tabstops and newlines. In this episode, I demonstrate how to customise the appearance of these characters by tweaking the &lt;code&gt;listchars&lt;/code&gt; setting. I go on to show how to make these invisible characters blend in with your colortheme.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 04 Jan 2010 00:00:00 +0000</pubDate>
@@ -1299,8 +1300,8 @@ Tom McDonald's &lt;a href="https://github.com/tommcdo/vim-exchange"&gt;exchange 
       <link>episodes/1-show-invisibles.html</link>
       <guid isPermaLink="false">episodes/1-show-invisibles.html</guid>
       <itunes:author>Drew Neil</itunes:author>
-      <itunes:subtitle>&lt;p&gt;Vim's &lt;code&gt;list&lt;/code&gt; feature can be used to reveal hidden characters, such as tabstops and newlines. In this episode, I demonstrate how to cu...</itunes:subtitle>
-      <itunes:summary>&lt;p&gt;Vim's &lt;code&gt;list&lt;/code&gt; feature can be used to reveal hidden characters, such as tabstops and newlines. In this episode, I demonstrate how to customise the appearance of these characters by tweaking the &lt;code&gt;listchars&lt;/code&gt; setting. I go on to show how to make these invisible characters blend in with your colortheme.&lt;/p&gt;
+      <itunes:subtitle>&lt;p&gt;Vim&amp;rsquo;s &lt;code&gt;list&lt;/code&gt; feature can be used to reveal hidden characters, such as tabstops and newlines. In this episode, I demonstrate how...</itunes:subtitle>
+      <itunes:summary>&lt;p&gt;Vim&amp;rsquo;s &lt;code&gt;list&lt;/code&gt; feature can be used to reveal hidden characters, such as tabstops and newlines. In this episode, I demonstrate how to customise the appearance of these characters by tweaking the &lt;code&gt;listchars&lt;/code&gt; setting. I go on to show how to make these invisible characters blend in with your colortheme.&lt;/p&gt;
 
 </itunes:summary>
       <itunes:explicit>no</itunes:explicit>

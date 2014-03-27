@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -130,103 +131,99 @@
           </div>
         </div>
 
-        <h1 id="methods-of-folding">Methods of folding</h1>
+        <h1>Methods of folding</h1>
 
 <p>Vim has several different methods for folding a document. You can read more about them by looking up the help for <code>fold-methods</code>.</p>
+<pre class="highlight plaintext">:help fold-methods
+</pre>
 
-<pre><code>:help fold-methods
-</code></pre>
+<p>I don&rsquo;t want to go into much detail about these different methods, except to say that I&rsquo;ve found using a custom fold expression to be the most useful method by far.</p>
 
-<p>I don't want to go into much detail about these different methods, except to say that I've found using a custom fold expression to be the most useful method by far.</p>
+<p>For the purposes of this demonstration, I&rsquo;m going to use a markdown file. The folding behavior is provided by a plugin called <code>markdown-folding</code>. You&rsquo;ll find a link for it in the show notes. In the next episode, we&rsquo;ll look at how the markdown folding expresion is implemented, but for now I just want to focus on how to use folding.</p>
 
-<p>For the purposes of this demonstration, I'm going to use a markdown file. The folding behavior is provided by a plugin called <code>markdown-folding</code>. You'll find a link for it in the show notes. In the next episode, we'll look at how the markdown folding expresion is implemented, but for now I just want to focus on how to use folding.</p>
+<h1>Turning folding on and off</h1>
 
-<h1 id="turning-folding-on-and-off">Turning folding on and off</h1>
-
-<p>Here we have a markdown document with a series of level one and level two headings. It's fully expanded right now, because I've disabled the folding feature. I can toggle the folding behavior on and off by using the <code>zi</code> command. Put that one at the top of your cheat sheet. If you can only remeber one folding command, it should be how to turn the feature off and on again.</p>
+<p>Here we have a markdown document with a series of level one and level two headings. It&rsquo;s fully expanded right now, because I&rsquo;ve disabled the folding feature. I can toggle the folding behavior on and off by using the <code>zi</code> command. Put that one at the top of your cheat sheet. If you can only remeber one folding command, it should be how to turn the feature off and on again.</p>
 
 <p>With folding enabled, every section of the document that begins with a header is folded away so as to only take up a single line. The result is that we can see an outline of the entire document. You can look on this as being like a table of contents, generated from your section headers.</p>
 
-<h1 id="navigating-the-unfolded-document">Navigating the unfolded document</h1>
+<h1>Navigating the unfolded document</h1>
 
 <p>Even when the document is fully unfolded, the fact that Vim knows where the folds start and finish gives us an additional method for moving around.</p>
 
-<p>If we prefix the <code>j</code> motion with the letter <code>z</code>, then Vim will move down to the top of the next fold. In this case, the <code>zj</code> motion doesn't cover a lot of ground because my sample document contains very short sections. But you can imagine how useful this could be in a genuine markdown document.</p>
+<p>If we prefix the <code>j</code> motion with the letter <code>z</code>, then Vim will move down to the top of the next fold. In this case, the <code>zj</code> motion doesn&rsquo;t cover a lot of ground because my sample document contains very short sections. But you can imagine how useful this could be in a genuine markdown document.</p>
 
 <p>The <code>zk</code> motion moves up to the bottom of the previous fold.</p>
 
 <p>With these motions, we can rapidly navigate the sections of a document. 
 Our custom fold expression adds a whole new layer of semantics, which allows us to rapidly navigate the sections of the document.</p>
 
-<h1 id="a-folded-section-behaves-like-a-line-of-text">A folded section behaves like a line of text</h1>
+<h1>A folded section behaves like a line of text</h1>
 
-<p>Suppose that we wanted to delete one of these sections. If we didn't have folding, we could use visual mode to select each line, then delete the selected text. But there's an easier way. (I'll just undo that change).</p>
+<p>Suppose that we wanted to delete one of these sections. If we didn&rsquo;t have folding, we could use visual mode to select each line, then delete the selected text. But there&rsquo;s an easier way. (I&rsquo;ll just undo that change).</p>
 
 <p>If we fold away the section that we want to delete, it collapses down to one line. We can treat it just as though it were a single line of text. That means we can use the <code>dd</code> command to delete it. We could even use the <code>p</code> command to paste the section that we just deleted.</p>
 
-<p>Suppose that we wanted to take these three h2 sections, and move them down to just before the next h1 section. It's as easy as cutting and pasting 3 lines of text!</p>
+<p>Suppose that we wanted to take these three h2 sections, and move them down to just before the next h1 section. It&rsquo;s as easy as cutting and pasting 3 lines of text!</p>
 
-<h1 id="opening-and-closing-folds">Opening and closing folds</h1>
+<h1>Opening and closing folds</h1>
 
-<p>So far, we've had the document completely folded or completely open, but of course we can have more granular control too. Vim provides about a dozen commands for opening and closing folds, but I get by using just a handful of them. I want to show you some of the most useful ones.</p>
+<p>So far, we&rsquo;ve had the document completely folded or completely open, but of course we can have more granular control too. Vim provides about a dozen commands for opening and closing folds, but I get by using just a handful of them. I want to show you some of the most useful ones.</p>
 
-<h2 id="toggle-current-fold-za">Toggle current fold (<code>za</code>)</h2>
+<h2>Toggle current fold (<code>za</code>)</h2>
 
 <p>The <code>za</code> command toggles the current fold between open and closed states. </p>
 
 <p>You might want to consider mapping this command to something more convenient, so that it can be invoked with a single keystroke. Steve Losh suggests this mapping, which makes the spacebar toggle the current fold:</p>
-
-<pre><code>nnoremap &lt;Space&gt; za
-</code></pre>
+<pre class="highlight plaintext">nnoremap &lt;Space&gt; za
+</pre>
 
 <p>Using this mapping, I can quickly look inside a fold, then close it with a single keystroke.</p>
 
 <p>For a simple document such as this, where all of the folds are at the same level, you can get by fine with only the <code>zi</code> and <code>za</code> commands.</p>
 
-<p>Now let's add a little bit of complexity by switching to an alternative folding expression that gives us a hierarchical outline of the document.
+<p>Now let&rsquo;s add a little bit of complexity by switching to an alternative folding expression that gives us a hierarchical outline of the document.
 The markdown-folding plugin provides a <code>:FoldToggle</code> command, which changes the folding style:</p>
-
-<pre><code>:FoldToggle
-</code></pre>
+<pre class="highlight plaintext">:FoldToggle
+</pre>
 
 <p>All we can see now is the level 1 headers, and if I open one of these (using the <code>za</code> command) then we can see each of the level 2 headers nested within.</p>
 
-<p>I'll drill down and open up one of these level 2 headings. Now watch what happens when I use the <code>za</code> command: it toggles the fold at the current cursor position. But what if I want to close the parent fold: the level 1 heading?</p>
+<p>I&rsquo;ll drill down and open up one of these level 2 headings. Now watch what happens when I use the <code>za</code> command: it toggles the fold at the current cursor position. But what if I want to close the parent fold: the level 1 heading?</p>
 
 <p>Well, I could do it with the <code>za</code> command, but I would first have to move my cursor.</p>
 
-<h2 id="close-current-fold-zc">Close current fold (<code>zc</code>)</h2>
+<h2>Close current fold (<code>zc</code>)</h2>
 
 <p>In this case, it would be quicker to use the <code>zc</code> command, which <em>closes</em> the current fold. If the current fold is already closed, then it will attempt to close the parent fold instead.</p>
 
-<p>I find that the <code>za</code> command serves well for drilling down into nested folds, but if I want to close the folds I'll often reach for the <code>zc</code> command instead.</p>
+<p>I find that the <code>za</code> command serves well for drilling down into nested folds, but if I want to close the folds I&rsquo;ll often reach for the <code>zc</code> command instead.</p>
 
-<h2 id="refocus-folds"> Refocus folds</h2>
+<h2> Refocus folds</h2>
 
-<p>Vim's folding commands operate at a low level. Sometimes, we have to chain a couple of these low level commands together to produce the desired result. I want to show you an example of what I mean.</p>
+<p>Vim&rsquo;s folding commands operate at a low level. Sometimes, we have to chain a couple of these low level commands together to produce the desired result. I want to show you an example of what I mean.</p>
 
-<p>We'll start off with the document completely folded. Now suppose that we want to jump to part of the document that discusses 'repetition'. We start off by searching for that word:</p>
+<p>We&rsquo;ll start off with the document completely folded. Now suppose that we want to jump to part of the document that discusses &lsquo;repetition&rsquo;. We start off by searching for that word:</p>
+<pre class="highlight plaintext">/repetition
+</pre>
 
-<pre><code>/repetition
-</code></pre>
+<p>Each time I press the <code>n</code> key, Vim jumps to the next match, and opens any folds containing the match. In this case, we have uncovered two matches. Now let&rsquo;s suppose that this is the one that we were looking for. It&rsquo;s a bit annoying that the other section has been unfolded, even though we don&rsquo;t want to look at it.</p>
 
-<p>Each time I press the <code>n</code> key, Vim jumps to the next match, and opens any folds containing the match. In this case, we have uncovered two matches. Now let's suppose that this is the one that we were looking for. It's a bit annoying that the other section has been unfolded, even though we don't want to look at it.</p>
-
-<p>There's a quick way of tidying up in this scenario: <code>zMzv</code>. That's two separate commands, and a total of four keystrokes. The result is that all folds are collapsed, except for the ones containing the current line that the cursor is on.</p>
+<p>There&rsquo;s a quick way of tidying up in this scenario: <code>zMzv</code>. That&rsquo;s two separate commands, and a total of four keystrokes. The result is that all folds are collapsed, except for the ones containing the current line that the cursor is on.</p>
 
 <p>The <code>zM</code> command closes all folds in the document, then the <code>zv</code> command expands the folds to reveal the cursor position.</p>
 
 <p>[zM]</p>
 
-<p>Let's try that again, but this time slowly. I'll press <code>n</code> to expand each of the sections containing a match for our search term. This time, note that the cursor is positioned on line 31. <code>zM</code> closes everything. Even though it looks as though the cursor is on line 17 - the top of the parent fold - it hasn't actually moved from line 31. And when I press <code>zv</code>, the folds open to reveal the cursor position.</p>
+<p>Let&rsquo;s try that again, but this time slowly. I&rsquo;ll press <code>n</code> to expand each of the sections containing a match for our search term. This time, note that the cursor is positioned on line 31. <code>zM</code> closes everything. Even though it looks as though the cursor is on line 17 - the top of the parent fold - it hasn&rsquo;t actually moved from line 31. And when I press <code>zv</code>, the folds open to reveal the cursor position.</p>
 
-<h2 id="miscellany">Miscellany</h2>
+<h2>Miscellany</h2>
 
-<p>Don't try to memorize all of Vim's folding commands at once, there are too many! I recommend starting out with these few commands, which cover most use cases.</p>
+<p>Don&rsquo;t try to memorize all of Vim&rsquo;s folding commands at once, there are too many! I recommend starting out with these few commands, which cover most use cases.</p>
 
-<p>In the next episode, we'll find out how to implement a custom folding function from scratch.</p>
+<p>In the next episode, we&rsquo;ll find out how to implement a custom folding function from scratch.</p>
 
-<h2 id="outro">Outro</h2>
+<h2>Outro</h2>
 
 <p>The information in this video is summarized in the accompanying shownotes. If you have any questions, requests or recommendations, then you can contact me at drew at vimcats dot org.</p>
 

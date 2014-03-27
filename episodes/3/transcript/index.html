@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -130,106 +131,92 @@
           </div>
         </div>
 
-        <h1 id="whitespace-preferences-per-filetype">WHITESPACE PREFERENCES PER FILETYPE</h1>
+        <h1>WHITESPACE PREFERENCES PER FILETYPE</h1>
 
-<h2 id="setting-tabspace-preferences-per-filetype">Setting tab/space preferences per filetype</h2>
+<h2>Setting tab/space preferences per filetype</h2>
 
 <p>It is sometimes necessary to use different indentation settings for particular types of file.</p>
 
 <p>It might be that the filetype itself is fussy about tabs versus spaces. For example, makefiles should be indented with tab characters, whereas YAML files must be indented with spaces. </p>
 
-<p>Or perhaps you have to follow a 'house-style' which specifies that, say, html and css files be indented with 2 spaces, while javascript is indented with tab characters of width 4.</p>
+<p>Or perhaps you have to follow a &lsquo;house-style&rsquo; which specifies that, say, html and css files be indented with 2 spaces, while javascript is indented with tab characters of width 4.</p>
 
 <p>You can set these preferences in your <code>.vimrc</code> file, by hooking into the <code>FileType</code> event with an autocommand:</p>
-
-<pre><code>autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
+<pre class="highlight plaintext">autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
-</code></pre>
+</pre>
 
 <p>This command consists of two parts:</p>
-
-<pre><code>autocmd FileType javascript
-</code></pre>
+<pre class="highlight plaintext">autocmd FileType javascript
+</pre>
 
 <p>The first half indicates that when the filetype is set to javascript, the second half of the command will be executed. The second half</p>
-
-<pre><code>setlocal ts=4 sts=4 sw=4 noexpandtab
-</code></pre>
+<pre class="highlight plaintext">setlocal ts=4 sts=4 sw=4 noexpandtab
+</pre>
 
 <p>calls <code>setlocal</code>, applying the following settings to the current buffer, which in this case contains javascript. Using setlocal ensures that these settings are not altered for any other buffers that happen to be open at the time, and may contain something other than javascript.</p>
 
 <p>This functionality is only available when Vim is compiled with the <code>autocmd</code> flag enabled. You can check if your version of Vim has this capability by running the command:</p>
-
-<pre><code>:version
-</code></pre>
+<pre class="highlight plaintext">:version
+</pre>
 
 <p>If you see a minus sign in front of <code>autocmd</code>, then this functionality is not available in your copy of Vim. A plus sign means it is available. You also need to enable filetype detection, by including the following line in your <code>.vimrc</code>:</p>
-
-<pre><code>filetype on
-</code></pre>
+<pre class="highlight plaintext">filetype on
+</pre>
 
 <p>You can test if your version of Vim has been compiled with support for autocommands using a conditional statement:</p>
-
-<pre><code>if has("audocmd")
+<pre class="highlight plaintext">if has("audocmd")
   ...
 endif
-</code></pre>
+</pre>
 
-<p>By placing all of your autocommands inside this block, you can keep your <code>.vimrc</code> file portable. This means you can load the same <code>.vimrc</code> in a minimal Vim, compiled without the autocmd feature, and it shouldn't raise any errors.</p>
+<p>By placing all of your autocommands inside this block, you can keep your <code>.vimrc</code> file portable. This means you can load the same <code>.vimrc</code> in a minimal Vim, compiled without the autocmd feature, and it shouldn&rsquo;t raise any errors.</p>
 
-<h3 id="more-on-filetypes">More on filetypes</h3>
+<h3>More on filetypes</h3>
 
 <p>There will be times when you are editing a file, and Vim is unable to guess the filetype. You can find out what the current filetype is, by running:</p>
-
-<pre><code>:set filetype?
-</code></pre>
+<pre class="highlight plaintext">:set filetype?
+</pre>
 
 <p>or the shorthand:</p>
-
-<pre><code>:set ft?
-</code></pre>
+<pre class="highlight plaintext">:set ft?
+</pre>
 
 <p>I would like Vim to treat this RSS file as XML. I can tell it to do so by running:</p>
-
-<pre><code>:set filetype=xml
+<pre class="highlight plaintext">:set filetype=xml
 "set filetype EQUALS xml"
-</code></pre>
+</pre>
 
 <p>or the dedicated command:</p>
-
-<pre><code>:setfiletype xml
+<pre class="highlight plaintext">:setfiletype xml
 "one word: setfiletype SPACE xml"
-</code></pre>
+</pre>
 
 <p>You should be able to see the difference, as the syntax highlighting kicks into action.</p>
 
-<h3 id="match-extensions-to-filetypes">Match extensions to filetypes</h3>
+<h3>Match extensions to filetypes</h3>
 
 <p>To tell Vim to always treat files with the <code>rss</code> extension as XML, I can put the following in my <code>.vimrc</code> file:</p>
-
-<pre><code>autocmd BufNewFile,BufRead *.rss setfiletype xml
-</code></pre>
+<pre class="highlight plaintext">autocmd BufNewFile,BufRead *.rss setfiletype xml
+</pre>
 
 <p>The first half</p>
-
-<pre><code>autocmd BufNewFile,BufRead *.rss
-</code></pre>
+<pre class="highlight plaintext">autocmd BufNewFile,BufRead *.rss
+</pre>
 
 <p>indicates that when a new or existing file with the <code>rss</code> extension is opened, the second half of the command will be executed.</p>
-
-<pre><code>setfiletype xml
-</code></pre>
+<pre class="highlight plaintext">setfiletype xml
+</pre>
 
 <p>the second half sets the filetype to xml. </p>
 
 <p>It is possible to specify multiple patterns to be matched when opening a file. Just separate them with a comma. So the autocommand could be tweaked so that it also match atom files. </p>
-
-<pre><code>autocmd BufNewFile,BufRead *.rss,*.atom setfiletype xml
-</code></pre>
+<pre class="highlight plaintext">autocmd BufNewFile,BufRead *.rss,*.atom setfiletype xml
+</pre>
 
 <p>Please note that when I opened the example RSS file in Vim, it automatically set the filetype to XML, even before I added this autocommand to my <code>vimrc</code> file. The example given here is purely for illustrative purposes. </p>
 

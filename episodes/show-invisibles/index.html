@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -187,7 +188,7 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>Vim's <code>list</code> feature can be used to reveal hidden characters, such as tabstops and newlines. In this episode, I demonstrate how to customise the appearance of these characters by tweaking the <code>listchars</code> setting. I go on to show how to make these invisible characters blend in with your colortheme.</p>
+        <p>Vim&rsquo;s <code>list</code> feature can be used to reveal hidden characters, such as tabstops and newlines. In this episode, I demonstrate how to customise the appearance of these characters by tweaking the <code>listchars</code> setting. I go on to show how to make these invisible characters blend in with your colortheme.</p>
 
 
       </div>
@@ -227,13 +228,11 @@
           
 
 <p>Put the following in your <code>.vimrc</code> file:</p>
+<pre class="highlight viml"><span class="c">" Shortcut to rapidly toggle `set list`</span>
+nmap <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">l</span> <span class="p">:</span><span class="k">set</span> list<span class="p">!&lt;</span>CR<span class="p">&gt;</span>
 
-<pre class="brush: vimscript">
-" Shortcut to rapidly toggle `set list`
-nmap &lt;leader&gt;l :set list!&lt;CR&gt;
-
-" Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:â–¸\ ,eol:Â¬
+<span class="c">" Use the same symbols as TextMate for tabstops and EOLs</span>
+<span class="k">set</span> listchars<span class="p">=</span><span class="k">tab</span><span class="p">:</span>▸\ <span class="p">,</span>eol<span class="p">:</span>¬
 </pre>
 
 <p>If you like, you can customise other invisible characters besides tabs
@@ -241,11 +240,9 @@ and end-of-lines. For more information, run <code>:help listchars</code>.</p>
 
 <p>You can customise the syntax highlighting colours of invisible characters with
 the <code>NonText</code> and <code>SpecialKey</code> keywords. In <a href="http://www.vim.org/scripts/script.php?script_id=2280">my prefered colourtheme</a>, I have added the following lines:</p>
-
-<pre class="brush: vimscript">
-"Invisible character colors 
-highlight NonText guifg=#4a4a59
-highlight SpecialKey guifg=#4a4a59
+<pre class="highlight viml"><span class="c">"Invisible character colors </span>
+highlight NonText guifg<span class="p">=</span><span class="mh">#4a4a59</span>
+highlight SpecialKey guifg<span class="p">=</span><span class="mh">#4a4a59</span>
 </pre>
 
 <p>Unicode characters can be inserted by typing <code>ctrl-vu</code> followed by the 4 digit hexadecimal code.</p>
@@ -283,16 +280,15 @@ highlight SpecialKey guifg=#4a4a59
     </tr>
 </table>
 
-<h3 id="further-reading">Further reading</h3>
+<h3>Further reading</h3>
 
 <ul>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/options.html#%27list%27"><code>:help 'list'</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/options.html#%27listchars%27"><code>:help listchars</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/syntax.html#hl-NonText"><code>:help hl-NonText</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/syntax.html#hl-SpecialKey"><code>:help hl-SpecialKey</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-V_digit"><code>:help i_CTRL-V_digit</code></a> - inserting special characters</li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/options.html#%27list%27"><code>:help &#39;list&#39;</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/options.html#%27listchars%27"><code>:help listchars</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/syntax.html#hl-NonText"><code>:help hl-NonText</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/syntax.html#hl-SpecialKey"><code>:help hl-SpecialKey</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-V_digit"><code>:help i_CTRL-V_digit</code></a> - inserting special characters</li>
 </ul>
-
 
         </div>
         </dd>
@@ -337,13 +333,6 @@ highlight SpecialKey guifg=#4a4a59
 
     
       <li>
-        <h4><a href="/episodes/indentation-commands/">Indentation commands</a></h4>
-        <p>This episode covers the commands for shifting text left and right (<code>&lt;</code> and <code>&gt;</code>), and also goes over the auto indent command (<code>=</code>).</p>
-
-
-      </li>
-    
-      <li>
         <h4><a href="/categories">Find by category</a></h4>
         <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
@@ -356,8 +345,20 @@ highlight SpecialKey guifg=#4a4a59
       </li>
     
       <li>
+        <h4><a href="/episodes/indentation-commands/">Indentation commands</a></h4>
+        <p>This episode covers the commands for shifting text left and right (<code>&lt;</code> and <code>&gt;</code>), and also goes over the auto indent command (<code>=</code>).</p>
+
+
+      </li>
+    
+      <li>
         <h4><a href="/publications">Publications</a></h4>
         <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
       </li>
     
       <li>
@@ -365,11 +366,6 @@ highlight SpecialKey guifg=#4a4a59
         <p>Different file types may require particular whitespace settings. For example, YAML files must be indented using spaces, whereas makefiles require indentation with tabs. These preferences can be specified by hooking into the <code>FileType</code> event with an autocommand.</p>
 
 
-      </li>
-    
-      <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
       </li>
     
 

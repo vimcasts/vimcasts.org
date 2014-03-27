@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -187,7 +188,7 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>We don't have to be in Normal mode to paste the contents of a register. The <a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r"><code>&lt;C-r&gt;{reg}</code></a> command lets us paste a register from Insert mode (and it <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-r">works in commandline mode too</a>!) Using this command allows us to make changes that can be repeated with <a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#.">the dot command</a>.</p>
+        <p>We don&rsquo;t have to be in Normal mode to paste the contents of a register. The <a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r"><code>&lt;C-r&gt;{reg}</code></a> command lets us paste a register from Insert mode (and it <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-r">works in commandline mode too</a>!) Using this command allows us to make changes that can be repeated with <a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#.">the dot command</a>.</p>
 
 
       </div>
@@ -226,7 +227,7 @@
         <div id="shownotes" class="content" data-swiftype-index="true">
           
 
-<p>In Insert mode, we can use the <a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r"><code>&lt;C-r&gt;{reg}</code></a> command to paste the contents from any of Vim's registers. For example, pressing <code>&lt;C-r&gt;a</code> would insert the contents of named register 'a', while pressing <code>&lt;C-r&gt;0</code> would insert the contents of <a href="/e/52">the yank register</a>. In Vim's documentation, it lists a few more registers that can be useful in this context:</p>
+<p>In Insert mode, we can use the <a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r"><code>&lt;C-r&gt;{reg}</code></a> command to paste the contents from any of Vim&rsquo;s registers. For example, pressing <code>&lt;C-r&gt;a</code> would insert the contents of named register &lsquo;a&rsquo;, while pressing <code>&lt;C-r&gt;0</code> would insert the contents of <a href="/e/52">the yank register</a>. In Vim&rsquo;s documentation, it lists a few more registers that can be useful in this context:</p>
 
 <table>
   <tr>
@@ -271,26 +272,25 @@
   </tr>
 </table>
 
-<p>Note that the <code>&lt;C-r&gt;{reg}</code> commands can also be used at Vim's command line.</p>
+<p>Note that the <code>&lt;C-r&gt;{reg}</code> commands can also be used at Vim&rsquo;s command line.</p>
 
-<h3 id="variations-on-c-rreg">Variations on <code>&lt;C-r&gt;{reg}</code></h3>
+<h3>Variations on <code>&lt;C-r&gt;{reg}</code></h3>
 
 <p>The <code>&lt;C-r&gt;{reg}</code> command comes with a few variations, including <a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r_ctrl-r"><code>&lt;C-r&gt;&lt;C-r&gt;{reg}</code></a>,  <a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r_ctrl-o"><code>&lt;C-r&gt;&lt;C-o&gt;{reg}</code></a>, <a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r_ctrl-p"><code>&lt;C-r&gt;&lt;C-p&gt;{reg}</code></a>. In the video tutorial, I demonstrate the the difference between <code>&lt;C-r&gt;{reg}</code> and <code>&lt;C-r&gt;&lt;C-o&gt;{reg}</code>, by attempting to complete the Vimgolf challenge, <a href="http://vimgolf.com/challenges/5192f96ad8df110002000002">Words in parens</a>.</p>
 
-<p>We can use <code>&lt;C-r&gt;"</code> to insert the text that was just deleted with the <code>cw</code> command. That works fine for a one off change, but if we attempt to repeat the change with the dot command, it reproduces the result of the last insertion. In the example, that means using the dot command on <code>two</code> produces <code>(one)</code>, when we actually want <code>(two)</code>.</p>
+<p>We can use <code>&lt;C-r&gt;&quot;</code> to insert the text that was just deleted with the <code>cw</code> command. That works fine for a one off change, but if we attempt to repeat the change with the dot command, it reproduces the result of the last insertion. In the example, that means using the dot command on <code>two</code> produces <code>(one)</code>, when we actually want <code>(two)</code>.</p>
 
-<p>If we use <code>&lt;C-r&gt;&lt;C-o&gt;"</code> instead, Vim inserts the contents of the default register literally, using the current value of the default register. In this case, we can use the dot command to repeat the remaining changes. </p>
+<p>If we use <code>&lt;C-r&gt;&lt;C-o&gt;&quot;</code> instead, Vim inserts the contents of the default register literally, using the current value of the default register. In this case, we can use the dot command to repeat the remaining changes. </p>
 
-<h3 id="further-reading">Further reading</h3>
+<h3>Further reading</h3>
 
 <ul>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r"><code>:h i_ctrl-r</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-r"><code>:h c_ctrl-r</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r_ctrl-o"><code>:h i_ctrl-r_ctrl-o</code></a></li>
-  <li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, tip 62: Paste from a register</li>
-  <li>Vimgolf challenge: <a href="http://vimgolf.com/challenges/5192f96ad8df110002000002">Words in parens</a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r"><code>:h i_ctrl-r</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-r"><code>:h c_ctrl-r</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r_ctrl-o"><code>:h i_ctrl-r_ctrl-o</code></a></li>
+<li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, tip 62: Paste from a register</li>
+<li>Vimgolf challenge: <a href="http://vimgolf.com/challenges/5192f96ad8df110002000002">Words in parens</a></li>
 </ul>
-
 
         </div>
         </dd>
@@ -342,13 +342,8 @@
       </li>
     
       <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
       </li>
     
       <li>
@@ -359,8 +354,13 @@
       </li>
     
       <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
       <li>

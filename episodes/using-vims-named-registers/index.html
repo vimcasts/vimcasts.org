@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -187,7 +188,7 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>We've met Vim's <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote">default register</a> and the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0">yank register</a>. This time, we're going to look at the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote_alpha">named registers</a>, which are handy if you want to cut or copy some text that you intend to paste multiple times.</p>
+        <p>We&rsquo;ve met Vim&rsquo;s <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote">default register</a> and the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0">yank register</a>. This time, we&rsquo;re going to look at the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote_alpha">named registers</a>, which are handy if you want to cut or copy some text that you intend to paste multiple times.</p>
 
 
       </div>
@@ -226,46 +227,44 @@
         <div id="shownotes" class="content" data-swiftype-index="true">
           
 
-<p>From Vim's documentation (see <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote_alpha"><code>:h quote_alpha</code></a>):</p>
+<p>From Vim&rsquo;s documentation (see <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote_alpha"><code>:h quote_alpha</code></a>):</p>
 
 <blockquote>
-  <p>Vim fills these registers only when you say so. Specify them as lowercase letters to replace their previous contents or as uppercase letters to append to their previous contents. </p>
+<p>Vim fills these registers only when you say so. Specify them as lowercase letters to replace their previous contents or as uppercase letters to append to their previous contents. </p>
 </blockquote>
 
 <p>Vim has 26 named registers: one for each letter of the alphabet</p>
 
-<p>The named registers are handy for copy and paste, especially when you want to paste the same text multiple times. Use <code>"ay{motion}</code> to copy text to register 'a', then <code>"ap</code> to paste text from that register into the document.</p>
+<p>The named registers are handy for copy and paste, especially when you want to paste the same text multiple times. Use <code>&quot;ay{motion}</code> to copy text to register &lsquo;a&rsquo;, then <code>&quot;ap</code> to paste text from that register into the document.</p>
 
 <p>Note that when we yank text into a named register, Vim writes that text to the default register and to the specified register, but it does not touch the yank register.</p>
 
-<h3 id="appending-to-a-named-register">Appending to a named register</h3>
+<h3>Appending to a named register</h3>
 
-<p>Using an uppercase letter tells Vim to append text to the specified register (rather than overwriting the existing contents). For example, <code>"Ayy</code> copies the current line, and appends it to register 'a'.</p>
+<p>Using an uppercase letter tells Vim to append text to the specified register (rather than overwriting the existing contents). For example, <code>&quot;Ayy</code> copies the current line, and appends it to register &lsquo;a&rsquo;.</p>
 
-<p>I prefer using the Ex command <code>:yank A</code> over the normal mode command <code>"Ayy</code>. In both cases, it would be easy to accidentally type a lowercase letter, which would cause the specified register to be overwritten. But in the case of the Ex command, it's easier to see when you make a mistake, and easier to correct it.</p>
+<p>I prefer using the Ex command <code>:yank A</code> over the normal mode command <code>&quot;Ayy</code>. In both cases, it would be easy to accidentally type a lowercase letter, which would cause the specified register to be overwritten. But in the case of the Ex command, it&rsquo;s easier to see when you make a mistake, and easier to correct it.</p>
 
-<h3 id="collecting-all-lines-that-match-a-pattern-in-a-register">Collecting all lines that match a pattern in a register</h3>
+<h3>Collecting all lines that match a pattern in a register</h3>
 
-<p>We can clear the contents of named register 'a' by running the command: <code>qaq</code>. The <code>qa</code> command instructs Vim to start recording keystrokes into register 'a', then the final <code>q</code> stops the macro recording. No keystrokes were recorded, so the register ends up blank.</p>
+<p>We can clear the contents of named register &lsquo;a&rsquo; by running the command: <code>qaq</code>. The <code>qa</code> command instructs Vim to start recording keystrokes into register &lsquo;a&rsquo;, then the final <code>q</code> stops the macro recording. No keystrokes were recorded, so the register ends up blank.</p>
 
 <p>Now we can use this Ex command:</p>
-
-<pre><code>:global/TODO/yank A
-</code></pre>
+<pre class="highlight plaintext">:global/TODO/yank A
+</pre>
 
 <p>For each line that matches the pattern <code>TODO</code>, run the Ex command: <code>:yank A</code>.</p>
 
-<h3 id="further-reading">Further reading</h3>
+<h3>Further reading</h3>
 
 <ul>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote_alpha"><code>:h quote_alpha</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:yank"><code>:h :yank</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#:global"><code>:h :global</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:reg"><code>:h :reg</code></a></li>
-  <li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, Tip 60: Grok Vim's registers</li>
-  <li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, Tip 99: Collect TODO items in a register</li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote_alpha"><code>:h quote_alpha</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:yank"><code>:h :yank</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#:global"><code>:h :global</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:reg"><code>:h :reg</code></a></li>
+<li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, Tip 60: Grok Vim&rsquo;s registers</li>
+<li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, Tip 99: Collect TODO items in a register</li>
 </ul>
-
 
         </div>
         </dd>
@@ -315,32 +314,32 @@
       </li>
     
       <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/pasting-from-visual-mode/">Pasting from Visual mode</a></h4>
-        <p>When used <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#v_p">in Visual mode the <code>p</code> command</a> replaces the selection with the contents of a register. This makes for a smooth workflow when you want to overwrite a selection, or swap the order of two regions of text.</p>
-
-
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/pasting-from-insert-mode/">Pasting from Insert mode</a></h4>
-        <p>We don't have to be in Normal mode to paste the contents of a register. The <a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r"><code>&lt;C-r&gt;{reg}</code></a> command lets us paste a register from Insert mode (and it <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-r">works in commandline mode too</a>!) Using this command allows us to make changes that can be repeated with <a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#.">the dot command</a>.</p>
-
-
-      </li>
-    
-      <li>
         <h4><a href="/categories">Find by category</a></h4>
         <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
       <li>
         <h4><a href="/episodes/meet-the-yank-register/">Meet the yank register</a></h4>
-        <p>Vim's default register is not a safe place to keep yanked text that you want to paste later. It's all too easy to clobber the default register with a <code>d</code> or <code>x</code> command. Luckily, the last yanked text is kept safe in Vim's <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0">yank register</a>.</p>
+        <p>Vim&rsquo;s default register is not a safe place to keep yanked text that you want to paste later. It&rsquo;s all too easy to clobber the default register with a <code>d</code> or <code>x</code> command. Luckily, the last yanked text is kept safe in Vim&rsquo;s <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0">yank register</a>.</p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/pasting-from-insert-mode/">Pasting from Insert mode</a></h4>
+        <p>We don&rsquo;t have to be in Normal mode to paste the contents of a register. The <a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r"><code>&lt;C-r&gt;{reg}</code></a> command lets us paste a register from Insert mode (and it <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-r">works in commandline mode too</a>!) Using this command allows us to make changes that can be repeated with <a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#.">the dot command</a>.</p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/pasting-from-visual-mode/">Pasting from Visual mode</a></h4>
+        <p>When used <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#v_p">in Visual mode the <code>p</code> command</a> replaces the selection with the contents of a register. This makes for a smooth workflow when you want to overwrite a selection, or swap the order of two regions of text.</p>
 
 
       </li>

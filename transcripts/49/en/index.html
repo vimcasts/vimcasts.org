@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -137,87 +138,76 @@
         <h1><a href="/episodes/enhanced-abbreviations-with-abolish/">Enhanced abbreviations with :Abolish</a></h1>
         <h2>Transcript for episode #49</h2>
 
-        <p>Vim's built-in abbreviation feature is handy if you want to auto-correct words that you frequently misspell, but it requires a lot of setup. The <code>:Abolish</code> command makes it easy to generate abbreviations that will correct multiple forms of the same word.</p>
+        <p>Vim&rsquo;s built-in abbreviation feature is handy if you want to auto-correct words that you frequently misspell, but it requires a lot of setup. The <code>:Abolish</code> command makes it easy to generate abbreviations that will correct multiple forms of the same word.</p>
 
 <p><em>This is the final of a three-part series on Tim Pope’s <a href="https://github.com/tpope/vim-abolish">abolish</a> plugin.</em></p>
 
 
       
 
-      <h1 id="abolish---abbreviations-on-steroids">:Abolish - abbreviations on steroids</h1>
+      <h1>:Abolish - abbreviations on steroids</h1>
 
-<h2 id="meet-vims-abbreviations">Meet Vim's abbreviations</h2>
+<h2>Meet Vim&rsquo;s abbreviations</h2>
 
-<p>Vim has a built-in feature called <em>abbreviations</em>, which can provide autocorrect functionality. I frequently mistype the word 'the' as 'teh'. To correct this typo, we could create an abbreviation using the <code>iabbrev</code> command:</p>
+<p>Vim has a built-in feature called <em>abbreviations</em>, which can provide autocorrect functionality. I frequently mistype the word &lsquo;the&rsquo; as &lsquo;teh&rsquo;. To correct this typo, we could create an abbreviation using the <code>iabbrev</code> command:</p>
+<pre class="highlight plaintext">:iabbrev teh the
+</pre>
 
-<pre><code>:iabbrev teh the
-</code></pre>
-
-<p>Now when I type 'teh', it should automatically be changed to 'the' when I press space.</p>
+<p>Now when I type &lsquo;teh&rsquo;, it should automatically be changed to &lsquo;the&rsquo; when I press space.</p>
 
 <p>Actually, the abbreviation is triggered by any keystroke that ends the word, including punctuation marks and newlines:</p>
+<pre class="highlight plaintext">teh, teh&lt;CR&gt;
+</pre>
 
-<pre><code>teh, teh&lt;CR&gt;
-</code></pre>
+<p>The abbreviation is not triggered if the sequence of characters form the start of a longer word. For example, if I were to type the name of the capital city of Iran, the abbreviation won&rsquo;t kick in:</p>
+<pre class="highlight plaintext">tehran
+</pre>
 
-<p>The abbreviation is not triggered if the sequence of characters form the start of a longer word. For example, if I were to type the name of the capital city of Iran, the abbreviation won't kick in:</p>
-
-<pre><code>tehran
-</code></pre>
-
-<p>In that sense, abbreviations are pretty smart. But they have their limits. If I happen to make this typo at the start of a sentence, the abbreviation won't kick in:</p>
-
-<pre><code>Teh capital of Iran is Tehran.
-</code></pre>
+<p>In that sense, abbreviations are pretty smart. But they have their limits. If I happen to make this typo at the start of a sentence, the abbreviation won&rsquo;t kick in:</p>
+<pre class="highlight plaintext">Teh capital of Iran is Tehran.
+</pre>
 
 <p>Abbreviations are case sensitive, so if I wanted to be thorough I would have to define more than one such mapping for every word that I wanted to auto-correct.</p>
-
-<pre><code>:iabbrev teh the
+<pre class="highlight plaintext">:iabbrev teh the
 :iabbrev Teh The
 :iabbrev TEH THE
-</code></pre>
+</pre>
 
 <p>The abolish plugin, by Tim Pope, provides a solution for this. It includes a smart command called <code>:Abolish</code>, which has a similar form to the built-in <code>iabbrev</code> command. </p>
+<pre class="highlight plaintext">:Abolish teh the
+</pre>
 
-<pre><code>:Abolish teh the
-</code></pre>
-
-<p>This single command generates these three different variations in one go. I'll source this file to execute that command. </p>
+<p>This single command generates these three different variations in one go. I&rsquo;ll source this file to execute that command. </p>
 
 <p>We can inspect the list of abbreviations by running the command:</p>
-
-<pre><code>:abbreviate
-</code></pre>
+<pre class="highlight plaintext">:abbreviate
+</pre>
 
 <p>As you can see, we now have abbreviations that correct 3 case-variations of the same misspelling.</p>
 
-<h2 id="patterns">Patterns</h2>
+<h2>Patterns</h2>
 
-<p>Abolish can also define multiple abbreviations based on a list of comma-separated alternatives. Take the word <code>color</code>, for example. I tend to use the British spelling, but I'm often required to use the American spelling. So let's create an abbreviation for it:</p>
+<p>Abolish can also define multiple abbreviations based on a list of comma-separated alternatives. Take the word <code>color</code>, for example. I tend to use the British spelling, but I&rsquo;m often required to use the American spelling. So let&rsquo;s create an abbreviation for it:</p>
+<pre class="highlight plaintext">Abolish colour color
+</pre>
 
-<pre><code>Abolish colour color
-</code></pre>
-
-<p>I'll source this file to execute that command, and now when I enter the British spelling of 'colour' it's changed to the American spelling. But the abbreviation doesn't apply when I write 'colours', 'coloured', or 'colouring', and so on.</p>
+<p>I&rsquo;ll source this file to execute that command, and now when I enter the British spelling of &lsquo;colour&rsquo; it&rsquo;s changed to the American spelling. But the abbreviation doesn&rsquo;t apply when I write &lsquo;colours&rsquo;, &lsquo;coloured&rsquo;, or &lsquo;colouring&rsquo;, and so on.</p>
 
 <p>We can tack these suffixes on at the end of the word, as a comma-separated list within a pair of braces. We could spell out the same list of suffixes on the right-hand side too, but an empty pair of braces has the same effect:</p>
+<pre class="highlight plaintext">:Abolish colour{,s,ed,ing} color{}
+</pre>
 
-<pre><code>:Abolish colour{,s,ed,ing} color{}
-</code></pre>
+<p>Let&rsquo;s source the file again. Now Vim will auto-correct all of the variations of the word <code>colour</code> that we specified. Here&rsquo;s the full list of abbreviations:</p>
+<pre class="highlight plaintext">:abbreviate
+</pre>
 
-<p>Let's source the file again. Now Vim will auto-correct all of the variations of the word <code>colour</code> that we specified. Here's the full list of abbreviations:</p>
+<p>The word &lsquo;honour&rsquo; follows a similar pattern. The British spelling includes the letter &lsquo;u&rsquo;, whereas the American spelling does not. We could adapt our command to generate abbreviations for honor as well as color:</p>
+<pre class="highlight plaintext">:Abolish {col,hon}our{,s,ed,ing} {}or{}
+</pre>
 
-<pre><code>:abbreviate
-</code></pre>
+<p>Source the file, and now look at our list of abbreviations. It&rsquo;s huge! We generated all of that from these two commands.</p>
 
-<p>The word 'honour' follows a similar pattern. The British spelling includes the letter 'u', whereas the American spelling does not. We could adapt our command to generate abbreviations for honor as well as color:</p>
-
-<pre><code>:Abolish {col,hon}our{,s,ed,ing} {}or{}
-</code></pre>
-
-<p>Source the file, and now look at our list of abbreviations. It's huge! We generated all of that from these two commands.</p>
-
-<p>The Abolish command is really handy if you want to auto-correct the words that you frequently mis-spell. I've put together a plugin that generates abbreviations for converting lots of British spellings to the American equivalents. I'd be interested to hear of any other uses that you find for this feature.</p>
+<p>The Abolish command is really handy if you want to auto-correct the words that you frequently mis-spell. I&rsquo;ve put together a plugin that generates abbreviations for converting lots of British spellings to the American equivalents. I&rsquo;d be interested to hear of any other uses that you find for this feature.</p>
 
     </div>
   </div>

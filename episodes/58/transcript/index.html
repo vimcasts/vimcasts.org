@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -130,70 +131,65 @@
           </div>
         </div>
 
-        <h2 id="copying-text-to-the-system-clipboard">Copying text to the system clipboard</h2>
+        <h2>Copying text to the system clipboard</h2>
 
 <p>[clear Alfred clipboard history]</p>
 
-<p>I've set up a hotkey to display an inspector window that shows my clipboard history. [show Alfred clipboard history]</p>
+<p>I&rsquo;ve set up a hotkey to display an inspector window that shows my clipboard history. [show Alfred clipboard history]</p>
 
-<p>It's empty at the moment, but if I select the URL from my browser's location bar and copy it, you'll see that it shows up in my clipboard history. [show Alfred clipboard history]</p>
+<p>It&rsquo;s empty at the moment, but if I select the URL from my browser&rsquo;s location bar and copy it, you&rsquo;ll see that it shows up in my clipboard history. [show Alfred clipboard history]</p>
 
-<p>Inside of Vim, I can copy text into the system clipboard by using the quoteplus register. Watch this: I'll visually select this snippet of code, then press <code>"+y</code> "quote-plus-wye". That snippet now shows up as the topmost item in my clipboard history. [show Alfred clipboard history]</p>
+<p>Inside of Vim, I can copy text into the system clipboard by using the quoteplus register. Watch this: I&rsquo;ll visually select this snippet of code, then press <code>&quot;+y</code> &ldquo;quote-plus-wye&rdquo;. That snippet now shows up as the topmost item in my clipboard history. [show Alfred clipboard history]</p>
 
 <p>Now that the text is in my clipboard, I can easily paste it into other applications running on my machine.</p>
 
-<h2 id="pasting-from-the-system-clipboard">Pasting from the system clipboard</h2>
+<h2>Pasting from the system clipboard</h2>
 
-<p>Suppose that I want to copy some text from a webpage into a Vim buffer. I'll copy this short snippet of javascript from <a href="http://rosettacode.org/wiki/FizzBuzz#JavaScript">this gist</a>. Here in Vim, I have an empty file called <code>fizzbuzz.js</code>. I'll switch to Insert mode and use the system paste command (command-v).</p>
+<p>Suppose that I want to copy some text from a webpage into a Vim buffer. I&rsquo;ll copy this short snippet of javascript from <a href="http://rosettacode.org/wiki/FizzBuzz#JavaScript">this gist</a>. Here in Vim, I have an empty file called <code>fizzbuzz.js</code>. I&rsquo;ll switch to Insert mode and use the system paste command (command-v).</p>
 
-<p>Whoops! That doesn't look right! Vim receives a stream of characters and interprets them just as though they were typed manually. Vim's autoindent feature adds indentation each time a new line is started. When combined with the indentation already present in the pasted source code, the result is that each line drifts farther and farther to the right.</p>
+<p>Whoops! That doesn&rsquo;t look right! Vim receives a stream of characters and interprets them just as though they were typed manually. Vim&rsquo;s autoindent feature adds indentation each time a new line is started. When combined with the indentation already present in the pasted source code, the result is that each line drifts farther and farther to the right.</p>
 
-<p>By the way, if you're running GVim (or MacVim), then you won't experience this problem. In the graphical environment, Vim is able to detect when a stream of input comes from the clipboard, and adjusts its behavior accordingly.</p>
+<p>By the way, if you&rsquo;re running GVim (or MacVim), then you won&rsquo;t experience this problem. In the graphical environment, Vim is able to detect when a stream of input comes from the clipboard, and adjusts its behavior accordingly.</p>
 
-<p>In Terminal Vim, we can avoid this problem by pasting from the quoteplus register. I'll use the Ex put command this time:</p>
+<p>In Terminal Vim, we can avoid this problem by pasting from the quoteplus register. I&rsquo;ll use the Ex put command this time:</p>
+<pre class="highlight plaintext">:put +
+</pre>
 
-<pre><code>:put +
-</code></pre>
+<p>That&rsquo;s more like it!</p>
 
-<p>That's more like it!</p>
+<p>If you&rsquo;re dealing with snippets of text less than a line in length, there&rsquo;s no reason to avoid using the system paste command in Insert mode. But if you&rsquo;re pasting multiple lines of text, I&rsquo;d encourage you to use the quoteplus register where possible.</p>
 
-<p>If you're dealing with snippets of text less than a line in length, there's no reason to avoid using the system paste command in Insert mode. But if you're pasting multiple lines of text, I'd encourage you to use the quoteplus register where possible.</p>
+<h2>Make quoteplus the default register</h2>
 
-<h2 id="make-quoteplus-the-default-register">Make quoteplus the default register</h2>
-
-<p>If you'd like to make it easier to interact with the system clipboard, try out this setting:</p>
-
-<pre><code>:set clipboard=unnamed
-</code></pre>
+<p>If you&rsquo;d like to make it easier to interact with the system clipboard, try out this setting:</p>
+<pre class="highlight plaintext">:set clipboard=unnamed
+</pre>
 
 <p>That tells Vim to use the system clipboard for all yank, delete, change, and put operations that have no register explicitly specified. In effect, the system clipboard becomes the default register.</p>
 
 <p>Now if I run <code>yy</code> to yank a line, that text appears in the system clipboard.</p>
 
-<p>Beware that with this setting, Vim's <code>x</code> command will write a single character to the system clipboard, overwriting whatever was in there previously. That really irritates me, but being able to use a clipboard history browser makes it bareable.</p>
+<p>Beware that with this setting, Vim&rsquo;s <code>x</code> command will write a single character to the system clipboard, overwriting whatever was in there previously. That really irritates me, but being able to use a clipboard history browser makes it bareable.</p>
 
-<h2 id="feature-support-good-then-bad">Feature support (good then bad)</h2>
+<h2>Feature support (good then bad)</h2>
 
-<p>For all the examples in this video so far, I've been using the version of Vim that I have installed locally on my workstation. This version was compiled with support for the clipboard feature:</p>
-
-<pre><code>:version
+<p>For all the examples in this video so far, I&rsquo;ve been using the version of Vim that I have installed locally on my workstation. This version was compiled with support for the clipboard feature:</p>
+<pre class="highlight plaintext">:version
 ... +clipboard ...
-</code></pre>
+</pre>
 
-<p>If I log into a remote machine and launch the version of Vim installed there, you'll see that it doesn't support the clipboard feature:</p>
-
-<pre><code>:version
+<p>If I log into a remote machine and launch the version of Vim installed there, you&rsquo;ll see that it doesn&rsquo;t support the clipboard feature:</p>
+<pre class="highlight plaintext">:version
 ... -clipboard ...
-</code></pre>
+</pre>
 
 <p>If I attempt to paste from the plus register:</p>
+<pre class="highlight plaintext">:put +
+</pre>
 
-<pre><code>:put +
-</code></pre>
+<p>Vim raises an error: <em>Invalid register name</em>. That&rsquo;s fine. I&rsquo;m controlling a remote machine. It makes sense that I can&rsquo;t access the system clipboard from my workstation.</p>
 
-<p>Vim raises an error: <em>Invalid register name</em>. That's fine. I'm controlling a remote machine. It makes sense that I can't access the system clipboard from my workstation.</p>
-
-<p>But if you get this error from your local version of Vim, then I'd encourage you to install a version of Vim with clipboard support, or compile it yourself! It's an essential feature.</p>
+<p>But if you get this error from your local version of Vim, then I&rsquo;d encourage you to install a version of Vim with clipboard support, or compile it yourself! It&rsquo;s an essential feature.</p>
 
 
       </section>

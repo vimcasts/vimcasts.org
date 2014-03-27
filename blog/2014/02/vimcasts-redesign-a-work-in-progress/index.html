@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -181,12 +182,11 @@
 
 
 
-<p>We recently put together a short survey asking for feedback on the Vimcasts.org site (if you filled it out, thanks!). The most popular suggestion for improvement was to categorise all screencasts and articles, to make it easier to find related content. Check Hannah's blog for <a href="http://contentedstrategy.com/blog/2014/01/27/Redesigning-Vimcasts-The_User_Survey.html">a detailed breakdown of the responses to our user survey</a>.</p>
+<p>We recently put together a short survey asking for feedback on the Vimcasts.org site (if you filled it out, thanks!). The most popular suggestion for improvement was to categorise all screencasts and articles, to make it easier to find related content. Check Hannah&rsquo;s blog for <a href="http://contentedstrategy.com/blog/2014/01/27/Redesigning-Vimcasts-The_User_Survey.html">a detailed breakdown of the responses to our user survey</a>.</p>
 
 <p>Hannah has also been digging into the data from my Google Analytics account. One of her discoveries was that visitors using mobile devices account for an above average rate of first-time visitors, as well as a higher bounce rate. We hope that by providing a responsive design, the site will be more welcoming to visitors using mobile devices. Hannah has also written <a href="http://contentedstrategy.com/blog/2014/02/05/Redesigning-Vimcasts-The-Analytics-Overview.html">an analytics overview of Vimcasts.org</a>, which tells a few more interesting stories with my data.</p>
 
-<p>I'm currently migrating all Vimcasts content from Radiant CMS to Middleman, a static site generator. You can <a href="https://github.com/vimcasts/vimcasts.org">follow my progress on github</a>. There's a draft version of the site hosted on Github Pages. I won't link to here, but it's not hard to find if you're curious!</p>
-
+<p>I&rsquo;m currently migrating all Vimcasts content from Radiant CMS to Middleman, a static site generator. You can <a href="https://github.com/vimcasts/vimcasts.org">follow my progress on github</a>. There&rsquo;s a draft version of the site hosted on Github Pages. I won&rsquo;t link to here, but it&rsquo;s not hard to find if you&rsquo;re curious!</p>
 
       </div>
 
@@ -231,8 +231,19 @@
 
     
       <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+        <h4><a href="/blog/2010/04/short-form-urls-for-episodes/">Short form URLs for episodes</a></h4>
+        <p>Vimcasts.org now has it&rsquo;s own short form URLs. You can link to each episode by
+number, using the form <a href="http://vimcasts.org/episodes/creating-the-vimcasts-logo-as-ascii-art"><code>/e/10</code></a> to link to episode 10. You can also link to the
+episodes archive with the trailing path <a href="http://vimcasts.org/episodes/archive"><code>/e/a</code></a>.</p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/using-external-filter-commands-to-reformat-html/">Using external filter commands to reformat HTML</a></h4>
+        <p>We can use pandoc as a <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#filter">filter</a> to clean up <abbr title="what you see is what you get">WYSIWYG</abbr>-generated HTML. Pandoc is a commandline program, but we can call it from inside Vim either using the <a href="http://vimdoc.sourceforge.net/htmldoc/various.html#:!">bang Ex command</a>, or by configuring <a href="http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;#x27;formatprg&amp;#x27;">the <code>formatprg</code> option</a> to make the <code>gq</code> operator invoke pandoc.</p>
+
+
       </li>
     
       <li>
@@ -246,27 +257,16 @@
       </li>
     
       <li>
-        <h4><a href="/episodes/using-external-filter-commands-to-reformat-html/">Using external filter commands to reformat HTML</a></h4>
-        <p>We can use pandoc as a <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#filter">filter</a> to clean up <abbr title="what you see is what you get">WYSIWYG</abbr>-generated HTML. Pandoc is a commandline program, but we can call it from inside Vim either using the <a href="http://vimdoc.sourceforge.net/htmldoc/various.html#:!">bang Ex command</a>, or by configuring <a title="formatprg" href="http://vimdoc.sourceforge.net/htmldoc/options.html#">the <code>formatprg</code> option</a> to make the <code>gq</code> operator invoke pandoc.</p>
-
-
-      </li>
-    
-      <li>
         <h4><a href="/episodes/swapping-two-regions-of-text-with-exchange-vim/">Swapping two regions of text with exchange.vim</a></h4>
         <p>Swapping two regions of text is a common task, which normally requires that we make two separate changes to the document.
-Tom McDonald's <a href="https://github.com/tommcdo/vim-exchange">exchange plugin</a> offers an elegant alternative, by providing an operator that swaps two regions of text in one go.</p>
+Tom McDonald&rsquo;s <a href="https://github.com/tommcdo/vim-exchange">exchange plugin</a> offers an elegant alternative, by providing an operator that swaps two regions of text in one go.</p>
 
 
       </li>
     
       <li>
-        <h4><a href="/blog/2010/04/short-form-urls-for-episodes/">Short form URLs for episodes</a></h4>
-        <p>Vimcasts.org now has it's own short form URLs. You can link to each episode by
-number, using the form <a href="http://vimcasts.org/episodes/creating-the-vimcasts-logo-as-ascii-art"><code>/e/10</code></a> to link to episode 10. You can also link to the
-episodes archive with the trailing path <a href="http://vimcasts.org/episodes/archive"><code>/e/a</code></a>.</p>
-
-
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
       </li>
     
 

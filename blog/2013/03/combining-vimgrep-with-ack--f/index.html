@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -177,51 +178,44 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>I love the way that ack let's me specify the files to search inside. For starters, ack does the right thing by ignoring the contents of VCS directories, backup files, core dumps etc., which gives a good signal to noise ratio. On top of that, ack provides a convenient syntax for specifying filetypes to include or exclude from the set (see <code>ack --help-types</code>). I can target ruby files only with the <code>--ruby</code> option, or everything but ruby files with <code>--noruby</code>.</p>
+        <p>I love the way that ack let&rsquo;s me specify the files to search inside. For starters, ack does the right thing by ignoring the contents of VCS directories, backup files, core dumps etc., which gives a good signal to noise ratio. On top of that, ack provides a convenient syntax for specifying filetypes to include or exclude from the set (see <code>ack --help-types</code>). I can target ruby files only with the <code>--ruby</code> option, or everything but ruby files with <code>--noruby</code>.</p>
 
-<p>I also love using <code>:vimgrep</code>, because it lets me use Vim's native regular expressions. For me, the ideal project-wide search would combine Vim's regex with ack's method of specifying the set of files to search through. I recently learned about ack's <code>-f</code> flag, which makes this combination possible.</p>
+<p>I also love using <code>:vimgrep</code>, because it lets me use Vim&rsquo;s native regular expressions. For me, the ideal project-wide search would combine Vim&rsquo;s regex with ack&rsquo;s method of specifying the set of files to search through. I recently learned about ack&rsquo;s <code>-f</code> flag, which makes this combination possible.</p>
 
 
 
-<r:snippet name="announcement" />
+<p><r:snippet name="announcement"/></p>
 
-<p><a href="http://betterthangrep.com/documentation/">Ack's documentation</a> describes the <code>-f</code> flag as follows:</p>
-
-<pre><code>-f     Only print the files found, without searching.
+<p><a href="http://betterthangrep.com/documentation/">Ack&rsquo;s documentation</a> describes the <code>-f</code> flag as follows:</p>
+<pre class="highlight plaintext">-f     Only print the files found, without searching.
        The PATTERN must not be specified.
-</code></pre>
+</pre>
 
 <p>That means we can easily get a list of all of the source code files in a project by running:</p>
+<pre class="highlight plaintext">ack -f
+</pre>
 
-<pre><code>ack -f
-</code></pre>
-
-<p>We could load all of those files into Vim's arglist by launching Vim with a backtick expression containing that command:</p>
-
-<pre><code>vim `ack -f`
-</code></pre>
+<p>We could load all of those files into Vim&rsquo;s arglist by launching Vim with a backtick expression containing that command:</p>
+<pre class="highlight plaintext">vim `ack -f`
+</pre>
 
 <p>Or if Vim was already running, we could populate the arglist with the same set of files by running:</p>
-
-<pre><code>:args `ack -f`
-</code></pre>
+<pre class="highlight plaintext">:args `ack -f`
+</pre>
 
 <p><a href="/e/42">Episode #42</a> of Vimcasts goes into more detail on <a href="/e/42">populating the arglist</a>.</p>
 
-<p>On Vim's command line, the special symbol <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#:_##">##</a> is expanded to represent the filepath of each buffer in the arglist. If we wanted to search for a pattern inside all of those files, we could do so by running:</p>
+<p>On Vim&rsquo;s command line, the special symbol <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#:_##">##</a> is expanded to represent the filepath of each buffer in the arglist. If we wanted to search for a pattern inside all of those files, we could do so by running:</p>
+<pre class="highlight plaintext">:vimgrep /{pattern}/g ##
+</pre>
 
-<pre><code>:vimgrep /{pattern}/g ##
-</code></pre>
-
-<p>This gives the best of both worlds. We get to use <code>ack</code> to specify the set of files to look inside, and <code>:vimgrep</code> to harness Vim's built-in regex engine. </p>
+<p>This gives the best of both worlds. We get to use <code>ack</code> to specify the set of files to look inside, and <code>:vimgrep</code> to harness Vim&rsquo;s built-in regex engine. </p>
 
 <p>This works too:</p>
+<pre class="highlight plaintext">:vimgrep /{pattern}/g `ack -f`
+</pre>
 
-<pre><code>:vimgrep /{pattern}/g `ack -f`
-</code></pre>
-
-<p>I prefer to specify the set of files in one command (<code>:args ack -f</code>) and the pattern in a second command (<code>:vim /{pattern}/g ##</code>), but that's just my personal preference. <a href="/e/44">Episode #44</a> of Vimcasts goes into more detail on how to <a href="/e/44">search multiple files with :vimgrep</a>.</p>
-
+<p>I prefer to specify the set of files in one command (<code>:args ack -f</code>) and the pattern in a second command (<code>:vim /{pattern}/g ##</code>), but that&rsquo;s just my personal preference. <a href="/e/44">Episode #44</a> of Vimcasts goes into more detail on how to <a href="/e/44">search multiple files with :vimgrep</a>.</p>
 
       </div>
 
@@ -266,10 +260,8 @@
 
     
       <li>
-        <h4><a href="/episodes/search-multiple-files-with-vimgrep/">Search multiple files with :vimgrep</a></h4>
-        <p><code>vimgrep</code> is Vim's built-in command for searching across multiple files. It's not so fast as external tools like ack and git-grep, but it has its uses. <code>vimgrep</code> uses Vim's built-in regex engine, so you can reuse the patterns that work with Vim's standard search command. </p>
-
-
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
       </li>
     
       <li>
@@ -278,25 +270,27 @@
       </li>
     
       <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/blog/2013/03/combining-vimgrep-with-git-ls-files/">Combining :vimgrep with git ls-files</a></h4>
-        <p>The <code>vimgrep</code> command uses Vim's native regular expressions to search the contents of multiple files. There are several ways that we can specify the list of files to look inside, including <code>*</code> and <code>**</code> wildcards. It would be handy if we could instruct <code>vimgrep</code> to look inside all of the files in the current project, excluding those listed in the <code>.gitignore</code> file. That's where the <a href="https://www.kernel.org/pub/software/scm/git/docs/git-ls-files.html"><code>git ls-files</code></a> command comes in.</p>
+        <h4><a href="/episodes/search-multiple-files-with-vimgrep/">Search multiple files with :vimgrep</a></h4>
+        <p><code>vimgrep</code> is Vim&rsquo;s built-in command for searching across multiple files. It&rsquo;s not so fast as external tools like ack and git-grep, but it has its uses. <code>vimgrep</code> uses Vim&rsquo;s built-in regex engine, so you can reuse the patterns that work with Vim&rsquo;s standard search command. </p>
 
 
       </li>
     
       <li>
         <h4><a href="/episodes/project-wide-find-and-replace/">Project-wide find and replace</a></h4>
-        <p>Vim doesn't have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as <code>:substitute</code>, <code>:argdo</code>, and <code>:vimgrep</code>. We'll look at two possible strategies: first using the arglist, then the quickfix list.</p>
+        <p>Vim doesn&rsquo;t have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as <code>:substitute</code>, <code>:argdo</code>, and <code>:vimgrep</code>. We&rsquo;ll look at two possible strategies: first using the arglist, then the quickfix list.</p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/blog/2013/03/combining-vimgrep-with-git-ls-files/">Combining :vimgrep with git ls-files</a></h4>
+        <p>The <code>vimgrep</code> command uses Vim&rsquo;s native regular expressions to search the contents of multiple files. There are several ways that we can specify the list of files to look inside, including <code>*</code> and <code>**</code> wildcards. It would be handy if we could instruct <code>vimgrep</code> to look inside all of the files in the current project, excluding those listed in the <code>.gitignore</code> file. That&rsquo;s where the <a href="https://www.kernel.org/pub/software/scm/git/docs/git-ls-files.html"><code>git ls-files</code></a> command comes in.</p>
 
 
       </li>

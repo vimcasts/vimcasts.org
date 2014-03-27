@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -177,49 +178,44 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>The <code>vimgrep</code> command uses Vim's native regular expressions to search the contents of multiple files. There are several ways that we can specify the list of files to look inside, including <code>*</code> and <code>**</code> wildcards. It would be handy if we could instruct <code>vimgrep</code> to look inside all of the files in the current project, excluding those listed in the <code>.gitignore</code> file. That's where the <a href="https://www.kernel.org/pub/software/scm/git/docs/git-ls-files.html"><code>git ls-files</code></a> command comes in.</p>
+        <p>The <code>vimgrep</code> command uses Vim&rsquo;s native regular expressions to search the contents of multiple files. There are several ways that we can specify the list of files to look inside, including <code>*</code> and <code>**</code> wildcards. It would be handy if we could instruct <code>vimgrep</code> to look inside all of the files in the current project, excluding those listed in the <code>.gitignore</code> file. That&rsquo;s where the <a href="https://www.kernel.org/pub/software/scm/git/docs/git-ls-files.html"><code>git ls-files</code></a> command comes in.</p>
 
 
 
-<r:snippet name="announcement" />
+<p><r:snippet name="announcement"/></p>
 
-<p>Run <a href="https://www.kernel.org/pub/software/scm/git/docs/git-ls-files.html"><code>git help ls-files</code></a> and you'll find the short summary:</p>
+<p>Run <a href="https://www.kernel.org/pub/software/scm/git/docs/git-ls-files.html"><code>git help ls-files</code></a> and you&rsquo;ll find the short summary:</p>
 
 <blockquote>
-  <p>Show information about files in the index and the working tree</p>
+<p>Show information about files in the index and the working tree</p>
 </blockquote>
 
 <p>We can easily get a list of all of the files tracked in a git repository by running:</p>
-
-<pre><code>git ls-files
-</code></pre>
+<pre class="highlight plaintext">git ls-files
+</pre>
 
 <p>If we wanted to search the contents of those files with <code>vimgrep</code>, we could wrap the git command in a backtick expression:</p>
-
-<pre><code>:vimgrep /{pattern}/g `git ls-files`
-</code></pre>
+<pre class="highlight plaintext">:vimgrep /{pattern}/g `git ls-files`
+</pre>
 
 <p>Alternatively, we could use the <code>git ls-files</code> command to populate the arglist. Then we could use the special symbol <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#:_##">##</a> as the final argument for the <code>vimgrep</code> command:</p>
-
-<pre><code>:args `git ls-files`
+<pre class="highlight plaintext">:args `git ls-files`
 :vimgrep /{pattern}/g ##
-</code></pre>
+</pre>
 
 <p>The <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#:_##">##</a> symbol is expanded to represent the filepath of each buffer in the arglist. <a href="/e/42">Episode #42</a> of Vimcasts goes into more detail on <a href="/e/42">populating the arglist</a>, and <a href="/e/44">Episode #44</a> of Vimcasts goes into more detail on how to <a href="/e/44">search multiple files with :vimgrep</a>.</p>
 
-<h3 id="watch-out-git-ls-files-omits-untracked-files">Watch out: <code>git ls-files</code> omits untracked files</h3>
+<h3>Watch out: <code>git ls-files</code> omits untracked files</h3>
 
-<p>There's one thing to watch out for if you use this technique: <code>git ls-files</code> only lists <em>files in the index and working tree</em>. The command is blind to untracked files. In other words, if you create a new file, it won't show up in the output of <code>git ls-files</code> until you run:</p>
-
-<pre><code>git add path/to/newfile
-</code></pre>
+<p>There&rsquo;s one thing to watch out for if you use this technique: <code>git ls-files</code> only lists <em>files in the index and working tree</em>. The command is blind to untracked files. In other words, if you create a new file, it won&rsquo;t show up in the output of <code>git ls-files</code> until you run:</p>
+<pre class="highlight plaintext">git add path/to/newfile
+</pre>
 
 <p>You can view the list of untracked files by running <code>git ls-files --others</code>.</p>
 
-<h3 id="theres-always-git-grep-too">There's always git-grep too</h3>
+<h3>There&rsquo;s always git-grep too</h3>
 
-<p>Of course, git also provides the <a href="https://www.kernel.org/pub/software/scm/git/docs/git-grep.html"><code>git-grep</code></a> command, and the [fugitive][] plugin provides a <code>:Ggrep</code> wrapper for it. <a href="/e/35">Episode 35</a> covers <code>:Ggrep</code> in more detail. Even so, it's handy to know that <code>git ls-files</code> can be combined with <code>vimgrep</code>, for those times when you've got a complex Vim regular expression, and you want to test it against multiple files.</p>
-
+<p>Of course, git also provides the <a href="https://www.kernel.org/pub/software/scm/git/docs/git-grep.html"><code>git-grep</code></a> command, and the [fugitive][] plugin provides a <code>:Ggrep</code> wrapper for it. <a href="/e/35">Episode 35</a> covers <code>:Ggrep</code> in more detail. Even so, it&rsquo;s handy to know that <code>git ls-files</code> can be combined with <code>vimgrep</code>, for those times when you&rsquo;ve got a complex Vim regular expression, and you want to test it against multiple files.</p>
 
       </div>
 
@@ -264,12 +260,15 @@
 
     
       <li>
-        <h4><a href="/blog/2013/03/combining-vimgrep-with-ack--f/">Combining :vimgrep with ack -f</a></h4>
-        <p>I love the way that ack let's me specify the files to search inside. For starters, ack does the right thing by ignoring the contents of VCS directories, backup files, core dumps etc., which gives a good signal to noise ratio. On top of that, ack provides a convenient syntax for specifying filetypes to include or exclude from the set (see <code>ack --help-types</code>). I can target ruby files only with the <code>--ruby</code> option, or everything but ruby files with <code>--noruby</code>.</p>
-
-<p>I also love using <code>:vimgrep</code>, because it lets me use Vim's native regular expressions. For me, the ideal project-wide search would combine Vim's regex with ack's method of specifying the set of files to search through. I recently learned about ack's <code>-f</code> flag, which makes this combination possible.</p>
+        <h4><a href="/blog/2013/05/gitminutes-8---drew-neil-on-vim-and-workflow/">GitMinutes #8 - Drew Neil on Vim and Workflow</a></h4>
+        <p>I was pleased to be invited to chat with Thomas Ferris Nicolaisen on the GitMinutes podcast recently. It&rsquo;s now live! Head over to <a href="http://episodes.gitminutes.com/2013/05/gitminutes-08-drew-neil-on-vim-and.html">Episode #8 of Git Minutes</a> and have a listen.</p>
 
 
+      </li>
+    
+      <li>
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
       </li>
     
       <li>
@@ -279,21 +278,18 @@
     
       <li>
         <h4><a href="/episodes/project-wide-find-and-replace/">Project-wide find and replace</a></h4>
-        <p>Vim doesn't have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as <code>:substitute</code>, <code>:argdo</code>, and <code>:vimgrep</code>. We'll look at two possible strategies: first using the arglist, then the quickfix list.</p>
+        <p>Vim doesn&rsquo;t have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as <code>:substitute</code>, <code>:argdo</code>, and <code>:vimgrep</code>. We&rsquo;ll look at two possible strategies: first using the arglist, then the quickfix list.</p>
 
 
       </li>
     
       <li>
-        <h4><a href="/blog/2013/05/gitminutes-8---drew-neil-on-vim-and-workflow/">GitMinutes #8 - Drew Neil on Vim and Workflow</a></h4>
-        <p>I was pleased to be invited to chat with Thomas Ferris Nicolaisen on the GitMinutes podcast recently. It's now live! Head over to <a href="http://episodes.gitminutes.com/2013/05/gitminutes-08-drew-neil-on-vim-and.html">Episode #8 of Git Minutes</a> and have a listen.</p>
+        <h4><a href="/blog/2013/03/combining-vimgrep-with-ack--f/">Combining :vimgrep with ack -f</a></h4>
+        <p>I love the way that ack let&rsquo;s me specify the files to search inside. For starters, ack does the right thing by ignoring the contents of VCS directories, backup files, core dumps etc., which gives a good signal to noise ratio. On top of that, ack provides a convenient syntax for specifying filetypes to include or exclude from the set (see <code>ack --help-types</code>). I can target ruby files only with the <code>--ruby</code> option, or everything but ruby files with <code>--noruby</code>.</p>
+
+<p>I also love using <code>:vimgrep</code>, because it lets me use Vim&rsquo;s native regular expressions. For me, the ideal project-wide search would combine Vim&rsquo;s regex with ack&rsquo;s method of specifying the set of files to search through. I recently learned about ack&rsquo;s <code>-f</code> flag, which makes this combination possible.</p>
 
 
-      </li>
-    
-      <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
       </li>
     
       <li>

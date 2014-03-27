@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -130,44 +131,41 @@
           </div>
         </div>
 
-        <h1 id="creating-mappings-that-accept-a-count">Creating mappings that accept a count</h1>
+        <h1>Creating mappings that accept a count</h1>
 
-<p>Lots of Vim's built-in Normal mode commands can be executed multiple times by prefixing them with a count. User-defined Normal mode mappings don't usually handle counts the way you might like them to. We'll explore a couple of techniques for making your custom mappings respond predictably to a count.</p>
+<p>Lots of Vim&rsquo;s built-in Normal mode commands can be executed multiple times by prefixing them with a count. User-defined Normal mode mappings don&rsquo;t usually handle counts the way you might like them to. We&rsquo;ll explore a couple of techniques for making your custom mappings respond predictably to a count.</p>
 
-<p>Here's a task that I find myself performing often: I'll search for the word 'Intro', change it to something else, then repeat the same edit a handful of times by pressing <code>n.</code> (N-dot) again and again. That's two keystrokes per change. What if we could collapse that down to a single keystroke?</p>
+<p>Here&rsquo;s a task that I find myself performing often: I&rsquo;ll search for the word &lsquo;Intro&rsquo;, change it to something else, then repeat the same edit a handful of times by pressing <code>n.</code> (N-dot) again and again. That&rsquo;s two keystrokes per change. What if we could collapse that down to a single keystroke?</p>
 
-<p>I don't like the built-in behaviour of the <code>Q</code> (shift-Q) command, so I like to map it to something more useful. Let's set up a Normal mode mapping so that pressing shift-Q executes N-dot:</p>
+<p>I don&rsquo;t like the built-in behaviour of the <code>Q</code> (shift-Q) command, so I like to map it to something more useful. Let&rsquo;s set up a Normal mode mapping so that pressing shift-Q executes N-dot:</p>
+<pre class="highlight plaintext">nnoremap Q n.
+</pre>
 
-<pre><code>nnoremap Q n.
-</code></pre>
+<p>I&rsquo;ll write that file, then source it. 
+Now let&rsquo;s try out our mapping.
+I&rsquo;ll search for the word &lsquo;Welcome&rsquo;, then change it back to &lsquo;Intro&rsquo;. Now each time that I press shift-Q, Vim jumps to the next match and repeats the last change.</p>
 
-<p>I'll write that file, then source it. 
-Now let's try out our mapping.
-I'll search for the word 'Welcome', then change it back to 'Intro'. Now each time that I press shift-Q, Vim jumps to the next match and repeats the last change.</p>
+<p>I&rsquo;ll just undo each of those changes and we&rsquo;ll try something different.</p>
 
-<p>I'll just undo each of those changes and we'll try something different.</p>
+<p>I&rsquo;ve got search-highlighting enabled, and I can tell at a glance that I&rsquo;m going to want to repeat this change FOUR times in total. Many of Vim&rsquo;s commands can be prefixed with a count. Let&rsquo;s try using a count of FOUR with our custom mapping.</p>
 
-<p>I've got search-highlighting enabled, and I can tell at a glance that I'm going to want to repeat this change FOUR times in total. Many of Vim's commands can be prefixed with a count. Let's try using a count of FOUR with our custom mapping.</p>
+<p>See what&rsquo;s happened? The <code>n</code> command has been repeated FOUR times, but the dot command was only executed one time. It would be nice if we could fix our custom mapping so that the count applied to everything, not just the very next command.</p>
 
-<p>See what's happened? The <code>n</code> command has been repeated FOUR times, but the dot command was only executed one time. It would be nice if we could fix our custom mapping so that the count applied to everything, not just the very next command.</p>
+<p>Here&rsquo;s one way of making this work:</p>
+<pre class="highlight plaintext">nnoremap Q @='n.'&lt;CR&gt;
+</pre>
 
-<p>Here's one way of making this work:</p>
+<p>I&rsquo;ll write the file, then source it, now let&rsquo;s try our revised mapping. I&rsquo;ll repeat my search for &lsquo;Welcome&rsquo;, change it to &lsquo;Intro&rsquo;, then press <code>3Q</code>. Sure enough, the count has caused the change to be applied to the next 3 occurrences.</p>
 
-<pre><code>nnoremap Q @='n.'&lt;CR&gt;
-</code></pre>
+<p>So how does it work? The <code>@</code> key tells Vim to execute a macro. Rather than using a named register, we use the expression register, which let&rsquo;s us specify the contents in place. The characters inside of the quotes are interpreted as keystrokes, and the carriage return enters the string into the expression register. When we execute this with a count, it applies to the entire macro, not just the very next command.</p>
 
-<p>I'll write the file, then source it, now let's try our revised mapping. I'll repeat my search for 'Welcome', change it to 'Intro', then press <code>3Q</code>. Sure enough, the count has caused the change to be applied to the next 3 occurrences.</p>
+<p>It&rsquo;s a pretty neat trick, but it can look a bit cryptic inside a vimrc file! Here&rsquo;s an alternative method, which I find slightly easier on the eye:</p>
+<pre class="highlight plaintext">nnoremap Q :normal n.&lt;CR&gt;
+</pre>
 
-<p>So how does it work? The <code>@</code> key tells Vim to execute a macro. Rather than using a named register, we use the expression register, which let's us specify the contents in place. The characters inside of the quotes are interpreted as keystrokes, and the carriage return enters the string into the expression register. When we execute this with a count, it applies to the entire macro, not just the very next command.</p>
+<p>This uses the <code>:normal</code> Ex command to execute n-dot. I&rsquo;ll write and source the file, and quickly demonstrate&hellip; Again, this mapping works fine with a count.</p>
 
-<p>It's a pretty neat trick, but it can look a bit cryptic inside a vimrc file! Here's an alternative method, which I find slightly easier on the eye:</p>
-
-<pre><code>nnoremap Q :normal n.&lt;CR&gt;
-</code></pre>
-
-<p>This uses the <code>:normal</code> Ex command to execute n-dot. I'll write and source the file, and quickly demonstrate… Again, this mapping works fine with a count.</p>
-
-<p>As an exercise, why don't you go through any Normal mode mappings you've got in your vimrc and ask yourself: "could this be improved by being made to accept a count?" If the answer is yes, then I suggest that you modify the mapping to use one of these patterns.</p>
+<p>As an exercise, why don&rsquo;t you go through any Normal mode mappings you&rsquo;ve got in your vimrc and ask yourself: &ldquo;could this be improved by being made to accept a count?&rdquo; If the answer is yes, then I suggest that you modify the mapping to use one of these patterns.</p>
 
 
       </section>

@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -227,38 +228,35 @@
           
 
 <p>Put the following in your <code>.vimrc</code> file:</p>
+<pre class="highlight viml"><span class="c">" Only do this part when compiled with support for autocommands</span>
+<span class="k">if</span> has<span class="p">(</span><span class="s2">"autocmd"</span><span class="p">)</span>
+  <span class="c">" Enable file type detection</span>
+  <span class="k">filetype</span> <span class="k">on</span>
 
-<pre class="brush: vimscript">
-" Only do this part when compiled with support for autocommands
-if has("autocmd")
-  " Enable file type detection
-  filetype on
-  
-  " Syntax of these languages is fussy over tabs Vs spaces
-  autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
-  autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-  
-  " Customisations based on house-style (arbitrary)
-  autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
-  
-  " Treat .rss files as XML
-  autocmd BufNewFile,BufRead *.rss setfiletype xml
-endif
+  <span class="c">" Syntax of these languages is fussy over tabs Vs spaces</span>
+  autocmd <span class="nb">FileType</span> <span class="k">make</span> <span class="k">setlocal</span> <span class="k">ts</span><span class="p">=</span><span class="m">8</span> <span class="k">sts</span><span class="p">=</span><span class="m">8</span> <span class="k">sw</span><span class="p">=</span><span class="m">8</span> noexpandtab
+  autocmd <span class="nb">FileType</span> yaml <span class="k">setlocal</span> <span class="k">ts</span><span class="p">=</span><span class="m">2</span> <span class="k">sts</span><span class="p">=</span><span class="m">2</span> <span class="k">sw</span><span class="p">=</span><span class="m">2</span> expandtab
+
+  <span class="c">" Customisations based on house-style (arbitrary)</span>
+  autocmd <span class="nb">FileType</span> html <span class="k">setlocal</span> <span class="k">ts</span><span class="p">=</span><span class="m">2</span> <span class="k">sts</span><span class="p">=</span><span class="m">2</span> <span class="k">sw</span><span class="p">=</span><span class="m">2</span> expandtab
+  autocmd <span class="nb">FileType</span> css <span class="k">setlocal</span> <span class="k">ts</span><span class="p">=</span><span class="m">2</span> <span class="k">sts</span><span class="p">=</span><span class="m">2</span> <span class="k">sw</span><span class="p">=</span><span class="m">2</span> expandtab
+  autocmd <span class="nb">FileType</span> javascript <span class="k">setlocal</span> <span class="k">ts</span><span class="p">=</span><span class="m">4</span> <span class="k">sts</span><span class="p">=</span><span class="m">4</span> <span class="k">sw</span><span class="p">=</span><span class="m">4</span> noexpandtab
+
+  <span class="c">" Treat .rss files as XML</span>
+  autocmd <span class="nb">BufNewFile</span><span class="p">,</span><span class="nb">BufRead</span> *<span class="p">.</span>rss <span class="k">setfiletype</span> xml
+<span class="k">endif</span>
 </pre>
 
-<h3 id="further-reading">Further reading</h3>
+<h3>Further reading</h3>
 
 <ul>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/autocmd.html#:autocmd"><code>:help :autocmd</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/autocmd.html#FileType"><code>:help FileType</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/options.html#:setlocal"><code>:help :setlocal</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/options.html#:setfiletype"><code>:help :setfiletype</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/autocmd.html#BufNewFile"><code>:help BufNewFile</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/autocmd.html#BufRead"><code>:help BufRead</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/autocmd.html#:autocmd"><code>:help :autocmd</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/autocmd.html#FileType"><code>:help FileType</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/options.html#:setlocal"><code>:help :setlocal</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/options.html#:setfiletype"><code>:help :setfiletype</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/autocmd.html#BufNewFile"><code>:help BufNewFile</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/autocmd.html#BufRead"><code>:help BufRead</code></a></li>
 </ul>
-
 
         </div>
         </dd>
@@ -303,8 +301,8 @@ endif
 
     
       <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
       <li>
@@ -313,15 +311,15 @@ endif
       </li>
     
       <li>
-        <h4><a href="/episodes/tidying-whitespace/">Tidying whitespace</a></h4>
-        <p>This episode demonstrates a few techniques for tidying up whitespace.  First, it looks at how to convert between tabs and spaces. Then it shows how to strip trailing whitespace, and finally, how to remove blank lines from a file.</p>
+        <h4><a href="/episodes/tabs-and-spaces/">Tabs and Spaces</a></h4>
+        <p>Vim offers very granular control over whitespace. This episode explains the purpose of <code>tabstop</code>, <code>softtabstop</code>, <code>shiftwidth</code> and <code>expandtab</code> settings, and illustrates how Vim behaves using various combinations of these.</p>
 
 
       </li>
     
       <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
       </li>
     
       <li>
@@ -332,8 +330,8 @@ endif
       </li>
     
       <li>
-        <h4><a href="/episodes/tabs-and-spaces/">Tabs and Spaces</a></h4>
-        <p>Vim offers very granular control over whitespace. This episode explains the purpose of <code>tabstop</code>, <code>softtabstop</code>, <code>shiftwidth</code> and <code>expandtab</code> settings, and illustrates how Vim behaves using various combinations of these.</p>
+        <h4><a href="/episodes/tidying-whitespace/">Tidying whitespace</a></h4>
+        <p>This episode demonstrates a few techniques for tidying up whitespace.  First, it looks at how to convert between tabs and spaces. Then it shows how to strip trailing whitespace, and finally, how to remove blank lines from a file.</p>
 
 
       </li>

@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -187,7 +188,7 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>Git provides tools for searching the contents of files, commit messages, and even whether text was added or removed by a commit. In this episode, we'll see how fugitive's <code>Ggrep</code> and <code>Glog</code> commands wrap this functionality up so that we can search the contents and history of a git repo from right inside of Vim.</p>
+        <p>Git provides tools for searching the contents of files, commit messages, and even whether text was added or removed by a commit. In this episode, we&rsquo;ll see how fugitive&rsquo;s <code>Ggrep</code> and <code>Glog</code> commands wrap this functionality up so that we can search the contents and history of a git repo from right inside of Vim.</p>
 
 <p><em>This is the last of our five part series on fugitive.vim.</em></p>
 
@@ -228,7 +229,7 @@
         <div id="shownotes" class="content" data-swiftype-index="true">
           
 
-<h3 id="browsing-past-revisions-of-a-file">Browsing past revisions of a file</h3>
+<h3>Browsing past revisions of a file</h3>
 
 <p>The <code>Glog</code> command makes it easy to examine all previous revisions of a file. It does this by loading each revision into its own buffer, and queuing them in the quickfix list in chronological order.</p>
 
@@ -265,7 +266,7 @@
   </tr>
 </table>
 
-<h3 id="browsing-past-commits">Browsing past commits</h3>
+<h3>Browsing past commits</h3>
 
 <p>You can also use the <code>:Glog</code> command to review past commit objects, by appending a trailing <code>--</code> argument. By default, this will load all ancestral commit objects into the quickfix list. If you supply a filepath after the <code>--</code> argument, then the list will be filtered to only include commit objects that touched the specified file.</p>
 
@@ -290,7 +291,7 @@
 
 <p>Note that when fugitive loads a commit object into a buffer, it is interactive in a number of ways. See <a href="/e/34">episode 34</a> for more details.</p>
 
-<h3 id="working-with-the-quickfix-list">Working with the quickfix list</h3>
+<h3>Working with the quickfix list</h3>
 
 <p>I recommend installing <a href="http://www.vim.org/scripts/script.php?script_id=1590">unimpaired.vim</a>, another plugin by Tim Pope. This provides lots of useful pairs of mappings, including a handful that make working with the quickfix list much easier:</p>
 
@@ -322,18 +323,17 @@
   </tr>
 </table>
 
-<h3 id="searching-the-working-tree-with-ggrep">Searching the working tree with <code>Ggrep</code></h3>
+<h3>Searching the working tree with <code>Ggrep</code></h3>
 
 <p>The <code>Ggrep</code> command is a wrapper for <code>git grep</code>. It uses the results to populate the quickfix list, so you can easily navigate the result list from inside Vim.</p>
 
-<p>If you want to search your working tree for the text 'find me', simply run:</p>
-
-<pre><code>:Ggrep 'find me'
-</code></pre>
+<p>If you want to search your working tree for the text &lsquo;find me&rsquo;, simply run:</p>
+<pre class="highlight plaintext">:Ggrep 'find me'
+</pre>
 
 <p>The <code>git grep</code> command only looks inside files that are tracked by the git repository. The fact that it only looks inside tracked files means that it skips over any files or directories listed in the <code>.gitignore</code> file.</p>
 
-<h3 id="searching-branches-tags-and-commits-with-ggrep">Searching branches, tags and commits with <code>Ggrep</code></h3>
+<h3>Searching branches, tags and commits with <code>Ggrep</code></h3>
 
 <p><code>git grep</code> is not just limited to reading files on the filesystem. It can look inside any git object. So using <code>git grep</code>, you can search all files in any of your git branches without first having to switch to the branch.</p>
 
@@ -346,42 +346,41 @@
     <td>
       <code>:Ggrep&nbsp;findme</code>
     </td>
-    <td>search for 'findme' in working copy files (excluding untracked files)</td>
+    <td>search for &lsquo;findme&rsquo; in working copy files (excluding untracked files)</td>
   </tr>
   <tr>
     <td>
       <code>:Ggrep&nbsp;--cached&nbsp;findme</code>
     </td>
-    <td>search for 'findme' in the index</td>
+    <td>search for &lsquo;findme&rsquo; in the index</td>
   </tr>
   <tr>
     <td>
       <code>:Ggrep&nbsp;findme&nbsp;branchname</code>
     </td>
-    <td>search for 'findme' in branch 'branchname'</td>
+    <td>search for &lsquo;findme&rsquo; in branch &lsquo;branchname&rsquo;</td>
   </tr>
   <tr>
     <td>
       <code>:Ggrep&nbsp;findme&nbsp;tagname</code>
     </td>
-    <td>search for 'findme' in tag 'tagname'</td>
+    <td>search for &lsquo;findme&rsquo; in tag &lsquo;tagname&rsquo;</td>
   </tr>
   <tr>
     <td>
       <code>:Ggrep&nbsp;findme&nbsp;SHA</code>
     </td>
-    <td>search for 'findme' in the commit/tag identified by SHA</td>
+    <td>search for &lsquo;findme&rsquo; in the commit/tag identified by SHA</td>
   </tr>
 </table>
 
 <p>When you open a file that belongs on another branch, fugitive will automatically create a <em>read only</em> buffer for it.</p>
 
-<h3 id="searching-for-text-in-a-commit-message">Searching for text in a commit message</h3>
+<h3>Searching for text in a commit message</h3>
 
-<p>If you want to search the text of commit messages, you can do so by passing the <code>--grep</code> option to the <code>git log</code> command. For example, if you wanted to find commit messages containing the text 'findme', you could run:</p>
-
-<pre><code>git log --grep=findme
-</code></pre>
+<p>If you want to search the text of commit messages, you can do so by passing the <code>--grep</code> option to the <code>git log</code> command. For example, if you wanted to find commit messages containing the text &lsquo;findme&rsquo;, you could run:</p>
+<pre class="highlight plaintext">git log --grep=findme
+</pre>
 
 <p>You can also do this from inside of Vim using the <code>:Glog</code> wrapper. This table summarizes a couple of ways you might use this:</p>
 
@@ -394,22 +393,21 @@
     <td>
       <code>:Glog&nbsp;--grep=findme&nbsp;--</code>
     </td>
-    <td>search for 'findme' in all ancestral commit messages</td>
+    <td>search for &lsquo;findme&rsquo; in all ancestral commit messages</td>
   </tr>
   <tr>
     <td>
       <code>:Glog&nbsp;--grep=findme&nbsp;--&nbsp;%</code>
     </td>
-    <td>search for 'findme' in all ancestral commit messages that touch the currently active file</td>
+    <td>search for &lsquo;findme&rsquo; in all ancestral commit messages that touch the currently active file</td>
   </tr>
 </table>
 
-<h3 id="searching-for-text-added-or-removed-by-a-commit">Searching for text added or removed by a commit</h3>
+<h3>Searching for text added or removed by a commit</h3>
 
 <p>Git also makes it possible to <a href="http://www.kernel.org/pub/software/scm/git/docs/gitdiffcore.html#_diffcore_pickaxe_for_detecting_addition_deletion_of_specified_string">search for text that was added or removed by a commit using the pickaxe option</a>. This is activated with the <code>-S</code> switch as follows:</p>
-
-<pre><code>git log -Sfindme
-</code></pre>
+<pre class="highlight plaintext">git log -Sfindme
+</pre>
 
 <p>This tells git to go through every commit, comparing the before and after state of <em>each file</em> that was changed by that commit. If the specified string is present in the file before, but absent from the file after the commit, then it counts as a match. The converse is also true, so if the specified string was either added or removed by the commit, then it will appear the git log results.</p>
 
@@ -424,31 +422,30 @@
     <td>
       <code>:Glog&nbsp;-Sfindme&nbsp;--</code>
     </td>
-    <td>search for 'findme' in the diff for each ancestral commit</td>
+    <td>search for &lsquo;findme&rsquo; in the diff for each ancestral commit</td>
   </tr>
   <tr>
     <td>
       <code>:Glog&nbsp;-Sfindme&nbsp;--&nbsp;%</code>
     </td>
-    <td>search for 'findme' in the diff for each ancestral commit that touches the currently active file</td>
+    <td>search for &lsquo;findme&rsquo; in the diff for each ancestral commit that touches the currently active file</td>
   </tr>
 </table>
 
-<h3 id="further-reading">Further reading</h3>
+<h3>Further reading</h3>
 
 <ul>
-  <li><code>:help :Glog</code></li>
-  <li><code>:help :Ggrep</code></li>
-  <li><a href="http://www.kernel.org/pub/software/scm/git/docs/git-grep.html"><code>man git-grep</code></a> (also, <code>git help grep</code>)</li>
-  <li><a href="http://www.kernel.org/pub/software/scm/git/docs/git-log.html"><code>man git-log</code></a> (also, <code>git help log</code>)</li>
-  <li><a href="http://www.kernel.org/pub/software/scm/git/docs/gitdiffcore.html"><code>man gitdiffcore</code></a></li>
-  <li><a href="http://www.kernel.org/pub/software/scm/git/docs/gitdiffcore.html#_diffcore_pickaxe_for_detecting_addition_deletion_of_specified_string">the git <em>pickaxe</em></a></li>
-  <li><a href="http://mshared.tumblr.com/post/3215710879/browsing-commits-in-vim-with-an-unimpaired-fugitive">Browsing Commits in Vim with an Unimpaired Fugitive</a></li>
-  <li><a href="http://gitster.livejournal.com/27674.html">Fun with "git grep"</a></li>
-  <li><a href="http://gitster.livejournal.com/30195.html">Fun with "git log –grep"</a></li>
-  <li><a href="http://gitster.livejournal.com/35628.html">Linus's ultimate content tracking tool</a></li>
+<li><code>:help :Glog</code></li>
+<li><code>:help :Ggrep</code></li>
+<li><a href="http://www.kernel.org/pub/software/scm/git/docs/git-grep.html"><code>man git-grep</code></a> (also, <code>git help grep</code>)</li>
+<li><a href="http://www.kernel.org/pub/software/scm/git/docs/git-log.html"><code>man git-log</code></a> (also, <code>git help log</code>)</li>
+<li><a href="http://www.kernel.org/pub/software/scm/git/docs/gitdiffcore.html"><code>man gitdiffcore</code></a></li>
+<li><a href="http://www.kernel.org/pub/software/scm/git/docs/gitdiffcore.html#_diffcore_pickaxe_for_detecting_addition_deletion_of_specified_string">the git <em>pickaxe</em></a></li>
+<li><a href="http://mshared.tumblr.com/post/3215710879/browsing-commits-in-vim-with-an-unimpaired-fugitive">Browsing Commits in Vim with an Unimpaired Fugitive</a></li>
+<li><a href="http://gitster.livejournal.com/27674.html">Fun with &ldquo;git grep&rdquo;</a></li>
+<li><a href="http://gitster.livejournal.com/30195.html">Fun with &ldquo;git log &ndash;grep&rdquo;</a></li>
+<li><a href="http://gitster.livejournal.com/35628.html">Linus&rsquo;s ultimate content tracking tool</a></li>
 </ul>
-
 
         </div>
         </dd>
@@ -493,15 +490,17 @@
 
     
       <li>
-        <h4><a href="/blog/2011/05/the-fugitive-series/">The Fugitive Series - a retrospective</a></h4>
-        <p><em>Fugitive.vim: a git wrapper so awesome, it should be illegal.</em> That's how Tim Pope describes his git plugin for Vim. I've had <a href="http://www.vim.org/scripts/script.php?script_id=2975">fugitive.vim</a> installed since it was released, but until recently I never took the time to figure out what was <em>so awesome</em> that could make it illegal.</p>
-
-
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
       </li>
     
       <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+        <h4><a href="/episodes/fugitive-vim-browsing-the-git-object-database/">Fugitive.vim - browsing the git object database</a></h4>
+        <p>With the fugitive plugin, you&rsquo;re not limited to just working with files in your working tree. The <code>:Gedit</code> command allows you to open files in other branches, and to browse any <a href="http://book.git-scm.com/1_the_git_object_model.html">git object</a>, including tags, commits and trees. Plus, if your repository is hosted on github, you can easily bring up the webpage for any git object using the <code>:Gbrowse</code> command.</p>
+
+<p><em>This is the penultimate of a five part series on fugitive.vim.</em></p>
+
+
       </li>
     
       <li>
@@ -510,8 +509,10 @@
       </li>
     
       <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
+        <h4><a href="/blog/2011/05/the-fugitive-series/">The Fugitive Series - a retrospective</a></h4>
+        <p><em>Fugitive.vim: a git wrapper so awesome, it should be illegal.</em> That&rsquo;s how Tim Pope describes his git plugin for Vim. I&rsquo;ve had <a href="http://www.vim.org/scripts/script.php?script_id=2975">fugitive.vim</a> installed since it was released, but until recently I never took the time to figure out what was <em>so awesome</em> that could make it illegal.</p>
+
+
       </li>
     
       <li>
@@ -521,22 +522,18 @@
 <p><a href="https://www.destroyallsoftware.com/screencasts">Gary Bernhardt</a> advocates using stock Vim, with very few customizations.</p>
 
 <blockquote>
-  <p>Vim is a chainsaw, and the last thing you want on a chainsaw is controls that are not the controls you're used to, because then you will cut your hand off.<br />
+<p>Vim is a chainsaw, and the last thing you want on a chainsaw is controls that are not the controls you&rsquo;re used to, because then you will cut your hand off.<br>
 Gary Bernhardt on <a href="http://rubyrogues.com/040-rr-text-editors-and-ides/">Ruby Rogues episode 40</a> (17:35)</p>
 </blockquote>
 
-<p>Gary's chainsaw metaphor warns against the practice of over-customizing Vim. But I would also warn against using Vim without any customizations. Vim is highly configurable, and some of the default settings are suboptimal. If you don't have a basic vimrc, then you're putting up with inconveniences that were fixed decades ago.</p>
+<p>Gary&rsquo;s chainsaw metaphor warns against the practice of over-customizing Vim. But I would also warn against using Vim without any customizations. Vim is highly configurable, and some of the default settings are suboptimal. If you don&rsquo;t have a basic vimrc, then you&rsquo;re putting up with inconveniences that were fixed decades ago.</p>
 
 
       </li>
     
       <li>
-        <h4><a href="/episodes/fugitive-vim-browsing-the-git-object-database/">Fugitive.vim - browsing the git object database</a></h4>
-        <p>With the fugitive plugin, you're not limited to just working with files in your working tree. The <code>:Gedit</code> command allows you to open files in other branches, and to browse any <a href="http://book.git-scm.com/1_the_git_object_model.html">git object</a>, including tags, commits and trees. Plus, if your repository is hosted on github, you can easily bring up the webpage for any git object using the <code>:Gbrowse</code> command.</p>
-
-<p><em>This is the penultimate of a five part series on fugitive.vim.</em></p>
-
-
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
       </li>
     
 

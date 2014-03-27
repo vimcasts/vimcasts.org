@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -130,23 +131,21 @@
           </div>
         </div>
 
-        <h2 id="open-read-only-version-of-a-file-in-another-branch">Open read only version of a file in another branch</h2>
+        <h2>Open read only version of a file in another branch</h2>
 
 <p>Suppose that you are working on a file in one git branch, and you want to refer to the same file in some other branch of the same repository. What are you going to do?</p>
 
 <p>With fugitive, you can use the <code>Gedit</code> command to open a file from any branch in a read only buffer.</p>
 
-<p>The branch that I'm currently on has an outdated version of the Gemfile. But I know that the Gemfile on the master branch is up to date.</p>
+<p>The branch that I&rsquo;m currently on has an outdated version of the Gemfile. But I know that the Gemfile on the master branch is up to date.</p>
 
 <p>The general format for reading a file from another branch goes:</p>
-
-<pre><code>:Gedit branchname:path/to/file
-</code></pre>
+<pre class="highlight plaintext">:Gedit branchname:path/to/file
+</pre>
 
 <p>So in this case, I can get what I want by running:</p>
-
-<pre><code>:Gedit master:Gemfile
-</code></pre>
+<pre class="highlight plaintext">:Gedit master:Gemfile
+</pre>
 
 <p>Note that I can use auto-completion both for the branch name and for the filepath.</p>
 
@@ -156,115 +155,104 @@
 
 <p>There are variations on <code>Gedit</code> that allow you to open the specified file in a split, vertical split, tab, or preview window. If you run any of these commands with no arguments, they will open the working tree version of the current file.</p>
 
-<h2 id="exploring-the-git-database-with-gedit">Exploring the git database with :Gedit</h2>
+<h2>Exploring the git database with :Gedit</h2>
 
 <p>The <code>:Gedit</code> command allows you to open a buffer containing any git object. There are 4 kinds of git object:</p>
 
 <ul>
-  <li>blobs - correspond to the content of a file</li>
-  <li>trees - correspond to a directory on the filesystem, representing a list of blobs and trees</li>
-  <li>commits - can reference a tree and one or more parent commits</li>
-  <li>tags - refer to a particular commit by name</li>
+<li>blobs - correspond to the content of a file</li>
+<li>trees - correspond to a directory on the filesystem, representing a list of blobs and trees</li>
+<li>commits - can reference a tree and one or more parent commits</li>
+<li>tags - refer to a particular commit by name</li>
 </ul>
 
-<p>Every git object is identified by a SHA identifier. When you run <code>:Gedit SHA</code> "Gedit with a SHA id" it will open a  buffer containing a textual representation of the corresponding git object.</p>
+<p>Every git object is identified by a SHA identifier. When you run <code>:Gedit SHA</code> &ldquo;Gedit with a SHA id&rdquo; it will open a  buffer containing a textual representation of the corresponding git object.</p>
 
 <p>To demonstrate, lets run <code>git log</code> in the terminal here. This outputs a list of commit objects, in chronological order. Now, if I copy the SHA id for any particular commit, I can switch back to Vim and run the Gedit command, pasting the SHA id from the clipboard:</p>
-
-<pre><code>:Gedit {SHA}
-</code></pre>
+<pre class="highlight plaintext">:Gedit {SHA}
+</pre>
 
 <p>This opens a buffer containing an overview of the corresponding commit. You can get the same overview at the command line by running:</p>
-
-<pre><code>git show {SHA}
-</code></pre>
+<pre class="highlight plaintext">git show {SHA}
+</pre>
 
 <p>But when you view a git object like this in Vim, fugitive makes the experience much more interactive. If I place my cursor anywhere on the line referencing the parent commit and press <code>&lt;Enter&gt;</code>, it opens a new buffer containing that commit object. I could keep doing this indefinitely, travelling back through the timeline of commits.</p>
 
-<p>But it's not just commit objects that can be explored in this fashion. Watch what happens if I leave the cursor on the line referencing the tree for a particular commit and press the <code>&lt;Enter&gt;</code> key. Fugitive opens a buffer with a textual representation of that tree.</p>
+<p>But it&rsquo;s not just commit objects that can be explored in this fashion. Watch what happens if I leave the cursor on the line referencing the tree for a particular commit and press the <code>&lt;Enter&gt;</code> key. Fugitive opens a buffer with a textual representation of that tree.</p>
 
 <p>Again, I could inspect this tree object at the command line by running:</p>
+<pre class="highlight plaintext">git show {SHA}
+</pre>
 
-<pre><code>git show {SHA}
-</code></pre>
-
-<p>But when the <code>git show</code> command is provided with the SHA id for a tree, the output is not very informative. It shows the <em>names</em> of blobs and trees contained in that tree, but if you wanted to know more about these items, you would have to find out their SHA id. You can get more information about the items in a tree by running the command "git ls-tree with the SHA code":</p>
-
-<pre><code>git ls-tree {SHA}
-</code></pre>
+<p>But when the <code>git show</code> command is provided with the SHA id for a tree, the output is not very informative. It shows the <em>names</em> of blobs and trees contained in that tree, but if you wanted to know more about these items, you would have to find out their SHA id. You can get more information about the items in a tree by running the command &ldquo;git ls-tree with the SHA code&rdquo;:</p>
+<pre class="highlight plaintext">git ls-tree {SHA}
+</pre>
 
 <p>When you inspect a tree object using fugitive, you can press the <code>a</code> key to toggle the display between the <code>git ls-tree</code> and the <code>git show</code> style listing.</p>
 
-<p>If you wanted to inspect the contents of a blob at the command line, you could run "git show with the SHA code":</p>
-
-<pre><code>git show {SHA}
-</code></pre>
+<p>If you wanted to inspect the contents of a blob at the command line, you could run &ldquo;git show with the SHA code&rdquo;:</p>
+<pre class="highlight plaintext">git show {SHA}
+</pre>
 
 <p>But mucking around with SHA identifiers is a bit of a faff.</p>
 
 <p>Now watch this. When you inspect a git tree object using fugitive, each of blobs and files within the tree can be inspected just by placing your cursor on it and pressing <code>&lt;Enter&gt;</code>. This makes it really easy to explore what your project looked like at the time of a particular commit.</p>
 
-<p>Having started with a commit object, I've drilled down through several trees and subtrees, and now I'm looking at the contents of a git blob. If I wanted to move back up to look at the parent tree, I could do so by running "edit percent colon H":</p>
+<p>Having started with a commit object, I&rsquo;ve drilled down through several trees and subtrees, and now I&rsquo;m looking at the contents of a git blob. If I wanted to move back up to look at the parent tree, I could do so by running &ldquo;edit percent colon H&rdquo;:</p>
+<pre class="highlight plaintext">:edit %:h
+</pre>
 
-<pre><code>:edit %:h
-</code></pre>
+<p>I&rsquo;ve created a mapping for this, so that I can trigger it more easily. Check the shownotes for this episode for more details.</p>
 
-<p>I've created a mapping for this, so that I can trigger it more easily. Check the shownotes for this episode for more details.</p>
+<p>Note that if your current buffer contains a git tree or blob, you can always jump up to the commit object for the current tree by pressing <code>C</code> &ldquo;shift C&rdquo;.</p>
 
-<p>Note that if your current buffer contains a git tree or blob, you can always jump up to the commit object for the current tree by pressing <code>C</code> "shift C".</p>
+<p>There&rsquo;s one more thing I want to show you. When we&rsquo;ve got a commit object inside of a buffer, we get a summary of the patches for each file touched by that commit. Now watch what happens if I place my cursor on the &lsquo;diff&rsquo; line and press the <code>&lt;Enter&gt;</code> key. Bang! We get a vimdiff split view. The buffer on the left always represents an older state than the buffer on the right. In this case, the left window represents the how the file looked before this commit, and the window on the right represents how the file looked after the commit.</p>
 
-<p>There's one more thing I want to show you. When we've got a commit object inside of a buffer, we get a summary of the patches for each file touched by that commit. Now watch what happens if I place my cursor on the 'diff' line and press the <code>&lt;Enter&gt;</code> key. Bang! We get a vimdiff split view. The buffer on the left always represents an older state than the buffer on the right. In this case, the left window represents the how the file looked before this commit, and the window on the right represents how the file looked after the commit.</p>
-
-<p>It's easy to get disoriented when you're exploring the history of your git repository in this way. It's useful to remember that when you're editing a fugitive buffer, running the command:</p>
-
-<pre><code>:Gedit
-</code></pre>
+<p>It&rsquo;s easy to get disoriented when you&rsquo;re exploring the history of your git repository in this way. It&rsquo;s useful to remember that when you&rsquo;re editing a fugitive buffer, running the command:</p>
+<pre class="highlight plaintext">:Gedit
+</pre>
 
 <p>with no arguments takes you back to the working tree version of the currently active file.</p>
 
-<h2 id="gbrowse">Gbrowse</h2>
+<h2>Gbrowse</h2>
 
-<p>The <code>:Gbrowse</code> command lets you inspect the current object on github. The command is pretty smart about doing the right thing depending on the context. Here, I'm editing a file on the master branch, and when I run <code>:Gbrowse</code> it opens the corresponding URL. Now if I switch to another branch, and run the command again, it opens the URL for the current file on my new branch.</p>
+<p>The <code>:Gbrowse</code> command lets you inspect the current object on github. The command is pretty smart about doing the right thing depending on the context. Here, I&rsquo;m editing a file on the master branch, and when I run <code>:Gbrowse</code> it opens the corresponding URL. Now if I switch to another branch, and run the command again, it opens the URL for the current file on my new branch.</p>
 
 <p>Check this out: if I make a visual selection, then run the <code>Gbrowse</code> command, then the URL will include an anchor for the specified lines, and github automatically highlights them.</p>
 
 <p>FIXME: -current file-</p>
 
-<p>But it doesn't just work for files. Lets open up the parent of the last commit by running "Gedit head carrot":</p>
-
-<pre><code>:Gedit HEAD^
-</code></pre>
+<p>But it doesn&rsquo;t just work for files. Lets open up the parent of the last commit by running &ldquo;Gedit head carrot&rdquo;:</p>
+<pre class="highlight plaintext">:Gedit HEAD^
+</pre>
 
 <p>That opens a new buffer containing the commit object. Now if I run <code>:Gbrowse</code> from here, it opens up the URL for that commit object on github.</p>
 
 <p>And watch what happens if I open up the tree for the current commit, then drill down through a couple more trees. When I run <code>:Gbrowse</code>, it opens the URL for the current tree on github.</p>
 
-<p>Naturally, if your repository isn't hosted on github, then the <code>Gbrowse</code> command won't be able to generate a github URL for it. If this is the case, then fugitive will attempt to open the current object using <code>git-instaweb</code>.</p>
+<p>Naturally, if your repository isn&rsquo;t hosted on github, then the <code>Gbrowse</code> command won&rsquo;t be able to generate a github URL for it. If this is the case, then fugitive will attempt to open the current object using <code>git-instaweb</code>.</p>
 
-<h2 id="vimrc-mods">.vimrc mods</h2>
+<h2>.vimrc mods</h2>
 
-<h3 id="auto-clean-fugitive-buffers">Auto-clean fugitive buffers</h3>
+<h3>Auto-clean fugitive buffers</h3>
 
 <p>Each time you open a git object using fugitive it creates a new buffer. This means that your buffer listing can quickly become swamped with fugitive buffers.</p>
 
-<p>Here's an autocommand that prevents this from becomming an issue:</p>
+<p>Here&rsquo;s an autocommand that prevents this from becomming an issue:</p>
+<pre class="highlight plaintext">autocmd BufReadPost fugitive://* set bufhidden=delete
+</pre>
 
-<pre><code>autocmd BufReadPost fugitive://* set bufhidden=delete
-</code></pre>
-
-<p>I'll add that to my .vimrc then restart Vim…</p>
-
-<pre><code>:Gedit HEAD^
-</code></pre>
+<p>I&rsquo;ll add that to my .vimrc then restart Vim&hellip;</p>
+<pre class="highlight plaintext">:Gedit HEAD^
+</pre>
 
 <p>Now I can browse through my commit history, and each time I leave a fugitive buffer it will be deleted automatically. Note that my buffer list only shows the fugitive buffer that is currently active.</p>
 
-<h3 id="add-git-branch-to-status-line">Add git branch to status line</h3>
+<h3>Add git branch to status line</h3>
 
-<p>Fugitive provides a function that you can add to your statusline, and it will show your current git branch. The fugitive documentation provides an example, which I'm just going to paste into my .vimrc file:</p>
-
-<pre><code>set statusline=%&lt;%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-</code></pre>
+<p>Fugitive provides a function that you can add to your statusline, and it will show your current git branch. The fugitive documentation provides an example, which I&rsquo;m just going to paste into my .vimrc file:</p>
+<pre class="highlight plaintext">set statusline=%&lt;%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+</pre>
 
 <p>Now when I open any file from a git repository, the branch name is included in the status line.</p>
 

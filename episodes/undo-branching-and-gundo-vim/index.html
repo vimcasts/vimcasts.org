@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -226,11 +227,11 @@
         <div id="shownotes" class="content" data-swiftype-index="true">
           
 
-<p>Vim maintains your undo history in a tree structure. This is a powerful feature, which lets you switch back to any previous state of your document (up to the value of <a title="undolevels" href="http://ideavim.sourceforge.net/vim/options.html#vim."><code>undolevels</code></a>), but it's not easy to understand. Vim's interface to the undo tree is made up of the familiar undo and redo operations, as well as a handful of ways to traverse the list of changes in chronological order. These commands enable you to shine a light on every corner of the undo tree, but it can still be difficult to get a sense of what you are looking at. Nodes that are adjacent in chronological order may be several steps apart on the graph.</p>
+<p>Vim maintains your undo history in a tree structure. This is a powerful feature, which lets you switch back to any previous state of your document (up to the value of <a href="http://ideavim.sourceforge.net/vim/options.html#vim.&amp;#x27;undolevels&amp;#x27;"><code>undolevels</code></a>), but it&rsquo;s not easy to understand. Vim&rsquo;s interface to the undo tree is made up of the familiar undo and redo operations, as well as a handful of ways to traverse the list of changes in chronological order. These commands enable you to shine a light on every corner of the undo tree, but it can still be difficult to get a sense of what you are looking at. Nodes that are adjacent in chronological order may be several steps apart on the graph.</p>
 
 <p>A much more intuitive interface to the undo tree is now available if you install the excellent <a href="http://sjl.bitbucket.org/gundo.vim/">Gundo plugin</a>, by <a href="http://stevelosh.com/">Steve Losh</a>. This draws an ASCII representation of the undo tree, which you can easily navigate with regular Vim motion commands. Pressing the enter key when your cursor is positioned on a node will revert the document to the specified state.</p>
 
-<p>I recommend installing the Gundo plugin. Being able to retrieve any state from your undo history with confidence will change the way you work. But I would still encourage you to try and understand the way that Vim's undo tree works. <a href="http://vimdoc.sourceforge.net/htmldoc/usr_32.html">Read the user guide</a> and the <a href="http://vimdoc.sourceforge.net/htmldoc/undo.html#undo-tree">documentation</a>. Watch the video, and play with the interactive visualization on this page to get a feel for how Vim's commands allow you to traverse the graph. You'll need it one day.</p>
+<p>I recommend installing the Gundo plugin. Being able to retrieve any state from your undo history with confidence will change the way you work. But I would still encourage you to try and understand the way that Vim&rsquo;s undo tree works. <a href="http://vimdoc.sourceforge.net/htmldoc/usr_32.html">Read the user guide</a> and the <a href="http://vimdoc.sourceforge.net/htmldoc/undo.html#undo-tree">documentation</a>. Watch the video, and play with the interactive visualization on this page to get a feel for how Vim&rsquo;s commands allow you to traverse the graph. You&rsquo;ll need it one day.</p>
 
 <div id="vim-history-visualization"></div>
 
@@ -267,15 +268,14 @@
 
 <p>Note that the document timeline records a time-stamp for each historical state, which makes it possible to revert the document to how it looked a particular number of seconds, minutes, hours or days before the current state. I can assure you, running <code>:earlier 20s</code> has saved my bacon on more than one occasion!</p>
 
-<h3 id="further-reading">Further reading</h3>
+<h3>Further reading</h3>
 
 <ul>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/undo.html#undo-tree"><code>:help undo-tree</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/usr_32.html"><code>:help usr_32.txt</code></a></li>
-  <li>Homepage for the <a href="http://sjl.bitbucket.org/gundo.vim/">Gundo.vim plugin</a></li>
-  <li><a href="https://github.com/nelstrom/Vim-undo-tree-visualization">Source code</a> for undo tree visualization</li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/undo.html#undo-tree"><code>:help undo-tree</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/usr_32.html"><code>:help usr_32.txt</code></a></li>
+<li>Homepage for the <a href="http://sjl.bitbucket.org/gundo.vim/">Gundo.vim plugin</a></li>
+<li><a href="https://github.com/nelstrom/Vim-undo-tree-visualization">Source code</a> for undo tree visualization</li>
 </ul>
-
 
         </div>
         </dd>
@@ -320,17 +320,8 @@
 
     
       <li>
-        <h4><a href="/episodes/modal-editing-undo-redo-and-repeat/">Modal editing: undo, redo and repeat</a></h4>
-        <p>Vim's modal editing paradigm - the newbie killer - brings tremendous efficiency if only you can learn to work with it, rather than against it. This episode demonstrates how the undo and repeat commands can benefit from spending short bursts of time in insert mode. </p>
-
-
-      </li>
-    
-      <li>
-        <h4><a href="/blog/2014/02/vimcasts-redesign-a-work-in-progress/">Vimcasts redesign: a work in progress</a></h4>
-        <p>In the not-too-distant future, you can expect to see a revised design for Vimcasts.org. The most significant enhancements will be the addition of tags, site search, and a responsive design for smaller screens. Hannah Adcock, from <a href="http://contentedstrategy.com">contentedstrategy.com</a>, has been helping me out by analysing user feedback, as well as data from Google Analytics.</p>
-
-
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
       </li>
     
       <li>
@@ -341,18 +332,27 @@
       </li>
     
       <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+        <h4><a href="/episodes/modal-editing-undo-redo-and-repeat/">Modal editing: undo, redo and repeat</a></h4>
+        <p>Vim&rsquo;s modal editing paradigm - the newbie killer - brings tremendous efficiency if only you can learn to work with it, rather than against it. This episode demonstrates how the undo and repeat commands can benefit from spending short bursts of time in insert mode. </p>
+
+
       </li>
     
       <li>
         <h4><a href="/training">Vim Training</a></h4>
         <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/blog/2014/02/vimcasts-redesign-a-work-in-progress/">Vimcasts redesign: a work in progress</a></h4>
+        <p>In the not-too-distant future, you can expect to see a revised design for Vimcasts.org. The most significant enhancements will be the addition of tags, site search, and a responsive design for smaller screens. Hannah Adcock, from <a href="http://contentedstrategy.com">contentedstrategy.com</a>, has been helping me out by analysing user feedback, as well as data from Google Analytics.</p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
 

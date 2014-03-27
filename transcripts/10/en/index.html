@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -142,114 +143,101 @@
 
       
 
-      <h2 id="intro">INTRO</h2>
+      <h2>INTRO</h2>
 
-<p>This week, I'm going to do something a little bit different. Instead of focussing on a particular feature, I'm going to show a few tips and tricks used during an editing session. </p>
+<p>This week, I&rsquo;m going to do something a little bit different. Instead of focussing on a particular feature, I&rsquo;m going to show a few tips and tricks used during an editing session. </p>
 
-<p>If you take a look at the source code for Vimcasts.org, you'll see that there is a bit of ASCII art hidden in a comment. This was generated using an online tool, but I've made some tweaks to make it look more like the logo for Vimcasts.org.</p>
+<p>If you take a look at the source code for Vimcasts.org, you&rsquo;ll see that there is a bit of ASCII art hidden in a comment. This was generated using an online tool, but I&rsquo;ve made some tweaks to make it look more like the logo for Vimcasts.org.</p>
 
-<h2 id="comparison">Comparison</h2>
+<h2>Comparison</h2>
 
 <p>At the top of this file, I have the original text, as copied from the online tool. At the bottom of the file is the example copied from the source code of Vimcasts.org.</p>
 
-<h2 id="convert-leading-spaces-to-underscores">Convert leading spaces to underscores</h2>
+<h2>Convert leading spaces to underscores</h2>
 
-<p>The first modification I want to make is to replace the leading whitespace with underscores. I'm going to do this by defining a visual selection, then replacing each character in that selection with an underscore.</p>
+<p>The first modification I want to make is to replace the leading whitespace with underscores. I&rsquo;m going to do this by defining a visual selection, then replacing each character in that selection with an underscore.</p>
 
 <p>Run:</p>
-
-<pre><code>0vw
+<pre class="highlight plaintext">0vw
 r_
-</code></pre>
+</pre>
 
-<p>I can see that I'm going to have to issue this combination of commands several times, so I could save myself a few keystrokes by recording a macro. </p>
+<p>I can see that I&rsquo;m going to have to issue this combination of commands several times, so I could save myself a few keystrokes by recording a macro. </p>
+<pre class="highlight plaintext">qavwr_jq
+</pre>
 
-<pre><code>qavwr_jq
-</code></pre>
+<p>You can begin and end recording a macro by pressing the <code>q</code> key. The first key you press after <code>q</code> specifies the register where the macro will be recorded. You can use any lowercase letter, or a number. Here, I&rsquo;m saving the macro to register &lsquo;a&rsquo;. I then issue the command: <code>vw</code> to make the selection, <code>r_</code> to transform it, then I finish by moving the cursor down to the next line. Pressing q again finishes the recording.</p>
 
-<p>You can begin and end recording a macro by pressing the <code>q</code> key. The first key you press after <code>q</code> specifies the register where the macro will be recorded. You can use any lowercase letter, or a number. Here, I'm saving the macro to register 'a'. I then issue the command: <code>vw</code> to make the selection, <code>r_</code> to transform it, then I finish by moving the cursor down to the next line. Pressing q again finishes the recording.</p>
-
-<p>I can now replay the macro by pressing the <code>@</code> 'at' key, followed by the register that it was saved to. In this case, 'at-a' replays the recording</p>
-
-<pre><code>@a
-</code></pre>
+<p>I can now replay the macro by pressing the <code>@</code> &lsquo;at&rsquo; key, followed by the register that it was saved to. In this case, &lsquo;at-a&rsquo; replays the recording</p>
+<pre class="highlight plaintext">@a
+</pre>
 
 <p>I can also prepend a count and it will replay the macro the specified number of times. For example:</p>
+<pre class="highlight plaintext">8@a
+</pre>
 
-<pre><code>8@a
-</code></pre>
+<p>And presto! It&rsquo;s done.</p>
 
-<p>And presto! It's done.</p>
+<h2>Indent further</h2>
 
-<h2 id="indent-further">Indent further</h2>
+<p>At the moment, the first letter of each block is aligned vertically, but I want them to be aligned following the diagonal. I&rsquo;m going to fix this by copying and pasting with visual block mode. </p>
 
-<p>At the moment, the first letter of each block is aligned vertically, but I want them to be aligned following the diagonal. I'm going to fix this by copying and pasting with visual block mode. </p>
-
-<p>Control-v puts Vim into visual block mode. I move the cursor down with the j key, until I've selected the entire block:</p>
-
-<pre><code>ctrl-v
+<p>Control-v puts Vim into visual block mode. I move the cursor down with the j key, until I&rsquo;ve selected the entire block:</p>
+<pre class="highlight plaintext">ctrl-v
 jjj...jjj
-</code></pre>
+</pre>
 
 <p>then press y to yank the selection:</p>
-
-<pre><code>y
-</code></pre>
+<pre class="highlight plaintext">y
+</pre>
 
 <p>I can now paste this column under the current cursor position with the p key, which indents the entire block:</p>
-
-<pre><code>p
-</code></pre>
+<pre class="highlight plaintext">p
+</pre>
 
 <p>I can repeat with the dot key, and if I go too far, I just undo with the u key:</p>
-
-<pre><code>.
+<pre class="highlight plaintext">.
 u
-</code></pre>
+</pre>
 
-<h2 id="add-a-wrapper-line-above-and-below-each-block">Add a wrapper line above and below each block</h2>
+<h2>Add a wrapper line above and below each block</h2>
 
 <p>At the moment, the capital letters occupy the full height of each block. I want to add a line of underscores at the top and bottom of each block. </p>
 
-<p>To add a line above, I'm going to duplicate this line, then replace each character wiht an underscore:</p>
-
-<pre><code>YP
+<p>To add a line above, I&rsquo;m going to duplicate this line, then replace each character wiht an underscore:</p>
+<pre class="highlight plaintext">YP
 Vr_
 x
-</code></pre>
+</pre>
 
 <p>To add a line below:</p>
-
-<pre><code>Yp
+<pre class="highlight plaintext">Yp
 Vr_
 i_&lt;esc&gt;
-</code></pre>
+</pre>
 
-<h2 id="substitute--with---in-org">Substitute '_' with ' ' in .org</h2>
+<h2>Substitute &lsquo;_&rsquo; with &lsquo; &rsquo; in .org</h2>
 
-<p>Finally, I want to remove the underscores from the 'dot-org' part of the logo. </p>
+<p>Finally, I want to remove the underscores from the &lsquo;dot-org&rsquo; part of the logo. </p>
 
 <p>Vim lets you define a visual selection, then perform search and replace only on the selected range of lines. Here, I make a selection using visual block mode, which is activated with control-v.</p>
-
-<pre><code>ctrl-v
+<pre class="highlight plaintext">ctrl-v
 $jj...jj
-</code></pre>
+</pre>
 
 <p>It would seem reasonable to expect that running a substitution on this range would affect only the selection. </p>
-
-<pre><code>:s/_/ /g
-</code></pre>
+<pre class="highlight plaintext">:s/_/ /g
+</pre>
 
 <p>But Vim considers the range to include entire lines from the selection. So this does not acheive the desired effect.</p>
 
-<p>The trick here is to modify the search pattern with the flag 'backslash-percent-capital-V'. This tells Vim to match only within the visual selection.</p>
+<p>The trick here is to modify the search pattern with the flag &lsquo;backslash-percent-capital-V&rsquo;. This tells Vim to match only within the visual selection.</p>
 
 <p>Running this substitution has the desired effect:</p>
+<pre class="highlight plaintext">:s/\%V_/ /g
+</pre>
 
-<pre><code>:s/\%V_/ /g
-</code></pre>
-
-<h2 id="continuation">Continuation</h2>
+<h2>Continuation</h2>
 
 <p>The remaining edits reuse techniques already covered. So I shall continue without further commentary.</p>
 

@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -187,7 +188,7 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>The dot command is my all-time favorite Vim trick: it tells Vim to repeat the last change. But the dot command tends not to work well with user-defined mappings. In this episode, we'll use repeat.vim to set up a simple mapping so that it can be repeated using the dot command.</p>
+        <p>The dot command is my all-time favorite Vim trick: it tells Vim to repeat the last change. But the dot command tends not to work well with user-defined mappings. In this episode, we&rsquo;ll use repeat.vim to set up a simple mapping so that it can be repeated using the dot command.</p>
 
 
       </div>
@@ -226,52 +227,45 @@
         <div id="shownotes" class="content" data-swiftype-index="true">
           
 
-<r:snippet name="announcement" />
-
 <p>The README for <a href="https://github.com/tpope/vim-repeat">repeat.vim</a> begins:</p>
 
 <blockquote>
-  <p>If you've ever tried using the <code>.</code> command after a plugin map, you were likely disappointed to discover it only repeated the last native command inside that map, rather than the map as a whole. That disappointment ends today. Repeat.vim remaps <code>.</code> in a way that plugins can tap into it.</p>
+<p>If you&rsquo;ve ever tried using the <code>.</code> command after a plugin map, you were likely disappointed to discover it only repeated the last native command inside that map, rather than the map as a whole. That disappointment ends today. Repeat.vim remaps <code>.</code> in a way that plugins can tap into it.</p>
 </blockquote>
 
-<p>I've often felt this sense of disappointment when using Vim's <code>xp</code> commands to transpose two characters. I'd like to be able to use the dot command to repeat <code>xp</code>, but it only repeats the <code>p</code> command, which is the <em>last native command</em>. Let's create a custom <code>cp</code> mapping that transposes two characters in a way that can be repeated using the <code>.</code> command.</p>
+<p>I&rsquo;ve often felt this sense of disappointment when using Vim&rsquo;s <code>xp</code> commands to transpose two characters. I&rsquo;d like to be able to use the dot command to repeat <code>xp</code>, but it only repeats the <code>p</code> command, which is the <em>last native command</em>. Let&rsquo;s create a custom <code>cp</code> mapping that transposes two characters in a way that can be repeated using the <code>.</code> command.</p>
 
-<h3 id="constructing-a-repeatable-mapping">Constructing a repeatable mapping</h3>
+<h3>Constructing a repeatable mapping</h3>
 
-<p>Usually, Vim's mappings follow this general format:</p>
+<p>Usually, Vim&rsquo;s mappings follow this general format:</p>
+<pre class="highlight plaintext">:map LHS RHS
+</pre>
 
-<pre><code>:map LHS RHS
-</code></pre>
-
-<p>This instructs Vim to execute the keys on the right-hand side (RHS) of the expression whenever the user presses the keys on the left-hand side (LHS). Alternatively, we can create a <em>named mapping</em> by using the <a href="http://vimdoc.sourceforge.net/htmldoc/map.html#&amp;lt;Plug&amp;gt;"><code>&lt;Plug&gt;</code></a> key on the LHS of the expression. Named mappings can't be executed directly by the user, but they can be referenced by other mappings (see <a href="http://vimdoc.sourceforge.net/htmldoc/usr_41.html#using-&amp;lt;Plug&amp;gt;"><code>:help using-&lt;Plug&gt;</code></a>). For example, this pair of mappings:</p>
-
-<pre><code>nmap &lt;Plug&gt;TransposeCharacters xp
-nmap cp &lt;Plug&gt;TransposeCharacters
-</code></pre>
+<p>This instructs Vim to execute the keys on the right-hand side (RHS) of the expression whenever the user presses the keys on the left-hand side (LHS). Alternatively, we can create a <em>named mapping</em> by using the <a href="http://vimdoc.sourceforge.net/htmldoc/map.html#&amp;lt;Plug"><code>&lt;Plug&gt;</code></a> key on the LHS of the expression. Named mappings can&rsquo;t be executed directly by the user, but they can be referenced by other mappings (see <a href="http://vimdoc.sourceforge.net/htmldoc/usr_41.html#using-&amp;lt;Plug"><code>:help using-&lt;Plug&gt;</code></a>). For example, this pair of mappings:</p>
+<pre class="highlight viml">nmap <span class="p">&lt;</span>Plug<span class="p">&gt;</span>TransposeCharacters xp
+nmap <span class="k">cp</span> <span class="p">&lt;</span>Plug<span class="p">&gt;</span>TransposeCharacters
+</pre>
 
 <p>Has the same effect as this single mapping:</p>
+<pre class="highlight viml">nmap <span class="k">cp</span> xp
+</pre>
 
-<pre><code>nmap cp xp
-</code></pre>
+<p>That is, when the user presses <code>cp</code>, Vim executes the <code>x</code> command followed by the <code>p</code> command. We can use the <code>repeat#set()</code> function (supplied by repeat.vim) to tell Vim to invoke our named mapping when the dot command is used. Here&rsquo;s the complete mapping:</p>
+<pre class="highlight viml">nnoremap <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Plug<span class="p">&gt;</span>TransposeCharacters xp
+<span class="se">\</span><span class="p">:</span><span class="k">call</span> repeat#<span class="k">set</span><span class="p">(</span><span class="s2">"\&lt;Plug&gt;TransposeCharacters"</span><span class="p">)&lt;</span>CR<span class="p">&gt;</span>
+nmap <span class="k">cp</span> <span class="p">&lt;</span>Plug<span class="p">&gt;</span>TransposeCharacters
+</pre>
 
-<p>That is, when the user presses <code>cp</code>, Vim executes the <code>x</code> command followed by the <code>p</code> command. We can use the <code>repeat#set()</code> function (supplied by repeat.vim) to tell Vim to invoke our named mapping when the dot command is used. Here's the complete mapping:</p>
+<p>Note that the line beginning with <code>\</code> is a continuation of the previous line. When the user presses <code>cp</code>, Vim executes the <code>&lt;Plug&gt;TransposeCharacters</code> named mapping. That mapping executes the Normal commands <code>x</code> then <code>p</code>, then runs <code>:call repeat#set(&quot;\&lt;Plug&gt;TransposeCharacters&quot;)</code>, which instructs the dot command to execute the named mapping.</p>
 
-<pre><code>nnoremap &lt;silent&gt; &lt;Plug&gt;TransposeCharacters xp
-\:call repeat#set("\&lt;Plug&gt;TransposeCharacters")&lt;CR&gt;
-nmap cp &lt;Plug&gt;TransposeCharacters
-</code></pre>
-
-<p>Note that the line beginning with <code>\</code> is a continuation of the previous line. When the user presses <code>cp</code>, Vim executes the <code>&lt;Plug&gt;TransposeCharacters</code> named mapping. That mapping executes the Normal commands <code>x</code> then <code>p</code>, then runs <code>:call repeat#set("\&lt;Plug&gt;TransposeCharacters")</code>, which instructs the dot command to execute the named mapping.</p>
-
-<h3 id="further-reading">Further reading</h3>
+<h3>Further reading</h3>
 
 <ul>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#."><code>:h .</code></a></li>
-  <li><a href="https://github.com/tpope/vim-repeat">repeat.vim</a> by tpope</li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/map.html#&amp;lt;Plug&amp;gt;"><code>:h &lt;Plug&gt;</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/usr_41.html#using-&amp;lt;Plug&amp;gt;"><code>:h using-&lt;Plug&gt;</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#."><code>:h .</code></a></li>
+<li><a href="https://github.com/tpope/vim-repeat">repeat.vim</a> by tpope</li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/map.html#&amp;lt;Plug"><code>:h &lt;Plug&gt;</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/usr_41.html#using-&amp;lt;Plug"><code>:h using-&lt;Plug&gt;</code></a></li>
 </ul>
-
 
         </div>
         </dd>
@@ -316,20 +310,15 @@ nmap cp &lt;Plug&gt;TransposeCharacters
 
     
       <li>
+        <h4><a href="/episodes/creating-mappings-that-accept-a-count/">Creating mappings that accept a count</a></h4>
+        <p>Lots of Vim&rsquo;s built-in Normal mode commands can be executed multiple times by prefixing them with a count. User-defined Normal mode mappings don&rsquo;t usually handle counts the way we might like them to. We&rsquo;ll explore a couple of techniques for making our custom mappings respond predictably to a count.</p>
+
+
+      </li>
+    
+      <li>
         <h4><a href="/categories">Find by category</a></h4>
         <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/creating-mappings-that-accept-a-count/">Creating mappings that accept a count</a></h4>
-        <p>Lots of Vim's built-in Normal mode commands can be executed multiple times by prefixing them with a count. User-defined Normal mode mappings don't usually handle counts the way we might like them to. We'll explore a couple of techniques for making our custom mappings respond predictably to a count.</p>
-
-
       </li>
     
       <li>
@@ -338,15 +327,20 @@ nmap cp &lt;Plug&gt;TransposeCharacters
       </li>
     
       <li>
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+      </li>
+    
+      <li>
         <h4><a href="/blog/2014/02/follow-my-leader/">Follow my leader</a></h4>
-        <p>Choosing a key-map for your custom Vim commands can be difficult. The common advice is to use <code>&lt;leader&gt;</code> for user-defined mappings, but that's not the only option. There are dozens of two-key mappings that are not bound to any built-in functionality. These available mappings are easy to find if you follow a simple formula.</p>
+        <p>Choosing a key-map for your custom Vim commands can be difficult. The common advice is to use <code>&lt;leader&gt;</code> for user-defined mappings, but that&rsquo;s not the only option. There are dozens of two-key mappings that are not bound to any built-in functionality. These available mappings are easy to find if you follow a simple formula.</p>
 
 
       </li>
     
       <li>
         <h4><a href="/episodes/an-introduction-to-vspec/">An introduction to vspec</a></h4>
-        <p><a href="https://github.com/kana/vim-vspec">Vspec</a> is a library that allows you to test-drive your Vimscript code. In this tutorial, we'll cover the basics: how to inspect the contents of a buffer, how to simulate the actions of a user, and how to invoke user-defined mappings.</p>
+        <p><a href="https://github.com/kana/vim-vspec">Vspec</a> is a library that allows you to test-drive your Vimscript code. In this tutorial, we&rsquo;ll cover the basics: how to inspect the contents of a buffer, how to simulate the actions of a user, and how to invoke user-defined mappings.</p>
 
 
       </li>

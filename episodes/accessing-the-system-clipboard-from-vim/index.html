@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -187,7 +188,7 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>In some environments, Vim lets us access the system clipboard using the quoteplus register, <code>"+</code>. When this feature is enabled, we can use it with the delete, yank and put operations in much the same way that we use Vim's other registers. Pasting from this register usually produces better results than using the system paste command in Insert mode.</p>
+        <p>In some environments, Vim lets us access the system clipboard using the quoteplus register, <code>&quot;+</code>. When this feature is enabled, we can use it with the delete, yank and put operations in much the same way that we use Vim&rsquo;s other registers. Pasting from this register usually produces better results than using the system paste command in Insert mode.</p>
 
 
       </div>
@@ -226,19 +227,19 @@
         <div id="shownotes" class="content" data-swiftype-index="true">
           
 
-<p>This is an abridged quote from Vim's documentation (see <a href="http://vimdoc.sourceforge.net/htmldoc/gui_x11.html#quoteplus"><code>:h quoteplus</code></a>):</p>
+<p>This is an abridged quote from Vim&rsquo;s documentation (see <a href="http://vimdoc.sourceforge.net/htmldoc/gui_x11.html#quoteplus"><code>:h quoteplus</code></a>):</p>
 
 <blockquote>
-  <p>CLIPBOARD is expected to be used for cut, copy and paste operations.
-…
-Vim uses CLIPBOARD when reading and writing the "+ register.  </p>
+<p>CLIPBOARD is expected to be used for cut, copy and paste operations.
+&hellip;
+Vim uses CLIPBOARD when reading and writing the &ldquo;+ register.  </p>
 </blockquote>
 
-<p>So long as your version of Vim has been compiled with support for the <code>+clipboard</code> feature, then you can use the <code>"+</code> register to access your system clipboard.</p>
+<p>So long as your version of Vim has been compiled with support for the <code>+clipboard</code> feature, then you can use the <code>&quot;+</code> register to access your system clipboard.</p>
 
-<h3 id="using-the-quoteplus-register">Using the quoteplus register</h3>
+<h3>Using the quoteplus register</h3>
 
-<p>The <code>"+</code> register can be used much like any other register. For example, if you want to yank text from a Vim buffer into the system clipboard, you could use any of these commands:</p>
+<p>The <code>&quot;+</code> register can be used much like any other register. For example, if you want to yank text from a Vim buffer into the system clipboard, you could use any of these commands:</p>
 
 <table>
 <tr>
@@ -280,51 +281,48 @@ Vim uses CLIPBOARD when reading and writing the "+ register.  </p>
 </tr>
 </table>
 
-<h3 id="the-p-command-produces-better-results-than-ctrl-v">The <code>"+p</code> command produces better results than <code>ctrl-v</code></h3>
+<h3>The <code>&quot;+p</code> command produces better results than <code>ctrl-v</code></h3>
 
-<p>Using <code>ctrl-v</code> in Insert mode can produce strange artefacts, and for large sections of text it's also noticably slower than pasting from the quoteplus register.</p>
+<p>Using <code>ctrl-v</code> in Insert mode can produce strange artefacts, and for large sections of text it&rsquo;s also noticably slower than pasting from the quoteplus register.</p>
 
-<p>If your clipboard contains a multi-line range of text, then the <code>ctrl-v</code> command can produce strange results in Insert mode. Vim receives a stream of characters and interprets them just as though they were typed manually. If the autoindent feature is enabled, the Vim automatically adds spaces at the start of each line. When combined with the indentation already present in the code snippet, the result is that each line drifts farther and farther to the right. By contrast, if you use paste from the quoteplus register (e.g. using <code>"+p</code> or <code>:put +</code>), you can avoid this problem.</p>
+<p>If your clipboard contains a multi-line range of text, then the <code>ctrl-v</code> command can produce strange results in Insert mode. Vim receives a stream of characters and interprets them just as though they were typed manually. If the autoindent feature is enabled, the Vim automatically adds spaces at the start of each line. When combined with the indentation already present in the code snippet, the result is that each line drifts farther and farther to the right. By contrast, if you use paste from the quoteplus register (e.g. using <code>&quot;+p</code> or <code>:put +</code>), you can avoid this problem.</p>
 
-<p>For large sections of text, the quoteplus register is noticably quicker than using <code>ctrl-v</code> in Insert mode. As an experiment, try this: copy the <a href="http://www.gutenberg.org/cache/epub/2600/pg2600.txt">entire text of War and Peace</a> into your clipboard. Open a new instance of Vim, switch to insert mode, and press <code>ctrl-v</code> (or <code>cmd-v</code> if you're on a mac). Vim receives a stream of characters and inserts them into the document one by one. You might have to wait a while until you get control back! Now open another instance of Vim and run the command <code>:put +</code>. This time, the entire text should appear in your buffer instantly.</p>
+<p>For large sections of text, the quoteplus register is noticably quicker than using <code>ctrl-v</code> in Insert mode. As an experiment, try this: copy the <a href="http://www.gutenberg.org/cache/epub/2600/pg2600.txt">entire text of War and Peace</a> into your clipboard. Open a new instance of Vim, switch to insert mode, and press <code>ctrl-v</code> (or <code>cmd-v</code> if you&rsquo;re on a mac). Vim receives a stream of characters and inserts them into the document one by one. You might have to wait a while until you get control back! Now open another instance of Vim and run the command <code>:put +</code>. This time, the entire text should appear in your buffer instantly.</p>
 
-<p>If you're running GVim (or MacVim), then you shouldn't experience any problems with the <code>ctrl-v</code> command. In the graphical environment, Vim can detect when a stream of input comes from the clipboard, and adjust its behavior accordingly. But when Vim runs inside the terminal, there's no way it can tell whether the text is being entered manually or pasted from the clipboard.</p>
+<p>If you&rsquo;re running GVim (or MacVim), then you shouldn&rsquo;t experience any problems with the <code>ctrl-v</code> command. In the graphical environment, Vim can detect when a stream of input comes from the clipboard, and adjust its behavior accordingly. But when Vim runs inside the terminal, there&rsquo;s no way it can tell whether the text is being entered manually or pasted from the clipboard.</p>
 
-<h3 id="whats-the-difference-between-clipboard-and-xtermclipboard-features">What's the difference between <code>'clipboard'</code> and <code>'xterm_clipboard'</code> features?</h3>
+<h3>What&rsquo;s the difference between <code>&#39;clipboard&#39;</code> and <code>&#39;xterm_clipboard&#39;</code> features?</h3>
 
-<p>The <code>+clipboard</code> feature gives us access to the system clipboard through the <code>"+</code> register. By "system clipboard", I mean the one that we usually access with the system-wide cut, copy, and paste operations.</p>
+<p>The <code>+clipboard</code> feature gives us access to the system clipboard through the <code>&quot;+</code> register. By &quot;system clipboard&rdquo;, I mean the one that we usually access with the system-wide cut, copy, and paste operations.</p>
 
-<p>When Vim runs inside of <a href="http://invisible-island.net/xterm/">xterm</a>, the <code>'+xterm_clipboard'</code> feature gives us access to <a href="https://wiki.archlinux.org/index.php/Xterm#Copy_and_paste">the <em>primary</em> selection</a> through the <code>"*</code> register. This feature permits the following workflow: visually select text in Vim, switch to another app and use the middle mouse button to paste the text you selected. I've never used this workflow and I don't find it appealing. One reason I use Vim is because I want to avoid using the mouse!</p>
+<p>When Vim runs inside of <a href="http://invisible-island.net/xterm/">xterm</a>, the <code>&#39;+xterm_clipboard&#39;</code> feature gives us access to <a href="https://wiki.archlinux.org/index.php/Xterm#Copy_and_paste">the <em>primary</em> selection</a> through the <code>&quot;*</code> register. This feature permits the following workflow: visually select text in Vim, switch to another app and use the middle mouse button to paste the text you selected. I&rsquo;ve never used this workflow and I don&rsquo;t find it appealing. One reason I use Vim is because I want to avoid using the mouse!</p>
 
-<p>If your Vim was compiled with <code>+clipboard</code> and <code>-xterm_clipboard</code> (as my Vim is), then you can use <code>"+</code> and <code>"*</code> interchangeably; both will access the system clipboard.</p>
+<p>If your Vim was compiled with <code>+clipboard</code> and <code>-xterm_clipboard</code> (as my Vim is), then you can use <code>&quot;+</code> and <code>&quot;*</code> interchangeably; both will access the system clipboard.</p>
 
-<h3 id="make-vim-use-the-system-clipboard-as-the-default-register">Make Vim use the system clipboard as the default register</h3>
+<h3>Make Vim use the system clipboard as the default register</h3>
 
-<p>If you'd like to make it easier to interact with the system clipboard, try out this setting:</p>
-
-<pre><code>set clipboard=unnamed
-</code></pre>
+<p>If you&rsquo;d like to make it easier to interact with the system clipboard, try out this setting:</p>
+<pre class="highlight plaintext">set clipboard=unnamed
+</pre>
 
 <p>That tells Vim to use the <a href="http://vimdoc.sourceforge.net/htmldoc/gui.html#quotestar">quotestar register</a> for all yank, delete, change, and put operations that have no register explicitly specified. In effect, the system clipboard becomes the default register. Beware that with this setting, the <code>x</code> command will write a single character to the system clipboard, overwriting whatever was in there previously.</p>
 
 <p>If your version of Vim supports both the <code>+clipboard</code> and <code>+xterm_clipboard</code> features, then you might prefer to use this setting instead:</p>
-
-<pre><code>if has('unnamedplus')
-  set clipboard=unnamed,unnamedplus
-endif
-</code></pre>
+<pre class="highlight viml"><span class="k">if</span> has<span class="p">(</span><span class="s1">'unnamedplus'</span><span class="p">)</span>
+  <span class="k">set</span> clipboard<span class="p">=</span>unnamed<span class="p">,</span>unnamedplus
+<span class="k">endif</span>
+</pre>
 
 <p>Read <code>:h clipboard-unnamedplus</code> for more details.</p>
 
-<h3 id="further-reading">Further reading</h3>
+<h3>Further reading</h3>
 
 <ul>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/gui_x11.html#quoteplus"><code>:help quoteplus</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/gui.html#quotestar"><code>:help quotestar</code></a></li>
-  <li><a title="clipboard" href="http://vimdoc.sourceforge.net/htmldoc/options.html#"><code>:help 'clipboard'</code></a></li>
-  <li><a href="http://support.alfredapp.com/features:clipboard">Alfred's Clipboard history feature</a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/gui_x11.html#quoteplus"><code>:help quoteplus</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/gui.html#quotestar"><code>:help quotestar</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;#x27;clipboard&amp;#x27;"><code>:help &#39;clipboard&#39;</code></a></li>
+<li><a href="http://support.alfredapp.com/features:clipboard">Alfred&rsquo;s Clipboard history feature</a></li>
 </ul>
-
 
         </div>
         </dd>
@@ -369,20 +367,8 @@ endif
 
     
       <li>
-        <h4><a href="/episodes/evaluating-scripts-with-vims-expression-register/">Evaluating scripts with Vim's expression register</a></h4>
-        <p>In <a href="/e/56">the previous lesson</a> we learned how use the expression register to evaluate simple calculations. We can also call built-in and user-defined Vimscript functions, and thanks to the <code>system()</code> function, we can also fetch output from external scripts.</p>
-
-
-      </li>
-    
-      <li>
         <h4><a href="/publications">Publications</a></h4>
         <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
       <li>
@@ -393,15 +379,27 @@ endif
       </li>
     
       <li>
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
+      </li>
+    
+      <li>
         <h4><a href="/blog/2013/11/getting-vim-with-clipboard-support/">Getting Vim with `+clipboard` support</a></h4>
-        <p>Many systems ship with a version of Vim that was compiled with the <code>-clipboard</code> feature disabled, which is a damned nuisance! Being able to <a href="http://vimcasts.org/e/58">access the system clipboard from Vim</a> is an essential feature. Let's look at a few ways of getting the <code>+clipboard</code> feature on OS X and Ubuntu.</p>
+        <p>Many systems ship with a version of Vim that was compiled with the <code>-clipboard</code> feature disabled, which is a damned nuisance! Being able to <a href="http://vimcasts.org/e/58">access the system clipboard from Vim</a> is an essential feature. Let&rsquo;s look at a few ways of getting the <code>+clipboard</code> feature on OS X and Ubuntu.</p>
 
 
       </li>
     
       <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
+        <h4><a href="/episodes/evaluating-scripts-with-vims-expression-register/">Evaluating scripts with Vim's expression register</a></h4>
+        <p>In <a href="/e/56">the previous lesson</a> we learned how use the expression register to evaluate simple calculations. We can also call built-in and user-defined Vimscript functions, and thanks to the <code>system()</code> function, we can also fetch output from external scripts.</p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
 

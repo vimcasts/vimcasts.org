@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -187,7 +188,7 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>The <code>gn</code> command (introduced in Vim 7.4) makes it easy to operate on regions of text that match the current search pattern. It's especially useful when used with a regex that matches text regions of variable length.</p>
+        <p>The <code>gn</code> command (introduced in Vim 7.4) makes it easy to operate on regions of text that match the current search pattern. It&rsquo;s especially useful when used with a regex that matches text regions of variable length.</p>
 
 
       </div>
@@ -226,59 +227,56 @@
         <div id="shownotes" class="content" data-swiftype-index="true">
           
 
-<r:snippet name="announcement" />
-
-<p>Here's what Vim's documentation has to say about the <code>gn</code> command (<a href="http://vimhelp.appspot.com/visual.txt.html#gn"><code>:help gn</code></a>):</p>
+<p>Here&rsquo;s what Vim&rsquo;s documentation has to say about the <code>gn</code> command (<a href="http://vimhelp.appspot.com/visual.txt.html#gn"><code>:help gn</code></a>):</p>
 
 <blockquote>
-  <p>Search forward for the last used search pattern, like with <code>n</code>, and start
+<p>Search forward for the last used search pattern, like with <code>n</code>, and start
 Visual mode to select the match. If the cursor is on the match, visually
 selects it. If an operator is pending, operates on the match.</p>
 </blockquote>
 
 <p>You know how pressing <code>n</code> tells Vim to jump to the start of the next match?
 Well, <code>gn</code> tells Vim to start visual mode and <em>select the next match</em>.
-When used in this fashion, the <code>gn</code> command makes Vim's search behave like most graphical text editors, where the search command selects the current match.
+When used in this fashion, the <code>gn</code> command makes Vim&rsquo;s search behave like most graphical text editors, where the search command selects the current match.
 As you might expect, the <code>gN</code> command lets you visually select the previous match.</p>
 
 <p>I find the <code>gn</code> command especially useful in <a href="http://vimdoc.sourceforge.net/htmldoc/intro.html#Operator-pending-mode">Operator-pending mode</a>. For example, <code>dgn</code> will delete the next match, <code>cgn</code> will do the same then switch to Insert mode, <code>gUgn</code> will convert the next match to uppercase characters.
 Look up <a href="http://vimhelp.appspot.com/motion.txt.html#operator"><code>:h operator</code></a> for more ideas.</p>
 
-<h3 id="using-gn-with-the-dot-command">Using <code>gn</code> with the dot command</h3>
+<h3>Using <code>gn</code> with the dot command</h3>
 
-<p>Suppose that we have a document containing several occurrences of the word 'Normal' and we'd like to change each occurrence to 'Visual'.
-We can run <code>/Normal</code> to search for the word 'Normal', then type <code>cgnVisual&lt;Esc&gt;</code> to change the next match to the word 'Visual'.
-You're probably familiar with the technique of pressing <code>n.</code> to repeat the change for each subsequent match. In <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, I call this pattern of usage <em>The Dot Formula</em>.
+<p>Suppose that we have a document containing several occurrences of the word &lsquo;Normal&rsquo; and we&rsquo;d like to change each occurrence to &lsquo;Visual&rsquo;.
+We can run <code>/Normal</code> to search for the word &lsquo;Normal&rsquo;, then type <code>cgnVisual&lt;Esc&gt;</code> to change the next match to the word &lsquo;Visual&rsquo;.
+You&rsquo;re probably familiar with the technique of pressing <code>n.</code> to repeat the change for each subsequent match. In <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, I call this pattern of usage <em>The Dot Formula</em>.
 It lets us use two keystrokes per change.</p>
 
 <p>In this context, we can do better.
 The dot command repeats the last change, which is equivalent to typing <code>cgnVisual&lt;Esc&gt;</code>.
-We could translate that into plain English as: "change the next match".
-We don't have to press <code>n.</code> because <code>.</code> does the job by itself.
+We could translate that into plain English as: &ldquo;change the next match&rdquo;.
+We don&rsquo;t have to press <code>n.</code> because <code>.</code> does the job by itself.
 That makes it just one keystroke per change!</p>
 
-<h3 id="you-need-vim-74110-to-use-gn">You need Vim 7.4.110 to use <code>gn</code></h3>
+<h3>You need Vim 7.4.110 to use <code>gn</code></h3>
 
 <p>You can use the <code>gn</code> command if you are running Vim 7.4 at <a href="http://ftp.vim.org/pub/vim/patches/7.4/7.4.110">patch level 110</a> or greater.</p>
 
-<p>The <code>gn</code> feature was first introduced by Christian Brabandt in Vim 7.3 with patch <a href="http://ftp.vim.org/pub/vim/patches/7.3/7.3.610">610</a>, then the functionality was refined with patches <a href="http://ftp.vim.org/pub/vim/patches/7.3/7.3.625">625</a>, <a href="http://ftp.vim.org/pub/vim/patches/7.3/7.3.636">636</a>, <a href="http://ftp.vim.org/pub/vim/patches/7.3/7.3.645">645</a>, <a href="http://ftp.vim.org/pub/vim/patches/7.3/7.3.647">647</a>, and <a href="http://ftp.vim.org/pub/vim/patches/7.3/7.3.1275">1275</a>. The feature was made widely available in Vim 7.4, but if you are running a version less than patch level 110 then the <code>gUgn</code> command demonstrated in this video won't work.</p>
+<p>The <code>gn</code> feature was first introduced by Christian Brabandt in Vim 7.3 with patch <a href="http://ftp.vim.org/pub/vim/patches/7.3/7.3.610">610</a>, then the functionality was refined with patches <a href="http://ftp.vim.org/pub/vim/patches/7.3/7.3.625">625</a>, <a href="http://ftp.vim.org/pub/vim/patches/7.3/7.3.636">636</a>, <a href="http://ftp.vim.org/pub/vim/patches/7.3/7.3.645">645</a>, <a href="http://ftp.vim.org/pub/vim/patches/7.3/7.3.647">647</a>, and <a href="http://ftp.vim.org/pub/vim/patches/7.3/7.3.1275">1275</a>. The feature was made widely available in Vim 7.4, but if you are running a version less than patch level 110 then the <code>gUgn</code> command demonstrated in this video won&rsquo;t work.</p>
 
-<h3 id="practical-vim---tip-84">Practical Vim - tip 84</h3>
+<h3>Practical Vim - tip 84</h3>
 
-<p>In the 1st edition of <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, tip 84 goes over a different approach for making this same kind of change, which is nowhere near as tidy! When I wrote this edition, the <code>gn</code> feature hadn't yet been added to Vim. I'll have to revise this tip when the time comes to write a new edition of Practical Vim.</p>
+<p>In the 1st edition of <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, tip 84 goes over a different approach for making this same kind of change, which is nowhere near as tidy! When I wrote this edition, the <code>gn</code> feature hadn&rsquo;t yet been added to Vim. I&rsquo;ll have to revise this tip when the time comes to write a new edition of Practical Vim.</p>
 
-<p>If you're stuck on an older version of Vim, note that you can get similar functionality by installing the <a href="https://github.com/kana/vim-textobj-lastpat">textobj-lastpat</a> plugin by Kana Natsuno.
-I used to consider this to be an essential plugin, but don't now that the <code>gn</code> command is built-in to Vim.</p>
+<p>If you&rsquo;re stuck on an older version of Vim, note that you can get similar functionality by installing the <a href="https://github.com/kana/vim-textobj-lastpat">textobj-lastpat</a> plugin by Kana Natsuno.
+I used to consider this to be an essential plugin, but don&rsquo;t now that the <code>gn</code> command is built-in to Vim.</p>
 
-<h3 id="further-reading">Further reading</h3>
+<h3>Further reading</h3>
 
 <ul>
-  <li><a href="http://vimhelp.appspot.com/visual.txt.html#gn"><code>:help gn</code></a></li>
-  <li><a href="http://vimhelp.appspot.com/motion.txt.html#operator"><code>:help operator</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#."><code>:help .</code></a></li>
-  <li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, tip 84: Operate on a complete search match</li>
+<li><a href="http://vimhelp.appspot.com/visual.txt.html#gn"><code>:help gn</code></a></li>
+<li><a href="http://vimhelp.appspot.com/motion.txt.html#operator"><code>:help operator</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#."><code>:help .</code></a></li>
+<li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, tip 84: Operate on a complete search match</li>
 </ul>
-
 
         </div>
         </dd>
@@ -323,21 +321,10 @@ I used to consider this to be an essential plugin, but don't now that the <code>
 
     
       <li>
-        <h4><a href="/episodes/swapping-two-regions-of-text-with-exchange-vim/">Swapping two regions of text with exchange.vim</a></h4>
-        <p>Swapping two regions of text is a common task, which normally requires that we make two separate changes to the document.
-Tom McDonald's <a href="https://github.com/tommcdo/vim-exchange">exchange plugin</a> offers an elegant alternative, by providing an operator that swaps two regions of text in one go.</p>
+        <h4><a href="/episodes/creating-repeatable-mappings-with-repeat-vim/">Creating repeatable mappings with repeat.vim</a></h4>
+        <p>The dot command is my all-time favorite Vim trick: it tells Vim to repeat the last change. But the dot command tends not to work well with user-defined mappings. In this episode, we&rsquo;ll use repeat.vim to set up a simple mapping so that it can be repeated using the dot command.</p>
 
 
-      </li>
-    
-      <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
       <li>
@@ -346,15 +333,26 @@ Tom McDonald's <a href="https://github.com/tommcdo/vim-exchange">exchange plugin
       </li>
     
       <li>
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+      </li>
+    
+      <li>
         <h4><a href="/episodes/modal-editing-undo-redo-and-repeat/">Modal editing: undo, redo and repeat</a></h4>
-        <p>Vim's modal editing paradigm - the newbie killer - brings tremendous efficiency if only you can learn to work with it, rather than against it. This episode demonstrates how the undo and repeat commands can benefit from spending short bursts of time in insert mode. </p>
+        <p>Vim&rsquo;s modal editing paradigm - the newbie killer - brings tremendous efficiency if only you can learn to work with it, rather than against it. This episode demonstrates how the undo and repeat commands can benefit from spending short bursts of time in insert mode. </p>
 
 
       </li>
     
       <li>
-        <h4><a href="/episodes/creating-repeatable-mappings-with-repeat-vim/">Creating repeatable mappings with repeat.vim</a></h4>
-        <p>The dot command is my all-time favorite Vim trick: it tells Vim to repeat the last change. But the dot command tends not to work well with user-defined mappings. In this episode, we'll use repeat.vim to set up a simple mapping so that it can be repeated using the dot command.</p>
+        <h4><a href="/episodes/swapping-two-regions-of-text-with-exchange-vim/">Swapping two regions of text with exchange.vim</a></h4>
+        <p>Swapping two regions of text is a common task, which normally requires that we make two separate changes to the document.
+Tom McDonald&rsquo;s <a href="https://github.com/tommcdo/vim-exchange">exchange plugin</a> offers an elegant alternative, by providing an operator that swaps two regions of text in one go.</p>
 
 
       </li>

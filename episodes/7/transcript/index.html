@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -130,73 +131,64 @@
           </div>
         </div>
 
-        <h2 id="intro">Intro</h2>
+        <h2>Intro</h2>
 
 <p>In Vim, you can view several buffers at once by loading them into multiple windows.
-New windows can be created by splitting horizontally and vertically, and Vim ensures that they don't overlap. This is useful when you need to work on several files at once. </p>
+New windows can be created by splitting horizontally and vertically, and Vim ensures that they don&rsquo;t overlap. This is useful when you need to work on several files at once. </p>
 
-<p>Many of the commands we'll cover in this episode begin with control-w. You can
+<p>Many of the commands we&rsquo;ll cover in this episode begin with control-w. You can
 see the full list of these commands by running <code>:help ctrl-w</code>. Note that, for
 example, <code>control-w s</code> has the same effect as <code>control-w control-s</code>. You can use whichever version feels more comfortable to you.</p>
 
-<h2 id="opening-split-windows">Opening split windows</h2>
+<h2>Opening split windows</h2>
 
 <ul>
-  <li>ctrl-W s</li>
-  <li>ctrl-W v</li>
-  <li>:sp filename</li>
-  <li>:vsp filename</li>
-  <li>:q</li>
-  <li>:on</li>
+<li>ctrl-W s</li>
+<li>ctrl-W v</li>
+<li>:sp filename</li>
+<li>:vsp filename</li>
+<li>:q</li>
+<li>:on</li>
 </ul>
 
-<h2 id="shifting-focus-between-windows">Shifting focus between windows</h2>
+<h2>Shifting focus between windows</h2>
 
 <ul>
-  <li>ctrl-W [wW]</li>
-  <li>ctrl-W [hjkl]</li>
+<li>ctrl-W [wW]</li>
+<li>ctrl-W [hjkl]</li>
 </ul>
 
 <p>These commands are very useful when working with multiple windows. To make them slightly more convenient, I include these lines in my vimrc. This means that instead of running <code>ctrl-w h</code>, I now just have to run <code>ctrl-h</code>.</p>
 
-<h2 id="resizing-windows">Resizing windows</h2>
+<h2>Resizing windows</h2>
 
 <ul>
-  <li>ctrl-W [-+]</li>
-  <li>Use the mouse!</li>
-  <li>ctrl-W =</li>
-  <li>ctrl-W _</li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>ctrl-W</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
+<li>ctrl-W [-+]</li>
+<li>Use the mouse!</li>
+<li>ctrl-W =</li>
+<li>ctrl-W _</li>
+<li>ctrl-W |</li>
 </ul>
 
-<h2 id="moving-windows">Moving windows</h2>
+<h2>Moving windows</h2>
 
 <ul>
-  <li>ctrl-W [rR]</li>
-  <li>ctrl-W [xX]</li>
-  <li>ctrl-W [HJKL]</li>
+<li>ctrl-W [rR]</li>
+<li>ctrl-W [xX]</li>
+<li>ctrl-W [HJKL]</li>
 </ul>
 
-<h1 id="these-commands-didnt-make-it-into-the-screencast">These commands didn't make it into the screencast:</h1>
+<h1>These commands didn&rsquo;t make it into the screencast:</h1>
+
 <p>Also:</p>
 
 <ul>
-  <li>:sp #     -   opens the alternate file in a split window</li>
-  <li>
-    <p>:vsp #</p>
-  </li>
-  <li>:bo sp</li>
-  <li>:bo vsp</li>
-  <li>:to sp</li>
-  <li>:to vsp</li>
+<li>:sp #     -   opens the alternate file in a split window</li>
+<li><p>:vsp #</p></li>
+<li><p>:bo sp</p></li>
+<li><p>:bo vsp</p></li>
+<li><p>:to sp</p></li>
+<li><p>:to vsp</p></li>
 </ul>
 
 

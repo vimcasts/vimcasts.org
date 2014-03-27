@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -187,7 +188,7 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>Introducing the buffer list, and commands for switching between buffers. This episode also covers the concept of 'hidden' buffers, and shows how to deal with them.</p>
+        <p>Introducing the buffer list, and commands for switching between buffers. This episode also covers the concept of &lsquo;hidden&rsquo; buffers, and shows how to deal with them.</p>
 
 
       </div>
@@ -226,7 +227,7 @@
         <div id="shownotes" class="content" data-swiftype-index="true">
           
 
-<h3 id="working-with-buffers">Working with buffers</h3>
+<h3>Working with buffers</h3>
 
 <p>These commands show and navigate through the buffer list:</p>
 
@@ -253,18 +254,17 @@
        <td><code>CTRL-^</code></td>
        <td>switch to the alternate file</td>
    <tr>
+</table>
 
+<h3>Dealing with hidden buffers</h3>
 
-###Dealing with hidden buffers
+<p>A buffer is marked as &lsquo;hidden&rsquo; if it has unsaved changes, and it is not
+currently loaded in a window. </p>
 
-A buffer is marked as 'hidden' if it has unsaved changes, and it is not
-currently loaded in a window. 
+<p>If you try and quit Vim while there are hidden buffers, you will raise an
+error: <em>E162: No write since last change for buffer &ldquo;a.txt&rdquo;</em>.</p>
 
-If you try and quit Vim while there are hidden buffers, you will raise an
-error: *E162: No write since last change for buffer "a.txt"*.
-
-In this scenario, you can do any of the following:
-
+<p>In this scenario, you can do any of the following:</p>
 
 <table>
    <tr>
@@ -288,13 +288,11 @@ In this scenario, you can do any of the following:
        <td><code>:q!</code></td>
        <td>force Vim to quit, discarding changes to all modified buffers</td>
    <tr>
+</table>
 
-
-By default, Vim makes it difficult to create hidden buffers. To make Vim more liberal about hidden buffers, put the following in your .vimrc:
-
-    set hidden
-
-</tr></tr></tr></tr></tr></tr></tr></tr></tr></tr></table></tr></tr></tr></tr></tr></tr></tr></tr></tr></tr></table>
+<p>By default, Vim makes it difficult to create hidden buffers. To make Vim more liberal about hidden buffers, put the following in your .vimrc:</p>
+<pre class="highlight viml"><span class="k">set</span> hidden
+</pre>
 
         </div>
         </dd>
@@ -339,15 +337,25 @@ By default, Vim makes it difficult to create hidden buffers. To make Vim more li
 
     
       <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+        <h4><a href="/episodes/working-with-tabs/">Working with tabs</a></h4>
+        <p>This episode covers the essential commands for working with Vim&rsquo;s tab pages: opening and closing, switching, and moving them.</p>
+
+
       </li>
     
       <li>
-        <h4><a href="/episodes/how-to-use-tabs/">How to use tabs</a></h4>
-        <p>Vim's treatment of tabs is a little different than what you might be used to if you are coming from another editor. In this episode I demonstrate how Vim's tabs can be used to group split windows together. I also show how to use Vim's tabs like projects in TextMate, by setting a different working directory for each one.</p>
-
-
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
       <li>
@@ -358,18 +366,8 @@ By default, Vim makes it difficult to create hidden buffers. To make Vim more li
       </li>
     
       <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/working-with-tabs/">Working with tabs</a></h4>
-        <p>This episode covers the essential commands for working with Vim's tab pages: opening and closing, switching, and moving them.</p>
+        <h4><a href="/episodes/how-to-use-tabs/">How to use tabs</a></h4>
+        <p>Vim&rsquo;s treatment of tabs is a little different than what you might be used to if you are coming from another editor. In this episode I demonstrate how Vim&rsquo;s tabs can be used to group split windows together. I also show how to use Vim&rsquo;s tabs like projects in TextMate, by setting a different working directory for each one.</p>
 
 
       </li>

@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -142,84 +143,87 @@
 
       
 
-      <p>In most modern editing environments, the cursor does not need to be visible at all times. Here you can see that the cursor is blinking on the first line of the file. By scrolling the window, I can move the cursor out of sight. There's no problem with this. If I start typing, the window just scrolls until the cursor is visible again. </p>
+      <p>In most modern editing environments, the cursor does not need to be visible at all times. Here you can see that the cursor is blinking on the first line of the file. By scrolling the window, I can move the cursor out of sight. There&rsquo;s no problem with this. If I start typing, the window just scrolls until the cursor is visible again. </p>
 
-<p>By contrast, Vim's concept of a cursor does not allow for it to be out of site. Here, I have the cursor blinkning on the first line of the file. When I scroll the window down, the cursor comes with me. At first sight, this may seem like a terrible limitation, but Vim provides a couple of features which mean that in practice it rarely matters.</p>
+<p>By contrast, Vim&rsquo;s concept of a cursor does not allow for it to be out of site. Here, I have the cursor blinkning on the first line of the file. When I scroll the window down, the cursor comes with me. At first sight, this may seem like a terrible limitation, but Vim provides a couple of features which mean that in practice it rarely matters.</p>
 
-<p>I'm going to use a simple editing task to demonstrate. Here, I am adding a rule to a stylesheet. I need to add a background-colour, but I've forgotten the hex value, so I scroll up to the top of the file and there it is: #e5e5e5. In TextMate, I know that my cursor is where I left it, so I just start typing and the text is entered in the appropriate place. </p>
+<p>I&rsquo;m going to use a simple editing task to demonstrate. Here, I am adding a rule to a stylesheet. I need to add a background-colour, but I&rsquo;ve forgotten the hex value, so I scroll up to the top of the file and there it is: #e5e5e5. In TextMate, I know that my cursor is where I left it, so I just start typing and the text is entered in the appropriate place. </p>
 
-<p>Now lets do the same thing in Vim. I start by adding the rule, but as I get to the colour, I realise that I have to check against another part of the file. I leave insert mode, by hitting escape, then jump to the top of the file with the <code>gg</code> command. I make a mental note of the HEX value, then I need to get back into insert mode in the position where I last used it. The command <code>g;</code> 'G-semicolon' moves my cursor there, and then I can go back into insert mode by pressing the <code>a</code> key.</p>
+<p>Now lets do the same thing in Vim. I start by adding the rule, but as I get to the colour, I realise that I have to check against another part of the file. I leave insert mode, by hitting escape, then jump to the top of the file with the <code>gg</code> command. I make a mental note of the HEX value, then I need to get back into insert mode in the position where I last used it. The command <code>g;</code> &lsquo;G-semicolon&rsquo; moves my cursor there, and then I can go back into insert mode by pressing the <code>a</code> key.</p>
 
-<h1 id="the-changelist">The Changelist</h1>
+<h1>The Changelist</h1>
 
-<p>Vim maintains a changelist, remembering the position of every change that can be undone. You can move through the changelist backwards using the <code>g;</code> 'G-semicolon' command. This is a bit like hitting undo multiple times, but instead of undoing each edit, it just moves the cursor to the place where an edit was made. You can also move forward through the changelist using the 'g,' 'G-comma' command.</p>
+<p>Vim maintains a changelist, remembering the position of every change that can be undone. You can move through the changelist backwards using the <code>g;</code> &lsquo;G-semicolon&rsquo; command. This is a bit like hitting undo multiple times, but instead of undoing each edit, it just moves the cursor to the place where an edit was made. You can also move forward through the changelist using the &lsquo;g,&rsquo; &lsquo;G-comma&rsquo; command.</p>
 
 <p>You can view the positions saved in the changelist by issueing the command <code>:changes</code>.</p>
 
-<h1 id="the-jumplist">The Jumplist</h1>
+<h1>The Jumplist</h1>
 
-<p>Vim also maintains a jumplist, remembering each position to which the cursor jumped, rather than scrolled. Some of the commands that are regarded as "jumps" include</p>
-
-<ul>
-  <li>search commands and their repetitions.</li>
-  <li>the substitution command.</li>
-  <li>jumping between parentheses.</li>
-  <li>jumping through paragraphs</li>
-  <li>or sentences.</li>
-  <li>moving to a specified line</li>
-  <li>or a position within the current window.</li>
-  <li>opening another file in the current window</li>
-</ul>
-
-<p>You can move backwards and forwards through the jumplist with the commands 'control-O' and 'control-I'. The "control-O" command is a bit like the back button on a web browser, whereas 'control-I' is like the forward button. You can view the history by issuing the command <code>:jumps</code>.</p>
-
-<p>The jumplist is useful when navigating Vim's documentation. The help system implements it's own version of a hyperlink, so you can jump between keywords by clicking them with the mouse, or moving the cursor to the link and pressing ctrl-] 'control-close-square-bracket'. You can then move back through the tags that you visited with ctrl-O.</p>
-
-<h1 id="search-and-substitute">Search and substitute</h1>
-<ul>
-  <li>/pattern</li>
-  <li>?pattern</li>
-  <li>n</li>
-  <li>N</li>
-  <li>:s/pattern/replacement</li>
-</ul>
-
-<h1 id="jump-through-parenthesis-paragraphs-and-sentences">Jump through parenthesis, paragraphs and sentences</h1>
-<ul>
-  <li>%</li>
-  <li>{</li>
-  <li>}</li>
-  <li>(</li>
-  <li>)</li>
-</ul>
-
-<h1 id="move-the-cursor-within-the-screen">Move the cursor within the screen</h1>
-<ul>
-  <li>L</li>
-  <li>M</li>
-  <li>H</li>
-</ul>
-
-<h1 id="move-the-cursor-within-the-file">Move the cursor within the file</h1>
-<ul>
-  <li>G, gg, [count]G</li>
-</ul>
-
-<p>Open a new file
-The commands that start editing a new file
-==========================================</p>
+<p>Vim also maintains a jumplist, remembering each position to which the cursor jumped, rather than scrolled. Some of the commands that are regarded as &ldquo;jumps&rdquo; include</p>
 
 <ul>
-  <li>:e</li>
-  <li>:</li>
+<li>search commands and their repetitions.</li>
+<li>the substitution command.</li>
+<li>jumping between parentheses.</li>
+<li>jumping through paragraphs</li>
+<li>or sentences.</li>
+<li>moving to a specified line</li>
+<li>or a position within the current window.</li>
+<li>opening another file in the current window</li>
 </ul>
 
-<p>If you make the cursor "jump" with one of these commands, the position of the cursor before the jump is remembered.  You can return to that position with the "''" and "``" command, unless the line containing that position was changed or deleted.</p>
+<p>You can move backwards and forwards through the jumplist with the commands &lsquo;control-O&rsquo; and &lsquo;control-I&rsquo;. The &ldquo;control-O&rdquo; command is a bit like the back button on a web browser, whereas &lsquo;control-I&rsquo; is like the forward button. You can view the history by issuing the command <code>:jumps</code>.</p>
 
-<p>WHAT IS THE DIFFERENCE BETWEEN ctrl-O/ctrl-I and ''/``?</p>
+<p>The jumplist is useful when navigating Vim&rsquo;s documentation. The help system implements it&rsquo;s own version of a hyperlink, so you can jump between keywords by clicking them with the mouse, or moving the cursor to the link and pressing ctrl-] &lsquo;control-close-square-bracket&rsquo;. You can then move back through the tags that you visited with ctrl-O.</p>
 
-<p>'' and `` are like ctlr-^, in that they toggle between one position and another. </p>
+<h1>Search and substitute</h1>
 
+<ul>
+<li>/pattern</li>
+<li>?pattern</li>
+<li>n</li>
+<li>N</li>
+<li>:s/pattern/replacement</li>
+</ul>
+
+<h1>Jump through parenthesis, paragraphs and sentences</h1>
+
+<ul>
+<li>%</li>
+<li>{</li>
+<li>}</li>
+<li>(</li>
+<li>)</li>
+</ul>
+
+<h1>Move the cursor within the screen</h1>
+
+<ul>
+<li>L</li>
+<li>M</li>
+<li>H</li>
+</ul>
+
+<h1>Move the cursor within the file</h1>
+
+<ul>
+<li>G, gg, [count]G</li>
+</ul>
+
+<p>Open a new file</p>
+
+<h1>The commands that start editing a new file</h1>
+
+<ul>
+<li>:e</li>
+<li>:</li>
+</ul>
+
+<p>If you make the cursor &ldquo;jump&rdquo; with one of these commands, the position of the cursor before the jump is remembered.  You can return to that position with the &ldquo;&rdquo;&ldquo; and &rdquo;&ldquo;&rdquo; command, unless the line containing that position was changed or deleted.</p>
+
+<p>WHAT IS THE DIFFERENCE BETWEEN ctrl-O/ctrl-I and &ldquo;/&rdquo;?</p>
+
+<p>&ldquo; and &rdquo; are like ctlr-^, in that they toggle between one position and another. </p>
 
     </div>
   </div>

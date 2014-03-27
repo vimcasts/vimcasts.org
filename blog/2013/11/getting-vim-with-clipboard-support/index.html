@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -177,37 +178,35 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>Many systems ship with a version of Vim that was compiled with the <code>-clipboard</code> feature disabled, which is a damned nuisance! Being able to <a href="http://vimcasts.org/e/58">access the system clipboard from Vim</a> is an essential feature. Let's look at a few ways of getting the <code>+clipboard</code> feature on OS X and Ubuntu.</p>
+        <p>Many systems ship with a version of Vim that was compiled with the <code>-clipboard</code> feature disabled, which is a damned nuisance! Being able to <a href="http://vimcasts.org/e/58">access the system clipboard from Vim</a> is an essential feature. Let&rsquo;s look at a few ways of getting the <code>+clipboard</code> feature on OS X and Ubuntu.</p>
 
 
 
-<h3 id="on-os-x">On OS X</h3>
+<h3>On OS X</h3>
 
-<p>On OS X Mavericks, Apple ships Vim version 7.3 with <code>-clipboard</code>. Here's the gist from running <a href="https://gist.github.com/nelstrom/7435463"><code>/usr/bin/vim --version</code> on Mavericks</a> (and <a href="https://gist.github.com/nelstrom/7435281">the same on Mountain Lion</a>). Shame on you Apple!</p>
+<p>On OS X Mavericks, Apple ships Vim version 7.3 with <code>-clipboard</code>. Here&rsquo;s the gist from running <a href="https://gist.github.com/nelstrom/7435463"><code>/usr/bin/vim --version</code> on Mavericks</a> (and <a href="https://gist.github.com/nelstrom/7435281">the same on Mountain Lion</a>). Shame on you Apple!</p>
 
 <p>If you <a href="http://brew.sh/">use Homebrew</a>, you can get Vim with <code>+clipboard</code> by running:</p>
+<pre class="highlight plaintext">brew install vim
+</pre>
 
-<pre><code>brew install vim
-</code></pre>
+<p>Here&rsquo;s a gist from running <a href="https://gist.github.com/nelstrom/7435520"><code>/usr/local/bin/vim --version</code></a>.</p>
 
-<p>Here's a gist from running <a href="https://gist.github.com/nelstrom/7435520"><code>/usr/local/bin/vim --version</code></a>.</p>
+<p>Alternatively, you could <a href="https://code.google.com/p/macvim/downloads/list">download MacVim</a>. Look inside <code>/Applications/MacVim.app/Contents/MacOS</code>, and you&rsquo;ll see that the app provides two binaries: <code>MacVim</code>, which launches the GUI, and <code>Vim</code>, which runs in the Terminal with the same feature set. Both versions include the <code>+clipboard</code> feature. Here&rsquo;s a gist from running <a href="https://gist.github.com/nelstrom/7435538"><code>/Applications/MacVim.app/Contents/MacOS/Vim --version</code></a>.</p>
 
-<p>Alternatively, you could <a href="https://code.google.com/p/macvim/downloads/list">download MacVim</a>. Look inside <code>/Applications/MacVim.app/Contents/MacOS</code>, and you'll see that the app provides two binaries: <code>MacVim</code>, which launches the GUI, and <code>Vim</code>, which runs in the Terminal with the same feature set. Both versions include the <code>+clipboard</code> feature. Here's a gist from running <a href="https://gist.github.com/nelstrom/7435538"><code>/Applications/MacVim.app/Contents/MacOS/Vim --version</code></a>.</p>
-
-<h3 id="on-linux">On Linux</h3>
+<h3>On Linux</h3>
 
 <p>On desktop Linux systems the clipboard is handled by the X window system. Most systems that use X11 will ship a version of Vim with the <code>+clipboard</code> feature. If your desktop Linux distribution ships with Vim without the <code>+clipboard</code> feature, you should be able to install a Vim package that provides this feature, e.g. each of these packages for Ubuntu provides Vim with <code>+clipboard</code>: <a href="https://gist.github.com/nelstrom/7436451">vim-gnome</a>, <a href="https://gist.github.com/nelstrom/7436569">vim-athena</a>, and <a href="https://gist.github.com/nelstrom/7436647">vim-gtx</a>.</p>
 
 <p>Robin Skahjem-Eriksen wrote to me with a tip: you can run GVim inside the terminal by launching it with the <code>gvim -v</code> command. That could be handy if your distribution ship <code>vim</code> with <code>-clipboard</code>, but also ships <code>gvim</code> with <code>+clipboard</code>.</p>
 
-<p>When Linux runs on a server it doesn't usually include X11. In this environment, it makes sense for Vim to be built with the <code>-clipboard</code> feature disabled. Some Vim packages are intended for systems without X11, such as the <a href="https://gist.github.com/nelstrom/7436756"><code>vim-nox</code></a> package. It's possible to install packages on a Linux server that would add the <code>+clipboard</code> feature for Vim, but doing so would also install X11 and all its dependencies. That's probably not a good idea.</p>
+<p>When Linux runs on a server it doesn&rsquo;t usually include X11. In this environment, it makes sense for Vim to be built with the <code>-clipboard</code> feature disabled. Some Vim packages are intended for systems without X11, such as the <a href="https://gist.github.com/nelstrom/7436756"><code>vim-nox</code></a> package. It&rsquo;s possible to install packages on a Linux server that would add the <code>+clipboard</code> feature for Vim, but doing so would also install X11 and all its dependencies. That&rsquo;s probably not a good idea.</p>
 
-<h3 id="can-we-fix-this">Can we fix this?</h3>
+<h3>Can we fix this?</h3>
 
-<p>Being able to <a href="http://vimcasts.org/e/58">access the system clipboard from Vim</a> is essential. It's a nuisance that some desktop systems ship Vim without the <code>+clipboard</code> feature! I'd like to see that change. Please make the information in this article obsolete by campaigning to have <code>+clipboard</code> enabled by default on your system.</p>
+<p>Being able to <a href="http://vimcasts.org/e/58">access the system clipboard from Vim</a> is essential. It&rsquo;s a nuisance that some desktop systems ship Vim without the <code>+clipboard</code> feature! I&rsquo;d like to see that change. Please make the information in this article obsolete by campaigning to have <code>+clipboard</code> enabled by default on your system.</p>
 
-<p><em>Update: I've revised this article, because my understanding of Linux was terribly flawed. You can find the <a href="https://gist.github.com/nelstrom/7475980">original draft here</a>. Thanks to Will Gray for his patient explanations.</em></p>
-
+<p><em>Update: I&rsquo;ve revised this article, because my understanding of Linux was terribly flawed. You can find the <a href="https://gist.github.com/nelstrom/7475980">original draft here</a>. Thanks to Will Gray for his patient explanations.</em></p>
 
       </div>
 
@@ -257,10 +256,8 @@
       </li>
     
       <li>
-        <h4><a href="/episodes/accessing-the-system-clipboard-from-vim/">Accessing the system clipboard from Vim</a></h4>
-        <p>In some environments, Vim lets us access the system clipboard using the quoteplus register, <code>"+</code>. When this feature is enabled, we can use it with the delete, yank and put operations in much the same way that we use Vim's other registers. Pasting from this register usually produces better results than using the system paste command in Insert mode.</p>
-
-
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
       </li>
     
       <li>
@@ -271,18 +268,20 @@
       </li>
     
       <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
-      </li>
-    
-      <li>
         <h4><a href="/publications">Publications</a></h4>
         <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
       </li>
     
       <li>
+        <h4><a href="/episodes/accessing-the-system-clipboard-from-vim/">Accessing the system clipboard from Vim</a></h4>
+        <p>In some environments, Vim lets us access the system clipboard using the quoteplus register, <code>&quot;+</code>. When this feature is enabled, we can use it with the delete, yank and put operations in much the same way that we use Vim&rsquo;s other registers. Pasting from this register usually produces better results than using the system paste command in Insert mode.</p>
+
+
+      </li>
+    
+      <li>
         <h4><a href="/blog/2013/11/the-copypaste-series-a-retrospective/">The copy/paste series - a retrospective</a></h4>
-        <p>Episodes <a href="/e/51">51</a>, <a href="/e/52">52</a>, <a href="/e/53">53</a>, <a href="/e/54">54</a>, <a href="/e/55">55</a>, <a href="/e/58">58</a>, and <a href="/e/59">59</a> are all on the topic of copy and paste in Vim. I think that this is one area where Vim is especially confusing, partly because of <a href="http://vimcasts.org/episodes/meet-the-yank-register#vim-jargon">Vim's non-standard jargon for cut, copy and paste operations</a>. It's not the most intuitive copy/paste system, but it's usable when you get the hang of certain concepts and techniques.</p>
+        <p>Episodes <a href="/e/51">51</a>, <a href="/e/52">52</a>, <a href="/e/53">53</a>, <a href="/e/54">54</a>, <a href="/e/55">55</a>, <a href="/e/58">58</a>, and <a href="/e/59">59</a> are all on the topic of copy and paste in Vim. I think that this is one area where Vim is especially confusing, partly because of <a href="http://vimcasts.org/episodes/meet-the-yank-register#vim-jargon">Vim&rsquo;s non-standard jargon for cut, copy and paste operations</a>. It&rsquo;s not the most intuitive copy/paste system, but it&rsquo;s usable when you get the hang of certain concepts and techniques.</p>
 
 
       </li>

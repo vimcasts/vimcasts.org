@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -226,93 +227,82 @@
         <div id="shownotes" class="content" data-swiftype-index="true">
           
 
-<h3 id="calling-functions-from-vimscript-standard-library">Calling functions from Vimscript standard library</h3>
+<h3>Calling functions from Vimscript standard library</h3>
 
 <p>In <a href="/e/56">the last lesson</a>, we saw how the expression register can be used for evaluating simple calculations, such as <code>2*21</code>. We can also use functions from the Vimscript standard library. For example, we could use the <a href="http://vimdoc.sourceforge.net/htmldoc/eval.html#sqrt()"><code>sqrt()</code></a> function to calculate the square root of a number:</p>
+<pre class="highlight plaintext">:put =sqrt(81)
+</pre>
 
-<pre><code>:put =sqrt(81)
-</code></pre>
+<p>We can execute any Vimscript code at the expression register. So long as the expression returns a string (or something that can be converted to a string), then we can use the result. For a complete reference of the functions defined in Vim&rsquo;s standard library, look up <a href="http://vimdoc.sourceforge.net/htmldoc/usr_41.html#function-list"><code>:h function-list</code></a>.</p>
 
-<p>We can execute any Vimscript code at the expression register. So long as the expression returns a string (or something that can be converted to a string), then we can use the result. For a complete reference of the functions defined in Vim's standard library, look up <a href="http://vimdoc.sourceforge.net/htmldoc/usr_41.html#function-list"><code>:h function-list</code></a>.</p>
+<h3>Calling user-defined functions</h3>
 
-<h3 id="calling-user-defined-functions">Calling user-defined functions</h3>
-
-<p>We're not limited to using functions defined in the Vimscript standard library. We can also evalute user-defined functions. For example, Vimscript has no simple way of generating a random number. We could hand-roll our own <code>Random()</code> function (this example is copied from <a href="http://stackoverflow.com/a/12739441/128850">StackOverflow</a>):</p>
-
-<pre><code>function! Random()
-  return str2nr(matchstr(reltimestr(reltime()), '\v\.@&lt;=\d+')[1:])
-endfunction
-</code></pre>
+<p>We&rsquo;re not limited to using functions defined in the Vimscript standard library. We can also evalute user-defined functions. For example, Vimscript has no simple way of generating a random number. We could hand-roll our own <code>Random()</code> function (this example is copied from <a href="http://stackoverflow.com/a/12739441/128850">StackOverflow</a>):</p>
+<pre class="highlight viml"><span class="k">function</span><span class="p">!</span> Random<span class="p">()</span>
+  <span class="k">return</span> str2nr<span class="p">(</span>matchstr<span class="p">(</span>reltimestr<span class="p">(</span>reltime<span class="p">()),</span> <span class="s1">'\v\.@&lt;=\d+'</span><span class="p">)[</span><span class="m">1</span><span class="p">:])</span>
+<span class="k">endfunction</span>
+</pre>
 
 <p>We could use this function at the expression register:</p>
+<pre class="highlight plaintext">:put =Random()
+</pre>
 
-<pre><code>:put =Random()
-</code></pre>
+<h3>Calling external scripts</h3>
 
-<h3 id="calling-external-scripts">Calling external scripts</h3>
+<p>The <a href="http://vimdoc.sourceforge.net/htmldoc/eval.html#system()"><code>system()</code></a> function allows us to get the output from some external script. For example, if we&rsquo;re running Vim inside the Bash shell, we could use the built-in bash function <code>$RANDOM</code> to fetch a random number:</p>
+<pre class="highlight plaintext">:put =system('echo $RANDOM')
+</pre>
 
-<p>The <a href="http://vimdoc.sourceforge.net/htmldoc/eval.html#system()"><code>system()</code></a> function allows us to get the output from some external script. For example, if we're running Vim inside the Bash shell, we could use the built-in bash function <code>$RANDOM</code> to fetch a random number:</p>
-
-<pre><code>:put =system('echo $RANDOM')
-</code></pre>
-
-<p>If we wanted some more complex behaviour, we could write a script using a language of our choice. For example, here's a tiny script written in Ruby, which uses the <a href="http://rubygems.org/gems/faker">faker library</a> to generate fake credentials:</p>
-
-<pre><code>require 'faker'
-name = [Faker::Name.first_name, Faker::Name.first_name].join(" ")
-print [name, Faker::Internet.email(name)].join(",")
-</code></pre>
+<p>If we wanted some more complex behaviour, we could write a script using a language of our choice. For example, here&rsquo;s a tiny script written in Ruby, which uses the <a href="http://rubygems.org/gems/faker">faker library</a> to generate fake credentials:</p>
+<pre class="highlight ruby"><span class="nb">require</span> <span class="s1">'faker'</span>
+<span class="nb">name</span> <span class="o">=</span> <span class="o">[</span><span class="no">Faker</span><span class="o">::</span><span class="no">Name</span><span class="p">.</span><span class="nf">first_name</span><span class="p">,</span> <span class="no">Faker</span><span class="o">::</span><span class="no">Name</span><span class="p">.</span><span class="nf">first_name</span><span class="o">]</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="s2">" "</span><span class="p">)</span>
+<span class="nb">print</span> <span class="o">[</span><span class="nb">name</span><span class="p">,</span> <span class="no">Faker</span><span class="o">::</span><span class="no">Internet</span><span class="p">.</span><span class="nf">email</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span><span class="o">]</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="s2">","</span><span class="p">)</span>
+</pre>
 
 <p>We could run this script at the Bash shell like this:</p>
-
-<pre><code>$ ruby fake-credentials.rb
+<pre class="highlight plaintext">$ ruby fake-credentials.rb
 Lottie Walton,lottie.walton@hartmannsipes.name
-</code></pre>
+</pre>
 
 <p>Inside of Vim, we could use the expression register to insert the results from this external script into the document:</p>
+<pre class="highlight plaintext">:put =system('ruby fake-credentials.rb')
+</pre>
 
-<pre><code>:put =system('ruby fake-credentials.rb')
-</code></pre>
+<h3>Ex commands</h3>
 
-<h3 id="ex-commands">Ex commands</h3>
-
-<p>We can invoke the expression register using the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:put"><code>:put</code></a> Ex command. For example, this command would insert a new line containing the text '9.0':</p>
-
-<pre><code>:put =sqrt(81)
-</code></pre>
+<p>We can invoke the expression register using the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:put"><code>:put</code></a> Ex command. For example, this command would insert a new line containing the text &lsquo;9.0&rsquo;:</p>
+<pre class="highlight plaintext">:put =sqrt(81)
+</pre>
 
 <p>When we invoke the expression register from Insert mode (via <code>&lt;C-r&gt;=</code>), the result is inserted at the current cursor location. Whereas the <code>:put</code> Ex command always inserts the result on a new line.</p>
 
 <p>We could use this same technique to insert fake credentials from our simple ruby script:</p>
+<pre class="highlight plaintext">:put =system('ruby fake-credentials.rb')
+</pre>
 
-<pre><code>:put =system('ruby fake-credentials.rb')
-</code></pre>
-
-<p>If you're only using the expression register to get output from an external script, then there's an even quicker way of doing it: using the <code>:read!</code> "read-bang" Ex command.</p>
-
-<pre><code>:read !ruby fake-credentials.rb
-</code></pre>
+<p>If you&rsquo;re only using the expression register to get output from an external script, then there&rsquo;s an even quicker way of doing it: using the <code>:read!</code> &ldquo;read-bang&rdquo; Ex command.</p>
+<pre class="highlight plaintext">:read !ruby fake-credentials.rb
+</pre>
 
 <p>This executes the specified command in the shell and outputs the results directly into the document below the cursor position.</p>
 
-<h3 id="further-reading">Further reading</h3>
+<h3>Further reading</h3>
 
 <ul>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-R"><code>:h i_ctrl-r</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote="><code>:h quote=</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/usr_41.html#function-list"><code>:h function-list</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/usr_41.html#float-functions"><code>:h float-functions</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/eval.html#system()"><code>:h system()</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/eval.html#sqrt()"><code>:h sqrt()</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:put"><code>:h :put</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#:r!"><code>:h :read!</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#@:"><code>:h @:</code></a></li>
-  <li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, Tip 16: Do back-of-the-envelope calculations in place</li>
-  <li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, Tip 35: Run Commands in the shell</li>
-  <li><a href="http://stackoverflow.com/a/12739441/128850">Native Vim Random Number script</a> on StackOverflow</li>
-  <li><a href="http://rubygems.org/gems/faker">faker</a> gem for generating fake user credentials</li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-R"><code>:h i_ctrl-r</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote="><code>:h quote=</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/usr_41.html#function-list"><code>:h function-list</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/usr_41.html#float-functions"><code>:h float-functions</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/eval.html#system()"><code>:h system()</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/eval.html#sqrt()"><code>:h sqrt()</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:put"><code>:h :put</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#:r!"><code>:h :read!</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#@:"><code>:h @:</code></a></li>
+<li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, Tip 16: Do back-of-the-envelope calculations in place</li>
+<li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, Tip 35: Run Commands in the shell</li>
+<li><a href="http://stackoverflow.com/a/12739441/128850">Native Vim Random Number script</a> on StackOverflow</li>
+<li><a href="http://rubygems.org/gems/faker">faker</a> gem for generating fake user credentials</li>
 </ul>
-
 
         </div>
         </dd>
@@ -357,25 +347,6 @@ Lottie Walton,lottie.walton@hartmannsipes.name
 
     
       <li>
-        <h4><a href="/blog/2013/11/getting-vim-with-clipboard-support/">Getting Vim with `+clipboard` support</a></h4>
-        <p>Many systems ship with a version of Vim that was compiled with the <code>-clipboard</code> feature disabled, which is a damned nuisance! Being able to <a href="http://vimcasts.org/e/58">access the system clipboard from Vim</a> is an essential feature. Let's look at a few ways of getting the <code>+clipboard</code> feature on OS X and Ubuntu.</p>
-
-
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/accessing-the-system-clipboard-from-vim/">Accessing the system clipboard from Vim</a></h4>
-        <p>In some environments, Vim lets us access the system clipboard using the quoteplus register, <code>"+</code>. When this feature is enabled, we can use it with the delete, yank and put operations in much the same way that we use Vim's other registers. Pasting from this register usually produces better results than using the system paste command in Insert mode.</p>
-
-
-      </li>
-    
-      <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
-      </li>
-    
-      <li>
         <h4><a href="/training">Vim Training</a></h4>
         <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
       </li>
@@ -388,8 +359,27 @@ Lottie Walton,lottie.walton@hartmannsipes.name
       </li>
     
       <li>
+        <h4><a href="/episodes/accessing-the-system-clipboard-from-vim/">Accessing the system clipboard from Vim</a></h4>
+        <p>In some environments, Vim lets us access the system clipboard using the quoteplus register, <code>&quot;+</code>. When this feature is enabled, we can use it with the delete, yank and put operations in much the same way that we use Vim&rsquo;s other registers. Pasting from this register usually produces better results than using the system paste command in Insert mode.</p>
+
+
+      </li>
+    
+      <li>
         <h4><a href="/publications">Publications</a></h4>
         <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/blog/2013/11/getting-vim-with-clipboard-support/">Getting Vim with `+clipboard` support</a></h4>
+        <p>Many systems ship with a version of Vim that was compiled with the <code>-clipboard</code> feature disabled, which is a damned nuisance! Being able to <a href="http://vimcasts.org/e/58">access the system clipboard from Vim</a> is an essential feature. Let&rsquo;s look at a few ways of getting the <code>+clipboard</code> feature on OS X and Ubuntu.</p>
+
+
       </li>
     
 

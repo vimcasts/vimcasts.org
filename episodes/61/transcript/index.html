@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -130,74 +131,67 @@
           </div>
         </div>
 
-        <h2 id="introduction">Introduction</h2>
+        <h2>Introduction</h2>
 
 <p>This text sample contains many mistakes:</p>
-
-<pre><code>iVm's repeta command si supre sueful!
-</code></pre>
+<pre class="highlight plaintext">iVm's repeta command si supre sueful!
+</pre>
 
 <p>We can correct each of these by pressing <code>xp</code>, to transpose two adjacent characters. As I perform the same two changes again and again, I find myself wishing that I could use the dot command, which repeats the last change:</p>
+<pre class="highlight plaintext">:help .
+</pre>
 
-<pre><code>:help .
-</code></pre>
-
-<p>In this context, we're performing two small operations on the document:</p>
-
-<pre><code>x - cuts the current character, saving it to the default register
+<p>In this context, we&rsquo;re performing two small operations on the document:</p>
+<pre class="highlight plaintext">x - cuts the current character, saving it to the default register
 p - puts the contents of the default register after the cursor position
-</code></pre>
+</pre>
 
 <p>The dot command repeats the last change, which is <code>p</code> in this case. It would be handy if we could change this behaviour so that Vim treated these two commands as one. The repeat.vim plugin by Tim Pope makes this possible.</p>
 
-<h2 id="mapping-1-cp-to-transpose-characters">Mapping #1: <code>cp</code> to transpose characters</h2>
+<h2>Mapping #1: <code>cp</code> to transpose characters</h2>
 
-<p>I'd like to be able to press <code>cp</code> to transpose two characters in a repeatable fashion. Let's start with something simple:</p>
+<p>I&rsquo;d like to be able to press <code>cp</code> to transpose two characters in a repeatable fashion. Let&rsquo;s start with something simple:</p>
+<pre class="highlight plaintext">nmap cp xp
+</pre>
 
-<pre><code>nmap cp xp
-</code></pre>
+<p>I&rsquo;ll save and source this file, and now pressing <code>cp</code> does exactly the same thing as pressing <code>xp</code>. Just as before, the dot command repeats the <code>p</code> command, not <code>xp</code>.</p>
 
-<p>I'll save and source this file, and now pressing <code>cp</code> does exactly the same thing as pressing <code>xp</code>. Just as before, the dot command repeats the <code>p</code> command, not <code>xp</code>.</p>
+<p>We&rsquo;ll iterate on this, working up to a mapping that uses functionality from repeat.vim to make it play nicely with the dot command.</p>
 
-<p>We'll iterate on this, working up to a mapping that uses functionality from repeat.vim to make it play nicely with the dot command.</p>
+<h2>Mapping #2: introduce a named mapping</h2>
 
-<h2 id="mapping-2-introduce-a-named-mapping">Mapping #2: introduce a named mapping</h2>
-
-<p>First up, we'll use the special <code>&lt;Plug&gt;</code> key to create a named mapping. A custom mapping usually instructs Vim to execute the keys on the RHS of the expression, whenever the user presses the keys on the LHS. Named mappings are different: they can't be executed directly by the user, but they can be referenced by other mappings.</p>
+<p>First up, we&rsquo;ll use the special <code>&lt;Plug&gt;</code> key to create a named mapping. A custom mapping usually instructs Vim to execute the keys on the RHS of the expression, whenever the user presses the keys on the LHS. Named mappings are different: they can&rsquo;t be executed directly by the user, but they can be referenced by other mappings.</p>
 
 <p>For example, now we could instruct Vim to execute our named mapping when the user presses <code>cp</code>.</p>
-
-<pre><code>nmap &lt;Plug&gt;TransposeCharacters xp
+<pre class="highlight plaintext">nmap &lt;Plug&gt;TransposeCharacters xp
 nmap cp &lt;Plug&gt;TransposeCharacters
-</code></pre>
+</pre>
 
 <p>This iteration of our custom mapping is twice as long as the previous one, and it behaves exactly the same way. But it lays the foundations to make our mapping repeatable.</p>
 
-<h2 id="mapping-3-set-up-dot-command-to-invoke-named-mapping">Mapping #3: set up dot command to invoke named mapping</h2>
+<h2>Mapping #3: set up dot command to invoke named mapping</h2>
 
-<p>The repeat.vim plugin allows us to tell Vim which mapping to execute when we use the dot command. Let's modify our named mapping so that after running the Normal mode <code>x</code> and <code>p</code> commands, it calls the <code>repeat#set()</code> function, setting up the dot command to repeat this named function. That doesn't fit onto a single line, so let's break it in two:</p>
-
-<pre><code>#3
+<p>The repeat.vim plugin allows us to tell Vim which mapping to execute when we use the dot command. Let&rsquo;s modify our named mapping so that after running the Normal mode <code>x</code> and <code>p</code> commands, it calls the <code>repeat#set()</code> function, setting up the dot command to repeat this named function. That doesn&rsquo;t fit onto a single line, so let&rsquo;s break it in two:</p>
+<pre class="highlight plaintext">#3
 nnoremap &lt;Plug&gt;TransposeCharacters xp
 \:call repeat#set("\&lt;Plug&gt;TransposeCharacters")&lt;CR&gt;
 nmap cp &lt;Plug&gt;TransposeCharacters
-</code></pre>
+</pre>
 
-<p>I'll save and source this file… Now when I use the <code>cp</code> command, not only does it transpose two characters, but it calls the <code>repeat#set()</code> command. And now the dot command transposes two characters. Bingo!</p>
+<p>I&rsquo;ll save and source this file&hellip; Now when I use the <code>cp</code> command, not only does it transpose two characters, but it calls the <code>repeat#set()</code> command. And now the dot command transposes two characters. Bingo!</p>
 
-<h2 id="mapping-4-silence-the-cmdline-output">Mapping #4: silence the cmdline output</h2>
+<h2>Mapping #4: silence the cmdline output</h2>
 
-<p>There's one final improvement that I'd like to make though: let's mute this output at the command line. We can do this by adding the <code>&lt;silent&gt;</code> argument to our named mapping:</p>
-
-<pre><code>#4
+<p>There&rsquo;s one final improvement that I&rsquo;d like to make though: let&rsquo;s mute this output at the command line. We can do this by adding the <code>&lt;silent&gt;</code> argument to our named mapping:</p>
+<pre class="highlight plaintext">#4
 nnoremap &lt;silent&gt; &lt;Plug&gt;TransposeCharacters xp
 \:call repeat#set("\&lt;Plug&gt;TransposeCharacters")&lt;CR&gt;
 nmap cp &lt;Plug&gt;TransposeCharacters
-</code></pre>
+</pre>
 
-<p>I'll save and source this file… Now our custom <code>cp</code> command silently sets itself up to be invoked by the dot command. Nice!</p>
+<p>I&rsquo;ll save and source this file&hellip; Now our custom <code>cp</code> command silently sets itself up to be invoked by the dot command. Nice!</p>
 
-<h2 id="outro">Outro</h2>
+<h2>Outro</h2>
 
 <p>If you find yourself frequently using the same two commands in succession, consider using this technique to create a repeatable composite. The dot command can be a real time-saver!</p>
 

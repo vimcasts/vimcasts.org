@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -137,145 +138,127 @@
         <h1><a href="/episodes/using-argdo-to-change-multiple-files/">Using :argdo to change multiple files</a></h1>
         <h2>Transcript for episode #43</h2>
 
-        <p>The <code>:argdo</code> command allows us to execute an Ex command across all buffers in the arglist.  To demonstrate, we'll use the example of running the <code>:substitute</code> command across multiple files, then we'll see how to revert or save the changes.  We'll also compare the <code>:argdo</code> and <code>:bufdo</code> commands, and consider when it's appropriate to use each one.</p>
+        <p>The <code>:argdo</code> command allows us to execute an Ex command across all buffers in the arglist.  To demonstrate, we&rsquo;ll use the example of running the <code>:substitute</code> command across multiple files, then we&rsquo;ll see how to revert or save the changes.  We&rsquo;ll also compare the <code>:argdo</code> and <code>:bufdo</code> commands, and consider when it&rsquo;s appropriate to use each one.</p>
 
 
       
 
-      <h1 id="executing-commands-on-the-arguments-list">Executing commands on the arguments list</h1>
+      <h1>Executing commands on the arguments list</h1>
 
 <p>The arglist really shines when you want to perform the same commands across a set of files, thanks to the <code>:argdo</code> command:</p>
+<pre class="highlight plaintext">:help :argdo
+</pre>
 
-<pre><code>:help :argdo
-</code></pre>
+<p>Vim&rsquo;s documentation has a nice illustration of how this works. Whatever command we specify with the <code>:argdo</code> command will be executed in each of the buffers in the arglist. By the way, the <code>:rewind</code> command does the same thing as <code>:first</code>.</p>
 
-<p>Vim's documentation has a nice illustration of how this works. Whatever command we specify with the <code>:argdo</code> command will be executed in each of the buffers in the arglist. By the way, the <code>:rewind</code> command does the same thing as <code>:first</code>.</p>
+<p>Suppose, for example, that we want to run a substitute command across each of the buffers in the arglist. We&rsquo;ll start off by running the substitute command on the current file, just to check that it works as expected:</p>
+<pre class="highlight plaintext">:%s/\a/*/g
+</pre>
 
-<p>Suppose, for example, that we want to run a substitute command across each of the buffers in the arglist. We'll start off by running the substitute command on the current file, just to check that it works as expected:</p>
-
-<pre><code>:%s/\a/*/g
-</code></pre>
-
-<p>Here, we're matching every letter character and replacing it with a star. </p>
+<p>Here, we&rsquo;re matching every letter character and replacing it with a star. </p>
 
 <p>[run the command]</p>
 
-<p>That has the effect I was looking for, so let's run the same command, but prefix it with <code>:argdo</code>.</p>
+<p>That has the effect I was looking for, so let&rsquo;s run the same command, but prefix it with <code>:argdo</code>.</p>
 
-<p>By the way, after typing <code>:argdo</code>, we can paste the last Ex command in place by pressing 'control-r followed by colon'.</p>
-
-<pre><code>:argdo %s/\a/*/g
+<p>By the way, after typing <code>:argdo</code>, we can paste the last Ex command in place by pressing &lsquo;control-r followed by colon&rsquo;.</p>
+<pre class="highlight plaintext">:argdo %s/\a/*/g
 E37: No write since last change (add ! to override)
-</code></pre>
+</pre>
 
-<p>That command raises an error: by default, Vim won't navigate away from a buffer with unsaved changes. The easiest way to suppress this behavior is to enable the <code>'hidden'</code> setting:</p>
-
-<pre><code>:set hidden
-</code></pre>
+<p>That command raises an error: by default, Vim won&rsquo;t navigate away from a buffer with unsaved changes. The easiest way to suppress this behavior is to enable the <code>&#39;hidden&#39;</code> setting:</p>
+<pre class="highlight plaintext">:set hidden
+</pre>
 
 <p>Refer back to Vimcast episode 6 for more details about this option.</p>
 
-<p>Having enabled the hidden setting, let's have another go at running that substitute command across the files in the arglist:</p>
+<p>Having enabled the hidden setting, let&rsquo;s have another go at running that substitute command across the files in the arglist:</p>
+<pre class="highlight plaintext">:argdo %s/\a/*/g
+</pre>
 
-<pre><code>:argdo %s/\a/*/g
-</code></pre>
-
-<p>Note that Vim shows a bit of information about the effect that the command had on each buffer. Also, note that an error message was raised in the first buffer. The substitute command found no matches for the specified pattern, and that's because we had already ran the substitute command in the first buffer.</p>
+<p>Note that Vim shows a bit of information about the effect that the command had on each buffer. Also, note that an error message was raised in the first buffer. The substitute command found no matches for the specified pattern, and that&rsquo;s because we had already ran the substitute command in the first buffer.</p>
 
 <p>If we were to run the exact same command again, every buffer would produce the same error message:</p>
-
-<pre><code>:argdo %s/\a/*/g
+<pre class="highlight plaintext">:argdo %s/\a/*/g
 E486: Pattern not found \a
 E486: Pattern not found \a
 E486: Pattern not found \a
 E486: Pattern not found \a
 E486: Pattern not found \a
-</code></pre>
+</pre>
 
 <p>We can suppress this error message by using the substitute command with the <code>e</code> flag. </p>
+<pre class="highlight plaintext">:help :s_flags
+</pre>
 
-<pre><code>:help :s_flags
-</code></pre>
+<p>It&rsquo;s generally a good idea to include the <code>e</code> flag when running the substitute command across multiple files.</p>
+<pre class="highlight plaintext">:argdo %s/\a/*/ge
+</pre>
 
-<p>It's generally a good idea to include the <code>e</code> flag when running the substitute command across multiple files.</p>
+<p>Note that Vim still prints a short info message for each buffer in which the command runs. It doesn&rsquo;t really say anything useful, so we could suppress it by prefixing <code>argdo</code> command with <code>:silent</code>:</p>
+<pre class="highlight plaintext">:silent argdo %s/\a/*/ge
+</pre>
 
-<pre><code>:argdo %s/\a/*/ge
-</code></pre>
+<h2>Discarding changes or saving them</h2>
 
-<p>Note that Vim still prints a short info message for each buffer in which the command runs. It doesn't really say anything useful, so we could suppress it by prefixing <code>argdo</code> command with <code>:silent</code>:</p>
-
-<pre><code>:silent argdo %s/\a/*/ge
-</code></pre>
-
-<h2 id="discarding-changes-or-saving-them">Discarding changes or saving them</h2>
-
-<p>Suppose that we realize we've made some mistake after running a command across all the buffers in the arglist, and we'd like to revert the changes. We could visit each file in turn and use the undo command, but that could take ages. Here's a quicker way:</p>
-
-<pre><code>:silent argdo edit!
-</code></pre>
+<p>Suppose that we realize we&rsquo;ve made some mistake after running a command across all the buffers in the arglist, and we&rsquo;d like to revert the changes. We could visit each file in turn and use the undo command, but that could take ages. Here&rsquo;s a quicker way:</p>
+<pre class="highlight plaintext">:silent argdo edit!
+</pre>
 
 <p>The <code>:edit!</code> command reverts the buffer to the last saved version.</p>
 
-<p>Now let's run the substitute command again across all of the files in the arglist, changing it this time to replace letters with a dollar sign.</p>
+<p>Now let&rsquo;s run the substitute command again across all of the files in the arglist, changing it this time to replace letters with a dollar sign.</p>
+<pre class="highlight plaintext">:silent argdo %s/\a/$/ge
+</pre>
 
-<pre><code>:silent argdo %s/\a/$/ge
-</code></pre>
-
-<p>Let's say we're happy with those changes, and we want to keep them. We can use <code>argdo</code> again to quickly write each of the files with the <code>update</code> command:</p>
-
-<pre><code>:argdo update
-</code></pre>
+<p>Let&rsquo;s say we&rsquo;re happy with those changes, and we want to keep them. We can use <code>argdo</code> again to quickly write each of the files with the <code>update</code> command:</p>
+<pre class="highlight plaintext">:argdo update
+</pre>
 
 <p>This only writes a buffer to disk if it has been changed.</p>
 
-<h2 id="bufdo-versus-argdo">:bufdo versus :argdo</h2>
+<h2>:bufdo versus :argdo</h2>
 
 <p>Just as we can use <code>:argdo</code> to run a command across the set of files in the arglist, we could use the <code>:bufdo</code> command to run a command across the set of files in the buffer list.</p>
+<pre class="highlight plaintext">:help bufdo
+</pre>
 
-<pre><code>:help bufdo
-</code></pre>
-
-<p>So you might be wondering why we're using <code>argdo</code> here instead of <code>bufdo</code>?  At the moment, the arglist and buffer list reference the same 5 buffers:</p>
-
-<pre><code>:args
+<p>So you might be wondering why we&rsquo;re using <code>argdo</code> here instead of <code>bufdo</code>?  At the moment, the arglist and buffer list reference the same 5 buffers:</p>
+<pre class="highlight plaintext">:args
 :ls
 1 %a   "a.txt"                        line 16
 2      "b.txt"                        line 0
 3      "c.txt"                        line 0
 4      "d.txt"                        line 0
 5      "e.txt"                        line 0
-</code></pre>
+</pre>
 
 <p>So it would make no difference whether we used the <code>:argdo</code> or <code>:bufdo</code> command.  But suppose that we were to open another buffer, the README file:</p>
-
-<pre><code>:e README
-</code></pre>
+<pre class="highlight plaintext">:e README
+</pre>
 
 <p>That file now appears in the buffer list:</p>
-
-<pre><code>:ls
+<pre class="highlight plaintext">:ls
 1 %a   "a.txt"                        line 16
 2      "b.txt"                        line 0
 3      "c.txt"                        line 0
 4      "d.txt"                        line 0
 5      "e.txt"                        line 0
 6 %a   "README"                       line 1
-</code></pre>
+</pre>
 
 <p>but it does not appear in the arglist:</p>
-
-<pre><code>:args
+<pre class="highlight plaintext">:args
 [a.txt] b.txt c.txt d.txt e.txt
-</code></pre>
+</pre>
 
 <p>If we were to run a substitute command with <code>bufdo</code>, then it would modify the README file.</p>
+<pre class="highlight plaintext">:bufdo %s/\a/*/ge
+</pre>
 
-<pre><code>:bufdo %s/\a/*/ge
-</code></pre>
+<p>That&rsquo;s not what we want, so in this case we&rsquo;d be better off using the <code>argdo</code> command.</p>
 
-<p>That's not what we want, so in this case we'd be better off using the <code>argdo</code> command.</p>
-
-<p>It's easy to add files to the buffer list (perhaps unintentionally), so if you use <code>:bufdo</code> there's always a risk that it might end up touching a file that you didn't mean to change. Whereas the arglist only changes when you tell it to. For that reason, I prefer to use <code>:argdo</code> instead of <code>:bufdo</code>.</p>
+<p>It&rsquo;s easy to add files to the buffer list (perhaps unintentionally), so if you use <code>:bufdo</code> there&rsquo;s always a risk that it might end up touching a file that you didn&rsquo;t mean to change. Whereas the arglist only changes when you tell it to. For that reason, I prefer to use <code>:argdo</code> instead of <code>:bufdo</code>.</p>
 
     </div>
   </div>

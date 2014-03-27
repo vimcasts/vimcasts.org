@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -187,7 +188,7 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>Vim's diff mode allows us to easily compare the contents of two (or more) buffers. We can start Vim in diff mode using the <code>vimdiff</code> command, or if Vim is already running we can switch to diff mode using the <code>:diffthis</code> command. The beauty of the <code>:diffthis</code> command is that it works with unnamed buffers, whereas <code>vimdiff</code> can only work with files.</p>
+        <p>Vim&rsquo;s diff mode allows us to easily compare the contents of two (or more) buffers. We can start Vim in diff mode using the <code>vimdiff</code> command, or if Vim is already running we can switch to diff mode using the <code>:diffthis</code> command. The beauty of the <code>:diffthis</code> command is that it works with unnamed buffers, whereas <code>vimdiff</code> can only work with files.</p>
 
 
       </div>
@@ -226,62 +227,57 @@
         <div id="shownotes" class="content" data-swiftype-index="true">
           
 
-<h3 id="using-vimdiff-to-compare-two-files">Using vimdiff to compare two files</h3>
+<h3>Using vimdiff to compare two files</h3>
 
 <p>We can call <code>vimdiff</code> from the command line giving it two or more filenames. vimdiff launches Vim, creates a window for each specified file, and highlights the differences between them.</p>
 
 <p>In the video demonstration, one of the files that I wanted to compare was on my local filesystem, while the other file was in a textarea on a webpage. Before I could use <code>vimdiff</code>, I had to copy the text from that textarea into a local file. I did so using my system clipboard, then running the command:</p>
-
-<pre><code>pbpaste &gt; 45-shownotes-latest.md
-</code></pre>
+<pre class="highlight plaintext">pbpaste &gt; 45-shownotes-latest.md
+</pre>
 
 <p>The <a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/Manpages/man1/pbpaste.1.html"><code>pbpaste</code></a> command is specific to os x, but similar commands are available on other systems.</p>
 
 <p>We can now compare the two drafts by running:</p>
+<pre class="highlight plaintext">vimdiff 45-shownotes-draft.md 45-shownotes-latest.md
+</pre>
 
-<pre><code>vimdiff 45-shownotes-draft.md 45-shownotes-latest.md
-</code></pre>
+<p>I&rsquo;m not keen on this workflow for a couple of reasons. I have no further use for the temporary file, so I&rsquo;d have to clean up afterwards by removing it. Also, I usually have an instance of Vim open already, and I&rsquo;d prefer a workflow that didn&rsquo;t require me to open a fresh instance of Vim.</p>
 
-<p>I'm not keen on this workflow for a couple of reasons. I have no further use for the temporary file, so I'd have to clean up afterwards by removing it. Also, I usually have an instance of Vim open already, and I'd prefer a workflow that didn't require me to open a fresh instance of Vim.</p>
-
-<h3 id="using-diffthis-to-compare-two-buffers">Using <code>:diffthis</code> to compare two buffers</h3>
+<h3>Using <code>:diffthis</code> to compare two buffers</h3>
 
 <p>The <a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#:diffthis"><code>:diffthis</code></a> command allows us to compare two (or more) buffers that are open in an existing Vim session. If we have two split windows containing buffers that we want to compare, then we can diff them by running:</p>
-
-<pre><code>:windo diffthis
-</code></pre>
+<pre class="highlight plaintext">:windo diffthis
+</pre>
 
 <p>We can turn diff mode off just as easily, by running:</p>
+<pre class="highlight plaintext">:windo diffoff
+</pre>
 
-<pre><code>:windo diffoff
-</code></pre>
+<p>The nice thing about this technique is that we can use an unnamed buffer. There&rsquo;s no need to write the text to a temporary file. In the video demonstration, the buffer on the left corresponds to a file on my local filesystem, while the buffer on the right has no associated file. This technique would work just as well if neither buffer had been saved to disk, which makes it pretty flexible.</p>
 
-<p>The nice thing about this technique is that we can use an unnamed buffer. There's no need to write the text to a temporary file. In the video demonstration, the buffer on the left corresponds to a file on my local filesystem, while the buffer on the right has no associated file. This technique would work just as well if neither buffer had been saved to disk, which makes it pretty flexible.</p>
-
-<h3 id="getting-around-in-diff-mode">Getting around in diff mode</h3>
+<h3>Getting around in diff mode</h3>
 
 <p>In diff mode, Vim provides two handy motions for getting around: <code>[c</code> and <code>]c</code> jump back and forward between changes. If you want to resolve the differences between files, you can do so using the <code>:diffget</code> and <code>:diffput</code> commands. Check out episodes <a href="/e/32">32</a> and <a href="/e/33">33</a> for a detailed demonstration of how to use these commands.</p>
 
-<h3 id="further-reading">Further reading</h3>
+<h3>Further reading</h3>
 
 <ul>
-  <li><a href="http://linux.die.net/man/1/vimdiff"><code>man vimdiff</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#vimdiff"><code>:h vimdiff</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#:diffthis"><code>:h :diffthis</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#:diffoff"><code>:h :diffoff</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/windows.html#:windo"><code>:h :windo</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/windows.html#:vnew"><code>:h :vnew</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/usr_08.html#08.7"><code>:help 08.7</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:put"><code>:h :put</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/gui_x11.html#quoteplus"><code>:h quoteplus</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/windows.html#CTRL-W_S"><code>:h ctrl-w_s</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/windows.html#CTRL-W_v"><code>:h ctrl-w_v</code></a></li>
-  <li><a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/Manpages/man1/pbpaste.1.html">pbpaste</a></li>
-  <li><a href="http://usevim.com/2012/03/21/git-and-vimdiff/">Git and vimdiff</a></li>
-  <li>Episode 32 - <a href="/e/32">Fugitive.vim - working with the git index</a></li>
-  <li>Episode 33 - <a href="/e/33">Fugitive.vim - resolving merge conflicts with vimdiff</a></li>
+<li><a href="http://linux.die.net/man/1/vimdiff"><code>man vimdiff</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#vimdiff"><code>:h vimdiff</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#:diffthis"><code>:h :diffthis</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#:diffoff"><code>:h :diffoff</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/windows.html#:windo"><code>:h :windo</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/windows.html#:vnew"><code>:h :vnew</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/usr_08.html#08.7"><code>:help 08.7</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:put"><code>:h :put</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/gui_x11.html#quoteplus"><code>:h quoteplus</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/windows.html#CTRL-W_S"><code>:h ctrl-w_s</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/windows.html#CTRL-W_v"><code>:h ctrl-w_v</code></a></li>
+<li><a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/Manpages/man1/pbpaste.1.html">pbpaste</a></li>
+<li><a href="http://usevim.com/2012/03/21/git-and-vimdiff/">Git and vimdiff</a></li>
+<li>Episode 32 - <a href="/e/32">Fugitive.vim - working with the git index</a></li>
+<li>Episode 33 - <a href="/e/33">Fugitive.vim - resolving merge conflicts with vimdiff</a></li>
 </ul>
-
 
         </div>
         </dd>
@@ -327,16 +323,28 @@
     
       <li>
         <h4><a href="/episodes/fugitive-vim-working-with-the-git-index/">Fugitive.vim - working with the git index</a></h4>
-        <p>The fugitive plugin provides an interactive status window, where you can easily stage and review your changes for the next commit. The <code>:Gdiff</code> command visualizes the changes made to a file, by comparing the working copy with the index. In this episode, we'll learn how to stage hunks of changes to the index without using the <code>git add --patch</code> command.</p>
+        <p>The fugitive plugin provides an interactive status window, where you can easily stage and review your changes for the next commit. The <code>:Gdiff</code> command visualizes the changes made to a file, by comparing the working copy with the index. In this episode, we&rsquo;ll learn how to stage hunks of changes to the index without using the <code>git add --patch</code> command.</p>
 
-<p><em>This is the second of a five part series on fugitive.vim. In the next episode, we'll learn how to resolve a git merge conflict by performing a 3-way vimdiff.</em></p>
+<p><em>This is the second of a five part series on fugitive.vim. In the next episode, we&rsquo;ll learn how to resolve a git merge conflict by performing a 3-way vimdiff.</em></p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/blog/2014/02/vimcasts-redesign-a-work-in-progress/">Vimcasts redesign: a work in progress</a></h4>
+        <p>In the not-too-distant future, you can expect to see a revised design for Vimcasts.org. The most significant enhancements will be the addition of tags, site search, and a responsive design for smaller screens. Hannah Adcock, from <a href="http://contentedstrategy.com">contentedstrategy.com</a>, has been helping me out by analysing user feedback, as well as data from Google Analytics.</p>
 
 
       </li>
     
       <li>
         <h4><a href="/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/">Fugitive.vim - resolving merge conflicts with vimdiff</a></h4>
-        <p>When git branches are merged, there is always the chance of a conflict arising if a file was modified in both the target and merge branches. You can resolve merge conflicts using a combination of fugitive's <code>:Gdiff</code> command, and Vim's built in <code>diffget</code> and <code>diffput</code>. In this episode, we'll find out how.</p>
+        <p>When git branches are merged, there is always the chance of a conflict arising if a file was modified in both the target and merge branches. You can resolve merge conflicts using a combination of fugitive&rsquo;s <code>:Gdiff</code> command, and Vim&rsquo;s built in <code>diffget</code> and <code>diffput</code>. In this episode, we&rsquo;ll find out how.</p>
 
 <p><em>This is the third in a five part series on fugitive.vim.</em></p>
 
@@ -351,18 +359,6 @@
       <li>
         <h4><a href="/categories">Find by category</a></h4>
         <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/blog/2014/02/vimcasts-redesign-a-work-in-progress/">Vimcasts redesign: a work in progress</a></h4>
-        <p>In the not-too-distant future, you can expect to see a revised design for Vimcasts.org. The most significant enhancements will be the addition of tags, site search, and a responsive design for smaller screens. Hannah Adcock, from <a href="http://contentedstrategy.com">contentedstrategy.com</a>, has been helping me out by analysing user feedback, as well as data from Google Analytics.</p>
-
-
-      </li>
-    
-      <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
       </li>
     
 

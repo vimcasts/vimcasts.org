@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -230,45 +231,41 @@
 
 <p>If you want to practise these commands for yourself, you can <a href="http://vimcasts.org/episodes/creating-the-vimcasts-logo-as-ascii-art/vimcasts.txt">download the file</a> that I used to create this episode.</p>
 
-<h3 id="convert-leading-spaces-to-underscores">Convert leading spaces to underscores</h3>
+<h3>Convert leading spaces to underscores</h3>
 
-<p>The command used to convert leading spaces to underscores was: <code>vwr_</code>. This was then recorded as a macro in register 'a' as follows:</p>
-
-<pre><code>qavwr_jq
-</code></pre>
+<p>The command used to convert leading spaces to underscores was: <code>vwr_</code>. This was then recorded as a macro in register &lsquo;a&rsquo; as follows:</p>
+<pre class="highlight plaintext">qavwr_jq
+</pre>
 
 <p>This can then be replayed once with <code>@a</code>, or multiple times by prepending a count, e.g. <code>8@a</code>.</p>
 
-<h3 id="copy-and-paste-with-visual-block-mode">Copy and paste with visual block mode</h3>
+<h3>Copy and paste with visual block mode</h3>
 
-<p>Visual block mode is activated with <code>ctrl-v</code>. Using <code>j</code> to select the entire block, you can then 'yank' it with <code>y</code>, then paste with <code>p</code>. You can repeat the paste operation as many times as you like with the <code>.</code> (dot) command, and if you go too far, you can pull it back with the <code>u</code> (undo) command.</p>
+<p>Visual block mode is activated with <code>ctrl-v</code>. Using <code>j</code> to select the entire block, you can then &lsquo;yank&rsquo; it with <code>y</code>, then paste with <code>p</code>. You can repeat the paste operation as many times as you like with the <code>.</code> (dot) command, and if you go too far, you can pull it back with the <code>u</code> (undo) command.</p>
 
-<h3 id="duplicating-lines">Duplicating lines</h3>
+<h3>Duplicating lines</h3>
 
 <p>Sometimes the quickest way to create a new line of content is to copy a neighbouring line  using it as a starting point. You can quickly duplicate a line in Vim by issuing the command <code>Yp</code>. This places the cursor on the line below where you started. If you want to put the new line above where the cursor started, you could instead use <code>YP</code>.</p>
 
-<h3 id="search-and-replace-within-a-visual-selection">Search and replace within a visual selection</h3>
+<h3>Search and replace within a visual selection</h3>
 
-<p>Vim lets you define a visual selection, then perform search and replace only on the selected range of lines. It's tempting to think that in visual block mode, a substitution command such as this:</p>
-
-<pre><code>:s/_/ /g
-</code></pre>
+<p>Vim lets you define a visual selection, then perform search and replace only on the selected range of lines. It&rsquo;s tempting to think that in visual block mode, a substitution command such as this:</p>
+<pre class="highlight plaintext">:s/_/ /g
+</pre>
 
 <p>would operate only on the selected block. But Vim considers the range to include entire lines, so the search and replace operation is not limited to the visual block.</p>
 
 <p>The trick here is to modify the search pattern with the flag <code>\%V</code>. This tells Vim to match only within the visual selection. Running this substitution has the desired effect:</p>
+<pre class="highlight plaintext">:s/\%V_/ /g
+</pre>
 
-<pre><code>:s/\%V_/ /g
-</code></pre>
-
-<h3 id="further-reading">further reading</h3>
+<h3>further reading</h3>
 
 <ul>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\%V"><code>:help \%V</code></a></li>
-  <li><a href="http://patorjk.com/software/taag/">ASCII art generator</a></li>
-  <li><a href="http://vimcasts.org/episodes/creating-the-vimcasts-logo-as-ascii-art/vimcasts.txt">Vimcasts.org logo in ASCII format</a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/%V"><code>:help \%V</code></a></li>
+<li><a href="http://patorjk.com/software/taag/">ASCII art generator</a></li>
+<li><a href="http://vimcasts.org/episodes/creating-the-vimcasts-logo-as-ascii-art/vimcasts.txt">Vimcasts.org logo in ASCII format</a></li>
 </ul>
-
 
         </div>
         </dd>
@@ -313,15 +310,17 @@
 
     
       <li>
-        <h4><a href="/episodes/vimgolf-prime-numbers/">VimGolf - Prime Numbers</a></h4>
-        <p>For the VimGolf challenge <a href="http://vimgolf.com/challenges/4d1c27940e3d7832db000010">"List the first 100 prime numbers"</a>, there's a solution that uses a regular expression to detect prime numbers. At 43 keystokes, it's not the winning solution, but I think it's the most interesting one. It uses a few clever Vim tricks, including macros, control-a to increment, the very magic pattern switch, and the <code>:global</code> command. There's a lot to learn from those 43 keystrokes, so let's study it!</p>
+        <h4><a href="/episodes/converting-markdown-to-structured-html-with-a-macro/">Converting markdown to structured HTML with a macro</a></h4>
+        <p>Recording your keystrokes as a macro can be a great timesaver, but you have to be careful that you use commands in such a way that they can be reused. In this episode, I construct a fairly complex macro to build a structural HTML document from markdown.</p>
 
 
       </li>
     
       <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+        <h4><a href="/episodes/converting-haml-to-erb-with-vim-macros/">Converting HAML to ERB with Vim macros</a></h4>
+        <p>HAML and ERB are two commonly used ruby templating languages. You may have a strong preference for one or the other, but it&rsquo;s not always up to you which one you use. I was recently asked to convert several HAML files to ERB format. In this episode, I will demonstrate a couple of Vim macros that helped make short work of the task. </p>
+
+
       </li>
     
       <li>
@@ -330,8 +329,13 @@
       </li>
     
       <li>
-        <h4><a href="/episodes/converting-markdown-to-structured-html-with-a-macro/">Converting markdown to structured HTML with a macro</a></h4>
-        <p>Recording your keystrokes as a macro can be a great timesaver, but you have to be careful that you use commands in such a way that they can be reused. In this episode, I construct a fairly complex macro to build a structural HTML document from markdown.</p>
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/vimgolf-prime-numbers/">VimGolf - Prime Numbers</a></h4>
+        <p>For the VimGolf challenge <a href="http://vimgolf.com/challenges/4d1c27940e3d7832db000010">&ldquo;List the first 100 prime numbers&rdquo;</a>, there&rsquo;s a solution that uses a regular expression to detect prime numbers. At 43 keystokes, it&rsquo;s not the winning solution, but I think it&rsquo;s the most interesting one. It uses a few clever Vim tricks, including macros, control-a to increment, the very magic pattern switch, and the <code>:global</code> command. There&rsquo;s a lot to learn from those 43 keystrokes, so let&rsquo;s study it!</p>
 
 
       </li>
@@ -339,13 +343,6 @@
       <li>
         <h4><a href="/categories">Find by category</a></h4>
         <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/converting-haml-to-erb-with-vim-macros/">Converting HAML to ERB with Vim macros</a></h4>
-        <p>HAML and ERB are two commonly used ruby templating languages. You may have a strong preference for one or the other, but it's not always up to you which one you use. I was recently asked to convert several HAML files to ERB format. In this episode, I will demonstrate a couple of Vim macros that helped make short work of the task. </p>
-
-
       </li>
     
 

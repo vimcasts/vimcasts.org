@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -130,12 +131,12 @@
           </div>
         </div>
 
-        <h1 id="show-invisibles">Show invisibles</h1>
+        <h1>Show invisibles </h1>
 
-<p>TextMate has an option to 'Show invisibles', which lets you see tab
+<p>TextMate has an option to &lsquo;Show invisibles&rsquo;, which lets you see tab
 and end-of-line characters. When this is enabled, tab characters
-appear as a small triangle (▸), and end of lines appear as a 'not
-sign' (¬). This is helpful for distinguishing between tabs and spaces,
+appear as a small triangle (▸), and end of lines appear as a &lsquo;not
+sign&rsquo; (¬). This is helpful for distinguishing between tabs and spaces,
 and for revealing trailing spaces at the end of a line.</p>
 
 <p>In Vim, we can display invisible characters by enabling <code>:set list</code>.
@@ -144,15 +145,14 @@ can toggle between showing and hiding them by running <code>:set list!</code>. I
 you want to be able to do this quickly, you might like to map the
 toggling command to something more convenient. Try putting the
 following in your .vimrc:</p>
-
-<pre><code>nmap &lt;leader&gt;l :set list!&lt;CR&gt;
-</code></pre>
+<pre class="highlight plaintext">nmap &lt;leader&gt;l :set list!&lt;CR&gt;
+</pre>
 
 <p>Now you can toggle between showing and hiding invisible characters
 with <code>\l</code> (backslash-L). [Note that if you have set your mapleader to
 a value other than backslash, you will have to use that instead].</p>
 
-<h2 id="customize-symbols">Customize symbols</h2>
+<h2>Customize symbols </h2>
 
 <p>By default, the tab character is represented literally as <code>^I</code>, and
 end-of-lines are represented by a dollar sign. </p>
@@ -160,52 +160,47 @@ end-of-lines are represented by a dollar sign. </p>
 <p>We can customise the symbols used to represent invisible characters by
 changing the <code>listchars</code> setting. If you want to use the same symbols
 as TextMate does, put the following into your .vimrc:</p>
-
-<pre><code>set listchars=tab:▸\ ,eol:¬
-</code></pre>
+<pre class="highlight plaintext">set listchars=tab:▸\ ,eol:¬
+</pre>
 
 <p>If you like, you can customise other invisible characters besides tabs
 and end-of-lines. For more information, get help on listchars:</p>
+<pre class="highlight plaintext">:help listchars
+</pre>
 
-<pre><code>:help listchars
-</code></pre>
-
-<h2 id="colortheme-symbols">Colortheme symbols</h2>
+<h2>Colortheme symbols</h2>
 
 <p>Depending on the colorscheme you are using, you may want to change the
 colors of tab and end-of-lines symbols. I prefer to make them close in
 color to the background, so that they are only just visible, and not
-too distracting. The syntax keyword for an end-of-line is "NonText",
-and for tab characters it is "SpecialKey". I have added these lines to
+too distracting. The syntax keyword for an end-of-line is &ldquo;NonText&rdquo;,
+and for tab characters it is &ldquo;SpecialKey&rdquo;. I have added these lines to
 my prefered colorscheme file:</p>
-
-<pre><code>"Invisible character colors 
+<pre class="highlight plaintext">"Invisible character colors 
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
-</code></pre>
+</pre>
 
-<h2 id="aside-on-inserting-literal-characters">Aside on inserting literal characters</h2>
+<h2>Aside on inserting literal characters</h2>
 
-<p>You shouldn't have any problems if you copy and paste the <code>listchars</code>
+<p>You shouldn&rsquo;t have any problems if you copy and paste the <code>listchars</code>
 setting from the shownotes into your .vimrc file. But just in case, 
 here is a method for inserting any Unicode character directly in Vim.</p>
 
 <p>In insert mode, press ctrl-V, then type u followed by the numeric 
 code for the symbol you want to insert. e.g.:</p>
-
-<pre><code>ctrl-v u00ac inserts '¬' (the not sign)
+<pre class="highlight plaintext">ctrl-v u00ac inserts '¬' (the not sign)
 ctrl-v u25b8 inserts '▸' (the triangle symbol)
-</code></pre>
+</pre>
 
 <p>You can also insert a tab character in insert mode by typing:</p>
-
-<pre><code>ctrl-v ctrl-i
-</code></pre>
+<pre class="highlight plaintext">ctrl-v ctrl-i
+</pre>
 
 <p>As you can see, the default <code>^I</code> symbol that Vim uses to represent a
 tab character is the same as the literal key sequence that we can use
-to insert this character. So if you've ever wondered why <code>:set list</code> 
-showed tab characters by default as 'ctrl-I', now you know: that's how
+to insert this character. So if you&rsquo;ve ever wondered why <code>:set list</code> 
+showed tab characters by default as &lsquo;ctrl-I&rsquo;, now you know: that&rsquo;s how
 Vim represents tab characters internally. </p>
 
 

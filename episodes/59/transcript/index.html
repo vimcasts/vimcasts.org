@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -130,59 +131,54 @@
           </div>
         </div>
 
-        <p>In the previous episode, we saw how to use the quoteplus register to paste text from the system clipboard. Unfortunately, we can't always expect the clipboard feature to be supported. In particular, if we're running an instance of Vim on a remote machine, there's no simple way of accessing the clipboard from our local workstation.</p>
+        <p>In the previous episode, we saw how to use the quoteplus register to paste text from the system clipboard. Unfortunately, we can&rsquo;t always expect the clipboard feature to be supported. In particular, if we&rsquo;re running an instance of Vim on a remote machine, there&rsquo;s no simple way of accessing the clipboard from our local workstation.</p>
 
 <p>We can use the system paste command: control-v, or command-v on a mac, but this has some issues. Watch what happens if I copy this snippet of javascript, then use the system paste command in Insert mode: the indentation goes haywire!</p>
 
-<p>The problem is that when Vim runs inside a terminal, it can't distinguish between characters that are typed manually and those that are pasted. In this case, each time Vim creates a newline, it's autoindented. Add on top of that the indentation that was already present the source code, and we end up with each line drifting farther and farther to the right.</p>
+<p>The problem is that when Vim runs inside a terminal, it can&rsquo;t distinguish between characters that are typed manually and those that are pasted. In this case, each time Vim creates a newline, it&rsquo;s autoindented. Add on top of that the indentation that was already present the source code, and we end up with each line drifting farther and farther to the right.</p>
 
 <p>We can avoid this by enabling the <code>paste</code> option, which temporarily disables several options that can interfere when pasting text. Watch:</p>
+<pre class="highlight plaintext">:set paste
+</pre>
 
-<pre><code>:set paste
-</code></pre>
+<p>I&rsquo;ll switch to Insert mode. Note that Vim tells us the paste option is enabled. Now when I use the system paste command it behaves fine!</p>
 
-<p>I'll switch to Insert mode. Note that Vim tells us the paste option is enabled. Now when I use the system paste command it behaves fine!</p>
-
-<p>You might be wondering: Why not keep the <code>paste</code> option enabled at all times? Well, there's a gotcha! When the paste option is enabled, any abbreviations or mappings defined for Insert mode will be disabled. To demonstrate, I'll map <code>kj</code> to Escape in Insert mode:</p>
-
-<pre><code>:inoremap kj &lt;Esc&gt;
-</code></pre>
+<p>You might be wondering: Why not keep the <code>paste</code> option enabled at all times? Well, there&rsquo;s a gotcha! When the paste option is enabled, any abbreviations or mappings defined for Insert mode will be disabled. To demonstrate, I&rsquo;ll map <code>kj</code> to Escape in Insert mode:</p>
+<pre class="highlight plaintext">:inoremap kj &lt;Esc&gt;
+</pre>
 
 <p>If I try using that mapping in Insert mode, it just inserts the characters <code>kj</code>. But if I disable the <code>paste</code> option:</p>
-
-<pre><code>:set nopaste
-</code></pre>
+<pre class="highlight plaintext">:set nopaste
+</pre>
 
 <p>and switch back to Insert mode, pressing <code>kj</code> now maps to the Escape key, putting me back into Normal mode.</p>
 
-<p>So remember: with the <code>paste</code> option enabled, you're safe to use the system paste command, but any user-defined Insert mode mappings will fail. For that reason, it's a good idea to turn off the <code>paste</code> option as soon as you're finished using it.</p>
+<p>So remember: with the <code>paste</code> option enabled, you&rsquo;re safe to use the system paste command, but any user-defined Insert mode mappings will fail. For that reason, it&rsquo;s a good idea to turn off the <code>paste</code> option as soon as you&rsquo;re finished using it.</p>
 
-<p>If you're thinking of creating a mapping to make it easier to toggle the paste option, don't forget that your mapping won't work in Insert mode! Read Vim's documentation on <code>'pastetoggle'</code> to learn about a workaround.</p>
+<p>If you&rsquo;re thinking of creating a mapping to make it easier to toggle the paste option, don&rsquo;t forget that your mapping won&rsquo;t work in Insert mode! Read Vim&rsquo;s documentation on <code>&#39;pastetoggle&#39;</code> to learn about a workaround.</p>
 
-<h3 id="unimpaired-mapping">Unimpaired mapping</h3>
+<h3>Unimpaired mapping</h3>
 
 <p>I like the solution Tim Pope has come up with in his unimpaired plugin. He notes that:</p>
 
 <blockquote>
-  <p>you toggle twice, but only paste once.
+<p>you toggle twice, but only paste once.
 :h yp</p>
 </blockquote>
 
 <p>Which is wasteful.</p>
 
 <p>Watch this:</p>
-
-<pre><code>:set paste?
+<pre class="highlight plaintext">:set paste?
 nopaste
-</code></pre>
+</pre>
 
-<p>The paste option is currently disabled. I'll switch to Insert mode by pressing <code>yo</code>, which is a mapping provided by unimpaired. Just like the regular <code>o</code> command, it opens a new line and switches to Insert mode, but this variant also enables the <code>paste</code> option. I can safely use the system paste command. And when I return to Normal mode, an autocommand disables the paste option for me:</p>
-
-<pre><code>:set paste?
+<p>The paste option is currently disabled. I&rsquo;ll switch to Insert mode by pressing <code>yo</code>, which is a mapping provided by unimpaired. Just like the regular <code>o</code> command, it opens a new line and switches to Insert mode, but this variant also enables the <code>paste</code> option. I can safely use the system paste command. And when I return to Normal mode, an autocommand disables the paste option for me:</p>
+<pre class="highlight plaintext">:set paste?
 nopaste
-</code></pre>
+</pre>
 
-<p>That's a much neater workflow than having to toggle the <code>paste</code> option on and off again manually.</p>
+<p>That&rsquo;s a much neater workflow than having to toggle the <code>paste</code> option on and off again manually.</p>
 
 
       </section>

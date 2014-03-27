@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -172,9 +173,9 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>I've sometimes wondered what could lure me to switch from Vim to another text editor.
-On the whole I'm happy with Vim, but the one thing that bothers me is the cruft that has accumulated over the course of 20+ years.
-Imagine Vim, but without <a title="nocp" href="http://vimdoc.sourceforge.net/htmldoc/options.html#">the <code>nocompatible</code> option</a>.
+        <p>I&rsquo;ve sometimes wondered what could lure me to switch from Vim to another text editor.
+On the whole I&rsquo;m happy with Vim, but the one thing that bothers me is the cruft that has accumulated over the course of 20+ years.
+Imagine Vim, but without <a href="http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;#x27;nocp&amp;#x27;">the <code>nocompatible</code> option</a>.
 That is the promise of <a href="https://github.com/neovim/neovim">Neovim</a>.</p>
 
 
@@ -182,21 +183,20 @@ That is the promise of <a href="https://github.com/neovim/neovim">Neovim</a>.</p
 <p><a href="https://github.com/tarruda">Thiago de Arruda</a> has set up a <a href="https://www.bountysource.com/fundraisers/539-neovim-first-iteration">Bountysource campaign for Neovim</a>, explaining:</p>
 
 <blockquote>
-  <p>Neovim is a project that seeks to aggressively refactor vim source code</p>
+<p>Neovim is a project that seeks to aggressively refactor vim source code</p>
 </blockquote>
 
 <p>The project goals are ambitious, but if tarruda can realise his vision then Neovim could be to Vim as <a href="http://vimdoc.sourceforge.net/htmldoc/vi_diff.html#vim-additions">Vim was to vi</a>.
-I'm excited by that prospect!</p>
+I&rsquo;m excited by that prospect!</p>
 
 <p>In the last week, the <a href="https://github.com/neovim/neovim">Neovim github repository</a> has seen <a href="https://github.com/neovim/neovim/pulse">a lot of activity</a>.
-It's great to see a community forming around this project.
-I'm watching with interest.</p>
+It&rsquo;s great to see a community forming around this project.
+I&rsquo;m watching with interest.</p>
 
 <p>It only took a couple of days to raise $10k, which was the initial target.
 There are stretch goals for $20k, $30k, $40k, and $50k.
-With 20 days of the campaign remaining, I'm looking forward to seeing how much the community will raise.
+With 20 days of the campaign remaining, I&rsquo;m looking forward to seeing how much the community will raise.
 If you want to help this project, please consider making a contribution to the Bountysource campaign.</p>
-
 
       </div>
 
@@ -246,8 +246,20 @@ If you want to help this project, please consider making a contribution to the B
       </li>
     
       <li>
+        <h4><a href="/episodes/using-external-filter-commands-to-reformat-html/">Using external filter commands to reformat HTML</a></h4>
+        <p>We can use pandoc as a <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#filter">filter</a> to clean up <abbr title="what you see is what you get">WYSIWYG</abbr>-generated HTML. Pandoc is a commandline program, but we can call it from inside Vim either using the <a href="http://vimdoc.sourceforge.net/htmldoc/various.html#:!">bang Ex command</a>, or by configuring <a href="http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;#x27;formatprg&amp;#x27;">the <code>formatprg</code> option</a> to make the <code>gq</code> operator invoke pandoc.</p>
+
+
+      </li>
+    
+      <li>
         <h4><a href="/categories">Find by category</a></h4>
         <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
       </li>
     
       <li>
@@ -260,19 +272,7 @@ If you want to help this project, please consider making a contribution to the B
       <li>
         <h4><a href="/episodes/swapping-two-regions-of-text-with-exchange-vim/">Swapping two regions of text with exchange.vim</a></h4>
         <p>Swapping two regions of text is a common task, which normally requires that we make two separate changes to the document.
-Tom McDonald's <a href="https://github.com/tommcdo/vim-exchange">exchange plugin</a> offers an elegant alternative, by providing an operator that swaps two regions of text in one go.</p>
-
-
-      </li>
-    
-      <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/using-external-filter-commands-to-reformat-html/">Using external filter commands to reformat HTML</a></h4>
-        <p>We can use pandoc as a <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#filter">filter</a> to clean up <abbr title="what you see is what you get">WYSIWYG</abbr>-generated HTML. Pandoc is a commandline program, but we can call it from inside Vim either using the <a href="http://vimdoc.sourceforge.net/htmldoc/various.html#:!">bang Ex command</a>, or by configuring <a title="formatprg" href="http://vimdoc.sourceforge.net/htmldoc/options.html#">the <code>formatprg</code> option</a> to make the <code>gq</code> operator invoke pandoc.</p>
+Tom McDonald&rsquo;s <a href="https://github.com/tommcdo/vim-exchange">exchange plugin</a> offers an elegant alternative, by providing an operator that swaps two regions of text in one go.</p>
 
 
       </li>

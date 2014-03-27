@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -187,7 +188,7 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>The arglist wouldn't be much use if we had to quit and relaunch Vim every time we wanted to change its contents. In this episode, we'll learn how to set the contents of the arglist using the <code>:args</code> command, which can receive filepaths, globs, or even backtick expressions.</p>
+        <p>The arglist wouldn&rsquo;t be much use if we had to quit and relaunch Vim every time we wanted to change its contents. In this episode, we&rsquo;ll learn how to set the contents of the arglist using the <code>:args</code> command, which can receive filepaths, globs, or even backtick expressions.</p>
 
 
       </div>
@@ -246,28 +247,27 @@
 <p>The <code>{arglist}</code> could be:</p>
 
 <ol>
-  <li>one or more filepaths (separated by whitespace)</li>
-  <li>a wildcard</li>
-  <li>a backtick expression</li>
-  <li>a combination of the above</li>
+<li>one or more filepaths (separated by whitespace)</li>
+<li>a wildcard</li>
+<li>a backtick expression</li>
+<li>a combination of the above</li>
 </ol>
 
 <p>As a general rule: anything that you can provide as an argument to the Vim executable at the commandline can also be supplied as an argument to the <a href="http://vimdoc.sourceforge.net/htmldoc/editing.html#:args_f"><code>:args</code></a> command.</p>
 
-<p>Backtick expression are particularly powerful. In the video, I use the simple example of running <code>:args \`cat .toc\`</code> to use the contents of a plaintext file to populate the arglist, but we could put anything inside that backtick expression. So long as the subshell returns a list of filepaths, then Vim will consider it as valid input.  For example, you could use the output of <code>find</code> or <code>grep</code>, or even a shell script of your own. </p>
+<p>Backtick expression are particularly powerful. In the video, I use the simple example of running <code>:args `cat .toc`</code> to use the contents of a plaintext file to populate the arglist, but we could put anything inside that backtick expression. So long as the subshell returns a list of filepaths, then Vim will consider it as valid input.  For example, you could use the output of <code>find</code> or <code>grep</code>, or even a shell script of your own. </p>
 
-<h2 id="further-reading">Further reading</h2>
+<h2>Further reading</h2>
 
 <ul>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/editing.html#:args_f"><code>:help :args_f</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/editing.html#{arglist}"><code>:help {arglist}</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/editing.html#wildcards"><code>:help wildcards</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/editing.html#starstar-wildcard"><code>:help starstar-wildcard</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/editing.html#backtick-expansion"><code>:help backtick-expansion</code></a></li>
-  <li><a href="http://wiki.bash-hackers.org/syntax/expansion/cmdsubst">command substitution in bash</a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/usr_42.html#42"><code>:help 42</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/editing.html#:args_f"><code>:help :args_f</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/editing.html#{arglist}"><code>:help {arglist}</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/editing.html#wildcards"><code>:help wildcards</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/editing.html#starstar-wildcard"><code>:help starstar-wildcard</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/editing.html#backtick-expansion"><code>:help backtick-expansion</code></a></li>
+<li><a href="http://wiki.bash-hackers.org/syntax/expansion/cmdsubst">command substitution in bash</a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/usr_42.html#42"><code>:help 42</code></a></li>
 </ul>
-
 
         </div>
         </dd>
@@ -312,39 +312,39 @@
 
     
       <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/meet-the-arglist/">Meet the arglist</a></h4>
-        <p>The arglist feature complements Vim's buffer list. In this episode, we'll learn a handful of commands for traversing the arglist. We'll see that it's useful to think of the arglist as a stable subset of the files in the buffer list.</p>
-
-
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/search-multiple-files-with-vimgrep/">Search multiple files with :vimgrep</a></h4>
-        <p><code>vimgrep</code> is Vim's built-in command for searching across multiple files. It's not so fast as external tools like ack and git-grep, but it has its uses. <code>vimgrep</code> uses Vim's built-in regex engine, so you can reuse the patterns that work with Vim's standard search command. </p>
-
-
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/using-argdo-to-change-multiple-files/">Using :argdo to change multiple files</a></h4>
-        <p>The <code>:argdo</code> command allows us to execute an Ex command across all buffers in the arglist.  To demonstrate, we'll use the example of running the <code>:substitute</code> command across multiple files, then we'll see how to revert or save the changes.  We'll also compare the <code>:argdo</code> and <code>:bufdo</code> commands, and consider when it's appropriate to use each one.</p>
-
-
-      </li>
-    
-      <li>
         <h4><a href="/training">Vim Training</a></h4>
         <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
       </li>
     
       <li>
+        <h4><a href="/episodes/using-argdo-to-change-multiple-files/">Using :argdo to change multiple files</a></h4>
+        <p>The <code>:argdo</code> command allows us to execute an Ex command across all buffers in the arglist.  To demonstrate, we&rsquo;ll use the example of running the <code>:substitute</code> command across multiple files, then we&rsquo;ll see how to revert or save the changes.  We&rsquo;ll also compare the <code>:argdo</code> and <code>:bufdo</code> commands, and consider when it&rsquo;s appropriate to use each one.</p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+      </li>
+    
+      <li>
         <h4><a href="/publications">Publications</a></h4>
         <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/search-multiple-files-with-vimgrep/">Search multiple files with :vimgrep</a></h4>
+        <p><code>vimgrep</code> is Vim&rsquo;s built-in command for searching across multiple files. It&rsquo;s not so fast as external tools like ack and git-grep, but it has its uses. <code>vimgrep</code> uses Vim&rsquo;s built-in regex engine, so you can reuse the patterns that work with Vim&rsquo;s standard search command. </p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/meet-the-arglist/">Meet the arglist</a></h4>
+        <p>The arglist feature complements Vim&rsquo;s buffer list. In this episode, we&rsquo;ll learn a handful of commands for traversing the arglist. We&rsquo;ll see that it&rsquo;s useful to think of the arglist as a stable subset of the files in the buffer list.</p>
+
+
       </li>
     
 

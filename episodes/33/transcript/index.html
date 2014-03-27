@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -130,21 +131,19 @@
           </div>
         </div>
 
-        <h1 id="resolving-merge-conflicts-with-vimdiff">Resolving merge conflicts with vimdiff</h1>
+        <h1>Resolving merge conflicts with vimdiff</h1>
 
 <p><em>Setup: create 2 branches with conflicting chages to the same file. Merge one branch into the other, open the conflicted file and run <code>:Gdiff</code>.</em></p>
 
-<p>I'm currently on a 'feature' branch, where I've made some changes to the demo file. Now I'm going to check out the master branch, where I happen to know that the demo file has also been modified.</p>
-
-<pre><code>git checkout master
+<p>I&rsquo;m currently on a &lsquo;feature&rsquo; branch, where I&rsquo;ve made some changes to the demo file. Now I&rsquo;m going to check out the master branch, where I happen to know that the demo file has also been modified.</p>
+<pre class="highlight plaintext">git checkout master
 git merge feature
-</code></pre>
+</pre>
 
-<p>I'm going to attempt to merge the feature branch back into master. As expected, git advises me that there was a conflict in merging the demo file. We'll have to resolve this conflict by hand.</p>
+<p>I&rsquo;m going to attempt to merge the feature branch back into master. As expected, git advises me that there was a conflict in merging the demo file. We&rsquo;ll have to resolve this conflict by hand.</p>
 
-<p>If we open the working copy of this file, you can see right away that it's conflicted, because git inserts these indicators to show the parts of the file that had been changed in both branches.</p>
-
-<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:demo.rb
+<p>If we open the working copy of this file, you can see right away that it&rsquo;s conflicted, because git inserts these indicators to show the parts of the file that had been changed in both branches.</p>
+<pre class="highlight plaintext">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:demo.rb
   property :name,             String, :length =&gt; 0..555
   property :slug,             String, :length =&gt; 0..555
   property :article,          String, :length =&gt; 0..50
@@ -153,157 +152,147 @@ git merge feature
   property :slug,             String, :length =&gt; 0..255
   property :article,          String, :length =&gt; 0..10
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; sprint:demo.rb
-</code></pre>
+</pre>
 
-<p>The first hunk is taken from the target branch, and the second hunk comes from the merge branch. I'm going to be using the terms 'target' and 'merge' branch a lot here, so lets make sure we're on the same page.</p>
+<p>The first hunk is taken from the target branch, and the second hunk comes from the merge branch. I&rsquo;m going to be using the terms &lsquo;target&rsquo; and &lsquo;merge&rsquo; branch a lot here, so lets make sure we&rsquo;re on the same page.</p>
 
-<p>The 'target' branch is the one that is active when you run git merge. Or in other words, it's the HEAD branch. The 'merge' branch is the one that is named in the <code>git merge</code> command. In this scenario the 'master' branch is the target, and the 'feature' branch is merged into target, making it the merge branch</p>
-
-<pre><code>git co master
+<p>The &lsquo;target&rsquo; branch is the one that is active when you run git merge. Or in other words, it&rsquo;s the HEAD branch. The &lsquo;merge&rsquo; branch is the one that is named in the <code>git merge</code> command. In this scenario the &lsquo;master&rsquo; branch is the target, and the &lsquo;feature&rsquo; branch is merged into target, making it the merge branch</p>
+<pre class="highlight plaintext">git co master
 git merge feature
-</code></pre>
+</pre>
 
 <p>If you run the <code>:Gdiff</code> command on a conflicted file, it performs a vimdiff between the working copy and the two conflicting parent versions. This opens up 3 vertical split windows:</p>
 
 <ul>
-  <li>the left window contains the version from the target branch (that is, the branch that was active when we ran <code>git merge</code>)</li>
-  <li>the middle window contains the working copy of the file, complete with conflict markers</li>
-  <li>the right window contains the version from the merge branch</li>
+<li>the left window contains the version from the target branch (that is, the branch that was active when we ran <code>git merge</code>)</li>
+<li>the middle window contains the working copy of the file, complete with conflict markers</li>
+<li>the right window contains the version from the merge branch</li>
 </ul>
 
 <p>We need to go through each conflict in the working copy, and choose whether to keep the version from the target or merge branch.</p>
 
-<p>If you've ever used vimdiff for a 2 way merge, you'll already know that Vim provides 2 commands for reconciling differences: <code>diffget</code> and <code>diffput</code>. In the context of a 2-way diff, these commands are unambiguous. If I ask Vim to get the diff from the other window, there is only one place for it to look.</p>
+<p>If you&rsquo;ve ever used vimdiff for a 2 way merge, you&rsquo;ll already know that Vim provides 2 commands for reconciling differences: <code>diffget</code> and <code>diffput</code>. In the context of a 2-way diff, these commands are unambiguous. If I ask Vim to get the diff from the other window, there is only one place for it to look.</p>
 
 <p>When you do a 3-way merge, things get a little more complex. This time, it would be ambiguous if I was to tell Vim to fetch the changes from the other window. I have to specify which buffer to fetch the changes from by providing a <code>[bufspec]</code>.</p>
 
 <p>You can identify a buffer by its name or by the buffer number as it appears when you run:</p>
-
-<pre><code>:ls
-</code></pre>
+<pre class="highlight plaintext">:ls
+</pre>
 
 <p>In this case, the buffers are numbered 1, 2 and 5. Buffer numbers are assigned sequentially, so they will differ from session to session, but you can always be sure that they will uniquely identify their buffer.</p>
 
 <p>You can also identify a buffer by its name. A partial match will do, so long as the string provided can be used to uniquely identify the buffer. Fugitive follows a consistent naming convention when creating buffers for the target and merge versions of a conflicted file.</p>
-
-<pre><code>working copy:
+<pre class="highlight plaintext">working copy:
     demo.js
-  
+
 target:
     fugitive:///path/to/project/.git//2/demo.js
 
 merge:
     fugitive:///path/to/project/.git//3/demo.js
-</code></pre>
+</pre>
 
 <p>In this case, I can reference the working copy using the buffspec <code>demo</code>. The target version can be uniquely identified as <code>//2</code>, and the merge version as <code>//3</code>. Whereas buffer numbers will vary from session to session, the target and merge branches will always contain these strings.</p>
 
-<p>We'll be using these strings later as bufspecs, so I'll keep these labels visible throughout.</p>
+<p>We&rsquo;ll be using these strings later as bufspecs, so I&rsquo;ll keep these labels visible throughout.</p>
 
-<p>There are two basic strategies for reconciling a 3-way diff. You can either keep your cursor in the middle file, and run <code>:diffget</code> with the bufspec for the file containing the change you want to keep.Or you can position your cursor on the change that you want to keep, and run <code>:diffput</code> with the bufspec for the working copy file. We'll take a look at each of these strategies in turn, starting with diffget.</p>
+<p>There are two basic strategies for reconciling a 3-way diff. You can either keep your cursor in the middle file, and run <code>:diffget</code> with the bufspec for the file containing the change you want to keep.Or you can position your cursor on the change that you want to keep, and run <code>:diffput</code> with the bufspec for the working copy file. We&rsquo;ll take a look at each of these strategies in turn, starting with diffget.</p>
 
-<h2 id="using-diffget">Using <code>diffget</code></h2>
+<h2>Using <code>diffget</code></h2>
 
 <p>Diffget modifies the current buffer by <em>pulling</em> a change over from one of the other buffers. We want to update the middle buffer so that each conflict is replaced with the version from either one of the parent branches. That means that we want to keep the middle buffer active, and run <code>diffget</code> with a reference to the buffer containing the change that we want to use.</p>
 
 <p>For this conflict, I want to keep the change from the target version - the one on the left, which can be identified by the buffspec <code>//2</code>.</p>
+<pre class="highlight plaintext">:diffget //2
+</pre>
 
-<pre><code>:diffget //2
-</code></pre>
+<p>See what&rsquo;s happened there? The conflict markers have disappeared from the working copy, to be replaced by the corresponding lines from the target version.</p>
 
-<p>See what's happened there? The conflict markers have disappeared from the working copy, to be replaced by the corresponding lines from the target version.</p>
-
-<p>The diff highlighting looks out of sync now, so we'll fix it by running:</p>
-
-<pre><code>:diffupdate
-</code></pre>
+<p>The diff highlighting looks out of sync now, so we&rsquo;ll fix it by running:</p>
+<pre class="highlight plaintext">:diffupdate
+</pre>
 
 <p>The region of the file that we changed is still highlighted by vimdiff, because there is still a conflict between the working copy and the merge version, but that is to be expected.</p>
 
-<p>In vimdiff mode, you can quickly jump between the conflicting regions by using the square bracket keys followed by the 'c' key:</p>
-
-<pre><code>]c - to jump to the next diff
+<p>In vimdiff mode, you can quickly jump between the conflicting regions by using the square bracket keys followed by the &lsquo;c&rsquo; key:</p>
+<pre class="highlight plaintext">]c - to jump to the next diff
 [c - to jump to the previous diff
-</code></pre>
+</pre>
 
-<p>We'll jump to the next conflict by pressing <code>]c</code>.</p>
+<p>We&rsquo;ll jump to the next conflict by pressing <code>]c</code>.</p>
 
 <p>This time, we want to keep the change from the merge version - the one on the right, which can be identified by the bufspec <code>//3</code>.</p>
-
-<pre><code>:diffget //3
-</code></pre>
+<pre class="highlight plaintext">:diffget //3
+</pre>
 
 <p>Again, that replaces the conflict markers in the working copy with the corresponding lines from the specified version.</p>
 
-<p>That's the last of the conflicts in this file, so now we can leave vimdiff mode. To do that, we just need to close all of the windows apart from the middle one containing the working copy. The quickest method is to run the command:</p>
-
-<pre><code>:only
-</code></pre>
+<p>That&rsquo;s the last of the conflicts in this file, so now we can leave vimdiff mode. To do that, we just need to close all of the windows apart from the middle one containing the working copy. The quickest method is to run the command:</p>
+<pre class="highlight plaintext">:only
+</pre>
 
 <p>From there, you can run your tests to check that everything works as it should, and complete the git merge by checking in your changes.</p>
 
-<h2 id="using-diffput">Using <code>diffput</code></h2>
+<h2>Using <code>diffput</code></h2>
 
-<p>I'm just going to undo those changes, so that we can start off again with a conflicted working copy. This time, we'll try the alternative strategy, using the <code>diffput</code> command.</p>
+<p>I&rsquo;m just going to undo those changes, so that we can start off again with a conflicted working copy. This time, we&rsquo;ll try the alternative strategy, using the <code>diffput</code> command.</p>
 
 <p>Diffput pushes a change from the <em>active</em> buffer into one of the others. In this case, we want to position our cursor on either the target or merge version of the file, and put the change into the working copy.</p>
 
-<p>Lets jump to the first diff by running <code>]c</code>. We're going to keep the change from the target version, the one on the left, so we'll make that the active window.</p>
+<p>Lets jump to the first diff by running <code>]c</code>. We&rsquo;re going to keep the change from the target version, the one on the left, so we&rsquo;ll make that the active window.</p>
 
-<p>The <code>diffput</code> command requires a bufspec to identify where the change is to be sent. Here, we'll use the string 'demo' to reference the working copy of the file:</p>
+<p>The <code>diffput</code> command requires a bufspec to identify where the change is to be sent. Here, we&rsquo;ll use the string &lsquo;demo&rsquo; to reference the working copy of the file:</p>
+<pre class="highlight plaintext">:diffput demo
+</pre>
 
-<pre><code>:diffput demo
-</code></pre>
+<p>I know that if I run this, it will confuse the vimdiff coloring. So I&rsquo;m just going to go ahead and run <code>diffupdate</code> in the same command:</p>
+<pre class="highlight plaintext">:diffput demo | diffup
+</pre>
 
-<p>I know that if I run this, it will confuse the vimdiff coloring. So I'm just going to go ahead and run <code>diffupdate</code> in the same command:</p>
-
-<pre><code>:diffput demo | diffup
-</code></pre>
-
-<p>The 'bar' character here just tells Vim to run the two commands sequentially.</p>
+<p>The &lsquo;bar&rsquo; character here just tells Vim to run the two commands sequentially.</p>
 
 <p>See that? The conflict markers in the working copy have now been replaced by the change underneath the cursor in the active buffer.</p>
 
-<h3 id="introduce-fugitive-dp">Introduce fugitive-dp</h3>
+<h3>Introduce fugitive-dp</h3>
 
 <p>I mentioned earlier that in a 2-way diff, the diffget and diffput commands require no argument. Vim provides a couple of convenient shorthand mappings for these commands: <code>do</code> performs a <code>diffget</code>, and <code>dp</code> does <code>diffput</code>.</p>
 
-<p>These mappings don't normally work in a 3-way diff, because the <code>diffget</code> and <code>diffput</code> commands both require an argument in this context. But in the case of the <code>diffput</code> command, it's pretty easy to guess what that argument is going to be. When you do a 3-way diff between working copy, target and merge parents, fugitive assumes that if you run <code>dp</code> from either of the parent buffers, you want to put the change into the working copy. So even though the <code>dp</code> mapping normally only works in a 2-way diff, you can use it in this special case of a 3-way diff.</p>
+<p>These mappings don&rsquo;t normally work in a 3-way diff, because the <code>diffget</code> and <code>diffput</code> commands both require an argument in this context. But in the case of the <code>diffput</code> command, it&rsquo;s pretty easy to guess what that argument is going to be. When you do a 3-way diff between working copy, target and merge parents, fugitive assumes that if you run <code>dp</code> from either of the parent buffers, you want to put the change into the working copy. So even though the <code>dp</code> mapping normally only works in a 2-way diff, you can use it in this special case of a 3-way diff.</p>
 
 <p>Lets jump to the next conflict.</p>
 
 <p>[press <code>]c</code>]</p>
 
-<p>This time, we'll keep the change from the merge version - the one on the right. We need to make that the active buffer, by moving the cursor into it. Now, instead of running the <code>:diffput demo</code> command again, I'm just going to use the <code>dp</code> mapping.</p>
+<p>This time, we&rsquo;ll keep the change from the merge version - the one on the right. We need to make that the active buffer, by moving the cursor into it. Now, instead of running the <code>:diffput demo</code> command again, I&rsquo;m just going to use the <code>dp</code> mapping.</p>
 
-<p>[Note that the <code>dp</code> command runs <code>diffput</code> followed by <code>diffupdate</code>. So if you use this method, the diff coloring won't fall out of step.]</p>
+<p>[Note that the <code>dp</code> command runs <code>diffput</code> followed by <code>diffupdate</code>. So if you use this method, the diff coloring won&rsquo;t fall out of step.]</p>
 
 <p>[open the status window]</p>
 
-<p>Our working copy is now conflict free, so we can stage it and commit. In previous episodes in this series, we've seen that the <code>:Gwrite</code> command can be used to stage the working copy. Now watch what happens when I run it from the working copy here.</p>
+<p>Our working copy is now conflict free, so we can stage it and commit. In previous episodes in this series, we&rsquo;ve seen that the <code>:Gwrite</code> command can be used to stage the working copy. Now watch what happens when I run it from the working copy here.</p>
 
 <p>Not only has the file been added to the index, but the 3-way split has vanished, leaving only the working copy buffer. </p>
 
-<h2 id="keeping-one-parent-version-in-its-entirety">Keeping one parent version in its entirety</h2>
+<h2>Keeping one parent version in its entirety</h2>
 
 <p>[Leave the status window open, and run the commands:</p>
+<pre class="highlight plaintext">:Git reset --hard
+:Git merge feature
+</pre>
 
-<pre><code>:Git reset --hard
-:Git merge feature ]
-</code></pre>
+<p>]</p>
 
-<p>In the examples so far, we've assumed that both conflicting parents contain changes that are to be kept. In reality, it's often the case that one of the parent versions is to be kept wholesale, and the other file is to be discarded.</p>
+<p>In the examples so far, we&rsquo;ve assumed that both conflicting parents contain changes that are to be kept. In reality, it&rsquo;s often the case that one of the parent versions is to be kept wholesale, and the other file is to be discarded.</p>
 
-<p>In this scenario, fugitive's <code>:Gwrite</code> command comes in handy. This overwrites the working tree and index copies with the contents of the currently active file. </p>
+<p>In this scenario, fugitive&rsquo;s <code>:Gwrite</code> command comes in handy. This overwrites the working tree and index copies with the contents of the currently active file. </p>
 
-<p>Suppose that I want to keep the merge version - the one on the right - I'll just make that the active window. Now, if I try running the <code>Gwrite</code> command in the usual fashion, Vim issues a warning.</p>
+<p>Suppose that I want to keep the merge version - the one on the right - I&rsquo;ll just make that the active window. Now, if I try running the <code>Gwrite</code> command in the usual fashion, Vim issues a warning.</p>
 
 <p>If I had just spent the last 5 minutes carefully cherry-picking changes from the target and merge versions, then I would be pretty upset if I accidentally overwrote the working copy and index with one of the parent versions. So when we run <code>Gwrite</code> from either the target or merge parent, we have to add a trailing exclamation mark to show that we really mean it.</p>
+<pre class="highlight plaintext">:Gwrite! [bang]
+</pre>
 
-<pre><code>:Gwrite! [bang]
-</code></pre>
-
-<p>Bang! The merge version of the file overwrites the working copy, and adds it to the index. The file is no longer marked as 'conflicted', and is ready to be committed.</p>
+<p>Bang! The merge version of the file overwrites the working copy, and adds it to the index. The file is no longer marked as &lsquo;conflicted&rsquo;, and is ready to be committed.</p>
 
 
       </section>

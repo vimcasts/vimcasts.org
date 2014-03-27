@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -226,36 +227,30 @@
         <div id="shownotes" class="content" data-swiftype-index="true">
           
 
-<h3 id="sourcing-the-vimrc-file">Sourcing the vimrc file</h3>
+<h3>Sourcing the vimrc file</h3>
 
 <p>When you launch vim, it will automatically load and execute your vimrc file. If you modify the vimrc file whilst Vim is running you can apply those changes by running the command:</p>
-
-<pre><code>:source $MYVIMRC
-</code></pre>
+<pre class="highlight plaintext">:source $MYVIMRC
+</pre>
 
 <p><code>$MYVIMRC</code> is a constant which should work whether you are running Vim on a unix system or on Windows.</p>
 
 <p>I would like Vim to automatically source the vimrc each time I save it. This can be achieved with the following autocommand:</p>
-
-<pre class="brush: vimscript">
-&quot; Source the vimrc file after saving it
-if has(&quot;autocmd&quot;)
-  autocmd bufwritepost .vimrc source $MYVIMRC
-endif
+<pre class="highlight viml"><span class="c">" Source the vimrc file after saving it</span>
+<span class="k">if</span> has<span class="p">(</span><span class="s2">"autocmd"</span><span class="p">)</span>
+  autocmd bufwritepost <span class="p">.</span>vimrc source $MYVIMRC
+<span class="k">endif</span>
 </pre>
 
-<h3 id="editing-the-vimrc-file">Editing the vimrc file</h3>
+<h3>Editing the vimrc file</h3>
 
 <p>You can always open the vimrc file by running the command:</p>
-
-<pre><code>:edit $MYVIMRC
-</code></pre>
+<pre class="highlight plaintext">:edit $MYVIMRC
+</pre>
 
 <p>I like to make it as easy as possible to open my vimrc file, so I keep the following mapping in my vimrc:</p>
-
-<pre class="brush: vimscript">
-let mapleader = &quot;,&quot;
-nmap &lt;leader&gt;v :tabedit $MYVIMRC&lt;CR&gt;
+<pre class="highlight viml"><span class="k">let</span> mapleader <span class="p">=</span> <span class="s2">","</span>
+nmap <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">v</span> <span class="p">:</span><span class="k">tabedit</span> $MYVIMRC<span class="p">&lt;</span>CR<span class="p">&gt;</span>
 </pre>
 
 <p>Pressing <code>,v</code> opens the vimrc file in a new tab.</p>
@@ -305,13 +300,22 @@ nmap &lt;leader&gt;v :tabedit $MYVIMRC&lt;CR&gt;
 
     
       <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
+        <h4><a href="/episodes/whitespace-preferences-and-filetypes/">Whitespace preferences and filetypes</a></h4>
+        <p>Different file types may require particular whitespace settings. For example, YAML files must be indented using spaces, whereas makefiles require indentation with tabs. These preferences can be specified by hooking into the <code>FileType</code> event with an autocommand.</p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/blog/2014/02/vimcasts-redesign-a-work-in-progress/">Vimcasts redesign: a work in progress</a></h4>
+        <p>In the not-too-distant future, you can expect to see a revised design for Vimcasts.org. The most significant enhancements will be the addition of tags, site search, and a responsive design for smaller screens. Hannah Adcock, from <a href="http://contentedstrategy.com">contentedstrategy.com</a>, has been helping me out by analysing user feedback, as well as data from Google Analytics.</p>
+
+
       </li>
     
       <li>
         <h4><a href="/episodes/using-external-filter-commands-to-reformat-html/">Using external filter commands to reformat HTML</a></h4>
-        <p>We can use pandoc as a <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#filter">filter</a> to clean up <abbr title="what you see is what you get">WYSIWYG</abbr>-generated HTML. Pandoc is a commandline program, but we can call it from inside Vim either using the <a href="http://vimdoc.sourceforge.net/htmldoc/various.html#:!">bang Ex command</a>, or by configuring <a title="formatprg" href="http://vimdoc.sourceforge.net/htmldoc/options.html#">the <code>formatprg</code> option</a> to make the <code>gq</code> operator invoke pandoc.</p>
+        <p>We can use pandoc as a <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#filter">filter</a> to clean up <abbr title="what you see is what you get">WYSIWYG</abbr>-generated HTML. Pandoc is a commandline program, but we can call it from inside Vim either using the <a href="http://vimdoc.sourceforge.net/htmldoc/various.html#:!">bang Ex command</a>, or by configuring <a href="http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;#x27;formatprg&amp;#x27;">the <code>formatprg</code> option</a> to make the <code>gq</code> operator invoke pandoc.</p>
 
 
       </li>
@@ -322,22 +326,13 @@ nmap &lt;leader&gt;v :tabedit $MYVIMRC&lt;CR&gt;
       </li>
     
       <li>
-        <h4><a href="/episodes/whitespace-preferences-and-filetypes/">Whitespace preferences and filetypes</a></h4>
-        <p>Different file types may require particular whitespace settings. For example, YAML files must be indented using spaces, whereas makefiles require indentation with tabs. These preferences can be specified by hooking into the <code>FileType</code> event with an autocommand.</p>
-
-
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
       </li>
     
       <li>
         <h4><a href="/categories">Find by category</a></h4>
         <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/blog/2014/02/vimcasts-redesign-a-work-in-progress/">Vimcasts redesign: a work in progress</a></h4>
-        <p>In the not-too-distant future, you can expect to see a revised design for Vimcasts.org. The most significant enhancements will be the addition of tags, site search, and a responsive design for smaller screens. Hannah Adcock, from <a href="http://contentedstrategy.com">contentedstrategy.com</a>, has been helping me out by analysing user feedback, as well as data from Google Analytics.</p>
-
-
       </li>
     
 

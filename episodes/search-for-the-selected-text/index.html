@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -226,47 +227,41 @@
         <div id="shownotes" class="content" data-swiftype-index="true">
           
 
-<p>Look up <a href="http://vimdoc.sourceforge.net/htmldoc/visual.html#visual-search"><code>:help visual-search</code></a> in Vim's documentation, and you'll find a suggestion for this simple mapping:</p>
-
-<pre class="brush: vimscript">
-:vmap X y/&lt;C-R&gt;&quot;&lt;CR&gt;
+<p>Look up <a href="http://vimdoc.sourceforge.net/htmldoc/visual.html#visual-search"><code>:help visual-search</code></a> in Vim&rsquo;s documentation, and you&rsquo;ll find a suggestion for this simple mapping:</p>
+<pre class="highlight viml"><span class="p">:</span>vmap <span class="k">X</span> <span class="k">y</span>/<span class="p">&lt;</span>C<span class="p">-</span>R<span class="p">&gt;</span>"<span class="p">&lt;</span>CR<span class="p">&gt;</span>
 </pre>
 
-<p>This comes with a warning: <strong>Note that special characters (like <code>.</code> and <code>*</code>) will cause problems.</strong> It's not too hard to avoid these problems. This snippet of code takes care of them:</p>
+<p>This comes with a warning: <strong>Note that special characters (like <code>.</code> and <code>*</code>) will cause problems.</strong> It&rsquo;s not too hard to avoid these problems. This snippet of code takes care of them:</p>
+<pre class="highlight viml"><span class="k">function</span><span class="p">!</span> <span class="nv">s:VSetSearch</span><span class="p">(</span>cmdtype<span class="p">)</span>
+  <span class="k">let</span> temp <span class="p">=</span> @<span class="k">s</span>
+  norm<span class="p">!</span> gv"<span class="k">sy</span>
+  <span class="k">let</span> @/ <span class="p">=</span> <span class="s1">'\V'</span> <span class="p">.</span> substitute<span class="p">(</span>escape<span class="p">(</span>@<span class="k">s</span><span class="p">,</span> <span class="nv">a:cmdtype</span><span class="p">.</span><span class="s1">'\'), '</span>\<span class="k">n</span><span class="s1">', '</span>\\<span class="k">n</span><span class="s1">', '</span><span class="k">g</span>'<span class="p">)</span>
+  <span class="k">let</span> @<span class="k">s</span> <span class="p">=</span> temp
+<span class="k">endfunction</span>
 
-<pre class="brush: vimscript">
-function! s:VSetSearch(cmdtype)
-  let temp = @s
-  norm! gv&quot;sy
-  let @/ = '\V' . substitute(escape(@s, a:cmdtype.'\'), '\n', '\\n', 'g')
-  let @s = temp
-endfunction
-
-xnoremap * :&lt;C-u&gt;call &lt;SID&gt;VSetSearch('/')&lt;CR&gt;/&lt;C-R&gt;=@/&lt;CR&gt;&lt;CR&gt;
-xnoremap # :&lt;C-u&gt;call &lt;SID&gt;VSetSearch('?')&lt;CR&gt;?&lt;C-R&gt;=@/&lt;CR&gt;&lt;CR&gt;
+xnoremap * <span class="p">:&lt;</span>C<span class="p">-</span><span class="k">u</span><span class="p">&gt;</span><span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>VSetSearch<span class="p">(</span><span class="s1">'/'</span><span class="p">)&lt;</span>CR<span class="p">&gt;</span><span class="sr">/&lt;C-R&gt;=@/</span><span class="p">&lt;</span>CR<span class="p">&gt;&lt;</span>CR<span class="p">&gt;</span>
+xnoremap # <span class="p">:&lt;</span>C<span class="p">-</span><span class="k">u</span><span class="p">&gt;</span><span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>VSetSearch<span class="p">(</span><span class="s1">'?'</span><span class="p">)&lt;</span>CR<span class="p">&gt;</span>?<span class="p">&lt;</span>C<span class="p">-</span>R<span class="p">&gt;=</span>@/<span class="p">&lt;</span>CR<span class="p">&gt;&lt;</span>CR<span class="p">&gt;</span>
 </pre>
 
 <p>You install the <a href="https://github.com/nelstrom/vim-visual-star-search">visual-star-search</a> plugin from github, which wraps up this functionality.</p>
 
-<p>Note that these visual mode <code>*</code> and <code>#</code> mappings create a new record in Vim's search history. You can always paste the last search pattern by pressing <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-R"><code>&lt;C-r&gt;/</code></a>, so you can easily search through multiple files using <code>:vimgrep</code>:</p>
-
-<pre><code>:vimgrep /&lt;C-r&gt;//g **
-</code></pre>
+<p>Note that these visual mode <code>*</code> and <code>#</code> mappings create a new record in Vim&rsquo;s search history. You can always paste the last search pattern by pressing <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-R"><code>&lt;C-r&gt;/</code></a>, so you can easily search through multiple files using <code>:vimgrep</code>:</p>
+<pre class="highlight plaintext">:vimgrep /&lt;C-r&gt;//g **
+</pre>
 
 <p>Naturally, the patterns generated by these <code>*</code> and <code>#</code> mappings can also be used with any Ex command that accepts a pattern, including <code>:substitute</code>, <code>:global</code>, and <code>:vimgrep</code>.</p>
 
-<h3 id="further-reading">Further reading</h3>
+<h3>Further reading</h3>
 
 <ul>
-  <li><a href="https://github.com/nelstrom/vim-visual-star-search">visual-star-search</a> plugin</li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/visual.html#visual-search"><code>:help visual-search</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote/"><code>:help quote/</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-R"><code>:help c_CTRL-R</code></a></li>
-  <li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> tip 86 - Search for the current visual selection</li>
-  <li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> tip 78 - Escape Problem Characters</li>
-  <li><a href="http://got-ravings.blogspot.co.uk/2008/07/vim-pr0n-visual-search-mappings.html">Vim pr0n: Visual search mappings</a></li>
+<li><a href="https://github.com/nelstrom/vim-visual-star-search">visual-star-search</a> plugin</li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/visual.html#visual-search"><code>:help visual-search</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote/"><code>:help quote/</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-R"><code>:help c_CTRL-R</code></a></li>
+<li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> tip 86 - Search for the current visual selection</li>
+<li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a> tip 78 - Escape Problem Characters</li>
+<li><a href="http://got-ravings.blogspot.co.uk/2008/07/vim-pr0n-visual-search-mappings.html">Vim pr0n: Visual search mappings</a></li>
 </ul>
-
 
         </div>
         </dd>
@@ -311,8 +306,27 @@ xnoremap # :&lt;C-u&gt;call &lt;SID&gt;VSetSearch('?')&lt;CR&gt;?&lt;C-R&gt;=@/&
 
     
       <li>
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/supercharged-substitution-with-subvert/">Supercharged substitution with :Subvert</a></h4>
+        <p>The <a href="https://github.com/tpope/vim-abolish">abolish plugin</a> provides a command called <code>:Subvert</code>, which is like a supercharged version of Vim&rsquo;s built-in <code>:substitute</code> command. The <code>:Subvert</code> command is especially useful for changing singular and plural variants of a word, and for refactoring names that appear in <code>snake_case</code> and <code>MixedCase</code>.</p>
+
+<p><em>This is part two of a three-part series on Tim Pope&rsquo;s <a href="https://github.com/tpope/vim-abolish">abolish</a> plugin.</em></p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+      </li>
+    
+      <li>
         <h4><a href="/episodes/project-wide-find-and-replace/">Project-wide find and replace</a></h4>
-        <p>Vim doesn't have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as <code>:substitute</code>, <code>:argdo</code>, and <code>:vimgrep</code>. We'll look at two possible strategies: first using the arglist, then the quickfix list.</p>
+        <p>Vim doesn&rsquo;t have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as <code>:substitute</code>, <code>:argdo</code>, and <code>:vimgrep</code>. We&rsquo;ll look at two possible strategies: first using the arglist, then the quickfix list.</p>
 
 
       </li>
@@ -323,29 +337,10 @@ xnoremap # :&lt;C-u&gt;call &lt;SID&gt;VSetSearch('?')&lt;CR&gt;?&lt;C-R&gt;=@/&
       </li>
     
       <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/supercharged-substitution-with-subvert/">Supercharged substitution with :Subvert</a></h4>
-        <p>The <a href="https://github.com/tpope/vim-abolish">abolish plugin</a> provides a command called <code>:Subvert</code>, which is like a supercharged version of Vim's built-in <code>:substitute</code> command. The <code>:Subvert</code> command is especially useful for changing singular and plural variants of a word, and for refactoring names that appear in <code>snake_case</code> and <code>MixedCase</code>.</p>
-
-<p><em>This is part two of a three-part series on Tim Pope's <a href="https://github.com/tpope/vim-abolish">abolish</a> plugin.</em></p>
-
-
-      </li>
-    
-      <li>
         <h4><a href="/episodes/smart-search-with-subvert/">Smart search with :Subvert</a></h4>
-        <p>The <code>:Subvert</code> command lets us create a particular style of regular expressions with ease. It's great for matching irregular singular and plural words in plain English and also for variable names that come in <code>snake_case</code> and <code>MixedCase</code> forms.</p>
+        <p>The <code>:Subvert</code> command lets us create a particular style of regular expressions with ease. It&rsquo;s great for matching irregular singular and plural words in plain English and also for variable names that come in <code>snake_case</code> and <code>MixedCase</code> forms.</p>
 
-<p><em>This is part one of a three-part series on Tim Pope's abolish plugin.</em></p>
+<p><em>This is part one of a three-part series on Tim Pope&rsquo;s abolish plugin.</em></p>
 
 
       </li>

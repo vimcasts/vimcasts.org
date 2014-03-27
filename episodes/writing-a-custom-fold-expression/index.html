@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -187,7 +188,7 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>With a little bit of Vimscript, you can create a custom folding expression for any filetype. We'll start by looking at the mechanics of folding with markers, then go on to create a folding expression for markdown documents.</p>
+        <p>With a little bit of Vimscript, you can create a custom folding expression for any filetype. We&rsquo;ll start by looking at the mechanics of folding with markers, then go on to create a folding expression for markdown documents.</p>
 
 
       </div>
@@ -226,30 +227,28 @@
         <div id="shownotes" class="content" data-swiftype-index="true">
           
 
-<p>Here's <a href="https://gist.github.com/4149842">a gist of the markdown folding expression</a> that was created in the video. </p>
+<p>Here&rsquo;s <a href="https://gist.github.com/4149842">a gist of the markdown folding expression</a> that was created in the video. </p>
 
-<h2 id="creating-an-ftplugin">Creating an ftplugin</h2>
+<h2>Creating an ftplugin</h2>
 
 <p>Create a filetype plugin for markdown files as follows:</p>
-
-<pre><code>mkdir -p ~/.vim/after/ftplugin/markdown
+<pre class="highlight plaintext">mkdir -p ~/.vim/after/ftplugin/markdown
 vim ~/.vim/after/ftplugin/markdown/folding.vim
-</code></pre>
+</pre>
 
 <p>You can replace <code>markdown</code> with the name of any other language to create a filetype plugin for that language instead.</p>
 
-<h2 id="the-mechanics-of-a-foldexpr">The mechanics of a <code>foldexpr</code></h2>
+<h2>The mechanics of a <code>foldexpr</code></h2>
 
-<p>Here's the boilerplate fold expression that we used to begin with:</p>
+<p>Here&rsquo;s the boilerplate fold expression that we used to begin with:</p>
+<pre class="highlight viml"><span class="k">function</span><span class="p">!</span> MarkdownFolds<span class="p">()</span>
+  <span class="k">return</span> <span class="s2">"0"</span>
+<span class="k">endfunction</span>
+<span class="k">setlocal</span> foldmethod<span class="p">=</span>expr
+<span class="k">setlocal</span> foldexpr<span class="p">=</span>MarkdownFolds<span class="p">()</span>
+</pre>
 
-<pre><code>function! MarkdownFolds()
-  return "0"
-endfunction
-setlocal foldmethod=expr
-setlocal foldexpr=MarkdownFolds()
-</code></pre>
-
-<p>It works like this: the <code>MarkdownFolds()</code> function is called one time <em>for each line</em> in the document. If the function returns <code>"0"</code>, it indicates that the line is not part of a fold. If the function returns <code>"1"</code>, it indicates that the line has a fold level of one. Here are a few more values that can be returned from a fold expression, with their meanings:</p>
+<p>It works like this: the <code>MarkdownFolds()</code> function is called one time <em>for each line</em> in the document. If the function returns <code>&quot;0&quot;</code>, it indicates that the line is not part of a fold. If the function returns <code>&quot;1&quot;</code>, it indicates that the line has a fold level of one. Here are a few more values that can be returned from a fold expression, with their meanings:</p>
 
 <table>
     <tr>
@@ -276,39 +275,37 @@ setlocal foldexpr=MarkdownFolds()
 
 <p>For a complete list of values that can be returned by a fold expression, look up <a href="http://vimdoc.sourceforge.net/htmldoc/fold.html#fold-expr"><code>:help fold-expr</code></a>.</p>
 
-<p>Inside of a fold expression, we can use the <a href="http://vimdoc.sourceforge.net/htmldoc/eval.html#v:lnum"><code>v:lnum</code></a> variable to access the line number of the current line that is being evaluated. This can easily be combined with the <a href="http://vimdoc.sourceforge.net/htmldoc/eval.html#getline()"><code>getline()</code></a> function to get the <em>contents</em> of the current line that's being evaluated.</p>
+<p>Inside of a fold expression, we can use the <a href="http://vimdoc.sourceforge.net/htmldoc/eval.html#v:lnum"><code>v:lnum</code></a> variable to access the line number of the current line that is being evaluated. This can easily be combined with the <a href="http://vimdoc.sourceforge.net/htmldoc/eval.html#getline()"><code>getline()</code></a> function to get the <em>contents</em> of the current line that&rsquo;s being evaluated.</p>
 
-<h2 id="customizing-the-foldtext">Customizing the <code>foldtext</code></h2>
+<h2>Customizing the <code>foldtext</code></h2>
 
-<p>We can customize the way that a fold looks by way of the <a title="foldtext" href="http://vimdoc.sourceforge.net/htmldoc/options.html#"><code>foldtext</code></a> option. Here's the boilerplate foldtext expression that we used to begin with:</p>
-
-<pre><code>function! MarkdownFoldText()
-  return getline(v:foldstart)
-endfunction
-setlocal foldtext=MarkdownFoldText()
-</code></pre>
+<p>We can customize the way that a fold looks by way of the <a href="http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;#x27;foldtext&amp;#x27;"><code>foldtext</code></a> option. Here&rsquo;s the boilerplate foldtext expression that we used to begin with:</p>
+<pre class="highlight viml"><span class="k">function</span><span class="p">!</span> MarkdownFoldText<span class="p">()</span>
+  <span class="k">return</span> getline<span class="p">(</span><span class="k">v</span><span class="p">:</span>foldstart<span class="p">)</span>
+<span class="k">endfunction</span>
+<span class="k">setlocal</span> foldtext<span class="p">=</span>MarkdownFoldText<span class="p">()</span>
+</pre>
 
 <p>Inside of a foldtext expression, we can use the <a href="http://vimdoc.sourceforge.net/htmldoc/eval.html#v:foldstart"><code>v:foldstart</code></a> and <a href="http://vimdoc.sourceforge.net/htmldoc/eval.html#v:foldend"><code>v:foldend</code></a> variables, which reference the line numbers of the first and last lines that make up the current fold.</p>
 
-<h2 id="further-reading">Further Reading</h2>
+<h2>Further Reading</h2>
 
 <ul>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/fold.html#fold-expr"><code>:help fold-expr</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/fold.html#fold-marker"><code>:help fold-marker</code></a></li>
-  <li><a title="foldcolumn" href="http://vimdoc.sourceforge.net/htmldoc/options.html#"><code>:help foldcolumn</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/fold.html#fold-foldcolumn"><code>:help fold-foldcolumn</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/eval.html#v:lnum"><code>:help v:lnum</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/fold.html#fold-expr"><code>:help fold-expr</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/fold.html#fold-marker"><code>:help fold-marker</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;#x27;foldcolumn&amp;#x27;"><code>:help foldcolumn</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/fold.html#fold-foldcolumn"><code>:help fold-foldcolumn</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/eval.html#v:lnum"><code>:help v:lnum</code></a></li>
 </ul>
 
 <p>In preparing this material, I took inspiration from several sources, including:</p>
 
 <ul>
-  <li><a href="https://gist.github.com/1038710">gist from Steve Losh</a></li>
-  <li><a href="http://learnvimscriptthehardway.stevelosh.com/chapters/48.html">Basic folding</a> chapter from Learn Vimscript the Hard Way</li>
-  <li><a href="http://learnvimscriptthehardway.stevelosh.com/chapters/49.html">Advanced folding</a> chapter from Learn Vimscript the Hard Way</li>
-  <li><a href="http://stackoverflow.com/questions/3828606/vim-markdown-folding">Vim Markdown Folding?</a> on Stack Overflow</li>
+<li><a href="https://gist.github.com/1038710">gist from Steve Losh</a></li>
+<li><a href="http://learnvimscriptthehardway.stevelosh.com/chapters/48.html">Basic folding</a> chapter from Learn Vimscript the Hard Way</li>
+<li><a href="http://learnvimscriptthehardway.stevelosh.com/chapters/49.html">Advanced folding</a> chapter from Learn Vimscript the Hard Way</li>
+<li><a href="http://stackoverflow.com/questions/3828606/vim-markdown-folding">Vim Markdown Folding?</a> on Stack Overflow</li>
 </ul>
-
 
         </div>
         </dd>
@@ -353,8 +350,20 @@ setlocal foldtext=MarkdownFoldText()
 
     
       <li>
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+      </li>
+    
+      <li>
         <h4><a href="/blog/2014/02/vimcasts-redesign-a-work-in-progress/">Vimcasts redesign: a work in progress</a></h4>
         <p>In the not-too-distant future, you can expect to see a revised design for Vimcasts.org. The most significant enhancements will be the addition of tags, site search, and a responsive design for smaller screens. Hannah Adcock, from <a href="http://contentedstrategy.com">contentedstrategy.com</a>, has been helping me out by analysing user feedback, as well as data from Google Analytics.</p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/how-to-fold/">How to fold</a></h4>
+        <p>Vim&rsquo;s folding feature enables us to expand and collapse regions of a document. Not only does this allow us to organize our workspace, it also makes it easy to navigate around the document, and to rearrange entire sections as though they were single lines.</p>
 
 
       </li>
@@ -365,20 +374,8 @@ setlocal foldtext=MarkdownFoldText()
       </li>
     
       <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
-      </li>
-    
-      <li>
         <h4><a href="/episodes/using-external-filter-commands-to-reformat-html/">Using external filter commands to reformat HTML</a></h4>
-        <p>We can use pandoc as a <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#filter">filter</a> to clean up <abbr title="what you see is what you get">WYSIWYG</abbr>-generated HTML. Pandoc is a commandline program, but we can call it from inside Vim either using the <a href="http://vimdoc.sourceforge.net/htmldoc/various.html#:!">bang Ex command</a>, or by configuring <a title="formatprg" href="http://vimdoc.sourceforge.net/htmldoc/options.html#">the <code>formatprg</code> option</a> to make the <code>gq</code> operator invoke pandoc.</p>
-
-
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/how-to-fold/">How to fold</a></h4>
-        <p>Vim's folding feature enables us to expand and collapse regions of a document. Not only does this allow us to organize our workspace, it also makes it easy to navigate around the document, and to rearrange entire sections as though they were single lines.</p>
+        <p>We can use pandoc as a <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#filter">filter</a> to clean up <abbr title="what you see is what you get">WYSIWYG</abbr>-generated HTML. Pandoc is a commandline program, but we can call it from inside Vim either using the <a href="http://vimdoc.sourceforge.net/htmldoc/various.html#:!">bang Ex command</a>, or by configuring <a href="http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;#x27;formatprg&amp;#x27;">the <code>formatprg</code> option</a> to make the <code>gq</code> operator invoke pandoc.</p>
 
 
       </li>

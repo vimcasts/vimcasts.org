@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -177,22 +178,22 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>Here on Vimcasts.org, I use Alex Gorbatchev's <a href="http://alexgorbatchev.com/wiki/SyntaxHighlighter">SyntaxHighlighter</a> to colorize the code excerpts. I couldn't find a syntax 'brush' for Vimscript, so I wrote my own. I also created a color theme based on the Blackboard scheme that I use in Vim (and TextMate). </p>
+        <p>Here on Vimcasts.org, I use Alex Gorbatchev&rsquo;s <a href="http://alexgorbatchev.com/wiki/SyntaxHighlighter">SyntaxHighlighter</a> to colorize the code excerpts. I couldn&rsquo;t find a syntax &lsquo;brush&rsquo; for Vimscript, so I wrote my own. I also created a color theme based on the Blackboard scheme that I use in Vim (and TextMate). </p>
 
 
 
 <p>I have published the Vimscript brush and Blackboard theme on github. You can find them here:</p>
 
 <ul>
-  <li><a href="http://github.com/nelstrom/SyntaxHighlighter/blob/master/styles/shThemeBlackboard.css">Blackboard theme</a></li>
-  <li><a href="http://github.com/nelstrom/SyntaxHighlighter/blob/master/scripts/shBrushVimscript.js">Vimscript syntax</a></li>
+<li><a href="http://github.com/nelstrom/SyntaxHighlighter/blob/master/styles/shThemeBlackboard.css">Blackboard theme</a></li>
+<li><a href="http://github.com/nelstrom/SyntaxHighlighter/blob/master/scripts/shBrushVimscript.js">Vimscript syntax</a></li>
 </ul>
 
 <p>I created these two files, but everything else in the project is by Alex Gorbatchev and the SyntaxHighligher community. The project is not hosted on github, otherwise I would have forked it.</p>
 
-<h3 id="vimscript-keywords">Vimscript keywords</h3>
+<h3>Vimscript keywords</h3>
 
-<p>The Vimscript brush includes a large list of keywords. I copied this list from Vim's own syntax file, which you can open up in Vim by running <code>:edit $VIMRUNTIME/syntax/vim.vim</code>. When defining syntax files for Vim, you can use a form of shorthand, e.g. <code>e[dit]</code>, which is equivalent to including both <code>e</code> and <code>edit</code>. The SyntaxHighligher doesn't understand this convention, so I had to expand all of these abbreviations into longhand. I wrote a <a href="http://github.com/nelstrom/SyntaxHighlighter/blob/master/expander.rb">little ruby script</a> that does this for me. Here's the gist of it:</p>
+<p>The Vimscript brush includes a large list of keywords. I copied this list from Vim&rsquo;s own syntax file, which you can open up in Vim by running <code>:edit $VIMRUNTIME/syntax/vim.vim</code>. When defining syntax files for Vim, you can use a form of shorthand, e.g. <code>e[dit]</code>, which is equivalent to including both <code>e</code> and <code>edit</code>. The SyntaxHighligher doesn&rsquo;t understand this convention, so I had to expand all of these abbreviations into longhand. I wrote a <a href="http://github.com/nelstrom/SyntaxHighlighter/blob/master/expander.rb">little ruby script</a> that does this for me. Here&rsquo;s the gist of it:</p>
 
 <pre class="brush: ruby">
 list = ['abc[lear]', 'argu[ment]', 'bel[owright]']
@@ -209,12 +210,11 @@ end
 puts output.join(' ')
 </pre>
 
-<p>Since I first created the Vimscript brush, I have occasionally pruned the list of keywords. Although it might be handy that you can type <code>:e</code> instead of spelling out <code>:edit</code> in full, I don't really want the letter <code>e</code> to be considered a <em>keyword</em>. </p>
+<p>Since I first created the Vimscript brush, I have occasionally pruned the list of keywords. Although it might be handy that you can type <code>:e</code> instead of spelling out <code>:edit</code> in full, I don&rsquo;t really want the letter <code>e</code> to be considered a <em>keyword</em>. </p>
 
-<p>This is a matter of taste, but I have come accross other situations where the shorthand actually caused problems. For example, if I want to include an angle bracket character (common in Vimscript when creating keymappings), I have to encode the <code>&lt;</code> character to it's HTML entity <code>&amp;lt;</code>. I found that the syntax highlighter would identify <code>lt</code> as a keyword (being shorthand for <code>ltag</code>), breaking the HTML entity up into something like <code>&amp;&lt;code class="keyword"&gt;lt&lt;/code&gt;;</code>. As a result, the angle bracket would instead appear spelled out as an HTML entity, with <code>lt</code> highlighted as a keyword!</p>
+<p>This is a matter of taste, but I have come accross other situations where the shorthand actually caused problems. For example, if I want to include an angle bracket character (common in Vimscript when creating keymappings), I have to encode the <code>&lt;</code> character to it&rsquo;s HTML entity <code>&amp;lt;</code>. I found that the syntax highlighter would identify <code>lt</code> as a keyword (being shorthand for <code>ltag</code>), breaking the HTML entity up into something like <code>&amp;&lt;code class=&quot;keyword&quot;&gt;lt&lt;/code&gt;;</code>. As a result, the angle bracket would instead appear spelled out as an HTML entity, with <code>lt</code> highlighted as a keyword!</p>
 
 <p>This makes a good case for removing <code>lt</code> from the list of keywords. It is quite possible that there are other keywords in the list which could cause similar problems, as yet unencountered. If you try out the Vimscript brush and discover any of these problems, please let me know. Or better still, fork the project, fix it, and send me a pull request on Github.</p>
-
 
       </div>
 
@@ -259,15 +259,22 @@ puts output.join(' ')
 
     
       <li>
-        <h4><a href="/episodes/creating-colorschemes-for-vim/">Creating colorschemes for Vim</a></h4>
-        <p>Choosing a colorscheme that you find pleasing to look at is essential if you want to be comfortable working with Vim. There are hundreds of colorschemes available, but what if you can't find one that you like? In this episode, I'll share a few tips that make it easy to create colorschemes for Vim.</p>
+        <h4><a href="/blog/2010/09/mac-classic/">Mac Classic - a light colorscheme</a></h4>
+        <p>I could never find a light colorscheme for Vim that I enjoyed using, so I finally took the time to port the &ldquo;Mac Classic&rdquo; theme from TextMate. The <a href="http://github.com/nelstrom/vim-mac-classic-theme">source code is on gitub</a>, so feel free to fork it.</p>
 
 
       </li>
     
       <li>
-        <h4><a href="/blog/2010/09/mac-classic/">Mac Classic - a light colorscheme</a></h4>
-        <p>I could never find a light colorscheme for Vim that I enjoyed using, so I finally took the time to port the "Mac Classic" theme from TextMate. The <a href="http://github.com/nelstrom/vim-mac-classic-theme">source code is on gitub</a>, so feel free to fork it.</p>
+        <h4><a href="/episodes/creating-colorschemes-for-vim/">Creating colorschemes for Vim</a></h4>
+        <p>Choosing a colorscheme that you find pleasing to look at is essential if you want to be comfortable working with Vim. There are hundreds of colorschemes available, but what if you can&rsquo;t find one that you like? In this episode, I&rsquo;ll share a few tips that make it easy to create colorschemes for Vim.</p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/blog/2014/02/vimcasts-redesign-a-work-in-progress/">Vimcasts redesign: a work in progress</a></h4>
+        <p>In the not-too-distant future, you can expect to see a revised design for Vimcasts.org. The most significant enhancements will be the addition of tags, site search, and a responsive design for smaller screens. Hannah Adcock, from <a href="http://contentedstrategy.com">contentedstrategy.com</a>, has been helping me out by analysing user feedback, as well as data from Google Analytics.</p>
 
 
       </li>
@@ -278,20 +285,13 @@ puts output.join(' ')
       </li>
     
       <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
-      </li>
-    
-      <li>
         <h4><a href="/publications">Publications</a></h4>
         <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
       </li>
     
       <li>
-        <h4><a href="/blog/2014/02/vimcasts-redesign-a-work-in-progress/">Vimcasts redesign: a work in progress</a></h4>
-        <p>In the not-too-distant future, you can expect to see a revised design for Vimcasts.org. The most significant enhancements will be the addition of tags, site search, and a responsive design for smaller screens. Hannah Adcock, from <a href="http://contentedstrategy.com">contentedstrategy.com</a>, has been helping me out by analysing user feedback, as well as data from Google Analytics.</p>
-
-
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
 

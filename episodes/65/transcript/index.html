@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -130,55 +131,52 @@
           </div>
         </div>
 
-        <p>I want to change the order of the words 'pepper' and 'salt' in this excerpt:</p>
+        <p>I want to change the order of the words &lsquo;pepper&rsquo; and &lsquo;salt&rsquo; in this excerpt:</p>
+<pre class="highlight plaintext">Can you pass the pepper and salt?
+</pre>
 
-<pre><code>Can you pass the pepper and salt?
-</code></pre>
+<p>Here&rsquo;s one possible workflow:</p>
 
-<p>Here's one possible workflow:</p>
-
-<p>We'll start by yanking the word 'pepper'.
-Then we'll select the word 'salt' and use the Visual mode put command.
-That overwrites the selection, and saves the word 'salt' to the default register.
-Now if I select the word 'pepper' and use the <code>p</code> command, it completes the job.</p>
+<p>We&rsquo;ll start by yanking the word &lsquo;pepper&rsquo;.
+Then we&rsquo;ll select the word &lsquo;salt&rsquo; and use the Visual mode put command.
+That overwrites the selection, and saves the word &lsquo;salt&rsquo; to the default register.
+Now if I select the word &lsquo;pepper&rsquo; and use the <code>p</code> command, it completes the job.</p>
 
 <p>I ran through that pretty quickly, but if you want a more detailed explanation check out Vimcasts episode 54.</p>
 
-<p>It's a neat workflow, but I feel that there's room for some improvement.
+<p>It&rsquo;s a neat workflow, but I feel that there&rsquo;s room for some improvement.
 If we want to revert to the previous order of words then we have to press undo twice, because we made two discreet changes.</p>
 
 <p>For an alternative approach, check out exchange, by Tom McDonald.
 This is a little gem of a plugin!
 It provides one extra operation: which is mapped to <code>cx</code> by default.</p>
 
-<p>Let's use this same example to demonstrate:</p>
+<p>Let&rsquo;s use this same example to demonstrate:</p>
 
-<p>I'll visually select the word 'pepper' then press <code>cx</code>
-That doesn't change the document, it just marks the selected text
-Next, I'll select the word 'salt', and when I press <code>cx</code> the two words are exchanged at once.</p>
+<p>I&rsquo;ll visually select the word &lsquo;pepper&rsquo; then press <code>cx</code>
+That doesn&rsquo;t change the document, it just marks the selected text
+Next, I&rsquo;ll select the word &lsquo;salt&rsquo;, and when I press <code>cx</code> the two words are exchanged at once.</p>
 
 <p>One pleasing consequence to this approach is that I can revert the change by pressing undo one time.</p>
 
 <p>The <code>cx</code> operator can also accept a motion:</p>
-
-<pre><code>:h cx
-</code></pre>
+<pre class="highlight plaintext">:h cx
+</pre>
 
 <p>I prefer to use it in this fashion, because it lets me use the dot command to repeat the <code>cx</code> operator using the same motion.
-Watch: with my cursor on the word 'pepper' I'll press <code>cxiw</code>, which marks the current word for exchange. 
-It also sets things up so that when I invoke the dot command, it's equivalent to typing <code>cxiw</code>.
-I'll move my cursor to the word 'salt'.
-Press dot one time…
+Watch: with my cursor on the word &lsquo;pepper&rsquo; I&rsquo;ll press <code>cxiw</code>, which marks the current word for exchange. 
+It also sets things up so that when I invoke the dot command, it&rsquo;s equivalent to typing <code>cxiw</code>.
+I&rsquo;ll move my cursor to the word &lsquo;salt&rsquo;.
+Press dot one time&hellip;
 And the two words are exchanged!</p>
 
 <p>Of course, the <code>cx</code> operator works fine with other motions and text objects too.
 Suppose that we want to swap the text inside parentheses on these two adjacent lines:</p>
-
-<pre><code>let blockstartcol = virtcol([start[1], start[2]])
+<pre class="highlight plaintext">let blockstartcol = virtcol([start[1], start[2]])
 let blockendcol = virtcol([end[1], end[2]])
-</code></pre>
+</pre>
 
-<p>We'll use <code>cxi)</code> "see-ex-eye-paren" to mark the text inside the first set of parens.
+<p>We&rsquo;ll use <code>cxi)</code> &ldquo;see-ex-eye-paren&rdquo; to mark the text inside the first set of parens.
 Place the cursor in between the next set of parens and use the dot command.
 Boom! The arguments have been exchanged.</p>
 

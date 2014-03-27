@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -182,86 +183,85 @@
 <p><a href="https://www.destroyallsoftware.com/screencasts">Gary Bernhardt</a> advocates using stock Vim, with very few customizations.</p>
 
 <blockquote>
-  <p>Vim is a chainsaw, and the last thing you want on a chainsaw is controls that are not the controls you're used to, because then you will cut your hand off.<br />
+<p>Vim is a chainsaw, and the last thing you want on a chainsaw is controls that are not the controls you&rsquo;re used to, because then you will cut your hand off.<br>
 Gary Bernhardt on <a href="http://rubyrogues.com/040-rr-text-editors-and-ides/">Ruby Rogues episode 40</a> (17:35)</p>
 </blockquote>
 
-<p>Gary's chainsaw metaphor warns against the practice of over-customizing Vim. But I would also warn against using Vim without any customizations. Vim is highly configurable, and some of the default settings are suboptimal. If you don't have a basic vimrc, then you're putting up with inconveniences that were fixed decades ago.</p>
+<p>Gary&rsquo;s chainsaw metaphor warns against the practice of over-customizing Vim. But I would also warn against using Vim without any customizations. Vim is highly configurable, and some of the default settings are suboptimal. If you don&rsquo;t have a basic vimrc, then you&rsquo;re putting up with inconveniences that were fixed decades ago.</p>
 
 
 
-<h3 id="vim-is-unlike-other-text-editors">Vim is unlike other text editors</h3>
+<h3>Vim is unlike other text editors</h3>
 
-<p>For the sake of illustration, I'd like to compare Vim with TextMate. I'm a recovering TextMate user, so I can speak about it with confidence, but you could probably <code>s/TextMate/Sublime</code> or <code>s/TextMate/BBEdit</code> and follow the discussion just as well.</p>
+<p>For the sake of illustration, I&rsquo;d like to compare Vim with TextMate. I&rsquo;m a recovering TextMate user, so I can speak about it with confidence, but you could probably <code>s/TextMate/Sublime</code> or <code>s/TextMate/BBEdit</code> and follow the discussion just as well.</p>
 
 <p><img alt="TextMate is a circle, Vim is a wedge" src="/images/blog/vim-mate.png" /></p>
 
-<p>For an OS X user, the TextMate experience is consistent with expectations. It follows conventions of OS X, such as cmd-F to summon the find dialog, cmd-G to jump to next match, and cmd-E to search for the selected text. These all work in Safari too, amongst other idiomatic OS X apps. I'd liken the TextMate experience with a circle. It's consistent and unsurprising, and I mean that in a good way!</p>
+<p>For an OS X user, the TextMate experience is consistent with expectations. It follows conventions of OS X, such as cmd-F to summon the find dialog, cmd-G to jump to next match, and cmd-E to search for the selected text. These all work in Safari too, amongst other idiomatic OS X apps. I&rsquo;d liken the TextMate experience with a circle. It&rsquo;s consistent and unsurprising, and I mean that in a good way!</p>
 
-<p>By contrast, the Vim experience is triangular. It doesn't matter whether you're used to working on OS X, Windows or Linux, the experience of using Vim isn't going to feel like a natural fit with the conventions of the operating system. Vim has its own internal consistency. It feels more or less the same, no matter which environment it runs in.</p>
+<p>By contrast, the Vim experience is triangular. It doesn&rsquo;t matter whether you&rsquo;re used to working on OS X, Windows or Linux, the experience of using Vim isn&rsquo;t going to feel like a natural fit with the conventions of the operating system. Vim has its own internal consistency. It feels more or less the same, no matter which environment it runs in.</p>
 
-<p>Vim has sharp edges. If you're not careful, you might cut yourself. But if you know how to wield it, you can exploit those sharp edges to slice through text effortlessly.</p>
+<p>Vim has sharp edges. If you&rsquo;re not careful, you might cut yourself. But if you know how to wield it, you can exploit those sharp edges to slice through text effortlessly.</p>
 
-<h3 id="vim-can-be-configured-to-be-more-like-other-editors">Vim can be configured to be more like other editors</h3>
+<h3>Vim can be configured to be more like other editors</h3>
 
-<p>Some plugins aim to recreate something of the TextMate experience for Vim users. These plugins attempt to trace a circle around Vim's core:</p>
+<p>Some plugins aim to recreate something of the TextMate experience for Vim users. These plugins attempt to trace a circle around Vim&rsquo;s core:</p>
 
 <p><img alt="Vim plugins can emulate some TextMate-like features" src="/images/blog/vim-crutch.png" /></p>
 
-<p>If you're used to TextMate, then this kind of setup allows you to stay inside your comfort zone while you find your bearings. Vim's learning curve is famously difficult, so anything that helps the beginner to get a leg up is to be commended.</p>
+<p>If you&rsquo;re used to TextMate, then this kind of setup allows you to stay inside your comfort zone while you find your bearings. Vim&rsquo;s learning curve is famously difficult, so anything that helps the beginner to get a leg up is to be commended.</p>
 
-<p>But I feel that this kind of setup prevents the user from learning <em>The Vim Way</em>. The interesting stuff happens in those sharp corners. If you stay in your comfort zone, you won't discover them. </p>
+<p>But I feel that this kind of setup prevents the user from learning <em>The Vim Way</em>. The interesting stuff happens in those sharp corners. If you stay in your comfort zone, you won&rsquo;t discover them. </p>
 
 <p>Superimposing a circle on the wedge makes the Vim experience resemble an axehead with a child-safety guard. If you are using the Janus Vim distribution, <a href="https://twitter.com/nelstrom/status/223469356619800577">I am speaking to you</a>.</p>
 
-<h3 id="plugins-can-extend-vims-base">Plugins can extend Vim's base</h3>
+<h3>Plugins can extend Vim&rsquo;s base</h3>
 
-<p>Some plugins extend Vim's core functionality by strengthening its foundations:</p>
+<p>Some plugins extend Vim&rsquo;s core functionality by strengthening its foundations:</p>
 
 <p><img alt="Vim plugins can extend the core functionality" src="/images/blog/vim-extend.png" /></p>
 
-<p>Vim is designed to be extended. Many 'core' features are implemented in Vim script, rather than in C. These tend to be language specific features, such as syntax highlighting, indentation awareness, and omni completion. Out of the box, Vim provides syntax highlighting for hundreds of languages. You can browse the list by running <code>:edit $VIMRUNTIME/syntax</code>.</p>
+<p>Vim is designed to be extended. Many &lsquo;core&rsquo; features are implemented in Vim script, rather than in C. These tend to be language specific features, such as syntax highlighting, indentation awareness, and omni completion. Out of the box, Vim provides syntax highlighting for hundreds of languages. You can browse the list by running <code>:edit $VIMRUNTIME/syntax</code>.</p>
 
-<p>Vim ships with batteries included - plug-ins already plugged in - which means you can expect basic support when working with diverse file types. This provides a useful baseline, but it's worth seeking out more up to date support for the languages that you use most frequently. For example, the <a href="http://github.com/vim-ruby/vim-ruby">vim-ruby</a> plugin is maintained by members of the ruby community. It's updated much more frequently than the Vim distribution, so if you do a lot of ruby work, you should <a href="http://github.com/vim-ruby/vim-ruby">get the latest release of vim-ruby from github</a>.</p>
+<p>Vim ships with batteries included - plug-ins already plugged in - which means you can expect basic support when working with diverse file types. This provides a useful baseline, but it&rsquo;s worth seeking out more up to date support for the languages that you use most frequently. For example, the <a href="http://github.com/vim-ruby/vim-ruby">vim-ruby</a> plugin is maintained by members of the ruby community. It&rsquo;s updated much more frequently than the Vim distribution, so if you do a lot of ruby work, you should <a href="http://github.com/vim-ruby/vim-ruby">get the latest release of vim-ruby from github</a>.</p>
 
-<p>Vim doesn't support coffeescript out of the box, but you can <a href="https://github.com/kchmck/vim-coffee-script.git">install a plugin to enable syntax highlighting for <code>.coffee</code> files</a>. If you're doing a lot of work with coffeescript, then you'd be crazy not to install that plugin!</p>
+<p>Vim doesn&rsquo;t support coffeescript out of the box, but you can <a href="https://github.com/kchmck/vim-coffee-script.git">install a plugin to enable syntax highlighting for <code>.coffee</code> files</a>. If you&rsquo;re doing a lot of work with coffeescript, then you&rsquo;d be crazy not to install that plugin!</p>
 
-<h3 id="plugins-can-sharpen-the-saw">Plugins can sharpen the saw</h3>
+<h3>Plugins can sharpen the saw</h3>
 
-<p>Some plugins extend Vim's core functionality by sharpening the saw:</p>
+<p>Some plugins extend Vim&rsquo;s core functionality by sharpening the saw:</p>
 
 <p><img alt="Vim plugins can sharpen the saw" src="/images/blog/vim-sharpen.png" /></p>
 
-<p>This is my favorite category. These plugins use Vim's core functionality as a reference point, then extrapolate by asking "what if…?"</p>
+<p>This is my favorite category. These plugins use Vim&rsquo;s core functionality as a reference point, then extrapolate by asking &ldquo;what if&hellip;?&rdquo;</p>
 
-<p>When you know Vim's capabilities, you'll start to find yourself reaching for things that aren't there. You'll notice common patterns of usage, and realize that they could be streamlined if only Vim had an operator or motion for the job. </p>
+<p>When you know Vim&rsquo;s capabilities, you&rsquo;ll start to find yourself reaching for things that aren&rsquo;t there. You&rsquo;ll notice common patterns of usage, and realize that they could be streamlined if only Vim had an operator or motion for the job. </p>
 
-<p>Vim's commands are made to be combined. They follow a simple grammar: <code>{operator}{motion}</code>. That means that you can delete a word or paragraph by running <code>daw</code> or <code>dap</code>, just as you can yank a word or paragraph by running <code>yaw</code> or <code>yap</code>. If you add a custom operator command, then it should work with all the existing motions and text objects. If you add a custom text object, it should work with all existing operators.</p>
+<p>Vim&rsquo;s commands are made to be combined. They follow a simple grammar: <code>{operator}{motion}</code>. That means that you can delete a word or paragraph by running <code>daw</code> or <code>dap</code>, just as you can yank a word or paragraph by running <code>yaw</code> or <code>yap</code>. If you add a custom operator command, then it should work with all the existing motions and text objects. If you add a custom text object, it should work with all existing operators.</p>
 
 <p>Take the <a href="https://github.com/tpope/vim-commentary">commentary.vim</a> plugin, for example. It adds an <a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#operator">operator command</a> that toggles comments, and is mapped to <code>\\{motion}</code>. With that plugin installed, you can run <code>\\ip</code> to comment/uncomment the current paragraph.</p>
 
-<p>Depending on how you format your code, a <em>paragraph</em> might happen to map to method definitions. But wouldn't it be nice if there was a text object that mapped directly to your method definitions, regardless of how they were formatted?</p>
+<p>Depending on how you format your code, a <em>paragraph</em> might happen to map to method definitions. But wouldn&rsquo;t it be nice if there was a text object that mapped directly to your method definitions, regardless of how they were formatted?</p>
 
 <p>For rubyists, the <a href="http://github.com/vim-ruby/vim-ruby">vim-ruby</a> plugin has you covered. It adds text-objects for operating inside or around the current ruby method, with <code>im</code> or <code>am</code>. If you have both commentary.vim and vim-ruby installed, then you can comment out/in the current ruby method by pressing <code>\\am</code>. Use the <code>.</code> command to repeat.</p>
 
-<p>Adding new operators and motions is like adding words to Vim's vocabulary. The more words we have, the more ideas we can express.</p>
+<p>Adding new operators and motions is like adding words to Vim&rsquo;s vocabulary. The more words we have, the more ideas we can express.</p>
 
-<p>Vim is a work in progress. You can view a list of feature requests by running <a href="http://vimdoc.sourceforge.net/htmldoc/todo.html#todo"><code>:help todo</code></a>. Try searching that document for 'text object', and you'll see that a handful of text objects are on the road map. But why wait? You can have those features today if you install the appropriate plugins.</p>
+<p>Vim is a work in progress. You can view a list of feature requests by running <a href="http://vimdoc.sourceforge.net/htmldoc/todo.html#todo"><code>:help todo</code></a>. Try searching that document for &lsquo;text object&rsquo;, and you&rsquo;ll see that a handful of text objects are on the road map. But why wait? You can have those features today if you install the appropriate plugins.</p>
 
-<h3 id="know-the-saw-then-sharpen-it">Know the saw, then sharpen it</h3>
+<h3>Know the saw, then sharpen it</h3>
 
-<p>In his classic essay, <a href="http://www.moolenaar.net/habits.html">Seven habits of effective editing</a>, Bram Moolenaar encourages us to invest time in sharpening the saw. Building your <code>vimrc</code> file and installing plugins are both ways of doing that, but it's vital that you understand Vim's baseline functionality before you build on top of it. First, learn to use the saw. Then sharpen it.</p>
+<p>In his classic essay, <a href="http://www.moolenaar.net/habits.html">Seven habits of effective editing</a>, Bram Moolenaar encourages us to invest time in sharpening the saw. Building your <code>vimrc</code> file and installing plugins are both ways of doing that, but it&rsquo;s vital that you understand Vim&rsquo;s baseline functionality before you build on top of it. First, learn to use the saw. Then sharpen it.</p>
 
-<p>I've seen people customizing Vim in ways that blunt the saw. I've even seen people sharpening the wrong edge! </p>
+<p>I&rsquo;ve seen people customizing Vim in ways that blunt the saw. I&rsquo;ve even seen people sharpening the wrong edge! </p>
 
-<p>There's more to Vim's core functionality than you may realize. In my book, <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, I demonstrate all of the essential features of stock Vim. Learn to use vanilla Vim well, then you'll be in a position to decide which plugins are a help, and which are a hindrance.</p>
+<p>There&rsquo;s more to Vim&rsquo;s core functionality than you may realize. In my book, <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, I demonstrate all of the essential features of stock Vim. Learn to use vanilla Vim well, then you&rsquo;ll be in a position to decide which plugins are a help, and which are a hindrance.</p>
 
-<h3 id="post-script-what-shape-is-emacs">Post Script: what shape is emacs?</h3>
+<h3>Post Script: what shape is emacs?</h3>
 
 <p>I presented these ideas at a lightning talk at the Scottish Ruby Conference. Emacs guru Jim Weirich was in the audience, and he made <a href="https://twitter.com/jimweirich/status/218769796500701184">this sketch</a>:</p>
 
 <p><img alt="TextMate circle, Vim triangle, emacs fractal" src="/images/blog/mate-vim-emacs.png" /></p>
-
 
       </div>
 
@@ -311,46 +311,45 @@ Gary Bernhardt on <a href="http://rubyrogues.com/040-rr-text-editors-and-ides/">
       </li>
     
       <li>
-        <h4><a href="/blog/2013/01/vimlondon-january-meetup-speak-vim---operators-and-motions/">VimLondon January Meetup: Speak Vim - Operators and Motions</a></h4>
-        <p>On Tuesday 29th January, <a href="http://www.meetup.com/Vim-London/">VimLondon</a> is holding a meetup with a theme: <a href="http://www.meetup.com/Vim-London/events/97866502/">Speak Vim - Operators and Motions</a>. We've got 5 short talks lined up:</p>
-
-<ol>
-  <li><a href="http://twitter.com/tea_sea">Tom Cammann</a>, Intro to Vim Grammar</li>
-  <li><a href="http://twitter.com/nelstrom">Drew Neil</a>, When and why you should stay out of visual mode</li>
-  <li><a href="http://twitter.com/Jack_Franklin">Jack Franklin</a>, Meet <a href="https://github.com/Lokaltog/vim-easymotion">easymotion</a></li>
-  <li><a href="http://twitter.com/krisajenkins">Kris Jenkins</a>, Meet <a href="https://github.com/tpope/vim-surround">surround</a></li>
-  <li><a href="http://twitter.com/alex_young">Alex Young</a>, Creating <a href="http://usevim.com/2013/01/16/custom-motions/">custom motions</a></li>
-</ol>
-
-<p>I'm looking forward to this event, because the subject of Vim's Grammar fascinates me. If you'd like to attend, <a href="http://www.meetup.com/Vim-London/events/97866502/">RSVP on Meetup.com</a>. The event is kindly being hosted by <a href="https://www.fundingcircle.com/">Funding Circle</a>. You can also find the event listed on <a href="http://lanyrd.com/2013/vimlondon/">lanyrd</a>.</p>
-
-
-      </li>
-    
-      <li>
-        <h4><a href="/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/">Oil and vinegar - split windows and the project drawer</a></h4>
-        <p>Do you avoid using Vim's split windows because they're confusing? That might be a problem of your own devising. If you've bolted a project drawer onto Vim, then you've added unnecessary complexity to Vim's otherwise minimal interface. Split windows and the project drawer go together like oil and vinegar. I don't mean to say that you can combine them to create a delicious salad dressing. I mean that they don't mix well!</p>
-
-
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/">Fugitive.vim - exploring the history of a git repository</a></h4>
-        <p>Git provides tools for searching the contents of files, commit messages, and even whether text was added or removed by a commit. In this episode, we'll see how fugitive's <code>Ggrep</code> and <code>Glog</code> commands wrap this functionality up so that we can search the contents and history of a git repo from right inside of Vim.</p>
-
-<p><em>This is the last of our five part series on fugitive.vim.</em></p>
-
-
-      </li>
-    
-      <li>
         <h4><a href="/training">Vim Training</a></h4>
         <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
       </li>
     
       <li>
+        <h4><a href="/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/">Oil and vinegar - split windows and the project drawer</a></h4>
+        <p>Do you avoid using Vim&rsquo;s split windows because they&rsquo;re confusing? That might be a problem of your own devising. If you&rsquo;ve bolted a project drawer onto Vim, then you&rsquo;ve added unnecessary complexity to Vim&rsquo;s otherwise minimal interface. Split windows and the project drawer go together like oil and vinegar. I don&rsquo;t mean to say that you can combine them to create a delicious salad dressing. I mean that they don&rsquo;t mix well!</p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/blog/2013/01/vimlondon-january-meetup-speak-vim---operators-and-motions/">VimLondon January Meetup: Speak Vim - Operators and Motions</a></h4>
+        <p>On Tuesday 29th January, <a href="http://www.meetup.com/Vim-London/">VimLondon</a> is holding a meetup with a theme: <a href="http://www.meetup.com/Vim-London/events/97866502/">Speak Vim - Operators and Motions</a>. We&rsquo;ve got 5 short talks lined up:</p>
+
+<ol>
+<li><a href="http://twitter.com/tea_sea">Tom Cammann</a>, Intro to Vim Grammar</li>
+<li><a href="http://twitter.com/nelstrom">Drew Neil</a>, When and why you should stay out of visual mode</li>
+<li><a href="http://twitter.com/Jack_Franklin">Jack Franklin</a>, Meet <a href="https://github.com/Lokaltog/vim-easymotion">easymotion</a></li>
+<li><a href="http://twitter.com/krisajenkins">Kris Jenkins</a>, Meet <a href="https://github.com/tpope/vim-surround">surround</a></li>
+<li><a href="http://twitter.com/alex_young">Alex Young</a>, Creating <a href="http://usevim.com/2013/01/16/custom-motions/">custom motions</a></li>
+</ol>
+
+<p>I&rsquo;m looking forward to this event, because the subject of Vim&rsquo;s Grammar fascinates me. If you&rsquo;d like to attend, <a href="http://www.meetup.com/Vim-London/events/97866502/">RSVP on Meetup.com</a>. The event is kindly being hosted by <a href="https://www.fundingcircle.com/">Funding Circle</a>. You can also find the event listed on <a href="http://lanyrd.com/2013/vimlondon/">lanyrd</a>.</p>
+
+      </li>
+    
+      <li>
         <h4><a href="/categories">Find by category</a></h4>
         <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/">Fugitive.vim - exploring the history of a git repository</a></h4>
+        <p>Git provides tools for searching the contents of files, commit messages, and even whether text was added or removed by a commit. In this episode, we&rsquo;ll see how fugitive&rsquo;s <code>Ggrep</code> and <code>Glog</code> commands wrap this functionality up so that we can search the contents and history of a git repo from right inside of Vim.</p>
+
+<p><em>This is the last of our five part series on fugitive.vim.</em></p>
+
+
       </li>
     
 

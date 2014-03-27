@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -143,49 +144,43 @@
       
 
       <p>When you launch vim, it will automatically load and execute your vimrc file. If you modify the vimrc file whilst Vim is running you can apply those changes by running the command:</p>
-
-<pre><code>:source $MYVIMRC
+<pre class="highlight plaintext">:source $MYVIMRC
 "colon source - dollar my vim-R-C in all caps"
-</code></pre>
+</pre>
 
-<p>"dollar my vim-R-C" is a constant which should work whether you are running Vim on a unix system or on Windows.</p>
+<p>&ldquo;dollar my vim-R-C&rdquo; is a constant which should work whether you are running Vim on a unix system or on Windows.</p>
 
-<p>Of course, you have to save the changes to your vimrc file before sourcing it. Now, I can't see myself wanting to save my <code>vimrc</code> file and <em>not</em> apply any changes. So I have added an autocommand to my vimrc file:</p>
-
-<pre><code>" Source the vimrc file after saving it
+<p>Of course, you have to save the changes to your vimrc file before sourcing it. Now, I can&rsquo;t see myself wanting to save my <code>vimrc</code> file and <em>not</em> apply any changes. So I have added an autocommand to my vimrc file:</p>
+<pre class="highlight plaintext">" Source the vimrc file after saving it
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
-</code></pre>
+</pre>
 
 <p>This breaks down as follows:</p>
+<pre class="highlight plaintext">.vimrc
+</pre>
 
-<pre><code>.vimrc
-</code></pre>
-
-<p>If the current file is called "dot-vimrc", </p>
-
-<pre><code>autocmd bufwritepost
-</code></pre>
+<p>If the current file is called &ldquo;dot-vimrc&rdquo;, </p>
+<pre class="highlight plaintext">autocmd bufwritepost
+</pre>
 
 <p>fire this autocommand after writing the buffer to disc.</p>
-
-<pre><code>source $MYVIMRC
-</code></pre>
+<pre class="highlight plaintext">source $MYVIMRC
+</pre>
 
 <p>When this event is triggered, Vim will automatically source your vimrc, applying any changes which you just saved.</p>
 
-<p>To demonstrate this, I'm going to apply a different colorscheme. You should be able to see that the new colorscheme is applied as soon as I write my vimrc file.</p>
+<p>To demonstrate this, I&rsquo;m going to apply a different colorscheme. You should be able to see that the new colorscheme is applied as soon as I write my vimrc file.</p>
 
-<h1 id="quickly-open-the-vimrc-file">Quickly open the vimrc file</h1>
+<h1>Quickly open the vimrc file</h1>
 
 <p>I also like to make it as easy as possible to open my vimrc file.</p>
-
-<pre><code>let mapleader = ","
+<pre class="highlight plaintext">let mapleader = ","
 nmap &lt;leader&gt;v :tabedit $MYVIMRC&lt;CR&gt;
-</code></pre>
+</pre>
 
-<p>This mapping opens the vimrc file in a new tab when I hit "comma-v" in normal mode. "V" is my mnemonic for vimrc. Feel free to modify the mappings, and the functionality to suit your preferences.</p>
+<p>This mapping opens the vimrc file in a new tab when I hit &ldquo;comma-v&rdquo; in normal mode. &ldquo;V&rdquo; is my mnemonic for vimrc. Feel free to modify the mappings, and the functionality to suit your preferences.</p>
 
     </div>
   </div>

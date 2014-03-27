@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -137,57 +138,51 @@
         <h1><a href="/episodes/smart-search-with-subvert/">Smart search with :Subvert</a></h1>
         <h2>Transcript for episode #47</h2>
 
-        <p>The <code>:Subvert</code> command lets us create a particular style of regular expressions with ease. It's great for matching irregular singular and plural words in plain English and also for variable names that come in <code>snake_case</code> and <code>MixedCase</code> forms.</p>
+        <p>The <code>:Subvert</code> command lets us create a particular style of regular expressions with ease. It&rsquo;s great for matching irregular singular and plural words in plain English and also for variable names that come in <code>snake_case</code> and <code>MixedCase</code> forms.</p>
 
-<p><em>This is part one of a three-part series on Tim Pope's abolish plugin.</em></p>
+<p><em>This is part one of a three-part series on Tim Pope&rsquo;s abolish plugin.</em></p>
 
 
       
 
-      <h2 id="subvert---a-supercharged-search-dsl">:Subvert - a supercharged search DSL</h2>
+      <h2>:Subvert - a supercharged search DSL</h2>
 
-<p>Vim's search command is case-sensitive by default. I can demonstrate with this text by searching for</p>
+<p>Vim&rsquo;s search command is case-sensitive by default. I can demonstrate with this text by searching for</p>
+<pre class="highlight plaintext">/pumpkin
+</pre>
 
-<pre><code>/pumpkin
-</code></pre>
+<p>It matches this occurrence in lowercase, but not the mixedcase occurrence here. Vim provides a few options that allow you to tune the case-sensitivity of the search command, such as <code>ignorecase</code> and <code>smartcase</code>. But I want to show you an alternative approach, as used by Tim Pope&rsquo;s abolish plugin.</p>
 
-<p>It matches this occurrence in lowercase, but not the mixedcase occurrence here. Vim provides a few options that allow you to tune the case-sensitivity of the search command, such as <code>ignorecase</code> and <code>smartcase</code>. But I want to show you an alternative approach, as used by Tim Pope's abolish plugin.</p>
+<p>This plugin adds a command called <code>:Subvert</code>. I&rsquo;ll call it with the text <code>pumpkin</code>:</p>
+<pre class="highlight plaintext">:Subvert /pumpkin
+</pre>
 
-<p>This plugin adds a command called <code>:Subvert</code>. I'll call it with the text <code>pumpkin</code>:</p>
-
-<pre><code>:Subvert /pumpkin
-</code></pre>
-
-<p>That matches both occurrences. But watch this: if I upcase the letter 'k', it no longer matches. Clearly, there's some kind of case-sensitivity going on here. We can inspect the pattern by pasting it from the search-register:</p>
-
-<pre><code>/&lt;C-r&gt;/
+<p>That matches both occurrences. But watch this: if I upcase the letter &lsquo;k&rsquo;, it no longer matches. Clearly, there&rsquo;s some kind of case-sensitivity going on here. We can inspect the pattern by pasting it from the search-register:</p>
+<pre class="highlight plaintext">/&lt;C-r&gt;/
 \v\C%(PUMPKIN|Pumpkin|pumpkin)
-</code></pre>
+</pre>
 
 <p>The <code>\C</code> (big-C) switch enforces case-sensitivity, overriding the value of settings such as <code>ignorecase</code>. Then we get three variations of our specified text: uppercase, mixed-case, and lowercase. Nothing else will match.</p>
 
 <p>You get the idea?</p>
 
-<p>Now let's try something a bit different. The <code>:Subvert</code> command can accept a comma-seperated list of alternatives, wrapped in braces. Let's try searching for a few different words with a single command:</p>
-
-<pre><code>:Subvert/{pumpkin,mouse,user}
+<p>Now let&rsquo;s try something a bit different. The <code>:Subvert</code> command can accept a comma-seperated list of alternatives, wrapped in braces. Let&rsquo;s try searching for a few different words with a single command:</p>
+<pre class="highlight plaintext">:Subvert/{pumpkin,mouse,user}
 \v\C%(PUMPKIN|Pumpkin|pumpkin|MOUSE|Mouse|mouse|USER|User|user)
-</code></pre>
+</pre>
 
-<p>This time, the generated pattern includes three variations for each of the specified words. That's nifty!</p>
+<p>This time, the generated pattern includes three variations for each of the specified words. That&rsquo;s nifty!</p>
 
-<p>Consider this: the word 'mouse' has an irregular plural: 'mice'. With the subvert command, we can easily generate a pattern that will match the singular and plural forms.</p>
+<p>Consider this: the word &lsquo;mouse&rsquo; has an irregular plural: &lsquo;mice&rsquo;. With the subvert command, we can easily generate a pattern that will match the singular and plural forms.</p>
+<pre class="highlight plaintext">:S/m{ouse,ice}
+</pre>
 
-<pre><code>:S/m{ouse,ice}
-</code></pre>
+<p>The letter &rsquo;m&#39; is common to both alternatives, so I&rsquo;ve specified it outside of the comma-separated list. Admittedly, it doesn&rsquo;t save a lot of typing in this case!</p>
 
-<p>The letter 'm' is common to both alternatives, so I've specified it outside of the comma-separated list. Admittedly, it doesn't save a lot of typing in this case!</p>
-
-<h2 id="variable-names">Variable names</h2>
+<h2>Variable names</h2>
 
 <p>The subvert command is also handy if you want to find a variable name that appears in both <code>MixedCase</code> and <code>snake_case</code>. For example, in ruby, module names and class names are given in <code>MixedCase</code>, while <code>snake_case</code> is used for naming the corresponding files. </p>
-
-<pre><code>require "parslet"
+<pre class="highlight plaintext">require "parslet"
 require "vimprint/parser/insert_mode"
 require "vimprint/parser/visual_mode"
 require "vimprint/parser/cmdline_mode"
@@ -199,56 +194,52 @@ module VimPrint
   ...
   end
 end
-</code></pre>
+</pre>
 
 <p>If we run the <code>:Subvert</code> command with the snake cased <code>insert_mode</code> variable, it automatically matches the mixed case version too.</p>
-
-<pre><code>:S/insert_mode
+<pre class="highlight plaintext">:S/insert_mode
 \v\C%(INSERT_MODE|insert_mode|InsertMode)
-</code></pre>
+</pre>
 
 <p>Again, we have three variations: <code>SNAKE_UPPERCASE</code>, <code>snake_case</code>, and <code>MixedCase</code>.</p>
 
 <p>If we wanted to match these other variables, we could modify our <code>:Subvert</code> command to use a comma-separated list:</p>
+<pre class="highlight plaintext">:S/{insert,visual,cmdline}_mode
+</pre>
 
-<pre><code>:S/{insert,visual,cmdline}_mode
-</code></pre>
-
-<p>Now here's another neat little trick: the <code>cr</code> mapping lets us quickly mutate between different styles of variable. If I press:</p>
+<p>Now here&rsquo;s another neat little trick: the <code>cr</code> mapping lets us quickly mutate between different styles of variable. If I press:</p>
 
 <ul>
-  <li><code>crc</code>, it transforms the variable to camel case. (As a mnemonic, you can think of it as <em>coerce to camel-case</em>.) </li>
-  <li><code>cr-</code> uses dashes to separate the words (I'll undo that)</li>
-  <li><code>crm</code> switches to mixed case</li>
+<li><code>crc</code>, it transforms the variable to camel case. (As a mnemonic, you can think of it as <em>coerce to camel-case</em>.) </li>
+<li><code>cr-</code> uses dashes to separate the words (I&rsquo;ll undo that)</li>
+<li><code>crm</code> switches to mixed case</li>
 </ul>
 
-<p>If you've also installed Tim Pope's repeat plugin, then the dot command will work as you would expect.</p>
+<p>If you&rsquo;ve also installed Tim Pope&rsquo;s repeat plugin, then the dot command will work as you would expect.</p>
 
 <ul>
-  <li><code>crs</code> switches back to snake case</li>
+<li><code>crs</code> switches back to snake case</li>
 </ul>
 
 <p>How cool is that?</p>
 
-<h2 id="using-subvert-across-multiple-files">Using :Subvert across multiple files</h2>
+<h2>Using :Subvert across multiple files</h2>
 
-<p>So far, we've been using the <code>:Subvert</code> command to search inside the current buffer, but we can easily make it search across multiple files. We just have to specify the path of the directory we want to look inside:</p>
-
-<pre><code>:S /vimprint/ lib/**/*.rb
-</code></pre>
+<p>So far, we&rsquo;ve been using the <code>:Subvert</code> command to search inside the current buffer, but we can easily make it search across multiple files. We just have to specify the path of the directory we want to look inside:</p>
+<pre class="highlight plaintext">:S /vimprint/ lib/**/*.rb
+</pre>
 
 <p>Boom!</p>
+<pre class="highlight plaintext">:copen
+</pre>
 
-<pre><code>:copen
-</code></pre>
+<p>It populates the quickfix list, just as though we&rsquo;d run the <code>:vimgrep</code> command.</p>
 
-<p>It populates the quickfix list, just as though we'd run the <code>:vimgrep</code> command.</p>
+<p>Of course, we could achieve the same effect by pasting the pattern register into the search field of the <code>:vimgrep</code> command. We&rsquo;re working with standard Vim regexes throughout, so the patterns generated by <code>:Subvert</code> will work with any of Vim&rsquo;s pattern based commands.</p>
 
-<p>Of course, we could achieve the same effect by pasting the pattern register into the search field of the <code>:vimgrep</code> command. We're working with standard Vim regexes throughout, so the patterns generated by <code>:Subvert</code> will work with any of Vim's pattern based commands.</p>
+<h2>Outro</h2>
 
-<h2 id="outro">Outro</h2>
-
-<p>It's unlikely that you would compose such a complex pattern as this by hand, but the <code>:Subvert</code> command makes it trivially easy. I like to think that it provides a domain-specific language for generating a particular style of regular expression.</p>
+<p>It&rsquo;s unlikely that you would compose such a complex pattern as this by hand, but the <code>:Subvert</code> command makes it trivially easy. I like to think that it provides a domain-specific language for generating a particular style of regular expression.</p>
 
     </div>
   </div>

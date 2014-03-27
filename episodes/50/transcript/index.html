@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -130,188 +131,172 @@
           </div>
         </div>
 
-        <h1 id="introduction-to-vspec">Introduction to vspec</h1>
+        <h1>Introduction to vspec</h1>
 
-<h2 id="installation">Installation</h2>
+<h2>Installation</h2>
 
-<p>vspec is written by Kana Natsuno. You can find the library on GitHub, and Kana's blog has instructions on how to set up a Vim plugin to use vspec. I won't demonstrate those steps in this video, but you can find links in the shownotes for this episode.</p>
+<p>vspec is written by Kana Natsuno. You can find the library on GitHub, and Kana&rsquo;s blog has instructions on how to set up a Vim plugin to use vspec. I won&rsquo;t demonstrate those steps in this video, but you can find links in the shownotes for this episode.</p>
 
-<p>I've set things up here so that I can run the vspec tests using the rake command. I've also defined a mapping that lets me execute the tests from inside of Vim. There's nothing to see yet, so let's write some tests.</p>
+<p>I&rsquo;ve set things up here so that I can run the vspec tests using the rake command. I&rsquo;ve also defined a mapping that lets me execute the tests from inside of Vim. There&rsquo;s nothing to see yet, so let&rsquo;s write some tests.</p>
 
-<h2 id="first-test">First test</h2>
+<h2>First test</h2>
 
 <p>Vspec lets you write tests following a format that resembles rspec. We can use a <code>describe</code> block to specify a context, then wrap each individual test in an <code>it</code> block. Each of these blocks is closed with an <code>end</code> keyword, just like in ruby:</p>
-
-<pre><code>describe 'vspec'
+<pre class="highlight plaintext">describe 'vspec'
   it 'is inspired by rspec'
   end
 end
-</code></pre>
+</pre>
 
 <p>We can place Vimscript code inside of these blocks and it will be executed by the vspec runner.</p>
 
-<p>Let's start by making an assertion using the <code>Expect</code> command, which is provided by vspec:</p>
+<p>Let&rsquo;s start by making an assertion using the <code>Expect</code> command, which is provided by vspec:</p>
+<pre class="highlight plaintext">Expect getline(1) == "Welcome to Vimcasts"
+</pre>
 
-<pre><code>Expect getline(1) == "Welcome to Vimcasts"
-</code></pre>
-
-<p>You can read that as: <code>expect line one to equal "Welcome to Vimcasts"</code>. Let's execute the vspec runner, and we should have our first failing test…</p>
+<p>You can read that as: <code>expect line one to equal &quot;Welcome to Vimcasts&quot;</code>. Let&rsquo;s execute the vspec runner, and we should have our first failing test&hellip;</p>
 
 <p>vspec shows the expected result and the actual value, which in this case is a blank string.</p>
 
-<p>Now let's make that test pass. The simplest thing I can do here is to use the <code>:put</code> Ex command, which adds a line of text to the current buffer.</p>
+<p>Now let&rsquo;s make that test pass. The simplest thing I can do here is to use the <code>:put</code> Ex command, which adds a line of text to the current buffer.</p>
+<pre class="highlight plaintext">:put! = 'Welcome to Vimcasts'
+</pre>
 
-<pre><code>:put! = 'Welcome to Vimcasts'
-</code></pre>
-
-<p>Run vspec…</p>
+<p>Run vspec&hellip;</p>
 
 <p>And we have our first passing test!</p>
 
-<h2 id="what-does-the-vspec-runner-do">What does the vspec runner do?</h2>
+<h2>What does the vspec runner do?</h2>
 
 <p>What happens when we execute the vspec runner?</p>
 
 <p>First, vspec runs a preprocessor to translate the <code>describe</code> and <code>it</code> blocks into pure executable Vimscript. Then the vspec runner launches Vim in Ex mode and executes each line of Vimscript. Using Ex mode means that Vim runs without taking over your terminal screen to draw its user-interface. Think of it as a headless instance of Vim, if you like.</p>
 
-<p>Let's launch a separate Vim session to simulate what happens when vspec runs. Vim launches with an empty buffer, and running the <code>put</code> command adds one line of text:</p>
+<p>Let&rsquo;s launch a separate Vim session to simulate what happens when vspec runs. Vim launches with an empty buffer, and running the <code>put</code> command adds one line of text:</p>
+<pre class="highlight plaintext">:put! = 'Welcome to Vimcasts'
+</pre>
 
-<pre><code>:put! = 'Welcome to Vimcasts'
-</code></pre>
+<p>We don&rsquo;t have access to the vspec <code>Expect</code> command in this context, so let&rsquo;s just echo the result of the <code>getline()</code> command:</p>
+<pre class="highlight plaintext">:echo getline(1)
+</pre>
 
-<p>We don't have access to the vspec <code>Expect</code> command in this context, so let's just echo the result of the <code>getline()</code> command:</p>
-
-<pre><code>:echo getline(1)
-</code></pre>
-
-<h2 id="change-the-buffer-and-test-the-result">Change the buffer and test the result</h2>
+<h2>Change the buffer and test the result</h2>
 
 <p>We can run any Ex command in our vspec tests. But what if we want to simulate running normal commands? For example, if I wanted to delete the last word on this line, I would normally do so by pressing <code>$</code>, then running <code>daw</code>.</p>
 
 <p>[undo the changes]</p>
 
 <p>We can exercise these normal mode commands using an Ex command called <code>:normal</code>. Watch this:</p>
-
-<pre><code>:normal $
-</code></pre>
+<pre class="highlight plaintext">:normal $
+</pre>
 
 <p>moves to the end of the line, and </p>
+<pre class="highlight plaintext">:normal daw
+</pre>
 
-<pre><code>:normal daw
-</code></pre>
-
-<p>deletes the word. It's just as though I had typed those commands in Normal mode.</p>
+<p>deletes the word. It&rsquo;s just as though I had typed those commands in Normal mode.</p>
 
 <p>[switch back to the tests]</p>
 
-<p>Let's set up a second test:</p>
-
-<pre><code>it 'feels just like operating Vim!'
+<p>Let&rsquo;s set up a second test:</p>
+<pre class="highlight plaintext">it 'feels just like operating Vim!'
 end
-</code></pre>
+</pre>
 
-<p>We'll use the <code>:normal</code> command to move to the end of the first line, then delete a word.</p>
+<p>We&rsquo;ll use the <code>:normal</code> command to move to the end of the first line, then delete a word.</p>
 
-<p>I'm going to duplicate the assertion from our first test, expecting this test to fail…</p>
-
-<pre><code>Expected: "Welcome to Vimcasts"
+<p>I&rsquo;m going to duplicate the assertion from our first test, expecting this test to fail&hellip;</p>
+<pre class="highlight plaintext">Expected: "Welcome to Vimcasts"
 Actual: "Welcome to"
-</code></pre>
+</pre>
 
 <p>It looks as though our normal commands have indeed changed the contents of the buffer.</p>
 
 <p>We can make the test pass by changing the expected string:</p>
+<pre class="highlight plaintext">Expect getline(1) == "Welcome to"
+</pre>
 
-<pre><code>Expect getline(1) == "Welcome to"
-</code></pre>
+<p>And now we&rsquo;re back on green again.</p>
 
-<p>And now we're back on green again.</p>
+<p>There&rsquo;s something else that we could test for in this case. The delete command doesn&rsquo;t only change the contents of the buffer, it also saves the deleted text to a register. We can check this using the <code>getreg()</code> command:</p>
+<pre class="highlight plaintext">Expect getreg('"') == 'Vimcasts'
+</pre>
 
-<p>There's something else that we could test for in this case. The delete command doesn't only change the contents of the buffer, it also saves the deleted text to a register. We can check this using the <code>getreg()</code> command:</p>
-
-<pre><code>Expect getreg('"') == 'Vimcasts'
-</code></pre>
-
-<p>The double-quote symbol stands for the default register. Run that test…</p>
+<p>The double-quote symbol stands for the default register. Run that test&hellip;</p>
 
 <p>We have a failure, which is easily mended by prefixing a space at the start of the expected string.</p>
 
 <p>And now the test passes.</p>
 
-<h2 id="meet-before-and-after-blocks">Meet before and after blocks</h2>
+<h2>Meet before and after blocks</h2>
 
-<p>So far, our tests show that we can read and modify the contents of a buffer. But there's a problem with this test suite as it's written. The quickest way I can demonstrate is by switching the order of the two tests.</p>
+<p>So far, our tests show that we can read and modify the contents of a buffer. But there&rsquo;s a problem with this test suite as it&rsquo;s written. The quickest way I can demonstrate is by switching the order of the two tests.</p>
 
 <p>Now we have a failure. Can you see why?</p>
 
 <p>We start by populating the buffer with a string of text. Then our first test modifies the buffer, which breaks the second test.</p>
 
 <p>We can fix this by using a <code>before</code> block.</p>
-
-<pre><code>before
+<pre class="highlight plaintext">before
 end
-</code></pre>
+</pre>
 
-<p>Let's move our setup code from the top of the file to inside the before block. Now this line of code is executed before every test run within this describe block.</p>
+<p>Let&rsquo;s move our setup code from the top of the file to inside the before block. Now this line of code is executed before every test run within this describe block.</p>
 
 <p>[run tests]</p>
 
-<p>And now our tests pass again. It doesn't matter which order they appear in.</p>
+<p>And now our tests pass again. It doesn&rsquo;t matter which order they appear in.</p>
 
 <p>[swap order again]
 [run tests]</p>
 
-<p>…they still pass.</p>
+<p>&hellip;they still pass.</p>
 
-<h2 id="using-tabs-for-clean-setupteardown">Using tabs for clean setup/teardown</h2>
+<h2>Using tabs for clean setup/teardown</h2>
 
 <p>We can further isolate our tests by using the <code>:new</code> command to create a fresh buffer before each test. Then we can use the <code>:close!</code> command in an after block to tear down the fresh buffer:</p>
-
-<pre><code>before
+<pre class="highlight plaintext">before
   new
   put! = 'Welcome to Vimcasts'
 end
 after
   close!
 end
-</code></pre>
+</pre>
 
 <p>As you would expect, the code in the after block is executed at the end of each test.</p>
 
-<h2 id="we-can-use-custom-keymappings">We can use custom keymappings</h2>
+<h2>We can use custom keymappings</h2>
 
 <p>Vspec can load customizations such as mappings, functions, and commands, then we can invoke them in our tests.</p>
 
-<p>Suppose that we wanted to map the <code>x</code> key to behave the same way as though we'd typed <code>daw</code>.</p>
+<p>Suppose that we wanted to map the <code>x</code> key to behave the same way as though we&rsquo;d typed <code>daw</code>.</p>
 
-<p>Let's duplicate and modify our last test:</p>
+<p>Let&rsquo;s duplicate and modify our last test:</p>
 
 <ul>
-  <li>instead of running <code>daw</code> we'll just use <code>x</code></li>
-  <li>
-    <p>and we'll change the description of the spec</p>
+<li>instead of running <code>daw</code> we&rsquo;ll just use <code>x</code></li>
+<li><p>and we&rsquo;ll change the description of the spec</p>
 
-    <p>it 'can exercise user-defined mappings'
-    normal gg$
-    normal x
-    Expect getline(1) == 'Welcome to'
-    Expect getreg('"') == ' Vimcasts'
-  end</p>
-  </li>
+<p>it &lsquo;can exercise user-defined mappings&rsquo;
+  normal gg$
+  normal x
+  Expect getline(1) == &lsquo;Welcome to&rsquo;
+  Expect getreg(&lsquo;&ldquo;&rsquo;) == &lsquo; Vimcasts&rsquo;
+end</p></li>
 </ul>
 
-<p>That fails. We haven't defined our <code>x</code> mapping yet, so Vim invokes the built-in <code>x</code> command, which deletes a single character.</p>
+<p>That fails. We haven&rsquo;t defined our <code>x</code> mapping yet, so Vim invokes the built-in <code>x</code> command, which deletes a single character.</p>
 
-<p>Let's define our mapping for normal mode:</p>
-
-<pre><code>nnoremap x daw
-</code></pre>
+<p>Let&rsquo;s define our mapping for normal mode:</p>
+<pre class="highlight plaintext">nnoremap x daw
+</pre>
 
 <p>Now the test passes!</p>
 
-<h2 id="on-testing-plugins">On testing plugins</h2>
+<h2>On testing plugins</h2>
 
-<p>Defining a mapping inside a test file means it's no use to anyone. It would be more practical to define custom functionality in one file, and the tests in another. That's easy. Let's create a file called <code>demo.vim</code>, and move this mapping into it. Then, in the test file, I'll source the <code>demo.vim</code> file. Run the tests… and they're still green.</p>
+<p>Defining a mapping inside a test file means it&rsquo;s no use to anyone. It would be more practical to define custom functionality in one file, and the tests in another. That&rsquo;s easy. Let&rsquo;s create a file called <code>demo.vim</code>, and move this mapping into it. Then, in the test file, I&rsquo;ll source the <code>demo.vim</code> file. Run the tests&hellip; and they&rsquo;re still green.</p>
 
 <p>This pattern makes it possible to write vspec tests for the functionality specified by a Vim plugin.</p>
 

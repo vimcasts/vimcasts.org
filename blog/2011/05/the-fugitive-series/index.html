@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -177,69 +178,67 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p><em>Fugitive.vim: a git wrapper so awesome, it should be illegal.</em> That's how Tim Pope describes his git plugin for Vim. I've had <a href="http://www.vim.org/scripts/script.php?script_id=2975">fugitive.vim</a> installed since it was released, but until recently I never took the time to figure out what was <em>so awesome</em> that could make it illegal.</p>
+        <p><em>Fugitive.vim: a git wrapper so awesome, it should be illegal.</em> That&rsquo;s how Tim Pope describes his git plugin for Vim. I&rsquo;ve had <a href="http://www.vim.org/scripts/script.php?script_id=2975">fugitive.vim</a> installed since it was released, but until recently I never took the time to figure out what was <em>so awesome</em> that could make it illegal.</p>
 
 
 
-<h3 id="who-needs-a-git-wrapper">Who needs a git wrapper?</h3>
+<h3>Who needs a git wrapper?</h3>
 
-<p>Since I started using git a few years ago I've been happy to use the command line client. There's always a terminal window open, and it never felt too arduous to switch to it to run a couple of git commands. This is fine for most of the commands that I run day to day, but occasionally I would want to do something that felt as though it belonged inside of my editor, rather than on the command line. For example, suppose I wanted to find out which idiot was responsible for a particular line of code. I just want to think the thought: 'Who do I blame?', and to see their name right next to it.</p>
+<p>Since I started using git a few years ago I&rsquo;ve been happy to use the command line client. There&rsquo;s always a terminal window open, and it never felt too arduous to switch to it to run a couple of git commands. This is fine for most of the commands that I run day to day, but occasionally I would want to do something that felt as though it belonged inside of my editor, rather than on the command line. For example, suppose I wanted to find out which idiot was responsible for a particular line of code. I just want to think the thought: &lsquo;Who do I blame?&rsquo;, and to see their name right next to it.</p>
 
-<p>I can get this information using the command line client, but it requires a bit of leg work. First, I have to recall the name and path of the file that I am working on, so that I can pass it as an argument to the <code>git blame</code> command. Then I need to navigate the output to find the line that I was looking at. The information is there, but it's in a plain text format so I don't get the syntax highlighting that I'm used to.</p>
+<p>I can get this information using the command line client, but it requires a bit of leg work. First, I have to recall the name and path of the file that I am working on, so that I can pass it as an argument to the <code>git blame</code> command. Then I need to navigate the output to find the line that I was looking at. The information is there, but it&rsquo;s in a plain text format so I don&rsquo;t get the syntax highlighting that I&rsquo;m used to.</p>
 
-<p>So <code>git blame</code> always struck me as in ideal candidate for integrating with the editor. Sure enough, fugitive provides a <code>Gblame</code> command, which does exactly what I want. I don't have to recall the filepath of the current file, because the editor knows it. I don't have to navigate to the current line, because I'm already there. I just have to run the <code>Gblame</code> command, and bang! I get the author's name right next to the line of code. Then I have to rap my own knuckles when git tells me I have only myself to blame.</p>
+<p>So <code>git blame</code> always struck me as in ideal candidate for integrating with the editor. Sure enough, fugitive provides a <code>Gblame</code> command, which does exactly what I want. I don&rsquo;t have to recall the filepath of the current file, because the editor knows it. I don&rsquo;t have to navigate to the current line, because I&rsquo;m already there. I just have to run the <code>Gblame</code> command, and bang! I get the author&rsquo;s name right next to the line of code. Then I have to rap my own knuckles when git tells me I have only myself to blame.</p>
 
-<h3 id="digging-deeper">Digging deeper</h3>
+<h3>Digging deeper</h3>
 
-<p>I rarely need to use <code>Gblame</code>, and the command line client was always good enough for most of the tasks that I perform daily with git. So for too long, I had fugitive installed, but didn't use it. I always had a nagging feeling that I was missing out. After all, Tim Pope says:</p>
+<p>I rarely need to use <code>Gblame</code>, and the command line client was always good enough for most of the tasks that I perform daily with git. So for too long, I had fugitive installed, but didn&rsquo;t use it. I always had a nagging feeling that I was missing out. After all, Tim Pope says:</p>
 
 <blockquote>
-  <p>I'm not going to lie to you; fugitive.vim may very well be the best Git wrapper of all time.</p>
+<p>I&rsquo;m not going to lie to you; fugitive.vim may very well be the best Git wrapper of all time.</p>
 </blockquote>
 
 <p>I decided that it would be worth digging deeper and sharing what I learned here on Vimcasts. Before long, I realized that it would take at least five episodes to do the plugin justice. There is so much good stuff in there.</p>
 
-<p>I had to level up on git in order to understand some of the cleverness that makes fugitive work. Lets face it though, there's always more to learn about git. As I got a feel for it, I started having crazy ideas: <em>what if fugitive could do X?</em> Then I'd try it out, and realize that fugitive <em>already does</em> X. There were <a href="http://twitter.com/MikeGrace/status/11389314823">girly squeals of joy</a>.</p>
+<p>I had to level up on git in order to understand some of the cleverness that makes fugitive work. Lets face it though, there&rsquo;s always more to learn about git. As I got a feel for it, I started having crazy ideas: <em>what if fugitive could do X?</em> Then I&rsquo;d try it out, and realize that fugitive <em>already does</em> X. There were <a href="http://twitter.com/MikeGrace/status/11389314823">girly squeals of joy</a>.</p>
 
-<p>I couldn't think of any other git commands that were so well suited to running from inside the editor as the <code>Gblame</code> example I gave above. Turns out that was just down to a lack of imagination on my part. Fugitive.vim is as bad as its author claims. I think it already is illegal in some states.</p>
+<p>I couldn&rsquo;t think of any other git commands that were so well suited to running from inside the editor as the <code>Gblame</code> example I gave above. Turns out that was just down to a lack of imagination on my part. Fugitive.vim is as bad as its author claims. I think it already is illegal in some states.</p>
 
-<p>I wasn't able to cover everything, but I picked what I think are the choicest cuts. Here follow some of the highlights from the series.</p>
+<p>I wasn&rsquo;t able to cover everything, but I picked what I think are the choicest cuts. Here follow some of the highlights from the series.</p>
 
-<h3 id="a-complement-to-command-line-git1">1) <a href="/e/31">A complement to command line git</a></h3>
+<h3>1) <a href="/e/31">A complement to command line git</a></h3>
 
-<p>Commands such as <code>Gremove</code> and <code>Gmove</code> map directly to <code>git rm</code> and <code>git mv</code>. I wasn't sold on these at first, because I didn't mind using the git commands. But things can get a little messy if you run these commands in the shell when the files that you act upon are already open in your text editor. For example, if you run:</p>
-
-<pre><code>git mv original/path.txt destination/path.txt
-</code></pre>
+<p>Commands such as <code>Gremove</code> and <code>Gmove</code> map directly to <code>git rm</code> and <code>git mv</code>. I wasn&rsquo;t sold on these at first, because I didn&rsquo;t mind using the git commands. But things can get a little messy if you run these commands in the shell when the files that you act upon are already open in your text editor. For example, if you run:</p>
+<pre class="highlight plaintext">git mv original/path.txt destination/path.txt
+</pre>
 
 <p>When you switch back to your editor, you might end up with a window open trying to edit the <code>original/path.txt</code> file, which no longer exists. Using the <code>Gmove</code> command keeps things tidy, because it simultaneously handles the git index and Vim buffers. Learn more in <a href="/e/31">part one</a>.</p>
 
-<h3 id="working-with-the-git-index2">2) <a href="/e/32">Working with the git index</a></h3>
+<h3>2) <a href="/e/32">Working with the git index</a></h3>
 
-<p>I've always had a bit of a fuzzy idea of what the git index is. Perhaps that's because the <code>.git/index</code> file uses a binary format, making it look like impenetrable gibberish if you attempt to read it in a text editor. But this is where fugitive gets really clever. Using a handful of esoteric git plumbing commands, fugitive makes it possible to view the indexed version of any file tracked by the repository. Not only can you read the indexed version of a file, but you can run <code>Gdiff</code> to compare it with the working copy. Vim's diff mode makes it possible to interactively stage hunks of changes, like when you run the <code>git diff --patch</code> command in the shell. Learn more in <a href="/e/32">part two</a>.</p>
+<p>I&rsquo;ve always had a bit of a fuzzy idea of what the git index is. Perhaps that&rsquo;s because the <code>.git/index</code> file uses a binary format, making it look like impenetrable gibberish if you attempt to read it in a text editor. But this is where fugitive gets really clever. Using a handful of esoteric git plumbing commands, fugitive makes it possible to view the indexed version of any file tracked by the repository. Not only can you read the indexed version of a file, but you can run <code>Gdiff</code> to compare it with the working copy. Vim&rsquo;s diff mode makes it possible to interactively stage hunks of changes, like when you run the <code>git diff --patch</code> command in the shell. Learn more in <a href="/e/32">part two</a>.</p>
 
-<h3 id="resolving-merge-conflicts-with-vimdiff3">3) <a href="/e/33">Resolving merge conflicts with vimdiff</a></h3>
+<h3>3) <a href="/e/33">Resolving merge conflicts with vimdiff</a></h3>
 
-<p>For <a href="/e/33">part three</a> we stay on the theme of Vim's diff mode. This time, looking at how to manage a 3-way diff to resolve merge conflicts. I usually dread having to deal with git merge conflicts, but having gained a better understanding of my tools, I'm now <a href="http://twitter.com/grahamsavage/status/66420233275064321">looking forward to my next merge conflict</a>!</p>
+<p>For <a href="/e/33">part three</a> we stay on the theme of Vim&rsquo;s diff mode. This time, looking at how to manage a 3-way diff to resolve merge conflicts. I usually dread having to deal with git merge conflicts, but having gained a better understanding of my tools, I&rsquo;m now <a href="http://twitter.com/grahamsavage/status/66420233275064321">looking forward to my next merge conflict</a>!</p>
 
-<h3 id="browsing-the-git-object-database4">4) <a href="/e/34">Browsing the git object database</a></h3>
+<h3>4) <a href="/e/34">Browsing the git object database</a></h3>
 
-<p>I've often thought that <a href="http://github.com">github</a> provided the superlative interface for browsing a git repository. They have a URL for every git object, including trees, blobs, tags and commits.</p>
+<p>I&rsquo;ve often thought that <a href="http://github.com">github</a> provided the superlative interface for browsing a git repository. They have a URL for every git object, including trees, blobs, tags and commits.</p>
 
-<p>Well, fugitive makes it possible to read any git object into a buffer, by running <code>:Gedit SHA</code>. But it doesn't stop there. In a commit buffer, you can press <code>&lt;Enter&gt;</code> with your cursor on any other SHA code, and it will automatically open that object in a buffer. These buffers are as interactive as a webpage, but since we're in Vim, we never have to reach for the mouse.</p>
+<p>Well, fugitive makes it possible to read any git object into a buffer, by running <code>:Gedit SHA</code>. But it doesn&rsquo;t stop there. In a commit buffer, you can press <code>&lt;Enter&gt;</code> with your cursor on any other SHA code, and it will automatically open that object in a buffer. These buffers are as interactive as a webpage, but since we&rsquo;re in Vim, we never have to reach for the mouse.</p>
 
 <p>Even though fugitive provides an excellent interface for browsing the git object database, you might still want to share a link to the object that you have open in Vim. The <code>Gbrowse</code> command will generate the github URL for whatever object is currently active in Vim. So fugitive gives you the best of both worlds: you can browse the repository mouselessly and offline from the comfort of your editor, and easily switch to a publicly accessible github URL when the need arises. Learn more in <a href="/e/34">part four</a>.</p>
 
-<h3 id="exploring-the-history-of-a-git-repository5">5) <a href="/e/35">Exploring the history of a git repository</a></h3>
+<h3>5) <a href="/e/35">Exploring the history of a git repository</a></h3>
 
 <p>The <code>Glog</code> command is a surprising one. The default <code>Glog</code> behaviour is quite different from the <code>git log</code> command that it wraps. Whereas <code>git log</code> shows a list of commit messages for the entire project, <code>Glog</code> loads all previous revisions of the current file into the quickfix list. This makes it extremely easy to review the history of a file, especially when used with an <a href="http://mshared.tumblr.com/post/3215710879/browsing-commits-in-vim-with-an-unimpaired-fugitive">unimpaired fugitive</a>. Learn more in <a href="/e/35">part five</a>.</p>
 
-<h3 id="thanks-to-my-sponsors">Thanks to my sponsors</h3>
+<h3>Thanks to my sponsors</h3>
 
-<p>I'd like to say a big thanks to <a href="http://hashrocket.com/people/work-at-hashrocket">HashRocket</a> and <a href="http://engineyard.com">EngineYard</a> for their sponsorship. I couldn't have completed this series without their support.</p>
+<p>I&rsquo;d like to say a big thanks to <a href="http://hashrocket.com/people/work-at-hashrocket">HashRocket</a> and <a href="http://engineyard.com">EngineYard</a> for their sponsorship. I couldn&rsquo;t have completed this series without their support.</p>
 
-<p>Finally, I'd like to thank Tim Pope for patiently answering my questions, reviewing drafts of each episode, and of course, for creating this awesome plugin in the first place. The Vim landscape would be a much more barren place without your plugins. Thanks Tim.</p>
-
+<p>Finally, I&rsquo;d like to thank Tim Pope for patiently answering my questions, reviewing drafts of each episode, and of course, for creating this awesome plugin in the first place. The Vim landscape would be a much more barren place without your plugins. Thanks Tim.</p>
 
       </div>
 
@@ -284,17 +283,31 @@
 
     
       <li>
+        <h4><a href="/episodes/smart-search-with-subvert/">Smart search with :Subvert</a></h4>
+        <p>The <code>:Subvert</code> command lets us create a particular style of regular expressions with ease. It&rsquo;s great for matching irregular singular and plural words in plain English and also for variable names that come in <code>snake_case</code> and <code>MixedCase</code> forms.</p>
+
+<p><em>This is part one of a three-part series on Tim Pope&rsquo;s abolish plugin.</em></p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+      </li>
+    
+      <li>
         <h4><a href="/blog/2012/08/on-sharpening-the-saw/">On sharpening the saw</a></h4>
         <p>Vim users sit somewhere on a spectrum, based on how much they customize their editor. At one end of the spectrum, there are those who use Vim with no customizations whatsoever. At the other end are those who customize Vim to the point where it barely resembles the stock install.</p>
 
 <p><a href="https://www.destroyallsoftware.com/screencasts">Gary Bernhardt</a> advocates using stock Vim, with very few customizations.</p>
 
 <blockquote>
-  <p>Vim is a chainsaw, and the last thing you want on a chainsaw is controls that are not the controls you're used to, because then you will cut your hand off.<br />
+<p>Vim is a chainsaw, and the last thing you want on a chainsaw is controls that are not the controls you&rsquo;re used to, because then you will cut your hand off.<br>
 Gary Bernhardt on <a href="http://rubyrogues.com/040-rr-text-editors-and-ides/">Ruby Rogues episode 40</a> (17:35)</p>
 </blockquote>
 
-<p>Gary's chainsaw metaphor warns against the practice of over-customizing Vim. But I would also warn against using Vim without any customizations. Vim is highly configurable, and some of the default settings are suboptimal. If you don't have a basic vimrc, then you're putting up with inconveniences that were fixed decades ago.</p>
+<p>Gary&rsquo;s chainsaw metaphor warns against the practice of over-customizing Vim. But I would also warn against using Vim without any customizations. Vim is highly configurable, and some of the default settings are suboptimal. If you don&rsquo;t have a basic vimrc, then you&rsquo;re putting up with inconveniences that were fixed decades ago.</p>
 
 
       </li>
@@ -305,10 +318,10 @@ Gary Bernhardt on <a href="http://rubyrogues.com/040-rr-text-editors-and-ides/">
       </li>
     
       <li>
-        <h4><a href="/episodes/smart-search-with-subvert/">Smart search with :Subvert</a></h4>
-        <p>The <code>:Subvert</code> command lets us create a particular style of regular expressions with ease. It's great for matching irregular singular and plural words in plain English and also for variable names that come in <code>snake_case</code> and <code>MixedCase</code> forms.</p>
+        <h4><a href="/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/">Fugitive.vim - exploring the history of a git repository</a></h4>
+        <p>Git provides tools for searching the contents of files, commit messages, and even whether text was added or removed by a commit. In this episode, we&rsquo;ll see how fugitive&rsquo;s <code>Ggrep</code> and <code>Glog</code> commands wrap this functionality up so that we can search the contents and history of a git repo from right inside of Vim.</p>
 
-<p><em>This is part one of a three-part series on Tim Pope's abolish plugin.</em></p>
+<p><em>This is the last of our five part series on fugitive.vim.</em></p>
 
 
       </li>
@@ -316,20 +329,6 @@ Gary Bernhardt on <a href="http://rubyrogues.com/040-rr-text-editors-and-ides/">
       <li>
         <h4><a href="/training">Vim Training</a></h4>
         <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/">Fugitive.vim - exploring the history of a git repository</a></h4>
-        <p>Git provides tools for searching the contents of files, commit messages, and even whether text was added or removed by a commit. In this episode, we'll see how fugitive's <code>Ggrep</code> and <code>Glog</code> commands wrap this functionality up so that we can search the contents and history of a git repo from right inside of Vim.</p>
-
-<p><em>This is the last of our five part series on fugitive.vim.</em></p>
-
-
       </li>
     
 

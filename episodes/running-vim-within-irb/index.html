@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -187,7 +188,7 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>If you work with ruby you will know that the interactive ruby shell, or 'IRB' for short, is a useful sketchpad for coding. But the command line interface of IRB can feel quite limiting in comparison with the power of your text editor. In this episode, I'm going to demonstrate how you can get the best of both worlds, by loading Vim from inside IRB.</p>
+        <p>If you work with ruby you will know that the interactive ruby shell, or &lsquo;IRB&rsquo; for short, is a useful sketchpad for coding. But the command line interface of IRB can feel quite limiting in comparison with the power of your text editor. In this episode, I&rsquo;m going to demonstrate how you can get the best of both worlds, by loading Vim from inside IRB.</p>
 
 
       </div>
@@ -232,24 +233,21 @@ blocks of ruby, it soon falls down. </p>
 <p>In his <a href="http://utilitybelt.rubyforge.org/">Utility Belt gem</a>, <a href="http://gilesbowkett.blogspot.com/2008/11/vi-in-irb-screencasting-fail.html">Giles Bowkett</a> has
 collected a grab-bag of tricks and techniques for IRB, the highlight of
 which is the ability to <a href="http://gilesbowkett.blogspot.com/2007/10/use-vi-or-any-text-editor-from-within.html">interactively edit code in your text
-editor</a>. The Utility Belt gem hasn't been updated in a little
+editor</a>. The Utility Belt gem hasn&rsquo;t been updated in a little
 while, but the interactive editor has continued to evolve, thanks to
 <a href="http://zegoggl.es/2009/04/integrating-vim-and-irb.html">Jan Berkel</a> and with help from <a href="http://blog.headius.com/">Charles Nutter</a>.</p>
 
-<h2 id="installation">Installation</h2>
+<h2>Installation</h2>
 
 <p>Install the <a href="http://github.com/jberkel/interactive_editor">interactive editor gem</a> by running this at the
 command line:</p>
+<pre class="highlight plaintext">gem install interactive_editor
+</pre>
 
-<pre><code>gem install interactive_editor
-</code></pre>
-
-<p>Create an <code>~/.irbrc</code> file if you don't already have one, then paste the
+<p>Create an <code>~/.irbrc</code> file if you don&rsquo;t already have one, then paste the
 following into it:</p>
-
-<pre class="brush: ruby">
-require 'rubygems'
-require 'interactive_editor'
+<pre class="highlight ruby"><span class="nb">require</span> <span class="s1">'rubygems'</span>
+<span class="nb">require</span> <span class="s1">'interactive_editor'</span>
 </pre>
 
 <p>Note that the utility belt gem also includes an interactive editor, but
@@ -257,35 +255,32 @@ it is currently out of date. If you require both <code>interactive_editor</code>
 and <code>utility_belt</code> gems in your .irbrc file, there may be some conflict
 between them.</p>
 
-<h2 id="vim-restore-cursor-position-and-highlight-syntax">Vim: restore cursor position and highlight syntax</h2>
+<h2>Vim: restore cursor position and highlight syntax</h2>
 
 <p>To get the most from this technique, you will want to ensure that you
 have enabled filetype detection and syntax highlighting in Vim.
 Additionally, it is helpful to have Vim <a href="http://vimdoc.sourceforge.net/htmldoc/usr_05.html#restore-cursor">restore the cursor
 position</a> to where you left it. The following snippet of
 Vimscript takes care of these.</p>
+<pre class="highlight viml"><span class="k">if</span> has<span class="p">(</span><span class="s2">"autocmd"</span><span class="p">)</span>
+  <span class="c">" Enable filetype detection</span>
+  <span class="k">filetype</span> plugin indent <span class="k">on</span>
 
-<pre class="brush: vimscript">
-if has(&quot;autocmd&quot;)
-  &quot; Enable filetype detection
-  filetype plugin indent on
-
-  &quot; Restore cursor position
-  autocmd BufReadPost *
-    \ if line(&quot;'\&quot;&quot;) &gt; 1 &amp;&amp; line(&quot;'\&quot;&quot;) &lt;= line(&quot;$&quot;) |
-    \   exe &quot;normal! g`\&quot;&quot; |
-    \ endif
-endif
-if &amp;t_Co &gt; 2 || has(&quot;gui_running&quot;)
-  &quot; Enable syntax highlighting
-  syntax on
-endif
+  <span class="c">" Restore cursor position</span>
+  autocmd <span class="nb">BufReadPost</span> *
+<span class="se">    \</span> <span class="k">if</span> line<span class="p">(</span><span class="s2">"'\""</span><span class="p">)</span> <span class="p">&gt;</span> <span class="m">1</span> &amp;&amp; line<span class="p">(</span><span class="s2">"'\""</span><span class="p">)</span> <span class="p">&lt;=</span> line<span class="p">(</span><span class="s2">"$"</span><span class="p">)</span> <span class="p">|</span>
+<span class="se">    \</span>   exe <span class="s2">"normal! g`\""</span> <span class="p">|</span>
+<span class="se">    \</span> <span class="k">endif</span>
+<span class="k">endif</span>
+<span class="k">if</span> &amp;t_Co <span class="p">&gt;</span> <span class="m">2</span> <span class="p">||</span> has<span class="p">(</span><span class="s2">"gui_running"</span><span class="p">)</span>
+  <span class="c">" Enable syntax highlighting</span>
+  syntax <span class="k">on</span>
+<span class="k">endif</span>
 </pre>
 
 <p>Note that the <a href="http://vim.cybermirror.org/runtime/vimrc_example.vim">example vimrc file</a> that comes with Vim
-includes all of the above, so don't paste this into your vimrc without
+includes all of the above, so don&rsquo;t paste this into your vimrc without
 first checking if you already have this functionality.</p>
-
 
         </div>
         </dd>
@@ -331,7 +326,7 @@ first checking if you already have this functionality.</p>
     
       <li>
         <h4><a href="/blog/2013/09/navigating-ruby-files-with-vim/">Navigating Ruby Files with Vim</a></h4>
-        <p>I've been collaborating with <a href="http://www.thoughtbot.com/">thoughtbot</a> to produce three screencasts about <a href="https://learn.thoughtbot.com/products/21-navigating-ruby-files-with-vim">Navigating Ruby Files with Vim</a>. There's 40 minutes of material in total, and it's available from today. You can purchase these videos for $19, but they will also be available to thoughtbot Prime subscribers. Check out <a href="https://learn.thoughtbot.com/products/21-navigating-ruby-files-with-vim">learn.thoughtbot.com</a> for more details.</p>
+        <p>I&rsquo;ve been collaborating with <a href="http://www.thoughtbot.com/">thoughtbot</a> to produce three screencasts about <a href="https://learn.thoughtbot.com/products/21-navigating-ruby-files-with-vim">Navigating Ruby Files with Vim</a>. There&rsquo;s 40 minutes of material in total, and it&rsquo;s available from today. You can purchase these videos for $19, but they will also be available to thoughtbot Prime subscribers. Check out <a href="https://learn.thoughtbot.com/products/21-navigating-ruby-files-with-vim">learn.thoughtbot.com</a> for more details.</p>
 
 
       </li>
@@ -344,13 +339,10 @@ first checking if you already have this functionality.</p>
       </li>
     
       <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+        <h4><a href="/blog/2010/12/a-text-object-for-ruby-blocks/">A text-object for ruby blocks</a></h4>
+        <p>Ever since learning about Vim&rsquo;s <a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#text-objects">text-objects</a> I have wished that there was a way of selecting blocks in ruby code. Well, now there is. Today I am releasing a plugin that creates <a href="http://www.vim.org/scripts/script.php?script_id=3382">a custom text object for selecting ruby blocks</a>. Merry Christmas!</p>
+
+
       </li>
     
       <li>
@@ -359,10 +351,13 @@ first checking if you already have this functionality.</p>
       </li>
     
       <li>
-        <h4><a href="/blog/2010/12/a-text-object-for-ruby-blocks/">A text-object for ruby blocks</a></h4>
-        <p>Ever since learning about Vim's <a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#text-objects">text-objects</a> I have wished that there was a way of selecting blocks in ruby code. Well, now there is. Today I am releasing a plugin that creates <a href="http://www.vim.org/scripts/script.php?script_id=3382">a custom text object for selecting ruby blocks</a>. Merry Christmas!</p>
-
-
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
 

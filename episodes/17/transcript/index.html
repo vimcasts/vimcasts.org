@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -130,72 +131,64 @@
           </div>
         </div>
 
-        <p>It is sometimes preferrable to format text with hard wrapped lines, for example when writing emails in plaintext. Vim can apply this style of formatting for you. This episode shows some of the options which allow you to customize Vim's text formatting.</p>
+        <p>It is sometimes preferrable to format text with hard wrapped lines, for example when writing emails in plaintext. Vim can apply this style of formatting for you. This episode shows some of the options which allow you to customize Vim&rsquo;s text formatting.</p>
 
-<h1 id="format-current-paragraph">Format current paragraph</h1>
+<h1>Format current paragraph</h1>
 
 <p>The <code>gq</code> command applies formatting to a section of text. You can apply this to the current paragraph with the <code>ip</code> motion. So the command:</p>
-
-<pre><code>gqip
-</code></pre>
+<pre class="highlight plaintext">gqip
+</pre>
 
 <p>will reformat the current paragraph.</p>
 
 <p>Notice that this moves the cursor to the last line of the paragraph. Alternatively, if you replace <code>gq</code> with the <code>gw</code> command, it restores the cursor position to the word it was on before the paragraph was reformatted.</p>
 
-<h2 id="controlling-the-line-width">Controlling the line width</h2>
+<h2>Controlling the line width</h2>
 
 <p>There are two settings that can be used to control the length of a line in Vim. These are:</p>
-
-<pre><code>textwidth
+<pre class="highlight plaintext">textwidth
 wrapmargin
-</code></pre>
+</pre>
 
 <p>Textwidth can be set to a number representing the maximum allowed width of a line. When set to zero, which is the default, Vim will use the full width of the window up to a maximum of 80 characters. </p>
-
-<pre><code>:set nonumber
+<pre class="highlight plaintext">:set nonumber
 :set columns=40
 gq
-</code></pre>
+</pre>
 
-<p>Here, I have textwidth set to 0, and I've reduced the window width to 40 columns. When I reformat the paragraph, it uses the full width of the window.</p>
-
-<pre><code>:set columns=100
-</code></pre>
+<p>Here, I have textwidth set to 0, and I&rsquo;ve reduced the window width to 40 columns. When I reformat the paragraph, it uses the full width of the window.</p>
+<pre class="highlight plaintext">:set columns=100
+</pre>
 
 <p>Now, if I set the window width to 100 and reformat the paragraph, Vim does not allow the line width to exceed 80 columns.</p>
 
 <p>The wrapmargin setting can be used to specify the number of characters from the right window border where wrapping begins.</p>
 
 <p>Here, if I set wrapmargin to 5, it instructs Vim to use the entire width of the window minus 5 characters.</p>
-
-<pre><code>:set wrapmargin=5
-</code></pre>
+<pre class="highlight plaintext">:set wrapmargin=5
+</pre>
 
 <p>If you have line numbers switched on, they use up some of the page width, so the wrapmargin setting can be used to compensate for that.</p>
 
 <p>When textwidth is set to anything greater than zero, the wrapmargin setting has no effect. Instead, lines will be formatted using the number of characters specified by textwidth, regardless of the width of the window.</p>
-
-<pre><code>:set textwidth=40
-</code></pre>
+<pre class="highlight plaintext">:set textwidth=40
+</pre>
 
 <p>Here, for example, I have set textwidth to 40. When I reformat the paragraph, none of the resulting lines should exceed 40 characters.</p>
 
-<h1 id="formatting-options">Formatting options</h1>
+<h1>Formatting options</h1>
 
-<p>The way that Vim formats text can be influenced with the <code>formatoptions</code> setting. The <code>:help</code> entry on <code>fo-table</code> gives details of each of the available flags. I'm going to demonstrate what a couple of these do. In each of the following, I have textwidth set to 40.</p>
+<p>The way that Vim formats text can be influenced with the <code>formatoptions</code> setting. The <code>:help</code> entry on <code>fo-table</code> gives details of each of the available flags. I&rsquo;m going to demonstrate what a couple of these do. In each of the following, I have textwidth set to 40.</p>
 
-<p>To begin with, I'm going to set formatoptions to a blank string:</p>
-
-<pre><code>:set fo=
-</code></pre>
+<p>To begin with, I&rsquo;m going to set formatoptions to a blank string:</p>
+<pre class="highlight plaintext">:set fo=
+</pre>
 
 <p>As I enter text, it is appended to the current line, regardless of the length. If I exceed 40 characters, it just keeps on going. I can reformat the paragraph when I leave insert mode, by running the <code>gq</code> command.</p>
 
-<p>Next, I'm going to add the <code>t</code> flag to formatoptions:</p>
-
-<pre><code>:set fo+=t
-</code></pre>
+<p>Next, I&rsquo;m going to add the <code>t</code> flag to formatoptions:</p>
+<pre class="highlight plaintext">:set fo+=t
+</pre>
 
 <p>Now, when I type text and the current line exceeds the maximum allowed line length, Vim automatically inserts a line break. </p>
 
@@ -203,16 +196,15 @@ gq
 
 <p>If this situation arises, it can be swiftly rectified by running the <code>gq</code> command.</p>
 
-<p>Next, I'm going to add the <code>a</code> flag to formatoptions:</p>
-
-<pre><code>:set fo+=a
-</code></pre>
+<p>Next, I&rsquo;m going to add the <code>a</code> flag to formatoptions:</p>
+<pre class="highlight plaintext">:set fo+=a
+</pre>
 
 <p>This causes Vim to reformat the paragraph every time a line is changed. Now the paragraph is reformatted when I insert text at the beginning of a line, and also when I delete text.</p>
 
-<h1 id="external-program">External program</h1>
+<h1>External program</h1>
 
-<p>The <code>formatoptions</code> setting is used with Vim's internal formatting algorithm. Vim supports two methods for setting an alternative formatting engine to use. I won't cover either of these in this episode, but note that the <code>gq</code> command will only invoke Vim's internal formatter if both the <code>formatexpr</code> and <code>formatprg</code> options are blank. On the other hand, the <code>gw</code> command will always invoke Vim's internal formatting engine, even if one of the alternate formatters is enabled.</p>
+<p>The <code>formatoptions</code> setting is used with Vim&rsquo;s internal formatting algorithm. Vim supports two methods for setting an alternative formatting engine to use. I won&rsquo;t cover either of these in this episode, but note that the <code>gq</code> command will only invoke Vim&rsquo;s internal formatter if both the <code>formatexpr</code> and <code>formatprg</code> options are blank. On the other hand, the <code>gw</code> command will always invoke Vim&rsquo;s internal formatting engine, even if one of the alternate formatters is enabled.</p>
 
 
       </section>

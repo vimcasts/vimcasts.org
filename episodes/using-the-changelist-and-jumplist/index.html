@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -226,47 +227,41 @@
         <div id="shownotes" class="content" data-swiftype-index="true">
           
 
-<h3 id="the-changelist">The Changelist</h3>
+<h3>The Changelist</h3>
 
 <p>The changelist remembers the position of every change that can be undone. You can move back and forwards through the changelist using the commands:</p>
-
-<pre><code>g;
+<pre class="highlight plaintext">g;
 g,
-</code></pre>
+</pre>
 
 <p>You can view the contents of the changelist by running the command:</p>
+<pre class="highlight plaintext">:changes
+</pre>
 
-<pre><code>:changes
-</code></pre>
-
-<h3 id="the-jumplist">The Jumplist</h3>
+<h3>The Jumplist</h3>
 
 <p>Vim also maintains a jumplist, remembering each position to which the cursor jumped, rather than scrolled. You can move backwards and forwards through the jumplist with the commands:</p>
-
-<pre><code>ctrl-O
+<pre class="highlight plaintext">ctrl-O
 ctrl-I
-</code></pre>
+</pre>
 
 <p>You can view the contents of the jumplist by issuing the command:</p>
+<pre class="highlight plaintext">:jumps
+</pre>
 
-<pre><code>:jumps
-</code></pre>
+<p>When you are browsing Vim&rsquo;s documentation, you can follow the link under the cursor with the command:</p>
+<pre class="highlight plaintext">ctrl-]
+</pre>
 
-<p>When you are browsing Vim's documentation, you can follow the link under the cursor with the command:</p>
-
-<pre><code>ctrl-]
-</code></pre>
-
-<h3 id="further-reading">Further reading</h3>
+<h3>Further reading</h3>
 
 <ul>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#changelist"><code>:help changelist</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#:changes"><code>:help :changes</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#jumplist"><code>:help jumplist</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#:jumps"><code>:help :jumps</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#jump-motions"><code>:help jump-motions</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#changelist"><code>:help changelist</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#:changes"><code>:help :changes</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#jumplist"><code>:help jumplist</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#:jumps"><code>:help :jumps</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#jump-motions"><code>:help jump-motions</code></a></li>
 </ul>
-
 
         </div>
         </dd>
@@ -311,13 +306,41 @@ ctrl-I
 
     
       <li>
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
+      </li>
+    
+      <li>
         <h4><a href="/publications">Publications</a></h4>
         <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
       </li>
     
       <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+        <h4><a href="/blog/2013/02/habit-breaking-habit-making/">Habit breaking, habit making</a></h4>
+        <p>Moving your Vim cursor around using the arrow keys is a bad habit, and like many bad habits it&rsquo;s a difficult one to break! Putting these lines into your vimrc can help:</p>
+<pre class="highlight plaintext">noremap &lt;Up&gt; &lt;NOP&gt;
+noremap &lt;Down&gt; &lt;NOP&gt;
+noremap &lt;Left&gt; &lt;NOP&gt;
+noremap &lt;Right&gt; &lt;NOP&gt;
+</pre>
+
+<p>This snippet causes each of the arrow keys to execute <em>no operation</em>, or in other words: it disables them. Next time you move your hand to the arrow keys you&rsquo;ll find that nothing happens when you press them. That should remind you to move your hand back where it belongs: on the home row, where <code>h</code>, <code>j</code>, <code>k</code>, and <code>l</code> keys are waiting for you. Alternatively, you could use the <a href="http://www.tylercipriani.com/vim.html">konami code</a> version of this snippet.</p>
+
+<p>Learning to operate Vim without leaving the home row is the first rite of passage. If you&rsquo;re still in the habit of moving around using the arrow keys, then you should disable them today.</p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/modal-editing-undo-redo-and-repeat/">Modal editing: undo, redo and repeat</a></h4>
+        <p>Vim&rsquo;s modal editing paradigm - the newbie killer - brings tremendous efficiency if only you can learn to work with it, rather than against it. This episode demonstrates how the undo and repeat commands can benefit from spending short bursts of time in insert mode. </p>
+
+
       </li>
     
       <li>
@@ -325,35 +348,6 @@ ctrl-I
         <p>The undo command is almost universally available in software today. Being able to rollback unwanted changes can be a real timesaver. In most applications you can only go backwards and forwards linearly, but Vim keeps your changes in a tree structure, which means that you can retrieve edits from distant branches in your history. This episode will show you how.</p>
 
 
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/modal-editing-undo-redo-and-repeat/">Modal editing: undo, redo and repeat</a></h4>
-        <p>Vim's modal editing paradigm - the newbie killer - brings tremendous efficiency if only you can learn to work with it, rather than against it. This episode demonstrates how the undo and repeat commands can benefit from spending short bursts of time in insert mode. </p>
-
-
-      </li>
-    
-      <li>
-        <h4><a href="/blog/2013/02/habit-breaking-habit-making/">Habit breaking, habit making</a></h4>
-        <p>Moving your Vim cursor around using the arrow keys is a bad habit, and like many bad habits it's a difficult one to break! Putting these lines into your vimrc can help:</p>
-
-<pre><code>noremap &lt;Up&gt; &lt;NOP&gt;
-noremap &lt;Down&gt; &lt;NOP&gt;
-noremap &lt;Left&gt; &lt;NOP&gt;
-noremap &lt;Right&gt; &lt;NOP&gt;
-</code></pre>
-
-<p>This snippet causes each of the arrow keys to execute <em>no operation</em>, or in other words: it disables them. Next time you move your hand to the arrow keys you'll find that nothing happens when you press them. That should remind you to move your hand back where it belongs: on the home row, where <code>h</code>, <code>j</code>, <code>k</code>, and <code>l</code> keys are waiting for you. Alternatively, you could use the <a href="http://www.tylercipriani.com/vim.html">konami code</a> version of this snippet.</p>
-
-<p>Learning to operate Vim without leaving the home row is the first rite of passage. If you're still in the habit of moving around using the arrow keys, then you should disable them today.</p>
-
-
-      </li>
-    
-      <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
       </li>
     
 

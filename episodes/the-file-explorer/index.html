@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -187,7 +188,7 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>This episode demonstrates how Vim's native file browser can be used to explore and manipulate the file system. </p>
+        <p>This episode demonstrates how Vim&rsquo;s native file browser can be used to explore and manipulate the file system. </p>
 
 
       </div>
@@ -226,9 +227,9 @@
         <div id="shownotes" class="content" data-swiftype-index="true">
           
 
-<p>The video demonstrates some of the functionality of the <a href="http://www.vim.org/scripts/script.php?script_id=1075">netrw</a> plugin, which is usually distributed with Vim. Note that if the <a href="http://www.vim.org/scripts/script.php?script_id=1658">NERD_tree</a> is installed, then the functionality described in this episode won't work for you.</p>
+<p>The video demonstrates some of the functionality of the <a href="http://www.vim.org/scripts/script.php?script_id=1075">netrw</a> plugin, which is usually distributed with Vim. Note that if the <a href="http://www.vim.org/scripts/script.php?script_id=1658">NERD_tree</a> is installed, then the functionality described in this episode won&rsquo;t work for you.</p>
 
-<h2 id="exploring-the-filesystem">Exploring the filesystem</h2>
+<h2>Exploring the filesystem</h2>
 
 <p>The file explorer is just another Vim buffer, so you can navigate up and down with <code>k</code> and <code>j</code> keys, or jump to the bottom with <code>G</code>, etc. If it is a large file listing, you may be quicker finding your target by searching for it. </p>
 
@@ -272,7 +273,7 @@
    </tr>
 </table>
 
-<h2 id="manipulating-the-filesystem">Manipulating the filesystem</h2>
+<h2>Manipulating the filesystem</h2>
 
 <p>The file explorer includes commands for creating new files and directories, as well as renaming or deleting existing ones. This table summarizes these:</p>
 
@@ -299,18 +300,17 @@
    </tr>
 </table>
 
-<h3 id="further-reading">Further Reading</h3>
+<h3>Further Reading</h3>
 
 <ul>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html"><code>:help netrw</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/editing.html#:edit"><code>:help :edit</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html#netrw-explore"><code>:help :Explore</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html#netrw-%"><code>:help netrw-%</code> - create new file</a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html#netrw-d"><code>:help netrw-d</code> - create new directory</a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html#netrw-R"><code>:help netrw-R</code> - renaming files or directories</a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html#netrw-D"><code>:help netrw-D</code> - deleting files or directories</a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html"><code>:help netrw</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/editing.html#:edit"><code>:help :edit</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html#netrw-explore"><code>:help :Explore</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html#netrw-%"><code>:help netrw-%</code> - create new file</a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html#netrw-d"><code>:help netrw-d</code> - create new directory</a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html#netrw-R"><code>:help netrw-R</code> - renaming files or directories</a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html#netrw-D"><code>:help netrw-D</code> - deleting files or directories</a></li>
 </ul>
-
 
         </div>
         </dd>
@@ -360,15 +360,8 @@
       </li>
     
       <li>
-        <h4><a href="/episodes/using-external-filter-commands-to-reformat-html/">Using external filter commands to reformat HTML</a></h4>
-        <p>We can use pandoc as a <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#filter">filter</a> to clean up <abbr title="what you see is what you get">WYSIWYG</abbr>-generated HTML. Pandoc is a commandline program, but we can call it from inside Vim either using the <a href="http://vimdoc.sourceforge.net/htmldoc/various.html#:!">bang Ex command</a>, or by configuring <a title="formatprg" href="http://vimdoc.sourceforge.net/htmldoc/options.html#">the <code>formatprg</code> option</a> to make the <code>gq</code> operator invoke pandoc.</p>
-
-
-      </li>
-    
-      <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
       </li>
     
       <li>
@@ -379,15 +372,22 @@
       </li>
     
       <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
-      </li>
-    
-      <li>
         <h4><a href="/episodes/the-edit-command/">The :edit command</a></h4>
         <p>This episode focuses on the <code>:edit</code> command. I demonstrate how to open files whose location is relative to the current working directory, then I show how to create a mapping which makes it easier to open files in the same directory as the one in the active window.</p>
 
 
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/using-external-filter-commands-to-reformat-html/">Using external filter commands to reformat HTML</a></h4>
+        <p>We can use pandoc as a <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#filter">filter</a> to clean up <abbr title="what you see is what you get">WYSIWYG</abbr>-generated HTML. Pandoc is a commandline program, but we can call it from inside Vim either using the <a href="http://vimdoc.sourceforge.net/htmldoc/various.html#:!">bang Ex command</a>, or by configuring <a href="http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;#x27;formatprg&amp;#x27;">the <code>formatprg</code> option</a> to make the <code>gq</code> operator invoke pandoc.</p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
 

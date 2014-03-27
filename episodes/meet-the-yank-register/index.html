@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -187,7 +188,7 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>Vim's default register is not a safe place to keep yanked text that you want to paste later. It's all too easy to clobber the default register with a <code>d</code> or <code>x</code> command. Luckily, the last yanked text is kept safe in Vim's <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0">yank register</a>.</p>
+        <p>Vim&rsquo;s default register is not a safe place to keep yanked text that you want to paste later. It&rsquo;s all too easy to clobber the default register with a <code>d</code> or <code>x</code> command. Luckily, the last yanked text is kept safe in Vim&rsquo;s <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0">yank register</a>.</p>
 
 
       </div>
@@ -226,26 +227,26 @@
         <div id="shownotes" class="content" data-swiftype-index="true">
           
 
-<p>From Vim's documentation (<a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0"><code>:help quote0</code></a>):</p>
+<p>From Vim&rsquo;s documentation (<a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0"><code>:help quote0</code></a>):</p>
 
 <blockquote>
-  <p>Numbered register 0 contains the text from the most recent yank command, unless the command specified another register with ["x].</p>
+<p>Numbered register 0 contains the text from the most recent yank command, unless the command specified another register with [&ldquo;x].</p>
 </blockquote>
 
-<p>I call "numbered register 0" <em>the yank register</em>. You can paste from the yank register with the command: <code>"0p</code>. That comes in really handy when the text you want to paste is no longer present in the default register.</p>
+<p>I call &quot;numbered register 0&rdquo; <em>the yank register</em>. You can paste from the yank register with the command: <code>&quot;0p</code>. That comes in really handy when the text you want to paste is no longer present in the default register.</p>
 
-<h3 id="vim-jargon">A note on Vim's jargon</h3>
+<h3 id="vim-jargon">A note on Vim&rsquo;s jargon</h3>
 
-<p>Vim uses the terms <em>delete</em>, <em>yank</em>, and <em>put</em>, in place of the more standard terminology <em>cut</em>, <em>copy</em>, and <em>paste</em>. Starting with the same letter, put and paste are easily interchangable. Once you get used to the word yank, it becomes synonymous with copy. But Vim's use of the word 'delete' is problematic.</p>
+<p>Vim uses the terms <em>delete</em>, <em>yank</em>, and <em>put</em>, in place of the more standard terminology <em>cut</em>, <em>copy</em>, and <em>paste</em>. Starting with the same letter, put and paste are easily interchangable. Once you get used to the word yank, it becomes synonymous with copy. But Vim&rsquo;s use of the word &lsquo;delete&rsquo; is problematic.</p>
 
-<p>In most contexts, the word delete just means remove. But Vim's delete operation copies the text into a register, then removes it from the document. In other words, Vim's delete operation behaves like a cut.</p>
+<p>In most contexts, the word delete just means remove. But Vim&rsquo;s delete operation copies the text into a register, then removes it from the document. In other words, Vim&rsquo;s delete operation behaves like a cut.</p>
 
-<p>That raises a question: if Vim's delete command is really a cut operation, does Vim have anything equivalent to a true deletion? The answer is slightly oddball: writing to the 'blackhole register' performs a true deletion.</p>
+<p>That raises a question: if Vim&rsquo;s delete command is really a cut operation, does Vim have anything equivalent to a true deletion? The answer is slightly oddball: writing to the &lsquo;blackhole register&rsquo; performs a true deletion.</p>
 
 <table>
   <tr>
     <th>Standard terminology</th>
-    <th>Vim's jargon</th>
+    <th>Vim&rsquo;s jargon</th>
   </tr>
   <tr>
     <td>paste</td>
@@ -261,27 +262,26 @@
   </tr>
   <tr>
     <td>delete</td>
-    <td>delete and write to "blackhole" register</td>
+    <td>delete and write to &ldquo;blackhole&rdquo; register</td>
   </tr>
 </table>
 
-<p>Nothing returns from the blackhole register. It's the Vim register equivalent of <code>/dev/null</code>. To perform a true deletion in Vim, prefix the delete command with <code>"_</code> for example: <code>"_diw</code> would delete the current word <em>without</em> saving a copy in a register.</p>
+<p>Nothing returns from the blackhole register. It&rsquo;s the Vim register equivalent of <code>/dev/null</code>. To perform a true deletion in Vim, prefix the delete command with <code>&quot;_</code> for example: <code>&quot;_diw</code> would delete the current word <em>without</em> saving a copy in a register.</p>
 
-<p>I find Vim's terminology to be unhelpful, so I try to make a point of describing the <code>d{motion}</code> command as "cut the specified text" (rather than delete). Likewise for <code>x</code>, <code>c</code>, <code>s</code>, and so on.</p>
+<p>I find Vim&rsquo;s terminology to be unhelpful, so I try to make a point of describing the <code>d{motion}</code> command as &ldquo;cut the specified text&rdquo; (rather than delete). Likewise for <code>x</code>, <code>c</code>, <code>s</code>, and so on.</p>
 
-<h3 id="further-reading">Further reading</h3>
+<h3>Further reading</h3>
 
 <ul>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0"><code>:h quote0</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote_"><code>:h quote_</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote"><code>:h quotequote</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:reg"><code>:h :reg</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#y"><code>:h y</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#p"><code>:h p</code></a></li>
-  <li><a href="http://stackoverflow.com/a/1504373/128850">How to use Vim registers</a> on Stack Overflow</li>
-  <li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, Tip 60: Grok Vim's registers</li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0"><code>:h quote0</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote_"><code>:h quote_</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote"><code>:h quotequote</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:reg"><code>:h :reg</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#y"><code>:h y</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#p"><code>:h p</code></a></li>
+<li><a href="http://stackoverflow.com/a/1504373/128850">How to use Vim registers</a> on Stack Overflow</li>
+<li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, Tip 60: Grok Vim&rsquo;s registers</li>
 </ul>
-
 
         </div>
         </dd>
@@ -326,6 +326,11 @@
 
     
       <li>
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
+      </li>
+    
+      <li>
         <h4><a href="/episodes/pasting-from-visual-mode/">Pasting from Visual mode</a></h4>
         <p>When used <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#v_p">in Visual mode the <code>p</code> command</a> replaces the selection with the contents of a register. This makes for a smooth workflow when you want to overwrite a selection, or swap the order of two regions of text.</p>
 
@@ -333,32 +338,27 @@
       </li>
     
       <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
-      </li>
-    
-      <li>
         <h4><a href="/episodes/simple-operations-using-the-default-register/">Simple operations using the default register</a></h4>
-        <p>Vim's <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote">default register</a> makes it easy to perform some of the most basic types of cut, copy, and paste operations. That's partly thanks to the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#p"><code>p</code></a> command, which behaves differently depending on whether the default register contains a characterwise or linewise region of text.</p>
+        <p>Vim&rsquo;s <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote">default register</a> makes it easy to perform some of the most basic types of cut, copy, and paste operations. That&rsquo;s partly thanks to the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#p"><code>p</code></a> command, which behaves differently depending on whether the default register contains a characterwise or linewise region of text.</p>
 
 
       </li>
     
       <li>
         <h4><a href="/episodes/using-vims-named-registers/">Using Vim's named registers</a></h4>
-        <p>We've met Vim's <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote">default register</a> and the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0">yank register</a>. This time, we're going to look at the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote_alpha">named registers</a>, which are handy if you want to cut or copy some text that you intend to paste multiple times.</p>
+        <p>We&rsquo;ve met Vim&rsquo;s <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote">default register</a> and the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0">yank register</a>. This time, we&rsquo;re going to look at the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote_alpha">named registers</a>, which are handy if you want to cut or copy some text that you intend to paste multiple times.</p>
 
 
-      </li>
-    
-      <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
       </li>
     
       <li>
         <h4><a href="/categories">Find by category</a></h4>
         <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
       </li>
     
 

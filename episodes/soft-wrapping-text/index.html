@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -187,7 +188,7 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>Long lines of text can be wrapped if they don't fit inside the window. By default, Vim will happily split in the middle of a word. This episode demonstrates how to use the 'linebreak' option to make Vim break lines without breaking words.</p>
+        <p>Long lines of text can be wrapped if they don&rsquo;t fit inside the window. By default, Vim will happily split in the middle of a word. This episode demonstrates how to use the &lsquo;linebreak&rsquo; option to make Vim break lines without breaking words.</p>
 
 
       </div>
@@ -229,63 +230,52 @@
 <p>If you want to make Vim wrap long lines to fit in the window, you first have to enable <code>:set wrap</code>. By default Vim will break lines at exactly the width of the window, which causes some words to be split across two lines. To prevent this from happening, you can enable <code>:set linebreak</code>. </p>
 
 <p>The <code>linebreak</code> setting will not work when the <code>list</code> setting is enabled. So if you find that enabling <code>linebreak</code> does not produce the desired effect, try running <code>:set nolist</code>. To be sure, you can run the following command:</p>
-
-<pre class="brush: vimscript">
-:set wrap linebreak nolist
+<pre class="highlight viml"><span class="p">:</span><span class="k">set</span> wrap linebreak nolist
 </pre>
 
 <p>Rather than having to ensure that 3 separate options are configured correctly, I would prefer if I could just issue the command <code>:Wrap</code>. This can be achieved by putting the following in your .vimrc file:</p>
-
-<pre class="brush: vimscript">
-command! -nargs=* Wrap set wrap linebreak nolist
+<pre class="highlight viml">command<span class="p">!</span> <span class="p">-</span>nargs<span class="p">=</span>* Wrap <span class="k">set</span> wrap linebreak nolist
 </pre>
 
-<h2 id="moving-around-through-wrapped-lines">Moving around through wrapped lines</h2>
+<h2>Moving around through wrapped lines</h2>
 
 <p>Unlike many text editing environments, Vim makes a distinction between displayed lines, and numbered lines.  When <code>wrap</code> is enabled, each numbered line might be split across more than one display lines. The <code>k</code> and <code>j</code> keys move up and down by numbered lines. If you want to move the cursor up and down by display lines instead, you can use the commands <code>gk</code> and <code>gj</code> instead.</p>
 
 <p>Hitting two keys in quick succession feels slow compared to pressing a single key whilst holding down a modifier key. I have the following in my .vimrc file:</p>
-
-<pre class="brush: vimscript">
-vmap &lt;D-j&gt; gj
-vmap &lt;D-k&gt; gk
-vmap &lt;D-4&gt; g$
-vmap &lt;D-6&gt; g^
-vmap &lt;D-0&gt; g^
-nmap &lt;D-j&gt; gj
-nmap &lt;D-k&gt; gk
-nmap &lt;D-4&gt; g$
-nmap &lt;D-6&gt; g^
-nmap &lt;D-0&gt; g^
+<pre class="highlight viml">vmap <span class="p">&lt;</span>D<span class="p">-</span><span class="k">j</span><span class="p">&gt;</span> gj
+vmap <span class="p">&lt;</span>D<span class="p">-</span><span class="k">k</span><span class="p">&gt;</span> gk
+vmap <span class="p">&lt;</span>D<span class="m">-4</span><span class="p">&gt;</span> <span class="k">g</span>$
+vmap <span class="p">&lt;</span>D<span class="m">-6</span><span class="p">&gt;</span> <span class="k">g</span>^
+vmap <span class="p">&lt;</span>D<span class="m">-0</span><span class="p">&gt;</span> <span class="k">g</span>^
+nmap <span class="p">&lt;</span>D<span class="p">-</span><span class="k">j</span><span class="p">&gt;</span> gj
+nmap <span class="p">&lt;</span>D<span class="p">-</span><span class="k">k</span><span class="p">&gt;</span> gk
+nmap <span class="p">&lt;</span>D<span class="m">-4</span><span class="p">&gt;</span> <span class="k">g</span>$
+nmap <span class="p">&lt;</span>D<span class="m">-6</span><span class="p">&gt;</span> <span class="k">g</span>^
+nmap <span class="p">&lt;</span>D<span class="m">-0</span><span class="p">&gt;</span> <span class="k">g</span>^
 </pre>
 
 <p>On the mac, this allows me to use <code>j</code>, <code>k</code>, <code>$</code>, <code>0</code> and <code>^</code> on display lines by holding down the command key.</p>
 
-<h2 id="knowing-where-you-are">Knowing where you are</h2>
+<h2>Knowing where you are</h2>
 
 <p>Without any visual clues, it could be hard to tell whether you are looking at display lines or numbered lines. The simplest way to tell is to switch line numbering on:</p>
-
-<pre class="brush: vimscript">
-:set number
+<pre class="highlight viml"><span class="p">:</span><span class="k">set</span> <span class="k">number</span>
 </pre>
 
 <p>If you prefer not to show line numbers, there is another way. The <code>showbreak</code> option can be set to a character which will lead each display line after the first one. It can be set as follows:</p>
-
-<pre class="brush: vimscript">
-:set showbreak=â€¦
+<pre class="highlight viml"><span class="p">:</span><span class="k">set</span> showbreak<span class="p">=</span>â€¦
 </pre>
 
 <p>To insert the elipsis, press <code>ctrl-vu</code> followed by the <a href="http://www.fileformat.info/info/unicode/char/2026/index.htm">numeric code for elipsis</a>: <code>2026</code>. <a href="http://vimcasts.org/e/1">Episode 1</a> covers unicode character insertion in a little more detail.</p>
 
-<h3 id="further-reading">Further reading</h3>
+<h3>Further reading</h3>
 
 <ul>
-  <li><a title="linebreak" href="http://vimdoc.sourceforge.net/htmldoc/options.html#"><code>:help linebreak</code></a></li>
-  <li><a title="wrap" href="http://vimdoc.sourceforge.net/htmldoc/options.html#"><code>:help wrap</code></a></li>
-  <li><a title="showbreak" href="http://vimdoc.sourceforge.net/htmldoc/options.html#"><code>:help showbreak</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#gj"><code>:help gj</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;#x27;linebreak&amp;#x27;"><code>:help linebreak</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;#x27;wrap&amp;#x27;"><code>:help wrap</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;#x27;showbreak&amp;#x27;"><code>:help showbreak</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#gj"><code>:help gj</code></a></li>
 </ul>
-
 
         </div>
         </dd>
@@ -330,25 +320,25 @@ nmap &lt;D-0&gt; g^
 
     
       <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/hard-wrapping-text/">Hard wrapping text</a></h4>
-        <p>It is sometimes preferable to format text with hard wrapped lines, for example when writing emails in plaintext. Vim can apply this style of formatting for you. This episode shows some of the options which allow you to customize Vim's text formatting.</p>
-
-
-      </li>
-    
-      <li>
         <h4><a href="/categories">Find by category</a></h4>
         <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
       <li>
         <h4><a href="/episodes/formatting-text-with-par/">Formatting text with par</a></h4>
-        <p>'Do one thing and do it well' is the principle of the Unix toolkit. Editing text is a broad domain, and there are many related tasks with which it overlaps. Vim acknowledges this by enabling certain tasks to be outsourced to external programs which do that one thing, and do it well. This episode will demonstrate how the <em>par</em> program can be used for formatting text.</p>
+        <p>&lsquo;Do one thing and do it well&rsquo; is the principle of the Unix toolkit. Editing text is a broad domain, and there are many related tasks with which it overlaps. Vim acknowledges this by enabling certain tasks to be outsourced to external programs which do that one thing, and do it well. This episode will demonstrate how the <em>par</em> program can be used for formatting text.</p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/spell-checking/">Spell checking</a></h4>
+        <p>Using a spell checker is a good habit to get into.  In this episode, I demonstrate how to use Vim&rsquo;s built in spell checking feature.</p>
 
 
       </li>
@@ -359,8 +349,8 @@ nmap &lt;D-0&gt; g^
       </li>
     
       <li>
-        <h4><a href="/episodes/spell-checking/">Spell checking</a></h4>
-        <p>Using a spell checker is a good habit to get into.  In this episode, I demonstrate how to use Vim's built in spell checking feature.</p>
+        <h4><a href="/episodes/hard-wrapping-text/">Hard wrapping text</a></h4>
+        <p>It is sometimes preferable to format text with hard wrapped lines, for example when writing emails in plaintext. Vim can apply this style of formatting for you. This episode shows some of the options which allow you to customize Vim&rsquo;s text formatting.</p>
 
 
       </li>

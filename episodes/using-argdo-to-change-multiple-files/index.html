@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -187,7 +188,7 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>The <code>:argdo</code> command allows us to execute an Ex command across all buffers in the arglist.  To demonstrate, we'll use the example of running the <code>:substitute</code> command across multiple files, then we'll see how to revert or save the changes.  We'll also compare the <code>:argdo</code> and <code>:bufdo</code> commands, and consider when it's appropriate to use each one.</p>
+        <p>The <code>:argdo</code> command allows us to execute an Ex command across all buffers in the arglist.  To demonstrate, we&rsquo;ll use the example of running the <code>:substitute</code> command across multiple files, then we&rsquo;ll see how to revert or save the changes.  We&rsquo;ll also compare the <code>:argdo</code> and <code>:bufdo</code> commands, and consider when it&rsquo;s appropriate to use each one.</p>
 
 
       </div>
@@ -227,83 +228,73 @@
           
 
 <p>The <code>argdo</code> command works like this:</p>
-
-<pre><code>:argdo {cmd}
-</code></pre>
+<pre class="highlight plaintext">:argdo {cmd}
+</pre>
 
 <p>Where <code>{cmd}</code> could be any Ex command, such as <code>:substitute</code>, <code>:global</code>, or <code>:normal</code> for example. This is just like running:</p>
-
-<pre><code>:first
+<pre class="highlight plaintext">:first
 :{cmd}
 :next
 :{cmd}
 etc...
-</code></pre>
+</pre>
 
-<p>The <code>argdo</code> command works best when the <a title="hidden" href="http://vimdoc.sourceforge.net/htmldoc/options.html#"><code>'hidden'</code></a> setting is enabled. For more information, see Vimcast <a href="/e/6">episode 6 - Working with buffers</a>.</p>
+<p>The <code>argdo</code> command works best when the <a href="http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;#x27;hidden&amp;#x27;"><code>&#39;hidden&#39;</code></a> setting is enabled. For more information, see Vimcast <a href="/e/6">episode 6 - Working with buffers</a>.</p>
 
-<h3 id="using-argdo-with-substitute">Using <code>argdo</code> with <code>substitute</code></h3>
+<h3>Using <code>argdo</code> with <code>substitute</code></h3>
 
 <p>The video demonstrates how to use <code>argdo</code> with the <code>substitute</code> comamnd. We start off simple:</p>
+<pre class="highlight plaintext">:argdo %s/\a/*/g
+</pre>
 
-<pre><code>:argdo %s/\a/*/g
-</code></pre>
-
-<p>There's a problem with this command: if any of the buffers in the argument list do not contain a match for the pattern specified by the substitute command (in this case <code>\a</code>), then the substitue command will raise an error: <code>E486 pattern not found</code>. We can suppress this error by modifying the substitute command with the <code>e</code> flag (see <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:s_flags"><code>:help :s_flags</code></a>):</p>
-
-<pre><code>:argdo %s/\a/*/ge
-</code></pre>
+<p>There&rsquo;s a problem with this command: if any of the buffers in the argument list do not contain a match for the pattern specified by the substitute command (in this case <code>\a</code>), then the substitue command will raise an error: <code>E486 pattern not found</code>. We can suppress this error by modifying the substitute command with the <code>e</code> flag (see <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:s_flags"><code>:help :s_flags</code></a>):</p>
+<pre class="highlight plaintext">:argdo %s/\a/*/ge
+</pre>
 
 <p>That cuts down some of the noise, but the substitute command still reports details of about the effect it has on each file in the argument list. We can suppress that output by prefixing the whole thing with <a href="http://vimdoc.sourceforge.net/htmldoc/various.html#:silent"><code>silent</code></a>:</p>
-
-<pre><code>:silent argdo %s/\a/*/ge
-</code></pre>
+<pre class="highlight plaintext">:silent argdo %s/\a/*/ge
+</pre>
 
 <p>Alternatively, we could use <code>:silent!</code>, which would suppress all output <em>including error messages</em>. That way, we could leave out the <code>e</code> flag:</p>
+<pre class="highlight plaintext">:silent! argdo %s/\a/*/g
+</pre>
 
-<pre><code>:silent! argdo %s/\a/*/g
-</code></pre>
-
-<h3 id="pasting-the-last-ex-command-into-the-command-line">Pasting the last Ex command into the command line</h3>
+<h3>Pasting the last Ex command into the command line</h3>
 
 <p>On the command line, you can paste the contents of a register by pressing <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-R"><code>&lt;C-r&gt;{register}</code></a>. In this context, the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote:"><code>quote:</code></a> register comes in handy: it contains the last executed Ex command. For example, if we start out by running a simple substitute command:</p>
-
-<pre><code>:%s/\a/*/g
-</code></pre>
+<pre class="highlight plaintext">:%s/\a/*/g
+</pre>
 
 <p>To prefix this with argdo, simply type <code>:argdo</code>, then a space, then <code>&lt;C-r&gt;:</code> which will produce:</p>
-
-<pre><code>:argdo %s/\a/*/g
-</code></pre>
+<pre class="highlight plaintext">:argdo %s/\a/*/g
+</pre>
 
 <p>After executing this command, the <code>:</code> register will contain <code>argdo %s/\a/*/g</code>. We could prefix this with <code>silent</code> by typing <code>:silent</code>, space, then <code>&lt;C-r&gt;:</code> to produce:</p>
-
-<pre><code>:silent argdo %s/\a/*/g
-</code></pre>
+<pre class="highlight plaintext">:silent argdo %s/\a/*/g
+</pre>
 
 <p>You get the idea?</p>
 
-<h3 id="argdo-vs-bufdo">:argdo Vs :bufdo</h3>
+<h3>:argdo Vs :bufdo</h3>
 
 <p>Just as we can use <code>:argdo</code> to execute a command on each of the files in the arglist, we can use <code>:bufdo</code> to execute a command on each of the files in the buffer list. In some circumstances, the buffer list and arglist may refer to the same set of files. In this case, it would make no difference whether you used <code>:bufdo</code> or <code>:argdo</code>.</p>
 
-<p>It's easy to add files to the buffer list (perhaps unintentionally), so if you use <code>:bufdo</code> there's always a risk that it might end up touching a file that you didn't mean to change. Whereas the arglist only changes when you tell it to. For that reason, I prefer to use <code>:argdo</code> instead of <code>:bufdo</code>.</p>
+<p>It&rsquo;s easy to add files to the buffer list (perhaps unintentionally), so if you use <code>:bufdo</code> there&rsquo;s always a risk that it might end up touching a file that you didn&rsquo;t mean to change. Whereas the arglist only changes when you tell it to. For that reason, I prefer to use <code>:argdo</code> instead of <code>:bufdo</code>.</p>
 
-<h3 id="further-reading">Further reading</h3>
+<h3>Further reading</h3>
 
 <ul>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/editing.html#:argdo"><code>:help :argdo</code></a></li>
-  <li><a title="hidden" href="http://vimdoc.sourceforge.net/htmldoc/options.html#"><code>:help 'hidden'</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:s_flags"><code>:help :s_flags</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/various.html#:silent"><code>:help :silent</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/editing.html#:edit!"><code>:help :edit!</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/editing.html#:update"><code>:help :update</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/windows.html#:bufdo"><code>:help :bufdo</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-R"><code>:help c_CTRL-R</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote:"><code>:help quote:</code></a></li>
-  <li><a href="/e/6">Working with buffers</a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/editing.html#:argdo"><code>:help :argdo</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;#x27;hidden&amp;#x27;"><code>:help &#39;hidden&#39;</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:s_flags"><code>:help :s_flags</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/various.html#:silent"><code>:help :silent</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/editing.html#:edit!"><code>:help :edit!</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/editing.html#:update"><code>:help :update</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/windows.html#:bufdo"><code>:help :bufdo</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-R"><code>:help c_CTRL-R</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote:"><code>:help quote:</code></a></li>
+<li><a href="/e/6">Working with buffers</a></li>
 </ul>
-
 
         </div>
         </dd>
@@ -348,20 +339,29 @@ etc...
 
     
       <li>
+        <h4><a href="/episodes/search-multiple-files-with-vimgrep/">Search multiple files with :vimgrep</a></h4>
+        <p><code>vimgrep</code> is Vim&rsquo;s built-in command for searching across multiple files. It&rsquo;s not so fast as external tools like ack and git-grep, but it has its uses. <code>vimgrep</code> uses Vim&rsquo;s built-in regex engine, so you can reuse the patterns that work with Vim&rsquo;s standard search command. </p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/blog/2013/03/combining-vimgrep-with-ack--f/">Combining :vimgrep with ack -f</a></h4>
+        <p>I love the way that ack let&rsquo;s me specify the files to search inside. For starters, ack does the right thing by ignoring the contents of VCS directories, backup files, core dumps etc., which gives a good signal to noise ratio. On top of that, ack provides a convenient syntax for specifying filetypes to include or exclude from the set (see <code>ack --help-types</code>). I can target ruby files only with the <code>--ruby</code> option, or everything but ruby files with <code>--noruby</code>.</p>
+
+<p>I also love using <code>:vimgrep</code>, because it lets me use Vim&rsquo;s native regular expressions. For me, the ideal project-wide search would combine Vim&rsquo;s regex with ack&rsquo;s method of specifying the set of files to search through. I recently learned about ack&rsquo;s <code>-f</code> flag, which makes this combination possible.</p>
+
+
+      </li>
+    
+      <li>
         <h4><a href="/categories">Find by category</a></h4>
         <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
       <li>
         <h4><a href="/episodes/populating-the-arglist/">Populating the arglist</a></h4>
-        <p>The arglist wouldn't be much use if we had to quit and relaunch Vim every time we wanted to change its contents. In this episode, we'll learn how to set the contents of the arglist using the <code>:args</code> command, which can receive filepaths, globs, or even backtick expressions.</p>
-
-
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/search-multiple-files-with-vimgrep/">Search multiple files with :vimgrep</a></h4>
-        <p><code>vimgrep</code> is Vim's built-in command for searching across multiple files. It's not so fast as external tools like ack and git-grep, but it has its uses. <code>vimgrep</code> uses Vim's built-in regex engine, so you can reuse the patterns that work with Vim's standard search command. </p>
+        <p>The arglist wouldn&rsquo;t be much use if we had to quit and relaunch Vim every time we wanted to change its contents. In this episode, we&rsquo;ll learn how to set the contents of the arglist using the <code>:args</code> command, which can receive filepaths, globs, or even backtick expressions.</p>
 
 
       </li>
@@ -369,15 +369,6 @@ etc...
       <li>
         <h4><a href="/training">Vim Training</a></h4>
         <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/blog/2013/03/combining-vimgrep-with-ack--f/">Combining :vimgrep with ack -f</a></h4>
-        <p>I love the way that ack let's me specify the files to search inside. For starters, ack does the right thing by ignoring the contents of VCS directories, backup files, core dumps etc., which gives a good signal to noise ratio. On top of that, ack provides a convenient syntax for specifying filetypes to include or exclude from the set (see <code>ack --help-types</code>). I can target ruby files only with the <code>--ruby</code> option, or everything but ruby files with <code>--noruby</code>.</p>
-
-<p>I also love using <code>:vimgrep</code>, because it lets me use Vim's native regular expressions. For me, the ideal project-wide search would combine Vim's regex with ack's method of specifying the set of files to search through. I recently learned about ack's <code>-f</code> flag, which makes this combination possible.</p>
-
-
       </li>
     
       <li>

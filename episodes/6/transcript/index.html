@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -130,28 +131,25 @@
           </div>
         </div>
 
-        <h1 id="buffers-and-hidden-buffers">Buffers and hidden buffers</h1>
+        <h1>Buffers and hidden buffers</h1>
 
-<h2 id="demonstration">Demonstration</h2>
+<h2>Demonstration</h2>
 
-<p>Here I have a directory with files named A, B, C, D and E. I'm going to launch
+<p>Here I have a directory with files named A, B, C, D and E. I&rsquo;m going to launch
 Vim in this directory with a wildcard as an argument. This tells Vim to load
 each file in this directory ending in .txt into a buffer. To begin with, all you 
 can see is the first of these files, but if I run the command:</p>
-
-<pre><code>:ls
-</code></pre>
+<pre class="highlight plaintext">:ls
+</pre>
 
 <p>then you can see that each of the files has been loaded into a buffer. I can
 easily scroll through the buffers by running:</p>
-
-<pre><code>:bn[ext]
-</code></pre>
+<pre class="highlight plaintext">:bn[ext]
+</pre>
 
 <p>to view the next buffer, or:</p>
-
-<pre><code>:bp[revious]
-</code></pre>
+<pre class="highlight plaintext">:bp[revious]
+</pre>
 
 <p>to view the previous buffer. Note that previous and next commands do cycle
 between the first and last items in the buffer list.</p>
@@ -160,8 +158,8 @@ between the first and last items in the buffer list.</p>
 annotations:</p>
 
 <ul>
-  <li>'a' marks an active buffer, meaning that it is currently loaded in a window</li>
-  <li>'#' (the hash sign) marks the alternate buffer</li>
+<li>&lsquo;a&rsquo; marks an active buffer, meaning that it is currently loaded in a window</li>
+<li>&lsquo;#&rsquo; (the hash sign) marks the alternate buffer</li>
 </ul>
 
 <p>You can quickly jump between the active buffer and the alternate buffer using
@@ -174,11 +172,11 @@ currently active window, and the application you used most recently.</p>
 again, you should see a new symbol:</p>
 
 <ul>
-  <li>+ (the plus sign) indicates that a buffer has been modified, therefore its
+<li>+ (the plus sign) indicates that a buffer has been modified, therefore its
 contents differ from the corresponding file</li>
 </ul>
 
-<p>Having made this change, but not saved it, let's now try and switch to another
+<p>Having made this change, but not saved it, let&rsquo;s now try and switch to another
 buffer with the <code>:bn</code> command. This raises an error:</p>
 
 <p>E37: No write since last change (add ! to override)</p>
@@ -186,45 +184,45 @@ buffer with the <code>:bn</code> command. This raises an error:</p>
 <p>At this point, I could do a couple of things:</p>
 
 <ul>
-  <li>save the file, and reissue the command to move on to the next buffer</li>
-  <li>or follow the advice in the prompt, and run the command with a trailing
+<li>save the file, and reissue the command to move on to the next buffer</li>
+<li>or follow the advice in the prompt, and run the command with a trailing
 exclamation mark</li>
 </ul>
 
-<p>Let's try running <code>:bn!</code> (b-n-bang), as advised. OK, this brings us to the next buffer,
+<p>Let&rsquo;s try running <code>:bn!</code> (b-n-bang), as advised. OK, this brings us to the next buffer,
 as expected. So lets see what happens now when I run <code>:ls</code></p>
 
 <ul>
-  <li>File A is still marked with a + (plus sign), indicating that the buffer has
+<li>File A is still marked with a + (plus sign), indicating that the buffer has
 been modified</li>
-  <li>additionally, the file is marked with an 'h', which stands for hidden</li>
+<li>additionally, the file is marked with an &lsquo;h&rsquo;, which stands for hidden</li>
 </ul>
 
-<p>A buffer is marked as 'hidden' if it has unsaved changes, and it is not
+<p>A buffer is marked as &lsquo;hidden&rsquo; if it has unsaved changes, and it is not
 currently loaded in a window. </p>
 
-<h2 id="consequences-of-having-hidden-buffers">Consequences of having hidden buffers</h2>
+<h2>Consequences of having hidden buffers</h2>
 
 <p>If you try and quit Vim while there are hidden buffers, an error will be 
 raised:</p>
 
-<p>E162: No write since last change for buffer "a.txt:</p>
+<p>E162: No write since last change for buffer &ldquo;a.txt:</p>
 
-<p>When you dismiss the error message, you'll find that the first hidden buffer
+<p>When you dismiss the error message, you&rsquo;ll find that the first hidden buffer
 has been loaded into your current window. This gives you the opportunity
 to either:</p>
 
 <ul>
-  <li>save the changes to a file (<code>:w</code>)</li>
-  <li>restore the original file (<code>:e!</code>)</li>
-  <li>or forcibly remove the buffer from the buffer list (<code>:bd!</code>), discarding any
+<li>save the changes to a file (<code>:w</code>)</li>
+<li>restore the original file (<code>:e!</code>)</li>
+<li>or forcibly remove the buffer from the buffer list (<code>:bd!</code>), discarding any
 changes</li>
-  <li>you can also force Vim to quit, discarding changes to all modified buffers
+<li>you can also force Vim to quit, discarding changes to all modified buffers
 (<code>:q!</code>)</li>
 </ul>
 
 <p>By default, Vim makes it difficult for you to create a hidden buffer, but as 
-long as you know how to deal with them when quitting Vim, there's nothing
+long as you know how to deal with them when quitting Vim, there&rsquo;s nothing
 wrong with creating them. To make Vim use hidden buffers more 
 liberally, I include the following line in my .vimrc:</p>
 

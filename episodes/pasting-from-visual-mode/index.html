@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -226,32 +227,31 @@
         <div id="shownotes" class="content" data-swiftype-index="true">
           
 
-<p>From Vim's documentation (see <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#v_p"><code>:help v_p</code></a>):</p>
+<p>From Vim&rsquo;s documentation (see <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#v_p"><code>:help v_p</code></a>):</p>
 
 <blockquote>
-  <p>When using a put command like <code>p</code> or <code>P</code> in Visual mode, Vim will try to replace the selected text with the contents of the register.</p>
+<p>When using a put command like <code>p</code> or <code>P</code> in Visual mode, Vim will try to replace the selected text with the contents of the register.</p>
 </blockquote>
 
-<p>This command has a side-effect: the text that was originally selected is copied to the default register. In effect, this means that the text in the default register and the text that's selected in the document swap places.</p>
+<p>This command has a side-effect: the text that was originally selected is copied to the default register. In effect, this means that the text in the default register and the text that&rsquo;s selected in the document swap places.</p>
 
-<h3 id="replacemotion-commands">replace{motion} commands</h3>
+<h3>replace{motion} commands</h3>
 
 <p>In general, I encourage staying out of visual mode where possible. For example, instead of visually selecting a word then deleting it (<code>viwd</code>), I prefer to use the <code>d{motion}</code> operation (<code>diw</code>). But Vim has no built-in Normal mode operation that emulates the behaviour of put in Visual mode, so this is one place where I encourage using Visual mode.</p>
 
-<p>If you'd like to make this operation without using Visual mode, there are several plugins that add this behavior.
-Kana Natsuno's <a href="https://github.com/kana/vim-operator-replace">operator-replace</a> plugin doesn't provide a mapping by default, but in the documentation the author suggests binding the operation to <code>_{motion}</code>. Ingo Karkat's <a href="https://github.com/vim-scripts/ReplaceWithRegister">ReplaceWithRegister</a> plugin creates a <code>gr{motion}</code> mapping. Steve Vermeulen's <a href="https://github.com/svermeulen/vim-easyclip">easyclip</a> plugin provides a <a href="https://github.com/svermeulen/vim-easyclip#substitution-operator">substitution operator</a>.</p>
+<p>If you&rsquo;d like to make this operation without using Visual mode, there are several plugins that add this behavior.
+Kana Natsuno&rsquo;s <a href="https://github.com/kana/vim-operator-replace">operator-replace</a> plugin doesn&rsquo;t provide a mapping by default, but in the documentation the author suggests binding the operation to <code>_{motion}</code>. Ingo Karkat&rsquo;s <a href="https://github.com/vim-scripts/ReplaceWithRegister">ReplaceWithRegister</a> plugin creates a <code>gr{motion}</code> mapping. Steve Vermeulen&rsquo;s <a href="https://github.com/svermeulen/vim-easyclip">easyclip</a> plugin provides a <a href="https://github.com/svermeulen/vim-easyclip#substitution-operator">substitution operator</a>.</p>
 
-<p>If I've missed any plugins that provide this functionality, please leave a comment below.</p>
+<p>If I&rsquo;ve missed any plugins that provide this functionality, please leave a comment below.</p>
 
-<h3 id="further-reading">Further reading</h3>
+<h3>Further reading</h3>
 
 <ul>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#v_p"><code>:h v_p</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0"><code>:h quote0</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote"><code>:h quotequote</code></a></li>
-  <li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, tip 61: Replace a visual selection with a register</li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#v_p"><code>:h v_p</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0"><code>:h quote0</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote"><code>:h quotequote</code></a></li>
+<li><a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>, tip 61: Replace a visual selection with a register</li>
 </ul>
-
 
         </div>
         </dd>
@@ -296,20 +296,8 @@ Kana Natsuno's <a href="https://github.com/kana/vim-operator-replace">operator-r
 
     
       <li>
-        <h4><a href="/episodes/using-vims-named-registers/">Using Vim's named registers</a></h4>
-        <p>We've met Vim's <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote">default register</a> and the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0">yank register</a>. This time, we're going to look at the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote_alpha">named registers</a>, which are handy if you want to cut or copy some text that you intend to paste multiple times.</p>
-
-
-      </li>
-    
-      <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/pasting-from-insert-mode/">Pasting from Insert mode</a></h4>
-        <p>We don't have to be in Normal mode to paste the contents of a register. The <a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r"><code>&lt;C-r&gt;{reg}</code></a> command lets us paste a register from Insert mode (and it <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-r">works in commandline mode too</a>!) Using this command allows us to make changes that can be repeated with <a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#.">the dot command</a>.</p>
+        <h4><a href="/episodes/simple-calculations-with-vims-expression-register/">Simple calculations with Vim's expression register</a></h4>
+        <p>The <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote=">expression register</a> lets us evaluate a snippet of Vimscript code. This is handy when you need to perform simple calculations and insert the result into the document.</p>
 
 
       </li>
@@ -320,10 +308,22 @@ Kana Natsuno's <a href="https://github.com/kana/vim-operator-replace">operator-r
       </li>
     
       <li>
-        <h4><a href="/episodes/simple-calculations-with-vims-expression-register/">Simple calculations with Vim's expression register</a></h4>
-        <p>The <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote=">expression register</a> lets us evaluate a snippet of Vimscript code. This is handy when you need to perform simple calculations and insert the result into the document.</p>
+        <h4><a href="/episodes/pasting-from-insert-mode/">Pasting from Insert mode</a></h4>
+        <p>We don&rsquo;t have to be in Normal mode to paste the contents of a register. The <a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r"><code>&lt;C-r&gt;{reg}</code></a> command lets us paste a register from Insert mode (and it <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-r">works in commandline mode too</a>!) Using this command allows us to make changes that can be repeated with <a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#.">the dot command</a>.</p>
 
 
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/using-vims-named-registers/">Using Vim's named registers</a></h4>
+        <p>We&rsquo;ve met Vim&rsquo;s <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote">default register</a> and the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0">yank register</a>. This time, we&rsquo;re going to look at the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote_alpha">named registers</a>, which are handy if you want to cut or copy some text that you intend to paste multiple times.</p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
       </li>
     
       <li>

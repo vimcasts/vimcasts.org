@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -130,135 +131,122 @@
           </div>
         </div>
 
-        <h2 id="reviewing-the-history-of-a-file">Reviewing the history of a file</h2>
+        <h2>Reviewing the history of a file</h2>
 
-<h3 id="queueing-past-revisions-of-a-file">Queueing past revisions of a file</h3>
+<h3>Queueing past revisions of a file</h3>
 
 <p>The <code>Glog</code> command makes it easy to examine all previous revisions of a file. It does this by loading each revision into its own buffer, and queing them in the quickfix list in chronological order.</p>
 
 <p>When I run <code>:Glog</code>, the active window switches to the most recently checked in version of the current file. I can go back in time through previous revisions by running <code>:cnext</code>. Notice that each time I switch to another revision, I get a summary line showing the first line of the commit message for that revision.</p>
 
 <p>If you are not already using [unimpaired.vim][], another plugin from Tim Pope, then I recommend installing it. It provides 4 mappings that make working with the quickfix list much easier:</p>
-
-<pre><code>[q - :cprevious
+<pre class="highlight plaintext">[q - :cprevious
 ]q - :cnext
 [Q - :cfirst
 ]Q - :clast
-</code></pre>
+</pre>
 
-<p>With these mappings, I can jump to the oldest revision by pressing <code>]Q</code> "close bracket big Q", and work my way forwards or backwards through history with the corresponding "square-bracket little-q" mappings.</p>
+<p>With these mappings, I can jump to the oldest revision by pressing <code>]Q</code> &ldquo;close bracket big Q&rdquo;, and work my way forwards or backwards through history with the corresponding &ldquo;square-bracket little-q&rdquo; mappings.</p>
 
 <p>If I want to return to my working copy, I can do so at any time by running the <code>:Gedit</code> command with no arguments.</p>
 
-<h3 id="filtering-the-results">Filtering the results</h3>
+<h3>Filtering the results</h3>
 
-<p>If your project has a long history, then you might want to provide additional arguments to limit the number of revisions that are loaded. For example, running "gee-log minus ten":</p>
+<p>If your project has a long history, then you might want to provide additional arguments to limit the number of revisions that are loaded. For example, running &ldquo;gee-log minus ten&rdquo;:</p>
+<pre class="highlight plaintext">:Glog -10
+</pre>
 
-<pre><code>:Glog -10
-</code></pre>
-
-<p>will only load the last 10 revisions of the current file into the quickfix list. You can also switch the order using the <code>reverse</code> option. So running "gee-log minus ten double-dash-reverse":</p>
-
-<pre><code>:Glog -10 --reverse
-</code></pre>
+<p>will only load the last 10 revisions of the current file into the quickfix list. You can also switch the order using the <code>reverse</code> option. So running &ldquo;gee-log minus ten double-dash-reverse&rdquo;:</p>
+<pre class="highlight plaintext">:Glog -10 --reverse
+</pre>
 
 <p>only shows the <em>first</em> 10 revisions of the current file. You might also want to limit the results to a particular date range, which you can do using the since and until options. For example, running:</p>
+<pre class="highlight plaintext">:Glog -1 --until=yesterday
+</pre>
 
-<pre><code>:Glog -1 --until=yesterday
-</code></pre>
+<p>Would load yesterday&rsquo;s version of the current file. More specifically, it would load the last version that was checked in before midnight.</p>
 
-<p>Would load yesterday's version of the current file. More specifically, it would load the last version that was checked in before midnight.</p>
+<h3>Queueing commit objects</h3>
 
-<h3 id="queueing-commit-objects">Queueing commit objects</h3>
+<p>Note that if you run <code>git log</code> in the shell, you get a summary list of commit messages. On the surface, it looks as though the default <code>:Glog</code> behaviour has little resemblence to the <code>git log</code> command, but it can be easily tweaked. If you supply a trailing <code>--</code> &ldquo;double-dash&rdquo;, then fugitive will queue a list of commit buffers into the quickfix list.</p>
 
-<p>Note that if you run <code>git log</code> in the shell, you get a summary list of commit messages. On the surface, it looks as though the default <code>:Glog</code> behaviour has little resemblence to the <code>git log</code> command, but it can be easily tweaked. If you supply a trailing <code>--</code> "double-dash", then fugitive will queue a list of commit buffers into the quickfix list.</p>
+<p>I&rsquo;m just going to open the quickfix window so that we can see each record, then I&rsquo;ll jump to the oldest commit. As you can see, the <code>Glog</code> command has loaded every ancestral commit for the current branch.</p>
 
-<p>I'm just going to open the quickfix window so that we can see each record, then I'll jump to the oldest commit. As you can see, the <code>Glog</code> command has loaded every ancestral commit for the current branch.</p>
-
-<p>A useful variation on this is to provide the path to a file after the double dash argument. On Vim's command line, the percent symbol always represents the path of the current file. So if I run "gee-log double-dash percent":</p>
-
-<pre><code>:Glog -- %
-</code></pre>
+<p>A useful variation on this is to provide the path to a file after the double dash argument. On Vim&rsquo;s command line, the percent symbol always represents the path of the current file. So if I run &ldquo;gee-log double-dash percent&rdquo;:</p>
+<pre class="highlight plaintext">:Glog -- %
+</pre>
 
 <p>then fugitive will only queue the commit objects that touched the current file.</p>
 
-<h2 id="searching-a-git-repository">Searching a git repository</h2>
+<h2>Searching a git repository</h2>
 
 <p>A git repository can hold a terrific amount of information about a codebase. If you want to search the repository for a particular query string, there are a handful of ways that you might want to focus the task:</p>
 
 <ul>
-  <li>You could search the working copy. Since this is stored as regular files on the file system, you can use plain old grep or a similar tool to search their contents.</li>
-  <li>Alternatively, you might want to search the history of the repository for text contained in commit messages.</li>
-  <li>You might also want to search through all changesets for text that was added or removed by a particular commit.</li>
+<li>You could search the working copy. Since this is stored as regular files on the file system, you can use plain old grep or a similar tool to search their contents.</li>
+<li>Alternatively, you might want to search the history of the repository for text contained in commit messages.</li>
+<li>You might also want to search through all changesets for text that was added or removed by a particular commit.</li>
 </ul>
 
 <p>Git provides the tools for each of these, so lets look at each one in turn.</p>
 
-<h3 id="searching-the-working-copy">Searching the working copy</h3>
+<h3>Searching the working copy</h3>
 
-<p><strong>PREP: concoct a grep command that returns results from inside of the .git directory. Do the same search with <code>git grep</code> to prove that it's less noisy.</strong></p>
+<p><strong>PREP: concoct a grep command that returns results from inside of the .git directory. Do the same search with <code>git grep</code> to prove that it&rsquo;s less noisy.</strong></p>
 
-<p>Here, I'm going to use grep to search the vimcasts repository for the word 'fugitive'.</p>
+<p>Here, I&rsquo;m going to use grep to search the vimcasts repository for the word &lsquo;fugitive&rsquo;.</p>
+<pre class="highlight plaintext">grep -r fugitive * | view -
+</pre>
 
-<pre><code>grep -r fugitive * | view -
-</code></pre>
-
-<p>You can see at a glance that the results include matches from a SQL file. There are other matches in there that are useful, but as far as I'm concerned, the SQL file is just noise. I could fix this by adding an option to the grep command so that it doesn't look inside SQL files:</p>
-
-<pre><code>grep -r --exclude="*.sql" fugitive * | view -
-</code></pre>
+<p>You can see at a glance that the results include matches from a SQL file. There are other matches in there that are useful, but as far as I&rsquo;m concerned, the SQL file is just noise. I could fix this by adding an option to the grep command so that it doesn&rsquo;t look inside SQL files:</p>
+<pre class="highlight plaintext">grep -r --exclude="*.sql" fugitive * | view -
+</pre>
 
 <p>Not only does this reduce the noise in the results list, but it will speed up the search because it cuts down the number of files that grep has to look inside of.</p>
 
-<p>Git provides it's own variation of the grep command, which searches all files that are tracked by the repository. The fact that it only looks inside tracked files, means that it will skip any files or directories that are listed in the <code>.gitignore</code> file. I've got a wildcard in mine that tells git to ignore any SQL files. So if I run the equivalent search using <code>git grep</code>:</p>
+<p>Git provides it&rsquo;s own variation of the grep command, which searches all files that are tracked by the repository. The fact that it only looks inside tracked files, means that it will skip any files or directories that are listed in the <code>.gitignore</code> file. I&rsquo;ve got a wildcard in mine that tells git to ignore any SQL files. So if I run the equivalent search using <code>git grep</code>:</p>
 
-<p>Git provides it's own variation of the grep command, which understands implicitly that it shouldn't look inside any files or directories that are listed in the <code>.gitignore</code> file. I've got a wildcard in mine that tells git to ignore any SQL files. So if I run the equivalent search using <code>git grep</code>:</p>
-
-<pre><code>git grep fugitive * | view -
-</code></pre>
+<p>Git provides it&rsquo;s own variation of the grep command, which understands implicitly that it shouldn&rsquo;t look inside any files or directories that are listed in the <code>.gitignore</code> file. I&rsquo;ve got a wildcard in mine that tells git to ignore any SQL files. So if I run the equivalent search using <code>git grep</code>:</p>
+<pre class="highlight plaintext">git grep fugitive * | view -
+</pre>
 
 <p>it automatically skips the SQL file. By default, <code>git grep</code> returns more relevant results than plain old grep.</p>
 
-<p>Fugitive provides a wrapper for the <code>git grep</code> command, called <code>:Ggrep</code>, which collects the search results in the quickfix window. So if you want to search your working tree for a pattern, you can run "gee-grep with the search string" from inside of Vim:</p>
-
-<pre><code>:Ggrep fugitive
-</code></pre>
+<p>Fugitive provides a wrapper for the <code>git grep</code> command, called <code>:Ggrep</code>, which collects the search results in the quickfix window. So if you want to search your working tree for a pattern, you can run &ldquo;gee-grep with the search string&rdquo; from inside of Vim:</p>
+<pre class="highlight plaintext">:Ggrep fugitive
+</pre>
 
 <p>Then you can open up the quickfix window (<code>:copen</code>) to view the results.</p>
 
-<h3 id="searching-any-git-tree-branches-commits-and-tags">Searching any git tree (branches, commits and tags)</h3>
+<h3>Searching any git tree (branches, commits and tags)</h3>
 
-<p><code>git grep</code> is not just limited to reading files on the filesystem. It can look inside any git object. So using <code>git grep</code>, you can search all files in any of your git branches without first having to switch to the branch. Here, I'm searching for the text 'find me' on a branch called 'demo':</p>
-
-<pre><code>:Ggrep 'find me' branchname
-</code></pre>
+<p><code>git grep</code> is not just limited to reading files on the filesystem. It can look inside any git object. So using <code>git grep</code>, you can search all files in any of your git branches without first having to switch to the branch. Here, I&rsquo;m searching for the text &lsquo;find me&rsquo; on a branch called &lsquo;demo&rsquo;:</p>
+<pre class="highlight plaintext">:Ggrep 'find me' branchname
+</pre>
 
 <p>When you open a file that belongs on another branch, fugitive will automatically create a <em>read only</em> buffer for it.</p>
 
 <p>You can also search the files from a particular tag or commit, by providing the tagname or SHA code that identifies them:</p>
-
-<pre><code>:Ggrep 'find me' SHA
-</code></pre>
+<pre class="highlight plaintext">:Ggrep 'find me' SHA
+</pre>
 
 <p>Even if you never find yourself having to search inside commits or tagged snapshots of your repository, the speed and convenience of the <code>Ggrep</code> command make it a compelling alternative to ack and plain old grep.</p>
 
-<h3 id="searching-for-text-in-a-commit-message">Searching for text in a commit message</h3>
+<h3>Searching for text in a commit message</h3>
 
-<p>There might be times when you want to search the text of commit messages, rather than the contents of files. Remember that running <code>git log</code> in the shell outputs a list of commit messages? Well, if you pass the "double-dash grep" option, then you can filter the list to only show commits whose message includes the specified words:</p>
-
-<pre><code>git log --grep='xtype'
-</code></pre>
+<p>There might be times when you want to search the text of commit messages, rather than the contents of files. Remember that running <code>git log</code> in the shell outputs a list of commit messages? Well, if you pass the &ldquo;double-dash grep&rdquo; option, then you can filter the list to only show commits whose message includes the specified words:</p>
+<pre class="highlight plaintext">git log --grep='xtype'
+</pre>
 
 <p>Of course, we can also run this inside of Vim using the <code>Glog</code> wrapper. Note that here I am also <em>appending</em> the double-dash argument, so that fugitive will queue commit objects in the quickfix list:</p>
-
-<pre><code>:Glog --grep='xtype' --
-</code></pre>
+<pre class="highlight plaintext">:Glog --grep='xtype' --
+</pre>
 
 <p>When I ran this in the shell, I got a summary list of commit objects. But when I run it inside of Vim, fugitive creates a <em>commit buffer</em> for each match. These commit buffers are interactive, and contain a good deal of information. I showed how to browse the git object database with fugitive in Episode 34.</p>
 
-<p>We've seen the word 'grep' in a couple of different contexts here, so lets just review them to make sure we don't get them mixed up. First, there was the <code>git grep</code> command (and it's wrapper, <code>Ggrep</code>), which looks inside files and blobs for the specified text. Then we saw <code>--grep</code> "double-dash grep" being passed as an option to the <code>git log</code> command, which filtered the output of that command.</p>
+<p>We&rsquo;ve seen the word &lsquo;grep&rsquo; in a couple of different contexts here, so lets just review them to make sure we don&rsquo;t get them mixed up. First, there was the <code>git grep</code> command (and it&rsquo;s wrapper, <code>Ggrep</code>), which looks inside files and blobs for the specified text. Then we saw <code>--grep</code> &ldquo;double-dash grep&rdquo; being passed as an option to the <code>git log</code> command, which filtered the output of that command.</p>
 
-<h3 id="searching-for-text-added-or-removed-by-a-commit">Searching for text added or removed by a commit</h3>
+<h3>Searching for text added or removed by a commit</h3>
 
 <p><strong>PREP: find/create a small project that uses jQuery. Add a jQuery plugin in one commit, then remove it in another commit. Do a pickaxe search for the name of the jQuery plugin.</strong></p>
 
@@ -266,17 +254,15 @@
 
 <p>This tells git to go through every commit, comparing the before and after state of <em>each file</em> that was changed by that commit. If the specified string is present in the file before, but absent from the file after the commit, then it counts as a match. The converse is also true, so if the specified string was either added or removed by the commit, then it will appear the git log results.</p>
 
-<p>To demonstrate, I've just made a commit that <em>uninstalled</em> a pagination plugin, therefore removing many occurences of the word 'paginate'. When I run "git log dash-big-S paginate":</p>
+<p>To demonstrate, I&rsquo;ve just made a commit that <em>uninstalled</em> a pagination plugin, therefore removing many occurences of the word &lsquo;paginate&rsquo;. When I run &ldquo;git log dash-big-S paginate&rdquo;:</p>
+<pre class="highlight plaintext">git log -Spaginate
+</pre>
 
-<pre><code>git log -Spaginate
-</code></pre>
+<p>the result list only includes commits that added or removed the word &lsquo;paginate&rsquo;. Unsurprisingly, the list includes the commit where the plugin was installed, and the one where the plugin was removed, and a few others besides.</p>
 
-<p>the result list only includes commits that added or removed the word 'paginate'. Unsurprisingly, the list includes the commit where the plugin was installed, and the one where the plugin was removed, and a few others besides.</p>
-
-<p>Again, we can use this option in combination with the <code>Glog</code> wrapper to get the results right inside of Vim in a useful format. Here, I'm going to run the same <code>git log</code> command from inside Vim:</p>
-
-<pre><code>:Glog -Spaginate --
-</code></pre>
+<p>Again, we can use this option in combination with the <code>Glog</code> wrapper to get the results right inside of Vim in a useful format. Here, I&rsquo;m going to run the same <code>git log</code> command from inside Vim:</p>
+<pre class="highlight plaintext">:Glog -Spaginate --
+</pre>
 
 <p>which creates a buffer for each commit object, and queues them in the quickfix list for easy traversal.</p>
 

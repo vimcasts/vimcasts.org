@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -137,113 +138,102 @@
         <h1><a href="/episodes/meet-the-yank-register/">Meet the yank register</a></h1>
         <h2>Transcript for episode #52</h2>
 
-        <p>Vim's default register is not a safe place to keep yanked text that you want to paste later. It's all too easy to clobber the default register with a <code>d</code> or <code>x</code> command. Luckily, the last yanked text is kept safe in Vim's <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0">yank register</a>.</p>
+        <p>Vim&rsquo;s default register is not a safe place to keep yanked text that you want to paste later. It&rsquo;s all too easy to clobber the default register with a <code>d</code> or <code>x</code> command. Luckily, the last yanked text is kept safe in Vim&rsquo;s <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0">yank register</a>.</p>
 
 
       
 
       <p>I want to change this snippet of code so that the <code>obstacleToBeRemoved</code> is replaced with the word <code>collection</code>.</p>
-
-<pre><code>collection = getCollection();
+<pre class="highlight plaintext">collection = getCollection();
 process(obstacleToBeRemoved, target);
-</code></pre>
+</pre>
 
-<p>Rather than type out the word from scratch, we'll do the lazy thing: yanking the word <code>collection</code> from the previous line then pasting where we need it.</p>
+<p>Rather than type out the word from scratch, we&rsquo;ll do the lazy thing: yanking the word <code>collection</code> from the previous line then pasting where we need it.</p>
 
-<p><code>yiw</code> "wye-eye-double-you" yanks the current word into Vim's default register. To make room for the paste operation, we'll delete the <code>obstacleToBeRemoved</code> text with the <code>diw</code> command. Now we want to put the text that we copied <em>in front of</em> the cursor position, so we'll use the <code>P</code> "big P" command.</p>
+<p><code>yiw</code> &ldquo;wye-eye-double-you&rdquo; yanks the current word into Vim&rsquo;s default register. To make room for the paste operation, we&rsquo;ll delete the <code>obstacleToBeRemoved</code> text with the <code>diw</code> command. Now we want to put the text that we copied <em>in front of</em> the cursor position, so we&rsquo;ll use the <code>P</code> &ldquo;big P&rdquo; command.</p>
 
 <p>What happened there? Instead of using the text that we yanked, Vim has pasted the text that we deleted.</p>
 
-<p>If that seems surprising to you, it might be that Vim's terminology is tripping you up. You see, Vim's delete command is actually more like a cut operation. Not only does it remove text from the document, it copies it into the default register.</p>
-
-<pre><code>Vim         Everything else
+<p>If that seems surprising to you, it might be that Vim&rsquo;s terminology is tripping you up. You see, Vim&rsquo;s delete command is actually more like a cut operation. Not only does it remove text from the document, it copies it into the default register.</p>
+<pre class="highlight plaintext">Vim         Everything else
 put         paste
 yank        copy
 delete      cut
-</code></pre>
+</pre>
 
-<p>From now on, I'm going to avoid Vim's jargon, preferring instead to use the more standard <em>cut, copy and paste</em> terminology.</p>
+<p>From now on, I&rsquo;m going to avoid Vim&rsquo;s jargon, preferring instead to use the more standard <em>cut, copy and paste</em> terminology.</p>
 
-<p>Check this out. We can inspect the contents of the default register by running the Ex command "reg doublequote":</p>
-
-<pre><code>:reg "
+<p>Check this out. We can inspect the contents of the default register by running the Ex command &ldquo;reg doublequote&rdquo;:</p>
+<pre class="highlight plaintext">:reg "
 "" obstacleToBeRemoved
-</code></pre>
+</pre>
 
 <p>It contains the text <code>obstacleToBeRemoved</code>, because the <code>diw</code> operation cut that text from the document, writing it to the default register. </p>
 
-<p>Now get this: Vim has a special register that always contains the last text that was yanked. It's addressed by "double-quote zero":</p>
-
-<pre><code>:reg 0
+<p>Now get this: Vim has a special register that always contains the last text that was yanked. It&rsquo;s addressed by &ldquo;double-quote zero&rdquo;:</p>
+<pre class="highlight plaintext">:reg 0
 "0 collection
-</code></pre>
+</pre>
 
 <p>I call it the <em>yank register</em>.</p>
+<pre class="highlight plaintext">uuu - revert changes
+</pre>
 
-<pre><code>uuu - revert changes
-</code></pre>
-
-<p>Let's back up and go through each of those steps again, this time keeping an eye on the contents of the default and yank registers.</p>
+<p>Let&rsquo;s back up and go through each of those steps again, this time keeping an eye on the contents of the default and yank registers.</p>
 
 <p>After running <code>yiw</code> on the word <code>collection</code>, both registers contains that word:</p>
-
-<pre><code>:reg "0
+<pre class="highlight plaintext">:reg "0
 "" collection
 "0 collection
-</code></pre>
+</pre>
 
 <p>After running <code>diw</code> on the word <code>obstacleToBeRemoved</code>, the default register has been updated, but the yank register is unchanged:</p>
-
-<pre><code>:reg "0
+<pre class="highlight plaintext">:reg "0
 "" obstacleToBeRemoved
 "0 collection
-</code></pre>
+</pre>
 
-<p>Now we can insert the text that we yanked by prefixing the paste command with "double-quote zero": <code>"0P</code>.</p>
+<p>Now we can insert the text that we yanked by prefixing the paste command with &ldquo;double-quote zero&rdquo;: <code>&quot;0P</code>.</p>
 
 <p>That puts the contents of the yank register, which does the trick!</p>
 
-<hr />
+<hr>
 
-<p>Comparing Vim's jargon with the more standard cut, copy, paste terminology might raise a question: if Vim's delete command is really a cut operation, does Vim have anything equivalent to a true deletion?</p>
-
-<pre><code>Standard terminology   Vim's jargon
+<p>Comparing Vim&rsquo;s jargon with the more standard cut, copy, paste terminology might raise a question: if Vim&rsquo;s delete command is really a cut operation, does Vim have anything equivalent to a true deletion?</p>
+<pre class="highlight plaintext">Standard terminology   Vim's jargon
 paste                  put
 copy                   yank
 cut                    delete
 delete                 ???
-</code></pre>
+</pre>
 
-<p>The answer is slightly oddball: writing to the 'blackhole register' performs a true deletion.</p>
+<p>The answer is slightly oddball: writing to the &lsquo;blackhole register&rsquo; performs a true deletion.</p>
 
-<p>The 'blackhole register' is addressed by doublequote underscore:</p>
-
-<pre><code>:help quote_
-</code></pre>
+<p>The &lsquo;blackhole register&rsquo; is addressed by doublequote underscore:</p>
+<pre class="highlight plaintext">:help quote_
+</pre>
 
 <p>Quick demo: running <code>yiw</code> populates both default and yank registers:</p>
-
-<pre><code>:reg "0
+<pre class="highlight plaintext">:reg "0
 "" collection
 "0 collection
-</code></pre>
+</pre>
 
-<p>Running <code>"_diw</code> "double-quote-underscore dee eye doubleyou" deletes the text, leaving the default register unchanged:</p>
-
-<pre><code>:reg "0
+<p>Running <code>&quot;_diw</code> &ldquo;double-quote-underscore dee eye doubleyou&rdquo; deletes the text, leaving the default register unchanged:</p>
+<pre class="highlight plaintext">:reg "0
 "" obstacleToBeRemoved
 "0 collection
-</code></pre>
+</pre>
 
-<p>Now we can go ahead and paste from the default register, using <code>P</code> "big P" without having to prefix any register.</p>
+<p>Now we can go ahead and paste from the default register, using <code>P</code> &ldquo;big P&rdquo; without having to prefix any register.</p>
 
-<hr />
+<hr>
 
-<h3 id="outro">Outro</h3>
+<h3>Outro</h3>
 
-<p>It's a common cause of frustration for Vim users: trying to paste something you previously yanked, only to find that the default register has been clobbered by a cut operation. The yank register is one of my favourite ways of avoiding this pitfall.</p>
+<p>It&rsquo;s a common cause of frustration for Vim users: trying to paste something you previously yanked, only to find that the default register has been clobbered by a cut operation. The yank register is one of my favourite ways of avoiding this pitfall.</p>
 
-<p>We'll look at alternative approaches in the next couple of episodes.</p>
+<p>We&rsquo;ll look at alternative approaches in the next couple of episodes.</p>
 
     </div>
   </div>

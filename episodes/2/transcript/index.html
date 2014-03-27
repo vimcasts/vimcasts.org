@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -134,16 +135,16 @@
 can be tweaked:</p>
 
 <ul>
-  <li><strong>tabstop</strong> - specifies the width of a tab character</li>
-  <li><strong>expandtab</strong> - when enabled, causes spaces to be used in place of tab characters</li>
-  <li><strong>softtabstop</strong> - when enabled, fine tunes the amount of whitespace to be inserted</li>
-  <li><strong>shiftwidth</strong> - determines the amount of whitespace to insert or remove using the indentation commands in normal mode</li>
+<li><strong>tabstop</strong> - specifies the width of a tab character</li>
+<li><strong>expandtab</strong> - when enabled, causes spaces to be used in place of tab characters</li>
+<li><strong>softtabstop</strong> - when enabled, fine tunes the amount of whitespace to be inserted</li>
+<li><strong>shiftwidth</strong> - determines the amount of whitespace to insert or remove using the indentation commands in normal mode</li>
 </ul>
 
 <p>The best way to illustrate how each of these settings works is to show
 examples with different settings.</p>
 
-<h2 id="defaults-ts8-sts0-sw8-noexpandtab">Defaults: ts=8 sts=0 sw=8 noexpandtab</h2>
+<h2>Defaults: ts=8 sts=0 sw=8 noexpandtab</h2>
 
 <p>By default, Vim sets tabstop to 8, with expandtab switched off. This means
 that pressing the tab key in insert mode inserts a single tab character, whose
@@ -155,17 +156,17 @@ character at the beginning of each selected line. The <code>&lt;</code>
 [less-than] command shifts the selected text left by deleting a
 single tab character.</p>
 
-<h2 id="ts8-sts0-sw8-expandtab">ts=8 sts=0 sw=8 expandtab</h2>
+<h2>ts=8 sts=0 sw=8 expandtab</h2>
 
 <p>Lets begin by switching expandtab on. This causes the tab key to insert
 space characters of an equivalent width to the tab which would have otherwise
 been inserted, if expand tab was not enabled. The backspace key, however, just
-deletes a single space at a time. We'll look at how to fix this in a minute.</p>
+deletes a single space at a time. We&rsquo;ll look at how to fix this in a minute.</p>
 
 <p>In normal mode, the <code>&gt;</code> command shifts a selection to the right by prepending
 8 space characters at a time, while the <code>&lt;</code> command does the inverse.</p>
 
-<h2 id="ts8-sts8-sw8-expandtab">ts=8 sts=8 sw=8 expandtab</h2>
+<h2>ts=8 sts=8 sw=8 expandtab</h2>
 
 <p>By setting <code>softtabstop</code> to 8, the same value as <code>tabstop</code> and <code>shiftwidth</code>,
 we can fix the behaviour of the backspace key in insert mode. Now, pressing
@@ -180,10 +181,10 @@ are equal. That way, you can expect consistent behaviour, whether you are
 shifting left and right with the indentation commands in normal mode, or you
 are inserting and removing spaces with tab and backspace keys in insert mode.</p>
 
-<h2 id="ts8-sts4-sw4-expandtab">ts=8 sts=4 sw=4 expandtab</h2>
+<h2>ts=8 sts=4 sw=4 expandtab</h2>
 
 <p>Lets look at an example where tabstop differs from softtabstop and shiftwidth.
-We'll keep tabstop set at the default value of 8, and take softtabstop and
+We&rsquo;ll keep tabstop set at the default value of 8, and take softtabstop and
 shiftwidth down to 4, keeping expandtab enabled for now. </p>
 
 <p>In insert mode, pressing the tab key inserts 4 spaces. Pressing it again
@@ -196,7 +197,7 @@ direction, removing 4 spaces at a time. </p>
 tab characters. But if any tab characters are present, their width is still
 dictated by the <code>tabstop</code> setting, which is 8.</p>
 
-<h2 id="ts8-sts4-sw4-noexpandtab">ts=8 sts=4 sw=4 noexpandtab</h2>
+<h2>ts=8 sts=4 sw=4 noexpandtab</h2>
 
 <p>Now lets try maintaining these settings, but switching expandtab off.
 Expandtab tells Vim to work with spaces instead of tabs, so by disabling it,
@@ -213,19 +214,18 @@ width is 8. The backspace key works in reverse, converting a tab character to
 <p>We have set shiftwidth to 4 as well, so in normal mode, the indentation
 commands behave in a similar fashion. </p>
 
-<h2 id="ts4-sts4-sw4-noexpandtab">ts=4 sts=4 sw=4 noexpandtab</h2>
+<h2>ts=4 sts=4 sw=4 noexpandtab</h2>
 
 <p>Finally, lets try bringing tabstop down to 4. As we apply this change, we should see the existing tabs shrinking in width from 8 columns to 4. Now that there is no discrepancy between tabstop and softtabstop, we can expect tab characters to be inserted every time, whether we press the tab key in insert mode, or use the indentation commands in normal mode. </p>
 
-<h2 id="setting-ts--sts--sw-simultaneously">Setting ts = sts = sw simultaneously</h2>
+<h2>Setting ts = sts = sw simultaneously</h2>
 
-<p>If you prefer to work with tab characters, and you don't want to throw spaces into the mix, then it is a good idea to ensure that <code>tabstop</code> always equals <code>softtabstop</code>. </p>
+<p>If you prefer to work with tab characters, and you don&rsquo;t want to throw spaces into the mix, then it is a good idea to ensure that <code>tabstop</code> always equals <code>softtabstop</code>. </p>
 
 <p>As I mentioned earlier, if you prefer to work with spaces, then it is preferable to ensure that <code>softtabstop</code> always equals <code>shiftwidth</code>. </p>
 
 <p>So it would be most convenient if we could assign the same value to tabstop, softtabstop and shiftwidth simultaneously. Here is a little bit of vimscript that allows you to do just that. Copy this code from the shownotes directly into your .vimrc file:</p>
-
-<pre><code>" Set tabstop, softtabstop and shiftwidth to the same value
+<pre class="highlight plaintext">" Set tabstop, softtabstop and shiftwidth to the same value
 command! -nargs=* Stab call Stab()
 function! Stab()
   let l:tabstop = 1 * input('set tabstop = softtabstop = shiftwidth = ')
@@ -252,11 +252,11 @@ function! SummarizeTabs()
     echohl None
   endtry
 endfunction
-</code></pre>
+</pre>
 
-<p>This adds a command which is invoked as <code>:Stab</code> ["colon-capital-S-tab"]. You are prompted for a value, which will be assigned to tabstop, softtabstop and shiftwidth at once. A summary line then shows the value of each of these, as well as showing whether or not expandtab is enabled. If you hit enter without providing a value, then the tab settings are not affected.</p>
+<p>This adds a command which is invoked as <code>:Stab</code> [&ldquo;colon-capital-S-tab&rdquo;]. You are prompted for a value, which will be assigned to tabstop, softtabstop and shiftwidth at once. A summary line then shows the value of each of these, as well as showing whether or not expandtab is enabled. If you hit enter without providing a value, then the tab settings are not affected.</p>
 
-<p>You can also call the summary line by itself. I've mapped this to control-shift-tab for convenience. Feel free to modify the mappings, and the functionality to suit your preferences.</p>
+<p>You can also call the summary line by itself. I&rsquo;ve mapped this to control-shift-tab for convenience. Feel free to modify the mappings, and the functionality to suit your preferences.</p>
 
 
       </section>

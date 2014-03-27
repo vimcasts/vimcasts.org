@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -130,27 +131,27 @@
           </div>
         </div>
 
-        <h1 id="abstract">Abstract</h1>
+        <h1>Abstract</h1>
 
-<p>If you want to edit several adjacent lines with a similar format, you might save a lot of time by making a columnar selection. This episode will demonstrate how to achieve this using Vim's visual block mode.</p>
+<p>If you want to edit several adjacent lines with a similar format, you might save a lot of time by making a columnar selection. This episode will demonstrate how to achieve this using Vim&rsquo;s visual block mode.</p>
 
-<h1 id="body">Body</h1>
+<h1>Body</h1>
 
-<p>In TextMate you can toggle between character selection and columnar selection by pressing the 'option' key. Any characters typed now will be entered simultaneously in each selected line. This is a really powerful technique. Once you've got the hang of it, it becomes difficult to take seriously any text editor which doesn't offer some form of column select mode.</p>
+<p>In TextMate you can toggle between character selection and columnar selection by pressing the &lsquo;option&rsquo; key. Any characters typed now will be entered simultaneously in each selected line. This is a really powerful technique. Once you&rsquo;ve got the hang of it, it becomes difficult to take seriously any text editor which doesn&rsquo;t offer some form of column select mode.</p>
 
-<p>In Vim, this functionality goes under the name of [<em>visual block mode</em>][v_block]. From normal mode, you can enter visual block mode by pressing <code>ctrl-v</code>. You can move the cursor around with all of the usual motion commands, creating a rectangular selection. Now you can enter insert mode by pressing 'shift-I'. Any characters typed will be inserted at the top of the selection that was made. When you leave insert mode, by pressing escape, the text that you entered will be inserted at the beginning of each line of the selection.</p>
+<p>In Vim, this functionality goes under the name of [<em>visual block mode</em>][v_block]. From normal mode, you can enter visual block mode by pressing <code>ctrl-v</code>. You can move the cursor around with all of the usual motion commands, creating a rectangular selection. Now you can enter insert mode by pressing &lsquo;shift-I&rsquo;. Any characters typed will be inserted at the top of the selection that was made. When you leave insert mode, by pressing escape, the text that you entered will be inserted at the beginning of each line of the selection.</p>
 
-<p>In most text editing environments, if you want to replace some text, you can just start typing and the replacement will overwrite the selection. But Vim's visual modes are similar to normal mode, in that each key will execute a command. If you want to replace a selection made in visual mode, you can press the <code>c</code> key. Just like in normal mode, this performs a delete operation and leaves you in insert mode. You can see the effect of the deletion immediately, but once again, you have to leave insert mode to see the text you typed being applied to each line.</p>
+<p>In most text editing environments, if you want to replace some text, you can just start typing and the replacement will overwrite the selection. But Vim&rsquo;s visual modes are similar to normal mode, in that each key will execute a command. If you want to replace a selection made in visual mode, you can press the <code>c</code> key. Just like in normal mode, this performs a delete operation and leaves you in insert mode. You can see the effect of the deletion immediately, but once again, you have to leave insert mode to see the text you typed being applied to each line.</p>
 
 <p>In Vim, there is always the choice between <code>i</code> to insert in front of the cursor, and <code>a</code> to append after the cursor position. This holds true in visual block mode too. Here, I have made a column selection of width 1. If I press shift-A, I can append text after the column. If I press shift-I instead, I can insert text in front of the column.</p>
 
 <p>It is worth noting that if you use the <code>$</code> command to extend your selection to the end of the current line, the column will extend to the end of all selected lines, regardless of their length. The shift-A command will now append at the end of each of the selected lines. </p>
 
-<p>If you press the <code>r</code> key whilst in visual mode, it will replace every selected character with the next key that you press. To demonstrate this, I'm going to draw a box by filling my selection with hash characters, then filling an inner selection with spaces.</p>
+<p>If you press the <code>r</code> key whilst in visual mode, it will replace every selected character with the next key that you press. To demonstrate this, I&rsquo;m going to draw a box by filling my selection with hash characters, then filling an inner selection with spaces.</p>
 
 <p>If you want to delete a column selection, you can do so with the <code>d</code> key. Note that if you use the dot command, it will repeat the operation on the same number of lines and columns. In a similar fashion, if you use the <code>p</code> key, it will paste the last column that was deleted or yanked.</p>
 
-<h2 id="refining-your-selection">Refining your selection</h2>
+<h2>Refining your selection</h2>
 
 <p>When you are in visual block mode, motion commands will alter the size of your rectangular selection by moving one corner. If you want to refine your selection by moving the opposite corner, you can do so by pressing the <code>o</code> key. Each time you press this, it toggles the cursor position between opposing corners.</p>
 

@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -187,7 +188,7 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>When writing code, we can often save time by duplicating a line then changing one or two parts of that line to make it suit our purposes. In this episode, we'll compare a few techniques for duplicating lines, and we'll see that the <code>:copy</code> Ex command is well suited to this task.</p>
+        <p>When writing code, we can often save time by duplicating a line then changing one or two parts of that line to make it suit our purposes. In this episode, we&rsquo;ll compare a few techniques for duplicating lines, and we&rsquo;ll see that the <code>:copy</code> Ex command is well suited to this task.</p>
 
 
       </div>
@@ -226,92 +227,85 @@
         <div id="shownotes" class="content" data-swiftype-index="true">
           
 
-<h3 id="the-brief">The brief</h3>
+<h3>The brief</h3>
 
 <p>In the video, we tackle a simple problem. With our cursor on line 16 of this file:</p>
-
-<pre><code>#sponsors_feature, #sponsors_index {
-  width: 120px;
-}
-#sponsors_index {
-  position: absolute;
-  top: -2px; right: 0;
-}
-#sponsors_index h2 {
-  background: #fff url('/images/components.png') -362px -579px;
-}
-#sponsors_feature {
-  position: absolute;
-  top: 136px; left: 20px;
-}
-#sponsors_feature h2 {
-  text-indent: -99999px;
-  margin-bottom: 0px;
-}
-</code></pre>
+<pre class="highlight css"><span class="nf">#sponsors_feature</span><span class="o">,</span> <span class="nf">#sponsors_index</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">120px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nf">#sponsors_index</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">-2px</span><span class="p">;</span> <span class="nl">right</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nf">#sponsors_index</span> <span class="nt">h2</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="m">#fff</span> <span class="sx">url('/images/components.png')</span> <span class="m">-362px</span> <span class="m">-579px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nf">#sponsors_feature</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">136px</span><span class="p">;</span> <span class="nl">left</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nf">#sponsors_feature</span> <span class="nt">h2</span> <span class="p">{</span>
+  <span class="nl">text-indent</span><span class="p">:</span> <span class="m">-99999px</span><span class="p">;</span>
+  <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">0px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre>
 
 <p>Copy line 9 and place a duplicate below line 16, to produce this:</p>
+<pre class="highlight css"><span class="nf">#sponsors_feature</span><span class="o">,</span> <span class="nf">#sponsors_index</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">120px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nf">#sponsors_index</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">-2px</span><span class="p">;</span> <span class="nl">right</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nf">#sponsors_index</span> <span class="nt">h2</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="m">#fff</span> <span class="sx">url('/images/components.png')</span> <span class="m">-362px</span> <span class="m">-579px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nf">#sponsors_feature</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">136px</span><span class="p">;</span> <span class="nl">left</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nf">#sponsors_feature</span> <span class="nt">h2</span> <span class="p">{</span>
+  <span class="nl">text-indent</span><span class="p">:</span> <span class="m">-99999px</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="m">#fff</span> <span class="sx">url('/images/components.png')</span> <span class="m">-362px</span> <span class="m">-579px</span><span class="p">;</span>
+  <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">0px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre>
 
-<pre><code>#sponsors_feature, #sponsors_index {
-  width: 120px;
-}
-#sponsors_index {
-  position: absolute;
-  top: -2px; right: 0;
-}
-#sponsors_index h2 {
-  background: #fff url('/images/components.png') -362px -579px;
-}
-#sponsors_feature {
-  position: absolute;
-  top: 136px; left: 20px;
-}
-#sponsors_feature h2 {
-  text-indent: -99999px;
-  background: #fff url('/images/components.png') -362px -579px;
-  margin-bottom: 0px;
-}
-</code></pre>
-
-<h3 id="normal-mode-solutions">Normal mode solutions</h3>
+<h3>Normal mode solutions</h3>
 
 <p>We start with a naÃ¯ve solution:</p>
-
-<pre><code>kkkkkkk
+<pre class="highlight plaintext">kkkkkkk
 yy
 jjjjjjj
 p
-</code></pre>
+</pre>
 
 <p>Our first refinement speeds up navigation using the <em>goto line</em> command (<a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#G"><code>:help G</code></a>), and the <a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#CTRL-O">jumplist</a>:</p>
-
-<pre><code>9G
+<pre class="highlight plaintext">9G
 yy
 &lt;C-o&gt;
 p
-</code></pre>
+</pre>
 
-<h3 id="ex-command-solutions">Ex command solutions</h3>
+<h3>Ex command solutions</h3>
 
-<p>An alternative way to <em>goto line 9</em> would be <code>:9</code>. We can also use the number as a range for the <code>:yank</code> command. The cool thing about this technique is that it doesn't move our cursor, so we can cut the number of steps in half:</p>
-
-<pre><code>:9yank
+<p>An alternative way to <em>goto line 9</em> would be <code>:9</code>. We can also use the number as a range for the <code>:yank</code> command. The cool thing about this technique is that it doesn&rsquo;t move our cursor, so we can cut the number of steps in half:</p>
+<pre class="highlight plaintext">:9yank
 p
-</code></pre>
+</pre>
 
 <p>But we can still do better. Vim has another Ex command that combines the yank and put operations into one: the <code>:copy</code> command. This is the longhand form:</p>
-
-<pre><code>:9copy16
-</code></pre>
+<pre class="highlight plaintext">:9copy16
+</pre>
 
 <p>We can compress this down to just three characters:</p>
-
-<pre><code>:9t.
-</code></pre>
+<pre class="highlight plaintext">:9t.
+</pre>
 
 <p>The <code>:t</code> command is simply an alias for <code>:copy</code>. When used in an <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#{address}"><code>{address}</code></a> the dot symbol stands for the current line.</p>
 
-<h3 id="the-copy-command">The <code>:copy</code> command</h3>
+<h3>The <code>:copy</code> command</h3>
 
 <p>Here are some more examples of how the <code>:copy</code> command can be used:</p>
 
@@ -342,19 +336,18 @@ p
   </tr>
 </table>
 
-<h3 id="further-reading">Further reading</h3>
+<h3>Further reading</h3>
 
 <ul>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#CTRL-O"><code>:help CTRL-O</code></a></li>
-  <li>Episode #11: <a href="/e/11">Using the changelist and the jumplist</a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#%60%60"><code>:help ''</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:t"><code>:help :t</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:yank"><code>:help :yank</code></a></li>
-  <li><a title="relativenumber" href="http://vimdoc.sourceforge.net/htmldoc/options.html#">`:help 'relativenumber'</a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#{address}">`:help {address}</a></li>
-  <li>for more on <a href="http://vimdoc.sourceforge.net/htmldoc/usr_10.html#10.3">Ex command ranges</a>, see <a href="http://vimdoc.sourceforge.net/htmldoc/usr_10.html#10.3"><code>:help 10.3</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#CTRL-O"><code>:help CTRL-O</code></a></li>
+<li>Episode #11: <a href="/e/11">Using the changelist and the jumplist</a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/motion.html#%60%60"><code>:help &#39;&#39;</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:t"><code>:help :t</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/change.html#:yank"><code>:help :yank</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;#x27;relativenumber&amp;#x27;">`:help &lsquo;relativenumber&rsquo;</a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#{address}">`:help {address}</a></li>
+<li>for more on <a href="http://vimdoc.sourceforge.net/htmldoc/usr_10.html#10.3">Ex command ranges</a>, see <a href="http://vimdoc.sourceforge.net/htmldoc/usr_10.html#10.3"><code>:help 10.3</code></a></li>
 </ul>
-
 
         </div>
         </dd>
@@ -399,15 +392,8 @@ p
 
     
       <li>
-        <h4><a href="/blog/2014/02/vimcasts-redesign-a-work-in-progress/">Vimcasts redesign: a work in progress</a></h4>
-        <p>In the not-too-distant future, you can expect to see a revised design for Vimcasts.org. The most significant enhancements will be the addition of tags, site search, and a responsive design for smaller screens. Hannah Adcock, from <a href="http://contentedstrategy.com">contentedstrategy.com</a>, has been helping me out by analysing user feedback, as well as data from Google Analytics.</p>
-
-
-      </li>
-    
-      <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
       </li>
     
       <li>
@@ -418,18 +404,25 @@ p
       </li>
     
       <li>
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/blog/2014/02/vimcasts-redesign-a-work-in-progress/">Vimcasts redesign: a work in progress</a></h4>
+        <p>In the not-too-distant future, you can expect to see a revised design for Vimcasts.org. The most significant enhancements will be the addition of tags, site search, and a responsive design for smaller screens. Hannah Adcock, from <a href="http://contentedstrategy.com">contentedstrategy.com</a>, has been helping me out by analysing user feedback, as well as data from Google Analytics.</p>
+
+
+      </li>
+    
+      <li>
         <h4><a href="/categories">Find by category</a></h4>
         <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
       <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
-      </li>
-    
-      <li>
         <h4><a href="/episodes/using-external-filter-commands-to-reformat-html/">Using external filter commands to reformat HTML</a></h4>
-        <p>We can use pandoc as a <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#filter">filter</a> to clean up <abbr title="what you see is what you get">WYSIWYG</abbr>-generated HTML. Pandoc is a commandline program, but we can call it from inside Vim either using the <a href="http://vimdoc.sourceforge.net/htmldoc/various.html#:!">bang Ex command</a>, or by configuring <a title="formatprg" href="http://vimdoc.sourceforge.net/htmldoc/options.html#">the <code>formatprg</code> option</a> to make the <code>gq</code> operator invoke pandoc.</p>
+        <p>We can use pandoc as a <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#filter">filter</a> to clean up <abbr title="what you see is what you get">WYSIWYG</abbr>-generated HTML. Pandoc is a commandline program, but we can call it from inside Vim either using the <a href="http://vimdoc.sourceforge.net/htmldoc/various.html#:!">bang Ex command</a>, or by configuring <a href="http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;#x27;formatprg&amp;#x27;">the <code>formatprg</code> option</a> to make the <code>gq</code> operator invoke pandoc.</p>
 
 
       </li>

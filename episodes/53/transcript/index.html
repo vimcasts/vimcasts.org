@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -130,89 +131,78 @@
           </div>
         </div>
 
-        <p>Let's work through the same example we used in the previous lesson:</p>
-
-<pre><code>collection = getCollection();
+        <p>Let&rsquo;s work through the same example we used in the previous lesson:</p>
+<pre class="highlight plaintext">collection = getCollection();
 process(obstacleToBeRemoved, target);
-</code></pre>
+</pre>
 
-<p><code>"ayiw</code> "double-quote A wye-eye-doubleyou" copies the current word into named register A:</p>
-
-<pre><code>:reg "a
+<p><code>&quot;ayiw</code> &ldquo;double-quote A wye-eye-doubleyou&rdquo; copies the current word into named register A:</p>
+<pre class="highlight plaintext">:reg "a
 "" collection
 "a collection
-</code></pre>
+</pre>
 
 <p><code>diw</code> cuts the current word, writing it to the default register.</p>
-
-<pre><code>:reg "a
+<pre class="highlight plaintext">:reg "a
 "" obstacleToBeRemoved
 "a collection
-</code></pre>
+</pre>
 
-<p>At this point, if we use the <code>P</code> "big P" command without specifying a register, Vim pastes the text that we just deleted.</p>
+<p>At this point, if we use the <code>P</code> &ldquo;big P&rdquo; command without specifying a register, Vim pastes the text that we just deleted.</p>
 
 <p>[undo the change]</p>
 
-<p>But if we prefix the <code>P</code> "big P" command with <code>"a</code> "doublequote A", then it pastes the text that we saved to that register.</p>
+<p>But if we prefix the <code>P</code> &ldquo;big P&rdquo; command with <code>&quot;a</code> &ldquo;doublequote A&rdquo;, then it pastes the text that we saved to that register.</p>
 
-<hr />
+<hr>
 
-<p>Vim's named registers have an interesting property: not only can we write to them, but we can also append to them. Take this code sample, which is littered with <code>TODO</code> comments:</p>
-
-<pre><code>// TODO: fix this shit
+<p>Vim&rsquo;s named registers have an interesting property: not only can we write to them, but we can also append to them. Take this code sample, which is littered with <code>TODO</code> comments:</p>
+<pre class="highlight plaintext">// TODO: fix this shit
 // ...
 // TODO: refactor
 // ...
 // TODO: extract this into a class
-</code></pre>
+</pre>
 
-<p>I'd like to yank each of those lines into the same register. The first time, I'll write to register A in the usual fashion: <code>"ayy</code> "doublequote small A wye wye". As you'd expect, this sets the contents of register a:</p>
-
-<pre><code>:reg a
+<p>I&rsquo;d like to yank each of those lines into the same register. The first time, I&rsquo;ll write to register A in the usual fashion: <code>&quot;ayy</code> &ldquo;doublequote small A wye wye&rdquo;. As you&rsquo;d expect, this sets the contents of register a:</p>
+<pre class="highlight plaintext">:reg a
 "a //TODO: fix this shit
-</code></pre>
+</pre>
 
-<p>I'll jump to the next occurrence, and this time I'm going to specify the register using an uppercase A: <code>"Ayy</code>. Inspecting the contents of the register, you'll see that the current line was appended to register A, instead of overwriting the existing contents:</p>
-
-<pre><code>:reg a
+<p>I&rsquo;ll jump to the next occurrence, and this time I&rsquo;m going to specify the register using an uppercase A: <code>&quot;Ayy</code>. Inspecting the contents of the register, you&rsquo;ll see that the current line was appended to register A, instead of overwriting the existing contents:</p>
+<pre class="highlight plaintext">:reg a
 "a //TODO: fix this shit^J //TODO: fix this shit refactor
-</code></pre>
+</pre>
 
 <p>The ctrl-j character stands for newline in this case.</p>
 
-<p>We could go through the rest of this  document, using the same command to append each TODO line to register a. But it worries me that I might accidentally use a lowercase letter, which would overwrite the register. I'd be back to square one.</p>
+<p>We could go through the rest of this  document, using the same command to append each TODO line to register a. But it worries me that I might accidentally use a lowercase letter, which would overwrite the register. I&rsquo;d be back to square one.</p>
 
 <p>Alternatively, I could use the yank Ex command:</p>
+<pre class="highlight plaintext">:yank A
+</pre>
 
-<pre><code>:yank A
-</code></pre>
+<p>I could still accidentally type a lowercase &lsquo;a&rsquo;, but this way lets me see which keys I&rsquo;ve typed. I get the opportunity to correct any typing errors before hitting enter.</p>
 
-<p>I could still accidentally type a lowercase 'a', but this way lets me see which keys I've typed. I get the opportunity to correct any typing errors before hitting enter.</p>
-
-<p>Let's check if it worked:</p>
-
-<pre><code>:reg a
+<p>Let&rsquo;s check if it worked:</p>
+<pre class="highlight plaintext">:reg a
 "a //TODO: fix this shit^J //TODO: refactor^J // TODO: extract this into a class 
-</code></pre>
+</pre>
 
 <p>Sure enough, the Ex command has appended the current line to register a.</p>
 
-<hr />
+<hr>
 
-<p>Let's finish off with a neat trick. First, we can clear the contents of register 'a' by running <code>qaq</code>. See? The register has been reset:</p>
-
-<pre><code>:reg a
+<p>Let&rsquo;s finish off with a neat trick. First, we can clear the contents of register &lsquo;a&rsquo; by running <code>qaq</code>. See? The register has been reset:</p>
+<pre class="highlight plaintext">:reg a
 "a 
-</code></pre>
+</pre>
 
-<p>Now let's use the <code>:global</code> command to execute the <code>:yank</code> command on every line that contains the word TODO:</p>
+<p>Now let&rsquo;s use the <code>:global</code> command to execute the <code>:yank</code> command on every line that contains the word TODO:</p>
+<pre class="highlight plaintext">:g/TODO/y A
+</pre>
 
-<pre><code>:g/TODO/y A
-</code></pre>
-
-<p>Register 'a' now contains the text of each TODO. Pretty neat!</p>
-
+<p>Register &lsquo;a&rsquo; now contains the text of each TODO. Pretty neat!</p>
 
 
       </section>

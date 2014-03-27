@@ -19,6 +19,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -137,168 +138,149 @@
         <h1><a href="/episodes/project-wide-find-and-replace/">Project-wide find and replace</a></h1>
         <h2>Transcript for episode #45</h2>
 
-        <p>Vim doesn't have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as <code>:substitute</code>, <code>:argdo</code>, and <code>:vimgrep</code>. We'll look at two possible strategies: first using the arglist, then the quickfix list.</p>
+        <p>Vim doesn&rsquo;t have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as <code>:substitute</code>, <code>:argdo</code>, and <code>:vimgrep</code>. We&rsquo;ll look at two possible strategies: first using the arglist, then the quickfix list.</p>
 
 
       
 
-      <h2 id="strategy-1---substitute-across-all-files">Strategy #1 - Substitute across all files</h2>
-<p>In this directory we've got 5 files. Let's open them up - here I'm using the <code>-o</code> flag (dash oh), which causes Vim to create a split window for each file specified:</p>
+      <h2>Strategy #1 - Substitute across all files</h2>
 
-<pre><code>vim -o *.txt
-</code></pre>
+<p>In this directory we&rsquo;ve got 5 files. Let&rsquo;s open them up - here I&rsquo;m using the <code>-o</code> flag (dash oh), which causes Vim to create a split window for each file specified:</p>
+<pre class="highlight plaintext">vim -o *.txt
+</pre>
 
-<p>Each buffer contains just a single line of text, so we can see everything at once. We're going to be using <code>:argdo</code> to run Ex commands across each of these buffers, so before we do anything, let's ensure that the 'hidden' option is enabled:</p>
+<p>Each buffer contains just a single line of text, so we can see everything at once. We&rsquo;re going to be using <code>:argdo</code> to run Ex commands across each of these buffers, so before we do anything, let&rsquo;s ensure that the &lsquo;hidden&rsquo; option is enabled:</p>
+<pre class="highlight plaintext">:set hidden
+</pre>
 
-<pre><code>:set hidden
-</code></pre>
+<p>Refer to Vimcast #6 if you&rsquo;re unsure what this setting does.</p>
 
-<p>Refer to Vimcast #6 if you're unsure what this setting does.</p>
-
-<p>If I search for /Vimcasts, you'll see that it appears in 4 out of these 5 buffers.</p>
-
-<pre><code>/Vimcasts
-</code></pre>
+<p>If I search for /Vimcasts, you&rsquo;ll see that it appears in 4 out of these 5 buffers.</p>
+<pre class="highlight plaintext">/Vimcasts
+</pre>
 
 <p>But only one of them uses the correct domain name:</p>
-
-<pre><code>/Vimcast\.org
-</code></pre>
+<pre class="highlight plaintext">/Vimcast\.org
+</pre>
 
 <p>The others incorrectly use the .com TLD:</p>
+<pre class="highlight plaintext">/Vimcasts\.com
+</pre>
 
-<pre><code>/Vimcasts\.com
-</code></pre>
+<p>So let&rsquo;s fix that!</p>
 
-<p>So let's fix that!</p>
+<p>I&rsquo;ll just modify the pattern by adding <code>\zs</code> (backslash-zed-ess), which crops the pattern to only match the letters C, O, M:</p>
+<pre class="highlight plaintext">/Vimcasts\.\zscom
+</pre>
 
-<p>I'll just modify the pattern by adding <code>\zs</code> (backslash-zed-ess), which crops the pattern to only match the letters C, O, M:</p>
+<p>Now we can simply substitute &lsquo;com&rsquo; with &lsquo;org&rsquo;:</p>
+<pre class="highlight plaintext">:%s/Vimcasts\.\zscom/org/g
+</pre>
 
-<pre><code>/Vimcasts\.\zscom
-</code></pre>
-
-<p>Now we can simply substitute 'com' with 'org':</p>
-
-<pre><code>:%s/Vimcasts\.\zscom/org/g
-</code></pre>
-
-<p>Of course, the substitute command only acts on the current buffer. To make it run on all buffers, we could combine the <code>:substitute</code> command with <code>:argdo</code>. Note that I've added the <code>e</code> flag to the substitute command, which prevents the error message 'no match found':</p>
-
-<pre><code>:argdo %s/Vimcasts\.\zscom/org/ge
-</code></pre>
+<p>Of course, the substitute command only acts on the current buffer. To make it run on all buffers, we could combine the <code>:substitute</code> command with <code>:argdo</code>. Note that I&rsquo;ve added the <code>e</code> flag to the substitute command, which prevents the error message &lsquo;no match found&rsquo;:</p>
+<pre class="highlight plaintext">:argdo %s/Vimcasts\.\zscom/org/ge
+</pre>
 
 <p>In this case, we could just as well use <code>:bufdo</code> or even <code>:windo</code>, both of which would have the same effect.</p>
 
 <p>If I search for the .org domain name, you should see that the change has been applied to all buffers.</p>
-
-<pre><code>:first
+<pre class="highlight plaintext">:first
 /Vimcasts\.org
-</code></pre>
+</pre>
 
 <p>Having made our substitution, we could then use the <code>:update</code> command to save our changes:</p>
+<pre class="highlight plaintext">:argdo update
+</pre>
 
-<pre><code>:argdo update
-</code></pre>
+<p>[don&rsquo;t run the update command. Instead, run :argdo :edit! behind the scenes]</p>
 
-<p>[don't run the update command. Instead, run :argdo :edit! behind the scenes]</p>
+<h3>Recap</h3>
 
-<h3 id="recap">Recap</h3>
-
-<p>Let's have a look at what we just did.</p>
-
-<pre><code>:args *.txt     (or `vim *.txt`)
+<p>Let&rsquo;s have a look at what we just did.</p>
+<pre class="highlight plaintext">:args *.txt     (or `vim *.txt`)
 :argdo %s//replacement/ge
 :argdo update
-</code></pre>
+</pre>
 
-<p>We start by populating the arglist with the set of all files that we'd like to change. In our case, we populated the arglist as we launched Vim, but we could just as well do it using the <code>:args</code> command.</p>
+<p>We start by populating the arglist with the set of all files that we&rsquo;d like to change. In our case, we populated the arglist as we launched Vim, but we could just as well do it using the <code>:args</code> command.</p>
 
-<p>Next, we ran the <code>substitute</code> command with <code>argdo</code>. Effectively, this is equivalent to running the substutute command once for each item in the arglist. In some buffers, this has an affect, while buffers that don't match the pattern are left untouched.</p>
+<p>Next, we ran the <code>substitute</code> command with <code>argdo</code>. Effectively, this is equivalent to running the substutute command once for each item in the arglist. In some buffers, this has an affect, while buffers that don&rsquo;t match the pattern are left untouched.</p>
 
 <p>Finally, we run the <code>update</code> command with <code>argdo</code>. Even though this command is executed in all buffers, it only actually writes the buffer to disc if it has been changed.</p>
 
-<p>For this demo, we're dealing with a small number of files. But suppose that we were working on a large codebase. It's easy to imagine a scenario where the substitute command would execute in hundreds of files without changing them. It's a scattershot approach, that seems kind of wasteful.</p>
+<p>For this demo, we&rsquo;re dealing with a small number of files. But suppose that we were working on a large codebase. It&rsquo;s easy to imagine a scenario where the substitute command would execute in hundreds of files without changing them. It&rsquo;s a scattershot approach, that seems kind of wasteful.</p>
 
-<h2 id="strategy-2-find-then-replace">Strategy 2: Find then replace</h2>
+<h2>Strategy 2: Find then replace</h2>
 
-<p>Let's consider an alternative workflow:</p>
+<p>Let&rsquo;s consider an alternative workflow:</p>
 
 <ol>
-  <li>as before, we'll begin by setting up the arglist to contain all of the files in the project</li>
-  <li>then we'll find all of the files that contain a match</li>
-  <li>and run the substitute command <em>only in those files that contain a match</em></li>
+<li>as before, we&rsquo;ll begin by setting up the arglist to contain all of the files in the project</li>
+<li>then we&rsquo;ll find all of the files that contain a match</li>
+<li>and run the substitute command <em>only in those files that contain a match</em></li>
 </ol>
 
-<p>Once again, we'll start off by setting the arglist to contain all of the files in the project:</p>
-
-<pre><code>:args *.txt
-</code></pre>
+<p>Once again, we&rsquo;ll start off by setting the arglist to contain all of the files in the project:</p>
+<pre class="highlight plaintext">:args *.txt
+</pre>
 
 <p>Next we want to find all of the buffers that contain a match. We can do that using <code>:vimgrep</code>:</p>
-
-<pre><code>:vimgrep /Vimcasts\.\zscom/g ##
-</code></pre>
+<pre class="highlight plaintext">:vimgrep /Vimcasts\.\zscom/g ##
+</pre>
 
 <p>That populates the quickfix list with all matches for the specified pattern. Note that the prompt indicates that there are 3 records in the quickfix list.</p>
 
-<p>Here's the tricky part - we want to be able to execute the substitute command in each of the buffers listed in the quickfix list. Unfortunately, Vim doesn't provide a built-in command for this.  I have this tiny snippet of Vimscript in my <code>vimrc</code> file.</p>
-
-<pre><code>:tabnew ~/.vimrc
+<p>Here&rsquo;s the tricky part - we want to be able to execute the substitute command in each of the buffers listed in the quickfix list. Unfortunately, Vim doesn&rsquo;t provide a built-in command for this.  I have this tiny snippet of Vimscript in my <code>vimrc</code> file.</p>
+<pre class="highlight plaintext">:tabnew ~/.vimrc
 /Qargs
 zt
-</code></pre>
+</pre>
 
-<p>If I run the custom <code>:Qargs</code> command, it will set the arglist to contain each of the files referenced in the quickfix list. In this case, it's just as though the arglist had been pruned of the buffers that don't contain a match.</p>
+<p>If I run the custom <code>:Qargs</code> command, it will set the arglist to contain each of the files referenced in the quickfix list. In this case, it&rsquo;s just as though the arglist had been pruned of the buffers that don&rsquo;t contain a match.</p>
 
-<p>If we inspect the arglist, we'll find that it currently contains 5 buffers:</p>
-
-<pre><code>:args
+<p>If we inspect the arglist, we&rsquo;ll find that it currently contains 5 buffers:</p>
+<pre class="highlight plaintext">:args
 [about.txt] itunes.txt rss.txt twitter.txt workshops.txt
-</code></pre>
+</pre>
 
 <p>Then if we run the custom Qargs command, the arglist is reduced to contain only the three files that contained a match for our pattern:</p>
-
-<pre><code>:Qargs
+<pre class="highlight plaintext">:Qargs
 :args
 [about.txt] rss.txt workshops.txt
-</code></pre>
+</pre>
 
 <p>Now we can run the <code>substitute</code> command with <code>argdo</code> just as before:</p>
-
-<pre><code>:argdo %s/Vimcasts\.\zscom/org/ge
-</code></pre>
+<pre class="highlight plaintext">:argdo %s/Vimcasts\.\zscom/org/ge
+</pre>
 
 <p>And finish off by saving the changes to disc:</p>
+<pre class="highlight plaintext">:argdo write
+</pre>
 
-<pre><code>:argdo write
-</code></pre>
+<h3>Recap</h3>
 
-<h3 id="recap-1">Recap</h3>
-
-<p>Let's have a look at what we just did.</p>
-
-<pre><code>:args *.txt
+<p>Let&rsquo;s have a look at what we just did.</p>
+<pre class="highlight plaintext">:args *.txt
 :vimgrep /Vimcasts\.\zscom/g ##
 :Qargs
 :argdo %s/Vimcasts\.\zscom/org/g
 :argdo write
-</code></pre>
+</pre>
 
-<p>We start by populating the arglist with all the files in the project. Then we look inside those files for all occurrences of the pattern. The <code>:Qargs</code> command prunes the arglist, removing any buffers that don't contain a match for the specified pattern. Then we run the substitute command across the arglist, and save the changes.</p>
+<p>We start by populating the arglist with all the files in the project. Then we look inside those files for all occurrences of the pattern. The <code>:Qargs</code> command prunes the arglist, removing any buffers that don&rsquo;t contain a match for the specified pattern. Then we run the substitute command across the arglist, and save the changes.</p>
 
-<h3 id="missing-feature-cdo">Missing feature: :cdo</h3>
+<h3>Missing feature: :cdo</h3>
 
-<p>It's a pity that Vim doesn't provide a built-in way of running the substitute command across all the files in the quickfix list. Vim already has argdo, bufdo, windo and tabdo; It feels as though there should also be a <code>:quickfixdo</code> command.</p>
+<p>It&rsquo;s a pity that Vim doesn&rsquo;t provide a built-in way of running the substitute command across all the files in the quickfix list. Vim already has argdo, bufdo, windo and tabdo; It feels as though there should also be a <code>:quickfixdo</code> command.</p>
 
 <p>If such a command existed, it would mean we could remove the <code>Qargs</code> step, producing a simpler workflow:</p>
-
-<pre><code>:args *.txt
+<pre class="highlight plaintext">:args *.txt
 :vimgrep /&lt;C-r&gt;// ##
 :cdo %s//replacement/ge
 :cdo write
-</code></pre>
+</pre>
 
-<p>Here, it's clear that one step is concerned with <em>finding</em> matches, while the another is concerned with <em>replacing</em> them with something else.</p>
+<p>Here, it&rsquo;s clear that one step is concerned with <em>finding</em> matches, while the another is concerned with <em>replacing</em> them with something else.</p>
 
 <p>Check the shownotes for links to a couple of other Vimscript solutions that make this workflow possible.</p>
 

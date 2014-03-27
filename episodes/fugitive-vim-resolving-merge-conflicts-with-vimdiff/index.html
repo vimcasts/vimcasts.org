@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -187,7 +188,7 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>When git branches are merged, there is always the chance of a conflict arising if a file was modified in both the target and merge branches. You can resolve merge conflicts using a combination of fugitive's <code>:Gdiff</code> command, and Vim's built in <code>diffget</code> and <code>diffput</code>. In this episode, we'll find out how.</p>
+        <p>When git branches are merged, there is always the chance of a conflict arising if a file was modified in both the target and merge branches. You can resolve merge conflicts using a combination of fugitive&rsquo;s <code>:Gdiff</code> command, and Vim&rsquo;s built in <code>diffget</code> and <code>diffput</code>. In this episode, we&rsquo;ll find out how.</p>
 
 <p><em>This is the third in a five part series on fugitive.vim.</em></p>
 
@@ -228,33 +229,33 @@
         <div id="shownotes" class="content" data-swiftype-index="true">
           
 
-<h3 id="gdiff-on-a-conflicted-file-opens-3-way-diff"><code>:Gdiff</code> on a conflicted file opens 3-way diff</h3>
+<h3><code>:Gdiff</code> on a conflicted file opens 3-way diff</h3>
 
 <p>When you run <code>:Gdiff</code> on a conflicted file, fugitive opens 3 split windows. They always appear in this order:</p>
 
 <ul>
-  <li>the left window contains the version from the target branch</li>
-  <li>the middle window contains the working copy of the file, complete with conflict markers</li>
-  <li>the right window contains the version from the merge branch</li>
+<li>the left window contains the version from the target branch</li>
+<li>the middle window contains the working copy of the file, complete with conflict markers</li>
+<li>the right window contains the version from the merge branch</li>
 </ul>
 
 <p><img alt="3-way vimdiff splits" src="/images/blog/3-way-vimdiff.png" /></p>
 
-<p>I discuss <em>target</em> and <em>merge</em> branches a lot in the screencast, so lets just make sure that we're on the same page. The 'target' branch is the one that is active when you run git merge. Or in other words, it's the HEAD branch. The 'merge' branch is the one that is named in the <code>git merge</code> command. In this scenario the 'master' branch is the target, and the 'feature' branch is merged into target, making it the merge branch.</p>
+<p>I discuss <em>target</em> and <em>merge</em> branches a lot in the screencast, so lets just make sure that we&rsquo;re on the same page. The &lsquo;target&rsquo; branch is the one that is active when you run git merge. Or in other words, it&rsquo;s the HEAD branch. The &lsquo;merge&rsquo; branch is the one that is named in the <code>git merge</code> command. In this scenario the &lsquo;master&rsquo; branch is the target, and the &lsquo;feature&rsquo; branch is merged into target, making it the merge branch.</p>
 
 <p><img alt="Target and merge branches" src="/images/blog/target-merge-branches.png" /></p>
 
-<h3 id="strategies-for-reconciling-3-way-diffs">Strategies for reconciling 3-way diffs</h3>
+<h3>Strategies for reconciling 3-way diffs</h3>
 
-<p>There are two basic strategies for reconciling a 3-way diff. You can either keep your cursor in the middle file, and run <code>:diffget</code> with the bufspec for the file containing the change you want to keep. Or you can position your cursor on the change that you want to keep, and run <code>:diffput</code> with the bufspec for the working copy file. We'll take a look at each of these strategies in turn, starting with diffget.</p>
+<p>There are two basic strategies for reconciling a 3-way diff. You can either keep your cursor in the middle file, and run <code>:diffget</code> with the bufspec for the file containing the change you want to keep. Or you can position your cursor on the change that you want to keep, and run <code>:diffput</code> with the bufspec for the working copy file. We&rsquo;ll take a look at each of these strategies in turn, starting with diffget.</p>
 
 <p><img alt="3-way reconciliation strategies" src="/images/blog/3-way-reconciliation.png" /></p>
 
-<h3 id="introducing-buffspecs">Introducing buffspecs</h3>
+<h3>Introducing buffspecs</h3>
 
 <p>In the context of a 2-way diff, the <code>:diffget</code> and <code>:diffput</code> commands are unambiguous. If you ask Vim to get the diff from the other window, there is only one place for it to look. When you do a 3-way merge, things get a little more complex. This time, it would be ambiguous if you were to tell Vim to fetch the changes from the other window. You have to specify which buffer to fetch the changes from by providing a <code>[bufspec]</code>.</p>
 
-<p>The buffspec could either be the buffer number, or a partial match for the buffer's name. Buffer numbers are assigned sequentially, so they will differ from session to session, but you can always be sure that they will uniquely identify their buffer.</p>
+<p>The buffspec could either be the buffer number, or a partial match for the buffer&rsquo;s name. Buffer numbers are assigned sequentially, so they will differ from session to session, but you can always be sure that they will uniquely identify their buffer.</p>
 
 <p>Fugitive follows a consistent naming convention when creating buffers for the target and merge versions of a conflicted file. The parent file from the <em>target branch</em> always includes the string <code>//2</code>, while the parent from the <em>merge branch</em> always contains <code>//3</code>. These partial matches are sufficient to uniquely identify the target and merge parents when using the <code>:diffget</code> command.</p>
 
@@ -273,40 +274,40 @@
   </tr>
 </table>
 
-<h3 id="resolving-a-3-way-diff-with-diffget">Resolving a 3-way diff with <code>:diffget</code></h3>
+<h3>Resolving a 3-way diff with <code>:diffget</code></h3>
 
 <p>The <code>:diffget</code> command modifies the current buffer by <em>pulling</em> a change over from one of the other buffers. In resolving a merge conflict, we want to treat target and merge parents as reference copies, pulling hunks of changes from those into the conflicted working copy. That means that we want to keep the middle buffer active, and run <code>diffget</code> with a reference to the buffer containing the change that we want to use. </p>
 
 <ul>
-  <li><code>:diffget //2</code> - fetches the hunk from the target parent (on the left)</li>
-  <li><code>:diffget //3</code> - fetches the hunk from the merge parent (on the right)</li>
+<li><code>:diffget //2</code> - fetches the hunk from the target parent (on the left)</li>
+<li><code>:diffget //3</code> - fetches the hunk from the merge parent (on the right)</li>
 </ul>
 
 <p>Note that Vim does not automatically recalculate the diff colors after you run <code>:diffget</code>. You can tell Vim to do this by running <code>:diffupdate</code>.</p>
 
-<h3 id="resolving-a-3-way-diff-with-diffput">Resolving a 3-way diff with <code>:diffput</code></h3>
+<h3>Resolving a 3-way diff with <code>:diffput</code></h3>
 
 <p>The <code>:diffput</code> command modifies another buffer by <em>pushing</em> a change from the active buffer into it. In the context of a 3-way merge conflict, we want to push changes from the target and merge versions into the working copy.</p>
 
-<p>The example in the video used a file called <code>demo.js</code>, which could be referenced using the buffspec <em>'demo'</em>. In this case, we could run the exact same command each time:</p>
+<p>The example in the video used a file called <code>demo.js</code>, which could be referenced using the buffspec <em>&lsquo;demo&rsquo;</em>. In this case, we could run the exact same command each time:</p>
 
 <ul>
-  <li><code>:diffput demo</code> - pushes the hunk from the active buffer into the conflicted working copy</li>
+<li><code>:diffput demo</code> - pushes the hunk from the active buffer into the conflicted working copy</li>
 </ul>
 
 <p>Although the command is kept constant, we have to activate the correct window before running it. Whereas using <code>diffget</code>, the window remained constant but we had to pass a different argument each time.</p>
 
-<p>In a 2-way diff, the diffget and diffput commands require no argument. Vim provides a couple of convenient shorthand mappings for these commands: <code>do</code> performs a <code>diffget</code>, and <code>dp</code> does <code>diffput</code>. These mappings don't normally work in a 3-way diff, because the <code>diffget</code> and <code>diffput</code> commands both require an argument in this context. But in the case of the <code>diffput</code> command, it's pretty easy to guess what that argument is going to be.</p>
+<p>In a 2-way diff, the diffget and diffput commands require no argument. Vim provides a couple of convenient shorthand mappings for these commands: <code>do</code> performs a <code>diffget</code>, and <code>dp</code> does <code>diffput</code>. These mappings don&rsquo;t normally work in a 3-way diff, because the <code>diffget</code> and <code>diffput</code> commands both require an argument in this context. But in the case of the <code>diffput</code> command, it&rsquo;s pretty easy to guess what that argument is going to be.</p>
 
 <p>When you do a 3-way diff between working copy, target and merge parents, fugitive assumes that if you run <code>dp</code> from either of the parent buffers, you want to put the change into the working copy. So even though the <code>dp</code> mapping normally only works in a 2-way diff, you can use it in this special case of a 3-way diff.</p>
 
-<h3 id="keeping-one-parent-version-in-its-entirety">Keeping one parent version in its entirety</h3>
+<h3>Keeping one parent version in its entirety</h3>
 
-<p>In reality, it's often the case that one of the parent versions is to be kept wholesale, and the other version is to be discarded. In this scenario, fugitive's <code>:Gwrite</code> command comes in handy. This overwrites the working tree and index copies with the contents of the currently active file.</p>
+<p>In reality, it&rsquo;s often the case that one of the parent versions is to be kept wholesale, and the other version is to be discarded. In this scenario, fugitive&rsquo;s <code>:Gwrite</code> command comes in handy. This overwrites the working tree and index copies with the contents of the currently active file.</p>
 
-<p>If you run <code>:Gwrite</code> from the target or merge version of a file, fugitive raises a warning. This is to protect you from accidentally overwriting the working copy and index files when you've carefully cherry picked the changes from the parent versions. If you want to stage either of the parent versions in their entirety, use <code>:Gwrite!</code> to show you really mean it.</p>
+<p>If you run <code>:Gwrite</code> from the target or merge version of a file, fugitive raises a warning. This is to protect you from accidentally overwriting the working copy and index files when you&rsquo;ve carefully cherry picked the changes from the parent versions. If you want to stage either of the parent versions in their entirety, use <code>:Gwrite!</code> to show you really mean it.</p>
 
-<h3 id="useful-commands">Useful commands</h3>
+<h3>Useful commands</h3>
 
 <p>This table summarizes some of the commands used in the video:</p>
 
@@ -343,18 +344,17 @@
 
 <p>When you call <code>:Gwrite</code> from vimdiff mode, it writes the current file to the index and exits vimdiff mode.</p>
 
-<h3 id="further-reading">Further reading</h3>
+<h3>Further reading</h3>
 
 <ul>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/usr_08.html#08.7"><code>:help 08.7</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/diff.html"><code>:help diff.txt</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#:diffget"><code>:help :diffget</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#:diffput"><code>:help :diffput</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#jumpto-diffs"><code>:help [c</code></a></li>
-  <li><code>:help :Gdiff</code></li>
-  <li><a href="http://blog.wuwon.id.au/2010/09/painless-merge-conflict-resolution-in.html">Painless Merge Conflict Resolution in Git</a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/usr_08.html#08.7"><code>:help 08.7</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/diff.html"><code>:help diff.txt</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#:diffget"><code>:help :diffget</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#:diffput"><code>:help :diffput</code></a></li>
+<li>[<code>:help [c</code>]<a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#jumpto-diffs">nc</a></li>
+<li><code>:help :Gdiff</code></li>
+<li><a href="http://blog.wuwon.id.au/2010/09/painless-merge-conflict-resolution-in.html">Painless Merge Conflict Resolution in Git</a></li>
 </ul>
-
 
         </div>
         </dd>
@@ -399,26 +399,26 @@
 
     
       <li>
-        <h4><a href="/episodes/fugitive-vim-working-with-the-git-index/">Fugitive.vim - working with the git index</a></h4>
-        <p>The fugitive plugin provides an interactive status window, where you can easily stage and review your changes for the next commit. The <code>:Gdiff</code> command visualizes the changes made to a file, by comparing the working copy with the index. In this episode, we'll learn how to stage hunks of changes to the index without using the <code>git add --patch</code> command.</p>
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/">Fugitive.vim - exploring the history of a git repository</a></h4>
+        <p>Git provides tools for searching the contents of files, commit messages, and even whether text was added or removed by a commit. In this episode, we&rsquo;ll see how fugitive&rsquo;s <code>Ggrep</code> and <code>Glog</code> commands wrap this functionality up so that we can search the contents and history of a git repo from right inside of Vim.</p>
 
-<p><em>This is the second of a five part series on fugitive.vim. In the next episode, we'll learn how to resolve a git merge conflict by performing a 3-way vimdiff.</em></p>
+<p><em>This is the last of our five part series on fugitive.vim.</em></p>
 
 
       </li>
     
       <li>
         <h4><a href="/episodes/fugitive-vim-browsing-the-git-object-database/">Fugitive.vim - browsing the git object database</a></h4>
-        <p>With the fugitive plugin, you're not limited to just working with files in your working tree. The <code>:Gedit</code> command allows you to open files in other branches, and to browse any <a href="http://book.git-scm.com/1_the_git_object_model.html">git object</a>, including tags, commits and trees. Plus, if your repository is hosted on github, you can easily bring up the webpage for any git object using the <code>:Gbrowse</code> command.</p>
+        <p>With the fugitive plugin, you&rsquo;re not limited to just working with files in your working tree. The <code>:Gedit</code> command allows you to open files in other branches, and to browse any <a href="http://book.git-scm.com/1_the_git_object_model.html">git object</a>, including tags, commits and trees. Plus, if your repository is hosted on github, you can easily bring up the webpage for any git object using the <code>:Gbrowse</code> command.</p>
 
 <p><em>This is the penultimate of a five part series on fugitive.vim.</em></p>
 
 
-      </li>
-    
-      <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
       </li>
     
       <li>
@@ -427,17 +427,17 @@
       </li>
     
       <li>
-        <h4><a href="/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/">Fugitive.vim - exploring the history of a git repository</a></h4>
-        <p>Git provides tools for searching the contents of files, commit messages, and even whether text was added or removed by a commit. In this episode, we'll see how fugitive's <code>Ggrep</code> and <code>Glog</code> commands wrap this functionality up so that we can search the contents and history of a git repo from right inside of Vim.</p>
-
-<p><em>This is the last of our five part series on fugitive.vim.</em></p>
-
-
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
       </li>
     
       <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+        <h4><a href="/episodes/fugitive-vim-working-with-the-git-index/">Fugitive.vim - working with the git index</a></h4>
+        <p>The fugitive plugin provides an interactive status window, where you can easily stage and review your changes for the next commit. The <code>:Gdiff</code> command visualizes the changes made to a file, by comparing the working copy with the index. In this episode, we&rsquo;ll learn how to stage hunks of changes to the index without using the <code>git add --patch</code> command.</p>
+
+<p><em>This is the second of a five part series on fugitive.vim. In the next episode, we&rsquo;ll learn how to resolve a git merge conflict by performing a 3-way vimdiff.</em></p>
+
+
       </li>
     
 

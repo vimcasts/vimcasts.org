@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -187,9 +188,9 @@
       </header>
 
       <div data-swiftype-index="true">
-        <p>The <code>:Subvert</code> command lets us create a particular style of regular expressions with ease. It's great for matching irregular singular and plural words in plain English and also for variable names that come in <code>snake_case</code> and <code>MixedCase</code> forms.</p>
+        <p>The <code>:Subvert</code> command lets us create a particular style of regular expressions with ease. It&rsquo;s great for matching irregular singular and plural words in plain English and also for variable names that come in <code>snake_case</code> and <code>MixedCase</code> forms.</p>
 
-<p><em>This is part one of a three-part series on Tim Pope's abolish plugin.</em></p>
+<p><em>This is part one of a three-part series on Tim Pope&rsquo;s abolish plugin.</em></p>
 
 
       </div>
@@ -229,28 +230,24 @@
           
 
 <p>The <code>:Subvert</code> command lets us generate a pattern based on </p>
-
-<pre><code>:Subvert /pumpkin
-</code></pre>
+<pre class="highlight plaintext">:Subvert /pumpkin
+</pre>
 
 <p>This has the same effect as the following search:</p>
+<pre class="highlight plaintext">/\v\C%(PUMPKIN|Pumpkin|pumpkin)
+</pre>
 
-<pre><code>/\v\C%(PUMPKIN|Pumpkin|pumpkin)
-</code></pre>
-
-<p>The <code>:Subvert</code> command can also accept a comma-seperated list of alternatives wrapped in braces. These are assembled to form a pattern. For example, we could search for both 'mouse' and 'mice' by running the command:</p>
-
-<pre><code>:S/m{ouse,ice}
-</code></pre>
+<p>The <code>:Subvert</code> command can also accept a comma-seperated list of alternatives wrapped in braces. These are assembled to form a pattern. For example, we could search for both &lsquo;mouse&rsquo; and &lsquo;mice&rsquo; by running the command:</p>
+<pre class="highlight plaintext">:S/m{ouse,ice}
+</pre>
 
 <p>If we specify a pattern with words separated by underscores, the <code>:Subvert</code> command automatically matches the mixed case alternative too. For example:</p>
-
-<pre><code>:S/insert_mode
-</code></pre>
+<pre class="highlight plaintext">:S/insert_mode
+</pre>
 
 <p>Would match <code>insert_mode</code> and <code>InsertMode</code>.</p>
 
-<p>The <code>:Subvert</code> command comes in many different forms. In it's most basic form, it resembles plain search. If you specify a file (or glob), then the command resembles <code>:vimgrep</code>. When a replacement field is specified, <code>:Subvert</code> behaves like the built-in <code>:substitute</code> command.</p>
+<p>The <code>:Subvert</code> command comes in many different forms. In it&rsquo;s most basic form, it resembles plain search. If you specify a file (or glob), then the command resembles <code>:vimgrep</code>. When a replacement field is specified, <code>:Subvert</code> behaves like the built-in <code>:substitute</code> command.</p>
 
 <table>
    <tr>
@@ -273,7 +270,7 @@
 
 <p><a href="/e/48">Episode 48</a> shows how to use the <code>:S/pattern/replacement/</code> form.</p>
 
-<h3 id="coercing-variable-caseing">Coercing variable caseing</h3>
+<h3>Coercing variable caseing</h3>
 
 <p>The <code>cr</code> mapping stands for <em>coerce</em>. It lets you switch between different casing styles:</p>
 
@@ -304,19 +301,18 @@
    </tr>
 </table>
 
-<h2 id="further-reading">Further reading</h2>
+<h2>Further reading</h2>
 
 <ul>
-  <li><a href="https://github.com/tpope/vim-abolish">abolish</a> by tpope</li>
-  <li><a href="https://github.com/tpope/vim-repeat">repeat</a> by tpope</li>
-  <li><code>:help :Subvert</code></li>
-  <li><code>:help abolish-search</code></li>
-  <li><code>:help abolish-coercion</code></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-R"><code>:help c_CTRL-R</code></a></li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\C"><code>:help /\C</code></a> - force case sensitivity in a search pattern</li>
-  <li><a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\v"><code>:help /\v</code></a> - use very-magic mode</li>
+<li><a href="https://github.com/tpope/vim-abolish">abolish</a> by tpope</li>
+<li><a href="https://github.com/tpope/vim-repeat">repeat</a> by tpope</li>
+<li><code>:help :Subvert</code></li>
+<li><code>:help abolish-search</code></li>
+<li><code>:help abolish-coercion</code></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-R"><code>:help c_CTRL-R</code></a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/C"><code>:help /\C</code></a> - force case sensitivity in a search pattern</li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#/v"><code>:help /\v</code></a> - use very-magic mode</li>
 </ul>
-
 
         </div>
         </dd>
@@ -361,12 +357,15 @@
 
     
       <li>
-        <h4><a href="/episodes/supercharged-substitution-with-subvert/">Supercharged substitution with :Subvert</a></h4>
-        <p>The <a href="https://github.com/tpope/vim-abolish">abolish plugin</a> provides a command called <code>:Subvert</code>, which is like a supercharged version of Vim's built-in <code>:substitute</code> command. The <code>:Subvert</code> command is especially useful for changing singular and plural variants of a word, and for refactoring names that appear in <code>snake_case</code> and <code>MixedCase</code>.</p>
-
-<p><em>This is part two of a three-part series on Tim Pope's <a href="https://github.com/tpope/vim-abolish">abolish</a> plugin.</em></p>
+        <h4><a href="/episodes/search-for-the-selected-text/">Search for the selected text</a></h4>
+        <p><a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#star">The <code>*</code> command</a> searches for the word under the cursor. That makes sense in Normal mode, but from Visual mode it would be more useful if the star command searched for the current <em>selection</em>, rather than the current word. We can add this feature to Vim using the <a href="https://github.com/nelstrom/vim-visual-star-search">visual star search plugin</a>.</p>
 
 
+      </li>
+    
+      <li>
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
       <li>
@@ -380,24 +379,21 @@
       </li>
     
       <li>
-        <h4><a href="/episodes/search-for-the-selected-text/">Search for the selected text</a></h4>
-        <p><a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#star">The <code>*</code> command</a> searches for the word under the cursor. That makes sense in Normal mode, but from Visual mode it would be more useful if the star command searched for the current <em>selection</em>, rather than the current word. We can add this feature to Vim using the <a href="https://github.com/nelstrom/vim-visual-star-search">visual star search plugin</a>.</p>
+        <h4><a href="/episodes/supercharged-substitution-with-subvert/">Supercharged substitution with :Subvert</a></h4>
+        <p>The <a href="https://github.com/tpope/vim-abolish">abolish plugin</a> provides a command called <code>:Subvert</code>, which is like a supercharged version of Vim&rsquo;s built-in <code>:substitute</code> command. The <code>:Subvert</code> command is especially useful for changing singular and plural variants of a word, and for refactoring names that appear in <code>snake_case</code> and <code>MixedCase</code>.</p>
+
+<p><em>This is part two of a three-part series on Tim Pope&rsquo;s <a href="https://github.com/tpope/vim-abolish">abolish</a> plugin.</em></p>
 
 
       </li>
     
       <li>
         <h4><a href="/episodes/enhanced-abbreviations-with-abolish/">Enhanced abbreviations with :Abolish</a></h4>
-        <p>Vim's built-in abbreviation feature is handy if you want to auto-correct words that you frequently misspell, but it requires a lot of setup. The <code>:Abolish</code> command makes it easy to generate abbreviations that will correct multiple forms of the same word.</p>
+        <p>Vim&rsquo;s built-in abbreviation feature is handy if you want to auto-correct words that you frequently misspell, but it requires a lot of setup. The <code>:Abolish</code> command makes it easy to generate abbreviations that will correct multiple forms of the same word.</p>
 
 <p><em>This is the final of a three-part series on Tim Pope’s <a href="https://github.com/tpope/vim-abolish">abolish</a> plugin.</em></p>
 
 
-      </li>
-    
-      <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
 

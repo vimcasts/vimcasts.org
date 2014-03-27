@@ -20,6 +20,7 @@
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/modernizr.js" type="text/javascript"></script>
   </head>
 
@@ -226,7 +227,7 @@
         <div id="shownotes" class="content" data-swiftype-index="true">
           
 
-<h3 id="opening-split-windows">Opening split windows</h3>
+<h3>Opening split windows</h3>
 
 <table>
    <tr>
@@ -251,7 +252,7 @@
    </tr>
 </table>
 
-<h3 id="closing-split-windows">Closing split windows</h3>
+<h3>Closing split windows</h3>
 
 <table>
    <tr>
@@ -268,7 +269,7 @@
    </tr>
 </table>
 
-<h3 id="changing-focus-between-windows">Changing focus between windows</h3>
+<h3>Changing focus between windows</h3>
 
 <table>
    <tr>
@@ -298,15 +299,13 @@
 </table>
 
 <p>I have the following lines in my .vimrc file:</p>
-
-<pre class="brush: vimscript">
-map &lt;C-h&gt; &lt;C-w&gt;h
-map &lt;C-j&gt; &lt;C-w&gt;j
-map &lt;C-k&gt; &lt;C-w&gt;k
-map &lt;C-l&gt; &lt;C-w&gt;l
+<pre class="highlight viml">map <span class="p">&lt;</span>C<span class="p">-</span><span class="k">h</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">w</span><span class="p">&gt;</span><span class="k">h</span>
+map <span class="p">&lt;</span>C<span class="p">-</span><span class="k">j</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">w</span><span class="p">&gt;</span><span class="k">j</span>
+map <span class="p">&lt;</span>C<span class="p">-</span><span class="k">k</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">w</span><span class="p">&gt;</span><span class="k">k</span>
+map <span class="p">&lt;</span>C<span class="p">-</span><span class="k">l</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">w</span><span class="p">&gt;</span><span class="k">l</span>
 </pre>
 
-<h3 id="resizing-windows">Resizing windows</h3>
+<h3>Resizing windows</h3>
 
 <p>You can resize windows by clicking on the boundary between windows, and dragging it to your prefered size. The following key commands also help:</p>
 
@@ -333,7 +332,7 @@ map &lt;C-l&gt; &lt;C-w&gt;l
    </tr>
 </table>
 
-<h3 id="moving-windows">Moving windows</h3>
+<h3>Moving windows</h3>
 
 <table>
    <tr>
@@ -365,7 +364,6 @@ map &lt;C-l&gt; &lt;C-w&gt;l
        <td>move current window to far right</td>
    </tr>
 </table>
-
 
         </div>
         </dd>
@@ -415,20 +413,15 @@ map &lt;C-l&gt; &lt;C-w&gt;l
       </li>
     
       <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+        <h4><a href="/episodes/how-to-use-tabs/">How to use tabs</a></h4>
+        <p>Vim&rsquo;s treatment of tabs is a little different than what you might be used to if you are coming from another editor. In this episode I demonstrate how Vim&rsquo;s tabs can be used to group split windows together. I also show how to use Vim&rsquo;s tabs like projects in TextMate, by setting a different working directory for each one.</p>
+
+
       </li>
     
       <li>
         <h4><a href="/episodes/working-with-buffers/">Working with buffers</a></h4>
-        <p>Introducing the buffer list, and commands for switching between buffers. This episode also covers the concept of 'hidden' buffers, and shows how to deal with them.</p>
-
-
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/how-to-use-tabs/">How to use tabs</a></h4>
-        <p>Vim's treatment of tabs is a little different than what you might be used to if you are coming from another editor. In this episode I demonstrate how Vim's tabs can be used to group split windows together. I also show how to use Vim's tabs like projects in TextMate, by setting a different working directory for each one.</p>
+        <p>Introducing the buffer list, and commands for switching between buffers. This episode also covers the concept of &lsquo;hidden&rsquo; buffers, and shows how to deal with them.</p>
 
 
       </li>
@@ -439,8 +432,13 @@ map &lt;C-l&gt; &lt;C-w&gt;l
       </li>
     
       <li>
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+      </li>
+    
+      <li>
         <h4><a href="/episodes/working-with-tabs/">Working with tabs</a></h4>
-        <p>This episode covers the essential commands for working with Vim's tab pages: opening and closing, switching, and moving them.</p>
+        <p>This episode covers the essential commands for working with Vim&rsquo;s tab pages: opening and closing, switching, and moving them.</p>
 
 
       </li>
