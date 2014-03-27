@@ -130,7 +130,19 @@
           </div>
         </div>
 
-        <p>I want to change this snippet of code so that the <code>obstacleToBeRemoved</code> is replaced with the word <code>collection</code>.</p>
+          <div class="row">
+    <div class="small-12 columns">
+
+      
+        <h1><a href="/episodes/meet-the-yank-register/">Meet the yank register</a></h1>
+        <h2>Transcript for episode #52</h2>
+
+        <p>Vim's default register is not a safe place to keep yanked text that you want to paste later. It's all too easy to clobber the default register with a <code>d</code> or <code>x</code> command. Luckily, the last yanked text is kept safe in Vim's <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0">yank register</a>.</p>
+
+
+      
+
+      <p>I want to change this snippet of code so that the <code>obstacleToBeRemoved</code> is replaced with the word <code>collection</code>.</p>
 
 <pre><code>collection = getCollection();
 process(obstacleToBeRemoved, target);
@@ -232,6 +244,9 @@ delete                 ???
 <p>It's a common cause of frustration for Vim users: trying to paste something you previously yanked, only to find that the default register has been clobbered by a cut operation. The yank register is one of my favourite ways of avoiding this pitfall.</p>
 
 <p>We'll look at alternative approaches in the next couple of episodes.</p>
+
+    </div>
+  </div>
 
 
       </section>

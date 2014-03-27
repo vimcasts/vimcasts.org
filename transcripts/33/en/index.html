@@ -130,7 +130,21 @@
           </div>
         </div>
 
-        <h1 id="resolving-merge-conflicts-with-vimdiff">Resolving merge conflicts with vimdiff</h1>
+          <div class="row">
+    <div class="small-12 columns">
+
+      
+        <h1><a href="/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/">Fugitive.vim - resolving merge conflicts with vimdiff</a></h1>
+        <h2>Transcript for episode #33</h2>
+
+        <p>When git branches are merged, there is always the chance of a conflict arising if a file was modified in both the target and merge branches. You can resolve merge conflicts using a combination of fugitive's <code>:Gdiff</code> command, and Vim's built in <code>diffget</code> and <code>diffput</code>. In this episode, we'll find out how.</p>
+
+<p><em>This is the third in a five part series on fugitive.vim.</em></p>
+
+
+      
+
+      <h1 id="resolving-merge-conflicts-with-vimdiff">Resolving merge conflicts with vimdiff</h1>
 
 <p><em>Setup: create 2 branches with conflicting chages to the same file. Merge one branch into the other, open the conflicted file and run <code>:Gdiff</code>.</em></p>
 
@@ -304,6 +318,9 @@ merge:
 </code></pre>
 
 <p>Bang! The merge version of the file overwrites the working copy, and adds it to the index. The file is no longer marked as 'conflicted', and is ready to be committed.</p>
+
+    </div>
+  </div>
 
 
       </section>

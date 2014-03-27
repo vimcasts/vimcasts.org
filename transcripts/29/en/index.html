@@ -130,7 +130,19 @@
           </div>
         </div>
 
-        <p>There are a couple of plugins for Vim that make it easy to align text. There is the <a href="http://www.vim.org/scripts/script.php?script_id=294">Align.vim</a> plugin by Charles Campbell, and then there is <a href="https://github.com/godlygeek/tabular">Tabular.vim</a> by Matt Wozniski. They differ slightly in their patterns of use, but both achieve a similar result. In this episode, I will demonstrate how to use Tabular.vim.</p>
+          <div class="row">
+    <div class="small-12 columns">
+
+      
+        <h1><a href="/episodes/aligning-text-with-tabular-vim/">Aligning text with Tabular.vim</a></h1>
+        <h2>Transcript for episode #29</h2>
+
+        <p>There are times when you can improve the readability of your code by lining up the elements on neighbouring lines. In this episode, I demonstrate how this can be achieved using the <a href="https://github.com/godlygeek/tabular">Tabular</a> plugin.</p>
+
+
+      
+
+      <p>There are a couple of plugins for Vim that make it easy to align text. There is the <a href="http://www.vim.org/scripts/script.php?script_id=294">Align.vim</a> plugin by Charles Campbell, and then there is <a href="https://github.com/godlygeek/tabular">Tabular.vim</a> by Matt Wozniski. They differ slightly in their patterns of use, but both achieve a similar result. In this episode, I will demonstrate how to use Tabular.vim.</p>
 
 <h1 id="aligning-assignments">Aligning assignments</h1>
 
@@ -218,6 +230,9 @@ endif
 
 <p>Or you could take it a step further, by creating an insert mode mapping which triggers the <code>:Tabular</code> command when you type the character that you want to align. Tim Pope shows us how in this <a href="https://gist.github.com/287147">gist</a>, which calls tabularize each time a pipe character is inserted. If I copy this into my .vimrc file and reload it, then you'll see that my cucumber table is automatically realigned as I create it. Pretty neat!</p>
 
+
+    </div>
+  </div>
 
 
       </section>

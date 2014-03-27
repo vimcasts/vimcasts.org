@@ -130,7 +130,19 @@
           </div>
         </div>
 
-        <h1 id="populating-the-arglist">Populating the arglist</h1>
+          <div class="row">
+    <div class="small-12 columns">
+
+      
+        <h1><a href="/episodes/populating-the-arglist/">Populating the arglist</a></h1>
+        <h2>Transcript for episode #42</h2>
+
+        <p>The arglist wouldn't be much use if we had to quit and relaunch Vim every time we wanted to change its contents. In this episode, we'll learn how to set the contents of the arglist using the <code>:args</code> command, which can receive filepaths, globs, or even backtick expressions.</p>
+
+
+      
+
+      <h1 id="populating-the-arglist">Populating the arglist</h1>
 
 <p>When launching Vim from the command line, we can supply arguments in a few different ways. The simplest way is to specify one or more filepaths.</p>
 
@@ -265,6 +277,9 @@ $ vim .toc
 <h2 id="more-ideas-for-using-backtick-expressions">More ideas for using backtick expressions</h2>
 
 <p>I've chosen a simple example for demonstration purposes, but we could put anything inside that backtick expression.  So long as the subshell returns a list of filepaths, then Vim will consider it as valid input.  For example, you could use the output of <code>find</code> or <code>grep</code>, or even a shell script of your own.  I'm sure that you can think of lots of other possibilities.</p>
+
+    </div>
+  </div>
 
 
       </section>

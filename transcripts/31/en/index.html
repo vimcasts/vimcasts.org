@@ -130,7 +130,21 @@
           </div>
         </div>
 
-        <h2 id="git">Git</h2>
+          <div class="row">
+    <div class="small-12 columns">
+
+      
+        <h1><a href="/episodes/fugitive-vim---a-complement-to-command-line-git/">Fugitive.vim - a complement to command line git</a></h1>
+        <h2>Transcript for episode #31</h2>
+
+        <p><a href="https://github.com/tpope/vim-fugitive">The fugitive plugin</a>, by Tim Pope, is a git wrapper for Vim. It  complements the command line interface to git, but doesn't aim to replace it. In this episode, we'll see how some of fugitive's commands can streamline your workflow.</p>
+
+<p><em>This is the first of a five part series on fugitive.</em></p>
+
+
+      
+
+      <h2 id="git">Git</h2>
 
 <p>The fugitive commands are launched from Vim's command line by typing colon followed by the command name, which always starts with a capital 'G'. The first one to learn is simply 'Git'. This runs any arbitrary git command, with the output echoed below Vim's command line.</p>
 
@@ -228,6 +242,9 @@
 <p>When I run <code>git blame</code> with a filepath in the shell, I get to see a copy of the file with annotations showing the last commit that modified each line, along with a timestamp and author. Useful information if you want to know who to blame for the bug that has been driving you crazy all morning! But we can do better than this.</p>
 
 <p>When I call <code>:Gblame</code> in Vim, fugitive creates a vertical split and places all of the annotations in the new window. Notice how the window containing the file maintains its syntax highlighting. Also, note that the split windows are bound together, so that if you scroll either one of them, the other window will follow.</p>
+
+    </div>
+  </div>
 
 
       </section>

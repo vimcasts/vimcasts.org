@@ -130,7 +130,19 @@
           </div>
         </div>
 
-        <p>When you launch vim, it will automatically load and execute your vimrc file. If you modify the vimrc file whilst Vim is running you can apply those changes by running the command:</p>
+          <div class="row">
+    <div class="small-12 columns">
+
+      
+        <h1><a href="/episodes/updating-your-vimrc-file-on-the-fly/">Updating your vimrc file on the fly</a></h1>
+        <h2>Transcript for episode #24</h2>
+
+        <p>The vimrc file allows you to preserve your settings so that they are restored each time you launch Vim. But what if you want to update your vimrc file in the middle of an editing session? This episode demonstrates a couple of tricks that make it easy to customize Vim on the fly.</p>
+
+
+      
+
+      <p>When you launch vim, it will automatically load and execute your vimrc file. If you modify the vimrc file whilst Vim is running you can apply those changes by running the command:</p>
 
 <pre><code>:source $MYVIMRC
 "colon source - dollar my vim-R-C in all caps"
@@ -174,6 +186,9 @@ nmap &lt;leader&gt;v :tabedit $MYVIMRC&lt;CR&gt;
 </code></pre>
 
 <p>This mapping opens the vimrc file in a new tab when I hit "comma-v" in normal mode. "V" is my mnemonic for vimrc. Feel free to modify the mappings, and the functionality to suit your preferences.</p>
+
+    </div>
+  </div>
 
 
       </section>

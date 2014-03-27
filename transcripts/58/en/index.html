@@ -130,7 +130,19 @@
           </div>
         </div>
 
-        <h2 id="copying-text-to-the-system-clipboard">Copying text to the system clipboard</h2>
+          <div class="row">
+    <div class="small-12 columns">
+
+      
+        <h1><a href="/episodes/accessing-the-system-clipboard-from-vim/">Accessing the system clipboard from Vim</a></h1>
+        <h2>Transcript for episode #58</h2>
+
+        <p>In some environments, Vim lets us access the system clipboard using the quoteplus register, <code>"+</code>. When this feature is enabled, we can use it with the delete, yank and put operations in much the same way that we use Vim's other registers. Pasting from this register usually produces better results than using the system paste command in Insert mode.</p>
+
+
+      
+
+      <h2 id="copying-text-to-the-system-clipboard">Copying text to the system clipboard</h2>
 
 <p>[clear Alfred clipboard history]</p>
 
@@ -194,6 +206,9 @@
 <p>Vim raises an error: <em>Invalid register name</em>. That's fine. I'm controlling a remote machine. It makes sense that I can't access the system clipboard from my workstation.</p>
 
 <p>But if you get this error from your local version of Vim, then I'd encourage you to install a version of Vim with clipboard support, or compile it yourself! It's an essential feature.</p>
+
+    </div>
+  </div>
 
 
       </section>

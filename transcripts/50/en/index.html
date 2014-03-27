@@ -130,7 +130,19 @@
           </div>
         </div>
 
-        <h1 id="introduction-to-vspec">Introduction to vspec</h1>
+          <div class="row">
+    <div class="small-12 columns">
+
+      
+        <h1><a href="/episodes/an-introduction-to-vspec/">An introduction to vspec</a></h1>
+        <h2>Transcript for episode #50</h2>
+
+        <p><a href="https://github.com/kana/vim-vspec">Vspec</a> is a library that allows you to test-drive your Vimscript code. In this tutorial, we'll cover the basics: how to inspect the contents of a buffer, how to simulate the actions of a user, and how to invoke user-defined mappings.</p>
+
+
+      
+
+      <h1 id="introduction-to-vspec">Introduction to vspec</h1>
 
 <h2 id="installation">Installation</h2>
 
@@ -314,6 +326,9 @@ end
 <p>Defining a mapping inside a test file means it's no use to anyone. It would be more practical to define custom functionality in one file, and the tests in another. That's easy. Let's create a file called <code>demo.vim</code>, and move this mapping into it. Then, in the test file, I'll source the <code>demo.vim</code> file. Run the tests… and they're still green.</p>
 
 <p>This pattern makes it possible to write vspec tests for the functionality specified by a Vim plugin.</p>
+
+    </div>
+  </div>
 
 
       </section>

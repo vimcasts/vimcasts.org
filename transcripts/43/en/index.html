@@ -130,7 +130,19 @@
           </div>
         </div>
 
-        <h1 id="executing-commands-on-the-arguments-list">Executing commands on the arguments list</h1>
+          <div class="row">
+    <div class="small-12 columns">
+
+      
+        <h1><a href="/episodes/using-argdo-to-change-multiple-files/">Using :argdo to change multiple files</a></h1>
+        <h2>Transcript for episode #43</h2>
+
+        <p>The <code>:argdo</code> command allows us to execute an Ex command across all buffers in the arglist.  To demonstrate, we'll use the example of running the <code>:substitute</code> command across multiple files, then we'll see how to revert or save the changes.  We'll also compare the <code>:argdo</code> and <code>:bufdo</code> commands, and consider when it's appropriate to use each one.</p>
+
+
+      
+
+      <h1 id="executing-commands-on-the-arguments-list">Executing commands on the arguments list</h1>
 
 <p>The arglist really shines when you want to perform the same commands across a set of files, thanks to the <code>:argdo</code> command:</p>
 
@@ -264,6 +276,9 @@ E486: Pattern not found \a
 <p>That's not what we want, so in this case we'd be better off using the <code>argdo</code> command.</p>
 
 <p>It's easy to add files to the buffer list (perhaps unintentionally), so if you use <code>:bufdo</code> there's always a risk that it might end up touching a file that you didn't mean to change. Whereas the arglist only changes when you tell it to. For that reason, I prefer to use <code>:argdo</code> instead of <code>:bufdo</code>.</p>
+
+    </div>
+  </div>
 
 
       </section>

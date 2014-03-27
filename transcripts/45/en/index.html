@@ -130,7 +130,19 @@
           </div>
         </div>
 
-        <h2 id="strategy-1---substitute-across-all-files">Strategy #1 - Substitute across all files</h2>
+          <div class="row">
+    <div class="small-12 columns">
+
+      
+        <h1><a href="/episodes/project-wide-find-and-replace/">Project-wide find and replace</a></h1>
+        <h2>Transcript for episode #45</h2>
+
+        <p>Vim doesn't have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as <code>:substitute</code>, <code>:argdo</code>, and <code>:vimgrep</code>. We'll look at two possible strategies: first using the arglist, then the quickfix list.</p>
+
+
+      
+
+      <h2 id="strategy-1---substitute-across-all-files">Strategy #1 - Substitute across all files</h2>
 <p>In this directory we've got 5 files. Let's open them up - here I'm using the <code>-o</code> flag (dash oh), which causes Vim to create a split window for each file specified:</p>
 
 <pre><code>vim -o *.txt
@@ -289,6 +301,9 @@ zt
 <p>Here, it's clear that one step is concerned with <em>finding</em> matches, while the another is concerned with <em>replacing</em> them with something else.</p>
 
 <p>Check the shownotes for links to a couple of other Vimscript solutions that make this workflow possible.</p>
+
+    </div>
+  </div>
 
 
       </section>

@@ -130,7 +130,19 @@
           </div>
         </div>
 
-        <p>In TextMate, the commands in question can be found in the "Text" menu under "Move selection". I find the description "move line up" rather bland. The motion reminds me of an air bubble moving through a glass tube of liquid, so I prefer to call this feature "text bubbling". Vim doesn't have text bubbling built in, but we can easily replicate it by chaining together a few primitive commands. </p>
+          <div class="row">
+    <div class="small-12 columns">
+
+      
+        <h1><a href="/episodes/bubbling-text/">Bubbling text</a></h1>
+        <h2>Transcript for episode #26</h2>
+
+        <p>TextMate has a few built in commands for moving selected text around a document. The end end result of using these commands can be achieved by cutting and pasting, but the visual feedback they provide is quite helpful. In this episode, I will show how to replicate these commands in Vim.</p>
+
+
+      
+
+      <p>In TextMate, the commands in question can be found in the "Text" menu under "Move selection". I find the description "move line up" rather bland. The motion reminds me of an air bubble moving through a glass tube of liquid, so I prefer to call this feature "text bubbling". Vim doesn't have text bubbling built in, but we can easily replicate it by chaining together a few primitive commands. </p>
 
 <h2 id="bubbling-a-single-line">Bubbling a single line</h2>
 
@@ -209,6 +221,9 @@ vmap &lt;C-Up&gt; xkP`[V`]
 <p>If you have the unimpaired plugin installed, then you can use the "square bracket e" commands to bubble text up and down. But if you are used to the TextMate key commands, you could always recreate those mappings and hook into the commands from unimpaired.</p>
 
 <p>Whether you use the default mappings, or create your own, unimpaired brings an added bonus: bubble movement can now accept a count. So I can make a visual selection, then press <code>5 ctrl-Up</code>, and the text moves up five lines.</p>
+
+    </div>
+  </div>
 
 
       </section>

@@ -130,7 +130,19 @@
           </div>
         </div>
 
-        <p>In the previous episode, we saw how to use the quoteplus register to paste text from the system clipboard. Unfortunately, we can't always expect the clipboard feature to be supported. In particular, if we're running an instance of Vim on a remote machine, there's no simple way of accessing the clipboard from our local workstation.</p>
+          <div class="row">
+    <div class="small-12 columns">
+
+      
+        <h1><a href="/episodes/using-vims-paste-mode-with-the-system-paste-command/">Using Vim's paste mode with the system paste command</a></h1>
+        <h2>Transcript for episode #59</h2>
+
+        <p>When Vim is compiled without the <code>+clipboard</code> feature, we can still insert text from the clipboard using the system paste command (<code>ctrl-v</code> or <code>cmd-v</code>). This can produce strange effects, but we can avoid them by toggling the <code>paste</code> option each time we use the system paste command.</p>
+
+
+      
+
+      <p>In the previous episode, we saw how to use the quoteplus register to paste text from the system clipboard. Unfortunately, we can't always expect the clipboard feature to be supported. In particular, if we're running an instance of Vim on a remote machine, there's no simple way of accessing the clipboard from our local workstation.</p>
 
 <p>We can use the system paste command: control-v, or command-v on a mac, but this has some issues. Watch what happens if I copy this snippet of javascript, then use the system paste command in Insert mode: the indentation goes haywire!</p>
 
@@ -183,6 +195,9 @@ nopaste
 </code></pre>
 
 <p>That's a much neater workflow than having to toggle the <code>paste</code> option on and off again manually.</p>
+
+    </div>
+  </div>
 
 
       </section>

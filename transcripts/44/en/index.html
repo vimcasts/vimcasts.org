@@ -130,7 +130,19 @@
           </div>
         </div>
 
-        <h2 id="using-vimgrep-on-the-current-file">Using vimgrep on the current file</h2>
+          <div class="row">
+    <div class="small-12 columns">
+
+      
+        <h1><a href="/episodes/search-multiple-files-with-vimgrep/">Search multiple files with :vimgrep</a></h1>
+        <h2>Transcript for episode #44</h2>
+
+        <p><code>vimgrep</code> is Vim's built-in command for searching across multiple files. It's not so fast as external tools like ack and git-grep, but it has its uses. <code>vimgrep</code> uses Vim's built-in regex engine, so you can reuse the patterns that work with Vim's standard search command. </p>
+
+
+      
+
+      <h2 id="using-vimgrep-on-the-current-file">Using vimgrep on the current file</h2>
 
 <p>Here's a common search use-case in Vim. We start by searching for a pattern: here I'm using a regular expression that matches text wrapped in backticks. Then we can use the <code>n</code> command to jump through the matches.</p>
 
@@ -252,6 +264,9 @@ nnn
 <p>If you want to search a large codebase and get results fast, then you'd be better off using an tool like <code>git-grep</code>, <code>ack</code> or the silver searcher. All of these external tools integrate with the quickfix list, and you can find Vim plugins for each of them.</p>
 
 <p>Vimgrep won't produce results as quickly as these external tools, but it's still useful. I reach for <code>vimgrep</code> when I want to use Vim's built-in regex engine. I love being able to test my regular expression in one buffer using the search command, then use the same pattern without modification to search across the entire project. For me, that convenience is the killer feature of <code>vimgrep</code>.</p>
+
+    </div>
+  </div>
 
 
       </section>
