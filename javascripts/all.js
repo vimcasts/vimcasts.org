@@ -9992,7 +9992,7 @@ $(document).ready(function() {
   $(".swiftype-search-form").submit(function(event) {
     event.preventDefault();
     var query = $(".swiftype-search-input", this).val();
-    window.location = "/results#stq=" + query;
+    window.location = "/results/#stq=" + query;
   });
 
   $(".search-results .swiftype-search-input").val(extractSearchQuery);
