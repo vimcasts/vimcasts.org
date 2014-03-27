@@ -23,14 +23,14 @@ In the video, I describe two different ways of reproducing the text bubbling fea
 
 By putting the following in your `.vimrc` file, you can create maps for bubbling text up and down:
 
-<pre class="brush: vimscript">
-&quot; Bubble single lines
-nmap &lt;C-Up&gt; ddkP
-nmap &lt;C-Down&gt; ddp
-&quot; Bubble multiple lines
-vmap &lt;C-Up&gt; xkP`[V`]
-vmap &lt;C-Down&gt; xp`[V`]
-</pre>
+```viml
+" Bubble single lines
+nmap <C-Up> ddkP
+nmap <C-Down> ddp
+" Bubble multiple lines
+vmap <C-Up> xkP`[V`]
+vmap <C-Down> xp`[V`]
+```
 
 ### Edge cases
 
@@ -47,14 +47,14 @@ These commands can be prepended with a count, and they both also work in Visual 
 
 If you have the unimpaired plugin installed, then you can use the "square bracket e" commands to bubble text up and down. But if you are used to the TextMate key commands, you could always recreate those mappings and hook into the commands from unimpaired. This excerpt of Vimscript should do it:
 
-<pre class="brush: vimscript">
-&quot; Bubble single lines
-nmap &lt;C-Up&gt; [e
-nmap &lt;C-Down&gt; ]e
-&quot; Bubble multiple lines
-vmap &lt;C-Up&gt; [egv
-vmap &lt;C-Down&gt; ]egv
-</pre>
+```viml
+" Bubble single lines
+nmap <C-Up> [e
+nmap <C-Down> ]e
+" Bubble multiple lines
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
+```
 
 ## Visually select the last edited text
 
@@ -62,10 +62,10 @@ You may already know that [`gv`][reselect] can be used to start visual mode with
 
 I keep the following mapping in my `.vimrc`:
 
-<pre class="brush: vimscript">
+```viml
 " Visually select the text that was last edited/pasted
 nmap gV `[v`]
-</pre>
+```
 
 So with `gv` I can reselect the last visual selection, and with `gV` I can visually select the text that was most recently edited or pasted.
 

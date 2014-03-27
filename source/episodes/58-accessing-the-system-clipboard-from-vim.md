@@ -94,9 +94,11 @@ That tells Vim to use the [quotestar register][quotestar] for all yank, delete, 
 
 If your version of Vim supports both the `+clipboard` and `+xterm_clipboard` features, then you might prefer to use this setting instead:
 
-    if has('unnamedplus')
-      set clipboard=unnamed,unnamedplus
-    endif
+```viml
+if has('unnamedplus')
+  set clipboard=unnamed,unnamedplus
+endif
+```
 
 Read `:h clipboard-unnamedplus` for more details.
 

@@ -16,14 +16,14 @@ READMORE
 
 The following combinations are demonstrated in the video:
 
-<pre class="brush: vimscript">
+```viml
 set ts=8 sts=0 sw=8 noexpandtab	" default settings
 set ts=8 sts=0 sw=8 expandtab
 set ts=8 sts=8 sw=8 expandtab
 set ts=8 sts=4 sw=4 expandtab
 set ts=8 sts=4 sw=4 noexpandtab
 set ts=4 sts=4 sw=4 noexpandtab
-</pre>
+```
 
 If you prefer to work with tab characters then it is a good idea to ensure that `tabstop == softtabstop`. This makes it less likely that you'll end up with a mixture of tabs and spaces for indentation.
 
@@ -32,15 +32,15 @@ If you prefer to work with spaces, then it is preferable to ensure that `softtab
 The following snippet of vimscript allows you to assign the same value to tabstop, softtabstop and shiftwidth simultaneously:
 
 
-<pre class="brush: vimscript">
-&quot; Set tabstop, softtabstop and shiftwidth to the same value
+```viml
+" Set tabstop, softtabstop and shiftwidth to the same value
 command! -nargs=* Stab call Stab()
 function! Stab()
-  let l:tabstop = 1 * input(&#x27;set tabstop = softtabstop = shiftwidth = &#x27;)
-  if l:tabstop &gt; 0
-    let &amp;l:sts = l:tabstop
-    let &amp;l:ts = l:tabstop
-    let &amp;l:sw = l:tabstop
+  let l:tabstop = 1 * input('set tabstop = softtabstop = shiftwidth = ')
+  if l:tabstop > 0
+    let &l:sts = l:tabstop
+    let &l:ts = l:tabstop
+    let &l:sw = l:tabstop
   endif
   call SummarizeTabs()
 endfunction
@@ -48,31 +48,31 @@ endfunction
 function! SummarizeTabs()
   try
     echohl ModeMsg
-    echon &#x27;tabstop=&#x27;.&amp;l:ts
-    echon &#x27; shiftwidth=&#x27;.&amp;l:sw
-    echon &#x27; softtabstop=&#x27;.&amp;l:sts
-    if &amp;l:et
-      echon &#x27; expandtab&#x27;
+    echon 'tabstop='.&l:ts
+    echon ' shiftwidth='.&l:sw
+    echon ' softtabstop='.&l:sts
+    if &l:et
+      echon ' expandtab'
     else
-      echon &#x27; noexpandtab&#x27;
+      echon ' noexpandtab'
     endif
   finally
     echohl None
   endtry
 endfunction
-</pre>
+```
 
 To invoke this command, go into normal mode (by pressing escape) then run:
 
-<pre class="brush: vimscript">
+```viml
 :Stab
-</pre>
+```
 
 Then hit enter. You will see this:
 
-<pre class="brush: vimscript">
+```viml
 set tabstop = softtabstop = shiftwidth = 
-</pre>
+```
 
 Enter the size that you want to assign to those settings, and hit enter. A summary line then shows the value of each setting, as well as showing whether or not expandtab is enabled. If you hit enter without providing a value, then the tab settings are not affected.
 

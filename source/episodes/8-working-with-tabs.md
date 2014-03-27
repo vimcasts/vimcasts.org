@@ -71,35 +71,35 @@ When you have multiple tabs open, you can switch between them using the mouse, o
 
 I'm accustomed to the tab switching shortcuts of Firefox, so to port these into my Vim environment, I include the following in my .vimrc:
 
-<pre class="brush: vimscript">
+```viml
 " For mac users (using the 'apple' key)
-map &lt;D-S-]&gt; gt
-map &lt;D-S-[&gt; gT
-map &lt;D-1&gt; 1gt
-map &lt;D-2&gt; 2gt
-map &lt;D-3&gt; 3gt
-map &lt;D-4&gt; 4gt
-map &lt;D-5&gt; 5gt
-map &lt;D-6&gt; 6gt
-map &lt;D-7&gt; 7gt
-map &lt;D-8&gt; 8gt
-map &lt;D-9&gt; 9gt
-map &lt;D-0&gt; :tablast&lt;CR&gt;
+map <D-S-]> gt
+map <D-S-[> gT
+map <D-1> 1gt
+map <D-2> 2gt
+map <D-3> 3gt
+map <D-4> 4gt
+map <D-5> 5gt
+map <D-6> 6gt
+map <D-7> 7gt
+map <D-8> 8gt
+map <D-9> 9gt
+map <D-0> :tablast<CR>
 
-&quot; for linux and windows users (using the control key)
-map &lt;C-S-]&gt; gt
-map &lt;C-S-[&gt; gT
-map &lt;C-1&gt; 1gt
-map &lt;C-2&gt; 2gt
-map &lt;C-3&gt; 3gt
-map &lt;C-4&gt; 4gt
-map &lt;C-5&gt; 5gt
-map &lt;C-6&gt; 6gt
-map &lt;C-7&gt; 7gt
-map &lt;C-8&gt; 8gt
-map &lt;C-9&gt; 9gt
-map &lt;C-0&gt; :tablast&lt;CR&gt;
-</pre>
+" for linux and windows users (using the control key)
+map <C-S-]> gt
+map <C-S-[> gT
+map <C-1> 1gt
+map <C-2> 2gt
+map <C-3> 3gt
+map <C-4> 4gt
+map <C-5> 5gt
+map <C-6> 6gt
+map <C-7> 7gt
+map <C-8> 8gt
+map <C-9> 9gt
+map <C-0> :tablast<CR>
+```
 
 ###Rearranging tabs
 

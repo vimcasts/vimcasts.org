@@ -29,18 +29,24 @@ Usually, Vim's mappings follow this general format:
 
 This instructs Vim to execute the keys on the right-hand side (RHS) of the expression whenever the user presses the keys on the left-hand side (LHS). Alternatively, we can create a *named mapping* by using the [`<Plug>`][plug] key on the LHS of the expression. Named mappings can't be executed directly by the user, but they can be referenced by other mappings (see [`:help using-<Plug>`][using-plug]). For example, this pair of mappings:
 
-    nmap <Plug>TransposeCharacters xp
-    nmap cp <Plug>TransposeCharacters
+```viml
+nmap <Plug>TransposeCharacters xp
+nmap cp <Plug>TransposeCharacters
+```
 
 Has the same effect as this single mapping:
 
-    nmap cp xp
+```viml
+nmap cp xp
+```
 
 That is, when the user presses `cp`, Vim executes the `x` command followed by the `p` command. We can use the `repeat#set()` function (supplied by repeat.vim) to tell Vim to invoke our named mapping when the dot command is used. Here's the complete mapping:
 
-    nnoremap <silent> <Plug>TransposeCharacters xp
-    \:call repeat#set("\<Plug>TransposeCharacters")<CR>
-    nmap cp <Plug>TransposeCharacters
+```viml
+nnoremap <silent> <Plug>TransposeCharacters xp
+\:call repeat#set("\<Plug>TransposeCharacters")<CR>
+nmap cp <Plug>TransposeCharacters
+```
 
 Note that the line beginning with `\` is a continuation of the previous line. When the user presses `cp`, Vim executes the `<Plug>TransposeCharacters` named mapping. That mapping executes the Normal commands `x` then `p`, then runs `:call repeat#set("\<Plug>TransposeCharacters")`, which instructs the dot command to execute the named mapping.
 

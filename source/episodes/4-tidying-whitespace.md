@@ -19,65 +19,65 @@ READMORE
 
 The command for converting between tabs and spaces is:
 
-<pre class="brush: vimscript">
+```viml
 :retab!
-</pre>
+```
 
 More specifically, to convert tabs to spaces, run:
 
-<pre class="brush: vimscript">
+```viml
 :set expandtab
 :retab!
-</pre>
+```
 
 And to convert spaces to tabs, run:
 
-<pre class="brush: vimscript">
+```viml
 :set noexpandtab
 :retab!
-</pre>
+```
 
 ###Strip trailing whitespace
 
 Strip trailing spaces throughout an entire file by running this
 substitution command:
 
-<pre class="brush: vimscript">
+```viml
 :%s/\s\+$//e
-</pre>
+```
 
 This has a couple of side-effects: it moves your cursor, and sets the
 last item in your search history to trailing whitespace. This function
 gets around these problems:
 
-<pre class="brush: vimscript">
-function! &lt;SID&gt;StripTrailingWhitespaces()
-    &quot; Preparation: save last search, and cursor position.
+```viml
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
     let _s=@/
-    let l = line(&quot;.&quot;)
-    let c = col(&quot;.&quot;)
-    &quot; Do the business:
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
     %s/\s\+$//e
-    &quot; Clean up: restore previous search history, and cursor position
+    " Clean up: restore previous search history, and cursor position
     let @/=_s
     call cursor(l, c)
 endfunction
-</pre>
+```
 
 Put it in your .vimrc file.
 
 If you want to map this function to a key (e.g. F5), add this:
 
-<pre class="brush: vimscript">
-nnoremap &lt;silent&gt; &lt;F5&gt; :call &lt;SID&gt;StripTrailingWhitespaces()&lt;CR&gt;
-</pre>
+```viml
+nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
+```
 
 If you want to run this command automatically when a file is saved,
 add this:
 
-<pre class="brush: vimscript">
-autocmd BufWritePre *.py,*.js :call &lt;SID&gt;StripTrailingWhitespaces()
-</pre>
+```viml
+autocmd BufWritePre *.py,*.js :call <SID>StripTrailingWhitespaces()
+```
 
 This example runs the autocommand on python and javascript files. Use
 this as a template, and add other filetypes to suit your needs.
@@ -86,9 +86,9 @@ this as a template, and add other filetypes to suit your needs.
 
 You can delete all blank lines by running the following command:
 
-<pre class="brush: vimscript">
+```viml
 :g/^$/d
-</pre>
+```
 
 ###Further reading
 
@@ -108,21 +108,21 @@ has recognised that `StripTrailingWhitespaces()`
 
 He suggests refactoring the methods as follows:
 
-<pre class="brush: vimscript">
+```viml
 function! Preserve(command)
-  &quot; Preparation: save last search, and cursor position.
+  " Preparation: save last search, and cursor position.
   let _s=@/
-  let l = line(&quot;.&quot;)
-  let c = col(&quot;.&quot;)
-  &quot; Do the business:
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
   execute a:command
-  &quot; Clean up: restore previous search history, and cursor position
+  " Clean up: restore previous search history, and cursor position
   let @/=_s
   call cursor(l, c)
 endfunction 
-nmap _$ :call Preserve(&quot;%s/\\s\\+$//e&quot;)&lt;CR&gt;
-nmap _= :call Preserve(&quot;normal gg=G&quot;)&lt;CR&gt;
-</pre>
+nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
+nmap _= :call Preserve("normal gg=G")<CR>
+```
 
 I do like his choice of key mapping as well. The underscore key is not often
 used, so makes for a good alternate `<leader>`. The `$` key is practically

@@ -57,12 +57,12 @@ The tree buffer makes it easy to drill down through the directories of your git 
 
 If you want, you could create a mapping to make this easier. Here's an example, which maps `..` to the above command, but only for buffers containing a git blob or tree:
 
-<pre class="brush: vimscript">
+```viml
 autocmd User fugitive 
   \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
-  \   nnoremap &lt;buffer&gt; .. :edit %:h&lt;CR&gt; |
+  \   nnoremap <buffer> .. :edit %:h<CR> |
   \ endif
-</pre>
+```
 
 Whenever your current buffer contains a git tree or blob, you can always jump up to the commit object for the current tree by pressing `C`.
 
@@ -78,17 +78,17 @@ Each time you open a git object using fugitive it creates a new buffer. This mea
 
 Here's an autocommand that prevents this from becomming an issue:
 
-<pre class="brush: vimscript">
+```viml
 autocmd BufReadPost fugitive://* set bufhidden=delete
-</pre>
+```
 
 ### Add git branch to status line
 
 Fugitive provides a function that you can add to your statusline, and it will show your current git branch. This example is taken from the fugitive documentation (`:help fugitive-statusline`):
 
-<pre class="brush: vimscript">
-set statusline=%&lt;%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-</pre>
+```viml
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+```
 
 ### Further reading
 

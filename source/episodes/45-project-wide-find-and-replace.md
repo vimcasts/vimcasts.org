@@ -41,7 +41,7 @@ This uses a custom `:Qargs` command to prune the arglist of buffers that don't c
 
 The custom `:Qargs` command sets the arglist to contain each of the files referenced by the quickfix list. You add it to Vim by copying these lines into your vimrc file:
 
-<pre class="brush: vimscript">
+```viml
 command! -nargs=0 -bar Qargs execute 'args' QuickfixFilenames()
 function! QuickfixFilenames()
   " Building a hash ensures we get each buffer only once
@@ -51,7 +51,7 @@ function! QuickfixFilenames()
   endfor
   return join(map(values(buffer_numbers), 'fnameescape(v:val)'))
 endfunction
-</pre>
+```
 
 Or you could install the [vim-qargs][qargs] plugin from github. Credit where due: I adapted this code from [a Stack Overflow solution][qfdo] posted by Dr Al.
 

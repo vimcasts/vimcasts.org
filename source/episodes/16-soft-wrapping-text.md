@@ -18,15 +18,15 @@ If you want to make Vim wrap long lines to fit in the window, you first have to 
 
 The `linebreak` setting will not work when the `list` setting is enabled. So if you find that enabling `linebreak` does not produce the desired effect, try running `:set nolist`. To be sure, you can run the following command:
 
-<pre class="brush: vimscript">
+```viml
 :set wrap linebreak nolist
-</pre>
+```
 
 Rather than having to ensure that 3 separate options are configured correctly, I would prefer if I could just issue the command `:Wrap`. This can be achieved by putting the following in your .vimrc file:
 
-<pre class="brush: vimscript">
+```viml
 command! -nargs=* Wrap set wrap linebreak nolist
-</pre>
+```
 
 Moving around through wrapped lines
 -----------------------------------
@@ -35,18 +35,18 @@ Unlike many text editing environments, Vim makes a distinction between displayed
 
 Hitting two keys in quick succession feels slow compared to pressing a single key whilst holding down a modifier key. I have the following in my .vimrc file:
 
-<pre class="brush: vimscript">
-vmap &lt;D-j&gt; gj
-vmap &lt;D-k&gt; gk
-vmap &lt;D-4&gt; g$
-vmap &lt;D-6&gt; g^
-vmap &lt;D-0&gt; g^
-nmap &lt;D-j&gt; gj
-nmap &lt;D-k&gt; gk
-nmap &lt;D-4&gt; g$
-nmap &lt;D-6&gt; g^
-nmap &lt;D-0&gt; g^
-</pre>
+```viml
+vmap <D-j> gj
+vmap <D-k> gk
+vmap <D-4> g$
+vmap <D-6> g^
+vmap <D-0> g^
+nmap <D-j> gj
+nmap <D-k> gk
+nmap <D-4> g$
+nmap <D-6> g^
+nmap <D-0> g^
+```
     
 On the mac, this allows me to use `j`, `k`, `$`, `0` and `^` on display lines by holding down the command key.
 
@@ -55,15 +55,15 @@ Knowing where you are
 
 Without any visual clues, it could be hard to tell whether you are looking at display lines or numbered lines. The simplest way to tell is to switch line numbering on:
 
-<pre class="brush: vimscript">
+```viml
 :set number
-</pre>
+```
 
 If you prefer not to show line numbers, there is another way. The `showbreak` option can be set to a character which will lead each display line after the first one. It can be set as follows:
 
-<pre class="brush: vimscript">
+```viml
 :set showbreak=â€¦
-</pre>
+```
 
 To insert the elipsis, press `ctrl-vu` followed by the [numeric code for elipsis][elipsis]: `2026`. [Episode 1](http://vimcasts.org/e/1) covers unicode character insertion in a little more detail.
 

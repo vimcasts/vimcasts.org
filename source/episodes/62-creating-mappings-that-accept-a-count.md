@@ -18,7 +18,9 @@ READMORE
 
 Suppose that we wanted to create a mapping so that pressing `Q` executed `n.`. We could start off with a simple mapping:
 
-    nnoremap Q n.
+```viml
+nnoremap Q n.
+```
 
 Pressing `Q` now executes `n.`, giving us two keystrokes for the price of one. Nice! But if we try prefixing our new mapping with a count, something odd happens. For example, pressing `2Q` behaves as though we had pressed `2n.`. It would be more useful if `2Q` was equivalent to `n.n.`.
 
@@ -26,7 +28,9 @@ Pressing `Q` now executes `n.`, giving us two keystrokes for the price of one. N
 
 Let's revise our mapping to this:
 
-    nnoremap Q @='n.'<CR>
+```viml
+nnoremap Q @='n.'<CR>
+```
 
 Now, pressing `2Q` is equivalent to `n.n.`, `3Q` is equivalent to `n.n.n.`, and so on.
 
@@ -40,7 +44,9 @@ For more on the expression register, check out episodes [56](/e/56) and [57](/e/
 
 This mapping also properly handles a count:
 
-    nnoremap Q :normal n.<CR>
+```viml
+nnoremap Q :normal n.<CR>
+```
 
 This uses the [`:normal`][:normal] Ex command. I would prefer to see this mapping in a vimrc than the previous example. To my eye it looks less cryptic.
 

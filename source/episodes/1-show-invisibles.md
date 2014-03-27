@@ -16,13 +16,13 @@ READMORE
 
 Put the following in your `.vimrc` file:
 
-<pre class="brush: vimscript">
+```viml
 " Shortcut to rapidly toggle `set list`
-nmap &lt;leader&gt;l :set list!&lt;CR&gt;
+nmap <leader>l :set list!<CR>
 
 " Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:â–¸\ ,eol:Â¬
-</pre>
+set listchars=tab:▸\ ,eol:¬
+```
 
 If you like, you can customise other invisible characters besides tabs
 and end-of-lines. For more information, run `:help listchars`.
@@ -30,11 +30,11 @@ and end-of-lines. For more information, run `:help listchars`.
 You can customise the syntax highlighting colours of invisible characters with
 the `NonText` and `SpecialKey` keywords. In [my prefered colourtheme][blackboard], I have added the following lines:
 
-<pre class="brush: vimscript">
+```viml
 "Invisible character colors 
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
-</pre>
+```
 
 Unicode characters can be inserted by typing `ctrl-vu` followed by the 4 digit hexadecimal code.
 

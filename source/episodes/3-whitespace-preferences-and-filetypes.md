@@ -16,7 +16,7 @@ READMORE
 
 Put the following in your `.vimrc` file:
 
-<pre class="brush: vimscript">
+```viml
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
   " Enable file type detection
@@ -34,7 +34,7 @@ if has("autocmd")
   " Treat .rss files as XML
   autocmd BufNewFile,BufRead *.rss setfiletype xml
 endif
-</pre>
+```
 
 ###Further reading
 

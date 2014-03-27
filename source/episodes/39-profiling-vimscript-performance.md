@@ -54,17 +54,19 @@ In the example in the video, we could have profiled the Vimscript by launching V
 
 We can make life a bit easier by wrapping this in a bash script:
     
-    #!/bin/bash
-    set -e
-    vim --cmd 'profile start MarkdownFolding-file.result' \
-        --cmd 'profile! file *markdown/folding.vim' \
-        -c 'profdel file *markdown/folding.vim' \
-        1.5_kilos.md
+```bash
+#!/bin/bash
+set -e
+vim --cmd 'profile start MarkdownFolding-file.result' \
+    --cmd 'profile! file *markdown/folding.vim' \
+    -c 'profdel file *markdown/folding.vim' \
+    1.5_kilos.md
+```
 
 Save this in a file called `MarkdownFolding-file.runner`, then it can be executed just by calling:
 
-    chmod +x MarkdownFolding-file.runner
-    ./MarkdownFolding-file.runner
+    $ chmod +x MarkdownFolding-file.runner
+    $ ./MarkdownFolding-file.runner
 
 This analyzes the `markdown/folding.vim` script, and saves the results to a file called `MarkdownFolding-file.result`.
 

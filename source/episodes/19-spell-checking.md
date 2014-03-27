@@ -16,14 +16,14 @@ READMORE
 
 Spell checking is enabled by running `:set spell`. I like to be able to quickly toggle spell checking on and off, so I keep the following in my .vimrc:
 
-<pre class="brush: vimscript">
-&quot; Toggle spell checking on and off with `,s`
-let mapleader = &quot;,&quot;
-nmap &lt;silent&gt; &lt;leader&gt;s :set spell!&lt;CR&gt;
+```viml
+" Toggle spell checking on and off with `,s`
+let mapleader = ","
+nmap <silent> <leader>s :set spell!<CR>
 
-&quot; Set region to British English
+" Set region to British English
 set spelllang=en_gb
-</pre>
+```
 
 The default `spelllang` is `en`, which includes all regions of English. In the example above, I run `set spelllang=en_gb`, which sets the region to British English. The available regions for the English language are:
 

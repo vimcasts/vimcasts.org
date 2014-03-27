@@ -55,10 +55,10 @@ To install Pathogen, download the script and place it in your `.vim/autoload` di
 
 There are a couple of lines that you should add to your .vimrc file to activate pathogen.
 
-<pre class="brush: vimscript">
+```viml
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
-</pre>
+```
 
 It is essential that these lines are called before enabling filetype detection, so I would recommend putting them at the top of your vimrc file. 
 

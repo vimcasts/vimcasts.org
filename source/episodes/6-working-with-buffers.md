@@ -80,5 +80,7 @@ In this scenario, you can do any of the following:
 
 By default, Vim makes it difficult to create hidden buffers. To make Vim more liberal about hidden buffers, put the following in your .vimrc:
 
-    set hidden
+```viml
+set hidden
+```
 

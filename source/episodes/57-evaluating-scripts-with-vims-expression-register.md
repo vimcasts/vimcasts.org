@@ -27,9 +27,11 @@ We can execute any Vimscript code at the expression register. So long as the exp
 
 We're not limited to using functions defined in the Vimscript standard library. We can also evalute user-defined functions. For example, Vimscript has no simple way of generating a random number. We could hand-roll our own `Random()` function (this example is copied from [StackOverflow][rand()]):
 
-    function! Random()
-      return str2nr(matchstr(reltimestr(reltime()), '\v\.@<=\d+')[1:])
-    endfunction
+```viml
+function! Random()
+  return str2nr(matchstr(reltimestr(reltime()), '\v\.@<=\d+')[1:])
+endfunction
+```
 
 We could use this function at the expression register:
 
@@ -43,9 +45,11 @@ The [`system()`][system()] function allows us to get the output from some extern
 
 If we wanted some more complex behaviour, we could write a script using a language of our choice. For example, here's a tiny script written in Ruby, which uses the [faker library][faker] to generate fake credentials:
 
-    require 'faker'
-    name = [Faker::Name.first_name, Faker::Name.first_name].join(" ")
-    print [name, Faker::Internet.email(name)].join(",")
+```ruby
+require 'faker'
+name = [Faker::Name.first_name, Faker::Name.first_name].join(" ")
+print [name, Faker::Internet.email(name)].join(",")
+```
 
 We could run this script at the Bash shell like this:
 

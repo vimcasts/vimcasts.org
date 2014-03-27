@@ -21,27 +21,27 @@ In this episode, I introduce the [Tabular.vim][t] plugin, by [Matt Wozniski][mat
 
 Before:
 
-<pre class="brush: ruby">
+```ruby
 one = 1
 two = 2
 three = 3
 four = 4
-</pre>
+```
 
 Running `:Tab /=` produces:
 
-<pre class="brush: ruby">
+```ruby
 one   = 1
 two   = 2
 three = 3
 four  = 4
-</pre>
+```
 
 ### Colon assignments ###
 
 There are a couple of different ways that colon assignments could be aligned. If we start with an example that is not aligned:
 
-<pre class="brush: javascript">
+```javascript
 var video = {
     metadata: {
         title: "Aligning assignments"
@@ -51,11 +51,11 @@ var video = {
         duration: 320,
     }
 }
-</pre>
+```
 
 Select the inner block by positioning your cursor inside it and running `vi}` (enable _V_isual mode, and select _i_nner _B_race). Then you could run `:Tab/:` which would produce this result:
 
-<pre class="brush: javascript">
+```javascript
 var video = {
     metadata: {
         title     : "Aligning assignments"
@@ -65,11 +65,11 @@ var video = {
         duration  : 320,
     }
 }
-</pre>
+```
 
 If you don't like stacking the colons in a column, you could use the [`\zs`][zs] atom to exclude the `:` character from the search match. Running `:Tab /:\zs` produces this result:
 
-<pre class="brush: javascript">
+```javascript
 var video = {
     metadata: {
         title:      "Aligning assignments"
@@ -79,7 +79,7 @@ var video = {
         duration:   320,
     }
 }
-</pre>
+```
 
 Be aware that if you work in a team, there may be a house style that you should follow.
 
@@ -113,26 +113,26 @@ With the cursor positioned anywhere in the table, running `:Tab/|` produces:
 
 If you find yourself using a particular token for alignment often, then you might want to save yourself a few keystrokes by creating mappings for normal and visual modes. Here are a few suggestions to get you started:
 
-<pre class="brush: vimscript">
+```viml
     let mapleader=','
-    if exists(&quot;:Tabularize&quot;)
-      nmap &lt;Leader&gt;a= :Tabularize /=&lt;CR&gt;
-      vmap &lt;Leader&gt;a= :Tabularize /=&lt;CR&gt;
-      nmap &lt;Leader&gt;a: :Tabularize /:\zs&lt;CR&gt;
-      vmap &lt;Leader&gt;a: :Tabularize /:\zs&lt;CR&gt;
+    if exists(":Tabularize")
+      nmap <Leader>a= :Tabularize /=<CR>
+      vmap <Leader>a= :Tabularize /=<CR>
+      nmap <Leader>a: :Tabularize /:\zs<CR>
+      vmap <Leader>a: :Tabularize /:\zs<CR>
     endif
-</pre>
+```
 
 If you were in normal or visual mode, you could type `,a=` to align equals signs. In visual mode, the alignment would apply to the selected lines, but in normal mode tabular would attempt to guess the range.
 
 You could take it a step further, by creating an insert mode mapping to trigger the `:Tabular` command when you type the character that you want to align. Tim Pope shows us how in this [gist][]:
 
-<pre class="brush: vimscript">
-inoremap &lt;silent&gt; &lt;Bar&gt;   &lt;Bar&gt;&lt;Esc&gt;:call &lt;SID&gt;align()&lt;CR&gt;a
+```viml
+inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 
 function! s:align()
   let p = '^\s*|\s.*\s|\s*$'
-  if exists(':Tabularize') &amp;&amp; getline('.') =~# '^\s*|' &amp;&amp; (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+  if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
     let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
     let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
     Tabularize/|/l1
@@ -140,7 +140,7 @@ function! s:align()
     call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
   endif
 endfunction
-</pre>
+```
 
 If you put this in your vimrc file, then it will call the `:Tabularize` command each time you insert a `|` character.
 

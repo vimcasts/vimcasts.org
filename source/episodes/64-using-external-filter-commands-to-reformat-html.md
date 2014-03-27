@@ -45,8 +45,10 @@ Vim will take the output from that pipeline and use it to overwrite the original
 In a [followup tweet][hay2], Stephen suggests mapping this Ex command to a key so we can run it more easily.
 For example, you could add a mapping for normal mode and another for visual mode:
 
-    nnoremap <leader>gq :%!pandoc -f html -t markdown | pandoc -f markdown -t html<CR>
-    vnoremap <leader>gq :!pandoc -f html -t markdown | pandoc -f markdown -t html<CR>
+```viml
+nnoremap <leader>gq :%!pandoc -f html -t markdown | pandoc -f markdown -t html<CR>
+vnoremap <leader>gq :!pandoc -f html -t markdown | pandoc -f markdown -t html<CR>
+```
 
 That'll work, but I want to suggest a way of doing it [without leader mappings][follow-my-leader].
 
@@ -58,11 +60,13 @@ We could use a similar technique here.
 The [`gq`][gq] operation runs the selected text through the filter specified by [`formatprg`][formatprg].
 This autocommand sets `formatprg` for HTML files to use our pandoc pipeline:
 
-    if has("autocmd")
-      let pandoc_pipeline  = "pandoc --from=html --to=markdown"
-      let pandoc_pipeline .= " | pandoc --from=markdown --to=html"
-      autocmd FileType html let &formatprg=pandoc_pipeline
-    endif
+```viml
+if has("autocmd")
+  let pandoc_pipeline  = "pandoc --from=html --to=markdown"
+  let pandoc_pipeline .= " | pandoc --from=markdown --to=html"
+  autocmd FileType html let &formatprg=pandoc_pipeline
+endif
+```
 
 That means we can filter the current line through pandoc by pressing `gqq`.
 Or we can filter the entire buffer by pressing `gg` then `gqG`.
@@ -72,21 +76,23 @@ Or we can switch to visual mode, and `gq` will filter only the selected lines.
 
 As domo pointed out in the comments, the `formatprg` setting can only be set globally. That's unfortunate! [Kana suggested using `formatexpr` instead][kana], so I came up with this alternative:
 
-    function! FormatprgLocal(filter)
-    if !empty(v:char)
-      return 1
-    else
-      let l:command = v:lnum.','.(v:lnum+v:count-1).'!'.a:filter
-      echo l:command
-      execute l:command
-    endif
-    endfunction
+```viml
+function! FormatprgLocal(filter)
+if !empty(v:char)
+  return 1
+else
+  let l:command = v:lnum.','.(v:lnum+v:count-1).'!'.a:filter
+  echo l:command
+  execute l:command
+endif
+endfunction
 
-    if has("autocmd")
-      let pandoc_pipeline  = "pandoc --from=html --to=markdown"
-      let pandoc_pipeline .= " | pandoc --from=markdown --to=html"
-      autocmd FileType html setlocal formatexpr=FormatprgLocal(pandoc_pipeline)
-    endif
+if has("autocmd")
+  let pandoc_pipeline  = "pandoc --from=html --to=markdown"
+  let pandoc_pipeline .= " | pandoc --from=markdown --to=html"
+  autocmd FileType html setlocal formatexpr=FormatprgLocal(pandoc_pipeline)
+endif
+```
 
 However, this approach has a setback of its own. According to Sung Pae in the discussion for [this patch to convert formatprg to a global-local option][every-stroke]:
 

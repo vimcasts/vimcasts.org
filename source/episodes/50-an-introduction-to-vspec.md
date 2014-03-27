@@ -18,10 +18,12 @@ READMORE
 
 Vspec lets you write tests for you Vimscript code, following a format that resembles [rspec][]. We can use a `describe` block to specify a context, then wrap each individual test in an `it` block. Each of these blocks is closed with an `end` keyword, just like in ruby:
 
-    describe 'vspec'
-      it 'is inspired by rspec'
-      end
-    end
+```viml
+describe 'vspec'
+  it 'is inspired by rspec'
+  end
+end
+```
 
 Check out Kana Natsuno's blog post for instructions on [how to set up a Vim plugin to be tested by vspec][setup].
 
@@ -29,38 +31,40 @@ Check out Kana Natsuno's blog post for instructions on [how to set up a Vim plug
 
 Here's the vspec code that was demonstrated in the video:
 
-    nnoremap x daw
-    
-    describe 'vspec'
-    
-      before
-        new
-        put! = 'Welcome to Vimcasts'
-      end
-    
-      after
-        close!
-      end
-    
-      it 'can read the contents of the buffer'
-        Expect getline(1) == "Welcome to Vimcasts"
-      end
-    
-      it 'feels just like operating Vim!'
-        normal gg$
-        normal daw
-        Expect getline(1) == 'Welcome to'
-        Expect getreg('"') == ' Vimcasts'
-      end
-    
-      it 'can exercise user-defined mappings'
-        normal gg$
-        normal x
-        Expect getline(1) == 'Welcome to'
-        Expect getreg('"') == ' Vimcasts'
-      end
-    
-    end
+```viml
+nnoremap x daw
+
+describe 'vspec'
+
+  before
+    new
+    put! = 'Welcome to Vimcasts'
+  end
+
+  after
+    close!
+  end
+
+  it 'can read the contents of the buffer'
+    Expect getline(1) == "Welcome to Vimcasts"
+  end
+
+  it 'feels just like operating Vim!'
+    normal gg$
+    normal daw
+    Expect getline(1) == 'Welcome to'
+    Expect getreg('"') == ' Vimcasts'
+  end
+
+  it 'can exercise user-defined mappings'
+    normal gg$
+    normal x
+    Expect getline(1) == 'Welcome to'
+    Expect getreg('"') == ' Vimcasts'
+  end
+
+end
+```
 
 ### :normal Vs :normal!
 

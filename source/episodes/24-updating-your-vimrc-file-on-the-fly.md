@@ -23,12 +23,12 @@ When you launch vim, it will automatically load and execute your vimrc file. If 
 
 I would like Vim to automatically source the vimrc each time I save it. This can be achieved with the following autocommand:
 
-<pre class="brush: vimscript">
-&quot; Source the vimrc file after saving it
-if has(&quot;autocmd&quot;)
+```viml
+" Source the vimrc file after saving it
+if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
-</pre>
+```
 
 
 ###Editing the vimrc file
@@ -39,10 +39,10 @@ You can always open the vimrc file by running the command:
 
 I like to make it as easy as possible to open my vimrc file, so I keep the following mapping in my vimrc:
 
-<pre class="brush: vimscript">
-let mapleader = &quot;,&quot;
-nmap &lt;leader&gt;v :tabedit $MYVIMRC&lt;CR&gt;
-</pre>
+```viml
+let mapleader = ","
+nmap <leader>v :tabedit $MYVIMRC<CR>
+```
 
 Pressing `,v` opens the vimrc file in a new tab.
 

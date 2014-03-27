@@ -22,16 +22,16 @@ In TextMate, you can reveal the *scope* of any element by pressing the `ctrl-shi
 
 Vim doesn't have a syntax inspector built in, but it can be added with a small amount of Vimscript. I keep this in my `.vimrc` file:
 
-<pre class="brush: vimscript">
-&quot; Show syntax highlighting groups for word under cursor
-nmap &lt;C-S-P&gt; :call &lt;SID&gt;SynStack()&lt;CR&gt;
-function! &lt;SID&gt;SynStack()
-  if !exists(&quot;*synstack&quot;)
+```viml
+" Show syntax highlighting groups for word under cursor
+nmap <C-S-P> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
     return
   endif
-  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, &quot;name&quot;)')
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
-</pre>
+```
 
 I've set this up to use the same `ctrl-shift-p` shortcut as TextMate. Now, I can position my cursor on any word, and pressing `ctrl-shift-p` will reveal the syntax groups to which the element belongs. With that information, it's straightforward to open up a colorscheme file and edit or create a style for the word in question.
 
@@ -63,11 +63,11 @@ For each of the above questions, you should not just be asking "can I see X", bu
 
 When working with hex values, it's really helpful if you can see the color that the code represents. Yuri Feldman has created a lightweight [hexHighlight][hex] script that allows you to toggle hex color syntax highlighting. If you install the plugin, it maps the toggle function to `<leader><F2>`. I prefer to use `,h` so I keep the following in my .gvimrc:
 
-<pre class="brush: vimscript">
+```viml
 if exists('*HexHighlight()')
-  nmap &lt;leader&gt;h :call HexHighlight()&lt;Return&gt;
+  nmap <leader>h :call HexHighlight()<Return>
 endif
-</pre>
+```
 
 Note that this plugin requires GVim. If you call the `HexHightlight()` function while running Vim in a terminal, it will notify you: *"hexHighlight only works with a graphical version of Vim"*.
  

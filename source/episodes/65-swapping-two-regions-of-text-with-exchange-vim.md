@@ -39,11 +39,13 @@ In the video, I began by demonstrating `{Visual}cx`, then went on to demonstrate
 
 Previously, I recommended setting this up by putting this in your vimrc:
 
-    let g:exchange_no_mappings=1
-    nmap cx <Plug>(Exchange)
-    vmap X <Plug>(Exchange)
-    nmap cxc <Plug>(ExchangeClear)
-    nmap cxx <Plug>(ExchangeLine)
+```viml
+let g:exchange_no_mappings=1
+nmap cx <Plug>(Exchange)
+vmap X <Plug>(Exchange)
+nmap cxc <Plug>(ExchangeClear)
+nmap cxx <Plug>(ExchangeLine)
+```
 
 This snippet of Vimscript is no longer necessary - you can get this behaviour by installing the latest version of [exchange.vim][exchange].
 

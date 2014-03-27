@@ -28,11 +28,13 @@ You can replace `markdown` with the name of any other language to create a filet
 
 Here's the boilerplate fold expression that we used to begin with:
 
-    function! MarkdownFolds()
-      return "0"
-    endfunction
-    setlocal foldmethod=expr
-    setlocal foldexpr=MarkdownFolds()
+```viml
+function! MarkdownFolds()
+  return "0"
+endfunction
+setlocal foldmethod=expr
+setlocal foldexpr=MarkdownFolds()
+```
 
 It works like this: the `MarkdownFolds()` function is called one time *for each line* in the document. If the function returns `"0"`, it indicates that the line is not part of a fold. If the function returns `"1"`, it indicates that the line has a fold level of one. Here are a few more values that can be returned from a fold expression, with their meanings:
 
@@ -67,10 +69,12 @@ Inside of a fold expression, we can use the [`v:lnum`][v:lnum] variable to acces
 
 We can customize the way that a fold looks by way of the [`foldtext`][foldtext] option. Here's the boilerplate foldtext expression that we used to begin with:
 
-    function! MarkdownFoldText()
-      return getline(v:foldstart)
-    endfunction
-    setlocal foldtext=MarkdownFoldText()
+```viml
+function! MarkdownFoldText()
+  return getline(v:foldstart)
+endfunction
+setlocal foldtext=MarkdownFoldText()
+```
 
 Inside of a foldtext expression, we can use the [`v:foldstart`][v:foldstart] and [`v:foldend`][v:foldend] variables, which reference the line numbers of the first and last lines that make up the current fold.
 

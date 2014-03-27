@@ -16,12 +16,12 @@ READMORE
 
 To add TextMate's key mappings, put the following in your `.vimrc`:
 
-<pre class="brush: vimscript">
-nmap &lt;D-[&gt; &lt;&lt;
-nmap &lt;D-]&gt; &gt;&gt;
-vmap &lt;D-[&gt; &lt;gv
-vmap &lt;D-]&gt; &gt;gv
-</pre>
+```viml
+nmap <D-[> <<
+nmap <D-]> >>
+vmap <D-[> <gv
+vmap <D-]> >gv
+```
 
 ###Further reading
 

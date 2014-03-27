@@ -88,12 +88,12 @@ READMORE
 
 I have the following lines in my .vimrc file:
 
-<pre class="brush: vimscript">
-map &lt;C-h&gt; &lt;C-w&gt;h
-map &lt;C-j&gt; &lt;C-w&gt;j
-map &lt;C-k&gt; &lt;C-w&gt;k
-map &lt;C-l&gt; &lt;C-w&gt;l
-</pre>
+```viml
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+```
 
 
 ###Resizing windows

@@ -35,10 +35,10 @@ command line:
 Create an `~/.irbrc` file if you don't already have one, then paste the
 following into it:
 
-<pre class="brush: ruby">
+```ruby
 require 'rubygems'
 require 'interactive_editor'
-</pre>
+```
 
 Note that the utility belt gem also includes an interactive editor, but
 it is currently out of date. If you require both `interactive_editor`
@@ -54,22 +54,22 @@ Additionally, it is helpful to have Vim [restore the cursor
 position][restore_cursor] to where you left it. The following snippet of
 Vimscript takes care of these.
 
-<pre class="brush: vimscript">
-if has(&quot;autocmd&quot;)
-  &quot; Enable filetype detection
+```viml
+if has("autocmd")
+  " Enable filetype detection
   filetype plugin indent on
 
-  &quot; Restore cursor position
+  " Restore cursor position
   autocmd BufReadPost *
-    \ if line(&quot;'\&quot;&quot;) &gt; 1 &amp;&amp; line(&quot;'\&quot;&quot;) &lt;= line(&quot;$&quot;) |
-    \   exe &quot;normal! g`\&quot;&quot; |
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
     \ endif
 endif
-if &amp;t_Co &gt; 2 || has(&quot;gui_running&quot;)
-  &quot; Enable syntax highlighting
+if &t_Co > 2 || has("gui_running")
+  " Enable syntax highlighting
   syntax on
 endif
-</pre>
+```
 
 Note that the [example vimrc file][example_vimrc] that comes with Vim
 includes all of the above, so don't paste this into your vimrc without

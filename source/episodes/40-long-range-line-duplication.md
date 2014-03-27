@@ -18,46 +18,50 @@ READMORE
 
 In the video, we tackle a simple problem. With our cursor on line 16 of this file:
 
-    #sponsors_feature, #sponsors_index {
-      width: 120px;
-    }
-    #sponsors_index {
-      position: absolute;
-      top: -2px; right: 0;
-    }
-    #sponsors_index h2 {
-      background: #fff url('/images/components.png') -362px -579px;
-    }
-    #sponsors_feature {
-      position: absolute;
-      top: 136px; left: 20px;
-    }
-    #sponsors_feature h2 {
-      text-indent: -99999px;
-      margin-bottom: 0px;
-    }
+```css
+#sponsors_feature, #sponsors_index {
+  width: 120px;
+}
+#sponsors_index {
+  position: absolute;
+  top: -2px; right: 0;
+}
+#sponsors_index h2 {
+  background: #fff url('/images/components.png') -362px -579px;
+}
+#sponsors_feature {
+  position: absolute;
+  top: 136px; left: 20px;
+}
+#sponsors_feature h2 {
+  text-indent: -99999px;
+  margin-bottom: 0px;
+}
+```
 
 Copy line 9 and place a duplicate below line 16, to produce this:
 
-    #sponsors_feature, #sponsors_index {
-      width: 120px;
-    }
-    #sponsors_index {
-      position: absolute;
-      top: -2px; right: 0;
-    }
-    #sponsors_index h2 {
-      background: #fff url('/images/components.png') -362px -579px;
-    }
-    #sponsors_feature {
-      position: absolute;
-      top: 136px; left: 20px;
-    }
-    #sponsors_feature h2 {
-      text-indent: -99999px;
-      background: #fff url('/images/components.png') -362px -579px;
-      margin-bottom: 0px;
-    }
+```css
+#sponsors_feature, #sponsors_index {
+  width: 120px;
+}
+#sponsors_index {
+  position: absolute;
+  top: -2px; right: 0;
+}
+#sponsors_index h2 {
+  background: #fff url('/images/components.png') -362px -579px;
+}
+#sponsors_feature {
+  position: absolute;
+  top: 136px; left: 20px;
+}
+#sponsors_feature h2 {
+  text-indent: -99999px;
+  background: #fff url('/images/components.png') -362px -579px;
+  margin-bottom: 0px;
+}
+```
 
 ### Normal mode solutions
 

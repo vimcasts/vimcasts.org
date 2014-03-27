@@ -19,23 +19,23 @@ READMORE
 
 Look up [`:help visual-search`][vs] in Vim's documentation, and you'll find a suggestion for this simple mapping:
 
-<pre class="brush: vimscript">
-:vmap X y/&lt;C-R&gt;&quot;&lt;CR&gt;
-</pre>
+```viml
+:vmap X y/<C-R>"<CR>
+```
 
 This comes with a warning: **Note that special characters (like `.` and `*`) will cause problems.** It's not too hard to avoid these problems. This snippet of code takes care of them:
 
-<pre class="brush: vimscript">
+```viml
 function! s:VSetSearch(cmdtype)
   let temp = @s
-  norm! gv&quot;sy
+  norm! gv"sy
   let @/ = '\V' . substitute(escape(@s, a:cmdtype.'\'), '\n', '\\n', 'g')
   let @s = temp
 endfunction
 
-xnoremap * :&lt;C-u&gt;call &lt;SID&gt;VSetSearch('/')&lt;CR&gt;/&lt;C-R&gt;=@/&lt;CR&gt;&lt;CR&gt;
-xnoremap # :&lt;C-u&gt;call &lt;SID&gt;VSetSearch('?')&lt;CR&gt;?&lt;C-R&gt;=@/&lt;CR&gt;&lt;CR&gt;
-</pre>
+xnoremap * :<C-u>call <SID>VSetSearch('/')<CR>/<C-R>=@/<CR><CR>
+xnoremap # :<C-u>call <SID>VSetSearch('?')<CR>?<C-R>=@/<CR><CR>
+```
 
 You install the [visual-star-search][] plugin from github, which wraps up this functionality.
 
