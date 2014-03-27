@@ -18,8 +18,6 @@ We can use pandoc as a [filter][] to clean up <abbr title="what you see is what 
 
 READMORE
 
-<r:snippet name="announcement"/>
-
 I recently saw [a neat trick][hay1] on Twitter from Stephen Hay, who says that:
 
 > Few things clean up CMS-input HTML better than running it through Pandoc to convert to Markdown and then back to HTML again. 1 sec, big win.

@@ -16,8 +16,6 @@ Tom McDonald's [exchange plugin][exchange] offers an elegant alternative, by pro
 
 READMORE
 
-<r:snippet name="announcement"/>
-
 In [episode 54](/e/54), I covered a technique for swapping two regions of text using the [Visual mode put command][v_p]. It's a neat workflow, but there's room for some improvement.
 This technique requires that we make two changes to the document, and consequently we have to press undo twice if we want to revert the swap.
 

@@ -12,8 +12,6 @@ Lots of Vim's built-in Normal mode commands can be executed multiple times by pr
 
 READMORE
 
-<r:snippet name="announcement"/>
-
 ### Problem: make a mapping that handles counts
 
 Suppose that we wanted to create a mapping so that pressing `Q` executed `n.`. We could start off with a simple mapping:

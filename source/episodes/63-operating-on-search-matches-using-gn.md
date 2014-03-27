@@ -13,8 +13,6 @@ The `gn` command (introduced in Vim 7.4) makes it easy to operate on regions of 
 
 READMORE
 
-<r:snippet name="announcement"/>
-
 Here's what Vim's documentation has to say about the `gn` command ([`:help gn`][gn]):
 
 > Search forward for the last used search pattern, like with `n`, and start
