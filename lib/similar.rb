@@ -12,7 +12,7 @@ module Similar
       target = candidates.index(article)
       indexes(count).map do |index|
         candidates[(target+index) % candidates.length]
-      end.uniq
+      end.uniq - [article]
     end
 
     # Given an article (from :blog or :episodes)
@@ -34,7 +34,7 @@ module Similar
     private
 
     def indexes(count)
-      (-1...count).to_a - [0]
+      (-1...count).to_a
     end
 
   end
