@@ -5,7 +5,9 @@ source 'http://rubygems.org'
 gem "middleman"
 gem "middleman-blog", "~> 3.5.1"
 gem "middleman-gh-pages"
+gem "middleman-syntax"
 gem "nokogiri"
+gem "redcarpet"
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"

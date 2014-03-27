@@ -4,6 +4,9 @@ require 'lib/similar'
 require 'lib/temporal_content'
 require 'lib/aggregator'
 activate :aggregator
+activate :syntax
+set :markdown_engine, :redcarpet
+set :markdown, fenced_code_blocks: true, smartypants: true
 
 I18n.enforce_available_locales = false
 
