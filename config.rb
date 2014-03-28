@@ -88,8 +88,8 @@ set :feeds, [
     :ignore => true,
     layout: false
 end
-proxy "/feeds/itunes", "/feeds/itunes.xml", layout: false
 
+page "/feeds/itunes.xml", layout: false
 page "/episodes.json", layout: false
 page "sitemap.xml",    layout: false
 
