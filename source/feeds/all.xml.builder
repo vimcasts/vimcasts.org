@@ -3,9 +3,9 @@ xml.rss version: "2.0", "xmlns:atom" => "http://www.w3.org/2005/Atom" do
   xml.channel do
     xml.title feed[:title]
     xml.description "Vimcasts - Free screencasts about the text editor Vim"
-    xml.link "http://vimcasts.org/feeds/#{feed[:name]}/"
+    xml.link "#{domain}/feeds/#{feed[:name]}.rss"
     xml.atom :link,
-      href:"http://vimcasts.org/feeds/#{feed[:name]}/",
+      href:"#{domain}/feeds/#{feed[:name]}.rss",
       rel:"self",
       type:"application/rss+xml"
     xml.language "en-us"
@@ -21,8 +21,8 @@ xml.rss version: "2.0", "xmlns:atom" => "http://www.w3.org/2005/Atom" do
             type: feed[:type]
         end
         xml.pubDate article.date.to_time.httpdate
-        xml.guid URI.join("http://vimcasts.org", article.url)
-        xml.link URI.join("http://vimcasts.org", article.url)
+        xml.guid URI.join(domain, article.url)
+        xml.link URI.join(domain, article.url)
       end
     end
   end
