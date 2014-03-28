@@ -16,8 +16,11 @@ xml.rss version: "2.0", "xmlns:atom" => "http://www.w3.org/2005/Atom" do
         xml.description cleanup_html(article.summary)
         episode = Episode.new(article)
         unless episode.number == '-1'
-          xml.enclosure url: episode.send(feed[:name]).url,
-            length: episode.send(feed[:name]).size,
+          if feed[:name].match(/boxee/)
+            xml.media(:category, episode.number, {scheme: "urn:boxee:episode"})
+          end
+          xml.enclosure url: episode.send(feed[:format]).url,
+            length: episode.send(feed[:format]).size,
             type: feed[:type]
         end
         xml.pubDate article.date.to_time.httpdate

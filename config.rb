@@ -52,20 +52,37 @@ activate :blog do |blog|
   blog.summary_length = nil
 end
 
+set :boxee_feeds, [
+  {
+    name: "boxee-ogg",
+    format: "ogg",
+    title: "Vimcasts OGG on Boxee",
+    type: "video/ogg",
+  },
+  {
+    name: "boxee-quicktime",
+    format: "quicktime",
+    title: "Vimcasts Quicktime on Boxee",
+    type: "video/x-m4v",
+  },
+]
+
 set :feeds, [
   {
     name: "ogg",
+    format: "ogg",
     title: "Vimcasts OGG Feed",
     type: "video/ogg",
   },
   {
     name: "quicktime",
+    format: "quicktime",
     title: "Vimcasts Quicktime Feed",
     type: "video/x-m4v",
   }
 ]
 
-feeds.each do |feed|
+(feeds + boxee_feeds).each do |feed|
   proxy "/feeds/#{feed[:name]}.rss", "/feeds/all.xml",
     :locals => { :feed => feed },
     :ignore => true,
