@@ -11,20 +11,20 @@ xml.instruct!
 xml.rss "xmlns:itunes" => "http://www.itunes.com/dtds/podcast-1.0.dtd",  "xmlns:media" => "http://search.yahoo.com/mrss/",  :version => "2.0" do
   xml.channel do
     xml.title title
-    xml.link 'http://vimcasts.com'
-    xml.description description
+    xml.link domain
     xml.language 'en'
     xml.pubDate @episodes.first.date.to_s(:rfc822)
     xml.lastBuildDate @episodes.first.date.to_s(:rfc822)
     xml.itunes :author, author
     xml.itunes :summary, summary
+    xml.description description
     xml.itunes :keywords, keywords
     xml.itunes :explicit, 'clean'
-    xml.itunes :image, :href => image
     xml.itunes :owner do
       xml.itunes :name, author
-      xml.itunes :email, 'drew@vimcasts.com'
+      xml.itunes :email, 'drew@vimcasts.org'
     end
+    xml.itunes :image, :href => image
     xml.itunes :block, 'no'
     xml.itunes :category, :text => 'Technology' do
       xml.itunes :category, :text => 'Software How-To'
