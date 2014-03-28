@@ -14,7 +14,7 @@
 
     <% feeds.each do |feed| %>
       <%= tag :link,
-        href: "/feeds/#{feed[:name]}",
+        href: "/feeds/#{feed[:name]}.rss",
         title: feed[:title],
         rel: "alternate",
         type: "application/rss+xml" %>
