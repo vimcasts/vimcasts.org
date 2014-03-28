@@ -2209,6 +2209,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://proof.vimcasts.org/feeds/itunes/</loc>
+    <lastmod>2014-03-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://proof.vimcasts.org/e/a/</loc>
     <lastmod>2014-03-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
