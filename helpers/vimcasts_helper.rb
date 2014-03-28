@@ -70,4 +70,12 @@ module VimcastsHelper
     blog(:episodes).articles.select { |a| a.data["number"] == number }.first
   end
 
+  def force_absolute_links(input)
+    input.gsub(/href="\//) { |m| "href=\"#{domain}/" }
+  end
+
+  def cleanup_html(input)
+    result = force_absolute_links(input)
+  end
+
 end
