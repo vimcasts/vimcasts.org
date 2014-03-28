@@ -1,6 +1,7 @@
 title = "Vimcasts"
 author = "Drew Neil"
 description = "Regular free screencasts about the Vim text editor."
+summary = "In each episode, Drew Neil demonstrates one of Vim's features, showing how to incorporate it into your workflow."
 keywords = "vim, text editor"
 image = "http://media.vimcasts.org/posters/vimcasts.png"
 ext = 'm4v'
@@ -16,6 +17,7 @@ xml.rss "xmlns:itunes" => "http://www.itunes.com/dtds/podcast-1.0.dtd",  "xmlns:
     xml.pubDate @episodes.first.date.to_s(:rfc822)
     xml.lastBuildDate @episodes.first.date.to_s(:rfc822)
     xml.itunes :author, author
+    xml.itunes :summary, summary
     xml.itunes :keywords, keywords
     xml.itunes :explicit, 'clean'
     xml.itunes :image, :href => image
@@ -27,26 +29,28 @@ xml.rss "xmlns:itunes" => "http://www.itunes.com/dtds/podcast-1.0.dtd",  "xmlns:
     xml.itunes :category, :text => 'Technology' do
       xml.itunes :category, :text => 'Software How-To'
     end
-    xml.itunes :category, :text => 'Education' do
-      xml.itunes :category, :text => 'Training'
-    end
+
+    # xml.itunes :category, :text => 'Education' do
+    #   xml.itunes :category, :text => 'Training'
+    # end
 
     @episodes.each do  |article|
       episode = Episode.new(article)
       xml.item do
-        xml.title article.title
-        xml.description article.summary
-        xml.pubDate article.date.to_s(:rfc822)
+        xml.title html_escape(article.title)
+
+        xml.itunes :author, author
+        xml.itunes :subtitle, article.data.subtitle
+        xml.itunes :summary, article.summary
+
         xml.enclosure url: episode.quicktime.url,
           length: episode.quicktime.size,
           type: "video/x-m4v"
-        xml.link article.path
-        xml.guid({:isPermaLink => "false"}, article.path)
-        xml.itunes :author, author
-        xml.itunes :subtitle, truncate(article.summary, :length => 150)
-        xml.itunes :summary, article.summary
-        xml.itunes :explicit, 'no'
         xml.itunes :duration, episode.running_time
+
+        xml.guid URI.join(domain, article.url)
+        xml.pubDate article.date.to_s(:rfc822)
+        xml.itunes :keywords, article.data.keywords
       end
     end
   end
