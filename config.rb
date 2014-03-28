@@ -66,7 +66,7 @@ set :feeds, [
 ]
 
 feeds.each do |feed|
-  proxy "/feeds/#{feed[:name]}", "/feeds/all.xml",
+  proxy "/feeds/#{feed[:name]}.rss", "/feeds/all.xml",
     :locals => { :feed => feed },
     :ignore => true,
     layout: false
