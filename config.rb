@@ -89,8 +89,8 @@ set :feeds, [
     layout: false
 end
 
-redirect "feeds/ogg/", to: "feeds/ogg.rss"
-redirect "feeds/quicktime/", to: "feeds/quicktime.rss"
+redirect "feeds/ogg/index.html", to: "feeds/ogg.rss"
+redirect "feeds/quicktime/index.html", to: "feeds/quicktime.rss"
 
 page "/feeds/itunes.xml", layout: false
 page "/episodes.json", layout: false
