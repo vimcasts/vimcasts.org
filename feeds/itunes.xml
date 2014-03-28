@@ -2,20 +2,20 @@
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
   <channel>
     <title>Vimcasts</title>
-    <link>http://vimcasts.com</link>
-    <description>Regular free screencasts about the Vim text editor.</description>
+    <link>http://proof.vimcasts.org</link>
     <language>en</language>
     <pubDate>Mon, 24 Feb 2014 00:00:00 +0000</pubDate>
     <lastBuildDate>Mon, 24 Feb 2014 00:00:00 +0000</lastBuildDate>
     <itunes:author>Drew Neil</itunes:author>
     <itunes:summary>In each episode, Drew Neil demonstrates one of Vim's features, showing how to incorporate it into your workflow.</itunes:summary>
+    <description>Regular free screencasts about the Vim text editor.</description>
     <itunes:keywords>vim, text editor</itunes:keywords>
     <itunes:explicit>clean</itunes:explicit>
-    <itunes:image href="http://media.vimcasts.org/posters/vimcasts.png"/>
     <itunes:owner>
       <itunes:name>Drew Neil</itunes:name>
-      <itunes:email>drew@vimcasts.com</itunes:email>
+      <itunes:email>drew@vimcasts.org</itunes:email>
     </itunes:owner>
+    <itunes:image href="http://media.vimcasts.org/posters/vimcasts.png"/>
     <itunes:block>no</itunes:block>
     <itunes:category text="Technology">
       <itunes:category text="Software How-To"/>
