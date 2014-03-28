@@ -89,10 +89,13 @@ set :feeds, [
     layout: false
 end
 
-redirect "feeds/ogg/index.html", to: "feeds/ogg.rss"
-redirect "feeds/quicktime/index.html", to: "feeds/quicktime.rss"
-
 page "/feeds/itunes.xml", layout: false
+
+(feeds + boxee_feeds).each do |feed|
+  redirect "feeds/#{feed[:name]}/index.html", to: "feeds/#{feed[:name]}.rss"
+end
+redirect "feeds/itunes/index.html", to: "feeds/itunes.xml"
+
 page "/episodes.json", layout: false
 page "sitemap.xml",    layout: false
 
