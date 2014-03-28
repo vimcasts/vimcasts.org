@@ -13,7 +13,7 @@ xml.rss version: "2.0", "xmlns:atom" => "http://www.w3.org/2005/Atom" do
     aggregate.each do |article|
       xml.item do
         xml.title article.title
-        xml.description html_escape(article.summary)
+        xml.description article.summary
         episode = Episode.new(article)
         unless episode.number == '-1'
           xml.enclosure url: episode.send(feed[:name]).url,
