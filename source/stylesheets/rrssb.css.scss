@@ -1,2 +1,37 @@
 @import "rrssb.scss";
 
+// TODO: use breakpoints provided by foundation
+.share-container {
+  position: relative;
+  padding: 0 0 25px;
+
+  @media screen and (max-width: 320px)  {
+    padding: 0 0 12px;
+  }
+
+  .label {
+    color: #777;
+    background-color: white;
+    display: block;
+    float: left;
+    font-size: 14px;
+    padding: 10px 0 0;
+    width: 215px;
+
+    @media screen and (max-width: 470px)  {
+      display: none;
+    }
+
+  }
+
+  .rrssb-buttons {
+    float: left;
+    width: calc(100% - 216px);
+
+    @media screen and (max-width: 400px)  {
+      width: 100%;
+      float: none;
+      clear: both;
+    }
+  }
+}

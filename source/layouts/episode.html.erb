@@ -77,8 +77,7 @@
       </dl>
 
       <div>
-        <p>Like this video? Spread the word!</p>
-        <%= partial "social-sharing-buttons", :locals => locals %>
+        <%= partial "social-sharing-buttons", :locals => locals.merge(label: "Like this video? Spread the word!") %>
       </div>
 
 
