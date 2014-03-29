@@ -6447,7 +6447,7 @@ th.hide-for-touch {
 .touch th.show-for-touch {
   display: table-cell !important; }
 
-/* line 5, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+/* line 4, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
 header {
   width: 100%;
   margin-left: auto;
@@ -6464,7 +6464,7 @@ header {
   /* line 131, /Users/drew/web/static-vimcasts/source/bower_components/foundation/scss/foundation/components/_global.scss */
   header:after {
     clear: both; }
-  /* line 8, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+  /* line 7, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
   header .logo {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -6474,7 +6474,7 @@ header {
     margin-right: auto;
     float: none; }
 
-/* line 14, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+/* line 13, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
 .main-content {
   width: 100%;
   margin-left: auto;
@@ -6490,20 +6490,20 @@ header {
   /* line 131, /Users/drew/web/static-vimcasts/source/bower_components/foundation/scss/foundation/components/_global.scss */
   .main-content:after {
     clear: both; }
-  /* line 17, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+  /* line 16, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
   .main-content aside {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
     width: 50%;
     float: left; }
-  /* line 24, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+  /* line 23, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
   .main-content article {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
     width: 50%;
     float: left; }
 
-/* line 33, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+/* line 32, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
 #logo a, #logo span {
   background-image: url(/images/vimcasts-logo.svg);
   background-repeat: no-repeat;
@@ -6514,67 +6514,67 @@ header {
   white-space: nowrap;
   overflow: hidden; }
 
-/* line 44, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+/* line 43, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
 .identity-row {
   margin-top: 1em;
   margin-bottom: 1em; }
 
 @media only screen and (max-width: 40em) {
-  /* line 50, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+  /* line 49, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
   #logo a, #logo span {
     width: 108px;
     height: 53px; }
 
-  /* line 54, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+  /* line 53, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
   .latest-content hr {
     display: none; } }
-/* line 59, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+/* line 58, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
 .announcement-banner .show-for-medium-up .button {
   margin-bottom: 0; }
 
-/* line 62, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+/* line 61, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
 .book-drew-neil .button {
   margin-bottom: 0; }
 
-/* line 66, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+/* line 65, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
 .top-bar-underlay {
   width: 100%;
   height: 45px;
   background-color: #333333;
   position: absolute; }
 
-/* line 73, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+/* line 72, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
 .buy-practical-vim-now {
   margin-left: auto;
   margin-right: auto; }
 
-/* line 78, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+/* line 77, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
 .buy-videos-from-thoughtbot {
   display: block;
   width: 125px;
   margin-left: auto;
   margin-right: auto; }
 
-/* line 85, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+/* line 84, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
 .publication {
   margin-bottom: 2.5rem; }
 
-/* line 89, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+/* line 88, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
 .category-list {
   border-top: 1px solid #d8d8d8;
   border-left: 1px solid #d8d8d8; }
-  /* line 92, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+  /* line 91, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
   .category-list li {
     border-bottom: 1px solid #d8d8d8;
     border-right: 1px solid #d8d8d8; }
-  /* line 96, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+  /* line 95, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
   .category-list li:nth-child(2n) {
     background-color: #f2f2f2; }
-  /* line 99, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+  /* line 98, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
   .category-list li a {
     display: block; }
 
-/* line 101, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
+/* line 100, /Users/drew/web/static-vimcasts/source/stylesheets/app.css.scss */
 video {
   margin-bottom: 1rem;
   width: 100%; }
