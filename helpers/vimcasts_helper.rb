@@ -1,3 +1,5 @@
+require 'open-uri'
+
 module VimcastsHelper
 
   def extended_article(article)
@@ -76,6 +78,26 @@ module VimcastsHelper
 
   def cleanup_html(input)
     result = force_absolute_links(input)
+  end
+
+  def share_by_email(page)
+    subject = URI::encode(page.title)
+    body    = URI.encode_www_form_component(URI.join(domain, page.url))
+    "mailto:?subject=#{subject}&amp;body=#{body}"
+  end
+
+  def share_by_twitter(page)
+    status = [URI::encode(page.title), URI.join(domain, page.url)].join(" ")
+    "http://twitter.com/home?status=#{status}"
+  end
+
+  def share_by_facebook(page)
+    "https://www.facebook.com/sharer/sharer.php?u=#{URI.join(domain, page.url)}"
+  end
+
+  def share_by_googleplus(page)
+    message = [URI::encode(page.title), URI.join(domain, page.url)].join(" ")
+    "https://plus.google.com/share?url=#{message}"
   end
 
 end
