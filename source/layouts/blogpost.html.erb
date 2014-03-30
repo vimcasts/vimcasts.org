@@ -31,10 +31,8 @@
       </dl>
 
       <div>
-        <p>
-        Like this article? Spread the word!
-        TODO: add social sharing buttons here.
-        </p>
+        <%= partial "social-sharing-buttons",
+          :locals => locals.merge(label: "Like this article? Spread the word!") %>
       </div>
 
       <%= partial "related-content", :locals => locals %>
