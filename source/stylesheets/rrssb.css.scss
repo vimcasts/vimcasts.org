@@ -16,11 +16,12 @@
     display: block;
     float: left;
     font-size: 14px;
+    text-align: left;
     padding: 10px 0 0;
     width: 215px;
 
     @media #{$small-only} {
-      display: none;
+      width: 100%;
     }
 
   }
