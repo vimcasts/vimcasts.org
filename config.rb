@@ -219,43 +219,37 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 
-  # Redirects
-  ready do
-    redirect "e/a.html", to: "/episodes/archive"
-    blog(:episodes).articles.each do |episode|
-      n = episode.data.number
-      redirect "episodes/#{n}.html", to: "/#{episode.path}"
-      redirect "e/#{n}.html", to: "/#{episode.path}"
-      redirect "e/#{n}/t.html", to: "/episodes/#{n}/transcript"
-    end
-
-    # FIXME: this raises an error:
-    #   needs a date in its filename or frontmatter (RuntimeError)
-    # blog(:announcements).articles.each do |a|
-    #   year, month = a.date.strftime('%Y %m').split(' ')
-    #   redirect "blog/#{year}/#{month}/#{a.slug}.html", to: "/#{a.path}"
-    # end
-
-    # blog(:blog).articles.each do |post|
-    #   redirect post.path, to: post.destination_path
-    # end
-  end
-
 end
 
 # Uncomment next line to use Pry as a console
 # ready { binding.pry }
 
-# Layouts:
+# Layouts and redirects:
 page "/transcripts/*/en.html", layout: "transcript"
+redirect "e/a.html", to: "/episodes/archive"
 ready do
+
   blog(:episodes).articles.each do |a|
     page a.path, layout: 'episode'
+    n = a.data.number
+    redirect "e/#{n}/index.html", to: "/#{a.path}"
+    redirect "e/#{n}/t/index.html", to: "/transcripts/#{n}/en"
+    redirect "episodes/#{n}/index.html", to: "/#{a.path}"
   end
+
   blog(:blog).articles.each do |a|
     page a.path, layout: 'blogpost'
+    # FIXME: this raises an error:
+    #   needs a date in its filename or frontmatter (RuntimeError)
+    # redirect a.path, to: a.destination_path
   end
+
   blog(:announcements).articles.each do |a|
     page a.path, layout: 'announcement'
+    # FIXME: this raises an error:
+    #   needs a date in its filename or frontmatter (RuntimeError)
+    # year, month = a.date.strftime('%Y %m').split(' ')
+    # redirect "blog/#{year}/#{month}/#{a.slug}/index.html", to: "/#{a.path}"
   end
+
 end
