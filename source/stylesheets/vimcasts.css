@@ -3,4 +3,5 @@
  *= require "autocomplete"
  *= require "rrssb"
  *= require "syntax"
+ *= require "undo-tree-viz"
  */

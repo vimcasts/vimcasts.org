@@ -1,0 +1,79 @@
+/* line 3, sass/vim-history.sass */
+#vim-history-visualization {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  margin: 30px 0;
+  border: 1px solid black;
+  width: 640px;
+}
+
+/* line 8, sass/vim-history.sass */
+#vim-history-buffer {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  width: 600px;
+  height: 180px;
+  border-bottom: none;
+  margin: 0 20px;
+  padding-top: 30px;
+}
+/* line 15, sass/vim-history.sass */
+#vim-history-buffer code, #vim-history-buffer code pre {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background-color: white;
+  color: black;
+}
+
+/* line 19, sass/vim-history.sass */
+#vim-history-graph {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  width: 640px;
+  height: 300px;
+}
+
+/* line 23, sass/vim-history.sass */
+#vim-history-buttons {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  float: left;
+  width: 100%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+/* line 29, sass/vim-history.sass */
+#vim-history-buttons a {
+  float: left;
+  width: 24%;
+  text-align: center;
+  background-color: white;
+  font-family: monospace;
+  text-decoration: none;
+  color: black;
+}
+/* line 37, sass/vim-history.sass */
+#vim-history-buttons a.disabled, #vim-history-buttons a.disabled:hover {
+  color: #bbbbbb;
+  background-color: white;
+  cursor: default;
+}
+/* line 42, sass/vim-history.sass */
+#vim-history-buttons a:hover {
+  color: white;
+  background-color: black;
+}
+/* line 45, sass/vim-history.sass */
+#vim-history-buttons a.later, #vim-history-buttons a.earlier {
+  float: right;
+}

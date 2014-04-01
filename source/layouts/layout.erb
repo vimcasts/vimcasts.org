@@ -119,5 +119,9 @@
 
   <%= javascript_include_tag  "all" %>
 
+  <% if current_page.url == "/episodes/undo-branching-and-gundo-vim/" %>
+    <%= javascript_include_tag  "undo-tree-viz" %>
+  <% end %>
+
   </body>
 </html>
