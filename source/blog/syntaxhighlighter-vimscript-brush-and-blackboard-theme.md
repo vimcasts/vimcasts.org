@@ -22,7 +22,7 @@ I created these two files, but everything else in the project is by Alex Gorbatc
 
 The Vimscript brush includes a large list of keywords. I copied this list from Vim's own syntax file, which you can open up in Vim by running `:edit $VIMRUNTIME/syntax/vim.vim`. When defining syntax files for Vim, you can use a form of shorthand, e.g. `e[dit]`, which is equivalent to including both `e` and `edit`. The SyntaxHighligher doesn't understand this convention, so I had to expand all of these abbreviations into longhand. I wrote a [little ruby script][expander] that does this for me. Here's the gist of it:
 
-<pre class="brush: ruby">
+```ruby
 list = ['abc[lear]', 'argu[ment]', 'bel[owright]']
 pattern = /(\w+)(\[(\w+)\])?/
 output = []
@@ -35,7 +35,7 @@ list.each do |token|
   end
 end
 puts output.join(' ')
-</pre>
+```
 
 Since I first created the Vimscript brush, I have occasionally pruned the list of keywords. Although it might be handy that you can type `:e` instead of spelling out `:edit` in full, I don't really want the letter `e` to be considered a *keyword*. 
 

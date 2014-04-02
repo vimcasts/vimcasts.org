@@ -37,9 +37,9 @@ If you're old-school, you can get the [textobj-user][] and [textobj-rubyblock][]
 
 Note that the rubyblock plugin currently requires that the [matchit.vim][] plugin is enabled. This can be done by adding the following line to your vimrc:
 
-<pre class="brush: vimscript">
+```viml
 runtime macros/matchit.vim
-</pre>
+```
 
 Also note, that there is a plugin called ruby-matchit, which calls itself 'matchit for ruby'. If you have this installed, it may interfere with the operation of the rubyblock plugin. Also, matchit.vim supports ruby now (which was not the case when ruby-matchit was written), so there's no need to install them both.
 
