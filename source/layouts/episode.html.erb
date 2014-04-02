@@ -3,9 +3,12 @@
 <% wrap_layout :layout do %>
   <div class="row">
     <div class="small-12 columns">
-
       <%= partial "next-class" %>
+    </div>
+  </div>
 
+  <div class="row">
+    <div class="small-12 large-10 large-offset-2 columns">
       <header>
         <h2><%= current_page.title %></h2>
         <div class="episode_number">
@@ -27,10 +30,19 @@
           </div>
         <% end %>
       </header>
+    </div>
+  </div>
 
+  <div class="row">
+    <div class="small-12 large-10 large-offset-2 columns">
       <div data-swiftype-index="true">
         <%= current_page.summary %>
       </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 large-10 large-offset-2 columns">
 
       <video poster="<%= episode.poster_url %>"
         controls="controls" preload="none" class="placeholder"
@@ -40,27 +52,30 @@
       </video>
 
       <aside class="downloads">
+
         <ul class="inline-list">
           <li>Download: </li>
-
           <li class="ogg">
-          <a href="<%= episode.ogg.url %>">OGG</a>
-          <span class="stats"><%= number_to_human_size(episode.ogg.size) %></span>
+            <a href="<%= episode.ogg.url %>">OGG</a>
+            <span class="stats"><%= number_to_human_size(episode.ogg.size) %></span>
           </li>
-
           <li class="quicktime">
-          <a href="<%= episode.quicktime.url %>">Quicktime</a>
-          <span class="stats"><%= number_to_human_size(episode.quicktime.size) %></span>
+            <a href="<%= episode.quicktime.url %>">Quicktime</a>
+            <span class="stats"><%= number_to_human_size(episode.quicktime.size) %></span>
           </li>
-
-      </ul>
+        </ul>
 
         <p>
           View a <%= link_to 'transcript of the video',
           transcript_for_episode(episode.number) %>.
         </p>
-      </aside>
 
+      </aside>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 large-10 large-offset-2 columns">
       <dl class="accordion" data-accordion>
         <dd>
         <a href="#shownotes">Shownotes</a>
@@ -75,17 +90,23 @@
         </div>
         </dd>
       </dl>
+    </div>
+  </div>
 
+  <div class="row">
+    <div class="small-12 large-10 large-offset-2 columns">
       <div>
         <%= partial "social-sharing-buttons",
           :locals => locals.merge(label: "Like this video? Spread the word!") %>
       </div>
 
+    </div>
+  </div>
 
+  <div class="row">
+    <div class="small-12 columns">
       <%= partial "related-content", :locals => locals %>
-
       <%= partial "footer-main" %>
-
     </div>
   </div>
 
