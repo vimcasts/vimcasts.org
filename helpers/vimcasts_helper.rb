@@ -100,4 +100,8 @@ module VimcastsHelper
     "https://plus.google.com/share?url=#{message}"
   end
 
+  def proof_mode
+    " proof" if config.environment == :development
+  end
+
 end

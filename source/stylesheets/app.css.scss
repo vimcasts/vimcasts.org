@@ -9,6 +9,12 @@ header {
 
 }
 
+body.proof {
+  .row {
+    background-image: url('/images/grid-960.png');
+    background-size: 100%;
+  }
+}
 
 .main-content {
   @include grid-row;
