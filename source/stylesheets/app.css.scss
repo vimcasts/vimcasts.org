@@ -35,15 +35,37 @@ body.proof {
 
 }
 
-#logo a, #logo span {
-  background-image: url(/images/vimcasts-logo.svg);
-  background-repeat: no-repeat;
-  display: block;
-  width: 217px;
-  height: 106px;
-  text-indent: 200%;
-  white-space: nowrap;
-  overflow: hidden;
+#logo {
+  padding-left: 0;
+  h1 {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    &:before {
+      // set height to be 50% of width
+      // http://stackoverflow.com/a/6615994/128850
+      margin-top: 50%;
+      content: '';
+      display: block;
+    }
+  }
+  a, span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-image: url(/images/vimcasts-logo.svg);
+    background-repeat: no-repeat;
+    background-size: 77.5%;
+    background-position: -3% 0%;
+
+    text-indent: 500%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
 }
 
 .identity-row {
@@ -52,10 +74,6 @@ body.proof {
 }
 
 @media #{$small-only} {
-  #logo a, #logo span {
-    width: 108px;
-    height: 53px;
-  }
   .latest-content hr {
     display: none;
   }
