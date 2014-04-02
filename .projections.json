@@ -43,6 +43,9 @@
     "source/stylesheets/*": {
         "command": "stylesheet"
     },
+    "source/stylesheets/app.css.scss": {
+        "command": "stylesheet"
+    },
     "source/training/*": {
         "command": "training"
     }
