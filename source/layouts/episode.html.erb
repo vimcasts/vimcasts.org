@@ -40,8 +40,8 @@
   </div>
 
   <div class="row">
-    <div class="small-12 large-10 large-offset-2 columns">
 
+    <div class="small-12 large-10 large-push-2 columns">
       <div class="video_wrapper">
         <video poster="<%= episode.poster_url %>"
           controls="controls" preload="none" class="placeholder"
@@ -50,34 +50,19 @@
           <source src="<%= episode.quicktime.url %>" type="video/x-m4v" />
         </video>
       </div>
-
-      <aside class="downloads">
-
-        <ul class="inline-list">
-          <li>Download: </li>
-          <li class="ogg">
-            <a href="<%= episode.ogg.url %>">OGG</a>
-            <span class="stats"><%= number_to_human_size(episode.ogg.size) %></span>
-          </li>
-          <li class="quicktime">
-            <a href="<%= episode.quicktime.url %>">Quicktime</a>
-            <span class="stats"><%= number_to_human_size(episode.quicktime.size) %></span>
-          </li>
-        </ul>
-        <div class="video-duration">
-          <%# http://wiki.whatwg.org/wiki/Time_element#duration %>
-          Run time: <time datetime="<%= episode.running_datetime %>">
-            <%= episode.running_time %>
-          </time>
-        </div>
-
-        <p>
-          View a <%= link_to 'transcript of the video',
-          transcript_for_episode(episode.number) %>.
-        </p>
-
-      </aside>
     </div>
+
+    <aside class="downloads small-12 large-2 large-pull-10 columns">
+
+      <ul class="inline-list hide-for-large-up">
+        <%= partial "video-metadata-links", locals: locals.merge(episode: episode) %>
+      </ul>
+
+      <ul class="side-nav show-for-large-up">
+        <%= partial "video-metadata-links", locals: locals.merge(episode: episode) %>
+      </ul>
+
+    </aside>
   </div>
 
   <div class="row">
