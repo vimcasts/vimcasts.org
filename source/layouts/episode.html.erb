@@ -9,26 +9,33 @@
 
   <div class="row">
     <div class="small-12 large-10 large-offset-2 columns">
-      <header>
+      <header class="episode">
         <h2><%= current_page.title %></h2>
-        <div class="episode_number">
-          <small>#</small><%= episode.number %>
+
+        <div class="video_metadata">
+          <div class="episode_number">
+            <small>#</small><%= episode.number %>
+          </div>
+          <time pubdate="pubdate" datetime="<%= current_page.date.strftime('%Y-%m-%e') %>">
+            <%= current_page.date.strftime('%b %e, %Y') %>
+          </time>
+
         </div>
-        <time pubdate="pubdate" datetime="<%= current_page.date.strftime('%Y-%m-%e') %>">
-          <%= current_page.date.strftime('%b %e, %Y') %>
-        </time>
+
         <div class="video-duration">
           <%# http://wiki.whatwg.org/wiki/Time_element#duration %>
           Run time: <time datetime="<%= episode.running_datetime %>">
             <%= episode.running_time %>
           </time>
         </div>
+
         <% if current_page.tags.size > 0 %>
           <div class="video-tags">
             Tagged with:
             <%= link_to_article_tags(current_page) %>
           </div>
         <% end %>
+
       </header>
     </div>
   </div>

@@ -142,3 +142,32 @@ body.proof {
     height: 100%;
   }
 }
+
+@media #{$large-up} {
+  header.episode {
+    position: relative;
+  }
+  .video_metadata {
+    position: absolute;
+    top: 0;
+    left: ($row-width/12)*-2;
+    width: ($row-width/12)*2;
+    padding-right: $column-gutter / 2;
+    text-align: right;
+    color: lighten($body-font-color, 45%);
+
+    .episode_number {
+      font-size: $h3-font-size;
+      margin-top: 1.2rem;
+      margin-bottom: 1rem;
+      small {
+        font-size: $h4-font-size;
+      }
+    }
+
+    time {
+      display: block;
+    }
+
+  }
+}

@@ -48,5 +48,11 @@
     },
     "source/training/*": {
         "command": "training"
+    },
+    "source/bower_components/foundation/scss/foundation/components/*": {
+        "command": "zurbscss"
+    },
+    "source/bower_components/foundation/scss/foundation/components/_global.scss": {
+        "command": "zurbscss"
     }
 }
