@@ -1,4 +1,8 @@
-$(document).foundation();
+$(document).foundation({
+  accordion: {
+    multi_expand: true
+  }
+});
 
 $(document).ready(function() {
   if (matchMedia(Foundation.media_queries['medium']).matches) {
