@@ -143,31 +143,21 @@ body.proof {
   }
 }
 
+h2.episode_number {
+  text-align: right;
+  padding-right: 0;
+}
+
+.episode_number {
+  color: lighten($body-font-color, 45%);
+}
+h2 small {
+  font-size: $h3-font-size;
+  color: lighten($body-font-color, 45%);
+}
+
 @media #{$large-up} {
-  header.episode {
-    position: relative;
-  }
-  .video_metadata {
-    position: absolute;
-    top: 0;
-    left: ($row-width/12)*-2;
-    width: ($row-width/12)*2;
-    padding-right: $column-gutter / 2;
-    text-align: right;
-    color: lighten($body-font-color, 45%);
-
-    .episode_number {
-      font-size: $h3-font-size;
-      margin-top: 1.2rem;
-      margin-bottom: 1rem;
-      small {
-        font-size: $h4-font-size;
-      }
-    }
-
-    time {
-      display: block;
-    }
-
+  span.episode_number {
+    display: none;
   }
 }
