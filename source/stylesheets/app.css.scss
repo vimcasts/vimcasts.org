@@ -121,8 +121,24 @@ body.proof {
   }
   li a { display: block; }
 }
-video {
+
+.video_wrapper {
   margin-bottom: $header-bottom-margin * 2;
-  width: 100% !important;
-  height: auto !important;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  &:before {
+    margin-top: 75%;
+    content: "";
+    display: block;
+  }
+  video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
 }

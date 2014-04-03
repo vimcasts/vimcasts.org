@@ -44,12 +44,14 @@
   <div class="row">
     <div class="small-12 large-10 large-offset-2 columns">
 
-      <video poster="<%= episode.poster_url %>"
-        controls="controls" preload="none" class="placeholder"
-        id="episode_<%= episode.number %>_placeholder">
-        <source src="<%= episode.ogg.url %>" type="video/ogg" />
-        <source src="<%= episode.quicktime.url %>" type="video/x-m4v" />
-      </video>
+      <div class="video_wrapper">
+        <video poster="<%= episode.poster_url %>"
+          controls="controls" preload="none" class="placeholder"
+          id="episode_<%= episode.number %>_placeholder">
+          <source src="<%= episode.ogg.url %>" type="video/ogg" />
+          <source src="<%= episode.quicktime.url %>" type="video/x-m4v" />
+        </video>
+      </div>
 
       <aside class="downloads">
 
