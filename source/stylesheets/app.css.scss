@@ -123,5 +123,6 @@ body.proof {
 }
 video {
   margin-bottom: $header-bottom-margin * 2;
-  width: 100%;
+  width: 100% !important;
+  height: auto !important;
 }
