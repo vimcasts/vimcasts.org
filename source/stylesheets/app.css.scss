@@ -178,6 +178,7 @@ aside.downloads {
 pre.highlight {
   margin-bottom: $paragraph-margin-bottom;
   padding: 0.75rem 1rem;
+  overflow: auto;
 }
 code {
   color: $header-font-color;
