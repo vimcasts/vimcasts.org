@@ -1,48 +1,50 @@
 <% current_tag ||= :not_specified %>
+<% episode = Episode.new(article) if article.data.duration %>
 
 <section class="<%= article_type(article) %>">
-  <h3><%= link_to article.title, article %></h3>
 
-  <span><%= article.date.strftime('%b %e, %Y') %></span>
+  <div class="row name-and-number">
+    <% if episode %>
+      <h3 class="episode_number small-2 small-push-10 large-2 large-reset-order columns">
+        <small>#</small><%= article.data.number %>
+      </h3>
+    <% else %>
+      <time class="pubdate small-2 small-push-10 large-2 large-reset-order columns" pubdate="pubdate" datetime="<%= article.date.strftime('%Y-%m-%e') %>">
+        <%= article.date.strftime('%b %e, %Y') %>
+      </time>
+    <% end %>
+    <h3 class="small-10 small-pull-2 large-10 large-reset-order columns">
+      <%= link_to article.title, article %>
+    </h3>
+  </div>
 
   <% if article.data.duration %>
     <% episode = Episode.new(article) %>
-    <div class="video-duration">
-      <%# http://wiki.whatwg.org/wiki/Time_element#duration %>
-      Run time: <time datetime="<%= episode.running_datetime %>">
-        <%= episode.running_time %>
+    <div class="row date-and-tags">
+
+      <div class="video-tags small-9 large-10 large-push-2 columns">
+        <%# http://wiki.whatwg.org/wiki/Time_element#duration %>
+        Run time: <time datetime="<%= episode.running_datetime %>">
+          <%= episode.running_time %>
+        </time>
+      </div>
+
+      <time class="pubdate small-3 large-2 large-pull-10 columns" pubdate="pubdate" datetime="<%= article.date.strftime('%Y-%m-%e') %>">
+        <%= article.date.strftime('%b %e, %Y') %>
       </time>
+
     </div>
   <% end %>
 
-  <% if article.data.number %>
-    <div class="episode_number">
-      <small>#</small><%= article.data.number %>
+  <div class="row date-and-tags">
+    <div class="small-12 large-8 large-offset-2 columns">
+      <%= article.summary %>
+
+      <% if readmore = continue?(article) %>
+        <%= link_to readmore, article, class: 'readmore' %>
+      <% end %>
+
     </div>
-  <% end %>
-
-<span class="article-type">
-  <%= article_type(article) %>
-</span>
-
-<% if article.tags.size > 0 %>
-  <div class="article-tags">
-    <p>
-    <% if current_tag == :not_specified %>
-      Tagged with:
-      <%= link_to_article_tags(article) %>
-    <% elsif article.tags.size > 1 %>
-      Also tagged with:
-      <%= link_to_article_tags(article, Array(current_tag)) %>
-    <% end %>
-    </p>
   </div>
-<% end %>
-
-<%= article.summary %>
-
-<% if readmore = continue?(article) %>
-  <%= link_to readmore, article %>
-<% end %>
 
 </section>

@@ -143,17 +143,26 @@ body.proof {
   }
 }
 
-h2.episode_number, time.pubdate {
+.episode_number, time.pubdate {
   text-align: right;
   color: lighten($body-font-color, 45%);
 }
-h2 small {
-  font-size: $h3-font-size;
-  color: lighten($body-font-color, 45%);
+
+a.readmore {
+  float: right;
+  font-style: italic;
 }
 
+section.article, section.screencast {
+  margin-bottom: $header-bottom-margin * 10;
+}
+
+.episode_number small { color: lighten($body-font-color, 45%); }
+h2 small { font-size: $h3-font-size; }
+h3 small { font-size: $h4-font-size; }
+
 @media #{$large-up} {
-  aside.downloads, h2.episode_number, time.pubdate {
+  aside.downloads, .episode_number, time.pubdate {
     text-align: right;
     padding-right: 0;
   }
