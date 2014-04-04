@@ -143,10 +143,8 @@ body.proof {
   }
 }
 
-time.pubdate {
+h2.episode_number, time.pubdate {
   text-align: right;
-}
-.episode_number {
   color: lighten($body-font-color, 45%);
 }
 h2 small {
@@ -155,9 +153,6 @@ h2 small {
 }
 
 @media #{$large-up} {
-  span.episode_number {
-    display: none;
-  }
   aside.downloads, h2.episode_number, time.pubdate {
     text-align: right;
     padding-right: 0;
