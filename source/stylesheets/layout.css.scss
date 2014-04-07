@@ -87,3 +87,51 @@ section.screencast, section.article {
     }
   }
 }
+
+// homepage - styling for "Latest {screencast,article}"
+body.index {
+  section.screencast, section.article {
+    .title-row {
+      @include grid-row();
+      .title {
+        @include grid-column($columns:10, $collapse:true);
+        @media #{$large-up} {
+          @include grid-column($columns:10, $push:0, $collapse:true);
+        }
+      }
+      .episode_number, .pubdate {
+        @include grid-column($columns:2, $collapse:true);
+        @media #{$large-up} {
+          @include grid-column($columns:2, $pull:0, $collapse:true);
+        }
+      }
+    }
+
+    .pubdate-row {
+      @include grid-row();
+      .video-tags {
+        @include grid-column($columns:9, $collapse:true);
+        @media #{$large-up} {
+          @include grid-column($columns:9, $push:0, $collapse:true);
+        }
+      }
+      .pubdate {
+        @include grid-column($columns:3, $collapse:true);
+        @media #{$large-up} {
+          @include grid-column($columns:3, $pull:0, $collapse:true);
+        }
+      }
+    }
+
+    .summary-row {
+      @include grid-row();
+      div {
+        @include grid-column($columns:12, $collapse:true);
+        @media #{$large-up} {
+          @include grid-column($columns:12, $offset:0, $collapse:true);
+        }
+      }
+    }
+
+  }
+}
