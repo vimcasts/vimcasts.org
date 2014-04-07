@@ -3,7 +3,7 @@
 
 <section class="<%= article_type(article) %>">
 
-  <div class="row name-and-number">
+  <div class="row title-row">
     <% if episode %>
       <h3 class="episode_number small-2 small-push-10 large-2 large-reset-order columns">
         <small>#</small><%= article.data.number %>
@@ -20,7 +20,7 @@
 
   <% if article.data.duration %>
     <% episode = Episode.new(article) %>
-    <div class="row date-and-tags">
+    <div class="row pubdate-row">
 
       <div class="video-tags small-9 large-10 large-push-2 columns">
         <%# http://wiki.whatwg.org/wiki/Time_element#duration %>
@@ -36,7 +36,7 @@
     </div>
   <% end %>
 
-  <div class="row date-and-tags">
+  <div class="row">
     <div class="small-12 large-8 large-offset-2 columns">
       <%= article.summary %>
 
