@@ -189,16 +189,18 @@ code {
 }
 
 // /episodes/archive
-.episode-archive-item {
-  margin-bottom: $paragraph-margin-bottom;
-  .episode_number {
-    padding-right: 0;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  small {
-    font-size: 86%;
-    color: lighten($body-font-color, 45%);
+#archive {
+  .episode-archive-item {
+    margin-bottom: $paragraph-margin-bottom;
+    .episode_number {
+      padding-right: 0;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    small {
+      font-size: 86%;
+      color: lighten($body-font-color, 45%);
+    }
   }
 }

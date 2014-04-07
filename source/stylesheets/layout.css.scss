@@ -1,0 +1,43 @@
+@import "settings";
+@import "foundation/components/grid.scss";
+
+.archive-intro {
+  @include grid-row();
+  h1, p {
+    @include grid-column($columns:12);
+    @media #{$large-up} {
+      @include grid-column($columns:10, $offset: 2);
+    }
+  }
+}
+
+#archive {
+
+  .archive-month {
+    @include grid-row();
+    h3 {
+      @include grid-column($columns:11, $offset: 1);
+      @media #{$large-up} {
+        @include grid-column($columns:10, $offset: 2);
+      }
+    }
+  }
+
+  .episode-archive-item {
+    @include grid-row();
+
+    .episode_number {
+      @include grid-column($columns:1);
+      @media #{$large-up} {
+        @include grid-column($columns:2);
+      }
+    }
+
+    .episode_title {
+      @include grid-column($columns:11);
+      @media #{$large-up} {
+        @include grid-column($columns:10);
+      }
+    }
+  }
+}

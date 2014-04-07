@@ -1,4 +1,5 @@
 /* 
+ *= require "layout"
  *= require "app"
  *= require "autocomplete"
  *= require "rrssb"
