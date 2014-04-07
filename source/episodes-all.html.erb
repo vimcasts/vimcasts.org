@@ -18,7 +18,7 @@ blog: episodes
 </div>
 
 <section id="archive">
-  <% blog(:episodes).articles.group_by {|a| {year: a.date.year, month: a.date.strftime("%B")} }.each do |date, episodes| %>
+  <% episode_archive_listing.each do |date, episodes| %>
 
     <div class="archive-month">
       <h3><%= date[:month] %> <%= date[:year] %></h3>

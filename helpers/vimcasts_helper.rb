@@ -113,4 +113,10 @@ module VimcastsHelper
     ].join
   end
 
+  def episode_archive_listing
+    blog(:episodes).articles.group_by do |a|
+      { year: a.date.year, month: a.date.strftime("%B") }
+    end
+  end
+
 end
