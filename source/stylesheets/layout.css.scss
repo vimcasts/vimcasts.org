@@ -27,9 +27,9 @@
     @include grid-row();
 
     .episode_number {
-      @include grid-column($columns:1);
+      @include grid-column($columns:1, $collapse: true);
       @media #{$large-up} {
-        @include grid-column($columns:2);
+        @include grid-column($columns:2, $collapse: true);
       }
     }
 
