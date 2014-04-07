@@ -41,3 +41,49 @@
     }
   }
 }
+
+
+// _article-listing - used for /episodes and /blog listings
+section.screencast, section.article {
+  .title-row {
+    @include grid-row();
+    .title {
+      @include grid-column($columns:10);
+      @media #{$large-up} {
+        @include grid-column($columns:10, $push:2);
+      }
+    }
+    .episode_number, .pubdate {
+      @include grid-column($columns:2);
+      @media #{$large-up} {
+        @include grid-column($columns:2, $pull:10, $collapse: true);
+      }
+    }
+  }
+
+  .pubdate-row {
+    @include grid-row();
+    .video-tags {
+      @include grid-column($columns:9);
+      @media #{$large-up} {
+        @include grid-column($columns:10, $push:2);
+      }
+    }
+    .pubdate {
+      @include grid-column($columns:3);
+      @media #{$large-up} {
+        @include grid-column($columns:2, $pull:10, $collapse: true);
+      }
+    }
+  }
+
+  .summary-row {
+    @include grid-row();
+    div {
+      @include grid-column($columns:12);
+      @media #{$large-up} {
+        @include grid-column($columns:8, $offset:2);
+      }
+    }
+  }
+}

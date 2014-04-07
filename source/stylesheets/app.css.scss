@@ -155,6 +155,9 @@ a.readmore {
 
 section.article, section.screencast {
   margin-bottom: $header-bottom-margin * 10;
+  .pubdate-row {
+    margin-bottom: $header-bottom-margin * 2;
+  }
 }
 
 .episode_number small { color: lighten($body-font-color, 45%); }
@@ -164,14 +167,10 @@ h3 small { font-size: $h4-font-size; }
 @media #{$large-up} {
   aside.downloads, .episode_number, time.pubdate {
     text-align: right;
-    padding-right: 0;
   }
   time.pubdate {
     color: lighten($body-font-color, 45%);
   }
-}
-.pubdate-row {
-  margin-bottom: $header-bottom-margin * 2;
 }
 .episode_summary p {
   font-size: $h4-font-size;

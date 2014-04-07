@@ -3,41 +3,41 @@
 
 <section class="<%= article_type(article) %>">
 
-  <div class="row title-row">
+  <div class="title-row">
+    <h3 class="title">
+      <%= link_to article.title, article %>
+    </h3>
     <% if episode %>
-      <h3 class="episode_number small-2 small-push-10 large-2 large-reset-order columns">
+      <h3 class="episode_number">
         <small>#</small><%= article.data.number %>
       </h3>
     <% else %>
-      <time class="pubdate small-2 small-push-10 large-2 large-reset-order columns" pubdate="pubdate" datetime="<%= article.date.strftime('%Y-%m-%e') %>">
+      <time class="pubdate" pubdate="pubdate" datetime="<%= article.date.strftime('%Y-%m-%e') %>">
         <%= format_pubdate(article) %>
       </time>
     <% end %>
-    <h3 class="small-10 small-pull-2 large-10 large-reset-order columns">
-      <%= link_to article.title, article %>
-    </h3>
   </div>
 
   <% if article.data.duration %>
     <% episode = Episode.new(article) %>
-    <div class="row pubdate-row">
+    <div class="pubdate-row">
 
-      <div class="video-tags small-9 large-10 large-push-2 columns">
+      <div class="video-tags">
         <%# http://wiki.whatwg.org/wiki/Time_element#duration %>
         Run time: <time datetime="<%= episode.running_datetime %>">
           <%= episode.running_time %>
         </time>
       </div>
 
-      <time class="pubdate small-3 large-2 large-pull-10 columns" pubdate="pubdate" datetime="<%= article.date.strftime('%Y-%m-%e') %>">
+      <time class="pubdate" pubdate="pubdate" datetime="<%= article.date.strftime('%Y-%m-%e') %>">
         <%= format_pubdate(article) %>
       </time>
 
     </div>
   <% end %>
 
-  <div class="row">
-    <div class="small-12 large-8 large-offset-2 columns">
+  <div class="summary-row">
+    <div>
       <%= article.summary %>
 
       <% if readmore = continue?(article) %>
