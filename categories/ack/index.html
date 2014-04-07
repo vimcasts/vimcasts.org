@@ -138,21 +138,21 @@
       
 <section class="article">
 
-  <div class="row title-row">
+  <div class="title-row">
+    <h3 class="title">
+      <a href="/blog/2013/03/combining-vimgrep-with-ack--f/">Combining :vimgrep with ack -f</a>
+    </h3>
     
-      <time class="pubdate small-2 small-push-10 large-2 large-reset-order columns" pubdate="pubdate" datetime="2013-03- 5">
+      <time class="pubdate" pubdate="pubdate" datetime="2013-03- 5">
         <div class="hide-for-medium-up">Mar  5, '13</div><div class="show-for-medium-up">Mar  5, 2013</div>
       </time>
     
-    <h3 class="small-10 small-pull-2 large-10 large-reset-order columns">
-      <a href="/blog/2013/03/combining-vimgrep-with-ack--f/">Combining :vimgrep with ack -f</a>
-    </h3>
   </div>
 
   
 
-  <div class="row">
-    <div class="small-12 large-8 large-offset-2 columns">
+  <div class="summary-row">
+    <div>
       <p>I love the way that ack let&rsquo;s me specify the files to search inside. For starters, ack does the right thing by ignoring the contents of VCS directories, backup files, core dumps etc., which gives a good signal to noise ratio. On top of that, ack provides a convenient syntax for specifying filetypes to include or exclude from the set (see <code>ack --help-types</code>). I can target ruby files only with the <code>--ruby</code> option, or everything but ruby files with <code>--noruby</code>.</p>
 
 <p>I also love using <code>:vimgrep</code>, because it lets me use Vim&rsquo;s native regular expressions. For me, the ideal project-wide search would combine Vim&rsquo;s regex with ack&rsquo;s method of specifying the set of files to search through. I recently learned about ack&rsquo;s <code>-f</code> flag, which makes this combination possible.</p>

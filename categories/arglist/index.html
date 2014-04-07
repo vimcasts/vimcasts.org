@@ -138,37 +138,37 @@
       
 <section class="screencast">
 
-  <div class="row title-row">
+  <div class="title-row">
+    <h3 class="title">
+      <a href="/episodes/project-wide-find-and-replace/">Project-wide find and replace</a>
+    </h3>
     
-      <h3 class="episode_number small-2 small-push-10 large-2 large-reset-order columns">
+      <h3 class="episode_number">
         <small>#</small>45
       </h3>
     
-    <h3 class="small-10 small-pull-2 large-10 large-reset-order columns">
-      <a href="/episodes/project-wide-find-and-replace/">Project-wide find and replace</a>
-    </h3>
   </div>
 
   
     
-    <div class="row pubdate-row">
+    <div class="pubdate-row">
 
-      <div class="video-tags small-9 large-10 large-push-2 columns">
+      <div class="video-tags">
         
         Run time: <time datetime="P6M,25S">
           6:25
         </time>
       </div>
 
-      <time class="pubdate small-3 large-2 large-pull-10 columns" pubdate="pubdate" datetime="2013-03-19">
+      <time class="pubdate" pubdate="pubdate" datetime="2013-03-19">
         <div class="hide-for-medium-up">Mar 19, '13</div><div class="show-for-medium-up">Mar 19, 2013</div>
       </time>
 
     </div>
   
 
-  <div class="row">
-    <div class="small-12 large-8 large-offset-2 columns">
+  <div class="summary-row">
+    <div>
       <p>Vim doesn&rsquo;t have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as <code>:substitute</code>, <code>:argdo</code>, and <code>:vimgrep</code>. We&rsquo;ll look at two possible strategies: first using the arglist, then the quickfix list.</p>
 
 
@@ -186,21 +186,21 @@
       
 <section class="article">
 
-  <div class="row title-row">
+  <div class="title-row">
+    <h3 class="title">
+      <a href="/blog/2013/03/combining-vimgrep-with-git-ls-files/">Combining :vimgrep with git ls-files</a>
+    </h3>
     
-      <time class="pubdate small-2 small-push-10 large-2 large-reset-order columns" pubdate="pubdate" datetime="2013-03- 7">
+      <time class="pubdate" pubdate="pubdate" datetime="2013-03- 7">
         <div class="hide-for-medium-up">Mar  7, '13</div><div class="show-for-medium-up">Mar  7, 2013</div>
       </time>
     
-    <h3 class="small-10 small-pull-2 large-10 large-reset-order columns">
-      <a href="/blog/2013/03/combining-vimgrep-with-git-ls-files/">Combining :vimgrep with git ls-files</a>
-    </h3>
   </div>
 
   
 
-  <div class="row">
-    <div class="small-12 large-8 large-offset-2 columns">
+  <div class="summary-row">
+    <div>
       <p>The <code>vimgrep</code> command uses Vim&rsquo;s native regular expressions to search the contents of multiple files. There are several ways that we can specify the list of files to look inside, including <code>*</code> and <code>**</code> wildcards. It would be handy if we could instruct <code>vimgrep</code> to look inside all of the files in the current project, excluding those listed in the <code>.gitignore</code> file. That&rsquo;s where the <a href="https://www.kernel.org/pub/software/scm/git/docs/git-ls-files.html"><code>git ls-files</code></a> command comes in.</p>
 
 
@@ -218,21 +218,21 @@
       
 <section class="article">
 
-  <div class="row title-row">
+  <div class="title-row">
+    <h3 class="title">
+      <a href="/blog/2013/03/combining-vimgrep-with-ack--f/">Combining :vimgrep with ack -f</a>
+    </h3>
     
-      <time class="pubdate small-2 small-push-10 large-2 large-reset-order columns" pubdate="pubdate" datetime="2013-03- 5">
+      <time class="pubdate" pubdate="pubdate" datetime="2013-03- 5">
         <div class="hide-for-medium-up">Mar  5, '13</div><div class="show-for-medium-up">Mar  5, 2013</div>
       </time>
     
-    <h3 class="small-10 small-pull-2 large-10 large-reset-order columns">
-      <a href="/blog/2013/03/combining-vimgrep-with-ack--f/">Combining :vimgrep with ack -f</a>
-    </h3>
   </div>
 
   
 
-  <div class="row">
-    <div class="small-12 large-8 large-offset-2 columns">
+  <div class="summary-row">
+    <div>
       <p>I love the way that ack let&rsquo;s me specify the files to search inside. For starters, ack does the right thing by ignoring the contents of VCS directories, backup files, core dumps etc., which gives a good signal to noise ratio. On top of that, ack provides a convenient syntax for specifying filetypes to include or exclude from the set (see <code>ack --help-types</code>). I can target ruby files only with the <code>--ruby</code> option, or everything but ruby files with <code>--noruby</code>.</p>
 
 <p>I also love using <code>:vimgrep</code>, because it lets me use Vim&rsquo;s native regular expressions. For me, the ideal project-wide search would combine Vim&rsquo;s regex with ack&rsquo;s method of specifying the set of files to search through. I recently learned about ack&rsquo;s <code>-f</code> flag, which makes this combination possible.</p>
@@ -252,37 +252,37 @@
       
 <section class="screencast">
 
-  <div class="row title-row">
+  <div class="title-row">
+    <h3 class="title">
+      <a href="/episodes/search-multiple-files-with-vimgrep/">Search multiple files with :vimgrep</a>
+    </h3>
     
-      <h3 class="episode_number small-2 small-push-10 large-2 large-reset-order columns">
+      <h3 class="episode_number">
         <small>#</small>44
       </h3>
     
-    <h3 class="small-10 small-pull-2 large-10 large-reset-order columns">
-      <a href="/episodes/search-multiple-files-with-vimgrep/">Search multiple files with :vimgrep</a>
-    </h3>
   </div>
 
   
     
-    <div class="row pubdate-row">
+    <div class="pubdate-row">
 
-      <div class="video-tags small-9 large-10 large-push-2 columns">
+      <div class="video-tags">
         
         Run time: <time datetime="P7M,25S">
           7:25
         </time>
       </div>
 
-      <time class="pubdate small-3 large-2 large-pull-10 columns" pubdate="pubdate" datetime="2013-03- 1">
+      <time class="pubdate" pubdate="pubdate" datetime="2013-03- 1">
         <div class="hide-for-medium-up">Mar  1, '13</div><div class="show-for-medium-up">Mar  1, 2013</div>
       </time>
 
     </div>
   
 
-  <div class="row">
-    <div class="small-12 large-8 large-offset-2 columns">
+  <div class="summary-row">
+    <div>
       <p><code>vimgrep</code> is Vim&rsquo;s built-in command for searching across multiple files. It&rsquo;s not so fast as external tools like ack and git-grep, but it has its uses. <code>vimgrep</code> uses Vim&rsquo;s built-in regex engine, so you can reuse the patterns that work with Vim&rsquo;s standard search command. </p>
 
 
@@ -300,37 +300,37 @@
       
 <section class="screencast">
 
-  <div class="row title-row">
+  <div class="title-row">
+    <h3 class="title">
+      <a href="/episodes/using-argdo-to-change-multiple-files/">Using :argdo to change multiple files</a>
+    </h3>
     
-      <h3 class="episode_number small-2 small-push-10 large-2 large-reset-order columns">
+      <h3 class="episode_number">
         <small>#</small>43
       </h3>
     
-    <h3 class="small-10 small-pull-2 large-10 large-reset-order columns">
-      <a href="/episodes/using-argdo-to-change-multiple-files/">Using :argdo to change multiple files</a>
-    </h3>
   </div>
 
   
     
-    <div class="row pubdate-row">
+    <div class="pubdate-row">
 
-      <div class="video-tags small-9 large-10 large-push-2 columns">
+      <div class="video-tags">
         
         Run time: <time datetime="P5M,40S">
           5:40
         </time>
       </div>
 
-      <time class="pubdate small-3 large-2 large-pull-10 columns" pubdate="pubdate" datetime="2013-02-25">
+      <time class="pubdate" pubdate="pubdate" datetime="2013-02-25">
         <div class="hide-for-medium-up">Feb 25, '13</div><div class="show-for-medium-up">Feb 25, 2013</div>
       </time>
 
     </div>
   
 
-  <div class="row">
-    <div class="small-12 large-8 large-offset-2 columns">
+  <div class="summary-row">
+    <div>
       <p>The <code>:argdo</code> command allows us to execute an Ex command across all buffers in the arglist.  To demonstrate, we&rsquo;ll use the example of running the <code>:substitute</code> command across multiple files, then we&rsquo;ll see how to revert or save the changes.  We&rsquo;ll also compare the <code>:argdo</code> and <code>:bufdo</code> commands, and consider when it&rsquo;s appropriate to use each one.</p>
 
 
@@ -348,37 +348,37 @@
       
 <section class="screencast">
 
-  <div class="row title-row">
+  <div class="title-row">
+    <h3 class="title">
+      <a href="/episodes/populating-the-arglist/">Populating the arglist</a>
+    </h3>
     
-      <h3 class="episode_number small-2 small-push-10 large-2 large-reset-order columns">
+      <h3 class="episode_number">
         <small>#</small>42
       </h3>
     
-    <h3 class="small-10 small-pull-2 large-10 large-reset-order columns">
-      <a href="/episodes/populating-the-arglist/">Populating the arglist</a>
-    </h3>
   </div>
 
   
     
-    <div class="row pubdate-row">
+    <div class="pubdate-row">
 
-      <div class="video-tags small-9 large-10 large-push-2 columns">
+      <div class="video-tags">
         
         Run time: <time datetime="P5M,31S">
           5:31
         </time>
       </div>
 
-      <time class="pubdate small-3 large-2 large-pull-10 columns" pubdate="pubdate" datetime="2013-02-22">
+      <time class="pubdate" pubdate="pubdate" datetime="2013-02-22">
         <div class="hide-for-medium-up">Feb 22, '13</div><div class="show-for-medium-up">Feb 22, 2013</div>
       </time>
 
     </div>
   
 
-  <div class="row">
-    <div class="small-12 large-8 large-offset-2 columns">
+  <div class="summary-row">
+    <div>
       <p>The arglist wouldn&rsquo;t be much use if we had to quit and relaunch Vim every time we wanted to change its contents. In this episode, we&rsquo;ll learn how to set the contents of the arglist using the <code>:args</code> command, which can receive filepaths, globs, or even backtick expressions.</p>
 
 
@@ -396,37 +396,37 @@
       
 <section class="screencast">
 
-  <div class="row title-row">
+  <div class="title-row">
+    <h3 class="title">
+      <a href="/episodes/meet-the-arglist/">Meet the arglist</a>
+    </h3>
     
-      <h3 class="episode_number small-2 small-push-10 large-2 large-reset-order columns">
+      <h3 class="episode_number">
         <small>#</small>41
       </h3>
     
-    <h3 class="small-10 small-pull-2 large-10 large-reset-order columns">
-      <a href="/episodes/meet-the-arglist/">Meet the arglist</a>
-    </h3>
   </div>
 
   
     
-    <div class="row pubdate-row">
+    <div class="pubdate-row">
 
-      <div class="video-tags small-9 large-10 large-push-2 columns">
+      <div class="video-tags">
         
         Run time: <time datetime="P4M,57S">
           4:57
         </time>
       </div>
 
-      <time class="pubdate small-3 large-2 large-pull-10 columns" pubdate="pubdate" datetime="2013-02-19">
+      <time class="pubdate" pubdate="pubdate" datetime="2013-02-19">
         <div class="hide-for-medium-up">Feb 19, '13</div><div class="show-for-medium-up">Feb 19, 2013</div>
       </time>
 
     </div>
   
 
-  <div class="row">
-    <div class="small-12 large-8 large-offset-2 columns">
+  <div class="summary-row">
+    <div>
       <p>The arglist feature complements Vim&rsquo;s buffer list. In this episode, we&rsquo;ll learn a handful of commands for traversing the arglist. We&rsquo;ll see that it&rsquo;s useful to think of the arglist as a stable subset of the files in the buffer list.</p>
 
 

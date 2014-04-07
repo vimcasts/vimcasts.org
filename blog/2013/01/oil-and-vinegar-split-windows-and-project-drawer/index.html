@@ -289,8 +289,8 @@
 
     
       <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
       </li>
     
       <li>
@@ -299,13 +299,22 @@
       </li>
     
       <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
       <li>
-        <h4><a href="/blog/2013/11/registers-the-good-the-bad-and-the-ugly-parts/">Registers: the Good, the Bad, and the Ugly Parts</a></h4>
-        <p>To the newcomer, Vim&rsquo;s way of doing things may seem strange, but with familiarity it becomes natural. Many of Vim&rsquo;s features seemed odd to me at first, but when I got used to them I recognised that they had their own particular elegance. However, there&rsquo;s one feature of Vim that still feels awkward to me: using registers for copy and paste. The deeper my understanding of registers becomes, the more they frustrate me!</p>
+        <h4><a href="/blog/2013/02/habit-breaking-habit-making/">Habit breaking, habit making</a></h4>
+        <p>Moving your Vim cursor around using the arrow keys is a bad habit, and like many bad habits it&rsquo;s a difficult one to break! Putting these lines into your vimrc can help:</p>
+<pre class="highlight plaintext">noremap &lt;Up&gt; &lt;NOP&gt;
+noremap &lt;Down&gt; &lt;NOP&gt;
+noremap &lt;Left&gt; &lt;NOP&gt;
+noremap &lt;Right&gt; &lt;NOP&gt;
+</pre>
+
+<p>This snippet causes each of the arrow keys to execute <em>no operation</em>, or in other words: it disables them. Next time you move your hand to the arrow keys you&rsquo;ll find that nothing happens when you press them. That should remind you to move your hand back where it belongs: on the home row, where <code>h</code>, <code>j</code>, <code>k</code>, and <code>l</code> keys are waiting for you. Alternatively, you could use the <a href="http://www.tylercipriani.com/vim.html">konami code</a> version of this snippet.</p>
+
+<p>Learning to operate Vim without leaving the home row is the first rite of passage. If you&rsquo;re still in the habit of moving around using the arrow keys, then you should disable them today.</p>
 
 
       </li>
@@ -327,17 +336,8 @@ Gary Bernhardt on <a href="http://rubyrogues.com/040-rr-text-editors-and-ides/">
       </li>
     
       <li>
-        <h4><a href="/blog/2013/02/habit-breaking-habit-making/">Habit breaking, habit making</a></h4>
-        <p>Moving your Vim cursor around using the arrow keys is a bad habit, and like many bad habits it&rsquo;s a difficult one to break! Putting these lines into your vimrc can help:</p>
-<pre class="highlight plaintext">noremap &lt;Up&gt; &lt;NOP&gt;
-noremap &lt;Down&gt; &lt;NOP&gt;
-noremap &lt;Left&gt; &lt;NOP&gt;
-noremap &lt;Right&gt; &lt;NOP&gt;
-</pre>
-
-<p>This snippet causes each of the arrow keys to execute <em>no operation</em>, or in other words: it disables them. Next time you move your hand to the arrow keys you&rsquo;ll find that nothing happens when you press them. That should remind you to move your hand back where it belongs: on the home row, where <code>h</code>, <code>j</code>, <code>k</code>, and <code>l</code> keys are waiting for you. Alternatively, you could use the <a href="http://www.tylercipriani.com/vim.html">konami code</a> version of this snippet.</p>
-
-<p>Learning to operate Vim without leaving the home row is the first rite of passage. If you&rsquo;re still in the habit of moving around using the arrow keys, then you should disable them today.</p>
+        <h4><a href="/blog/2013/11/registers-the-good-the-bad-and-the-ugly-parts/">Registers: the Good, the Bad, and the Ugly Parts</a></h4>
+        <p>To the newcomer, Vim&rsquo;s way of doing things may seem strange, but with familiarity it becomes natural. Many of Vim&rsquo;s features seemed odd to me at first, but when I got used to them I recognised that they had their own particular elegance. However, there&rsquo;s one feature of Vim that still feels awkward to me: using registers for copy and paste. The deeper my understanding of registers becomes, the more they frustrate me!</p>
 
 
       </li>
