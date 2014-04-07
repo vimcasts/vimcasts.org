@@ -4,7 +4,7 @@ blog: episodes
 ---
 
 <div class="row">
-  <div class="small-12 columns">
+  <div class="small-12 large-10 large-offset-2 columns">
 
     <h1>All Vimcasts episodes</h1>
 
@@ -16,22 +16,39 @@ blog: episodes
     <a href="/categories">Browse all content by category.</a>
     </p>
 
-    <section id="archive">
-      <% blog(:episodes).articles.group_by {|a| {year: a.date.year, month: a.date.strftime("%B")} }.each do |date, episodes| %>
+  </div>
+</div>
+
+<section id="archive">
+  <% blog(:episodes).articles.group_by {|a| {year: a.date.year, month: a.date.strftime("%B")} }.each do |date, episodes| %>
+
+    <div class="row">
+      <div class="small-11 small-offset-1 large-10 large-offset-2 columns">
         <h3 class="archive"><%= date[:month] %> <%= date[:year] %></h3>
-        <% episodes.each do |page| %>
-        <% episode = Episode.new(page) %>
-          <div>
-            <span class="episode_number"><small>#</small><%= episode.number %></span>
-            <% link_to page, class: 'archive' do %>
-              <%= page.title %>
-              <span>(<%= episode.running_time %>)</span>
-            <% end %>
-          </div>
-        <% end %>
-      <% end %>
-    </section>
+      </div>
+    </div>
 
-</div>
-</div>
+    <% episodes.each do |page| %>
+    <% episode = Episode.new(page) %>
 
+    <div class="row episode-archive-item">
+
+      <div class="episode_number small-1 large-2 columns">
+        <span><small>#</small><%= episode.number %></span>
+      </div>
+
+      <div class="small-11 large-10 columns">
+        <% link_to page, class: 'archive' do %>
+          <%= page.title %>
+        <small>(<%= episode.running_time %>)</small>
+      </div>
+
+    </div>
+  <% end %>
+
+    <% end %>
+
+  <% end %>
+</section>
+
+<%= partial "footer-main" %>
