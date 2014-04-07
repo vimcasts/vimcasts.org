@@ -104,4 +104,13 @@ module VimcastsHelper
     " proof" if config.environment == :development
   end
 
+  def format_pubdate(page)
+    shortform = page.date.strftime("%b %e, '%y")
+    longform  = page.date.strftime("%b %e, %Y")
+    [
+      content_tag(:div, shortform, class: 'hide-for-medium-up'),
+      content_tag(:div, longform,  class: 'show-for-medium-up')
+    ].join
+  end
+
 end

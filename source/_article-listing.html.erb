@@ -10,7 +10,7 @@
       </h3>
     <% else %>
       <time class="pubdate small-2 small-push-10 large-2 large-reset-order columns" pubdate="pubdate" datetime="<%= article.date.strftime('%Y-%m-%e') %>">
-        <%= article.date.strftime('%b %e, %Y') %>
+        <%= format_pubdate(article) %>
       </time>
     <% end %>
     <h3 class="small-10 small-pull-2 large-10 large-reset-order columns">
@@ -30,7 +30,7 @@
       </div>
 
       <time class="pubdate small-3 large-2 large-pull-10 columns" pubdate="pubdate" datetime="<%= article.date.strftime('%Y-%m-%e') %>">
-        <%= article.date.strftime('%b %e, %Y') %>
+        <%= format_pubdate(article) %>
       </time>
 
     </div>
