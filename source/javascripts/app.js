@@ -6,7 +6,8 @@ $(document).foundation({
 
 $(document).ready(function() {
   if (matchMedia(Foundation.media_queries['medium']).matches) {
-    $('#shownotes').addClass('active');
+    $('#shownotes').addClass('active')
+          .parent().addClass('active');
   }
 
   // set up autocomplete

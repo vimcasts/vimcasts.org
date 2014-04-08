@@ -64,13 +64,13 @@
     <div class="content-row">
       <dl class="accordion" data-accordion>
         <dd>
-          <a href="#shownotes">Shownotes</a>
+          <a href="#shownotes">Shownotes<span class="disclosure"></span></a>
           <div id="shownotes" class="content" data-swiftype-index="true">
             <%= extended_article(current_page) %>
           </div>
         </dd>
         <dd>
-          <a href="#comments">Comments</a>
+          <a href="#comments">Comments<span class="disclosure"></span></a>
           <div id="comments" class="content">
             <%= partial "disqus" %>
           </div>
