@@ -178,3 +178,19 @@ body.index {
 
   }
 }
+
+.share-container {
+  @include grid-row();
+  .call-to-action {
+    @include grid-column($columns:12);
+    @media #{$large-up} {
+      @include grid-column($columns:10, $offset:2);
+    }
+  }
+  .buttons {
+    @include grid-column($columns:12);
+    @media #{$large-up} {
+      @include grid-column($columns:10, $offset:2);
+    }
+  }
+}

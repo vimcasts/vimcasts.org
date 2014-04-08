@@ -1,39 +1,10 @@
 @import "rrssb.scss";
 @import "settings";
-@import "foundation/components/global";
+@import "foundation/components/block-grid";
 
-.share-container {
-  position: relative;
-  padding: 0 0 25px;
-
-  @media #{$small-only} {
-    padding: 0 0 12px;
-  }
-
-  .label {
-    color: #777;
-    background-color: white;
-    display: block;
-    float: left;
-    font-size: 14px;
-    text-align: left;
-    padding: 10px 0 0;
-    width: 215px;
-
-    @media #{$small-only} {
-      width: 100%;
-    }
-
-  }
-
-  .rrssb-buttons {
-    float: left;
-    width: calc(100% - 216px);
-
-    @media #{$small-only} {
-      width: 100%;
-      float: none;
-      clear: both;
-    }
+ul.rrssb-buttons {
+  @include block-grid($per-row:2, $spacing: $block-grid-default-spacing/2);
+  @media #{$medium-up} {
+    @include block-grid($per-row:4, $spacing: $block-grid-default-spacing/2);
   }
 }

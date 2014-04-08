@@ -80,14 +80,8 @@
 
   </section>
 
-  <div class="row">
-    <div class="small-12 large-10 large-offset-2 columns">
-      <div>
-        <%= partial "social-sharing-buttons",
-          :locals => locals.merge(label: "Like this video? Spread the word!") %>
-      </div>
-    </div>
-  </div>
+  <%= partial "social-sharing-buttons",
+    :locals => locals.merge(label: "Like this video? Spread the word!") %>
 
   <div class="row">
     <div class="small-12 columns">

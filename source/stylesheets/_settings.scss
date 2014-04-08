@@ -3,7 +3,7 @@
 //
 
 // Uncomment to use rem-calc() in your settings
-// @import "foundation/functions";
+@import "foundation/functions";
 
 // $experimental: true;
 
@@ -31,7 +31,7 @@
 // $include-html-grid-classes: $include-html-classes;
 
 // $row-width: rem-calc(1000);
-// $column-gutter: rem-calc(30);
+$column-gutter: rem-calc(30);
 // $total-columns: 12;
 
 // We use these to control various global styles

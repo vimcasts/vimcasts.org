@@ -211,23 +211,26 @@ code {
   }
 }
 
-.accordion .content {
-  padding-left: 0;
-  padding-right: 0;
-}
+.accordion {
+  margin-bottom: $paragraph-margin-bottom;
+  .content {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-.accordion dd {
-  .disclosure {
-    float:right;
-    opacity: 0.5;
-  }
-  a:hover .disclosure {
-    opacity: 0.8;
-  }
-  & > a .disclosure:after {
-    content: " \25B2 ";
-  }
-  &.active > a .disclosure:after {
-    content: " \25BC ";
+  dd {
+    .disclosure {
+      float:right;
+      opacity: 0.5;
+    }
+    a:hover .disclosure {
+      opacity: 0.8;
+    }
+    & > a .disclosure:after {
+      content: " \25B2 ";
+    }
+    &.active > a .disclosure:after {
+      content: " \25BC ";
+    }
   }
 }

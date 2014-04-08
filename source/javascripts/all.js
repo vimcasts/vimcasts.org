@@ -3,7 +3,7 @@
 //= require jquery.ba-hashchange.min
 //= require jquery.swiftype.search
 //= require foundation/js/foundation
-//= require RRSSB/js/rrssb.min
+// require RRSSB/js/rrssb.min
 
 //= require swiftype-template
 //= require app
