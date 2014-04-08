@@ -7,79 +7,78 @@
     </div>
   </div>
 
-  <div class="row title-row">
-    <h2 class="episode_number small-2 small-push-10 large-2 large-reset-order columns">
-      <small>#</small><%= episode.number %>
-    </h2>
-    <h2 class="small-10 small-pull-2 large-10 large-reset-order columns">
-      <%= current_page.title %>
-    </h2>
-  </div>
-
-  <div class="row pubdate-row">
-    <div class="video-tags small-9 large-10 large-push-2 columns">
-      <% if current_page.tags.size > 0 %>
-        Tagged with:
-        <%= link_to_article_tags(current_page) %>
-      <% else %>
-        Untagged.
-      <% end %>
+  <section class="screencast">
+    <div class="title-row">
+      <h2 class="title">
+        <%= current_page.title %>
+      </h2>
+      <h2 class="episode_number">
+        <small>#</small><%= episode.number %>
+      </h2>
     </div>
-    <time class="pubdate small-3 large-2 large-pull-10 columns" pubdate="pubdate" datetime="<%= current_page.date.strftime('%Y-%m-%e') %>">
-      <%= format_pubdate(current_page) %>
-    </time>
-  </div>
 
-  <div class="row">
-    <div class="episode_summary small-12 large-10 large-offset-2 columns" data-swiftype-index="true">
-      <%= current_page.summary %>
+    <div class="pubdate-row">
+      <div class="video-tags">
+        <% if current_page.tags.size > 0 %>
+          Tagged with:
+          <%= link_to_article_tags(current_page) %>
+        <% else %>
+          Untagged.
+        <% end %>
+      </div>
+      <time class="pubdate" pubdate="pubdate" datetime="<%= current_page.date.strftime('%Y-%m-%e') %>">
+        <%= format_pubdate(current_page) %>
+      </time>
     </div>
-  </div>
 
-  <div class="row">
-
-    <div class="small-12 large-10 large-push-2 columns">
-      <div class="video_wrapper">
-        <video poster="<%= episode.poster_url %>"
-          controls="controls" preload="none" class="placeholder"
-          id="episode_<%= episode.number %>_placeholder">
-          <source src="<%= episode.ogg.url %>" type="video/ogg" />
-          <source src="<%= episode.quicktime.url %>" type="video/x-m4v" />
-        </video>
+    <div class="summary-row">
+      <div class="episode_summary enlarged" data-swiftype-index="true">
+        <%= current_page.summary %>
       </div>
     </div>
 
-    <aside class="downloads small-12 large-2 large-pull-10 columns">
+    <div class="video-row">
 
-      <ul class="inline-list hide-for-large-up">
-        <%= partial "video-metadata-links", locals: locals.merge(episode: episode) %>
-      </ul>
+      <aside class="downloads">
+        <ul class="inline-list hide-for-large-up">
+          <%= partial "video-metadata-links", locals: locals.merge(episode: episode) %>
+        </ul>
+        <ul class="side-nav show-for-large-up">
+          <%= partial "video-metadata-links", locals: locals.merge(episode: episode) %>
+        </ul>
+      </aside>
 
-      <ul class="side-nav show-for-large-up">
-        <%= partial "video-metadata-links", locals: locals.merge(episode: episode) %>
-      </ul>
+      <div class="video-column">
+        <div class="video_wrapper">
+          <video poster="<%= episode.poster_url %>"
+            controls="controls" preload="none" class="placeholder"
+            id="episode_<%= episode.number %>_placeholder">
+            <source src="<%= episode.ogg.url %>" type="video/ogg" />
+            <source src="<%= episode.quicktime.url %>" type="video/x-m4v" />
+          </video>
+        </div>
+      </div>
 
-    </aside>
-  </div>
+    </div>
 
-  <div class="row">
-    <div class="small-12 large-10 large-offset-2 columns">
+    <div class="content-row">
       <dl class="accordion" data-accordion>
         <dd>
-        <a href="#shownotes">Shownotes</a>
-        <div id="shownotes" class="content" data-swiftype-index="true">
-          <%= extended_article(current_page) %>
-        </div>
+          <a href="#shownotes">Shownotes</a>
+          <div id="shownotes" class="content" data-swiftype-index="true">
+            <%= extended_article(current_page) %>
+          </div>
         </dd>
         <dd>
-        <a href="#comments">Comments</a>
-        <div id="comments" class="content">
-          <%= partial "disqus" %>
-        </div>
+          <a href="#comments">Comments</a>
+          <div id="comments" class="content">
+            <%= partial "disqus" %>
+          </div>
         </dd>
       </dl>
     </div>
-  </div>
+
+  </section>
 
   <div class="row">
     <div class="small-12 large-10 large-offset-2 columns">

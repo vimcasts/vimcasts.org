@@ -79,10 +79,41 @@ section.screencast, section.article {
 
   .summary-row {
     @include grid-row();
-    div {
+    div.episode_summary {
       @include grid-column($columns:12);
       @media #{$large-up} {
         @include grid-column($columns:8, $offset:2);
+      }
+    }
+    div.enlarged {
+      @media #{$large-up} {
+        @include grid-column($columns:10, $offset:2);
+      }
+    }
+  }
+
+  .video-row {
+    @include grid-row();
+    .downloads {
+      @include grid-column($columns:12);
+      @media #{$large-up} {
+        @include grid-column($columns:2, $collapse: true);
+      }
+    }
+    .video-column {
+      @include grid-column($columns:12);
+      @media #{$large-up} {
+        @include grid-column($columns:10);
+      }
+    }
+  }
+
+  .content-row {
+    @include grid-row();
+    dl.accordion {
+      @include grid-column($columns:12);
+      @media #{$large-up} {
+        @include grid-column($columns:10, $offset:2);
       }
     }
   }

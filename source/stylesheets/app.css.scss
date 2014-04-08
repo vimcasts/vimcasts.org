@@ -153,11 +153,14 @@ a.readmore {
   font-style: italic;
 }
 
-section.article, section.screencast {
+.blog_index section.article, .episodes_index section.screencast {
   margin-bottom: $header-bottom-margin * 10;
+}
+
+section.article, section.screencast {
   .pubdate-row {
     &, body.index & {
-      margin-bottom: $header-bottom-margin * 2;
+      margin-bottom: $header-bottom-margin;
     }
   }
 }
@@ -174,9 +177,14 @@ h3 small { font-size: $h4-font-size; }
     color: lighten($body-font-color, 45%);
   }
 }
-.episode_summary p {
-  font-size: $h4-font-size;
+
+.enlarged p {
+  font-size: $h5-font-size;
+  @media #{$medium-up} {
+    font-size: $h4-font-size;
+  }
 }
+
 aside.downloads {
 }
 
