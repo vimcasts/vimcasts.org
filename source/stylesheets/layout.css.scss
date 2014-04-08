@@ -117,6 +117,18 @@ section.screencast, section.article {
       }
     }
   }
+
+  #shownotes, #comments {
+    @include grid-row();
+    & > * {
+      @include grid-column($columns:12);
+    }
+    &>p, blockquote {
+      @media #{$medium-up} {
+        @include grid-column($columns:10);
+      }
+    }
+  }
 }
 
 // homepage - styling for "Latest {screencast,article}"
