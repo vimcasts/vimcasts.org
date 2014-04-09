@@ -128,25 +128,35 @@
           </div>
         </div>
 
-          <div class="row">
-    <div class="small-12 columns">
-
-      
-
-      <header>
-        <h2>The Fugitive Series - a retrospective</h2>
-        <time pubdate="pubdate" datetime="2011-05-18">
-          May 18, 2011
-        </time>
         
-          <div class="article-tags">
+  <div class="row">
+    <div class="small-12 columns">
+      
+    </div>
+  </div>
+
+  <section class="article">
+    <header>
+      <div class="title-row">
+        <h2 class="title">
+          The Fugitive Series - a retrospective
+        </h2>
+      </div>
+      <div class="pubdate-row">
+        <div class="video-tags">
+          
             Tagged with:
             <a href="/categories/plugins">plugins</a>, <a href="/categories/fugitive">fugitive</a>
-          </div>
-        
-      </header>
+          
+        </div>
+        <time class="pubdate" pubdate="pubdate" datetime="2011-05-18">
+          <div class="hide-for-medium-up">May&nbsp;18, '11</div><div class="show-for-medium-up">May 18, 2011</div>
+        </time>
+      </div>
+    </header>
 
-      <div data-swiftype-index="true">
+    <div class="content-row">
+      <div id="article_body" data-swiftype-index="true">
         <p><em>Fugitive.vim: a git wrapper so awesome, it should be illegal.</em> That&rsquo;s how Tim Pope describes his git plugin for Vim. I&rsquo;ve had <a href="http://www.vim.org/scripts/script.php?script_id=2975">fugitive.vim</a> installed since it was released, but until recently I never took the time to figure out what was <em>so awesome</em> that could make it illegal.</p>
 
 
@@ -210,12 +220,11 @@
 <p>Finally, I&rsquo;d like to thank Tim Pope for patiently answering my questions, reviewing drafts of each episode, and of course, for creating this awesome plugin in the first place. The Vim landscape would be a much more barren place without your plugins. Thanks Tim.</p>
 
       </div>
-
       <dl class="accordion" data-accordion>
         <dd>
-        <a href="#comments">Comments</a>
-        <div id="comments" class="content">
-          <div id="disqus_thread"></div>
+          <a href="#comments">Comments<span class="disclosure"></span></a>
+          <div id="comments" class="content">
+            <div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'vimcasts'; // required: replace example with your forum shortname
@@ -231,12 +240,14 @@
 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
-        </div>
+          </div>
         </dd>
       </dl>
+    </div>
 
-      <div>
-        
+  </section>
+
+  
 <div class="share-container">
   <p class="call-to-action">Like this article? Spread the word!</p>
 
@@ -313,8 +324,9 @@
   </div>
 </div>
 
-      </div>
 
+  <div class="row">
+    <div class="small-12 columns">
       <div>
   <hr/>
   <h3>Related content</h3>
@@ -325,15 +337,25 @@
 
     
       <li>
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+      </li>
+    
+      <li>
         <h4><a href="/categories">Find by category</a></h4>
         <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
       <li>
-        <h4><a href="/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/">Fugitive.vim - exploring the history of a git repository</a></h4>
-        <p>Git provides tools for searching the contents of files, commit messages, and even whether text was added or removed by a commit. In this episode, we&rsquo;ll see how fugitive&rsquo;s <code>Ggrep</code> and <code>Glog</code> commands wrap this functionality up so that we can search the contents and history of a git repo from right inside of Vim.</p>
+        <h4><a href="/episodes/smart-search-with-subvert/">Smart search with :Subvert</a></h4>
+        <p>The <code>:Subvert</code> command lets us create a particular style of regular expressions with ease. It&rsquo;s great for matching irregular singular and plural words in plain English and also for variable names that come in <code>snake_case</code> and <code>MixedCase</code> forms.</p>
 
-<p><em>This is the last of our five part series on fugitive.vim.</em></p>
+<p><em>This is part one of a three-part series on Tim Pope&rsquo;s abolish plugin.</em></p>
 
 
       </li>
@@ -355,28 +377,17 @@ Gary Bernhardt on <a href="http://rubyrogues.com/040-rr-text-editors-and-ides/">
       </li>
     
       <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/smart-search-with-subvert/">Smart search with :Subvert</a></h4>
-        <p>The <code>:Subvert</code> command lets us create a particular style of regular expressions with ease. It&rsquo;s great for matching irregular singular and plural words in plain English and also for variable names that come in <code>snake_case</code> and <code>MixedCase</code> forms.</p>
+        <h4><a href="/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/">Fugitive.vim - exploring the history of a git repository</a></h4>
+        <p>Git provides tools for searching the contents of files, commit messages, and even whether text was added or removed by a commit. In this episode, we&rsquo;ll see how fugitive&rsquo;s <code>Ggrep</code> and <code>Glog</code> commands wrap this functionality up so that we can search the contents and history of a git repo from right inside of Vim.</p>
 
-<p><em>This is part one of a three-part series on Tim Pope&rsquo;s abolish plugin.</em></p>
+<p><em>This is the last of our five part series on fugitive.vim.</em></p>
 
 
-      </li>
-    
-      <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
       </li>
     
 
   </ul>
 </div>
-
 
       <div class="row footer">
 
@@ -398,10 +409,8 @@ Gary Bernhardt on <a href="http://rubyrogues.com/040-rr-text-editors-and-ides/">
 
 </div>
 
-
     </div>
   </div>
-
 
 
 

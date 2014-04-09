@@ -128,25 +128,35 @@
           </div>
         </div>
 
-          <div class="row">
-    <div class="small-12 columns">
-
-      
-
-      <header>
-        <h2>Oil and vinegar - split windows and the project drawer</h2>
-        <time pubdate="pubdate" datetime="2013-01- 2">
-          Jan  2, 2013
-        </time>
         
-          <div class="article-tags">
+  <div class="row">
+    <div class="small-12 columns">
+      
+    </div>
+  </div>
+
+  <section class="article">
+    <header>
+      <div class="title-row">
+        <h2 class="title">
+          Oil and vinegar - split windows and the project drawer
+        </h2>
+      </div>
+      <div class="pubdate-row">
+        <div class="video-tags">
+          
             Tagged with:
             <a href="/categories/articles">articles</a>, <a href="/categories/windows">windows</a>, <a href="/categories/file-explorers">file-explorers</a>
-          </div>
-        
-      </header>
+          
+        </div>
+        <time class="pubdate" pubdate="pubdate" datetime="2013-01- 2">
+          <div class="hide-for-medium-up">Jan&nbsp; 2, '13</div><div class="show-for-medium-up">Jan  2, 2013</div>
+        </time>
+      </div>
+    </header>
 
-      <div data-swiftype-index="true">
+    <div class="content-row">
+      <div id="article_body" data-swiftype-index="true">
         <p>Do you avoid using Vim&rsquo;s split windows because they&rsquo;re confusing? That might be a problem of your own devising. If you&rsquo;ve bolted a project drawer onto Vim, then you&rsquo;ve added unnecessary complexity to Vim&rsquo;s otherwise minimal interface. Split windows and the project drawer go together like oil and vinegar. I don&rsquo;t mean to say that you can combine them to create a delicious salad dressing. I mean that they don&rsquo;t mix well!</p>
 
 
@@ -222,12 +232,11 @@
 <p>The illustrations in this blog post are adapted from <a href="http://pragprog.com/book/dnvim/practical-vim">Practical Vim</a>. For more discussion, please refer to <em>Tip 43 Explore the file system with netrw</em> and <em>Tip 39: Divide your workspace into split windows</em>.</p>
 
       </div>
-
       <dl class="accordion" data-accordion>
         <dd>
-        <a href="#comments">Comments</a>
-        <div id="comments" class="content">
-          <div id="disqus_thread"></div>
+          <a href="#comments">Comments<span class="disclosure"></span></a>
+          <div id="comments" class="content">
+            <div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'vimcasts'; // required: replace example with your forum shortname
@@ -243,12 +252,14 @@
 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
-        </div>
+          </div>
         </dd>
       </dl>
+    </div>
 
-      <div>
-        
+  </section>
+
+  
 <div class="share-container">
   <p class="call-to-action">Like this article? Spread the word!</p>
 
@@ -325,8 +336,9 @@
   </div>
 </div>
 
-      </div>
 
+  <div class="row">
+    <div class="small-12 columns">
       <div>
   <hr/>
   <h3>Related content</h3>
@@ -335,28 +347,6 @@
     
     
 
-    
-      <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/blog/2013/11/registers-the-good-the-bad-and-the-ugly-parts/">Registers: the Good, the Bad, and the Ugly Parts</a></h4>
-        <p>To the newcomer, Vim&rsquo;s way of doing things may seem strange, but with familiarity it becomes natural. Many of Vim&rsquo;s features seemed odd to me at first, but when I got used to them I recognised that they had their own particular elegance. However, there&rsquo;s one feature of Vim that still feels awkward to me: using registers for copy and paste. The deeper my understanding of registers becomes, the more they frustrate me!</p>
-
-
-      </li>
-    
-      <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
-      </li>
     
       <li>
         <h4><a href="/blog/2012/08/on-sharpening-the-saw/">On sharpening the saw</a></h4>
@@ -370,6 +360,28 @@ Gary Bernhardt on <a href="http://rubyrogues.com/040-rr-text-editors-and-ides/">
 </blockquote>
 
 <p>Gary&rsquo;s chainsaw metaphor warns against the practice of over-customizing Vim. But I would also warn against using Vim without any customizations. Vim is highly configurable, and some of the default settings are suboptimal. If you don&rsquo;t have a basic vimrc, then you&rsquo;re putting up with inconveniences that were fixed decades ago.</p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/blog/2013/11/registers-the-good-the-bad-and-the-ugly-parts/">Registers: the Good, the Bad, and the Ugly Parts</a></h4>
+        <p>To the newcomer, Vim&rsquo;s way of doing things may seem strange, but with familiarity it becomes natural. Many of Vim&rsquo;s features seemed odd to me at first, but when I got used to them I recognised that they had their own particular elegance. However, there&rsquo;s one feature of Vim that still feels awkward to me: using registers for copy and paste. The deeper my understanding of registers becomes, the more they frustrate me!</p>
 
 
       </li>
@@ -394,7 +406,6 @@ noremap &lt;Right&gt; &lt;NOP&gt;
   </ul>
 </div>
 
-
       <div class="row footer">
 
   <hr/>
@@ -415,10 +426,8 @@ noremap &lt;Right&gt; &lt;NOP&gt;
 
 </div>
 
-
     </div>
   </div>
-
 
 
 

@@ -128,25 +128,35 @@
           </div>
         </div>
 
-          <div class="row">
-    <div class="small-12 columns">
-
-      
-
-      <header>
-        <h2>The copy/paste series - a retrospective</h2>
-        <time pubdate="pubdate" datetime="2013-11-18">
-          Nov 18, 2013
-        </time>
         
-          <div class="article-tags">
+  <div class="row">
+    <div class="small-12 columns">
+      
+    </div>
+  </div>
+
+  <section class="article">
+    <header>
+      <div class="title-row">
+        <h2 class="title">
+          The copy/paste series - a retrospective
+        </h2>
+      </div>
+      <div class="pubdate-row">
+        <div class="video-tags">
+          
             Tagged with:
             <a href="/categories/registers">registers</a>, <a href="/categories/copy-and-paste">copy-and-paste</a>
-          </div>
-        
-      </header>
+          
+        </div>
+        <time class="pubdate" pubdate="pubdate" datetime="2013-11-18">
+          <div class="hide-for-medium-up">Nov&nbsp;18, '13</div><div class="show-for-medium-up">Nov 18, 2013</div>
+        </time>
+      </div>
+    </header>
 
-      <div data-swiftype-index="true">
+    <div class="content-row">
+      <div id="article_body" data-swiftype-index="true">
         <p>Episodes <a href="/e/51">51</a>, <a href="/e/52">52</a>, <a href="/e/53">53</a>, <a href="/e/54">54</a>, <a href="/e/55">55</a>, <a href="/e/58">58</a>, and <a href="/e/59">59</a> are all on the topic of copy and paste in Vim. I think that this is one area where Vim is especially confusing, partly because of <a href="http://vimcasts.org/episodes/meet-the-yank-register#vim-jargon">Vim&rsquo;s non-standard jargon for cut, copy and paste operations</a>. It&rsquo;s not the most intuitive copy/paste system, but it&rsquo;s usable when you get the hang of certain concepts and techniques.</p>
 
 
@@ -174,12 +184,11 @@
 <p>Even without the <code>+clipboard</code> feature, we can still insert text from the clipboard using the system paste command (<code>ctrl-v</code> or <code>cmd-v</code>). This can produce strange effects, but we can avoid them by toggling the &lsquo;paste&rsquo; option each time we use the system paste command. <a href="/e/59">Episode 59 - Using Vim&rsquo;s paste mode with the system paste command</a> goes into more detail.</p>
 
       </div>
-
       <dl class="accordion" data-accordion>
         <dd>
-        <a href="#comments">Comments</a>
-        <div id="comments" class="content">
-          <div id="disqus_thread"></div>
+          <a href="#comments">Comments<span class="disclosure"></span></a>
+          <div id="comments" class="content">
+            <div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'vimcasts'; // required: replace example with your forum shortname
@@ -195,12 +204,14 @@
 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
-        </div>
+          </div>
         </dd>
       </dl>
+    </div>
 
-      <div>
-        
+  </section>
+
+  
 <div class="share-container">
   <p class="call-to-action">Like this article? Spread the word!</p>
 
@@ -277,8 +288,9 @@
   </div>
 </div>
 
-      </div>
 
+  <div class="row">
+    <div class="small-12 columns">
       <div>
   <hr/>
   <h3>Related content</h3>
@@ -287,6 +299,11 @@
     
     
 
+    
+      <li>
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+      </li>
     
       <li>
         <h4><a href="/blog/2013/11/registers-the-good-the-bad-and-the-ugly-parts/">Registers: the Good, the Bad, and the Ugly Parts</a></h4>
@@ -301,10 +318,8 @@
       </li>
     
       <li>
-        <h4><a href="/episodes/using-vims-paste-mode-with-the-system-paste-command/">Using Vim's paste mode with the system paste command</a></h4>
-        <p>When Vim is compiled without the <code>+clipboard</code> feature, we can still insert text from the clipboard using the system paste command (<code>ctrl-v</code> or <code>cmd-v</code>). This can produce strange effects, but we can avoid them by toggling the <code>paste</code> option each time we use the system paste command.</p>
-
-
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
       </li>
     
       <li>
@@ -315,19 +330,15 @@
       </li>
     
       <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+        <h4><a href="/episodes/using-vims-paste-mode-with-the-system-paste-command/">Using Vim's paste mode with the system paste command</a></h4>
+        <p>When Vim is compiled without the <code>+clipboard</code> feature, we can still insert text from the clipboard using the system paste command (<code>ctrl-v</code> or <code>cmd-v</code>). This can produce strange effects, but we can avoid them by toggling the <code>paste</code> option each time we use the system paste command.</p>
+
+
       </li>
     
 
   </ul>
 </div>
-
 
       <div class="row footer">
 
@@ -349,10 +360,8 @@
 
 </div>
 
-
     </div>
   </div>
-
 
 
 
