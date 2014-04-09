@@ -161,7 +161,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>Vim doesn&rsquo;t have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as <code>:substitute</code>, <code>:argdo</code>, and <code>:vimgrep</code>. We&rsquo;ll look at two possible strategies: first using the arglist, then the quickfix list.</p>
 
 
@@ -208,7 +208,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p><code>vimgrep</code> is Vim&rsquo;s built-in command for searching across multiple files. It&rsquo;s not so fast as external tools like ack and git-grep, but it has its uses. <code>vimgrep</code> uses Vim&rsquo;s built-in regex engine, so you can reuse the patterns that work with Vim&rsquo;s standard search command. </p>
 
 
@@ -255,7 +255,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>The <code>:argdo</code> command allows us to execute an Ex command across all buffers in the arglist.  To demonstrate, we&rsquo;ll use the example of running the <code>:substitute</code> command across multiple files, then we&rsquo;ll see how to revert or save the changes.  We&rsquo;ll also compare the <code>:argdo</code> and <code>:bufdo</code> commands, and consider when it&rsquo;s appropriate to use each one.</p>
 
 
@@ -302,7 +302,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>The arglist wouldn&rsquo;t be much use if we had to quit and relaunch Vim every time we wanted to change its contents. In this episode, we&rsquo;ll learn how to set the contents of the arglist using the <code>:args</code> command, which can receive filepaths, globs, or even backtick expressions.</p>
 
 
@@ -349,7 +349,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>The arglist feature complements Vim&rsquo;s buffer list. In this episode, we&rsquo;ll learn a handful of commands for traversing the arglist. We&rsquo;ll see that it&rsquo;s useful to think of the arglist as a stable subset of the files in the buffer list.</p>
 
 
@@ -396,7 +396,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>When writing code, we can often save time by duplicating a line then changing one or two parts of that line to make it suit our purposes. In this episode, we&rsquo;ll compare a few techniques for duplicating lines, and we&rsquo;ll see that the <code>:copy</code> Ex command is well suited to this task.</p>
 
 
@@ -443,7 +443,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>Vim users are unforgiving of plugins that impair performance. Luckily, Vim provides built-in profiling tools that make it easy to diagnose performance issues. We&rsquo;ll start by looking at how to profile the vimrc file, then move on to a real world scenario where profiling helped to identify and aleviate a performance bottleneck.</p>
 
 
@@ -490,7 +490,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>With a little bit of Vimscript, you can create a custom folding expression for any filetype. We&rsquo;ll start by looking at the mechanics of folding with markers, then go on to create a folding expression for markdown documents.</p>
 
 
@@ -537,7 +537,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>Vim&rsquo;s folding feature enables us to expand and collapse regions of a document. Not only does this allow us to organize our workspace, it also makes it easy to navigate around the document, and to rearrange entire sections as though they were single lines.</p>
 
 
@@ -584,7 +584,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>For the VimGolf challenge <a href="http://vimgolf.com/challenges/4d1c27940e3d7832db000010">&ldquo;List the first 100 prime numbers&rdquo;</a>, there&rsquo;s a solution that uses a regular expression to detect prime numbers. At 43 keystokes, it&rsquo;s not the winning solution, but I think it&rsquo;s the most interesting one. It uses a few clever Vim tricks, including macros, control-a to increment, the very magic pattern switch, and the <code>:global</code> command. There&rsquo;s a lot to learn from those 43 keystrokes, so let&rsquo;s study it!</p>
 
 

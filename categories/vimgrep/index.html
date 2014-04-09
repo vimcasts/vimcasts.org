@@ -168,7 +168,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>Vim doesn&rsquo;t have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as <code>:substitute</code>, <code>:argdo</code>, and <code>:vimgrep</code>. We&rsquo;ll look at two possible strategies: first using the arglist, then the quickfix list.</p>
 
 
@@ -200,7 +200,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>The <code>vimgrep</code> command uses Vim&rsquo;s native regular expressions to search the contents of multiple files. There are several ways that we can specify the list of files to look inside, including <code>*</code> and <code>**</code> wildcards. It would be handy if we could instruct <code>vimgrep</code> to look inside all of the files in the current project, excluding those listed in the <code>.gitignore</code> file. That&rsquo;s where the <a href="https://www.kernel.org/pub/software/scm/git/docs/git-ls-files.html"><code>git ls-files</code></a> command comes in.</p>
 
 
@@ -232,7 +232,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>I love the way that ack let&rsquo;s me specify the files to search inside. For starters, ack does the right thing by ignoring the contents of VCS directories, backup files, core dumps etc., which gives a good signal to noise ratio. On top of that, ack provides a convenient syntax for specifying filetypes to include or exclude from the set (see <code>ack --help-types</code>). I can target ruby files only with the <code>--ruby</code> option, or everything but ruby files with <code>--noruby</code>.</p>
 
 <p>I also love using <code>:vimgrep</code>, because it lets me use Vim&rsquo;s native regular expressions. For me, the ideal project-wide search would combine Vim&rsquo;s regex with ack&rsquo;s method of specifying the set of files to search through. I recently learned about ack&rsquo;s <code>-f</code> flag, which makes this combination possible.</p>
@@ -282,7 +282,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p><code>vimgrep</code> is Vim&rsquo;s built-in command for searching across multiple files. It&rsquo;s not so fast as external tools like ack and git-grep, but it has its uses. <code>vimgrep</code> uses Vim&rsquo;s built-in regex engine, so you can reuse the patterns that work with Vim&rsquo;s standard search command. </p>
 
 

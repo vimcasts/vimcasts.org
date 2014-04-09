@@ -161,7 +161,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>We don&rsquo;t have to be in Normal mode to paste the contents of a register. The <a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r"><code>&lt;C-r&gt;{reg}</code></a> command lets us paste a register from Insert mode (and it <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-r">works in commandline mode too</a>!) Using this command allows us to make changes that can be repeated with <a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#.">the dot command</a>.</p>
 
 
@@ -208,7 +208,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>When used <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#v_p">in Visual mode the <code>p</code> command</a> replaces the selection with the contents of a register. This makes for a smooth workflow when you want to overwrite a selection, or swap the order of two regions of text.</p>
 
 
@@ -255,7 +255,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>We&rsquo;ve met Vim&rsquo;s <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote">default register</a> and the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0">yank register</a>. This time, we&rsquo;re going to look at the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote_alpha">named registers</a>, which are handy if you want to cut or copy some text that you intend to paste multiple times.</p>
 
 
@@ -302,7 +302,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>Vim&rsquo;s default register is not a safe place to keep yanked text that you want to paste later. It&rsquo;s all too easy to clobber the default register with a <code>d</code> or <code>x</code> command. Luckily, the last yanked text is kept safe in Vim&rsquo;s <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0">yank register</a>.</p>
 
 
@@ -349,7 +349,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>Vim&rsquo;s <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote">default register</a> makes it easy to perform some of the most basic types of cut, copy, and paste operations. That&rsquo;s partly thanks to the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#p"><code>p</code></a> command, which behaves differently depending on whether the default register contains a characterwise or linewise region of text.</p>
 
 
@@ -396,7 +396,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p><a href="https://github.com/kana/vim-vspec">Vspec</a> is a library that allows you to test-drive your Vimscript code. In this tutorial, we&rsquo;ll cover the basics: how to inspect the contents of a buffer, how to simulate the actions of a user, and how to invoke user-defined mappings.</p>
 
 
@@ -443,7 +443,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>Vim&rsquo;s built-in abbreviation feature is handy if you want to auto-correct words that you frequently misspell, but it requires a lot of setup. The <code>:Abolish</code> command makes it easy to generate abbreviations that will correct multiple forms of the same word.</p>
 
 <p><em>This is the final of a three-part series on Tim Pope’s <a href="https://github.com/tpope/vim-abolish">abolish</a> plugin.</em></p>
@@ -492,7 +492,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>The <a href="https://github.com/tpope/vim-abolish">abolish plugin</a> provides a command called <code>:Subvert</code>, which is like a supercharged version of Vim&rsquo;s built-in <code>:substitute</code> command. The <code>:Subvert</code> command is especially useful for changing singular and plural variants of a word, and for refactoring names that appear in <code>snake_case</code> and <code>MixedCase</code>.</p>
 
 <p><em>This is part two of a three-part series on Tim Pope&rsquo;s <a href="https://github.com/tpope/vim-abolish">abolish</a> plugin.</em></p>
@@ -541,7 +541,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>The <code>:Subvert</code> command lets us create a particular style of regular expressions with ease. It&rsquo;s great for matching irregular singular and plural words in plain English and also for variable names that come in <code>snake_case</code> and <code>MixedCase</code> forms.</p>
 
 <p><em>This is part one of a three-part series on Tim Pope&rsquo;s abolish plugin.</em></p>
@@ -590,7 +590,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p><a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#star">The <code>*</code> command</a> searches for the word under the cursor. That makes sense in Normal mode, but from Visual mode it would be more useful if the star command searched for the current <em>selection</em>, rather than the current word. We can add this feature to Vim using the <a href="https://github.com/nelstrom/vim-visual-star-search">visual star search plugin</a>.</p>
 
 

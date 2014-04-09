@@ -152,7 +152,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>To the newcomer, Vim&rsquo;s way of doing things may seem strange, but with familiarity it becomes natural. Many of Vim&rsquo;s features seemed odd to me at first, but when I got used to them I recognised that they had their own particular elegance. However, there&rsquo;s one feature of Vim that still feels awkward to me: using registers for copy and paste. The deeper my understanding of registers becomes, the more they frustrate me!</p>
 
 
@@ -184,7 +184,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>Episodes <a href="/e/51">51</a>, <a href="/e/52">52</a>, <a href="/e/53">53</a>, <a href="/e/54">54</a>, <a href="/e/55">55</a>, <a href="/e/58">58</a>, and <a href="/e/59">59</a> are all on the topic of copy and paste in Vim. I think that this is one area where Vim is especially confusing, partly because of <a href="http://vimcasts.org/episodes/meet-the-yank-register#vim-jargon">Vim&rsquo;s non-standard jargon for cut, copy and paste operations</a>. It&rsquo;s not the most intuitive copy/paste system, but it&rsquo;s usable when you get the hang of certain concepts and techniques.</p>
 
 
@@ -232,7 +232,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>When Vim is compiled without the <code>+clipboard</code> feature, we can still insert text from the clipboard using the system paste command (<code>ctrl-v</code> or <code>cmd-v</code>). This can produce strange effects, but we can avoid them by toggling the <code>paste</code> option each time we use the system paste command.</p>
 
 
@@ -264,7 +264,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>Many systems ship with a version of Vim that was compiled with the <code>-clipboard</code> feature disabled, which is a damned nuisance! Being able to <a href="http://vimcasts.org/e/58">access the system clipboard from Vim</a> is an essential feature. Let&rsquo;s look at a few ways of getting the <code>+clipboard</code> feature on OS X and Ubuntu.</p>
 
 
@@ -312,7 +312,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>In some environments, Vim lets us access the system clipboard using the quoteplus register, <code>&quot;+</code>. When this feature is enabled, we can use it with the delete, yank and put operations in much the same way that we use Vim&rsquo;s other registers. Pasting from this register usually produces better results than using the system paste command in Insert mode.</p>
 
 
@@ -360,7 +360,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>In <a href="/e/56">the previous lesson</a> we learned how use the expression register to evaluate simple calculations. We can also call built-in and user-defined Vimscript functions, and thanks to the <code>system()</code> function, we can also fetch output from external scripts.</p>
 
 
@@ -408,7 +408,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>The <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote=">expression register</a> lets us evaluate a snippet of Vimscript code. This is handy when you need to perform simple calculations and insert the result into the document.</p>
 
 
@@ -456,7 +456,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>We don&rsquo;t have to be in Normal mode to paste the contents of a register. The <a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r"><code>&lt;C-r&gt;{reg}</code></a> command lets us paste a register from Insert mode (and it <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-r">works in commandline mode too</a>!) Using this command allows us to make changes that can be repeated with <a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#.">the dot command</a>.</p>
 
 
@@ -504,7 +504,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>When used <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#v_p">in Visual mode the <code>p</code> command</a> replaces the selection with the contents of a register. This makes for a smooth workflow when you want to overwrite a selection, or swap the order of two regions of text.</p>
 
 
@@ -552,7 +552,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>We&rsquo;ve met Vim&rsquo;s <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote">default register</a> and the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0">yank register</a>. This time, we&rsquo;re going to look at the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote_alpha">named registers</a>, which are handy if you want to cut or copy some text that you intend to paste multiple times.</p>
 
 
@@ -600,7 +600,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>Vim&rsquo;s default register is not a safe place to keep yanked text that you want to paste later. It&rsquo;s all too easy to clobber the default register with a <code>d</code> or <code>x</code> command. Luckily, the last yanked text is kept safe in Vim&rsquo;s <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0">yank register</a>.</p>
 
 
@@ -648,7 +648,7 @@
   
 
   <div class="summary-row">
-    <div>
+    <div class="episode_summary">
       <p>Vim&rsquo;s <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quotequote">default register</a> makes it easy to perform some of the most basic types of cut, copy, and paste operations. That&rsquo;s partly thanks to the <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#p"><code>p</code></a> command, which behaves differently depending on whether the default register contains a characterwise or linewise region of text.</p>
 
 
