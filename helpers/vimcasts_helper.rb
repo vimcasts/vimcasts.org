@@ -105,7 +105,7 @@ module VimcastsHelper
   end
 
   def format_pubdate(page)
-    shortform = page.date.strftime("%b %e, '%y")
+    shortform = page.date.strftime("%b&nbsp;%e, '%y")
     longform  = page.date.strftime("%b %e, %Y")
     [
       content_tag(:div, shortform, class: 'hide-for-medium-up'),

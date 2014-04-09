@@ -64,13 +64,13 @@ section.screencast, section.article {
   .pubdate-row {
     @include grid-row();
     .video-tags {
-      @include grid-column($columns:9);
+      @include grid-column($columns:8);
       @media #{$large-up} {
         @include grid-column($columns:10, $push:2);
       }
     }
     .pubdate {
-      @include grid-column($columns:3);
+      @include grid-column($columns:4);
       @media #{$large-up} {
         @include grid-column($columns:2, $pull:10, $collapse: true);
       }
