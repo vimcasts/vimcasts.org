@@ -1,15 +1,45 @@
 <% wrap_layout :layout do %>
+  <% if episode = episode_from_transcript(current_page) %>
+
+  <section class="transcript">
+    <div class="title-row">
+      <h2 class="title">
+        <%= episode.title %>
+      </h2>
+      <h2 class="episode_number">
+        <small>#</small><%= episode.data.number %>
+      </h2>
+    </div>
+
+    <div class="pubdate-row">
+      <div class="transcript-context">
+        This is a transcript of
+        <%= link_to "screencast&nbsp;#{episode.data.number}", episode.url %>.
+      </div>
+      <time class="pubdate" pubdate="pubdate" datetime="<%= episode.date.strftime('%Y-%m-%e') %>">
+        <%= format_pubdate(episode) %>
+      </time>
+    </div>
+
+    <div class="summary-row">
+      <div class="episode_summary enlarged">
+        <%= episode.summary %>
+      </div>
+    </div>
+
+    <div class="transcript-row">
+      <div class="transcript-body">
+      <%= yield %>
+      </div>
+    </div>
+
+  </section>
+
   <div class="row">
     <div class="small-12 columns">
-
-      <% if episode = episode_from_transcript(current_page) %>
-        <h1><%= link_to episode.title, episode.url %></h1>
-        <h2>Transcript for episode #<%= episode.data.number %></h2>
-
-        <%= episode.summary %>
-      <% end %>
-
-      <%= yield %>
+      <%= partial "footer-main" %>
     </div>
   </div>
+
+  <% end %>
 <% end %>

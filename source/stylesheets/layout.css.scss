@@ -44,7 +44,7 @@
 
 
 // _article-listing - used for /episodes and /blog listings
-section.screencast, section.article {
+section.screencast, section.article, section.transcript {
   .title-row {
     @include grid-row();
     .title {
@@ -63,7 +63,7 @@ section.screencast, section.article {
 
   .pubdate-row {
     @include grid-row();
-    .video-tags {
+    .video-tags, .transcript-context {
       @include grid-column($columns:8);
       @media #{$large-up} {
         @include grid-column($columns:10, $push:2);
@@ -132,6 +132,25 @@ section.screencast, section.article {
     &>p, blockquote {
       @media #{$medium-up} {
         @include grid-column($columns:10);
+      }
+    }
+  }
+
+  .transcript-row {
+    @include grid-row();
+    .transcript-body {
+      @include grid-column($columns:12, $collapse:true);
+      @media #{$large-up} {
+        @include grid-column($columns:10, $offset:2, $collapse:true);
+      }
+
+      & > * {
+        @include grid-column($columns:12);
+      }
+      &>p, blockquote {
+        @media #{$medium-up} {
+          @include grid-column($columns:10);
+        }
       }
     }
   }

@@ -157,7 +157,7 @@ a.readmore {
   margin-bottom: $header-bottom-margin * 10;
 }
 
-section.article, section.screencast {
+section.article, section.screencast, section.transcript {
   .pubdate-row {
     &, body.index & {
       margin-bottom: $header-bottom-margin;
