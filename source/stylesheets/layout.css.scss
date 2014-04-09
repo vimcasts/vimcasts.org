@@ -1,5 +1,7 @@
 @import "settings";
 @import "foundation/components/grid.scss";
+@import "foundation/components/inline-lists.scss";
+@import "foundation/components/side-nav.scss";
 
 .archive-intro {
   @include grid-row();
@@ -97,13 +99,19 @@ section.screencast, section.article, section.transcript {
     .downloads {
       @include grid-column($columns:12);
       @media #{$large-up} {
-        @include grid-column($columns:2, $collapse: true);
+        @include grid-column($columns:2, $pull:10, $collapse: true);
+      }
+      .download-videos, .video-metadata {
+        @include grid-column($columns:6);
+        @media #{$large-up} {
+          @include grid-column($columns:12);
+        }
       }
     }
     .video-column {
       @include grid-column($columns:12);
       @media #{$large-up} {
-        @include grid-column($columns:10);
+        @include grid-column($columns:10, $push:2);
       }
     }
   }
@@ -217,5 +225,17 @@ body.index {
     @media #{$large-up} {
       @include grid-column($columns:10, $offset:2);
     }
+  }
+}
+
+.downloads-list {
+  @media #{$small-only} {
+    @include inline-list;
+  }
+  @media #{$medium-only} {
+    @include inline-list;
+  }
+  @media #{$large-up} {
+    @include side-nav();
   }
 }
