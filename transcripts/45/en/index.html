@@ -128,18 +128,38 @@
           </div>
         </div>
 
-          <div class="row">
-    <div class="small-12 columns">
+          
 
-      
-        <h1><a href="/episodes/project-wide-find-and-replace/">Project-wide find and replace</a></h1>
-        <h2>Transcript for episode #45</h2>
+  <section class="transcript">
+    <div class="title-row">
+      <h2 class="title">
+        Project-wide find and replace
+      </h2>
+      <h2 class="episode_number">
+        <small>#</small>45
+      </h2>
+    </div>
 
+    <div class="pubdate-row">
+      <div class="transcript-context">
+        This is a transcript of
+        <a href="/episodes/project-wide-find-and-replace/">screencast&nbsp;45</a>.
+      </div>
+      <time class="pubdate" pubdate="pubdate" datetime="2013-03-19">
+        <div class="hide-for-medium-up">Mar&nbsp;19, '13</div><div class="show-for-medium-up">Mar 19, 2013</div>
+      </time>
+    </div>
+
+    <div class="summary-row">
+      <div class="episode_summary enlarged">
         <p>Vim doesn&rsquo;t have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as <code>:substitute</code>, <code>:argdo</code>, and <code>:vimgrep</code>. We&rsquo;ll look at two possible strategies: first using the arglist, then the quickfix list.</p>
 
 
-      
+      </div>
+    </div>
 
+    <div class="transcript-row">
+      <div class="transcript-body">
       <h2>Strategy #1 - Substitute across all files</h2>
 
 <p>In this directory we&rsquo;ve got 5 files. Let&rsquo;s open them up - here I&rsquo;m using the <code>-o</code> flag (dash oh), which causes Vim to create a split window for each file specified:</p>
@@ -281,8 +301,37 @@ zt
 
 <p>Check the shownotes for links to a couple of other Vimscript solutions that make this workflow possible.</p>
 
+      </div>
+    </div>
+
+  </section>
+
+  <div class="row">
+    <div class="small-12 columns">
+      <div class="row footer">
+
+  <hr/>
+
+  <div class="small-6 columns">
+    <ul class="inline-list">
+      <li><a href="/about">About</a></li>
+      <li><a href="/subscribe">Subscribe</a></li>
+      <li><a href="/tipjar">Leave a tip</a></li>
+    </ul>
+  </div>
+
+  <div class="small-6 columns">
+    <p class="text-right">
+    Vimcasts.org established MMX
+    </p>
+  </div>
+
+</div>
+
     </div>
   </div>
+
+  
 
 
       </section>

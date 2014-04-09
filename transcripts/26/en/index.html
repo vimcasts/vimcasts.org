@@ -128,18 +128,38 @@
           </div>
         </div>
 
-          <div class="row">
-    <div class="small-12 columns">
+          
 
-      
-        <h1><a href="/episodes/bubbling-text/">Bubbling text</a></h1>
-        <h2>Transcript for episode #26</h2>
+  <section class="transcript">
+    <div class="title-row">
+      <h2 class="title">
+        Bubbling text
+      </h2>
+      <h2 class="episode_number">
+        <small>#</small>26
+      </h2>
+    </div>
 
+    <div class="pubdate-row">
+      <div class="transcript-context">
+        This is a transcript of
+        <a href="/episodes/bubbling-text/">screencast&nbsp;26</a>.
+      </div>
+      <time class="pubdate" pubdate="pubdate" datetime="2010-10- 5">
+        <div class="hide-for-medium-up">Oct&nbsp; 5, '10</div><div class="show-for-medium-up">Oct  5, 2010</div>
+      </time>
+    </div>
+
+    <div class="summary-row">
+      <div class="episode_summary enlarged">
         <p>TextMate has a few built in commands for moving selected text around a document. The end end result of using these commands can be achieved by cutting and pasting, but the visual feedback they provide is quite helpful. In this episode, I will show how to replicate these commands in Vim.</p>
 
 
-      
+      </div>
+    </div>
 
+    <div class="transcript-row">
+      <div class="transcript-body">
       <p>In TextMate, the commands in question can be found in the &ldquo;Text&rdquo; menu under &ldquo;Move selection&rdquo;. I find the description &ldquo;move line up&rdquo; rather bland. The motion reminds me of an air bubble moving through a glass tube of liquid, so I prefer to call this feature &ldquo;text bubbling&rdquo;. Vim doesn&rsquo;t have text bubbling built in, but we can easily replicate it by chaining together a few primitive commands. </p>
 
 <h2>Bubbling a single line</h2>
@@ -213,8 +233,37 @@ vmap &lt;C-Up&gt; xkP`[V`]
 
 <p>Whether you use the default mappings, or create your own, unimpaired brings an added bonus: bubble movement can now accept a count. So I can make a visual selection, then press <code>5 ctrl-Up</code>, and the text moves up five lines.</p>
 
+      </div>
+    </div>
+
+  </section>
+
+  <div class="row">
+    <div class="small-12 columns">
+      <div class="row footer">
+
+  <hr/>
+
+  <div class="small-6 columns">
+    <ul class="inline-list">
+      <li><a href="/about">About</a></li>
+      <li><a href="/subscribe">Subscribe</a></li>
+      <li><a href="/tipjar">Leave a tip</a></li>
+    </ul>
+  </div>
+
+  <div class="small-6 columns">
+    <p class="text-right">
+    Vimcasts.org established MMX
+    </p>
+  </div>
+
+</div>
+
     </div>
   </div>
+
+  
 
 
       </section>
