@@ -116,9 +116,15 @@ section.screencast, section.article {
         @include grid-column($columns:10, $offset:2);
       }
     }
+    #article_body {
+      @include grid-column($columns:12, $collapse:true);
+      @media #{$large-up} {
+        @include grid-column($columns:10, $offset:2, $collapse:true);
+      }
+    }
   }
 
-  #shownotes, #comments {
+  #shownotes, #comments, #article_body {
     @include grid-row();
     & > * {
       @include grid-column($columns:12);

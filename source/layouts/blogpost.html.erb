@@ -1,47 +1,58 @@
 <% wrap_layout :layout do %>
+
   <div class="row">
     <div class="small-12 columns">
-
       <%= partial "next-class" %>
-
-      <header>
-        <h2><%= current_page.title %></h2>
-        <time pubdate="pubdate" datetime="<%= current_page.date.strftime('%Y-%m-%e') %>">
-          <%= current_page.date.strftime('%b %e, %Y') %>
-        </time>
-        <% if current_page.tags.size > 0 %>
-          <div class="article-tags">
-            Tagged with:
-            <%= link_to_article_tags(current_page) %>
-          </div>
-        <% end %>
-      </header>
-
-      <div data-swiftype-index="true">
-        <%= yield %>
-      </div>
-
-      <dl class="accordion" data-accordion>
-        <dd>
-        <a href="#comments">Comments</a>
-        <div id="comments" class="content">
-          <%= partial "disqus" %>
-        </div>
-        </dd>
-      </dl>
-
-      <div>
-        <%= partial "social-sharing-buttons",
-          :locals => locals.merge(label: "Like this article? Spread the word!") %>
-      </div>
-
-      <%= partial "related-content", :locals => locals %>
-
-      <%= partial "footer-main" %>
-
     </div>
   </div>
 
+  <section class="article">
+    <header>
+      <div class="title-row">
+        <h2 class="title">
+          <%= current_page.title %>
+        </h2>
+      </div>
+      <div class="pubdate-row">
+        <div class="video-tags">
+          <% if current_page.tags.size > 0 %>
+            Tagged with:
+            <%= link_to_article_tags(current_page) %>
+          <% else %>
+            Untagged.
+          <% end %>
+        </div>
+        <time class="pubdate" pubdate="pubdate" datetime="<%= current_page.date.strftime('%Y-%m-%e') %>">
+          <%= format_pubdate(current_page) %>
+        </time>
+      </div>
+    </header>
+
+    <div class="content-row">
+      <div id="article_body" data-swiftype-index="true">
+        <%= yield %>
+      </div>
+      <dl class="accordion" data-accordion>
+        <dd>
+          <a href="#comments">Comments<span class="disclosure"></span></a>
+          <div id="comments" class="content">
+            <%= partial "disqus" %>
+          </div>
+        </dd>
+      </dl>
+    </div>
+
+  </section>
+
+  <%= partial "social-sharing-buttons",
+    :locals => locals.merge(label: "Like this article? Spread the word!") %>
+
+  <div class="row">
+    <div class="small-12 columns">
+      <%= partial "related-content", :locals => locals %>
+      <%= partial "footer-main" %>
+    </div>
+  </div>
 
 <% end %>
 
