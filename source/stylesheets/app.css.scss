@@ -264,3 +264,22 @@ code {
     }
   }
 }
+
+.compact-nav {
+  .tab-bar-section {
+    width: 67%;
+    left: initial;
+  }
+  form, input { margin-bottom: 0; }
+  form { position: relative; }
+  input {
+    // Based on styles from foundation/components/_top-bar.scss
+    height: auto;
+    padding-top: .35rem;
+    padding-bottom: .35rem;
+    font-size: $topbar-button-font-size;
+    font-size: rem-calc(14);
+    position: relative;
+    top: $topbar-button-top + 1px;
+  }
+}

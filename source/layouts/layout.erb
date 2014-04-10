@@ -61,12 +61,16 @@
         </nav>
       </div>
 
-      <nav class="tab-bar hide-for-medium-up">
+      <nav class="compact-nav tab-bar hide-for-medium-up">
         <section class="left-small">
           <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
         </section>
 
-        <section class="middle tab-bar-section"></section>
+        <section class="right tab-bar-section">
+          <% unless current_page.data.searchfeature %>
+            <%= partial 'search-form' %>
+          <% end %>
+        </section>
       </nav>
 
       <aside class="left-off-canvas-menu">
