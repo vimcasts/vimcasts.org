@@ -265,6 +265,11 @@ code {
   }
 }
 
+.top-bar-section ul.search-form-wrapper {
+  width: 35%;
+  li { width: 100%; }
+}
+
 .compact-nav {
   .tab-bar-section {
     width: 67%;
