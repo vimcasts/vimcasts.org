@@ -67,14 +67,12 @@
         </div>
 
         <div class="video-metadata">
-          <p>
-            <strong class="video-duration">
-              <%# http://wiki.whatwg.org/wiki/Time_element#duration %>
-              Run time:
-              <time datetime="<%= episode.running_datetime %>">
-                <%= episode.running_time %>
-              </time>
-            </strong>
+          <p class="video-duration">
+            <%# http://wiki.whatwg.org/wiki/Time_element#duration %>
+            Run time:
+            <time datetime="<%= episode.running_datetime %>">
+              <%= episode.running_time %>
+            </time>
           </p>
 
           <p>

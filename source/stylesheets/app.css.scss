@@ -192,6 +192,32 @@ aside.downloads {
   text-align: right;
 }
 
+@mixin header-styling {
+  // Based on styles for h1, h2, h3, h4, h5, h6 defined in
+  // foundation/components/_type.scss
+  font-family: $header-font-family;
+  font-weight: $header-font-weight;
+  font-style: $header-font-style;
+  color: $header-font-color;
+  text-rendering: $header-text-rendering;
+  margin-top: $header-top-margin;
+  margin-bottom: $header-bottom-margin;
+  line-height: $header-line-height;
+}
+.video-duration {
+  @media #{$small-only} {
+    font-size: $h4-font-size - rem-calc(5);
+    @include header-styling;
+  }
+  @media #{$medium-only} {
+    font-size: $h4-font-size;
+    @include header-styling;
+  }
+  @media #{$large-only} {
+    font-weight: bold;
+  }
+}
+
 pre.highlight {
   margin-bottom: $paragraph-margin-bottom;
   padding: 0.75rem 1rem;
