@@ -167,69 +167,6 @@
 
     <div class="video-row">
 
-      <aside class="downloads">
-        <ul class="inline-list hide-for-large-up">
-          <li>
-  <strong class="video-duration">
-    
-    Run time:
-    <time datetime="P3M,29S">
-      3:29
-    </time>
-  </strong>
-</li>
-
-<li class="divider"></li>
-
-<li class="ogg">
-  <a href="http://media.vimcasts.org/videos/53/named-registers.ogv">OGG</a>
-  <span class="stats">5.1 MB</span>
-</li>
-
-<li class="quicktime">
-  <a href="http://media.vimcasts.org/videos/53/named-registers.m4v">Quicktime</a>
-  <span class="stats">8.8 MB</span>
-</li>
-
-<li class="divider"></li>
-
-<li>
-  <a href="/transcripts/53/en/">Read transcript</a>
-</li>
-
-        </ul>
-        <ul class="side-nav show-for-large-up">
-          <li>
-  <strong class="video-duration">
-    
-    Run time:
-    <time datetime="P3M,29S">
-      3:29
-    </time>
-  </strong>
-</li>
-
-<li class="divider"></li>
-
-<li class="ogg">
-  <a href="http://media.vimcasts.org/videos/53/named-registers.ogv">OGG</a>
-  <span class="stats">5.1 MB</span>
-</li>
-
-<li class="quicktime">
-  <a href="http://media.vimcasts.org/videos/53/named-registers.m4v">Quicktime</a>
-  <span class="stats">8.8 MB</span>
-</li>
-
-<li class="divider"></li>
-
-<li>
-  <a href="/transcripts/53/en/">Read transcript</a>
-</li>
-
-        </ul>
-      </aside>
-
       <div class="video-column">
         <div class="video_wrapper">
           <video poster="http://vimcasts.org/images/posters/named-registers.png"
@@ -240,6 +177,40 @@
           </video>
         </div>
       </div>
+
+      <aside class="downloads">
+
+        <div class="download-videos">
+          <h4>Download</h4>
+          <ul class="downloads-list">
+            <li class="ogg">
+              <a href="http://media.vimcasts.org/videos/53/named-registers.ogv">OGG</a>
+              <span class="stats">5.1 MB</span>
+            </li>
+            <li class="quicktime">
+              <a href="http://media.vimcasts.org/videos/53/named-registers.m4v">Quicktime</a>
+              <span class="stats">8.8 MB</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="video-metadata">
+          <p>
+            <strong class="video-duration">
+              
+              Run time:
+              <time datetime="P3M,29S">
+                3:29
+              </time>
+            </strong>
+          </p>
+
+          <p>
+            <a href="/transcripts/53/en/">Read transcript</a>
+          </p>
+        </div>
+
+      </aside>
 
     </div>
 
@@ -407,25 +378,6 @@
 
     
       <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/meet-the-yank-register/">Meet the yank register</a></h4>
-        <p>Vim&rsquo;s default register is not a safe place to keep yanked text that you want to paste later. It&rsquo;s all too easy to clobber the default register with a <code>d</code> or <code>x</code> command. Luckily, the last yanked text is kept safe in Vim&rsquo;s <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0">yank register</a>.</p>
-
-
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/pasting-from-insert-mode/">Pasting from Insert mode</a></h4>
-        <p>We don&rsquo;t have to be in Normal mode to paste the contents of a register. The <a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r"><code>&lt;C-r&gt;{reg}</code></a> command lets us paste a register from Insert mode (and it <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-r">works in commandline mode too</a>!) Using this command allows us to make changes that can be repeated with <a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#.">the dot command</a>.</p>
-
-
-      </li>
-    
-      <li>
         <h4><a href="/categories">Find by category</a></h4>
         <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
@@ -438,8 +390,27 @@
       </li>
     
       <li>
+        <h4><a href="/episodes/pasting-from-insert-mode/">Pasting from Insert mode</a></h4>
+        <p>We don&rsquo;t have to be in Normal mode to paste the contents of a register. The <a href="http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r"><code>&lt;C-r&gt;{reg}</code></a> command lets us paste a register from Insert mode (and it <a href="http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-r">works in commandline mode too</a>!) Using this command allows us to make changes that can be repeated with <a href="http://vimdoc.sourceforge.net/htmldoc/repeat.html#.">the dot command</a>.</p>
+
+
+      </li>
+    
+      <li>
         <h4><a href="/training">Vim Training</a></h4>
         <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/meet-the-yank-register/">Meet the yank register</a></h4>
+        <p>Vim&rsquo;s default register is not a safe place to keep yanked text that you want to paste later. It&rsquo;s all too easy to clobber the default register with a <code>d</code> or <code>x</code> command. Luckily, the last yanked text is kept safe in Vim&rsquo;s <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote0">yank register</a>.</p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
       </li>
     
 

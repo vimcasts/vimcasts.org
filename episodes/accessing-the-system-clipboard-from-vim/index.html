@@ -167,69 +167,6 @@
 
     <div class="video-row">
 
-      <aside class="downloads">
-        <ul class="inline-list hide-for-large-up">
-          <li>
-  <strong class="video-duration">
-    
-    Run time:
-    <time datetime="P4M,48S">
-      4:48
-    </time>
-  </strong>
-</li>
-
-<li class="divider"></li>
-
-<li class="ogg">
-  <a href="http://media.vimcasts.org/videos/58/clipboard-register.ogv">OGG</a>
-  <span class="stats">6.3 MB</span>
-</li>
-
-<li class="quicktime">
-  <a href="http://media.vimcasts.org/videos/58/clipboard-register.m4v">Quicktime</a>
-  <span class="stats">11.5 MB</span>
-</li>
-
-<li class="divider"></li>
-
-<li>
-  <a href="/transcripts/58/en/">Read transcript</a>
-</li>
-
-        </ul>
-        <ul class="side-nav show-for-large-up">
-          <li>
-  <strong class="video-duration">
-    
-    Run time:
-    <time datetime="P4M,48S">
-      4:48
-    </time>
-  </strong>
-</li>
-
-<li class="divider"></li>
-
-<li class="ogg">
-  <a href="http://media.vimcasts.org/videos/58/clipboard-register.ogv">OGG</a>
-  <span class="stats">6.3 MB</span>
-</li>
-
-<li class="quicktime">
-  <a href="http://media.vimcasts.org/videos/58/clipboard-register.m4v">Quicktime</a>
-  <span class="stats">11.5 MB</span>
-</li>
-
-<li class="divider"></li>
-
-<li>
-  <a href="/transcripts/58/en/">Read transcript</a>
-</li>
-
-        </ul>
-      </aside>
-
       <div class="video-column">
         <div class="video_wrapper">
           <video poster="http://vimcasts.org/images/posters/clipboard-register.png"
@@ -240,6 +177,40 @@
           </video>
         </div>
       </div>
+
+      <aside class="downloads">
+
+        <div class="download-videos">
+          <h4>Download</h4>
+          <ul class="downloads-list">
+            <li class="ogg">
+              <a href="http://media.vimcasts.org/videos/58/clipboard-register.ogv">OGG</a>
+              <span class="stats">6.3 MB</span>
+            </li>
+            <li class="quicktime">
+              <a href="http://media.vimcasts.org/videos/58/clipboard-register.m4v">Quicktime</a>
+              <span class="stats">11.5 MB</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="video-metadata">
+          <p>
+            <strong class="video-duration">
+              
+              Run time:
+              <time datetime="P4M,48S">
+                4:48
+              </time>
+            </strong>
+          </p>
+
+          <p>
+            <a href="/transcripts/58/en/">Read transcript</a>
+          </p>
+        </div>
+
+      </aside>
 
     </div>
 
@@ -465,11 +436,6 @@ Vim uses CLIPBOARD when reading and writing the &ldquo;+ register.  </p>
 
     
       <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
-      </li>
-    
-      <li>
         <h4><a href="/episodes/evaluating-scripts-with-vims-expression-register/">Evaluating scripts with Vim's expression register</a></h4>
         <p>In <a href="/e/56">the previous lesson</a> we learned how use the expression register to evaluate simple calculations. We can also call built-in and user-defined Vimscript functions, and thanks to the <code>system()</code> function, we can also fetch output from external scripts.</p>
 
@@ -477,8 +443,8 @@ Vim uses CLIPBOARD when reading and writing the &ldquo;+ register.  </p>
       </li>
     
       <li>
-        <h4><a href="/blog/2013/11/getting-vim-with-clipboard-support/">Getting Vim with `+clipboard` support</a></h4>
-        <p>Many systems ship with a version of Vim that was compiled with the <code>-clipboard</code> feature disabled, which is a damned nuisance! Being able to <a href="http://vimcasts.org/e/58">access the system clipboard from Vim</a> is an essential feature. Let&rsquo;s look at a few ways of getting the <code>+clipboard</code> feature on OS X and Ubuntu.</p>
+        <h4><a href="/episodes/using-vims-paste-mode-with-the-system-paste-command/">Using Vim's paste mode with the system paste command</a></h4>
+        <p>When Vim is compiled without the <code>+clipboard</code> feature, we can still insert text from the clipboard using the system paste command (<code>ctrl-v</code> or <code>cmd-v</code>). This can produce strange effects, but we can avoid them by toggling the <code>paste</code> option each time we use the system paste command.</p>
 
 
       </li>
@@ -494,10 +460,15 @@ Vim uses CLIPBOARD when reading and writing the &ldquo;+ register.  </p>
       </li>
     
       <li>
-        <h4><a href="/episodes/using-vims-paste-mode-with-the-system-paste-command/">Using Vim's paste mode with the system paste command</a></h4>
-        <p>When Vim is compiled without the <code>+clipboard</code> feature, we can still insert text from the clipboard using the system paste command (<code>ctrl-v</code> or <code>cmd-v</code>). This can produce strange effects, but we can avoid them by toggling the <code>paste</code> option each time we use the system paste command.</p>
+        <h4><a href="/blog/2013/11/getting-vim-with-clipboard-support/">Getting Vim with `+clipboard` support</a></h4>
+        <p>Many systems ship with a version of Vim that was compiled with the <code>-clipboard</code> feature disabled, which is a damned nuisance! Being able to <a href="http://vimcasts.org/e/58">access the system clipboard from Vim</a> is an essential feature. Let&rsquo;s look at a few ways of getting the <code>+clipboard</code> feature on OS X and Ubuntu.</p>
 
 
+      </li>
+    
+      <li>
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
       </li>
     
 
