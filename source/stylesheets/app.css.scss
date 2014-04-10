@@ -127,6 +127,7 @@ body.proof {
   display: inline-block;
   position: relative;
   width: 100%;
+  max-width: 800px;
   &:before {
     margin-top: 75%;
     content: "";
