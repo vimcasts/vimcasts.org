@@ -114,6 +114,13 @@ section.screencast, section.article, section.transcript {
         @include grid-column($columns:10, $push:2);
       }
     }
+
+    @media #{$medium-only} {
+      .downloads, .video-column {
+        // 830px allows for 800px of video plus 15px left/right-padding
+        max-width: 830px;
+      }
+    }
   }
 
   .content-row {
