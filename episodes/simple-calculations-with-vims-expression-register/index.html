@@ -29,11 +29,9 @@
       <div class="top-bar-underlay"></div>
 
       <div class="row">
-        <nav class="top-bar show-for-large-up" data-topbar>
+        <nav class="top-bar show-for-medium-up" data-topbar>
           <ul class="title-area">
-            <li class="name">
-              <h1><a href="/">Vimcasts</a></h1>
-            </li>
+            <li class="name"></li>
             <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
           </ul>
 
@@ -41,7 +39,7 @@
 
             
               <!-- Right Nav Section -->
-              <ul class="right">
+              <ul class="right search-form-wrapper">
                 <li class="has-form">
                 <div class="row collapse">
                   <div class="large-12 columns">
@@ -74,12 +72,20 @@
         </nav>
       </div>
 
-      <nav class="tab-bar hide-for-large-up">
+      <nav class="compact-nav tab-bar hide-for-medium-up">
         <section class="left-small">
           <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
         </section>
 
-        <section class="middle tab-bar-section"></section>
+        <section class="right tab-bar-section">
+          
+            <form class="swiftype-search-form">
+  <input type="search" class="swiftype-search-input" placeholder="Search the archives"/>
+</form>
+
+
+          
+        </section>
       </nav>
 
       <aside class="left-off-canvas-menu">
@@ -195,14 +201,12 @@
         </div>
 
         <div class="video-metadata">
-          <p>
-            <strong class="video-duration">
-              
-              Run time:
-              <time datetime="P4M,02S">
-                4:02
-              </time>
-            </strong>
+          <p class="video-duration">
+            
+            Run time:
+            <time datetime="P4M,02S">
+              4:02
+            </time>
           </p>
 
           <p>
@@ -414,25 +418,17 @@
 
     
       <li>
+        <h4><a href="/episodes/evaluating-scripts-with-vims-expression-register/">Evaluating scripts with Vim's expression register</a></h4>
+        <p>In <a href="/e/56">the previous lesson</a> we learned how use the expression register to evaluate simple calculations. We can also call built-in and user-defined Vimscript functions, and thanks to the <code>system()</code> function, we can also fetch output from external scripts.</p>
+
+
+      </li>
+    
+      <li>
         <h4><a href="/episodes/accessing-the-system-clipboard-from-vim/">Accessing the system clipboard from Vim</a></h4>
         <p>In some environments, Vim lets us access the system clipboard using the quoteplus register, <code>&quot;+</code>. When this feature is enabled, we can use it with the delete, yank and put operations in much the same way that we use Vim&rsquo;s other registers. Pasting from this register usually produces better results than using the system paste command in Insert mode.</p>
 
 
-      </li>
-    
-      <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
       <li>
@@ -443,10 +439,18 @@
       </li>
     
       <li>
-        <h4><a href="/episodes/evaluating-scripts-with-vims-expression-register/">Evaluating scripts with Vim's expression register</a></h4>
-        <p>In <a href="/e/56">the previous lesson</a> we learned how use the expression register to evaluate simple calculations. We can also call built-in and user-defined Vimscript functions, and thanks to the <code>system()</code> function, we can also fetch output from external scripts.</p>
-
-
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
       </li>
     
 

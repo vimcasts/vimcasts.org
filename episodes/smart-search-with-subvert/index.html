@@ -29,11 +29,9 @@
       <div class="top-bar-underlay"></div>
 
       <div class="row">
-        <nav class="top-bar show-for-large-up" data-topbar>
+        <nav class="top-bar show-for-medium-up" data-topbar>
           <ul class="title-area">
-            <li class="name">
-              <h1><a href="/">Vimcasts</a></h1>
-            </li>
+            <li class="name"></li>
             <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
           </ul>
 
@@ -41,7 +39,7 @@
 
             
               <!-- Right Nav Section -->
-              <ul class="right">
+              <ul class="right search-form-wrapper">
                 <li class="has-form">
                 <div class="row collapse">
                   <div class="large-12 columns">
@@ -74,12 +72,20 @@
         </nav>
       </div>
 
-      <nav class="tab-bar hide-for-large-up">
+      <nav class="compact-nav tab-bar hide-for-medium-up">
         <section class="left-small">
           <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
         </section>
 
-        <section class="middle tab-bar-section"></section>
+        <section class="right tab-bar-section">
+          
+            <form class="swiftype-search-form">
+  <input type="search" class="swiftype-search-input" placeholder="Search the archives"/>
+</form>
+
+
+          
+        </section>
       </nav>
 
       <aside class="left-off-canvas-menu">
@@ -197,14 +203,12 @@
         </div>
 
         <div class="video-metadata">
-          <p>
-            <strong class="video-duration">
-              
-              Run time:
-              <time datetime="P5M,33S">
-                5:33
-              </time>
-            </strong>
+          <p class="video-duration">
+            
+            Run time:
+            <time datetime="P5M,33S">
+              5:33
+            </time>
           </p>
 
           <p>
@@ -426,15 +430,6 @@
 
     
       <li>
-        <h4><a href="/episodes/enhanced-abbreviations-with-abolish/">Enhanced abbreviations with :Abolish</a></h4>
-        <p>Vim&rsquo;s built-in abbreviation feature is handy if you want to auto-correct words that you frequently misspell, but it requires a lot of setup. The <code>:Abolish</code> command makes it easy to generate abbreviations that will correct multiple forms of the same word.</p>
-
-<p><em>This is the final of a three-part series on Tim Pope’s <a href="https://github.com/tpope/vim-abolish">abolish</a> plugin.</em></p>
-
-
-      </li>
-    
-      <li>
         <h4><a href="/categories">Find by category</a></h4>
         <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
@@ -449,8 +444,10 @@
       </li>
     
       <li>
-        <h4><a href="/episodes/search-for-the-selected-text/">Search for the selected text</a></h4>
-        <p><a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#star">The <code>*</code> command</a> searches for the word under the cursor. That makes sense in Normal mode, but from Visual mode it would be more useful if the star command searched for the current <em>selection</em>, rather than the current word. We can add this feature to Vim using the <a href="https://github.com/nelstrom/vim-visual-star-search">visual star search plugin</a>.</p>
+        <h4><a href="/episodes/enhanced-abbreviations-with-abolish/">Enhanced abbreviations with :Abolish</a></h4>
+        <p>Vim&rsquo;s built-in abbreviation feature is handy if you want to auto-correct words that you frequently misspell, but it requires a lot of setup. The <code>:Abolish</code> command makes it easy to generate abbreviations that will correct multiple forms of the same word.</p>
+
+<p><em>This is the final of a three-part series on Tim Pope’s <a href="https://github.com/tpope/vim-abolish">abolish</a> plugin.</em></p>
 
 
       </li>
@@ -458,6 +455,13 @@
       <li>
         <h4><a href="/publications">Publications</a></h4>
         <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/search-for-the-selected-text/">Search for the selected text</a></h4>
+        <p><a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#star">The <code>*</code> command</a> searches for the word under the cursor. That makes sense in Normal mode, but from Visual mode it would be more useful if the star command searched for the current <em>selection</em>, rather than the current word. We can add this feature to Vim using the <a href="https://github.com/nelstrom/vim-visual-star-search">visual star search plugin</a>.</p>
+
+
       </li>
     
       <li>

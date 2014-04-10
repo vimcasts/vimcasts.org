@@ -29,11 +29,9 @@
       <div class="top-bar-underlay"></div>
 
       <div class="row">
-        <nav class="top-bar show-for-large-up" data-topbar>
+        <nav class="top-bar show-for-medium-up" data-topbar>
           <ul class="title-area">
-            <li class="name">
-              <h1><a href="/">Vimcasts</a></h1>
-            </li>
+            <li class="name"></li>
             <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
           </ul>
 
@@ -41,7 +39,7 @@
 
             
               <!-- Right Nav Section -->
-              <ul class="right">
+              <ul class="right search-form-wrapper">
                 <li class="has-form">
                 <div class="row collapse">
                   <div class="large-12 columns">
@@ -74,12 +72,20 @@
         </nav>
       </div>
 
-      <nav class="tab-bar hide-for-large-up">
+      <nav class="compact-nav tab-bar hide-for-medium-up">
         <section class="left-small">
           <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
         </section>
 
-        <section class="middle tab-bar-section"></section>
+        <section class="right tab-bar-section">
+          
+            <form class="swiftype-search-form">
+  <input type="search" class="swiftype-search-input" placeholder="Search the archives"/>
+</form>
+
+
+          
+        </section>
       </nav>
 
       <aside class="left-off-canvas-menu">
@@ -195,14 +201,12 @@
         </div>
 
         <div class="video-metadata">
-          <p>
-            <strong class="video-duration">
-              
-              Run time:
-              <time datetime="P4M,21S">
-                4:21
-              </time>
-            </strong>
+          <p class="video-duration">
+            
+            Run time:
+            <time datetime="P4M,21S">
+              4:21
+            </time>
           </p>
 
           <p>
@@ -382,8 +386,11 @@
 
     
       <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+        <h4><a href="/episodes/swapping-two-regions-of-text-with-exchange-vim/">Swapping two regions of text with exchange.vim</a></h4>
+        <p>Swapping two regions of text is a common task, which normally requires that we make two separate changes to the document.
+Tom McDonald&rsquo;s <a href="https://github.com/tommcdo/vim-exchange">exchange plugin</a> offers an elegant alternative, by providing an operator that swaps two regions of text in one go.</p>
+
+
       </li>
     
       <li>
@@ -392,9 +399,8 @@
       </li>
     
       <li>
-        <h4><a href="/episodes/swapping-two-regions-of-text-with-exchange-vim/">Swapping two regions of text with exchange.vim</a></h4>
-        <p>Swapping two regions of text is a common task, which normally requires that we make two separate changes to the document.
-Tom McDonald&rsquo;s <a href="https://github.com/tommcdo/vim-exchange">exchange plugin</a> offers an elegant alternative, by providing an operator that swaps two regions of text in one go.</p>
+        <h4><a href="/episodes/operating-on-search-matches-using-gn/">Operating on search matches using gn</a></h4>
+        <p>The <code>gn</code> command (introduced in Vim 7.4) makes it easy to operate on regions of text that match the current search pattern. It&rsquo;s especially useful when used with a regex that matches text regions of variable length.</p>
 
 
       </li>
@@ -407,10 +413,8 @@ Tom McDonald&rsquo;s <a href="https://github.com/tommcdo/vim-exchange">exchange 
       </li>
     
       <li>
-        <h4><a href="/episodes/operating-on-search-matches-using-gn/">Operating on search matches using gn</a></h4>
-        <p>The <code>gn</code> command (introduced in Vim 7.4) makes it easy to operate on regions of text that match the current search pattern. It&rsquo;s especially useful when used with a regex that matches text regions of variable length.</p>
-
-
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
       </li>
     
       <li>

@@ -29,11 +29,9 @@
       <div class="top-bar-underlay"></div>
 
       <div class="row">
-        <nav class="top-bar show-for-large-up" data-topbar>
+        <nav class="top-bar show-for-medium-up" data-topbar>
           <ul class="title-area">
-            <li class="name">
-              <h1><a href="/">Vimcasts</a></h1>
-            </li>
+            <li class="name"></li>
             <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
           </ul>
 
@@ -41,7 +39,7 @@
 
             
               <!-- Right Nav Section -->
-              <ul class="right">
+              <ul class="right search-form-wrapper">
                 <li class="has-form">
                 <div class="row collapse">
                   <div class="large-12 columns">
@@ -74,12 +72,20 @@
         </nav>
       </div>
 
-      <nav class="tab-bar hide-for-large-up">
+      <nav class="compact-nav tab-bar hide-for-medium-up">
         <section class="left-small">
           <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
         </section>
 
-        <section class="middle tab-bar-section"></section>
+        <section class="right tab-bar-section">
+          
+            <form class="swiftype-search-form">
+  <input type="search" class="swiftype-search-input" placeholder="Search the archives"/>
+</form>
+
+
+          
+        </section>
       </nav>
 
       <aside class="left-off-canvas-menu">
@@ -197,14 +203,12 @@
         </div>
 
         <div class="video-metadata">
-          <p>
-            <strong class="video-duration">
-              
-              Run time:
-              <time datetime="P11M,41S">
-                11:41
-              </time>
-            </strong>
+          <p class="video-duration">
+            
+            Run time:
+            <time datetime="P11M,41S">
+              11:41
+            </time>
           </p>
 
           <p>
@@ -472,17 +476,12 @@ You can always open the index version of the current file by running any one of 
 
     
       <li>
-        <h4><a href="/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/">Fugitive.vim - resolving merge conflicts with vimdiff</a></h4>
-        <p>When git branches are merged, there is always the chance of a conflict arising if a file was modified in both the target and merge branches. You can resolve merge conflicts using a combination of fugitive&rsquo;s <code>:Gdiff</code> command, and Vim&rsquo;s built in <code>diffget</code> and <code>diffput</code>. In this episode, we&rsquo;ll find out how.</p>
+        <h4><a href="/episodes/fugitive-vim-browsing-the-git-object-database/">Fugitive.vim - browsing the git object database</a></h4>
+        <p>With the fugitive plugin, you&rsquo;re not limited to just working with files in your working tree. The <code>:Gedit</code> command allows you to open files in other branches, and to browse any <a href="http://book.git-scm.com/1_the_git_object_model.html">git object</a>, including tags, commits and trees. Plus, if your repository is hosted on github, you can easily bring up the webpage for any git object using the <code>:Gbrowse</code> command.</p>
 
-<p><em>This is the third in a five part series on fugitive.vim.</em></p>
+<p><em>This is the penultimate of a five part series on fugitive.vim.</em></p>
 
 
-      </li>
-    
-      <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
       </li>
     
       <li>
@@ -491,12 +490,8 @@ You can always open the index version of the current file by running any one of 
       </li>
     
       <li>
-        <h4><a href="/episodes/fugitive-vim-browsing-the-git-object-database/">Fugitive.vim - browsing the git object database</a></h4>
-        <p>With the fugitive plugin, you&rsquo;re not limited to just working with files in your working tree. The <code>:Gedit</code> command allows you to open files in other branches, and to browse any <a href="http://book.git-scm.com/1_the_git_object_model.html">git object</a>, including tags, commits and trees. Plus, if your repository is hosted on github, you can easily bring up the webpage for any git object using the <code>:Gbrowse</code> command.</p>
-
-<p><em>This is the penultimate of a five part series on fugitive.vim.</em></p>
-
-
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
       <li>
@@ -509,8 +504,17 @@ You can always open the index version of the current file by running any one of 
       </li>
     
       <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+        <h4><a href="/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/">Fugitive.vim - resolving merge conflicts with vimdiff</a></h4>
+        <p>When git branches are merged, there is always the chance of a conflict arising if a file was modified in both the target and merge branches. You can resolve merge conflicts using a combination of fugitive&rsquo;s <code>:Gdiff</code> command, and Vim&rsquo;s built in <code>diffget</code> and <code>diffput</code>. In this episode, we&rsquo;ll find out how.</p>
+
+<p><em>This is the third in a five part series on fugitive.vim.</em></p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
       </li>
     
 

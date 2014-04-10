@@ -29,11 +29,9 @@
       <div class="top-bar-underlay"></div>
 
       <div class="row">
-        <nav class="top-bar show-for-large-up" data-topbar>
+        <nav class="top-bar show-for-medium-up" data-topbar>
           <ul class="title-area">
-            <li class="name">
-              <h1><a href="/">Vimcasts</a></h1>
-            </li>
+            <li class="name"></li>
             <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
           </ul>
 
@@ -41,7 +39,7 @@
 
             
               <!-- Right Nav Section -->
-              <ul class="right">
+              <ul class="right search-form-wrapper">
                 <li class="has-form">
                 <div class="row collapse">
                   <div class="large-12 columns">
@@ -74,12 +72,20 @@
         </nav>
       </div>
 
-      <nav class="tab-bar hide-for-large-up">
+      <nav class="compact-nav tab-bar hide-for-medium-up">
         <section class="left-small">
           <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
         </section>
 
-        <section class="middle tab-bar-section"></section>
+        <section class="right tab-bar-section">
+          
+            <form class="swiftype-search-form">
+  <input type="search" class="swiftype-search-input" placeholder="Search the archives"/>
+</form>
+
+
+          
+        </section>
       </nav>
 
       <aside class="left-off-canvas-menu">
@@ -195,14 +201,12 @@
         </div>
 
         <div class="video-metadata">
-          <p>
-            <strong class="video-duration">
-              
-              Run time:
-              <time datetime="P3M,28S">
-                3:28
-              </time>
-            </strong>
+          <p class="video-duration">
+            
+            Run time:
+            <time datetime="P3M,28S">
+              3:28
+            </time>
           </p>
 
           <p>
@@ -406,8 +410,8 @@ error: <em>E162: No write since last change for buffer &ldquo;a.txt&rdquo;</em>.
 
     
       <li>
-        <h4><a href="/episodes/working-with-tabs/">Working with tabs</a></h4>
-        <p>This episode covers the essential commands for working with Vim&rsquo;s tab pages: opening and closing, switching, and moving them.</p>
+        <h4><a href="/episodes/how-to-use-tabs/">How to use tabs</a></h4>
+        <p>Vim&rsquo;s treatment of tabs is a little different than what you might be used to if you are coming from another editor. In this episode I demonstrate how Vim&rsquo;s tabs can be used to group split windows together. I also show how to use Vim&rsquo;s tabs like projects in TextMate, by setting a different working directory for each one.</p>
 
 
       </li>
@@ -418,8 +422,15 @@ error: <em>E162: No write since last change for buffer &ldquo;a.txt&rdquo;</em>.
       </li>
     
       <li>
-        <h4><a href="/episodes/how-to-use-tabs/">How to use tabs</a></h4>
-        <p>Vim&rsquo;s treatment of tabs is a little different than what you might be used to if you are coming from another editor. In this episode I demonstrate how Vim&rsquo;s tabs can be used to group split windows together. I also show how to use Vim&rsquo;s tabs like projects in TextMate, by setting a different working directory for each one.</p>
+        <h4><a href="/episodes/working-with-tabs/">Working with tabs</a></h4>
+        <p>This episode covers the essential commands for working with Vim&rsquo;s tab pages: opening and closing, switching, and moving them.</p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/working-with-windows/">Working with windows</a></h4>
+        <p>In Vim, you can view several buffers at once by loading them into multiple windows. This episode demonstrates all the essentials of working with windows: opening, closing, resizing, moving between and rearranging them.</p>
 
 
       </li>
@@ -432,13 +443,6 @@ error: <em>E162: No write since last change for buffer &ldquo;a.txt&rdquo;</em>.
       <li>
         <h4><a href="/categories">Find by category</a></h4>
         <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/working-with-windows/">Working with windows</a></h4>
-        <p>In Vim, you can view several buffers at once by loading them into multiple windows. This episode demonstrates all the essentials of working with windows: opening, closing, resizing, moving between and rearranging them.</p>
-
-
       </li>
     
 
