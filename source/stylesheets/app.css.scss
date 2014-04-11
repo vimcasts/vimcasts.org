@@ -288,3 +288,12 @@ code {
     top: $topbar-button-top + 1px;
   }
 }
+
+ul.off-canvas-list ul.dropdown {
+  margin-left: 0px;
+  a {
+    // variables from foundation/components/_offcanvas.scss
+    // and foundation/components/_type.scss
+    padding-left: $off-canvas-link-padding + $list-nested-margin;
+  }
+}
