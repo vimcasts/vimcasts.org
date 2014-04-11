@@ -10,6 +10,18 @@ $(document).ready(function() {
           .parent().addClass('active');
   }
 
+  // Load Disqus comments on demand
+  $('.show-comments').one('click', function(){
+    var disqus_shortname = 'vimcasts';
+    $.ajax({
+      type: "GET",
+      url: "http://" + disqus_shortname + ".disqus.com/embed.js",
+      dataType: "script",
+      cache: true
+    });
+    $(this).removeClass('show-comments');
+  });
+
   // set up autocomplete
   $(".swiftype-search-input").swiftype({
     engineKey: "Wdx4LxrBJv86q28yDA8A"
