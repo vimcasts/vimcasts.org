@@ -5,6 +5,7 @@
 # git config --global core.excludesfile ~/.gitignore_global
 
 TODO
+feedback.md
 
 # Ignore bundler config
 /.bundle
