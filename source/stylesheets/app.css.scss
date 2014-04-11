@@ -265,6 +265,11 @@ code {
   }
 }
 
+.tabs dd.active a {
+  background-color: #050F47;
+  color: #fff;
+}
+
 .top-bar-section ul.search-form-wrapper {
   width: 35%;
   li { width: 100%; }
@@ -287,4 +292,10 @@ code {
     position: relative;
     top: $topbar-button-top + 1px;
   }
+}
+
+.tabs-content .content .category-list li {
+  padding-left: 15px;
+  max-height: 111px;
+  max-width: 193px;
 }
