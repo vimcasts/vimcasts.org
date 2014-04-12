@@ -1,0 +1,187 @@
+{
+	"IcoMoonType": "selection",
+	"icons": [
+		{
+			"icon": {
+				"paths": [
+					"M512 1024c-282.75 0-512-229.25-512-512 0-282.782 229.25-512 512-512s512 229.218 512 512c0 282.75-229.25 512-512 512zM512 128c-212.062 0-384 171.938-384 384s171.938 384 384 384 384-171.938 384-384-171.938-384-384-384zM384 320l320 192-320 192v-384z"
+				],
+				"tags": [
+					"play",
+					"media control",
+					"video",
+					"movie"
+				],
+				"grid": 16
+			},
+			"properties": {
+				"id": 22,
+				"order": 1,
+				"prevSize": 32,
+				"code": 58883,
+				"name": "play",
+				"ligatures": ""
+			},
+			"setIdx": 2,
+			"iconIdx": 22
+		},
+		{
+			"icon": {
+				"paths": [
+					"M512 192l-384-192h-64c-35.376 0-64 28.656-64 64v704c0 35.376 28.624 64 64 64l448 192 448-192c35.376 0 64-28.624 64-64v-704c0-35.344-28.624-64-64-64h-64M448 864l-320-160v-512l320 106.656v565.344zM896 704l-320 160v-565.344l320-106.656v512z"
+				],
+				"tags": [
+					"book",
+					"read",
+					"bookmark"
+				],
+				"grid": 16
+			},
+			"properties": {
+				"id": 20,
+				"order": 2,
+				"prevSize": 32,
+				"code": 58882,
+				"name": "book",
+				"ligatures": ""
+			},
+			"setIdx": 2,
+			"iconIdx": 20
+		},
+		{
+			"icon": {
+				"paths": [
+					"M399.36 628.275l-204.8-81.971v69.325l204.8 81.971v-69.325zM399.36 415.539l-204.8-81.92v69.325l204.8 81.92v-69.325zM950.323 60.006c-14.029-9.523-31.949-11.469-47.718-5.171l-390.605 156.262-390.605-156.262c-15.77-6.298-33.638-4.352-47.718 5.171-14.029 9.523-22.477 25.395-22.477 42.394v655.36c0 20.941 12.749 39.731 32.154 47.565l408.73 163.482c0 0 8.397 2.714 9.933 3.021 3.328 0.614 6.656 0.973 9.984 0.973 3.277 0 6.656-0.358 9.933-1.024 1.536-0.307 9.933-3.072 9.933-3.072l408.678-163.43c19.507-7.782 32.256-26.573 32.256-47.514v-655.36c0-16.998-8.448-32.87-22.477-42.394zM460.8 868.045l-327.68-131.072v-573.85l327.68 131.123v573.798zM890.88 737.024l-327.68 131.072v-573.85l327.68-131.123v573.901zM829.44 546.304l-204.851 81.971v69.325l204.851-81.971v-69.325zM829.44 333.619l-204.851 81.92v69.325l204.851-81.92v-69.325z"
+				],
+				"tags": [
+					"book",
+					"notebook",
+					"reading",
+					"open"
+				],
+				"grid": 20
+			},
+			"properties": {
+				"id": 170,
+				"order": 3,
+				"prevSize": 20,
+				"code": 58884,
+				"name": "book2",
+				"ligatures": ""
+			},
+			"setIdx": 3,
+			"iconIdx": 170
+		},
+		{
+			"icon": {
+				"paths": [
+					"M854.938 485.734l-438.323-271.565c-31.949-20.941-58.061-5.478-58.061 34.304v527.155c0 39.782 26.163 55.194 58.061 34.253l438.374-271.565c0 0 15.565-10.957 15.565-26.317-0.051-15.309-15.616-26.266-15.616-26.266z"
+				],
+				"tags": [
+					"play",
+					"media control"
+				],
+				"grid": 20
+			},
+			"properties": {
+				"id": 171,
+				"order": 4,
+				"prevSize": 20,
+				"code": 58885,
+				"name": "play2",
+				"ligatures": ""
+			},
+			"setIdx": 3,
+			"iconIdx": 171
+		},
+		{
+			"icon": {
+				"paths": [
+					"M0 128v768h1024v-768h-1024zM192 832h-128v-128h128v128zM192 576h-128v-128h128v128zM192 320h-128v-128h128v128zM768 832h-512v-640h512v640zM960 832h-128v-128h128v128zM960 576h-128v-128h128v128zM960 320h-128v-128h128v128zM384 320v384l256-192z"
+				],
+				"tags": [
+					"film",
+					"video",
+					"movie",
+					"tape",
+					"play"
+				],
+				"grid": 16
+			},
+			"properties": {
+				"id": 19,
+				"order": 5,
+				"prevSize": 32,
+				"code": 58880,
+				"name": "film",
+				"ligatures": ""
+			},
+			"setIdx": 0,
+			"iconIdx": 19
+		},
+		{
+			"icon": {
+				"paths": [
+					"M864 0h-768c-52.8 0-96 43.2-96 96v832c0 52.8 43.2 96 96 96h768c52.8 0 96-43.2 96-96v-832c0-52.8-43.2-96-96-96zM832 896h-704v-768h704v768zM256 448h448v64h-448zM256 576h448v64h-448zM256 704h448v64h-448zM256 320h448v64h-448z"
+				],
+				"tags": [
+					"file",
+					"list",
+					"paper",
+					"page",
+					"document"
+				],
+				"grid": 16
+			},
+			"properties": {
+				"id": 34,
+				"order": 6,
+				"prevSize": 32,
+				"code": 58881,
+				"name": "file",
+				"ligatures": ""
+			},
+			"setIdx": 0,
+			"iconIdx": 34
+		}
+	],
+	"height": 1024,
+	"metadata": {
+		"name": "icomoon"
+	},
+	"preferences": {
+		"fontPref": {
+			"prefix": "icon-",
+			"metadata": {
+				"fontFamily": "icomoon"
+			},
+			"showGlyphs": true,
+			"metrics": {
+				"emSize": 512,
+				"baseline": 6.25,
+				"whitespace": 50
+			},
+			"resetPoint": 58880,
+			"showQuickUse": true,
+			"quickUsageToken": false,
+			"showMetrics": true,
+			"showMetadata": false
+		},
+		"imagePref": {
+			"color": 0,
+			"height": 32,
+			"columns": 16,
+			"margin": 16,
+			"png": false,
+			"sprites": true
+		},
+		"historySize": 100,
+		"showCodes": true,
+		"gridSize": 16,
+		"showLiga": false,
+		"showGrid": true,
+		"showGlyphs": true,
+		"showQuickUse": true,
+		"search": ""
+	}
+}
