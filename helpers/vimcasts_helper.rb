@@ -55,9 +55,9 @@ module VimcastsHelper
   def continue?(article)
     return false unless has_extended_text?(article)
     if article.blog_options[:name] == "episodes"
-      "Watch screencast"
+      "<span class='icon-play icomoon'></span>Watch screencast"
     else
-      "Continue reading"
+      "<span class='icon-book icomoon'></span>Continue reading"
     end
   end
 
