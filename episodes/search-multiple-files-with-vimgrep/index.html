@@ -442,10 +442,8 @@
 
     
       <li>
-        <h4><a href="/blog/2013/03/combining-vimgrep-with-ack--f/">Combining :vimgrep with ack -f</a></h4>
-        <p>I love the way that ack let&rsquo;s me specify the files to search inside. For starters, ack does the right thing by ignoring the contents of VCS directories, backup files, core dumps etc., which gives a good signal to noise ratio. On top of that, ack provides a convenient syntax for specifying filetypes to include or exclude from the set (see <code>ack --help-types</code>). I can target ruby files only with the <code>--ruby</code> option, or everything but ruby files with <code>--noruby</code>.</p>
-
-<p>I also love using <code>:vimgrep</code>, because it lets me use Vim&rsquo;s native regular expressions. For me, the ideal project-wide search would combine Vim&rsquo;s regex with ack&rsquo;s method of specifying the set of files to search through. I recently learned about ack&rsquo;s <code>-f</code> flag, which makes this combination possible.</p>
+        <h4><a href="/blog/2013/03/combining-vimgrep-with-git-ls-files/">Combining :vimgrep with git ls-files</a></h4>
+        <p>The <code>vimgrep</code> command uses Vim&rsquo;s native regular expressions to search the contents of multiple files. There are several ways that we can specify the list of files to look inside, including <code>*</code> and <code>**</code> wildcards. It would be handy if we could instruct <code>vimgrep</code> to look inside all of the files in the current project, excluding those listed in the <code>.gitignore</code> file. That&rsquo;s where the <a href="https://www.kernel.org/pub/software/scm/git/docs/git-ls-files.html"><code>git ls-files</code></a> command comes in.</p>
 
 
       </li>
@@ -458,10 +456,8 @@
       </li>
     
       <li>
-        <h4><a href="/blog/2013/03/combining-vimgrep-with-git-ls-files/">Combining :vimgrep with git ls-files</a></h4>
-        <p>The <code>vimgrep</code> command uses Vim&rsquo;s native regular expressions to search the contents of multiple files. There are several ways that we can specify the list of files to look inside, including <code>*</code> and <code>**</code> wildcards. It would be handy if we could instruct <code>vimgrep</code> to look inside all of the files in the current project, excluding those listed in the <code>.gitignore</code> file. That&rsquo;s where the <a href="https://www.kernel.org/pub/software/scm/git/docs/git-ls-files.html"><code>git ls-files</code></a> command comes in.</p>
-
-
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
       <li>
@@ -475,8 +471,12 @@
       </li>
     
       <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+        <h4><a href="/blog/2013/03/combining-vimgrep-with-ack--f/">Combining :vimgrep with ack -f</a></h4>
+        <p>I love the way that ack let&rsquo;s me specify the files to search inside. For starters, ack does the right thing by ignoring the contents of VCS directories, backup files, core dumps etc., which gives a good signal to noise ratio. On top of that, ack provides a convenient syntax for specifying filetypes to include or exclude from the set (see <code>ack --help-types</code>). I can target ruby files only with the <code>--ruby</code> option, or everything but ruby files with <code>--noruby</code>.</p>
+
+<p>I also love using <code>:vimgrep</code>, because it lets me use Vim&rsquo;s native regular expressions. For me, the ideal project-wide search would combine Vim&rsquo;s regex with ack&rsquo;s method of specifying the set of files to search through. I recently learned about ack&rsquo;s <code>-f</code> flag, which makes this combination possible.</p>
+
+
       </li>
     
 
