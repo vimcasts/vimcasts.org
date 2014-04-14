@@ -153,7 +153,10 @@ a.readmore {
   float: right;
 }
 
-.blog_index section.article, .episodes_index section.screencast, .episodes_page section.screencast {
+.blog_page section.article,
+.blog_index section.article,
+.episodes_index section.screencast,
+.episodes_page section.screencast {
   margin-bottom: $header-bottom-margin * 10;
 }
 
