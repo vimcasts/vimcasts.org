@@ -365,8 +365,10 @@ xnoremap # <span class="p">:&lt;</span>C<span class="p">-</span><span class="k">
 
     
       <li>
-        <h4><a href="/episodes/project-wide-find-and-replace/">Project-wide find and replace</a></h4>
-        <p>Vim doesn&rsquo;t have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as <code>:substitute</code>, <code>:argdo</code>, and <code>:vimgrep</code>. We&rsquo;ll look at two possible strategies: first using the arglist, then the quickfix list.</p>
+        <h4><a href="/episodes/supercharged-substitution-with-subvert/">Supercharged substitution with :Subvert</a></h4>
+        <p>The <a href="https://github.com/tpope/vim-abolish">abolish plugin</a> provides a command called <code>:Subvert</code>, which is like a supercharged version of Vim&rsquo;s built-in <code>:substitute</code> command. The <code>:Subvert</code> command is especially useful for changing singular and plural variants of a word, and for refactoring names that appear in <code>snake_case</code> and <code>MixedCase</code>.</p>
+
+<p><em>This is part two of a three-part series on Tim Pope&rsquo;s <a href="https://github.com/tpope/vim-abolish">abolish</a> plugin.</em></p>
 
 
       </li>
@@ -374,15 +376,6 @@ xnoremap # <span class="p">:&lt;</span>C<span class="p">-</span><span class="k">
       <li>
         <h4><a href="/publications">Publications</a></h4>
         <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/supercharged-substitution-with-subvert/">Supercharged substitution with :Subvert</a></h4>
-        <p>The <a href="https://github.com/tpope/vim-abolish">abolish plugin</a> provides a command called <code>:Subvert</code>, which is like a supercharged version of Vim&rsquo;s built-in <code>:substitute</code> command. The <code>:Subvert</code> command is especially useful for changing singular and plural variants of a word, and for refactoring names that appear in <code>snake_case</code> and <code>MixedCase</code>.</p>
-
-<p><em>This is part two of a three-part series on Tim Pope&rsquo;s <a href="https://github.com/tpope/vim-abolish">abolish</a> plugin.</em></p>
-
-
       </li>
     
       <li>
@@ -395,6 +388,13 @@ xnoremap # <span class="p">:&lt;</span>C<span class="p">-</span><span class="k">
         <p>The <code>:Subvert</code> command lets us create a particular style of regular expressions with ease. It&rsquo;s great for matching irregular singular and plural words in plain English and also for variable names that come in <code>snake_case</code> and <code>MixedCase</code> forms.</p>
 
 <p><em>This is part one of a three-part series on Tim Pope&rsquo;s abolish plugin.</em></p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/project-wide-find-and-replace/">Project-wide find and replace</a></h4>
+        <p>Vim doesn&rsquo;t have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as <code>:substitute</code>, <code>:argdo</code>, and <code>:vimgrep</code>. We&rsquo;ll look at two possible strategies: first using the arglist, then the quickfix list.</p>
 
 
       </li>
