@@ -4,17 +4,27 @@
 <% end %>
 
 <div class="row">
-  <div class="small-12 large-10 large-offset-2 columns">
+  <div class="small-12 large-8 large-offset-2 columns">
 
-    <% if paginate %>
-      <% if prev_page %>
-        <p><%= link_to 'Prev page', prev_page %></p>
-      <% end %>
-      <% if next_page %>
-        <p><%= link_to 'Next page', next_page %></p>
-      <% end %>
+    <nav class="pagination-links">
+      <% if paginate %>
+
+        <% if prev_page %>
+          <%= link_to '&laquo; Previous', prev_page, class: 'previous' %>
+        <% else %>
+          <span class="previous">&laquo; Previous</span>
+        <% end %>
+
+        <% if next_page %>
+          <%= link_to 'Next &raquo;', next_page, class: 'next' %>
+        <% else %>
+          <span class="next">Next &raquo;</span>
+        <% end %>
+
     <% end %>
+    </nav>
 
   </div>
 </div>
 
+<%= partial "footer-main" %>

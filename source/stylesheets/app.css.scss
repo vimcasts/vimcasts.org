@@ -153,7 +153,7 @@ a.readmore {
   float: right;
 }
 
-.blog_index section.article, .episodes_index section.screencast {
+.blog_index section.article, .episodes_index section.screencast, .episodes_page section.screencast {
   margin-bottom: $header-bottom-margin * 10;
 }
 
@@ -303,3 +303,24 @@ ul.off-canvas-list ul.dropdown {
 }
 .icon-play { top: 1px; }
 .icon-book { top: 2px; }
+
+// Pagination links
+// Used for /episodes and /blog pagination, and
+// for /results/ (search form)
+.pagination-links, .st-page {
+  border: 1px solid $panel-border-color;
+  @include clearfix;
+  .previous, .next,
+  .st-prev, .st-next {
+    width: 45%;
+    padding: 10px 20px;
+    text-transform: uppercase;
+  }
+  .previous,
+  .st-prev { float:left; }
+  .next,
+  .st-next { float:right; text-align:right; }
+  span.previous, span.next {
+    color: $panel-border-color;
+  }
+}
