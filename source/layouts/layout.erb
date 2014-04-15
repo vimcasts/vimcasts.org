@@ -55,10 +55,19 @@
 
             <!-- Left Nav Section -->
             <ul class="left">
-              <%= partial "navigation-items" %>
+              <%= partial "navigation/top" %>
             </ul>
           </section>
         </nav>
+
+        <nav class="top-bar secondary-nav show-for-medium-up">
+          <section class="top-bar-section">
+            <ul class="left">
+              <%= partial "navigation/browse" %>
+            </ul>
+          </section>
+        </nav>
+
       </div>
 
       <nav class="compact-nav tab-bar hide-for-medium-up">
@@ -76,7 +85,7 @@
       <aside class="left-off-canvas-menu">
         <ul class="off-canvas-list">
           <li><label>Vimcasts</label></li>
-          <%= partial "navigation-items" %>
+          <%= partial "navigation/top", locals: {subnav: true} %>
 
           <% unless current_page.data.searchfeature %>
             <li>
