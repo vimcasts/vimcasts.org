@@ -124,17 +124,23 @@ module VimcastsHelper
     pattern === current_page.request_path
   end
 
-  def navigation_link(text, path, &block)
+  def navigation_link(text, path, options={}, &block)
+    dropdown = "has-dropdown" if options[:dropdown]
     destination = path.sub(/^\//, '')
     location = current_page.request_path.sub(/\/index\.html/, '')
     if location == destination
       status = "active"
     end
 
+    classes = [dropdown, status].compact.join(" ")
     content = capture(&block) if block_given?
-    content_tag :li, class: status do
+    content_tag :li, class: classes do
       [link_to(text, path), content].join
     end
+  end
+
+  def homepage?
+    current_page.request_path == "index.html"
   end
 
 end

@@ -2,7 +2,7 @@
 
 <%= navigation_link "Subscribe", "/subscribe" %>
 
-<% navigation_link "Browse Vimcasts", "/categories" do %>
+<% navigation_link "Browse Vimcasts", "/categories", dropdown: subnav do %>
   <% if subnav %>
     <ul class="dropdown">
       <%= partial "navigation/browse" %>
