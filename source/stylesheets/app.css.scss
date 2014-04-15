@@ -159,7 +159,10 @@ a.readmore {
 .categories section.screencast,
 .episodes_index section.screencast,
 .episodes_page section.screencast {
-  margin-bottom: $header-bottom-margin * 10;
+  margin-bottom: $header-bottom-margin * 6;
+  @media #{$medium-up} {
+    margin-bottom: $header-bottom-margin * 10;
+  }
 }
 
 section.article, section.screencast, section.transcript {
