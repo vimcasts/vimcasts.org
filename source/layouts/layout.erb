@@ -60,13 +60,15 @@
           </section>
         </nav>
 
-        <nav class="top-bar secondary-nav show-for-medium-up">
-          <section class="top-bar-section">
-            <ul class="left">
-              <%= partial "navigation/browse" %>
-            </ul>
-          </section>
-        </nav>
+        <% if show_subnav %>
+          <nav class="top-bar secondary-nav show-for-medium-up">
+            <section class="top-bar-section">
+              <ul class="left">
+                <%= partial "navigation/browse" %>
+              </ul>
+            </section>
+          </nav>
+        <% end %>
 
       </div>
 

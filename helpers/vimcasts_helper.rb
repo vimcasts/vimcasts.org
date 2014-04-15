@@ -119,4 +119,9 @@ module VimcastsHelper
     end
   end
 
+  def show_subnav
+    pattern = /^#{["categories", "episodes", "blog"].join("|")}/
+    pattern === current_page.request_path
+  end
+
 end
