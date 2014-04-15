@@ -124,4 +124,17 @@ module VimcastsHelper
     pattern === current_page.request_path
   end
 
+  def navigation_link(text, path, &block)
+    destination = path.sub(/^\//, '')
+    location = current_page.request_path.sub(/\/index\.html/, '')
+    if location == destination
+      status = "active"
+    end
+
+    content = capture(&block) if block_given?
+    content_tag :li, class: status do
+      [link_to(text, path), content].join
+    end
+  end
+
 end
