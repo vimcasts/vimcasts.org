@@ -83,6 +83,9 @@ section.screencast, section.article, section.transcript {
     @include grid-row();
     div.episode_summary {
       @include grid-column($columns:12);
+      @media #{$medium-only} {
+        max-width: 40rem;
+      }
       @media #{$large-up} {
         @include grid-column($columns:8, $offset:2);
       }
