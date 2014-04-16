@@ -1,7 +1,7 @@
 --- 
 :title: On sharpening the saw
 :date: 2012/08/06
-:tags: articles, customizations, plugins, text-objects, grammar
+:tags: Essays, customizations, plugins, text-objects, grammar
 ---
 
 Vim users sit somewhere on a spectrum, based on how much they customize their editor. At one end of the spectrum, there are those who use Vim with no customizations whatsoever. At the other end are those who customize Vim to the point where it barely resembles the stock install.
