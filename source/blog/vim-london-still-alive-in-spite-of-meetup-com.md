@@ -1,4 +1,4 @@
---- 
+---
 :title: Vim London - still alive in spite of meetup.com
 :date: 2012/10/25
 :tags: vim-london
@@ -6,18 +6,20 @@
 
 **UPDATE**: [Vim London](http://www.meetup.com/Vim-London/) is back!
 
-Yesterday, without warning, Meetup.com deleted the Vim London group. In their words, here's why:
+Yesterday, without warning, Meetup.com deleted the Vim London group.
+
+READMORE
+
+In their words, here's why:
 
 > Your Meetup Group, Vim London, was brought to our attention as specifically promoting a product, which is not in compliance with our Terms of Service. Meetup is a community website and not a commercial marketplace... As a result of our inquiry, we've closed your Meetup Group and refunded your Organizer Dues.
 
 In their generic message, they don't indicate which product was apparently being promoted. The meetup group that we created has vanished, along with our list of members. That means I can't contact our (already 50+) members to explain what's happened, so I'm announcing it here.
 
-READMORE
-
 I replied immediately (but have yet to hear back from them):
 
 > Vim London was founded as a meetup for Vim enthusiasts. In that sense, it's no different than any of [the meetups listed here](http://vim.meetup.com/).
-> 
+>
 > For our inaugural event, I suggested that we could celebrate the founding of Vim London, as well as the shipping of my book, Practical Vim. Is this why our meetup was flagged as inappropriate? We can change the agenda for our first meetup, but I see no reason to cancel the group entirely.
 
 Don't panic. Vim London is not dead! We shall still hold our launch party next monday (October 29th), in spite of this setback.
@@ -53,9 +55,9 @@ This exchange has relieved me of some of the guilt I used to feel when promoting
 I've had a response from Meetup.com, although it doesn't show any signs that they've read my reply:
 
 > It’s important that a Meetup Group's intentions be clearly stated in the Group description, especially during the initial start up phase. The automated email invitation and announcement process for new Organizers is one of the best tools we have to kick-start a new Meetup Group.
-> 
+>
 > If your intentions are unclear, your content may be reported to us as inappropriate, which is why we took action from here. Members will also be less likely to join your Meetup Group.
-> 
+>
 > If you would like to start a new Meetup Group, please review the Terms of Service for clarification:
 > [http://www.meetup.com/terms/](http://www.meetup.com/terms/)
 

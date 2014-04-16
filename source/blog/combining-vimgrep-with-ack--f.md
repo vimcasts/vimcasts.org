@@ -6,10 +6,10 @@
 
 I love the way that ack let's me specify the files to search inside. For starters, ack does the right thing by ignoring the contents of VCS directories, backup files, core dumps etc., which gives a good signal to noise ratio. On top of that, ack provides a convenient syntax for specifying filetypes to include or exclude from the set (see `ack --help-types`). I can target ruby files only with the `--ruby` option, or everything but ruby files with `--noruby`.
 
+READMORE
+
 I also love using `:vimgrep`, because it lets me use Vim's native regular expressions. For me, the ideal project-wide search would combine Vim's regex with ack's method of specifying the set of files to search through. I recently learned about ack's `-f` flag, which makes this combination possible.
 
-
-READMORE
 
 <r:snippet name="announcement"/>
 

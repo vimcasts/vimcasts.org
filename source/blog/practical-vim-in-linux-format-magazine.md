@@ -6,11 +6,11 @@
 
 In the September issue of [Linux Format magazine][lxf], Jonathan Roberts reviewed Practical Vim (the beta edition) and rated it 9/10.
 
+READMORE
+
 ![The best book available to move you on from being a novice Vim user.](http://vimcasts.org/images/blog/linux-format-practical-vim-verdict.png)
 
 [lxf]: http://www.linuxformat.com/
-
-READMORE
 
 With the permission of Jonathan Roberts and Linux Format magazine, I've reproduced [the review][scan] in full:
 

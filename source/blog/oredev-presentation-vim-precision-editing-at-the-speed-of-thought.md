@@ -4,7 +4,11 @@
 :tags: presentations
 ---
 
-Last week, I had the pleasure of speaking at [Øredev][o], in Sweden. Video from my session, [Vim - Precision editing at the speed of thought][video] can be found on Vimeo. You can view [the slides from my talk][slides] on speakerdeck. Here's the synopsis from my talk:
+Last week, I had the pleasure of speaking at [Øredev][o], in Sweden. Video from my session, [Vim - Precision editing at the speed of thought][video] can be found on Vimeo. You can view [the slides from my talk][slides] on speakerdeck.
+
+READMORE
+
+Here's the synopsis from my talk:
 
 > Vim's modal editing model was conceived to meet the constraints of computing in the 1970s. The arrival of the mouse made intuitive point-and-click user interfaces the norm. While this was a boon for the novice computer user, it was a backward step for the power user. For a touch typist, there is no quicker way of editing text than with the keyboard.
 > 
@@ -14,8 +18,6 @@ Last week, I had the pleasure of speaking at [Øredev][o], in Sweden. Video from
 [video]: https://vimeo.com/53144573
 [slides]: https://speakerdeck.com/nelstrom/vim-precision-editing-at-the-speed-of-thought
 [workshop]: http://oredev.org/2012/sessions/vim-masterclass
-
-READMORE
 
 You should check out the rest of the [sessions from Øredev 2012][vids] too. Great stuff!
 

@@ -6,11 +6,11 @@
 
 Breaking news: [Practical Vim is now shipping as a beta book][dnvim]!
 
+READMORE
+
 [![Practical Vim](http://vimcasts.org/images/practical-vim-cover.png)][dnvim]
 
 [dnvim]: http://pragprog.com/book/dnvim/practical-vim
-
-READMORE
 
 ### About the beta book
 

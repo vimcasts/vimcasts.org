@@ -4,7 +4,11 @@
 :tags: practical-vim
 ---
 
-The first five-star [reviews for Practical Vim][reviews] have cropped up, and I'm blushing after reading them. It's been described as *the book Vim has always deserved*, and *a must-have for anybody who types*. Here are a few choice phrases:
+The first five-star [reviews for Practical Vim][reviews] have cropped up, and I'm blushing after reading them. It's been described as *the book Vim has always deserved*, and *a must-have for anybody who types*.
+
+READMORE
+
+Here are a few choice phrases:
 
 > This is one of the best technical books I've ever read: comprehensive but never dry.
 > [Peter][]
@@ -21,8 +25,6 @@ If you've read Practical Vim, please write a five-star review on Amazon. It make
 [Peter]: http://www.amazon.com/review/R24PEKYDZMZ7HH/ref=cm_cr_pr_perm?ie=UTF8&ASIN=1934356980&linkCode=&nodeID=&tag=
 [Manoj]: http://www.amazon.com/review/R3G4FYARC09TX6/ref=cm_cr_pr_perm?ie=UTF8&ASIN=1934356980&linkCode=&nodeID=&tag=
 
-
-READMORE
 
 ![Linux best sellers on Amazon, with Practical Vim at number 2](/images/blog/linux-best-sellers.png)
 

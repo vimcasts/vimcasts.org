@@ -4,14 +4,16 @@
 :tags: practical-vim
 ---
 
-I am very pleased to announce that the [Pragmatic Bookshelf][prags] will be publishing my book on Vim. The working title is *Practical Vim*, and I hope to complete it by the spring of 2011. Here is a synopsis:
+I am very pleased to announce that the [Pragmatic Bookshelf][prags] will be publishing my book on Vim. The working title is *Practical Vim*, and I hope to complete it by the spring of 2011.
+ 
+READMORE
+
+Here is a synopsis:
 
 > For an open source project Vim’s documentation is impressive in scope, but there is still a considerable barrier between the novice and the productive Vim user. Whereas it is possible to improve as a programmer or writer by reading other people’s code, poetry or prose, there are fewer opportunities to learn how to use an editor effectively. Vim’s documentation reads like a dictionary; I propose to write a phrasebook.
 
 [prags]: http://pragprog.com/
 
-
-READMORE
 
 I would like to say a big thank you to everyone who took the time to fill out the [Vim user survey][survey]. I collected over 500 responses, which gave a strong representation of my target audience. The number of people who said they would consider buying my book was encouraging:
 

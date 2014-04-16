@@ -6,13 +6,13 @@
 
 Yesterday was the [world premiere of my Vimcasts Masterclass Online][1]. It went great! Encouraged by it's success, I'm planning to make this a regular occurrence. Watch out for more dates in the new year.
 
+READMORE
+
 If you missed the chance to attend the first one, don't worry! I've scheduled [another Vim Masterclass][2] at the same time next week. The EarlyBird discount price of £80 (approx. US $128) is available until the end of this week.
 
 [1]: http://vimcasts-online-1.eventbrite.com/
 [2]: http://vimcasts-online-2.eventbrite.com/
 
-
-READMORE
 
 I've taught this material a couple of dozen times in the classroom, but teaching online was a new experience for me. It was more enjoyable than I dared to hope. The group of attendess got along well in the chat room, making the general ambience really positive. We had quite a few laughs! [Jose Mota][jm] summarized ['one of the main conclusions taken'][reddit] with the image macro, "MACRO ALL THE THINGS!":
 

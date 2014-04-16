@@ -4,7 +4,11 @@
 :tags: articles, motions
 ---
 
-Moving your Vim cursor around using the arrow keys is a bad habit, and like many bad habits it's a difficult one to break! Putting these lines into your vimrc can help:
+Moving your Vim cursor around using the arrow keys is a bad habit, and like many bad habits it's a difficult one to break!
+
+READMORE
+
+Putting these lines into your vimrc can help:
 
     noremap <Up> <NOP>
     noremap <Down> <NOP>
@@ -16,11 +20,6 @@ This snippet causes each of the arrow keys to execute *no operation*, or in othe
 Learning to operate Vim without leaving the home row is the first rite of passage. If you're still in the habit of moving around using the arrow keys, then you should disable them today.
 
 [konami code]: http://www.tylercipriani.com/vim.html
-
-
-READMORE
-
-<r:snippet name="announcement"/>
 
 ### Stop using the `h`, `j`, `k`, `l` keys!
 

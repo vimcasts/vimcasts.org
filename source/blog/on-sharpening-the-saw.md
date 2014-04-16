@@ -6,6 +6,8 @@
 
 Vim users sit somewhere on a spectrum, based on how much they customize their editor. At one end of the spectrum, there are those who use Vim with no customizations whatsoever. At the other end are those who customize Vim to the point where it barely resembles the stock install.
 
+READMORE
+
 [Gary Bernhardt][gb] advocates using stock Vim, with very few customizations.
 
 > Vim is a chainsaw, and the last thing you want on a chainsaw is controls that are not the controls you're used to, because then you will cut your hand off.  
@@ -15,9 +17,6 @@ Gary's chainsaw metaphor warns against the practice of over-customizing Vim. But
 
 [gb]: https://www.destroyallsoftware.com/screencasts
 [rr40]: http://rubyrogues.com/040-rr-text-editors-and-ides/
-
-
-READMORE
 
 ### Vim is unlike other text editors
 

@@ -4,7 +4,11 @@
 :tags: vim-london, grammar, motions
 ---
 
-On Tuesday 29th January, [VimLondon][] is holding a meetup with a theme: [Speak Vim - Operators and Motions][jan]. We've got 5 short talks lined up:
+On Tuesday 29th January, [VimLondon][] is holding a meetup with a theme: [Speak Vim - Operators and Motions][jan].
+
+READMORE
+
+We've got 5 short talks lined up:
 
 1. [Tom Cammann][tom], Intro to Vim Grammar
 2. [Drew Neil][drew], When and why you should stay out of visual mode

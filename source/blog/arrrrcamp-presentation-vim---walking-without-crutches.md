@@ -4,7 +4,11 @@
 :tags: presentations
 ---
 
-Last week, I gave a presentation at [ArrrrCamp][rc] called *Vim - walking without crutches*. You can now [watch the video][vid] on their website. Here's the synopsis for my talk:
+Last week, I gave a presentation at [ArrrrCamp][rc] called *Vim - walking without crutches*. You can now [watch the video][vid] on their website.
+
+READMORE
+
+Here's the synopsis for my talk:
 
 > In his provocatively titled blog post ["Everyone Who Tried to Convince Me to use Vim was Wrong"][wrong], Yehuda Katz showed how he switched from TextMate to Vim without experiencing an initial dip in productivity. Begin by emulating the working environment that you are comfortable with, then adopt Vims idioms as and when you discover them. This is a welcome alternative to the hazing "do everything the Vim way from day 1" approach, which is widely advocated by veterans. Anything that offers a leg-up Vims infamous learning curve is to be commended. But be careful not to get too comfortable. Mastering Vim requires a change in mindset and if you don't break some of your old habits you could miss out.
 > 
@@ -21,8 +25,6 @@ Note that you have to have Silverlight installed to watch the video. A [few][1] 
 [5]: http://twitter.com/arrrrcamp/status/29306852110
 [wrong]: http://yehudakatz.com/2010/07/29/everyone-who-tried-to-convince-me-to-use-vim-was-wrong/
 
-
-READMORE
 
 <a href="http://old.arrrrcamp.be/videos/vim-walking-without-crutches"><img title="Drew Neil presenting at ArrrrCamp" src="/images/blog/arrrrcamp-presentation.jpg"/></a>
 

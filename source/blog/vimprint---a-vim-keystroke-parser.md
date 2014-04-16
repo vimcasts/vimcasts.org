@@ -6,14 +6,14 @@
 
 I sometimes get asked what software I use to reveal the Vim keystrokes in my video tutorials here on Vimcasts.org. The fact is that I add them by hand in post-production. It's not fun!
 
+READMORE
+
 When I run my [Core Vim Masterclasses][class] I use [Keycastr][] to show what I'm doing in realtime. Keycastr uses Growl-style notifications to show all keystrokes across all applications, including every letter I type while communicating in a chat room, for example. It's not ideal, but it's better than nothing! I would love to have *a dedicated program for visualizing my keystrokes in Vim*, so I've started building [Vimprint][] to scratch that itch.
 
 [class]: http://vimcasts.org/classes/core-vim
 [Keycastr]: https://github.com/sdeken/keycastr/
 [Vimprint]: https://github.com/nelstrom/vimprint
 
-
-READMORE
 
 ### My wishlist for Vimprint
 
