@@ -23,11 +23,13 @@ task :categories do
   blog_tags = @app.blog(:blog).tags
   episode_tags = @app.blog(:episodes).tags
   tags = (blog_tags.keys + episode_tags.keys).uniq
-  tagdata = tags.map do |tag|
-    videos   = episode_tags.fetch(tag, []).count
-    articles = blog_tags.fetch(tag, []).count
+  tagdata = tags.map do |tagname|
+    videos   = episode_tags.fetch(tagname, []).count
+    articles = blog_tags.fetch(tagname, []).count
+    tagslug = tagname.gsub(/\s/, '-').downcase
     {
-      name: tag,
+      name: tagname,
+      slug: tagslug,
       videos: videos,
       articles: articles,
       total: videos+articles

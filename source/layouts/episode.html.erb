@@ -18,14 +18,7 @@
     </div>
 
     <div class="pubdate-row">
-      <div class="video-tags">
-        <% if current_page.tags.size > 0 %>
-          Tagged with:
-          <%= link_to_article_tags(current_page) %>
-        <% else %>
-          Untagged.
-        <% end %>
-      </div>
+      <%= partial "article-categories" %>
       <time class="pubdate" pubdate="pubdate" datetime="<%= current_page.date.strftime('%Y-%m-%e') %>">
         <%= format_pubdate(current_page) %>
       </time>

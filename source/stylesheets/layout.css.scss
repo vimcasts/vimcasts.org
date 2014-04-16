@@ -71,7 +71,7 @@ section.screencast, section.article, section.transcript {
 
   .pubdate-row {
     @include grid-row();
-    .video-tags, .transcript-context {
+    .article-categories, .video-run-time, .transcript-context {
       @include grid-column($columns:8);
       @media #{$large-up} {
         @include grid-column($columns:10, $push:2);
@@ -201,7 +201,7 @@ body.index {
 
     .pubdate-row {
       @include grid-row();
-      .video-tags {
+      .article-categories, .video-run-time {
         @include grid-column($columns:9, $collapse:true);
         @media #{$large-up} {
           @include grid-column($columns:9, $push:0, $collapse:true);

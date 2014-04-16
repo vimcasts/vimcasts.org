@@ -11,9 +11,9 @@ module VimcastsHelper
     data.has_key?(:core_vim) ? data.core_vim.alumni : '500'
   end
 
-  def link_to_article_tags(article, reject=[])
-    (article.tags - reject).map do |tag|
-      link_to tag, "/categories/#{tag}"
+  def link_to_article_tags(taglist)
+    taglist.map do |tag|
+      link_to tag[:name], "/categories/#{tag[:slug]}"
     end.join(", ")
   end
 
@@ -141,6 +141,12 @@ module VimcastsHelper
 
   def homepage?
     current_page.request_path == "index.html"
+  end
+
+  def visible_tags(tagnames, threshold)
+    data.categories.select do |tag|
+      tagnames.include?(tag["name"]) && tag["total"] >= threshold
+    end
   end
 
 end

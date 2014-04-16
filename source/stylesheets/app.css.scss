@@ -345,3 +345,6 @@ ul.off-canvas-list ul.dropdown {
     color: $panel-border-color;
   }
 }
+.no-categories {
+  color: lighten($body-font-color, 45%);
+}

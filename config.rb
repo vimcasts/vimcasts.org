@@ -149,10 +149,14 @@ proxy "/episodes/archive.html", "/episodes-all.html", ignore: true
 # Generate data/categories.yml with `rake dump_categories`
 if data.has_key? :categories
   data.categories.each do |tag|
-    category = tag[:name]
-    proxy "categories/#{category}.html", "category-aggregate.html", locals: { tagname: category }, ignore: true
+    name = tag[:name]
+    slug = tag[:slug]
+    proxy "categories/#{slug}.html", "category-aggregate.html", locals: { tagname: name }, ignore: true
   end
 end
+
+# A tag is invisible until it is used to label N or more items
+set :tag_visiblity_threshold, 2
 
 ###
 # Helpers

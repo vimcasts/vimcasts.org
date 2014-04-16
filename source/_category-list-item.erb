@@ -1,7 +1,8 @@
 <ul class="category-list small-block-grid-2 medium-block-grid-3 large-block-grid-5">
   <% items.each do |tag| %>
+    <% next if tag[:total] < tag_visiblity_threshold %>
     <li>
-    <% link_to "/categories/#{tag[:name]}" do %>
+    <% link_to "/categories/#{tag[:slug]}" do %>
       <h4><%= tag[:name] %></h4>
       <p>
       <%= tag_stats(tag) %>

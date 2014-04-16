@@ -1,33 +1,41 @@
 ---
 - :name: plugins
+  :slug: plugins
   :videos: 12
   :articles: 4
   :total: 16
 - :name: registers
+  :slug: registers
   :videos: 9
   :articles: 3
   :total: 12
 - :name: Copy and Paste
+  :slug: copy-and-paste
   :videos: 7
   :articles: 3
   :total: 10
 - :name: git
+  :slug: git
   :videos: 6
   :articles: 2
   :total: 8
 - :name: workflow
+  :slug: workflow
   :videos: 7
   :articles: 0
   :total: 7
 - :name: search
+  :slug: search
   :videos: 7
   :articles: 0
   :total: 7
 - :name: arglist
+  :slug: arglist
   :videos: 5
   :articles: 2
   :total: 7
 - :name: regex
+  :slug: regex
   :videos: 6
   :articles: 0
   :total: 6
@@ -37,266 +45,332 @@
   :articles: 6
   :total: 6
 - :name: fugitive
+  :slug: fugitive
   :videos: 5
   :articles: 1
   :total: 6
 - :name: whitespace
+  :slug: whitespace
   :videos: 5
   :articles: 0
   :total: 5
 - :name: plaintext
+  :slug: plaintext
   :videos: 4
   :articles: 0
   :total: 4
 - :name: surveys
+  :slug: surveys
   :videos: 0
   :articles: 4
   :total: 4
 - :name: wrapping
+  :slug: wrapping
   :videos: 4
   :articles: 0
   :total: 4
 - :name: vimgrep
+  :slug: vimgrep
   :videos: 2
   :articles: 2
   :total: 4
 - :name: visual-mode
+  :slug: visual-mode
   :videos: 4
   :articles: 0
   :total: 4
 - :name: showcase
+  :slug: showcase
   :videos: 4
   :articles: 0
   :total: 4
 - :name: managing-workspace
+  :slug: managing-workspace
   :videos: 4
   :articles: 0
   :total: 4
-- :name: articles
+- :name: Essays
+  :slug: essays
   :videos: 0
   :articles: 4
   :total: 4
 - :name: vimdiff
+  :slug: vimdiff
   :videos: 3
   :articles: 0
   :total: 3
 - :name: undo
+  :slug: undo
   :videos: 3
   :articles: 0
   :total: 3
 - :name: repeat
+  :slug: repeat
   :videos: 3
   :articles: 0
   :total: 3
 - :name: vimscript
+  :slug: vimscript
   :videos: 3
   :articles: 0
   :total: 3
 - :name: mappings
+  :slug: mappings
   :videos: 2
   :articles: 1
   :total: 3
 - :name: ruby
+  :slug: ruby
   :videos: 1
   :articles: 2
   :total: 3
 - :name: vim-abolish
+  :slug: vim-abolish
   :videos: 3
   :articles: 0
   :total: 3
 - :name: presentations
+  :slug: presentations
   :videos: 0
   :articles: 3
   :total: 3
 - :name: insert-mode
+  :slug: insert-mode
   :videos: 3
   :articles: 0
   :total: 3
 - :name: colorschemes
+  :slug: colorschemes
   :videos: 1
   :articles: 2
   :total: 3
 - :name: tabs
+  :slug: tabs
   :videos: 2
   :articles: 0
   :total: 2
 - :name: donations
+  :slug: donations
   :videos: 0
   :articles: 2
   :total: 2
 - :name: macros
+  :slug: macros
   :videos: 2
   :articles: 0
   :total: 2
 - :name: windows
+  :slug: windows
   :videos: 1
   :articles: 1
   :total: 2
 - :name: external-filters
+  :slug: external-filters
   :videos: 2
   :articles: 0
   :total: 2
 - :name: editing-text
+  :slug: editing-text
   :videos: 2
   :articles: 0
   :total: 2
 - :name: autocommands
+  :slug: autocommands
   :videos: 2
   :articles: 0
   :total: 2
 - :name: opening-files
+  :slug: opening-files
   :videos: 2
   :articles: 0
   :total: 2
 - :name: customizations
+  :slug: customizations
   :videos: 1
   :articles: 1
   :total: 2
 - :name: motions
+  :slug: motions
   :videos: 1
   :articles: 1
   :total: 2
 - :name: meta
+  :slug: meta
   :videos: 0
   :articles: 2
   :total: 2
 - :name: jumps
+  :slug: jumps
   :videos: 2
   :articles: 0
   :total: 2
 - :name: folding
+  :slug: folding
   :videos: 2
   :articles: 0
   :total: 2
 - :name: expression-register
+  :slug: expression-register
   :videos: 2
   :articles: 0
   :total: 2
 - :name: vim-training
+  :slug: vim-training
   :videos: 0
   :articles: 2
   :total: 2
 - :name: syndication
+  :slug: syndication
   :videos: 0
   :articles: 2
   :total: 2
 - :name: cmdline-mode
+  :slug: cmdline-mode
   :videos: 2
   :articles: 0
   :total: 2
 - :name: vim-london
+  :slug: vim-london
   :videos: 0
   :articles: 2
   :total: 2
 - :name: text-objects
+  :slug: text-objects
   :videos: 0
   :articles: 2
   :total: 2
 - :name: syntax
+  :slug: syntax
   :videos: 0
   :articles: 1
   :total: 1
 - :name: vimprint
+  :slug: vimprint
   :videos: 0
   :articles: 1
   :total: 1
 - :name: email
+  :slug: email
   :videos: 0
   :articles: 1
   :total: 1
 - :name: grammar
+  :slug: grammar
   :videos: 0
   :articles: 1
   :total: 1
 - :name: spoof
+  :slug: spoof
   :videos: 1
   :articles: 0
   :total: 1
 - :name: file-explorers
+  :slug: file-explorers
   :videos: 0
   :articles: 1
   :total: 1
 - :name: interactive
+  :slug: interactive
   :videos: 1
   :articles: 0
   :total: 1
 - :name: vimrc
+  :slug: vimrc
   :videos: 1
   :articles: 0
   :total: 1
 - :name: customization
+  :slug: customization
   :videos: 1
   :articles: 0
   :total: 1
 - :name: pathogen
+  :slug: pathogen
   :videos: 1
   :articles: 0
   :total: 1
 - :name: alignment
+  :slug: alignment
   :videos: 1
   :articles: 0
   :total: 1
 - :name: filetypes
+  :slug: filetypes
   :videos: 1
   :articles: 0
   :total: 1
 - :name: helpfiles
+  :slug: helpfiles
   :videos: 0
   :articles: 1
   :total: 1
 - :name: interviews
+  :slug: interviews
   :videos: 0
   :articles: 1
   :total: 1
 - :name: vimgolf
+  :slug: vimgolf
   :videos: 1
   :articles: 0
   :total: 1
 - :name: performance
+  :slug: performance
   :videos: 1
   :articles: 0
   :total: 1
 - :name: leader
+  :slug: leader
   :videos: 0
   :articles: 1
   :total: 1
 - :name: ex-commands
+  :slug: ex-commands
   :videos: 1
   :articles: 0
   :total: 1
 - :name: substitution
+  :slug: substitution
   :videos: 1
   :articles: 0
   :total: 1
 - :name: ack
+  :slug: ack
   :videos: 0
   :articles: 1
   :total: 1
 - :name: abbreviations
+  :slug: abbreviations
   :videos: 1
   :articles: 0
   :total: 1
 - :name: testing
+  :slug: testing
   :videos: 1
   :articles: 0
   :total: 1
 - :name: buffers
+  :slug: buffers
   :videos: 1
   :articles: 0
   :total: 1
 - :name: count
+  :slug: count
   :videos: 1
   :articles: 0
   :total: 1
 - :name: html
+  :slug: html
   :videos: 1
   :articles: 0
   :total: 1
 - :name: exchange
+  :slug: exchange
   :videos: 1
   :articles: 0
   :total: 1
 - :name: change-history
+  :slug: change-history
   :videos: 1
   :articles: 0
   :total: 1

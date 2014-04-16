@@ -22,7 +22,7 @@
     <% episode = Episode.new(article) %>
     <div class="pubdate-row">
 
-      <div class="video-tags">
+      <div class="video-run-time">
         <%# http://wiki.whatwg.org/wiki/Time_element#duration %>
         Run time: <time datetime="<%= episode.running_datetime %>">
           <%= episode.running_time %>

@@ -1,0 +1,10 @@
+<div class="article-categories">
+  <% tags = visible_tags(current_page.tags, tag_visiblity_threshold) %>
+  <% if tags.size > 0 %>
+    Tagged with:
+    <%= link_to_article_tags(tags) %>
+  <% else %>
+    <span class="no-categories">Uncategorised</span>
+  <% end %>
+</div>
+
