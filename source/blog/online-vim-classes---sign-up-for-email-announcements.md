@@ -30,4 +30,4 @@ READMORE
 
 <!--End mc_embed_signup-->
 
-<p>This newsletter will only contain information about upcoming Vim classes. If you'd like a monthly summary of the material posted on Vimcasts.org, then you can <a href="/blog/2013/03/subscribe-to-the-vimcasts-org-monthly-newsletter/">subscribe to the Vimcasts newsletter</a> as well.
+<p>This newsletter will only contain information about upcoming Vim classes. If you'd like a monthly summary of the material posted on Vimcasts.org, then you can <a href="/announcements/2013/03/subscribe-to-the-vimcasts-org-monthly-newsletter/">subscribe to the Vimcasts newsletter</a> as well.
