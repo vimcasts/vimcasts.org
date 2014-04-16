@@ -173,6 +173,19 @@ section.article, section.screencast, section.transcript {
   }
 }
 
+section.article {
+  .title-row {
+    position: relative;
+    .pubdate {
+      position: absolute;
+      top: rem-calc(13);
+      @media #{$medium-up} {
+        top: rem-calc(18);
+      }
+    }
+  }
+}
+
 .episode_number small { color: lighten($body-font-color, 45%); }
 h2 small { font-size: $h3-font-size; }
 h3 small { font-size: $h4-font-size; }
