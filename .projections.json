@@ -2,6 +2,12 @@
     "config.rb": {
         "command": "config"
     },
+    "helpers/*": {
+        "command": "helper"
+    },
+    "helpers/vimcasts_helper.rb": {
+        "command": "helper"
+    },
     "source/*": {
         "command": "index"
     },
