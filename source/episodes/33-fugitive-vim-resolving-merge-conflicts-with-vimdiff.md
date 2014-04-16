@@ -5,7 +5,7 @@
 :flattr_id: "184250"
 :duration: 695
 :number: 33
-:tags: plugins, fugitive, git, workflow, vimdiff
+:tags: plugins, git, workflow, vimdiff
 ---
 
 When git branches are merged, there is always the chance of a conflict arising if a file was modified in both the target and merge branches. You can resolve merge conflicts using a combination of fugitive's `:Gdiff` command, and Vim's built in `diffget` and `diffput`. In this episode, we'll find out how.

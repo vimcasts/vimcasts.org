@@ -1,7 +1,7 @@
 --- 
 :title: Join the Vim community on gittip
 :date: 2013/09/20
-:tags: donations
+:tags: meta
 ---
 
 [Gittip][] is a way to give weekly cash gifts to people whose work inspires you. If you'd like to support the people who help make Vim awesome, why not sign up and join the [Vim community][vim]? (We need 13 more members to hit the 150 threshold.) I've set up a weekly gift for [Tim Pope][tpope], whose Vim plugins I use every day.

@@ -1,7 +1,7 @@
 --- 
 :title: Oil and vinegar - split windows and the project drawer
 :date: 2013/01/02
-:tags: Essays, windows, file-explorers
+:tags: Essays, Managing your workspace, File explorers
 ---
 
 Do you avoid using Vim's split windows because they're confusing? That might be a problem of your own devising. If you've bolted a project drawer onto Vim, then you've added unnecessary complexity to Vim's otherwise minimal interface. Split windows and the project drawer go together like oil and vinegar. I don't mean to say that you can combine them to create a delicious salad dressing. I mean that they don't mix well!

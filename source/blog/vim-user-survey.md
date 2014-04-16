@@ -1,7 +1,7 @@
 --- 
 :title: Fill out the Vim user survey
 :date: 2010/10/01
-:tags: surveys
+:tags: meta
 ---
 
 I am considering writing a book on Vim. By [filling out this survey][s], you can help me to gauge interest and target the book at the right level.

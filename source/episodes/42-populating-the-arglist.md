@@ -5,7 +5,7 @@
 :flattr_id: "1146839"
 :duration: 331
 :number: 42
-:tags: arglist
+:tags: The argument list, Opening files
 ---
 
 The arglist wouldn't be much use if we had to quit and relaunch Vim every time we wanted to change its contents. In this episode, we'll learn how to set the contents of the arglist using the `:args` command, which can receive filepaths, globs, or even backtick expressions.

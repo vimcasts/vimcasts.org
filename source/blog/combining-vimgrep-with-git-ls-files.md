@@ -1,7 +1,7 @@
 --- 
 :title: Combining :vimgrep with git ls-files
 :date: 2013/03/07
-:tags: vimgrep, arglist, git
+:tags: vimgrep, The argument list, git, External commands
 ---
 
 The `vimgrep` command uses Vim's native regular expressions to search the contents of multiple files. There are several ways that we can specify the list of files to look inside, including `*` and `**` wildcards. It would be handy if we could instruct `vimgrep` to look inside all of the files in the current project, excluding those listed in the `.gitignore` file. That's where the [`git ls-files`][git ls-files] command comes in.

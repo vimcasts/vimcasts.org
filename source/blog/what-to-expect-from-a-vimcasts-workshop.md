@@ -1,7 +1,7 @@
 --- 
 :title: What to expect from a Vimcasts workshop
 :date: 2012/02/24
-:tags: vim-training
+:tags: meta
 ---
 
 You've already worked your way through the [Vimtutor][tutor], right? I've prepared a series of lessons that follow a similar format: plain text files containing simple problems, with instructions on how to complete them. The tasks are carefully designed to demonstrate tips and tricks that will boost your productivity. We'll work through them as a class, but you can take them at your own pace.

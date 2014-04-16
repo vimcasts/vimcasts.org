@@ -5,7 +5,7 @@
 :flattr_id: "31941"
 :duration: 294
 :number: 16
-:tags: plaintext, wrapping
+:tags: plaintext, Formatting text
 ---
 
 Long lines of text can be wrapped if they don't fit inside the window. By default, Vim will happily split in the middle of a word. This episode demonstrates how to use the 'linebreak' option to make Vim break lines without breaking words.

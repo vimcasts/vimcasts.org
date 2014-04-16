@@ -5,7 +5,7 @@
 :flattr_id: "1045993"
 :duration: 489
 :number: 39
-:tags: vimscript, performance
+:tags: Vimscript, performance
 ---
 
 Vim users are unforgiving of plugins that impair performance. Luckily, Vim provides built-in profiling tools that make it easy to diagnose performance issues. We'll start by looking at how to profile the vimrc file, then move on to a real world scenario where profiling helped to identify and aleviate a performance bottleneck.

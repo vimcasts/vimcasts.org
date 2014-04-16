@@ -5,7 +5,7 @@
 :flattr_id: "31927"
 :duration: 341
 :number: 5
-:tags: whitespace
+:tags: Whitespace, Editing text
 ---
 
 This episode covers the commands for shifting text left and right (`<` and `>`), and also goes over the auto indent command (`=`).

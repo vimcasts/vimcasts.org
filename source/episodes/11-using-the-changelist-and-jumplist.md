@@ -5,7 +5,7 @@
 :flattr_id: "31933"
 :duration: 201
 :number: 11
-:tags: jumps, motions, undo
+:tags: Navigating a document, undo
 ---
 
 This episode introduces the changelist and jumplist, demonstrating a couple of situations where they are useful. 

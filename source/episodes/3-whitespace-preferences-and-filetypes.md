@@ -5,7 +5,7 @@
 :flattr_id: "31925"
 :duration: 209
 :number: 3
-:tags: whitespace, autocommands, filetypes
+:tags: Whitespace, autocommands, filetypes
 ---
 
 Different file types may require particular whitespace settings. For example, YAML files must be indented using spaces, whereas makefiles require indentation with tabs. These preferences can be specified by hooking into the `FileType` event with an autocommand.

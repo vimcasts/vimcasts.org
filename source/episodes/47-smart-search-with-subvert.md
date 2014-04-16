@@ -5,7 +5,7 @@
 :flattr_id: "1248431"
 :duration: 333
 :number: 47
-:tags: search, regex, plugins, vim-abolish
+:tags: search, Regular expressions, plugins, Ex commands, Editing text, vimgrep
 ---
 
 The `:Subvert` command lets us create a particular style of regular expressions with ease. It's great for matching irregular singular and plural words in plain English and also for variable names that come in `snake_case` and `MixedCase` forms.

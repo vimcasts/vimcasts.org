@@ -1,7 +1,7 @@
 --- 
 :title: "Øredev presentation: Vim - precision editing at the speed of thought"
 :date: 2012/11/12
-:tags: presentations
+:tags: Appearances
 ---
 
 Last week, I had the pleasure of speaking at [Øredev][o], in Sweden. Video from my session, [Vim - Precision editing at the speed of thought][video] can be found on Vimeo. You can view [the slides from my talk][slides] on speakerdeck.

@@ -28,21 +28,8 @@ searchfeature: true
     or browse by category:
     </p>
 
-
-    <dl class="tabs" data-tab>
-      <dd class="active"><a href="#panel2-1">Most first</a></dd>
-      <dd><a href="#panel2-2">Alphabetical</a></dd>
-    </dl>
-    <div class="tabs-content">
-      <div class="content active" id="panel2-1">
-        <%= partial 'category-list-item',
-          locals: {items: data.categories} %>
-      </div>
-      <div class="content" id="panel2-2">
-        <%= partial 'category-list-item',
-          locals: {items: data.categories.sort_by { |k| k["name"] }} %>
-      </div>
-    </div>
+    <%= partial 'category-list-item',
+      locals: {items: data.categories.sort_by { |k| k["name"] }} %>
 
   </div>
 </div>

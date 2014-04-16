@@ -5,7 +5,7 @@
 :flattr_id: "69651"
 :duration: 383
 :number: 26
-:tags: customization, editing-text
+:tags: Editing text, Customizing Vim
 ---
 
 TextMate has a few built in commands for moving selected text around a document. The end end result of using these commands can be achieved by cutting and pasting, but the visual feedback they provide is quite helpful. In this episode, I will show how to replicate these commands in Vim.

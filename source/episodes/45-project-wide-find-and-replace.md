@@ -5,7 +5,7 @@
 :flattr_id: "1189004"
 :duration: 385
 :number: 45
-:tags: arglist, vimgrep, search, workflow
+:tags: The argument list, vimgrep, search, workflow, Editing text, substitution
 ---
 
 Vim doesn't have a built-in command for project-wide find and replace operations, but we can perform this task by combining primitive Ex commands such as `:substitute`, `:argdo`, and `:vimgrep`. We'll look at two possible strategies: first using the arglist, then the quickfix list.

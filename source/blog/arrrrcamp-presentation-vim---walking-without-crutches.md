@@ -1,7 +1,7 @@
 --- 
 :title: "ArrrrCamp presentation: Vim - walking without crutches"
 :date: 2010/11/01
-:tags: presentations
+:tags: Appearances
 ---
 
 Last week, I gave a presentation at [ArrrrCamp][rc] called *Vim - walking without crutches*. You can now [watch the video][vid] on their website.

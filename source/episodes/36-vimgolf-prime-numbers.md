@@ -5,7 +5,7 @@
 :flattr_id: "829342"
 :duration: 413
 :number: 36
-:tags: vimgolf, showcase, regex
+:tags: vimgolf, Regular expressions, Ex commands
 ---
 
 For the VimGolf challenge ["List the first 100 prime numbers"][primes], there's a solution that uses a regular expression to detect prime numbers. At 43 keystokes, it's not the winning solution, but I think it's the most interesting one. It uses a few clever Vim tricks, including macros, control-a to increment, the very magic pattern switch, and the `:global` command. There's a lot to learn from those 43 keystrokes, so let's study it!

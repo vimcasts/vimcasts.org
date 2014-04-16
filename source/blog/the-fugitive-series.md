@@ -1,8 +1,7 @@
 --- 
 :title: The Fugitive Series - a retrospective
 :date: 2011/05/18
-:tags: fugitive
-:tags: plugins, fugitive
+:tags: plugins, git
 ---
 
 *Fugitive.vim: a git wrapper so awesome, it should be illegal.* That's how Tim Pope describes his git plugin for Vim. I've had [fugitive.vim][] installed since it was released, but until recently I never took the time to figure out what was *so awesome* that could make it illegal.

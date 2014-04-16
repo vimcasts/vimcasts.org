@@ -6,7 +6,7 @@
 :duration: 245
 :number: 65
 :subtitle: Learn how the exchange.vim plugin makes it easy to swap two regions of text.
-:tags: plugins, exchange, visual-mode
+:tags: plugins, exchange, Visual mode, Editing text
 ---
 
 Swapping two regions of text is a common task, which normally requires that we make two separate changes to the document.

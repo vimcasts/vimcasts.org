@@ -5,7 +5,7 @@
 :flattr_id: ""
 :duration: 242
 :number: 62
-:tags: count, mappings
+:tags: count, Vimscript, Customizing Vim, Expression register
 ---
 
 Lots of Vim's built-in Normal mode commands can be executed multiple times by prefixing them with a count. User-defined Normal mode mappings don't usually handle counts the way we might like them to. We'll explore a couple of techniques for making our custom mappings respond predictably to a count.

@@ -1,7 +1,7 @@
 --- 
 :title: Response to "Should Vimcasts go Pro?" survey
 :date: 2013/09/13
-:tags: surveys
+:tags: meta
 ---
 
 I'd like to thank everyone who responded to my recent survey about supporting Vimcasts via a subscription model. I've taken your feedback on board and have decided to keep producing free Vimcasts. I can cover this site's running costs and support myself by teaching Vim classes and producing longer video tutorials to sell.

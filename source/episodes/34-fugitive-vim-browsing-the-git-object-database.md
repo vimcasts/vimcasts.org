@@ -5,7 +5,7 @@
 :flattr_id: "271805"
 :duration: 585
 :number: 34
-:tags: plugins, fugitive, git, workflow
+:tags: plugins, git, workflow, autocommands, Navigating a project
 ---
 
 With the fugitive plugin, you're not limited to just working with files in your working tree. The `:Gedit` command allows you to open files in other branches, and to browse any [git object][gito], including tags, commits and trees. Plus, if your repository is hosted on github, you can easily bring up the webpage for any git object using the `:Gbrowse` command.

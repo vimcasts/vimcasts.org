@@ -5,7 +5,7 @@
 :flattr_id: "31944"
 :duration: 342
 :number: 19
-:tags: plaintext, wrapping
+:tags: plaintext
 ---
 
 Using a spell checker is a good habit to get into.  In this episode, I demonstrate how to use Vim's built in spell checking feature.

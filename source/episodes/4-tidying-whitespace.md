@@ -5,7 +5,7 @@
 :flattr_id: "31926"
 :duration: 273
 :number: 4
-:tags: whitespace, editing-text, customizations
+:tags: Whitespace, Editing text, Customizing Vim, autocommands
 ---
 
 This episode demonstrates a few techniques for tidying up whitespace.  First, it looks at how to convert between tabs and spaces. Then it shows how to strip trailing whitespace, and finally, how to remove blank lines from a file.

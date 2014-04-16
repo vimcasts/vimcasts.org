@@ -5,7 +5,7 @@
 :flattr_id: "1033505"
 :duration: 727
 :number: 38
-:tags: folding
+:tags: folding, Customizing Vim
 ---
 
 With a little bit of Vimscript, you can create a custom folding expression for any filetype. We'll start by looking at the mechanics of folding with markers, then go on to create a folding expression for markdown documents.

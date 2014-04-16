@@ -5,7 +5,7 @@
 :flattr_id: "86560"
 :duration: 471
 :number: 28
-:tags: search, regex, workflow
+:tags: search, Regular expressions, workflow, Commandline mode, substitution
 ---
 
 When you need to build a complex command, or devise a non-trivial search pattern, Vim's command-line mode can be rather limiting. In this episode, I will introduce the command-line window, which allows you to use the full power of Vim when editing search queries and commands.

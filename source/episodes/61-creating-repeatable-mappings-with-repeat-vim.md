@@ -5,7 +5,7 @@
 :flattr_id: ""
 :duration: 273
 :number: 61
-:tags: repeat, mappings, vimscript
+:tags: Repetition, Customizing Vim, Vimscript
 :layout: episode
 ---
 

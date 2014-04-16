@@ -5,7 +5,7 @@
 :flattr_id: ""
 :duration: 242
 :number: 56
-:tags: registers, expression-register, insert-mode, cmdline-mode
+:tags: registers, Expression register, Insert mode, Commandline mode
 ---
 
 The [expression register][quote=] lets us evaluate a snippet of Vimscript code. This is handy when you need to perform simple calculations and insert the result into the document.

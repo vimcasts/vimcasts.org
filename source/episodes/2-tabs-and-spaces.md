@@ -5,7 +5,7 @@
 :flattr_id: "31923"
 :duration: 382
 :number: 2
-:tags: whitespace
+:tags: Whitespace
 ---
 
 Vim offers very granular control over whitespace. This episode explains the purpose of `tabstop`, `softtabstop`, `shiftwidth` and `expandtab` settings, and illustrates how Vim behaves using various combinations of these.

@@ -5,7 +5,7 @@
 :flattr_id: "1496691"
 :duration: 435
 :number: 50
-:tags: vimscript, testing, plugins
+:tags: Vimscript, testing, plugins
 ---
 
 [Vspec][vspec] is a library that allows you to test-drive your Vimscript code. In this tutorial, we'll cover the basics: how to inspect the contents of a buffer, how to simulate the actions of a user, and how to invoke user-defined mappings.

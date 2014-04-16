@@ -5,7 +5,7 @@
 :flattr_id: ""
 :duration: 271
 :number: 64
-:tags: html, external-filters
+:tags: html, External commands, autocommands, Formatting text
 ---
 
 We can use pandoc as a [filter][] to clean up <abbr title="what you see is what you get">WYSIWYG</abbr>-generated HTML. Pandoc is a commandline program, but we can call it from inside Vim either using the [bang Ex command][bang], or by configuring [the `formatprg` option][formatprg] to make the `gq` operator invoke pandoc.

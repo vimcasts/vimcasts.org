@@ -5,7 +5,7 @@
 :flattr_id: "118292"
 :duration: 311
 :number: 29
-:tags: plugins, alignment
+:tags: plugins, Whitespace, Ex commands, Editing text
 ---
 
 There are times when you can improve the readability of your code by lining up the elements on neighbouring lines. In this episode, I demonstrate how this can be achieved using the [Tabular][t] plugin.

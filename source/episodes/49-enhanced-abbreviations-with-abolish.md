@@ -5,7 +5,7 @@
 :flattr_id: "1303220"
 :duration: 189
 :number: 49
-:tags: abbreviations, plugins, vim-abolish
+:tags: plugins, Insert mode
 ---
 
 Vim's built-in abbreviation feature is handy if you want to auto-correct words that you frequently misspell, but it requires a lot of setup. The `:Abolish` command makes it easy to generate abbreviations that will correct multiple forms of the same word.

@@ -5,7 +5,7 @@
 :flattr_id: "177652"
 :duration: 701
 :number: 32
-:tags: plugins, fugitive, git, workflow, vimdiff
+:tags: plugins, git, workflow, vimdiff
 ---
 
 The fugitive plugin provides an interactive status window, where you can easily stage and review your changes for the next commit. The `:Gdiff` command visualizes the changes made to a file, by comparing the working copy with the index. In this episode, we'll learn how to stage hunks of changes to the index without using the `git add --patch` command.

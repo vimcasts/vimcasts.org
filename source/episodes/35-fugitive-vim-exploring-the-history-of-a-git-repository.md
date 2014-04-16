@@ -5,7 +5,7 @@
 :flattr_id: "277398"
 :duration: 604
 :number: 35
-:tags: plugins, fugitive, git, workflow
+:tags: plugins, git, workflow, Navigating a project
 ---
 
 Git provides tools for searching the contents of files, commit messages, and even whether text was added or removed by a commit. In this episode, we'll see how fugitive's `Ggrep` and `Glog` commands wrap this functionality up so that we can search the contents and history of a git repo from right inside of Vim.

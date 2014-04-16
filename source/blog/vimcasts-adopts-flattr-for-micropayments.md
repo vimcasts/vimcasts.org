@@ -1,7 +1,7 @@
 --- 
 :title: Vimcasts adopts Flattr for micropayments
 :date: 2010/07/08
-:tags: donations
+:tags: meta
 ---
 
 A number of people have contacted me to say that they would love to leave a tip, but object to using PayPal - the only method I provided for making donations. I had never heard of [Flattr][f] until recently, but a [few][1] [people][2] have requested that I integrate it into Vimcasts.org. I've always liked the idea of micro payments, so I thought I would give it a shot.

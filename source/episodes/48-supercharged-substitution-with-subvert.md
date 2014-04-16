@@ -5,7 +5,7 @@
 :flattr_id: "1274469"
 :duration: 429
 :number: 48
-:tags: search, regex, plugins, substitution, vim-abolish
+:tags: search, Regular expressions, plugins, substitution, Ex commands, Editing text
 ---
 
 The [abolish plugin][abolish] provides a command called `:Subvert`, which is like a supercharged version of Vim's built-in `:substitute` command. The `:Subvert` command is especially useful for changing singular and plural variants of a word, and for refactoring names that appear in `snake_case` and `MixedCase`.

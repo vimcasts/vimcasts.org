@@ -5,7 +5,7 @@
 :flattr_id: "1204601"
 :duration: 279
 :number: 46
-:tags: search, regex
+:tags: search, Regular expressions, Vimscript, plugins, Visual mode, Customizing Vim, vimgrep
 ---
 
 [The `*` command][star] searches for the word under the cursor. That makes sense in Normal mode, but from Visual mode it would be more useful if the star command searched for the current *selection*, rather than the current word. We can add this feature to Vim using the [visual star search plugin][visual-star].

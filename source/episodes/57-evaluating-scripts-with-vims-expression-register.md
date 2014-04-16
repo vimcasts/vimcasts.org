@@ -5,7 +5,7 @@
 :flattr_id: ""
 :duration: 236
 :number: 57
-:tags: registers, expression-register, insert-mode, cmdline-mode
+:tags: registers, Expression register, Insert mode, Commandline mode
 ---
 
 In [the previous lesson][previous] we learned how use the expression register to evaluate simple calculations. We can also call built-in and user-defined Vimscript functions, and thanks to the `system()` function, we can also fetch output from external scripts.

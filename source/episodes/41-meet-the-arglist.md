@@ -5,7 +5,7 @@
 :flattr_id: "1143785"
 :duration: 297
 :number: 41
-:tags: arglist
+:tags: The argument list, Managing your workspace
 ---
 
 The arglist feature complements Vim's buffer list. In this episode, we'll learn a handful of commands for traversing the arglist. We'll see that it's useful to think of the arglist as a stable subset of the files in the buffer list.

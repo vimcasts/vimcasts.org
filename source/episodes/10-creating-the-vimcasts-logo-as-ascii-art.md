@@ -5,7 +5,7 @@
 :flattr_id: "31932"
 :duration: 347
 :number: 10
-:tags: showcase
+:tags: Visual mode, Repetition, substitution, Editing text, Regular expressions
 ---
 
 Demonstrating miscellaneous tips and tricks gleaned whilst making an ASCII art version of the VimCasts.org logo. Learn how to duplicate lines, copy and paste with visual block mode, search and replace within a visual selection, and how to use macros.

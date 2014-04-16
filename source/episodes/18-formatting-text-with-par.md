@@ -5,7 +5,7 @@
 :flattr_id: "31943"
 :duration: 312
 :number: 18
-:tags: plaintext, wrapping, external-filters
+:tags: plaintext, Formatting text, External commands
 ---
 
 'Do one thing and do it well' is the principle of the Unix toolkit. Editing text is a broad domain, and there are many related tasks with which it overlaps. Vim acknowledges this by enabling certain tasks to be outsourced to external programs which do that one thing, and do it well. This episode will demonstrate how the *par* program can be used for formatting text.

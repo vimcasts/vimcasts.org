@@ -5,7 +5,7 @@
 :flattr_id: "31940"
 :duration: 336
 :number: 15
-:tags: opening-files
+:tags: Opening files, File explorers, Navigating a project
 ---
 
 This episode demonstrates how Vim's native file browser can be used to explore and manipulate the file system. 

@@ -5,7 +5,7 @@
 :flattr_id: "31938"
 :duration: 230
 :number: 14
-:tags: opening-files
+:tags: Opening files, Ex commands, Navigating a project
 ---
 
 This episode focuses on the `:edit` command. I demonstrate how to open files whose location is relative to the current working directory, then I show how to create a mapping which makes it easier to open files in the same directory as the one in the active window.

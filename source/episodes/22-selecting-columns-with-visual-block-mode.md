@@ -5,7 +5,7 @@
 :flattr_id: "31947"
 :duration: 261
 :number: 22
-:tags: visual-mode
+:tags: Visual mode
 ---
 
 If you want to edit several adjacent lines with a similar format, you might save a lot of time by making a columnar selection. This episode will demonstrate how to achieve this using Vim's visual block mode.

@@ -5,7 +5,7 @@
 :flattr_id: "31930"
 :duration: 197
 :number: 8
-:tags: tabs, managing-workspace
+:tags: Managing your workspace
 ---
 
 This episode covers the essential commands for working with Vim's tab pages: opening and closing, switching, and moving them.

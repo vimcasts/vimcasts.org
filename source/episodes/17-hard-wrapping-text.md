@@ -5,7 +5,7 @@
 :flattr_id: "31942"
 :duration: 323
 :number: 17
-:tags: plaintext, wrapping
+:tags: plaintext, Formatting text
 ---
 
 It is sometimes preferable to format text with hard wrapped lines, for example when writing emails in plaintext. Vim can apply this style of formatting for you. This episode shows some of the options which allow you to customize Vim's text formatting.

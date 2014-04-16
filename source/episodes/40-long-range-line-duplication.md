@@ -5,7 +5,7 @@
 :flattr_id: "1095405"
 :duration: 391
 :number: 40
-:tags: ex-commands, jumps
+:tags: Ex commands, Navigating a document, Editing text
 ---
 
 When writing code, we can often save time by duplicating a line then changing one or two parts of that line to make it suit our purposes. In this episode, we'll compare a few techniques for duplicating lines, and we'll see that the `:copy` Ex command is well suited to this task.

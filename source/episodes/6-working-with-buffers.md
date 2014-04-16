@@ -5,7 +5,7 @@
 :flattr_id: "31928"
 :duration: 208
 :number: 6
-:tags: buffers, managing-workspace
+:tags: Managing your workspace
 ---
 
 Introducing the buffer list, and commands for switching between buffers. This episode also covers the concept of 'hidden' buffers, and shows how to deal with them.

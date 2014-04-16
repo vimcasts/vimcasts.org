@@ -1,7 +1,7 @@
 --- 
 :title: Vimcasts now available on Boxee
 :date: 2010/07/06
-:tags: syndication
+:tags: meta
 ---
 
 [Boxee][b] allows you to watch movies, TV shows and clips from the Internet on your TV. Ever since Vimcasts launched, people have been saying "[get it added to boxee][r]". Thanks to [Clayton Parker][cp] I am happy to announce that there is now a [Vimcasts app for Boxee][app].
