@@ -5,7 +5,7 @@
 :flattr_id: ""
 :duration: 255
 :number: 55
-:tags: registers, copy-and-paste, insert-mode
+:tags: registers, Copy and Paste, insert-mode
 ---
 
 We don't have to be in Normal mode to paste the contents of a register. The [`<C-r>{reg}`][cr] command lets us paste a register from Insert mode (and it [works in commandline mode too][ccr]!) Using this command allows us to make changes that can be repeated with [the dot command][dot].

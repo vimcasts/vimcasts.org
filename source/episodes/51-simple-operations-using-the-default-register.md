@@ -5,7 +5,7 @@
 :flattr_id: ""
 :duration: 247
 :number: 51
-:tags: registers, copy-and-paste
+:tags: registers, Copy and Paste
 ---
 
 Vim's [default register][quotequote] makes it easy to perform some of the most basic types of cut, copy, and paste operations. That's partly thanks to the [`p`][p] command, which behaves differently depending on whether the default register contains a characterwise or linewise region of text.

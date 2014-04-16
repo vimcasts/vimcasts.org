@@ -5,7 +5,7 @@
 :flattr_id: ""
 :duration: 269
 :number: 52
-:tags: registers, copy-and-paste
+:tags: registers, Copy and Paste
 ---
 
 Vim's default register is not a safe place to keep yanked text that you want to paste later. It's all too easy to clobber the default register with a `d` or `x` command. Luckily, the last yanked text is kept safe in Vim's [yank register][quote0].

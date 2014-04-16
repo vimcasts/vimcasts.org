@@ -5,7 +5,7 @@
 :flattr_id: ""
 :duration: 213
 :number: 54
-:tags: registers, copy-and-paste, visual-mode
+:tags: registers, Copy and Paste, visual-mode
 ---
 
 When used [in Visual mode the `p` command][v_p] replaces the selection with the contents of a register. This makes for a smooth workflow when you want to overwrite a selection, or swap the order of two regions of text.

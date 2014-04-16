@@ -5,7 +5,7 @@
 :flattr_id: ""
 :duration: 209
 :number: 53
-:tags: registers, copy-and-paste
+:tags: registers, Copy and Paste
 ---
 
 We've met Vim's [default register][quotequote] and the [yank register][quote0]. This time, we're going to look at the [named registers][quote_alpha], which are handy if you want to cut or copy some text that you intend to paste multiple times.

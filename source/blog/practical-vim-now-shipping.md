@@ -1,7 +1,7 @@
 --- 
 :title: Practical Vim now shipping
 :date: 2012/10/11
-:tags: practical-vim
+:tags: Practical Vim
 ---
 
 I'm happy to announce that the paperback edition of [Practical Vim][pv] is now available. If you've pre-ordered, then your copy should arrive soon. Also, that means Practical Vim is no longer in *beta*. It's been tech-reviewed, indexed, edited, typeset, and laid out. If you've been holding out for the final cut, then your wait is over. 

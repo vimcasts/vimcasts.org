@@ -1,7 +1,7 @@
 --- 
 :title: "Registers: the Good, the Bad, and the Ugly Parts"
 :date: 2013/11/25
-:tags: registers, articles, copy-and-paste
+:tags: registers, articles, Copy and Paste
 ---
 
 To the newcomer, Vim's way of doing things may seem strange, but with familiarity it becomes natural. Many of Vim's features seemed odd to me at first, but when I got used to them I recognised that they had their own particular elegance. However, there's one feature of Vim that still feels awkward to me: using registers for copy and paste. The deeper my understanding of registers becomes, the more they frustrate me!
