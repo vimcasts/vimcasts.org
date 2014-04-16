@@ -99,7 +99,7 @@ Note that the Vim-toCterm script assumes that the terminal has 256 colors. If yo
 * [palette][pal] - an easier way to write Vim color schemes (rubygem)
 
 [HiLinkTrace]: https://github.com/gerw/vim-HiLinkTrace
-[coloration]: http://coloration.sickill.net/
+[coloration]: http://coloration.ku1ik.com/
 [github]: http://github.com/sickill/coloration
 [plutil]: http://hints.macworld.com/article.php?story=20050430105126392
 [so]: http://stackoverflow.com/questions/1467438/find-out-to-which-highlight-group-a-particular-keyword-symbol-belongs-in-vim

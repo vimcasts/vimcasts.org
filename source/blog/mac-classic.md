@@ -22,7 +22,7 @@ To begin with, I just created the "Mac Classic" theme to work in GVim, but [peop
 
 My latest screencast on [creating colorschemes for Vim](/e/25) goes into more detail on how I used each of these tools.
 
-[col]: http://coloration.sickill.net/
+[col]: http://coloration.ku1ik.com/
 [hex]: http://www.vim.org/scripts/script.php?script_id=2937
 [cterm]: http://shawncplus.github.com/Vim-toCterm/
 [256Q]: http://twitter.com/claytron/status/25113763230

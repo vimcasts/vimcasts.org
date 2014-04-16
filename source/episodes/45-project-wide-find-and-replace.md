@@ -80,8 +80,6 @@ Henrik Nye created a [`:Qdo` command][qdo] in his fork of [my Qargs plugin][qarg
 
 Peter Jaros created [`vim-cdo`][cdo], which includes `:Cdo` as well as `:Ldo` for operating on the location list. Peter's plugin differs slightly from the formula I described above, because it effectively uses `:cnext` instead of `:cnfile`.
 
-In the comments, Vincent Velociter pointed out [another implementation][efiquest] that creates both `:Qfdo` and `:Qfdofile` commands.
-
 ### Further reading
 
 * [`:help /\zs`][zs]
@@ -109,12 +107,11 @@ In the comments, Vincent Velociter pointed out [another implementation][efiquest
 [bufdo]: http://vimdoc.sourceforge.net/htmldoc/windows.html#:bufdo
 [qdo]: https://github.com/henrik/vim-qargs/blob/22a27f3745198b942b3d2b8bec31d4daa964aa28/plugin/qargs.vim#L5
 [cdo]: https://github.com/Peeja/vim-cdo
-[pug]: http://henrik.nyh.se/2012/07/project-wide-search-and-replace-in-vim-with-qdo/
+[pug]: http://thepugautomatic.com/2012/07/project-wide-search-and-replace-in-vim-with-qdo/
 [41]: /e/41
 [42]: /e/42
 [43]: /e/43
 [44]: /e/44
 [so]: http://stackoverflow.com/a/5686810/6962
 [qfdo]: http://stackoverflow.com/a/4793316/128850
-[efiquest]: http://efiquest.org/2009-02-19/32/
 [patch]: https://groups.google.com/forum/#!msg/vim_dev/dfyt-G6SMec/_6h8pDUpeZMJ

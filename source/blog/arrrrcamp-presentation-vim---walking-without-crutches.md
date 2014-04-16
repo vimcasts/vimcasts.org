@@ -17,7 +17,7 @@ Here's the synopsis for my talk:
 Note that you have to have Silverlight installed to watch the video. A [few][1] [people][2] on [Twitter][3] have [asked][4] if it will be made available in another format. The organisers said that ["it was this or no videos at all"][5], so you can like it or lump it.
 
 [rc]: http://arrrrcamp.be/
-[vid]: http://old.arrrrcamp.be/videos/vim-walking-without-crutches
+[vid]: http://2010.arrrrcamp.be/videos/drew-neil/vim-walking-without-crutches
 [1]: http://twitter.com/sabiddle/statuses/29376586331
 [2]: http://twitter.com/paraseba/statuses/29384741780
 [3]: http://twitter.com/peteraronoff/statuses/29386426740
@@ -26,7 +26,7 @@ Note that you have to have Silverlight installed to watch the video. A [few][1] 
 [wrong]: http://yehudakatz.com/2010/07/29/everyone-who-tried-to-convince-me-to-use-vim-was-wrong/
 
 
-<a href="http://old.arrrrcamp.be/videos/vim-walking-without-crutches"><img title="Drew Neil presenting at ArrrrCamp" src="/images/blog/arrrrcamp-presentation.jpg"/></a>
+<a href="http://2010.arrrrcamp.be/videos/drew-neil/vim-walking-without-crutches"><img title="Drew Neil presenting at ArrrrCamp" src="/images/blog/arrrrcamp-presentation.jpg"/></a>
 
 You can view [the slides from my talk][slides] online. I created the slides show using [Scott Chacon's][sc] [showoff][so] gem, which allows you to write your presentation in markdown format. It's a [Sinatra][sinatra] app, which means you can easily deploy the slideshow to [Heroku][heroku]. 
 

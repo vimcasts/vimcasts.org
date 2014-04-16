@@ -230,7 +230,6 @@ Here are a couple of examples demonstrating how the pickaxe option can be used w
 * [`man git-log`][git-log] (also, `git help log`)
 * [`man gitdiffcore`][gitdiffcore]
 * [the git *pickaxe*][pickaxe]
-* [Browsing Commits in Vim with an Unimpaired Fugitive][uf]
 * [Fun with "git grep"][g1]
 * [Fun with "git log --grep"][g2]
 * [Linus's ultimate content tracking tool][g3]
@@ -245,4 +244,3 @@ Here are a couple of examples demonstrating how the pickaxe option can be used w
 [gitdiffcore]: http://www.kernel.org/pub/software/scm/git/docs/gitdiffcore.html
 [pickaxe]: http://www.kernel.org/pub/software/scm/git/docs/gitdiffcore.html#_diffcore_pickaxe_for_detecting_addition_deletion_of_specified_string
 [34]: /e/34
-[uf]: http://mshared.tumblr.com/post/3215710879/browsing-commits-in-vim-with-an-unimpaired-fugitive

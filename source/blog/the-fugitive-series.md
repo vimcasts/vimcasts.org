@@ -60,7 +60,7 @@ Even though fugitive provides an excellent interface for browsing the git object
 
 ### 5) [Exploring the history of a git repository][5]
 
-The `Glog` command is a surprising one. The default `Glog` behaviour is quite different from the `git log` command that it wraps. Whereas `git log` shows a list of commit messages for the entire project, `Glog` loads all previous revisions of the current file into the quickfix list. This makes it extremely easy to review the history of a file, especially when used with an [unimpaired fugitive][uf]. Learn more in [part five][5].
+The `Glog` command is a surprising one. The default `Glog` behaviour is quite different from the `git log` command that it wraps. Whereas `git log` shows a list of commit messages for the entire project, `Glog` loads all previous revisions of the current file into the quickfix list. This makes it extremely easy to review the history of a file. Learn more in [part five][5].
 
 ### Thanks to my sponsors
 
@@ -75,7 +75,6 @@ Finally, I'd like to thank Tim Pope for patiently answering my questions, review
 [squeal]: http://twitter.com/MikeGrace/status/11389314823
 [lookforward]: http://twitter.com/grahamsavage/status/66420233275064321
 [github]: http://github.com
-[uf]: http://mshared.tumblr.com/post/3215710879/browsing-commits-in-vim-with-an-unimpaired-fugitive
 [hr]: http://hashrocket.com/people/work-at-hashrocket
 [ey]: http://engineyard.com
 
