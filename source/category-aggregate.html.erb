@@ -3,10 +3,10 @@
     <h2>
       <%= tag_stats(tagname, " and ") %> tagged &ldquo;<%= tagname %>&rdquo;
     </h2>
-
-    <% aggregate_by_tag(tagname).each do |article| %>
-      <%= partial "article-listing",
-        :locals => {article: article, current_tag: tagname} %>
-    <% end %>
   </div>
 </div>
+
+<% aggregate_by_tag(tagname).each do |article| %>
+  <%= partial "article-listing",
+    :locals => {article: article, current_tag: tagname} %>
+<% end %>
