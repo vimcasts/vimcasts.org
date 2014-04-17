@@ -27,11 +27,11 @@ module VimcastsHelper
   def tag_stats(tag, connector=", ")
     tag = tag_details(tag) if tag.class == String
     [
-      [:videos, 'video'],
+      [:videos, 'screencast'],
       [:articles, 'article']
     ].map do |key, word|
       if (number = tag[key]) > 0
-        pluralize(number, word)
+        pluralize(number, word).sub(' ','&nbsp;')
       end
     end.compact.join(connector)
   end
