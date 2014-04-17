@@ -257,6 +257,16 @@ body.index {
   }
 }
 
+.category-aggregate-title {
+  @include grid-row();
+  h2, h3, h4 {
+    @include grid-column($columns:12);
+    @media #{$large-up} {
+      @include grid-column($columns:10, $offset:2);
+    }
+  }
+}
+
 ul.category-list {
   @include block-grid($per-row:2);
   @media #{$medium-up} {
