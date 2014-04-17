@@ -29,7 +29,7 @@ searchfeature: true
     </p>
 
     <%= partial 'category-list-item',
-      locals: {items: data.categories.sort_by { |k| k["name"] }} %>
+      locals: {items: data.categories.sort_by { |k| k["name"].downcase }} %>
 
   </div>
 </div>
