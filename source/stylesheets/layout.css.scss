@@ -2,6 +2,7 @@
 @import "foundation/components/grid.scss";
 @import "foundation/components/inline-lists.scss";
 @import "foundation/components/side-nav.scss";
+@import "foundation/components/block-grid";
 
 .archive-intro {
   @include grid-row();
@@ -253,5 +254,12 @@ body.index {
   }
   @media #{$large-up} {
     @include side-nav();
+  }
+}
+
+ul.category-list {
+  @include block-grid($per-row:2);
+  @media #{$medium-up} {
+    @include block-grid($per-row:3);
   }
 }
