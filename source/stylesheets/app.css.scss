@@ -110,15 +110,6 @@ body.proof {
 }
 
 .category-list {
-  border-top: 1px solid $panel-border-color;
-  border-left: 1px solid $panel-border-color;
-  li {
-    border-bottom: 1px solid $panel-border-color;
-    border-right: 1px solid $panel-border-color;
-  }
-  li:nth-child(2n) {
-    background-color: $panel-bg;
-  }
   li a { display: block; }
 }
 
