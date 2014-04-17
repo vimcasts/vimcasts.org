@@ -28,7 +28,7 @@
       <div class="top-bar-underlay"></div>
 
       <div class="row">
-        <nav class="top-bar show-for-medium-up" data-topbar>
+        <nav class="top-bar show-for-large-up" data-topbar>
           <ul class="title-area">
             <li class="name"></li>
             <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
@@ -55,28 +55,15 @@
 
             <!-- Left Nav Section -->
             <ul class="left">
-              
-<li class=""><a href="/subscribe">Subscribe</a></li>
-<li class=""><a href="/categories">Browse Vimcasts</a>  
-</li>
-<li class=""><a href="/training">Training</a></li><li class=""><a href="/publications">Publications</a></li>
+              <li><a href="/episodes">Screencasts</a></li><li><a href="/blog">Articles</a></li><li class="open"><a href="/categories">Categories</a></li><li><a href="/training">Training</a></li><li><a href="/publications">Publications</a></li>
+<li><a href="/subscribe">Subscribe</a></li>
             </ul>
           </section>
         </nav>
 
-        
-          <nav class="top-bar secondary-nav show-for-medium-up">
-            <section class="top-bar-section">
-              <ul class="left">
-                <li class=""><a href="/episodes/archive">All episodes</a></li><li class=""><a href="/episodes">Latest episodes</a></li><li class=""><a href="/blog">Latest articles</a></li>
-              </ul>
-            </section>
-          </nav>
-        
-
       </div>
 
-      <nav class="compact-nav tab-bar hide-for-medium-up">
+      <nav class="compact-nav tab-bar hide-for-large-up">
         <section class="left-small">
           <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
         </section>
@@ -95,15 +82,8 @@
       <aside class="left-off-canvas-menu">
         <ul class="off-canvas-list">
           <li><label>Vimcasts</label></li>
-          
-<li class=""><a href="/subscribe">Subscribe</a></li>
-<li class="has-dropdown"><a href="/categories">Browse Vimcasts</a>  
-    <ul class="dropdown">
-      <li class=""><a href="/episodes/archive">All episodes</a></li><li class=""><a href="/episodes">Latest episodes</a></li><li class=""><a href="/blog">Latest articles</a></li>
-    </ul>
-  
-</li>
-<li class=""><a href="/training">Training</a></li><li class=""><a href="/publications">Publications</a></li>
+          <li><a href="/episodes">Screencasts</a></li><li><a href="/blog">Articles</a></li><li class="open"><a href="/categories">Categories</a></li><li><a href="/training">Training</a></li><li><a href="/publications">Publications</a></li>
+<li><a href="/subscribe">Subscribe</a></li>
 
           
             <li>
@@ -137,14 +117,112 @@
           </div>
         </div>
 
-        <div class="row">
-  <div class="small-12 columns">
-    <h2>
-      2 videos tagged &ldquo;autocommands&rdquo;
-    </h2>
+        <div class="category-aggregate-title">
+  <h2>
+    autocommands
+  </h2>
+  <h4 class="subheader">
+    category applies to 5&nbsp;screencasts:
+  </h4>
+</div>
 
+  
+<section class="screencast">
+
+  <div class="title-row">
+    <h3 class="title">
+      <a href="/episodes/using-external-filter-commands-to-reformat-html/">Using external filter commands to reformat HTML</a>
+    </h3>
     
+      <h3 class="episode_number">
+        <small>#</small>64
+      </h3>
+    
+  </div>
+
+  
+    
+    <div class="pubdate-row">
+
+      <div class="video-run-time">
+        
+        Run time: <time datetime="P4M,31S">
+          4:31
+        </time>
+      </div>
+
+      <time class="pubdate" pubdate="pubdate" datetime="2014-02-18">
+        <div class="hide-for-medium-up">Feb&nbsp;18, '14</div><div class="show-for-medium-up">Feb 18, 2014</div>
+      </time>
+
+    </div>
+  
+
+  <div class="summary-row">
+    <div class="episode_summary">
+      <p>We can use pandoc as a <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#filter">filter</a> to clean up <abbr title="what you see is what you get">WYSIWYG</abbr>-generated HTML. Pandoc is a commandline program, but we can call it from inside Vim either using the <a href="http://vimdoc.sourceforge.net/htmldoc/various.html#:!">bang Ex command</a>, or by configuring <a href="http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;#x27;formatprg&amp;#x27;">the <code>formatprg</code> option</a> to make the <code>gq</code> operator invoke pandoc.</p>
+
+
+
       
+        <a class="readmore" href="/episodes/using-external-filter-commands-to-reformat-html/"><span class='icon-play icomoon'></span>Watch screencast</a>
+      
+
+    </div>
+  </div>
+
+</section>
+
+  
+<section class="screencast">
+
+  <div class="title-row">
+    <h3 class="title">
+      <a href="/episodes/fugitive-vim-browsing-the-git-object-database/">Fugitive.vim - browsing the git object database</a>
+    </h3>
+    
+      <h3 class="episode_number">
+        <small>#</small>34
+      </h3>
+    
+  </div>
+
+  
+    
+    <div class="pubdate-row">
+
+      <div class="video-run-time">
+        
+        Run time: <time datetime="P9M,45S">
+          9:45
+        </time>
+      </div>
+
+      <time class="pubdate" pubdate="pubdate" datetime="2011-05-13">
+        <div class="hide-for-medium-up">May&nbsp;13, '11</div><div class="show-for-medium-up">May 13, 2011</div>
+      </time>
+
+    </div>
+  
+
+  <div class="summary-row">
+    <div class="episode_summary">
+      <p>With the fugitive plugin, you&rsquo;re not limited to just working with files in your working tree. The <code>:Gedit</code> command allows you to open files in other branches, and to browse any <a href="http://book.git-scm.com/1_the_git_object_model.html">git object</a>, including tags, commits and trees. Plus, if your repository is hosted on github, you can easily bring up the webpage for any git object using the <code>:Gbrowse</code> command.</p>
+
+<p><em>This is the penultimate of a five part series on fugitive.vim.</em></p>
+
+
+
+      
+        <a class="readmore" href="/episodes/fugitive-vim-browsing-the-git-object-database/"><span class='icon-play icomoon'></span>Watch screencast</a>
+      
+
+    </div>
+  </div>
+
+</section>
+
+  
 <section class="screencast">
 
   <div class="title-row">
@@ -162,7 +240,7 @@
     
     <div class="pubdate-row">
 
-      <div class="video-tags">
+      <div class="video-run-time">
         
         Run time: <time datetime="P2M,51S">
           2:51
@@ -191,8 +269,54 @@
 
 </section>
 
+  
+<section class="screencast">
+
+  <div class="title-row">
+    <h3 class="title">
+      <a href="/episodes/tidying-whitespace/">Tidying whitespace</a>
+    </h3>
     
+      <h3 class="episode_number">
+        <small>#</small>4
+      </h3>
+    
+  </div>
+
+  
+    
+    <div class="pubdate-row">
+
+      <div class="video-run-time">
+        
+        Run time: <time datetime="P4M,33S">
+          4:33
+        </time>
+      </div>
+
+      <time class="pubdate" pubdate="pubdate" datetime="2010-01-24">
+        <div class="hide-for-medium-up">Jan&nbsp;24, '10</div><div class="show-for-medium-up">Jan 24, 2010</div>
+      </time>
+
+    </div>
+  
+
+  <div class="summary-row">
+    <div class="episode_summary">
+      <p>This episode demonstrates a few techniques for tidying up whitespace.  First, it looks at how to convert between tabs and spaces. Then it shows how to strip trailing whitespace, and finally, how to remove blank lines from a file.</p>
+
+
+
       
+        <a class="readmore" href="/episodes/tidying-whitespace/"><span class='icon-play icomoon'></span>Watch screencast</a>
+      
+
+    </div>
+  </div>
+
+</section>
+
+  
 <section class="screencast">
 
   <div class="title-row">
@@ -210,7 +334,7 @@
     
     <div class="pubdate-row">
 
-      <div class="video-tags">
+      <div class="video-run-time">
         
         Run time: <time datetime="P3M,29S">
           3:29
@@ -239,9 +363,6 @@
 
 </section>
 
-    
-  </div>
-</div>
 
 
       </section>

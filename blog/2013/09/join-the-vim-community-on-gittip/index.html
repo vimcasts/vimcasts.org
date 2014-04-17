@@ -28,7 +28,7 @@
       <div class="top-bar-underlay"></div>
 
       <div class="row">
-        <nav class="top-bar show-for-medium-up" data-topbar>
+        <nav class="top-bar show-for-large-up" data-topbar>
           <ul class="title-area">
             <li class="name"></li>
             <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
@@ -55,28 +55,15 @@
 
             <!-- Left Nav Section -->
             <ul class="left">
-              
-<li class=""><a href="/subscribe">Subscribe</a></li>
-<li class=""><a href="/categories">Browse Vimcasts</a>  
-</li>
-<li class=""><a href="/training">Training</a></li><li class=""><a href="/publications">Publications</a></li>
+              <li><a href="/episodes">Screencasts</a></li><li class="open"><a href="/blog">Articles</a></li><li><a href="/categories">Categories</a></li><li><a href="/training">Training</a></li><li><a href="/publications">Publications</a></li>
+<li><a href="/subscribe">Subscribe</a></li>
             </ul>
           </section>
         </nav>
 
-        
-          <nav class="top-bar secondary-nav show-for-medium-up">
-            <section class="top-bar-section">
-              <ul class="left">
-                <li class=""><a href="/episodes/archive">All episodes</a></li><li class=""><a href="/episodes">Latest episodes</a></li><li class=""><a href="/blog">Latest articles</a></li>
-              </ul>
-            </section>
-          </nav>
-        
-
       </div>
 
-      <nav class="compact-nav tab-bar hide-for-medium-up">
+      <nav class="compact-nav tab-bar hide-for-large-up">
         <section class="left-small">
           <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
         </section>
@@ -95,15 +82,8 @@
       <aside class="left-off-canvas-menu">
         <ul class="off-canvas-list">
           <li><label>Vimcasts</label></li>
-          
-<li class=""><a href="/subscribe">Subscribe</a></li>
-<li class="has-dropdown"><a href="/categories">Browse Vimcasts</a>  
-    <ul class="dropdown">
-      <li class=""><a href="/episodes/archive">All episodes</a></li><li class=""><a href="/episodes">Latest episodes</a></li><li class=""><a href="/blog">Latest articles</a></li>
-    </ul>
-  
-</li>
-<li class=""><a href="/training">Training</a></li><li class=""><a href="/publications">Publications</a></li>
+          <li><a href="/episodes">Screencasts</a></li><li class="open"><a href="/blog">Articles</a></li><li><a href="/categories">Categories</a></li><li><a href="/training">Training</a></li><li><a href="/publications">Publications</a></li>
+<li><a href="/subscribe">Subscribe</a></li>
 
           
             <li>
@@ -151,13 +131,17 @@
           Join the Vim community on gittip
         </h2>
       </div>
+
       <div class="pubdate-row">
-        <div class="video-tags">
-          
-            Tagged with:
-            <a href="/categories/donations">donations</a>
-          
-        </div>
+        <div class="article-categories">
+  
+  
+    Tagged with:
+    <a href="/categories/meta">meta</a>
+  
+</div>
+
+
         <time class="pubdate" pubdate="pubdate" datetime="2013-09-20">
           <div class="hide-for-medium-up">Sep&nbsp;20, '13</div><div class="show-for-medium-up">Sep 20, 2013</div>
         </time>
@@ -280,6 +264,18 @@
 
     
       <li>
+        <h4><a href="/blog/2013/09/response-to-should-vimcasts-go-pro-survey/">Response to "Should Vimcasts go Pro?" survey</a></h4>
+        <p>I&rsquo;d like to thank everyone who responded to my recent survey about supporting Vimcasts via a subscription model. I&rsquo;ve taken your feedback on board and have decided to keep producing free Vimcasts. I can cover this site&rsquo;s running costs and support myself by teaching Vim classes and producing longer video tutorials to sell.</p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+      </li>
+    
+      <li>
         <h4><a href="/blog/2014/02/vimcasts-redesign-a-work-in-progress/">Vimcasts redesign: a work in progress</a></h4>
         <p>In the not-too-distant future, you can expect to see a revised design for Vimcasts.org. The most significant enhancements will be the addition of tags, site search, and a responsive design for smaller screens. Hannah Adcock, from <a href="http://contentedstrategy.com">contentedstrategy.com</a>, has been helping me out by analysing user feedback, as well as data from Google Analytics.</p>
 
@@ -287,22 +283,8 @@
       </li>
     
       <li>
-        <h4><a href="/blog/2010/07/vimcasts-adopts-flattr-for-micropayments/">Vimcasts adopts Flattr for micropayments</a></h4>
-        <p>A number of people have contacted me to say that they would love to leave a tip, but object to using PayPal - the only method I provided for making donations. I had never heard of <a href="https://flattr.com/">Flattr</a> until recently, but a <a href="http://twitter.com/_043/status/14843669835">few</a> <a href="http://twitter.com/Groxx/status/15972933626">people</a> have requested that I integrate it into Vimcasts.org. I&rsquo;ve always liked the idea of micro payments, so I thought I would give it a shot.</p>
-
-
-      </li>
-    
-      <li>
         <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/using-external-filter-commands-to-reformat-html/">Using external filter commands to reformat HTML</a></h4>
-        <p>We can use pandoc as a <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#filter">filter</a> to clean up <abbr title="what you see is what you get">WYSIWYG</abbr>-generated HTML. Pandoc is a commandline program, but we can call it from inside Vim either using the <a href="http://vimdoc.sourceforge.net/htmldoc/various.html#:!">bang Ex command</a>, or by configuring <a href="http://vimdoc.sourceforge.net/htmldoc/options.html#&amp;#x27;formatprg&amp;#x27;">the <code>formatprg</code> option</a> to make the <code>gq</code> operator invoke pandoc.</p>
-
-
+        <p>Vimcasts contains 65 free screencasts and 41 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
       <li>
@@ -311,8 +293,9 @@
       </li>
     
       <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+        <h4><a href="/blog/2014/01/help-shape-the-redesign-of-vimcasts-org/">Help shape the redesign of Vimcasts.org</a></h4>
+        <p>Vimcasts was launched four years ago, in January 2010. I anticipated making only a dozen screencasts, but there are now over 50, as well as a blog. I&rsquo;m going to make some changes so you can find what you&rsquo;re looking for more easily. I&rsquo;d appreciate your help! Please <a href="https://docs.google.com/forms/d/1BT-6eVqTbsk6XmE2xzJHzNDHyTJArgYb-L9BTRLZGY0/viewform">fill out this survey</a> and I&rsquo;ll take your feedback on board.</p>
+
       </li>
     
 

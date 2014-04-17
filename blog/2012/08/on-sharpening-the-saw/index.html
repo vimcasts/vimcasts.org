@@ -28,7 +28,7 @@
       <div class="top-bar-underlay"></div>
 
       <div class="row">
-        <nav class="top-bar show-for-medium-up" data-topbar>
+        <nav class="top-bar show-for-large-up" data-topbar>
           <ul class="title-area">
             <li class="name"></li>
             <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
@@ -55,28 +55,15 @@
 
             <!-- Left Nav Section -->
             <ul class="left">
-              
-<li class=""><a href="/subscribe">Subscribe</a></li>
-<li class=""><a href="/categories">Browse Vimcasts</a>  
-</li>
-<li class=""><a href="/training">Training</a></li><li class=""><a href="/publications">Publications</a></li>
+              <li><a href="/episodes">Screencasts</a></li><li class="open"><a href="/blog">Articles</a></li><li><a href="/categories">Categories</a></li><li><a href="/training">Training</a></li><li><a href="/publications">Publications</a></li>
+<li><a href="/subscribe">Subscribe</a></li>
             </ul>
           </section>
         </nav>
 
-        
-          <nav class="top-bar secondary-nav show-for-medium-up">
-            <section class="top-bar-section">
-              <ul class="left">
-                <li class=""><a href="/episodes/archive">All episodes</a></li><li class=""><a href="/episodes">Latest episodes</a></li><li class=""><a href="/blog">Latest articles</a></li>
-              </ul>
-            </section>
-          </nav>
-        
-
       </div>
 
-      <nav class="compact-nav tab-bar hide-for-medium-up">
+      <nav class="compact-nav tab-bar hide-for-large-up">
         <section class="left-small">
           <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
         </section>
@@ -95,15 +82,8 @@
       <aside class="left-off-canvas-menu">
         <ul class="off-canvas-list">
           <li><label>Vimcasts</label></li>
-          
-<li class=""><a href="/subscribe">Subscribe</a></li>
-<li class="has-dropdown"><a href="/categories">Browse Vimcasts</a>  
-    <ul class="dropdown">
-      <li class=""><a href="/episodes/archive">All episodes</a></li><li class=""><a href="/episodes">Latest episodes</a></li><li class=""><a href="/blog">Latest articles</a></li>
-    </ul>
-  
-</li>
-<li class=""><a href="/training">Training</a></li><li class=""><a href="/publications">Publications</a></li>
+          <li><a href="/episodes">Screencasts</a></li><li class="open"><a href="/blog">Articles</a></li><li><a href="/categories">Categories</a></li><li><a href="/training">Training</a></li><li><a href="/publications">Publications</a></li>
+<li><a href="/subscribe">Subscribe</a></li>
 
           
             <li>
@@ -151,13 +131,17 @@
           On sharpening the saw
         </h2>
       </div>
+
       <div class="pubdate-row">
-        <div class="video-tags">
-          
-            Tagged with:
-            <a href="/categories/articles">articles</a>, <a href="/categories/customizations">customizations</a>, <a href="/categories/plugins">plugins</a>, <a href="/categories/text-objects">text-objects</a>, <a href="/categories/grammar">grammar</a>
-          
-        </div>
+        <div class="article-categories">
+  
+  
+    Tagged with:
+    <a href="/categories/plugins">plugins</a>, <a href="/categories/customizing-vim">Customizing Vim</a>, <a href="/categories/essays">Essays</a>, <a href="/categories/text-objects">Text objects</a>
+  
+</div>
+
+
         <time class="pubdate" pubdate="pubdate" datetime="2012-08- 6">
           <div class="hide-for-medium-up">Aug&nbsp; 6, '12</div><div class="show-for-medium-up">Aug  6, 2012</div>
         </time>
@@ -168,6 +152,8 @@
       <div id="article_body" data-swiftype-index="true">
         <p>Vim users sit somewhere on a spectrum, based on how much they customize their editor. At one end of the spectrum, there are those who use Vim with no customizations whatsoever. At the other end are those who customize Vim to the point where it barely resembles the stock install.</p>
 
+
+
 <p><a href="https://www.destroyallsoftware.com/screencasts">Gary Bernhardt</a> advocates using stock Vim, with very few customizations.</p>
 
 <blockquote>
@@ -176,8 +162,6 @@ Gary Bernhardt on <a href="http://rubyrogues.com/040-rr-text-editors-and-ides/">
 </blockquote>
 
 <p>Gary&rsquo;s chainsaw metaphor warns against the practice of over-customizing Vim. But I would also warn against using Vim without any customizations. Vim is highly configurable, and some of the default settings are suboptimal. If you don&rsquo;t have a basic vimrc, then you&rsquo;re putting up with inconveniences that were fixed decades ago.</p>
-
-
 
 <h3>Vim is unlike other text editors</h3>
 
@@ -355,18 +339,20 @@ Gary Bernhardt on <a href="http://rubyrogues.com/040-rr-text-editors-and-ides/">
 
     
       <li>
+        <h4><a href="/blog/2011/05/the-fugitive-series/">The Fugitive Series - a retrospective</a></h4>
+        <p><em>Fugitive.vim: a git wrapper so awesome, it should be illegal.</em> That&rsquo;s how Tim Pope describes his git plugin for Vim. I&rsquo;ve had <a href="http://www.vim.org/scripts/script.php?script_id=2975">fugitive.vim</a> installed since it was released, but until recently I never took the time to figure out what was <em>so awesome</em> that could make it illegal.</p>
+
+
+      </li>
+    
+      <li>
         <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+        <p>Vimcasts contains 65 free screencasts and 41 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
       <li>
         <h4><a href="/publications">Publications</a></h4>
         <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
       </li>
     
       <li>
@@ -377,26 +363,13 @@ Gary Bernhardt on <a href="http://rubyrogues.com/040-rr-text-editors-and-ides/">
       </li>
     
       <li>
-        <h4><a href="/blog/2013/01/vimlondon-january-meetup-speak-vim---operators-and-motions/">VimLondon January Meetup: Speak Vim - Operators and Motions</a></h4>
-        <p>On Tuesday 29th January, <a href="http://www.meetup.com/Vim-London/">VimLondon</a> is holding a meetup with a theme: <a href="http://www.meetup.com/Vim-London/events/97866502/">Speak Vim - Operators and Motions</a>. We&rsquo;ve got 5 short talks lined up:</p>
-
-<ol>
-<li><a href="http://twitter.com/tea_sea">Tom Cammann</a>, Intro to Vim Grammar</li>
-<li><a href="http://twitter.com/nelstrom">Drew Neil</a>, When and why you should stay out of visual mode</li>
-<li><a href="http://twitter.com/Jack_Franklin">Jack Franklin</a>, Meet <a href="https://github.com/Lokaltog/vim-easymotion">easymotion</a></li>
-<li><a href="http://twitter.com/krisajenkins">Kris Jenkins</a>, Meet <a href="https://github.com/tpope/vim-surround">surround</a></li>
-<li><a href="http://twitter.com/alex_young">Alex Young</a>, Creating <a href="http://usevim.com/2013/01/16/custom-motions/">custom motions</a></li>
-</ol>
-
-<p>I&rsquo;m looking forward to this event, because the subject of Vim&rsquo;s Grammar fascinates me. If you&rsquo;d like to attend, <a href="http://www.meetup.com/Vim-London/events/97866502/">RSVP on Meetup.com</a>. The event is kindly being hosted by <a href="https://www.fundingcircle.com/">Funding Circle</a>. You can also find the event listed on <a href="http://lanyrd.com/2013/vimlondon/">lanyrd</a>.</p>
-
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
       </li>
     
       <li>
-        <h4><a href="/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/">Fugitive.vim - exploring the history of a git repository</a></h4>
-        <p>Git provides tools for searching the contents of files, commit messages, and even whether text was added or removed by a commit. In this episode, we&rsquo;ll see how fugitive&rsquo;s <code>Ggrep</code> and <code>Glog</code> commands wrap this functionality up so that we can search the contents and history of a git repo from right inside of Vim.</p>
-
-<p><em>This is the last of our five part series on fugitive.vim.</em></p>
+        <h4><a href="/episodes/writing-a-custom-fold-expression/">Writing a custom fold expression</a></h4>
+        <p>With a little bit of Vimscript, you can create a custom folding expression for any filetype. We&rsquo;ll start by looking at the mechanics of folding with markers, then go on to create a folding expression for markdown documents.</p>
 
 
       </li>

@@ -29,7 +29,7 @@
       <div class="top-bar-underlay"></div>
 
       <div class="row">
-        <nav class="top-bar show-for-medium-up" data-topbar>
+        <nav class="top-bar show-for-large-up" data-topbar>
           <ul class="title-area">
             <li class="name"></li>
             <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
@@ -56,28 +56,15 @@
 
             <!-- Left Nav Section -->
             <ul class="left">
-              
-<li class=""><a href="/subscribe">Subscribe</a></li>
-<li class=""><a href="/categories">Browse Vimcasts</a>  
-</li>
-<li class=""><a href="/training">Training</a></li><li class=""><a href="/publications">Publications</a></li>
+              <li class="open"><a href="/episodes">Screencasts</a></li><li><a href="/blog">Articles</a></li><li><a href="/categories">Categories</a></li><li><a href="/training">Training</a></li><li><a href="/publications">Publications</a></li>
+<li><a href="/subscribe">Subscribe</a></li>
             </ul>
           </section>
         </nav>
 
-        
-          <nav class="top-bar secondary-nav show-for-medium-up">
-            <section class="top-bar-section">
-              <ul class="left">
-                <li class=""><a href="/episodes/archive">All episodes</a></li><li class=""><a href="/episodes">Latest episodes</a></li><li class=""><a href="/blog">Latest articles</a></li>
-              </ul>
-            </section>
-          </nav>
-        
-
       </div>
 
-      <nav class="compact-nav tab-bar hide-for-medium-up">
+      <nav class="compact-nav tab-bar hide-for-large-up">
         <section class="left-small">
           <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
         </section>
@@ -96,15 +83,8 @@
       <aside class="left-off-canvas-menu">
         <ul class="off-canvas-list">
           <li><label>Vimcasts</label></li>
-          
-<li class=""><a href="/subscribe">Subscribe</a></li>
-<li class="has-dropdown"><a href="/categories">Browse Vimcasts</a>  
-    <ul class="dropdown">
-      <li class=""><a href="/episodes/archive">All episodes</a></li><li class=""><a href="/episodes">Latest episodes</a></li><li class=""><a href="/blog">Latest articles</a></li>
-    </ul>
-  
-</li>
-<li class=""><a href="/training">Training</a></li><li class=""><a href="/publications">Publications</a></li>
+          <li class="open"><a href="/episodes">Screencasts</a></li><li><a href="/blog">Articles</a></li><li><a href="/categories">Categories</a></li><li><a href="/training">Training</a></li><li><a href="/publications">Publications</a></li>
+<li><a href="/subscribe">Subscribe</a></li>
 
           
             <li>
@@ -155,12 +135,15 @@
     </div>
 
     <div class="pubdate-row">
-      <div class="video-tags">
-        
-          Tagged with:
-          <a href="/categories/html">html</a>, <a href="/categories/external-filters">external-filters</a>
-        
-      </div>
+      <div class="article-categories">
+  
+  
+    Tagged with:
+    <a href="/categories/autocommands">autocommands</a>, <a href="/categories/external-commands">External commands</a>, <a href="/categories/formatting-text">Formatting text</a>
+  
+</div>
+
+
       <time class="pubdate" pubdate="pubdate" datetime="2014-02-18">
         <div class="hide-for-medium-up">Feb&nbsp;18, '14</div><div class="show-for-medium-up">Feb 18, 2014</div>
       </time>
@@ -425,28 +408,29 @@ than to be a simple, on demand paragraph formatter like</code>fmt<code>or</code>
 
     
       <li>
-        <h4><a href="/blog/2014/02/vimcasts-redesign-a-work-in-progress/">Vimcasts redesign: a work in progress</a></h4>
-        <p>In the not-too-distant future, you can expect to see a revised design for Vimcasts.org. The most significant enhancements will be the addition of tags, site search, and a responsive design for smaller screens. Hannah Adcock, from <a href="http://contentedstrategy.com">contentedstrategy.com</a>, has been helping me out by analysing user feedback, as well as data from Google Analytics.</p>
-
-
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/swapping-two-regions-of-text-with-exchange-vim/">Swapping two regions of text with exchange.vim</a></h4>
-        <p>Swapping two regions of text is a common task, which normally requires that we make two separate changes to the document.
-Tom McDonald&rsquo;s <a href="https://github.com/tommcdo/vim-exchange">exchange plugin</a> offers an elegant alternative, by providing an operator that swaps two regions of text in one go.</p>
-
-
-      </li>
-    
-      <li>
         <h4><a href="/publications">Publications</a></h4>
         <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
       </li>
     
       <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+        <h4><a href="/episodes/whitespace-preferences-and-filetypes/">Whitespace preferences and filetypes</a></h4>
+        <p>Different file types may require particular whitespace settings. For example, YAML files must be indented using spaces, whereas makefiles require indentation with tabs. These preferences can be specified by hooking into the <code>FileType</code> event with an autocommand.</p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/blog/2013/03/combining-vimgrep-with-git-ls-files/">Combining :vimgrep with git ls-files</a></h4>
+        <p>The <code>vimgrep</code> command uses Vim&rsquo;s native regular expressions to search the contents of multiple files. There are several ways that we can specify the list of files to look inside, including <code>*</code> and <code>**</code> wildcards. It would be handy if we could instruct <code>vimgrep</code> to look inside all of the files in the current project, excluding those listed in the <code>.gitignore</code> file. That&rsquo;s where the <a href="https://www.kernel.org/pub/software/scm/git/docs/git-ls-files.html"><code>git ls-files</code></a> command comes in.</p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/tidying-whitespace/">Tidying whitespace</a></h4>
+        <p>This episode demonstrates a few techniques for tidying up whitespace.  First, it looks at how to convert between tabs and spaces. Then it shows how to strip trailing whitespace, and finally, how to remove blank lines from a file.</p>
+
+
       </li>
     
       <li>
@@ -455,10 +439,8 @@ Tom McDonald&rsquo;s <a href="https://github.com/tommcdo/vim-exchange">exchange 
       </li>
     
       <li>
-        <h4><a href="/episodes/formatting-text-with-par/">Formatting text with par</a></h4>
-        <p>&lsquo;Do one thing and do it well&rsquo; is the principle of the Unix toolkit. Editing text is a broad domain, and there are many related tasks with which it overlaps. Vim acknowledges this by enabling certain tasks to be outsourced to external programs which do that one thing, and do it well. This episode will demonstrate how the <em>par</em> program can be used for formatting text.</p>
-
-
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 41 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
 

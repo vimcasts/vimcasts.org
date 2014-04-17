@@ -28,7 +28,7 @@
       <div class="top-bar-underlay"></div>
 
       <div class="row">
-        <nav class="top-bar show-for-medium-up" data-topbar>
+        <nav class="top-bar show-for-large-up" data-topbar>
           <ul class="title-area">
             <li class="name"></li>
             <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
@@ -55,28 +55,15 @@
 
             <!-- Left Nav Section -->
             <ul class="left">
-              
-<li class=""><a href="/subscribe">Subscribe</a></li>
-<li class=""><a href="/categories">Browse Vimcasts</a>  
-</li>
-<li class=""><a href="/training">Training</a></li><li class=""><a href="/publications">Publications</a></li>
+              <li><a href="/episodes">Screencasts</a></li><li class="open"><a href="/blog">Articles</a></li><li><a href="/categories">Categories</a></li><li><a href="/training">Training</a></li><li><a href="/publications">Publications</a></li>
+<li><a href="/subscribe">Subscribe</a></li>
             </ul>
           </section>
         </nav>
 
-        
-          <nav class="top-bar secondary-nav show-for-medium-up">
-            <section class="top-bar-section">
-              <ul class="left">
-                <li class=""><a href="/episodes/archive">All episodes</a></li><li class=""><a href="/episodes">Latest episodes</a></li><li class=""><a href="/blog">Latest articles</a></li>
-              </ul>
-            </section>
-          </nav>
-        
-
       </div>
 
-      <nav class="compact-nav tab-bar hide-for-medium-up">
+      <nav class="compact-nav tab-bar hide-for-large-up">
         <section class="left-small">
           <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
         </section>
@@ -95,15 +82,8 @@
       <aside class="left-off-canvas-menu">
         <ul class="off-canvas-list">
           <li><label>Vimcasts</label></li>
-          
-<li class=""><a href="/subscribe">Subscribe</a></li>
-<li class="has-dropdown"><a href="/categories">Browse Vimcasts</a>  
-    <ul class="dropdown">
-      <li class=""><a href="/episodes/archive">All episodes</a></li><li class=""><a href="/episodes">Latest episodes</a></li><li class=""><a href="/blog">Latest articles</a></li>
-    </ul>
-  
-</li>
-<li class=""><a href="/training">Training</a></li><li class=""><a href="/publications">Publications</a></li>
+          <li><a href="/episodes">Screencasts</a></li><li class="open"><a href="/blog">Articles</a></li><li><a href="/categories">Categories</a></li><li><a href="/training">Training</a></li><li><a href="/publications">Publications</a></li>
+<li><a href="/subscribe">Subscribe</a></li>
 
           
             <li>
@@ -187,8 +167,6 @@
   <div class="summary-row">
     <div class="episode_summary">
       <p>I sometimes get asked what software I use to reveal the Vim keystrokes in my video tutorials here on Vimcasts.org. The fact is that I add them by hand in post-production. It&rsquo;s not fun!</p>
-
-<p>When I run my <a href="http://vimcasts.org/classes/core-vim">Core Vim Masterclasses</a> I use <a href="https://github.com/sdeken/keycastr/">Keycastr</a> to show what I&rsquo;m doing in realtime. Keycastr uses Growl-style notifications to show all keystrokes across all applications, including every letter I type while communicating in a chat room, for example. It&rsquo;s not ideal, but it&rsquo;s better than nothing! I would love to have <em>a dedicated program for visualizing my keystrokes in Vim</em>, so I&rsquo;ve started building <a href="https://github.com/nelstrom/vimprint">Vimprint</a> to scratch that itch.</p>
 
 
 
@@ -376,43 +354,10 @@
     <div class="episode_summary">
       <p>I love the way that ack let&rsquo;s me specify the files to search inside. For starters, ack does the right thing by ignoring the contents of VCS directories, backup files, core dumps etc., which gives a good signal to noise ratio. On top of that, ack provides a convenient syntax for specifying filetypes to include or exclude from the set (see <code>ack --help-types</code>). I can target ruby files only with the <code>--ruby</code> option, or everything but ruby files with <code>--noruby</code>.</p>
 
-<p>I also love using <code>:vimgrep</code>, because it lets me use Vim&rsquo;s native regular expressions. For me, the ideal project-wide search would combine Vim&rsquo;s regex with ack&rsquo;s method of specifying the set of files to search through. I recently learned about ack&rsquo;s <code>-f</code> flag, which makes this combination possible.</p>
-
 
 
       
         <a class="readmore" href="/blog/2013/03/combining-vimgrep-with-ack--f/"><span class='icon-book icomoon'></span>Continue reading</a>
-      
-
-    </div>
-  </div>
-
-</section>
-
-  
-<section class="article">
-
-  <div class="title-row">
-    <h3 class="title">
-      <a href="/blog/2013/02/get-30-off-practical-vim/">Get 30% off Practical Vim</a>
-    </h3>
-    
-      <time class="pubdate" pubdate="pubdate" datetime="2013-02-22">
-        <div class="hide-for-medium-up">Feb&nbsp;22, '13</div><div class="show-for-medium-up">Feb 22, 2013</div>
-      </time>
-    
-  </div>
-
-  
-
-  <div class="summary-row">
-    <div class="episode_summary">
-      <p>For a limited time, the Pragmatic Bookshelf is offering <a href="http://pragprog.com/book/dnvim/practical-vim">a 30% discount on Practical Vim</a>. To claim this deal, use the coupon: <strong>DrewNeilVimMarchMadness</strong>. The offer runs until midnight (PST) on March 8th. Please help me spread the word wide and far by Tweeting, Liking, +1-ing and so on.</p>
-
-
-
-      
-        <a class="readmore" href="/blog/2013/02/get-30-off-practical-vim/"><span class='icon-book icomoon'></span>Continue reading</a>
       
 
     </div>
@@ -444,6 +389,37 @@
 
       
         <a class="readmore" href="/blog/2013/02/google-vimdocs-with-a-custom-search-engine/"><span class='icon-book icomoon'></span>Continue reading</a>
+      
+
+    </div>
+  </div>
+
+</section>
+
+  
+<section class="article">
+
+  <div class="title-row">
+    <h3 class="title">
+      <a href="/blog/2013/02/habit-breaking-habit-making/">Habit breaking, habit making</a>
+    </h3>
+    
+      <time class="pubdate" pubdate="pubdate" datetime="2013-02- 6">
+        <div class="hide-for-medium-up">Feb&nbsp; 6, '13</div><div class="show-for-medium-up">Feb  6, 2013</div>
+      </time>
+    
+  </div>
+
+  
+
+  <div class="summary-row">
+    <div class="episode_summary">
+      <p>Moving your Vim cursor around using the arrow keys is a bad habit, and like many bad habits it&rsquo;s a difficult one to break!</p>
+
+
+
+      
+        <a class="readmore" href="/blog/2013/02/habit-breaking-habit-making/"><span class='icon-book icomoon'></span>Continue reading</a>
       
 
     </div>

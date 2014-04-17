@@ -29,7 +29,7 @@
       <div class="top-bar-underlay"></div>
 
       <div class="row">
-        <nav class="top-bar show-for-medium-up" data-topbar>
+        <nav class="top-bar show-for-large-up" data-topbar>
           <ul class="title-area">
             <li class="name"></li>
             <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
@@ -56,28 +56,15 @@
 
             <!-- Left Nav Section -->
             <ul class="left">
-              
-<li class=""><a href="/subscribe">Subscribe</a></li>
-<li class=""><a href="/categories">Browse Vimcasts</a>  
-</li>
-<li class=""><a href="/training">Training</a></li><li class=""><a href="/publications">Publications</a></li>
+              <li class="open"><a href="/episodes">Screencasts</a></li><li><a href="/blog">Articles</a></li><li><a href="/categories">Categories</a></li><li><a href="/training">Training</a></li><li><a href="/publications">Publications</a></li>
+<li><a href="/subscribe">Subscribe</a></li>
             </ul>
           </section>
         </nav>
 
-        
-          <nav class="top-bar secondary-nav show-for-medium-up">
-            <section class="top-bar-section">
-              <ul class="left">
-                <li class=""><a href="/episodes/archive">All episodes</a></li><li class=""><a href="/episodes">Latest episodes</a></li><li class=""><a href="/blog">Latest articles</a></li>
-              </ul>
-            </section>
-          </nav>
-        
-
       </div>
 
-      <nav class="compact-nav tab-bar hide-for-medium-up">
+      <nav class="compact-nav tab-bar hide-for-large-up">
         <section class="left-small">
           <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
         </section>
@@ -96,15 +83,8 @@
       <aside class="left-off-canvas-menu">
         <ul class="off-canvas-list">
           <li><label>Vimcasts</label></li>
-          
-<li class=""><a href="/subscribe">Subscribe</a></li>
-<li class="has-dropdown"><a href="/categories">Browse Vimcasts</a>  
-    <ul class="dropdown">
-      <li class=""><a href="/episodes/archive">All episodes</a></li><li class=""><a href="/episodes">Latest episodes</a></li><li class=""><a href="/blog">Latest articles</a></li>
-    </ul>
-  
-</li>
-<li class=""><a href="/training">Training</a></li><li class=""><a href="/publications">Publications</a></li>
+          <li class="open"><a href="/episodes">Screencasts</a></li><li><a href="/blog">Articles</a></li><li><a href="/categories">Categories</a></li><li><a href="/training">Training</a></li><li><a href="/publications">Publications</a></li>
+<li><a href="/subscribe">Subscribe</a></li>
 
           
             <li>
@@ -155,12 +135,15 @@
     </div>
 
     <div class="pubdate-row">
-      <div class="video-tags">
-        
-          Tagged with:
-          <a href="/categories/registers">registers</a>, <a href="/categories/copy-and-paste">copy-and-paste</a>
-        
-      </div>
+      <div class="article-categories">
+  
+  
+    Tagged with:
+    <a href="/categories/registers">registers</a>, <a href="/categories/copy-and-paste">Copy and Paste</a>
+  
+</div>
+
+
       <time class="pubdate" pubdate="pubdate" datetime="2013-11-11">
         <div class="hide-for-medium-up">Nov&nbsp;11, '13</div><div class="show-for-medium-up">Nov 11, 2013</div>
       </time>
@@ -429,13 +412,10 @@ Vim uses CLIPBOARD when reading and writing the &ldquo;+ register.  </p>
 
     
       <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/training">Vim Training</a></h4>
-        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
+        <h4><a href="/episodes/evaluating-scripts-with-vims-expression-register/">Evaluating scripts with Vim's expression register</a></h4>
+        <p>In <a href="/e/56">the previous lesson</a> we learned how use the expression register to evaluate simple calculations. We can also call built-in and user-defined Vimscript functions, and thanks to the <code>system()</code> function, we can also fetch output from external scripts.</p>
+
+
       </li>
     
       <li>
@@ -443,6 +423,16 @@ Vim uses CLIPBOARD when reading and writing the &ldquo;+ register.  </p>
         <p>When Vim is compiled without the <code>+clipboard</code> feature, we can still insert text from the clipboard using the system paste command (<code>ctrl-v</code> or <code>cmd-v</code>). This can produce strange effects, but we can avoid them by toggling the <code>paste</code> option each time we use the system paste command.</p>
 
 
+      </li>
+    
+      <li>
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/training">Vim Training</a></h4>
+        <p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>
       </li>
     
       <li>
@@ -454,14 +444,7 @@ Vim uses CLIPBOARD when reading and writing the &ldquo;+ register.  </p>
     
       <li>
         <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/evaluating-scripts-with-vims-expression-register/">Evaluating scripts with Vim's expression register</a></h4>
-        <p>In <a href="/e/56">the previous lesson</a> we learned how use the expression register to evaluate simple calculations. We can also call built-in and user-defined Vimscript functions, and thanks to the <code>system()</code> function, we can also fetch output from external scripts.</p>
-
-
+        <p>Vimcasts contains 65 free screencasts and 41 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
 

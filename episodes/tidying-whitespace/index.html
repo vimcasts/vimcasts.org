@@ -29,7 +29,7 @@
       <div class="top-bar-underlay"></div>
 
       <div class="row">
-        <nav class="top-bar show-for-medium-up" data-topbar>
+        <nav class="top-bar show-for-large-up" data-topbar>
           <ul class="title-area">
             <li class="name"></li>
             <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
@@ -56,28 +56,15 @@
 
             <!-- Left Nav Section -->
             <ul class="left">
-              
-<li class=""><a href="/subscribe">Subscribe</a></li>
-<li class=""><a href="/categories">Browse Vimcasts</a>  
-</li>
-<li class=""><a href="/training">Training</a></li><li class=""><a href="/publications">Publications</a></li>
+              <li class="open"><a href="/episodes">Screencasts</a></li><li><a href="/blog">Articles</a></li><li><a href="/categories">Categories</a></li><li><a href="/training">Training</a></li><li><a href="/publications">Publications</a></li>
+<li><a href="/subscribe">Subscribe</a></li>
             </ul>
           </section>
         </nav>
 
-        
-          <nav class="top-bar secondary-nav show-for-medium-up">
-            <section class="top-bar-section">
-              <ul class="left">
-                <li class=""><a href="/episodes/archive">All episodes</a></li><li class=""><a href="/episodes">Latest episodes</a></li><li class=""><a href="/blog">Latest articles</a></li>
-              </ul>
-            </section>
-          </nav>
-        
-
       </div>
 
-      <nav class="compact-nav tab-bar hide-for-medium-up">
+      <nav class="compact-nav tab-bar hide-for-large-up">
         <section class="left-small">
           <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
         </section>
@@ -96,15 +83,8 @@
       <aside class="left-off-canvas-menu">
         <ul class="off-canvas-list">
           <li><label>Vimcasts</label></li>
-          
-<li class=""><a href="/subscribe">Subscribe</a></li>
-<li class="has-dropdown"><a href="/categories">Browse Vimcasts</a>  
-    <ul class="dropdown">
-      <li class=""><a href="/episodes/archive">All episodes</a></li><li class=""><a href="/episodes">Latest episodes</a></li><li class=""><a href="/blog">Latest articles</a></li>
-    </ul>
-  
-</li>
-<li class=""><a href="/training">Training</a></li><li class=""><a href="/publications">Publications</a></li>
+          <li class="open"><a href="/episodes">Screencasts</a></li><li><a href="/blog">Articles</a></li><li><a href="/categories">Categories</a></li><li><a href="/training">Training</a></li><li><a href="/publications">Publications</a></li>
+<li><a href="/subscribe">Subscribe</a></li>
 
           
             <li>
@@ -155,12 +135,15 @@
     </div>
 
     <div class="pubdate-row">
-      <div class="video-tags">
-        
-          Tagged with:
-          <a href="/categories/whitespace">whitespace</a>, <a href="/categories/editing-text">editing-text</a>, <a href="/categories/customizations">customizations</a>
-        
-      </div>
+      <div class="article-categories">
+  
+  
+    Tagged with:
+    <a href="/categories/editing-text">Editing text</a>, <a href="/categories/customizing-vim">Customizing Vim</a>, <a href="/categories/whitespace">Whitespace</a>, <a href="/categories/autocommands">autocommands</a>
+  
+</div>
+
+
       <time class="pubdate" pubdate="pubdate" datetime="2010-01-24">
         <div class="hide-for-medium-up">Jan&nbsp;24, '10</div><div class="show-for-medium-up">Jan 24, 2010</div>
       </time>
@@ -434,8 +417,25 @@ Vim function that keeps your state</a>.</p>
 
     
       <li>
-        <h4><a href="/episodes/whitespace-preferences-and-filetypes/">Whitespace preferences and filetypes</a></h4>
-        <p>Different file types may require particular whitespace settings. For example, YAML files must be indented using spaces, whereas makefiles require indentation with tabs. These preferences can be specified by hooking into the <code>FileType</code> event with an autocommand.</p>
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/indentation-commands/">Indentation commands</a></h4>
+        <p>This episode covers the commands for shifting text left and right (<code>&lt;</code> and <code>&gt;</code>), and also goes over the auto indent command (<code>=</code>).</p>
+
+
+      </li>
+    
+      <li>
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 41 articles. <a href='/categories'>Browse all content by category</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/creating-the-vimcasts-logo-as-ascii-art/">Creating the Vimcasts logo as ASCII art</a></h4>
+        <p>Demonstrating miscellaneous tips and tricks gleaned whilst making an ASCII art version of the VimCasts.org logo. Learn how to duplicate lines, copy and paste with visual block mode, search and replace within a visual selection, and how to use macros.</p>
 
 
       </li>
@@ -446,25 +446,8 @@ Vim function that keeps your state</a>.</p>
       </li>
     
       <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/bubbling-text/">Bubbling text</a></h4>
-        <p>TextMate has a few built in commands for moving selected text around a document. The end end result of using these commands can be achieved by cutting and pasting, but the visual feedback they provide is quite helpful. In this episode, I will show how to replicate these commands in Vim.</p>
-
-
-      </li>
-    
-      <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/indentation-commands/">Indentation commands</a></h4>
-        <p>This episode covers the commands for shifting text left and right (<code>&lt;</code> and <code>&gt;</code>), and also goes over the auto indent command (<code>=</code>).</p>
+        <h4><a href="/episodes/whitespace-preferences-and-filetypes/">Whitespace preferences and filetypes</a></h4>
+        <p>Different file types may require particular whitespace settings. For example, YAML files must be indented using spaces, whereas makefiles require indentation with tabs. These preferences can be specified by hooking into the <code>FileType</code> event with an autocommand.</p>
 
 
       </li>

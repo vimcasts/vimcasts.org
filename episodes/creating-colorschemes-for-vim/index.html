@@ -29,7 +29,7 @@
       <div class="top-bar-underlay"></div>
 
       <div class="row">
-        <nav class="top-bar show-for-medium-up" data-topbar>
+        <nav class="top-bar show-for-large-up" data-topbar>
           <ul class="title-area">
             <li class="name"></li>
             <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
@@ -56,28 +56,15 @@
 
             <!-- Left Nav Section -->
             <ul class="left">
-              
-<li class=""><a href="/subscribe">Subscribe</a></li>
-<li class=""><a href="/categories">Browse Vimcasts</a>  
-</li>
-<li class=""><a href="/training">Training</a></li><li class=""><a href="/publications">Publications</a></li>
+              <li class="open"><a href="/episodes">Screencasts</a></li><li><a href="/blog">Articles</a></li><li><a href="/categories">Categories</a></li><li><a href="/training">Training</a></li><li><a href="/publications">Publications</a></li>
+<li><a href="/subscribe">Subscribe</a></li>
             </ul>
           </section>
         </nav>
 
-        
-          <nav class="top-bar secondary-nav show-for-medium-up">
-            <section class="top-bar-section">
-              <ul class="left">
-                <li class=""><a href="/episodes/archive">All episodes</a></li><li class=""><a href="/episodes">Latest episodes</a></li><li class=""><a href="/blog">Latest articles</a></li>
-              </ul>
-            </section>
-          </nav>
-        
-
       </div>
 
-      <nav class="compact-nav tab-bar hide-for-medium-up">
+      <nav class="compact-nav tab-bar hide-for-large-up">
         <section class="left-small">
           <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
         </section>
@@ -96,15 +83,8 @@
       <aside class="left-off-canvas-menu">
         <ul class="off-canvas-list">
           <li><label>Vimcasts</label></li>
-          
-<li class=""><a href="/subscribe">Subscribe</a></li>
-<li class="has-dropdown"><a href="/categories">Browse Vimcasts</a>  
-    <ul class="dropdown">
-      <li class=""><a href="/episodes/archive">All episodes</a></li><li class=""><a href="/episodes">Latest episodes</a></li><li class=""><a href="/blog">Latest articles</a></li>
-    </ul>
-  
-</li>
-<li class=""><a href="/training">Training</a></li><li class=""><a href="/publications">Publications</a></li>
+          <li class="open"><a href="/episodes">Screencasts</a></li><li><a href="/blog">Articles</a></li><li><a href="/categories">Categories</a></li><li><a href="/training">Training</a></li><li><a href="/publications">Publications</a></li>
+<li><a href="/subscribe">Subscribe</a></li>
 
           
             <li>
@@ -155,12 +135,15 @@
     </div>
 
     <div class="pubdate-row">
-      <div class="video-tags">
-        
-          Tagged with:
-          <a href="/categories/colorschemes">colorschemes</a>
-        
-      </div>
+      <div class="article-categories">
+  
+  
+    Tagged with:
+    <a href="/categories/colorschemes">colorschemes</a>
+  
+</div>
+
+
       <time class="pubdate" pubdate="pubdate" datetime="2010-09-28">
         <div class="hide-for-medium-up">Sep&nbsp;28, '10</div><div class="show-for-medium-up">Sep 28, 2010</div>
       </time>
@@ -285,7 +268,7 @@ endfunc
 
 <h3>Coloration</h3>
 
-<p><a href="http://github.com/sickill/coloration">Coloration</a> is a tool created by Marcin Kulik, which makes it really easy to convert TextMate themes into Vim colorschemes. You can download the rubygem to use it at the command line, or you can just <a href="http://coloration.sickill.net/">upload the file for a TextMate theme to the webpage</a>.</p>
+<p><a href="http://github.com/sickill/coloration">Coloration</a> is a tool created by Marcin Kulik, which makes it really easy to convert TextMate themes into Vim colorschemes. You can download the rubygem to use it at the command line, or you can just <a href="http://coloration.ku1ik.com/">upload the file for a TextMate theme to the webpage</a>.</p>
 
 <p>Note that coloration expects TextMate themes in XML format, whereas TextMate itself tends to save themes in a binary <code>.tmTheme</code> format. The <code>.tmTheme</code> extension is just a nicety - under the hood it&rsquo;s really a property list (plist) file. You can use the <code>plutil</code> tool to convert plist files from binary to XML format as follows:</p>
 <pre class="highlight plaintext">plutil -convert xml1 Amy.tmTheme
@@ -304,7 +287,7 @@ endfunc
 <ul>
 <li><a href="https://github.com/gerw/vim-HiLinkTrace">HiLinkTrace</a> - a plugin for revealing all syntax groups</li>
 <li><a href="http://stackoverflow.com/questions/1467438/find-out-to-which-highlight-group-a-particular-keyword-symbol-belongs-in-vim">StackOverflow: revealing syntax groups</a></li>
-<li><a href="http://coloration.sickill.net/">Coloration</a> - a tool for converting TextMate themes to Vim colorschemes</li>
+<li><a href="http://coloration.ku1ik.com/">Coloration</a> - a tool for converting TextMate themes to Vim colorschemes</li>
 <li><a href="http://hints.macworld.com/article.php?story=20050430105126392">Converting plist files from binary to XML format</a></li>
 <li><a href="http://www.vim.org/scripts/script.php?script_id=2937">HexHighlighter</a> - a plugin to toggle hex colors</li>
 <li><a href="https://github.com/gorodinskiy/vim-coloresque">coloresque</a> - another plugin to visualize colors (including hsl and named colors)</li>
@@ -416,6 +399,16 @@ endfunc
 
     
       <li>
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/categories">Find by category</a></h4>
+        <p>Vimcasts contains 65 free screencasts and 41 articles. <a href='/categories'>Browse all content by category</a>.</p>
+      </li>
+    
+      <li>
         <h4><a href="/blog/2010/09/mac-classic/">Mac Classic - a light colorscheme</a></h4>
         <p>I could never find a light colorscheme for Vim that I enjoyed using, so I finally took the time to port the &ldquo;Mac Classic&rdquo; theme from TextMate. The <a href="http://github.com/nelstrom/vim-mac-classic-theme">source code is on gitub</a>, so feel free to fork it.</p>
 
@@ -423,20 +416,10 @@ endfunc
       </li>
     
       <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
-      </li>
-    
-      <li>
         <h4><a href="/blog/2010/04/syntaxhighlighter-vimscript-brush-and-blackboard-theme/">SyntaxHighlighter Vimscript brush and Blackboard theme</a></h4>
         <p>Here on Vimcasts.org, I use Alex Gorbatchev&rsquo;s <a href="http://alexgorbatchev.com/wiki/SyntaxHighlighter">SyntaxHighlighter</a> to colorize the code excerpts. I couldn&rsquo;t find a syntax &lsquo;brush&rsquo; for Vimscript, so I wrote my own. I also created a color theme based on the Blackboard scheme that I use in Vim (and TextMate). </p>
 
 
-      </li>
-    
-      <li>
-        <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
       <li>

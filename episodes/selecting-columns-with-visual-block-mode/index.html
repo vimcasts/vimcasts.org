@@ -29,7 +29,7 @@
       <div class="top-bar-underlay"></div>
 
       <div class="row">
-        <nav class="top-bar show-for-medium-up" data-topbar>
+        <nav class="top-bar show-for-large-up" data-topbar>
           <ul class="title-area">
             <li class="name"></li>
             <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
@@ -56,28 +56,15 @@
 
             <!-- Left Nav Section -->
             <ul class="left">
-              
-<li class=""><a href="/subscribe">Subscribe</a></li>
-<li class=""><a href="/categories">Browse Vimcasts</a>  
-</li>
-<li class=""><a href="/training">Training</a></li><li class=""><a href="/publications">Publications</a></li>
+              <li class="open"><a href="/episodes">Screencasts</a></li><li><a href="/blog">Articles</a></li><li><a href="/categories">Categories</a></li><li><a href="/training">Training</a></li><li><a href="/publications">Publications</a></li>
+<li><a href="/subscribe">Subscribe</a></li>
             </ul>
           </section>
         </nav>
 
-        
-          <nav class="top-bar secondary-nav show-for-medium-up">
-            <section class="top-bar-section">
-              <ul class="left">
-                <li class=""><a href="/episodes/archive">All episodes</a></li><li class=""><a href="/episodes">Latest episodes</a></li><li class=""><a href="/blog">Latest articles</a></li>
-              </ul>
-            </section>
-          </nav>
-        
-
       </div>
 
-      <nav class="compact-nav tab-bar hide-for-medium-up">
+      <nav class="compact-nav tab-bar hide-for-large-up">
         <section class="left-small">
           <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
         </section>
@@ -96,15 +83,8 @@
       <aside class="left-off-canvas-menu">
         <ul class="off-canvas-list">
           <li><label>Vimcasts</label></li>
-          
-<li class=""><a href="/subscribe">Subscribe</a></li>
-<li class="has-dropdown"><a href="/categories">Browse Vimcasts</a>  
-    <ul class="dropdown">
-      <li class=""><a href="/episodes/archive">All episodes</a></li><li class=""><a href="/episodes">Latest episodes</a></li><li class=""><a href="/blog">Latest articles</a></li>
-    </ul>
-  
-</li>
-<li class=""><a href="/training">Training</a></li><li class=""><a href="/publications">Publications</a></li>
+          <li class="open"><a href="/episodes">Screencasts</a></li><li><a href="/blog">Articles</a></li><li><a href="/categories">Categories</a></li><li><a href="/training">Training</a></li><li><a href="/publications">Publications</a></li>
+<li><a href="/subscribe">Subscribe</a></li>
 
           
             <li>
@@ -155,12 +135,15 @@
     </div>
 
     <div class="pubdate-row">
-      <div class="video-tags">
-        
-          Tagged with:
-          <a href="/categories/visual-mode">visual-mode</a>
-        
-      </div>
+      <div class="article-categories">
+  
+  
+    Tagged with:
+    <a href="/categories/visual-mode">Visual mode</a>
+  
+</div>
+
+
       <time class="pubdate" pubdate="pubdate" datetime="2010-06-20">
         <div class="hide-for-medium-up">Jun&nbsp;20, '10</div><div class="show-for-medium-up">Jun 20, 2010</div>
       </time>
@@ -375,26 +358,20 @@
 
     
       <li>
+        <h4><a href="/episodes/converting-haml-to-erb-with-vim-macros/">Converting HAML to ERB with Vim macros</a></h4>
+        <p>HAML and ERB are two commonly used ruby templating languages. You may have a strong preference for one or the other, but it&rsquo;s not always up to you which one you use. I was recently asked to convert several HAML files to ERB format. In this episode, I will demonstrate a couple of Vim macros that helped make short work of the task. </p>
+
+
+      </li>
+    
+      <li>
         <h4><a href="/categories">Find by category</a></h4>
-        <p>Vimcasts contains 65 free screencasts and 45 articles. <a href='/categories'>Browse all content by category</a>.</p>
+        <p>Vimcasts contains 65 free screencasts and 41 articles. <a href='/categories'>Browse all content by category</a>.</p>
       </li>
     
       <li>
-        <h4><a href="/episodes/operating-on-search-matches-using-gn/">Operating on search matches using gn</a></h4>
-        <p>The <code>gn</code> command (introduced in Vim 7.4) makes it easy to operate on regions of text that match the current search pattern. It&rsquo;s especially useful when used with a regex that matches text regions of variable length.</p>
-
-
-      </li>
-    
-      <li>
-        <h4><a href="/publications">Publications</a></h4>
-        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
-      </li>
-    
-      <li>
-        <h4><a href="/episodes/swapping-two-regions-of-text-with-exchange-vim/">Swapping two regions of text with exchange.vim</a></h4>
-        <p>Swapping two regions of text is a common task, which normally requires that we make two separate changes to the document.
-Tom McDonald&rsquo;s <a href="https://github.com/tommcdo/vim-exchange">exchange plugin</a> offers an elegant alternative, by providing an operator that swaps two regions of text in one go.</p>
+        <h4><a href="/episodes/search-for-the-selected-text/">Search for the selected text</a></h4>
+        <p><a href="http://vimdoc.sourceforge.net/htmldoc/pattern.html#star">The <code>*</code> command</a> searches for the word under the cursor. That makes sense in Normal mode, but from Visual mode it would be more useful if the star command searched for the current <em>selection</em>, rather than the current word. We can add this feature to Vim using the <a href="https://github.com/nelstrom/vim-visual-star-search">visual star search plugin</a>.</p>
 
 
       </li>
@@ -405,8 +382,13 @@ Tom McDonald&rsquo;s <a href="https://github.com/tommcdo/vim-exchange">exchange 
       </li>
     
       <li>
-        <h4><a href="/episodes/pasting-from-visual-mode/">Pasting from Visual mode</a></h4>
-        <p>When used <a href="http://vimdoc.sourceforge.net/htmldoc/change.html#v_p">in Visual mode the <code>p</code> command</a> replaces the selection with the contents of a register. This makes for a smooth workflow when you want to overwrite a selection, or swap the order of two regions of text.</p>
+        <h4><a href="/publications">Publications</a></h4>
+        <p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>
+      </li>
+    
+      <li>
+        <h4><a href="/episodes/creating-the-vimcasts-logo-as-ascii-art/">Creating the Vimcasts logo as ASCII art</a></h4>
+        <p>Demonstrating miscellaneous tips and tricks gleaned whilst making an ASCII art version of the VimCasts.org logo. Learn how to duplicate lines, copy and paste with visual block mode, search and replace within a visual selection, and how to use macros.</p>
 
 
       </li>
