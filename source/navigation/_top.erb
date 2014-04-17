@@ -1,14 +1,7 @@
-<% subnav ||= false %>
-
-<%= navigation_link "Subscribe", "/subscribe" %>
-
-<% navigation_link "Browse Vimcasts", "/categories", dropdown: subnav do %>
-  <% if subnav %>
-    <ul class="dropdown">
-      <%= partial "navigation/browse" %>
-    </ul>
-  <% end %>
-<% end %>
-
+<%= navigation_link "Screencasts", "/episodes" %>
+<%= navigation_link "Articles", "/blog" %>
+<%= navigation_link "Categories", "/categories" %>
 <%= navigation_link "Training", "/training" %>
 <%= navigation_link "Publications", "/publications" %>
+
+<%= navigation_link "Subscribe", "/subscribe" %>
