@@ -342,3 +342,7 @@ ul.off-canvas-list ul.dropdown {
 .category-aggregate-title {
   margin-bottom: $header-bottom-margin;
 }
+
+.top-bar-section li.open:not(.has-form) a:not(.button) {
+  background-color: darken($primary-color, 25%);
+}
