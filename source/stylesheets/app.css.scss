@@ -1,6 +1,8 @@
 @import "settings";
 @import "foundation.scss";
 
+$vimcasts-blue: #050f47;
+
 header {
   @include grid-row;
 
@@ -345,4 +347,12 @@ ul.off-canvas-list ul.dropdown {
 
 .top-bar-section li.open:not(.has-form) a:not(.button) {
   background-color: darken($primary-color, 25%);
+}
+
+.article-categories a {
+  @include label(
+    $text-size: rem-calc(13),
+    $bg: lighten($vimcasts-blue, 80%),
+    $radius:4px
+  );
 }
