@@ -214,6 +214,12 @@ end
 # Layouts and redirects:
 page "/transcripts/*/en.html", layout: "transcript"
 redirect "e/a.html", to: "/episodes/archive"
+
+redirect "classes/index.html", to: "/training"
+redirect "classes/core-vim/index.html", to: "/training/core-vim"
+redirect "classes/core-vim-live/index.html", to: "/training/core-vim"
+redirect "classes/private-training/index.html", to: "/training/private"
+
 ready do
 
   blog(:episodes).articles.each do |a|
