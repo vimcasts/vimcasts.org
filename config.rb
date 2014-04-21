@@ -223,7 +223,7 @@ redirect "classes/private-training/index.html", to: "/training/private"
 ready do
 
   blog(:episodes).articles.each do |a|
-    page a.path, layout: 'episode'
+    page a.path, layout: 'screencast'
     n = a.data.number
     redirect "e/#{n}/index.html", to: "/#{a.path}"
     redirect "e/#{n}/t/index.html", to: "/transcripts/#{n}/en"
@@ -231,7 +231,7 @@ ready do
   end
 
   blog(:blog).articles.each do |a|
-    page a.path, layout: 'blogpost'
+    page a.path, layout: 'article'
     # FIXME: this raises an error:
     #   needs a date in its filename or frontmatter (RuntimeError)
     # redirect a.path, to: a.destination_path

@@ -18,10 +18,10 @@
         "command": "partial"
     },
     "source/blog/*": {
-        "command": "blog"
+        "command": "article"
     },
     "source/episodes/*.md": {
-        "command": "episode",
+        "command": "screencast",
         "alternate": "source/transcripts/%s/en.md"
     },
     "source/transcripts/*/en.md": {
