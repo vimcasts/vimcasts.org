@@ -17,12 +17,7 @@
       </h2>
     </div>
 
-    <div class="pubdate-row">
-      <%= partial "article-categories" %>
-      <time class="pubdate" pubdate="pubdate" datetime="<%= current_page.date.strftime('%Y-%m-%e') %>">
-        <%= format_pubdate(current_page) %>
-      </time>
-    </div>
+    <%= partial 'pubdate-row', locals: {episode: episode, article: current_page} %>
 
     <div class="summary-row">
       <div class="episode_summary enlarged" data-swiftype-index="true">

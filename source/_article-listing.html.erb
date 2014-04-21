@@ -18,22 +18,8 @@
     <% end %>
   </div>
 
-  <% if article.data.duration %>
-    <% episode = Episode.new(article) %>
-    <div class="pubdate-row">
-
-      <div class="video-run-time">
-        <%# http://wiki.whatwg.org/wiki/Time_element#duration %>
-        Run time: <time datetime="<%= episode.running_datetime %>">
-          <%= episode.running_time %>
-        </time>
-      </div>
-
-      <time class="pubdate" pubdate="pubdate" datetime="<%= article.date.strftime('%Y-%m-%e') %>">
-        <%= format_pubdate(article) %>
-      </time>
-
-    </div>
+  <% if episode %>
+    <%= partial 'pubdate-row', locals: {episode: episode, article: article} %>
   <% end %>
 
   <div class="summary-row">
