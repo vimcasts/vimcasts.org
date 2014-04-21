@@ -6,7 +6,6 @@
 :duration: 273
 :number: 61
 :tags: Repetition, Customizing Vim, Vimscript
-:layout: episode
 ---
 
 The dot command is my all-time favorite Vim trick: it tells Vim to repeat the last change. But the dot command tends not to work well with user-defined mappings. In this episode, we'll use repeat.vim to set up a simple mapping so that it can be repeated using the dot command.
