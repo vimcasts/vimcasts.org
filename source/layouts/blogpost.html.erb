@@ -37,6 +37,8 @@
   <%= partial "social-sharing-buttons",
     :locals => locals.merge(label: "Like this article? Spread the word!") %>
 
+  <%= partial "prev-next-links", :locals => locals %>
+
   <div class="row">
     <div class="small-12 columns">
       <%= partial "related-content", :locals => locals %>

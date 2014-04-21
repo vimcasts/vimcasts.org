@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="small-12 large-10 large-offset-2 columns">
+
+    <nav class="pagination-links">
+
+      <% {
+        previous: '&laquo; Previous',
+        next:     'Next &raquo;'
+      }.each do |direction, label| %>
+        <% if page = adjacent(direction) %>
+          <%= link_to label, page[:path], class: direction, title: page[:title] %>
+        <% else %>
+          <%= content_tag :span, label, class: direction %>
+        <% end %>
+      <% end %>
+
+    </nav>
+
+  </div>
+</div>
+

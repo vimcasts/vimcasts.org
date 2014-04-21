@@ -151,4 +151,13 @@ module VimcastsHelper
     end
   end
 
+  def adjacent(direction=:next)
+    if item = current_page.send("#{direction}_article")
+      {
+        path: "/" + item.destination_path.sub(/index\.html$/, ""),
+        title: item.title
+      }
+    end
+  end
+
 end
