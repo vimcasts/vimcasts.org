@@ -173,9 +173,16 @@ section.article {
       position: absolute;
       top: rem-calc(13);
       @media #{$medium-up} {
-        top: rem-calc(18);
+        top: rem-calc(17);
       }
     }
+  }
+}
+
+section.article.detail .title-row .pubdate {
+  top: rem-calc(17);
+  @media #{$medium-up} {
+    top: rem-calc(28);
   }
 }
 
