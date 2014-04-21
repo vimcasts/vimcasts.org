@@ -1,31 +1,25 @@
 <div>
   <hr/>
-  <h3>Related content</h3>
-  <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
 
-    <%
-      promo = [
-        OpenStruct.new({
-          title: "Vim Training",
-          path: "training",
-          summary: "<p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>"
-        }),
-        OpenStruct.new({
-          title: "Publications",
-          path: "publications",
-          summary: "<p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>"
-        })
-      ].shuffle[0..0]
-    %>
+  <% tags = visible_tags(current_page.tags, tag_visiblity_threshold) %>
+  <% if tags.length > 0 %>
+    <h3>Browse similar content by category:</h3>
+    <%= partial 'category-list-item', locals: {items: tags} %>
+  <% end %>
 
-    <% related = Similar::Suggester.new(self).get(current_page, 2) %>
+  <%
+    promo = [
+      OpenStruct.new({
+        title: "Vim Training",
+        path: "training",
+        summary: "<p>Boost your productivity with a <a href='/training'>Vim training class</a>. Join a public class, or <a href='/training/private'>book a private session</a> for your team.</p>"
+      }),
+      OpenStruct.new({
+        title: "Publications",
+        path: "publications",
+        summary: "<p>Make yourself a faster and more efficient developer with the help of <a href='/publications'>these publications</a>.</p>"
+      })
+    ].shuffle[0..0]
+  %>
 
-    <% (related + promo).shuffle.each do |related| %>
-      <li>
-        <h4><%= link_to related.title, "/#{related.path}" %></h4>
-        <%= related.summary %>
-      </li>
-    <% end %>
-
-  </ul>
 </div>
