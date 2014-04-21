@@ -99,9 +99,10 @@
   <%= partial "social-sharing-buttons",
     :locals => locals.merge(label: "Like this video? Spread the word!") %>
 
+  <%= partial "related-content", :locals => locals %>
+
   <div class="row">
     <div class="small-12 columns">
-      <%= partial "related-content", :locals => locals %>
       <%= partial "footer-main" %>
     </div>
   </div>
