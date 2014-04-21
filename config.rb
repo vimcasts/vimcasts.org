@@ -214,6 +214,7 @@ end
 # Layouts and redirects:
 page "/transcripts/*/en.html", layout: "transcript"
 redirect "e/a.html", to: "/episodes/archive"
+redirect "transcripts/index.html", to: "/episodes/archive"
 
 redirect "classes/index.html", to: "/training"
 redirect "classes/core-vim/index.html", to: "/training/core-vim"
