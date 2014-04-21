@@ -82,9 +82,9 @@ In the video, I use the following example as a demonstration:
 
 My intention is to replace the prime marks with curly double quotes, so that it looks like this:
 
-    This string contains a â€œquotedâ€ word.
-    This string contains â€œtwoâ€ quoted â€œwordsâ€.
-    This â€œstring doesn't make things easyâ€.
+    This string contains a “quoted” word.
+    This string contains “two” quoted “words”.
+    This “string doesn't make things easy”.
 
 To create a suitable search pattern, I went through the following iterations:
 
@@ -96,11 +96,11 @@ To create a suitable search pattern, I went through the following iterations:
 The final pattern works for each of my test cases, so I can use it for a substitution command as follows:
 
     /\v'(('\w|[^'])+)'
-    :%s//â€œ\1â€/gc
+    :%s//“\1”/gc
 
 Here, I've left the search field blank in the substitution command, which tells Vim to use the most recent search. Alternatively, I could hard code the search pattern into the substitution command:
 
-    :%s/\v'(('\w|[^'])+)'/â€œ\1â€/gc
+    :%s/\v'(('\w|[^'])+)'/“\1”/gc
 
 When making this substitution on an entire document, I use the `c` flag so that I can inspect each substitution before either doing it or skipping it.
 
