@@ -98,6 +98,9 @@ section.screencast, section.article, section.transcript {
       }
     }
     div.enlarged {
+      @media #{$medium-only} {
+        max-width: 50rem;
+      }
       @media #{$large-up} {
         @include grid-column($columns:10, $offset:2);
       }
