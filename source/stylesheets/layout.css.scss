@@ -276,3 +276,20 @@ ul.category-list {
     @include block-grid($per-row:3);
   }
 }
+
+.about-mugshot {
+  @include grid-row();
+  img { @include grid-column($columns:12, $collapse:true); }
+  h3 {
+    @include grid-column($columns:12);
+    @media #{$medium-up} {
+      @include grid-column($columns:8);
+    }
+  }
+  p {
+    @include grid-column($columns:12);
+    @media #{$medium-up} {
+      @include grid-column($columns:4);
+    }
+  }
+}

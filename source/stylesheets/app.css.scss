@@ -363,3 +363,15 @@ ul.off-canvas-list ul.dropdown {
     $radius:4px
   );
 }
+
+.about-mugshot {
+  margin-top: $header-bottom-margin*2;
+  margin-bottom: $header-bottom-margin*4;
+  p {
+    @media #{$medium-up} {
+      text-align: right;
+      position: relative;
+      top: rem-calc(13);
+    }
+  }
+}
