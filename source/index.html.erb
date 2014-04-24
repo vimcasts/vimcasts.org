@@ -5,9 +5,9 @@ searchfeature: true
 
 <%= partial "next-class" %>
 
-<div class="row explore-the-archives">
+<div class="explore-the-archives">
 
-  <div class="small-12 large-6 columns">
+  <div class="find-by-category">
     <h2>Find by category</h2>
     <p>
     Vimcasts contains
@@ -17,23 +17,23 @@ searchfeature: true
   </p>
   </div>
 
-  <div class="small-12 large-6 columns">
+  <div class="search-the-archives">
     <h2>Search the archives</h2>
     <%= partial 'search-form' %>
   </div>
 
 </div>
 
-<div class="row latest-content">
+<div class="latest-content">
   <hr/>
 
-  <div class="small-12 large-6 columns">
+  <div class="latest-screencast">
     <h2>Watch latest screencast</h2>
     <%= partial "article-listing",
       :locals => {article: blog(:episodes).articles.first } %>
   </div>
 
-  <div class="small-12 large-6 columns">
+  <div class="latest-article">
     <h2>Read latest article</h2>
     <%= partial "article-listing",
       :locals => {article: blog(:blog).articles.first } %>

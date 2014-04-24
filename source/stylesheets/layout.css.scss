@@ -232,6 +232,23 @@ body.index {
   }
 }
 
+// Other sections on the homepage
+.latest-content, .explore-the-archives {
+  @include grid-row();
+  .latest-screencast, .find-by-category {
+    @include grid-column($columns:12);
+    @media #{$large-up} {
+      @include grid-column($columns:6);
+    }
+  }
+  .latest-article, .search-the-archives {
+    @include grid-column($columns:12);
+    @media #{$large-up} {
+      @include grid-column($columns:5, $offset:1);
+    }
+  }
+}
+
 .share-container {
   @include grid-row();
   .call-to-action {
