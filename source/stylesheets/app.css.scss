@@ -388,3 +388,21 @@ ul.off-canvas-list ul.dropdown {
   padding-left: 15px;
   margin-left: -15px;
 }
+
+.pro-content {
+  margin-bottom: $header-bottom-margin*4;
+  .pitch {
+    font-size: $h5-font-size;
+  }
+}
+
+.pro-screencasts-image, .publications-image {
+  text-align: center;
+}
+.pro-screencasts-image img {
+  max-width: 75px;
+}
+.publications-image img {
+  border: 1px solid $body-font-color;
+  max-width: 150px;
+}

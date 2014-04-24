@@ -249,6 +249,50 @@ body.index {
   }
 }
 
+// level-up your vim
+// appears on homepage and beneath related content
+.pro-content {
+  @include grid-row();
+  .level-up, h3 { @include grid-column($columns:12); }
+  .training {
+    @include grid-column($columns:12);
+    @media #{$medium-only} {
+      @include grid-column($columns:8);
+    }
+    @media #{$large-up} {
+      @include grid-column($columns:6);
+    }
+  }
+  .training-testimonial {
+    @include grid-column($columns:12);
+    @media #{$medium-only} {
+      @include grid-column($columns:10, $offset:1);
+    }
+    @media #{$large-up} {
+      @include grid-column($columns:5, $offset:1);
+    }
+  }
+  .publications, .pro-screencasts {
+    @include grid-column($columns:12);
+    @media #{$medium-only} {
+      @include grid-column($columns:8);
+    }
+    @media #{$large-up} {
+      @include grid-column($columns:6);
+    }
+  }
+  .publications-image, .pro-screencasts-image {
+    @include grid-column($columns:12);
+    @media #{$medium-only} {
+      @include grid-column($columns:4);
+    }
+    @media #{$large-up} {
+      @include grid-column($columns:5, $offset:1);
+    }
+  }
+}
+
+
 .share-container {
   @include grid-row();
   .call-to-action {
