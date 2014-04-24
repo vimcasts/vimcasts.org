@@ -373,3 +373,33 @@ ul.category-list {
     }
   }
 }
+
+// Subscribe page
+body.subscribe {
+  .header, .mailing-list, .feeds, .social-media {
+    @include grid-row();
+    h1, h2, &>p, #mc_embed_signup, table {
+      @include grid-column($columns:12);
+      @media #{$medium-only} {
+        max-width: 40rem;
+      }
+      @media #{$large-up} {
+        @include grid-column($columns:8, $offset:2);
+      }
+    }
+  }
+}
+#mc_embed_signup {
+  @include grid-row();
+  .mc-field-group, .clear {
+    @include grid-column($columns:12);
+  }
+  .fname-field, .lname-field {
+    @media #{$medium-only} {
+      max-width: 40rem;
+    }
+    @media #{$medium-up} {
+      @include grid-column($columns:6);
+    }
+  }
+}
