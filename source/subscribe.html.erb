@@ -1,70 +1,84 @@
 <div class="header">
-  <h1>Never miss an update!</h1>
+  <div>
+    <h1>Never miss an update!</h1>
+
+    <p>You can subscribe to Vimcasts by email, RSS, or social media.</p>
+  </div>
 </div>
 
-<div class="mailing-list">
+<div class="section mailing-list">
+  <div>
 
-  <h2>Subscribe to our mailing list</h2>
+    <div class="metaheader">
+      <h2>Subscribe to our mailing list</h2>
+    </div>
 
-  <p>
-    The Vimcasts Newsletter is published at the start of each month (only if there's news).
-    <a href="http://us2.campaign-archive1.com/home/?u=df4f31f3fbe8a516f190dda55&id=35e22ad89b" title="View previous campaigns">View previous newsletters.</a>
-    Subscribe to receive updates about the latest screencasts, articles, promotions and announcements (<span class="asterisk">*</span> indicates required):
-  </p>
+    <p>
+      The Vimcasts Newsletter is published at the start of each month (only if there's news).
+      <a href="http://us2.campaign-archive1.com/home/?u=df4f31f3fbe8a516f190dda55&id=35e22ad89b" title="View previous campaigns">View previous newsletters.</a>
+      Subscribe to receive updates about the latest screencasts, articles, promotions and announcements (<span class="asterisk">*</span> indicates required):
+    </p>
 
-  <%= partial "vimcasts-newsletter-signup" %>
+    <%= partial "vimcasts-newsletter-signup" %>
 
+  </div>
 </div>
 
-<div class="feeds">
-  <h2>Subscribe to an RSS feed</h2>
+<div class="section feeds">
+  <div>
+    <div class="metaheader">
+      <h2>Subscribe to an RSS feed</h2>
+    </div>
 
-  <table>
-    <tr>
-      <th colspan="2">
-        iTunes
-      </th>
-    </tr>
-    <tr>
-      <td class="format">
-        <a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=350035635">Quicktime</a>
-      </td>
-      <td>
-        Subscribe with iTunes, and have vimcasts ready for viewing on your desktop or mobile device.
-      </td>
-    </tr>
-    <tr>
-      <th colspan="2" class="topspacer">
-        RSS feeds
-      </th>
-    </tr>
-    <tr>
-      <td class="format">
-        <a href="/feeds/ogg">OGG Theora</a>
-      </td>
-      <td>
-        This feed includes links to all Vimcast episodes in OGG format.
-      </td>
-    </tr>
-    <tr>
-      <td class="format">
-        <a href="/feeds/quicktime">Quicktime movies</a>
-      </td>
-      <td>
-        This feed includes links to all Vimcast episodes in Quicktime format, suitable for viewing on iPod/iPhone.
-      </td>
-    </tr>
-  </table>
+    <table>
+      <tr>
+        <th colspan="2">
+          iTunes
+        </th>
+      </tr>
+      <tr>
+        <td class="format">
+          <a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=350035635">Quicktime</a>
+        </td>
+        <td>
+          Subscribe with iTunes, and have vimcasts ready for viewing on your desktop or mobile device.
+        </td>
+      </tr>
+      <tr>
+        <th colspan="2" class="topspacer">
+          RSS feeds
+        </th>
+      </tr>
+      <tr>
+        <td class="format">
+          <a href="/feeds/ogg">OGG Theora</a>
+        </td>
+        <td>
+          This feed includes links to all Vimcast episodes in OGG format.
+        </td>
+      </tr>
+      <tr>
+        <td class="format">
+          <a href="/feeds/quicktime">Quicktime movies</a>
+        </td>
+        <td>
+          This feed includes links to all Vimcast episodes in Quicktime format, suitable for viewing on iPod/iPhone.
+        </td>
+      </tr>
+    </table>
 
+  </div>
 </div>
 
-<div class="social-media">
-  <div class="small-12 columns">
-    <h2>Find Vimcasts on social media</h2>
+<div class="section social-media">
+  <div>
+    <div class="metaheader">
+      <h2>Find Vimcasts on social media</h2>
+    </div>
 
     <p>Follow <a href="http://twitter.com/vimcasts">@vimcasts</a> on Twitter</p>
-  </div>
 
+  </div>
 </div>
 
 <%= partial "footer-main" %>

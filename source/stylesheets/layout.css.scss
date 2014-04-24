@@ -376,9 +376,9 @@ ul.category-list {
 
 // Subscribe page
 body.subscribe {
-  .header, .mailing-list, .feeds, .social-media {
+  .header, .section {
     @include grid-row();
-    h1, h2, &>p, #mc_embed_signup, table {
+    &>div {
       @include grid-column($columns:12);
       @media #{$medium-only} {
         max-width: 40rem;

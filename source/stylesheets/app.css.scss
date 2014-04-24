@@ -409,3 +409,7 @@ ul.off-canvas-list ul.dropdown {
   border: 1px solid $body-font-color;
   max-width: 150px;
 }
+
+body.subscribe .section {
+  margin-top: $header-top-margin*8;
+}
