@@ -28,13 +28,17 @@ searchfeature: true
   <hr/>
 
   <div class="latest-screencast">
-    <h2 class="metaheader">Watch latest screencast</h2>
+    <div class="metaheader">
+      <h2>Watch latest screencast</h2>
+    </div>
     <%= partial "article-listing",
       :locals => {article: blog(:episodes).articles.first } %>
   </div>
 
   <div class="latest-article">
-    <h2 class="metaheader">Read latest article</h2>
+    <div class="metaheader">
+      <h2>Read latest article</h2>
+    </div>
     <%= partial "article-listing",
       :locals => {article: blog(:blog).articles.first } %>
   </div>
