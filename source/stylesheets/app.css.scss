@@ -375,3 +375,16 @@ ul.off-canvas-list ul.dropdown {
     }
   }
 }
+
+.metaheader {
+  // background-color: lighten($vimcasts-blue, 8%);
+  background-color: $vimcasts-blue;
+  color: lighten($vimcasts-blue, 80%);
+  text-transform: uppercase;
+  display: inline;
+  font-size: $h5-font-size;
+  padding: 2px;
+  padding-right: 7px;
+  padding-left: 15px;
+  margin-left: -15px;
+}
