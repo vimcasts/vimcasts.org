@@ -378,17 +378,30 @@ ul.off-canvas-list ul.dropdown {
   }
 }
 
+
+@font-face{
+	font-family: 'alt-gothic-no3';
+	src: url('/fonts/AlternateGothicNo3.eot');
+	src: url('/fonts/AlternateGothicNo3.eot?#iefix') format('embedded-opentype'),
+	     url('/fonts/AlternateGothicNo3.woff') format('woff'),
+	     url('/fonts/AlternateGothicNo3.ttf') format('truetype'),
+	     url('/fonts/AlternateGothicNo3.svg#webfont') format('svg');
+}
+
 .metaheader {
   margin-top: $header-bottom-margin;
   margin-bottom: $header-bottom-margin*4;
   h2,h3{
+    font-family: 'alt-gothic-no3';
     background-color: $vimcasts-blue;
     color: white;
     text-transform: uppercase;
     display: inline;
-    font-size: $h5-font-size;
-    padding: 2px;
-    padding-right: 7px;
+    font-size: $h4-font-size;
+    white-space: nowrap;
+    padding-top: 4px;
+    padding-bottom: 2px;
+    padding-right: 5px;
     padding-left: 15px;
     margin-left: -15px;
   }
