@@ -433,3 +433,21 @@ body.subscribe {
     }
   }
 }
+
+// /publications
+.publication {
+  @include grid-row();
+  .title, .description, .publications-image {
+    @include grid-column($columns:12);
+  }
+  .description {
+    @media #{$large-up} {
+      @include grid-column($columns:6);
+    }
+  }
+  .publications-image {
+    @media #{$large-up} {
+      @include grid-column($columns:5, $offset:1);
+    }
+  }
+}

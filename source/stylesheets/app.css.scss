@@ -408,8 +408,13 @@ ul.off-canvas-list ul.dropdown {
   max-width: 75px;
 }
 .publications-image img {
-  border: 1px solid $body-font-color;
   max-width: 150px;
+  .publication & {
+    max-width: 300px;
+  }
+}
+.practical-vim img {
+  border: 1px solid $body-font-color;
 }
 
 body.subscribe .section {
@@ -430,4 +435,12 @@ body.subscribe .section {
 
 .training-signpost {
   margin-bottom: $header-bottom-margin*4;
+}
+
+
+.publication {
+  margin-bottom: $header-bottom-margin*8;
+  .description {
+    margin-bottom: $header-bottom-margin*4;
+  }
 }
