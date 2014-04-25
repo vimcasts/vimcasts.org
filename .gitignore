@@ -7,6 +7,9 @@
 TODO
 feedback.md
 
+# Ignore webfonts
+/source/fonts
+
 # Ignore bundler config
 /.bundle
 
