@@ -243,6 +243,9 @@ body.index {
   }
   .latest-article, .explore-the-archives {
     @include grid-column($columns:12);
+    @media #{$medium-only} {
+      max-width: 40rem;
+    }
     @media #{$large-up} {
       @include grid-column($columns:5, $offset:1);
     }
