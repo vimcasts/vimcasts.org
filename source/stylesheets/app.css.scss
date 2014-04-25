@@ -413,3 +413,13 @@ ul.off-canvas-list ul.dropdown {
 body.subscribe .section {
   margin-top: $header-top-margin*8;
 }
+
+.strapline {
+  margin-bottom: $header-bottom-margin*4;
+  @media #{$large-up} {
+    margin-top: $header-top-margin*9;
+  }
+  small {
+    font-size: 60%;
+  }
+}
