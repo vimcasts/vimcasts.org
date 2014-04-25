@@ -411,3 +411,25 @@ body.subscribe {
     @include grid-column($columns:12);
   }
 }
+
+.training-signpost {
+  @include grid-row();
+  .private-class, .core-vim-class {
+    @include grid-column($columns:12);
+    @media #{$medium-only} {
+      max-width: 40rem;
+    }
+    @media #{$large-up} {
+      @include grid-column($columns:6);
+    }
+  }
+  .testimonial {
+    @include grid-column($columns:10, $offset:1);
+    @media #{$medium-only} {
+      max-width: 40rem;
+    }
+    @media #{$large-up} {
+      @include grid-column($columns:5, $offset:1);
+    }
+  }
+}
