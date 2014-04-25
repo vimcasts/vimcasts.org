@@ -403,3 +403,11 @@ body.subscribe {
     }
   }
 }
+
+// /training landing page
+.training-header {
+  @include grid-row();
+  .strapline {
+    @include grid-column($columns:12);
+  }
+}

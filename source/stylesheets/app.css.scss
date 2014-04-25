@@ -18,6 +18,8 @@ body.proof {
   }
 }
 
+.nobr { white-space: nowrap; }
+
 .main-content {
   @include grid-row;
 
@@ -416,10 +418,12 @@ body.subscribe .section {
 
 .strapline {
   margin-bottom: $header-bottom-margin*4;
-  @media #{$large-up} {
-    margin-top: $header-top-margin*9;
-  }
   small {
     font-size: 60%;
+  }
+}
+.why-am-i-here .strapline {
+  @media #{$large-up} {
+    margin-top: $header-top-margin*9;
   }
 }
