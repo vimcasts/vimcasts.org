@@ -233,15 +233,15 @@ body.index {
 }
 
 // Other sections on the homepage
-.latest-content, .explore-the-archives {
+.latest-content, .why-am-i-here {
   @include grid-row();
-  .latest-screencast, .find-by-category {
+  .latest-screencast, .strapline {
     @include grid-column($columns:12);
     @media #{$large-up} {
       @include grid-column($columns:6);
     }
   }
-  .latest-article, .search-the-archives {
+  .latest-article, .explore-the-archives {
     @include grid-column($columns:12);
     @media #{$large-up} {
       @include grid-column($columns:5, $offset:1);

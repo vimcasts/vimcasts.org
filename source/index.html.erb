@@ -3,22 +3,30 @@ title: Vimcasts - Free screencasts about the text editor Vim
 searchfeature: true
 ---
 
+<% content_for :header do;end %>
+
 <%= partial "next-class" %>
 
-<div class="explore-the-archives">
+<div class="why-am-i-here">
 
-  <div class="find-by-category">
-    <h2>Find by category</h2>
-    <p>
-    Vimcasts contains
-    <%= blog(:episodes).articles.count %> free screencasts and
-    <%= blog(:blog).articles.count %> articles.
-      <a href="/categories">Browse all content by category</a>.
-  </p>
+  <div class="strapline">
+    <h2>
+      Learn Essential Vim Skills<br/>
+      <small><a href="/about/">with Drew Neil, author of Practical&nbsp;Vim</a></small>
+    </h2>
   </div>
 
-  <div class="search-the-archives">
-    <h2>Search the archives</h2>
+  <div class="explore-the-archives">
+    <div class="metaheader">
+      <h2>Explore the archives</h2>
+    </div>
+    <p>
+      Vimcasts contains
+      <%= blog(:episodes).articles.count %> free screencasts and
+      <%= blog(:blog).articles.count %> articles.
+      Browse <a href="/categories">all content by category</a>, or
+      view <a href="/episodes/archive">all screencasts by publication date</a>.
+    </p>
     <%= partial 'search-form' %>
   </div>
 
