@@ -453,6 +453,23 @@ body.subscribe .section {
     font-size: 60%;
   }
 }
+
+.latest-content {
+  .latest-screencast {
+    margin-top: $header-top-margin*4;
+  }
+  .latest-article {
+    margin-top: $header-top-margin*6;
+  }
+  .latest-screencast, .latest-article {
+    margin-bottom: $header-top-margin*2;
+    @media #{$large-up} {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
 .why-am-i-here .strapline {
   @media #{$large-up} {
     margin-top: $header-top-margin*9;
