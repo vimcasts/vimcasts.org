@@ -436,6 +436,19 @@ body.subscribe .section {
 
 .strapline {
   margin-bottom: $header-bottom-margin*4;
+  @media #{$medium-only} {
+    margin-bottom: $header-bottom-margin*5;
+  }
+  h2, small a {
+    font-family: 'alt-gothic-no3';
+  }
+  h2 {
+    line-height: 0.8;
+    font-size: $h1-font-size - rem-calc(10);
+    @media #{$medium-up} {
+      font-size: $h1-font-size;
+    }
+  }
   small {
     font-size: 60%;
   }
