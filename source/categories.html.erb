@@ -21,8 +21,8 @@ searchfeature: true
     Vimcasts contains
     <%= blog(:episodes).articles.count %> free screencasts
     and <%= blog(:blog).articles.count %> articles.
-    Visit <%= link_to "the archive", "/episodes/archive" %> for a full list of screencasts, ordered by publication date.
-    Use this listing to browse by category:
+    View <a href="/episodes/archive">all screencasts by publication date</a>,
+    or use this listing to browse by category:
     </p>
 
     <%= partial 'category-list-item',
