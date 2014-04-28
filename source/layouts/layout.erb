@@ -26,6 +26,10 @@
 
   <body class="<%= page_classes %><%= proof_mode %>" data-swiftype-index='false'>
 
+  <% unless config.environment == :development %>
+    <%= partial "google-async-analytics" %>
+  <% end %>
+
   <div class="off-canvas-wrap">
     <div class="inner-wrap">
 
