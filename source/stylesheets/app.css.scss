@@ -456,8 +456,9 @@ body.subscribe .section {
 }
 .identity-row {
   .strapline {
-    @media #{$medium-only} { margin-top: 1.5vw; }
-    @media #{$large-only} { margin-top: 2.5vw; }
+    @media #{$small-only} { margin-top: rem-calc(2); }
+    @media #{$medium-only} { margin-top: rem-calc(12); }
+    @media #{$large-only} { margin-top: rem-calc(28); }
     @media #{$medium-up} {
       text-align:right;
       h2 {
