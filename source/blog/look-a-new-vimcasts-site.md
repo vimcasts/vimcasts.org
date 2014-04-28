@@ -5,20 +5,26 @@
 ---
 
 Today I'm rolling out some major enhancements to the Vimcasts.org website. 
-The site is now responsive, so it should look great on smartphones and tablets as well as desktop browsers.
-To make it easier to find relavent content from the archives, I've added a site-wide search feature and categorised all screencasts and articles.
+I've been working on this project with [Hannah Adcock][] since January.
 If you're reading this via RSS, why not click through to [the new homepage](http://vimcasts.org) and check it out?
 
 READMORE
 
+### Responsive, categorised, and searchable
+
+The site is now responsive, so it should look good on smartphones and tablets as well as desktop browsers.
+To make it easier to find relevant content from the archives, I've [categorised all screencasts and articles](/categories).
+I've also added a site-wide search feature, which lets you find material from shownotes and blog posts without having to check Google.
+
 Before making any changes to the site, I asked for feedback from my readers.
-You can read [a detailed breakdown of responses to the survey][survey] on the Contented Strategy Blog.
+You can follow [a detailed breakdown of responses to the survey][survey] on the Contented Strategy Blog.
 Some of you thought that the Vimcasts.org site was fine and needed little in the way of changes.
 Keeping that thought close, I've taken care to preserve the style of the old site.
 If you look at the site with a large screen, you won't see many changes.
 I've tried to adapt that style and make it work for smaller format screens as well.
 
-This was more than a redesign. 
+### More than a redesign
+
 I've migrated the site from Radiant CMS to [Middleman][], a static site generator.
 It was a big job and it's quite possible that I've broken things that previously worked fine.
 If you notice any problems, please email me: [drew@vimcasts.org](mailto:drew@vimcasts.org)
@@ -40,3 +46,4 @@ The site is hosted on [Github Pages][pages] and you can [view the source code][s
 [pages]: https://pages.github.com/
 [source]: https://github.com/vimcasts/vimcasts.org
 [Swiftype]: https://swiftype.com/
+[Hannah Adcock]: http://contentedstrategy.com
