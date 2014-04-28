@@ -2,7 +2,7 @@
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
   <channel>
     <title>Vimcasts</title>
-    <link>http://proof.vimcasts.org</link>
+    <link>http://vimcasts.org</link>
     <language>en</language>
     <pubDate>Mon, 24 Feb 2014 00:00:00 +0000</pubDate>
     <lastBuildDate>Mon, 24 Feb 2014 00:00:00 +0000</lastBuildDate>
@@ -30,7 +30,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/65/exchange.m4v" length="8784485" type="video/x-m4v"/>
       <itunes:duration>4:05</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/swapping-two-regions-of-text-with-exchange-vim/</guid>
+      <guid>http://vimcasts.org/episodes/swapping-two-regions-of-text-with-exchange-vim/</guid>
       <pubDate>Mon, 24 Feb 2014 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -43,7 +43,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/64/pandoc-filter.m4v" length="17071215" type="video/x-m4v"/>
       <itunes:duration>4:31</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/using-external-filter-commands-to-reformat-html/</guid>
+      <guid>http://vimcasts.org/episodes/using-external-filter-commands-to-reformat-html/</guid>
       <pubDate>Tue, 18 Feb 2014 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -56,7 +56,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/63/gn-command.m4v" length="10070454" type="video/x-m4v"/>
       <itunes:duration>4:35</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/operating-on-search-matches-using-gn/</guid>
+      <guid>http://vimcasts.org/episodes/operating-on-search-matches-using-gn/</guid>
       <pubDate>Tue, 11 Feb 2014 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -69,7 +69,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/62/map-with-count.m4v" length="10336771" type="video/x-m4v"/>
       <itunes:duration>4:02</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/creating-mappings-that-accept-a-count/</guid>
+      <guid>http://vimcasts.org/episodes/creating-mappings-that-accept-a-count/</guid>
       <pubDate>Thu, 06 Feb 2014 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -82,7 +82,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/61/map-with-repeat.m4v" length="9958244" type="video/x-m4v"/>
       <itunes:duration>4:33</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/</guid>
+      <guid>http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/</guid>
       <pubDate>Tue, 21 Jan 2014 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -95,7 +95,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/60/vimdiff.m4v" length="13194774" type="video/x-m4v"/>
       <itunes:duration>4:16</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/comparing-buffers-with-vimdiff/</guid>
+      <guid>http://vimcasts.org/episodes/comparing-buffers-with-vimdiff/</guid>
       <pubDate>Wed, 15 Jan 2014 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -108,7 +108,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/59/paste-option-toggle.m4v" length="9844252" type="video/x-m4v"/>
       <itunes:duration>4:25</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/using-vims-paste-mode-with-the-system-paste-command/</guid>
+      <guid>http://vimcasts.org/episodes/using-vims-paste-mode-with-the-system-paste-command/</guid>
       <pubDate>Fri, 15 Nov 2013 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -121,7 +121,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/58/clipboard-register.m4v" length="12031236" type="video/x-m4v"/>
       <itunes:duration>4:48</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/accessing-the-system-clipboard-from-vim/</guid>
+      <guid>http://vimcasts.org/episodes/accessing-the-system-clipboard-from-vim/</guid>
       <pubDate>Mon, 11 Nov 2013 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -134,7 +134,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/57/eval-register.m4v" length="9991201" type="video/x-m4v"/>
       <itunes:duration>3:56</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/evaluating-scripts-with-vims-expression-register/</guid>
+      <guid>http://vimcasts.org/episodes/evaluating-scripts-with-vims-expression-register/</guid>
       <pubDate>Mon, 21 Oct 2013 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -147,7 +147,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/56/expression-register.m4v" length="8247836" type="video/x-m4v"/>
       <itunes:duration>4:02</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/simple-calculations-with-vims-expression-register/</guid>
+      <guid>http://vimcasts.org/episodes/simple-calculations-with-vims-expression-register/</guid>
       <pubDate>Wed, 16 Oct 2013 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -160,7 +160,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/55/insert-mode-put.m4v" length="9093955" type="video/x-m4v"/>
       <itunes:duration>4:15</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/pasting-from-insert-mode/</guid>
+      <guid>http://vimcasts.org/episodes/pasting-from-insert-mode/</guid>
       <pubDate>Fri, 11 Oct 2013 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -173,7 +173,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/54/visual-mode-put.m4v" length="6773573" type="video/x-m4v"/>
       <itunes:duration>3:33</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/pasting-from-visual-mode/</guid>
+      <guid>http://vimcasts.org/episodes/pasting-from-visual-mode/</guid>
       <pubDate>Mon, 07 Oct 2013 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -186,7 +186,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/53/named-registers.m4v" length="9269387" type="video/x-m4v"/>
       <itunes:duration>3:29</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/using-vims-named-registers/</guid>
+      <guid>http://vimcasts.org/episodes/using-vims-named-registers/</guid>
       <pubDate>Fri, 04 Oct 2013 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -199,7 +199,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/52/yank-register.m4v" length="9394643" type="video/x-m4v"/>
       <itunes:duration>4:29</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/meet-the-yank-register/</guid>
+      <guid>http://vimcasts.org/episodes/meet-the-yank-register/</guid>
       <pubDate>Mon, 30 Sep 2013 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -212,7 +212,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/51/default-register.m4v" length="9777137" type="video/x-m4v"/>
       <itunes:duration>4:07</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/simple-operations-using-the-default-register/</guid>
+      <guid>http://vimcasts.org/episodes/simple-operations-using-the-default-register/</guid>
       <pubDate>Fri, 27 Sep 2013 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -225,7 +225,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/50/vspec_intro.m4v" length="18859892" type="video/x-m4v"/>
       <itunes:duration>7:15</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/an-introduction-to-vspec/</guid>
+      <guid>http://vimcasts.org/episodes/an-introduction-to-vspec/</guid>
       <pubDate>Mon, 17 Jun 2013 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -240,7 +240,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/49/abolish-abbreviate.m4v" length="8399568" type="video/x-m4v"/>
       <itunes:duration>3:09</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/enhanced-abbreviations-with-abolish/</guid>
+      <guid>http://vimcasts.org/episodes/enhanced-abbreviations-with-abolish/</guid>
       <pubDate>Mon, 29 Apr 2013 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -255,7 +255,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/48/abolish-substitute.m4v" length="17311862" type="video/x-m4v"/>
       <itunes:duration>7:09</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/supercharged-substitution-with-subvert/</guid>
+      <guid>http://vimcasts.org/episodes/supercharged-substitution-with-subvert/</guid>
       <pubDate>Mon, 22 Apr 2013 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -270,7 +270,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/47/abolish-search.m4v" length="12868646" type="video/x-m4v"/>
       <itunes:duration>5:33</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/smart-search-with-subvert/</guid>
+      <guid>http://vimcasts.org/episodes/smart-search-with-subvert/</guid>
       <pubDate>Fri, 12 Apr 2013 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -283,7 +283,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/46/visual_star.m4v" length="9876149" type="video/x-m4v"/>
       <itunes:duration>4:39</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/search-for-the-selected-text/</guid>
+      <guid>http://vimcasts.org/episodes/search-for-the-selected-text/</guid>
       <pubDate>Mon, 25 Mar 2013 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -296,7 +296,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/45/project_substitute.m4v" length="13422810" type="video/x-m4v"/>
       <itunes:duration>6:25</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/project-wide-find-and-replace/</guid>
+      <guid>http://vimcasts.org/episodes/project-wide-find-and-replace/</guid>
       <pubDate>Tue, 19 Mar 2013 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -309,7 +309,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/44/vimgrep.m4v" length="23175625" type="video/x-m4v"/>
       <itunes:duration>7:25</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/search-multiple-files-with-vimgrep/</guid>
+      <guid>http://vimcasts.org/episodes/search-multiple-files-with-vimgrep/</guid>
       <pubDate>Fri, 01 Mar 2013 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -322,7 +322,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/43/argdo.m4v" length="12538524" type="video/x-m4v"/>
       <itunes:duration>5:40</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/using-argdo-to-change-multiple-files/</guid>
+      <guid>http://vimcasts.org/episodes/using-argdo-to-change-multiple-files/</guid>
       <pubDate>Mon, 25 Feb 2013 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -335,7 +335,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/42/arglist_populate.m4v" length="11150926" type="video/x-m4v"/>
       <itunes:duration>5:31</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/populating-the-arglist/</guid>
+      <guid>http://vimcasts.org/episodes/populating-the-arglist/</guid>
       <pubDate>Fri, 22 Feb 2013 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -348,7 +348,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/41/meet_arglist.m4v" length="10102190" type="video/x-m4v"/>
       <itunes:duration>4:57</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/meet-the-arglist/</guid>
+      <guid>http://vimcasts.org/episodes/meet-the-arglist/</guid>
       <pubDate>Tue, 19 Feb 2013 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -361,7 +361,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/40/line_duplication.m4v" length="9929423" type="video/x-m4v"/>
       <itunes:duration>6:31</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/long-range-line-duplication/</guid>
+      <guid>http://vimcasts.org/episodes/long-range-line-duplication/</guid>
       <pubDate>Wed, 09 Jan 2013 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -374,7 +374,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/39/profiling.m4v" length="16165079" type="video/x-m4v"/>
       <itunes:duration>8:09</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/profiling-vimscript-performance/</guid>
+      <guid>http://vimcasts.org/episodes/profiling-vimscript-performance/</guid>
       <pubDate>Mon, 03 Dec 2012 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -387,7 +387,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/38/writing-a-foldexpr.m4v" length="24983489" type="video/x-m4v"/>
       <itunes:duration>12:07</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/writing-a-custom-fold-expression/</guid>
+      <guid>http://vimcasts.org/episodes/writing-a-custom-fold-expression/</guid>
       <pubDate>Mon, 26 Nov 2012 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -400,7 +400,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/37/how-to-fold.m4v" length="27341198" type="video/x-m4v"/>
       <itunes:duration>8:49</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/how-to-fold/</guid>
+      <guid>http://vimcasts.org/episodes/how-to-fold/</guid>
       <pubDate>Mon, 19 Nov 2012 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -413,7 +413,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/36/primes.m4v" length="11512378" type="video/x-m4v"/>
       <itunes:duration>6:53</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/vimgolf-prime-numbers/</guid>
+      <guid>http://vimcasts.org/episodes/vimgolf-prime-numbers/</guid>
       <pubDate>Fri, 10 Aug 2012 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -428,7 +428,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/35/fugitive_5.m4v" length="32349589" type="video/x-m4v"/>
       <itunes:duration>10:04</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/</guid>
+      <guid>http://vimcasts.org/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/</guid>
       <pubDate>Wed, 18 May 2011 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -443,7 +443,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/34/fugitive_4.m4v" length="28148709" type="video/x-m4v"/>
       <itunes:duration>9:45</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/</guid>
+      <guid>http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/</guid>
       <pubDate>Fri, 13 May 2011 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -458,7 +458,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/33/fugitive_3.m4v" length="23831068" type="video/x-m4v"/>
       <itunes:duration>11:35</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/</guid>
+      <guid>http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/</guid>
       <pubDate>Fri, 06 May 2011 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -473,7 +473,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/32/fugitive_2.m4v" length="25748543" type="video/x-m4v"/>
       <itunes:duration>11:41</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/fugitive-vim-working-with-the-git-index/</guid>
+      <guid>http://vimcasts.org/episodes/fugitive-vim-working-with-the-git-index/</guid>
       <pubDate>Fri, 29 Apr 2011 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -488,7 +488,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/31/fugitive_1.m4v" length="22298141" type="video/x-m4v"/>
       <itunes:duration>8:27</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/</guid>
+      <guid>http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/</guid>
       <pubDate>Fri, 22 Apr 2011 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -501,7 +501,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/30/undo_tree.m4v" length="12483269" type="video/x-m4v"/>
       <itunes:duration>6:30</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/undo-branching-and-gundo-vim/</guid>
+      <guid>http://vimcasts.org/episodes/undo-branching-and-gundo-vim/</guid>
       <pubDate>Wed, 23 Feb 2011 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -514,7 +514,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/29/alignment.m4v" length="9300352" type="video/x-m4v"/>
       <itunes:duration>5:11</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/aligning-text-with-tabular-vim/</guid>
+      <guid>http://vimcasts.org/episodes/aligning-text-with-tabular-vim/</guid>
       <pubDate>Mon, 17 Jan 2011 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -527,7 +527,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/28/commandline_window.m4v" length="14088176" type="video/x-m4v"/>
       <itunes:duration>7:51</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/refining-search-patterns-with-the-command-line-window/</guid>
+      <guid>http://vimcasts.org/episodes/refining-search-patterns-with-the-command-line-window/</guid>
       <pubDate>Sun, 21 Nov 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -540,7 +540,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/27/sync_with_git.m4v" length="22671155" type="video/x-m4v"/>
       <itunes:duration>9:24</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/</guid>
+      <guid>http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/</guid>
       <pubDate>Tue, 12 Oct 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -553,7 +553,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/26/bubble_selection.m4v" length="17667251" type="video/x-m4v"/>
       <itunes:duration>6:23</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/bubbling-text/</guid>
+      <guid>http://vimcasts.org/episodes/bubbling-text/</guid>
       <pubDate>Tue, 05 Oct 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -566,7 +566,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/25/colorschemes.m4v" length="25039525" type="video/x-m4v"/>
       <itunes:duration>9:44</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/creating-colorschemes-for-vim/</guid>
+      <guid>http://vimcasts.org/episodes/creating-colorschemes-for-vim/</guid>
       <pubDate>Tue, 28 Sep 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -579,7 +579,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/24/vimrc_on_the_fly.m4v" length="5769269" type="video/x-m4v"/>
       <itunes:duration>2:51</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/</guid>
+      <guid>http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/</guid>
       <pubDate>Sun, 18 Jul 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -592,7 +592,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/23/haml_to_erb.m4v" length="16722383" type="video/x-m4v"/>
       <itunes:duration>7:36</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/converting-haml-to-erb-with-vim-macros/</guid>
+      <guid>http://vimcasts.org/episodes/converting-haml-to-erb-with-vim-macros/</guid>
       <pubDate>Thu, 08 Jul 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -605,7 +605,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/22/visual_block.m4v" length="8418264" type="video/x-m4v"/>
       <itunes:duration>4:21</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/selecting-columns-with-visual-block-mode/</guid>
+      <guid>http://vimcasts.org/episodes/selecting-columns-with-visual-block-mode/</guid>
       <pubDate>Sun, 20 Jun 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -618,7 +618,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/21/markdown_macro.m4v" length="20061622" type="video/x-m4v"/>
       <itunes:duration>9:25</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/converting-markdown-to-structured-html-with-a-macro/</guid>
+      <guid>http://vimcasts.org/episodes/converting-markdown-to-structured-html-with-a-macro/</guid>
       <pubDate>Wed, 02 Jun 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -631,7 +631,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/20/irb_and_vim.m4v" length="9043637" type="video/x-m4v"/>
       <itunes:duration>4:35</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/running-vim-within-irb/</guid>
+      <guid>http://vimcasts.org/episodes/running-vim-within-irb/</guid>
       <pubDate>Sun, 16 May 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -644,7 +644,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/19/spell_checking.m4v" length="16539933" type="video/x-m4v"/>
       <itunes:duration>5:42</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/spell-checking/</guid>
+      <guid>http://vimcasts.org/episodes/spell-checking/</guid>
       <pubDate>Mon, 10 May 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -657,7 +657,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/18/formatting_with_par.m4v" length="17975374" type="video/x-m4v"/>
       <itunes:duration>5:12</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/formatting-text-with-par/</guid>
+      <guid>http://vimcasts.org/episodes/formatting-text-with-par/</guid>
       <pubDate>Mon, 03 May 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -670,7 +670,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/17/hard_wrapping_text.m4v" length="16752621" type="video/x-m4v"/>
       <itunes:duration>5:23</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/hard-wrapping-text/</guid>
+      <guid>http://vimcasts.org/episodes/hard-wrapping-text/</guid>
       <pubDate>Mon, 26 Apr 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -683,7 +683,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/16/soft_wrap.m4v" length="10288332" type="video/x-m4v"/>
       <itunes:duration>4:54</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/soft-wrapping-text/</guid>
+      <guid>http://vimcasts.org/episodes/soft-wrapping-text/</guid>
       <pubDate>Tue, 20 Apr 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -696,7 +696,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/15/the_file_explorer.m4v" length="9566713" type="video/x-m4v"/>
       <itunes:duration>5:36</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/the-file-explorer/</guid>
+      <guid>http://vimcasts.org/episodes/the-file-explorer/</guid>
       <pubDate>Mon, 12 Apr 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -709,7 +709,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/14/the_edit_command.m4v" length="7808076" type="video/x-m4v"/>
       <itunes:duration>3:50</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/the-edit-command/</guid>
+      <guid>http://vimcasts.org/episodes/the-edit-command/</guid>
       <pubDate>Mon, 05 Apr 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -724,7 +724,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/13/cleaning_up.m4v" length="6953835" type="video/x-m4v"/>
       <itunes:duration>0:36</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/cleaning-up-with-vim/</guid>
+      <guid>http://vimcasts.org/episodes/cleaning-up-with-vim/</guid>
       <pubDate>Thu, 01 Apr 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -737,7 +737,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/12/modal_editing.m4v" length="7379090" type="video/x-m4v"/>
       <itunes:duration>5:26</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/modal-editing-undo-redo-and-repeat/</guid>
+      <guid>http://vimcasts.org/episodes/modal-editing-undo-redo-and-repeat/</guid>
       <pubDate>Sun, 28 Mar 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -750,7 +750,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/11/changelist_and_jumplist.m4v" length="5406874" type="video/x-m4v"/>
       <itunes:duration>3:21</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/using-the-changelist-and-jumplist/</guid>
+      <guid>http://vimcasts.org/episodes/using-the-changelist-and-jumplist/</guid>
       <pubDate>Tue, 23 Mar 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -763,7 +763,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/10/ascii_art.m4v" length="8248003" type="video/x-m4v"/>
       <itunes:duration>5:47</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/creating-the-vimcasts-logo-as-ascii-art/</guid>
+      <guid>http://vimcasts.org/episodes/creating-the-vimcasts-logo-as-ascii-art/</guid>
       <pubDate>Sun, 14 Mar 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -776,7 +776,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/9/how_to_use_tabs.m4v" length="9100037" type="video/x-m4v"/>
       <itunes:duration>5:28</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/how-to-use-tabs/</guid>
+      <guid>http://vimcasts.org/episodes/how-to-use-tabs/</guid>
       <pubDate>Mon, 08 Mar 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -789,7 +789,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/8/working_with_tabs.m4v" length="4805972" type="video/x-m4v"/>
       <itunes:duration>3:17</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/working-with-tabs/</guid>
+      <guid>http://vimcasts.org/episodes/working-with-tabs/</guid>
       <pubDate>Sun, 28 Feb 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -802,7 +802,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/7/working_with_windows.m4v" length="8570987" type="video/x-m4v"/>
       <itunes:duration>5:32</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/working-with-windows/</guid>
+      <guid>http://vimcasts.org/episodes/working-with-windows/</guid>
       <pubDate>Sun, 21 Feb 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -815,7 +815,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/6/buffers_listed_and_hidden.m4v" length="5715585" type="video/x-m4v"/>
       <itunes:duration>3:28</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/working-with-buffers/</guid>
+      <guid>http://vimcasts.org/episodes/working-with-buffers/</guid>
       <pubDate>Sun, 14 Feb 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -828,7 +828,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/5/indentation_commands.m4v" length="11037200" type="video/x-m4v"/>
       <itunes:duration>5:41</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/indentation-commands/</guid>
+      <guid>http://vimcasts.org/episodes/indentation-commands/</guid>
       <pubDate>Mon, 08 Feb 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -841,7 +841,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/4/tidying_whitespace.m4v" length="5738520" type="video/x-m4v"/>
       <itunes:duration>4:33</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/tidying-whitespace/</guid>
+      <guid>http://vimcasts.org/episodes/tidying-whitespace/</guid>
       <pubDate>Sun, 24 Jan 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -854,7 +854,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/3/whitespace_preferences_and_filetypes.m4v" length="6030738" type="video/x-m4v"/>
       <itunes:duration>3:29</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/whitespace-preferences-and-filetypes/</guid>
+      <guid>http://vimcasts.org/episodes/whitespace-preferences-and-filetypes/</guid>
       <pubDate>Sun, 17 Jan 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -867,7 +867,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/2/tabs_and_spaces.m4v" length="9362665" type="video/x-m4v"/>
       <itunes:duration>6:22</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/tabs-and-spaces/</guid>
+      <guid>http://vimcasts.org/episodes/tabs-and-spaces/</guid>
       <pubDate>Tue, 05 Jan 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>
@@ -880,7 +880,7 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 </itunes:summary>
       <enclosure url="http://media.vimcasts.org/videos/1/show_invisibles.m4v" length="7498364" type="video/x-m4v"/>
       <itunes:duration>2:52</itunes:duration>
-      <guid>http://proof.vimcasts.org/episodes/show-invisibles/</guid>
+      <guid>http://vimcasts.org/episodes/show-invisibles/</guid>
       <pubDate>Mon, 04 Jan 2010 00:00:00 +0000</pubDate>
       <itunes:keywords/>
     </item>

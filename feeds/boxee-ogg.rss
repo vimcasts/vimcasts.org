@@ -3,8 +3,8 @@
   <channel>
     <title>Vimcasts OGG on Boxee</title>
     <description>Vimcasts - Free screencasts about the text editor Vim</description>
-    <link>http://proof.vimcasts.org/feeds/boxee-ogg.rss</link>
-    <atom:link href="http://proof.vimcasts.org/feeds/boxee-ogg.rss" rel="self" type="application/rss+xml"/>
+    <link>http://vimcasts.org/feeds/boxee-ogg.rss</link>
+    <atom:link href="http://vimcasts.org/feeds/boxee-ogg.rss" rel="self" type="application/rss+xml"/>
     <language>en-us</language>
     <ttl>40</ttl>
     <item>
@@ -16,8 +16,8 @@ That is the promise of &lt;a href="https://github.com/neovim/neovim"&gt;Neovim&l
 
 </description>
       <pubDate>Mon, 03 Mar 2014 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2014/03/support-neovim/</guid>
-      <link>http://proof.vimcasts.org/blog/2014/03/support-neovim/</link>
+      <guid>http://vimcasts.org/blog/2014/03/support-neovim/</guid>
+      <link>http://vimcasts.org/blog/2014/03/support-neovim/</link>
     </item>
     <item>
       <title>Swapping two regions of text with exchange.vim</title>
@@ -28,8 +28,8 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
       <media:category scheme="urn:boxee:episode">65</media:category>
       <enclosure url="http://media.vimcasts.org/videos/65/exchange.ogv" length="4467390" type="video/ogg"/>
       <pubDate>Mon, 24 Feb 2014 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/swapping-two-regions-of-text-with-exchange-vim/</guid>
-      <link>http://proof.vimcasts.org/episodes/swapping-two-regions-of-text-with-exchange-vim/</link>
+      <guid>http://vimcasts.org/episodes/swapping-two-regions-of-text-with-exchange-vim/</guid>
+      <link>http://vimcasts.org/episodes/swapping-two-regions-of-text-with-exchange-vim/</link>
     </item>
     <item>
       <title>Using external filter commands to reformat HTML</title>
@@ -39,8 +39,8 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
       <media:category scheme="urn:boxee:episode">64</media:category>
       <enclosure url="http://media.vimcasts.org/videos/64/pandoc-filter.ogv" length="9317646" type="video/ogg"/>
       <pubDate>Tue, 18 Feb 2014 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/using-external-filter-commands-to-reformat-html/</guid>
-      <link>http://proof.vimcasts.org/episodes/using-external-filter-commands-to-reformat-html/</link>
+      <guid>http://vimcasts.org/episodes/using-external-filter-commands-to-reformat-html/</guid>
+      <link>http://vimcasts.org/episodes/using-external-filter-commands-to-reformat-html/</link>
     </item>
     <item>
       <title>Vimcasts redesign: a work in progress</title>
@@ -48,8 +48,8 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 
 </description>
       <pubDate>Thu, 13 Feb 2014 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2014/02/vimcasts-redesign-a-work-in-progress/</guid>
-      <link>http://proof.vimcasts.org/blog/2014/02/vimcasts-redesign-a-work-in-progress/</link>
+      <guid>http://vimcasts.org/blog/2014/02/vimcasts-redesign-a-work-in-progress/</guid>
+      <link>http://vimcasts.org/blog/2014/02/vimcasts-redesign-a-work-in-progress/</link>
     </item>
     <item>
       <title>Operating on search matches using gn</title>
@@ -59,8 +59,8 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
       <media:category scheme="urn:boxee:episode">63</media:category>
       <enclosure url="http://media.vimcasts.org/videos/63/gn-command.ogv" length="6813065" type="video/ogg"/>
       <pubDate>Tue, 11 Feb 2014 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/operating-on-search-matches-using-gn/</guid>
-      <link>http://proof.vimcasts.org/episodes/operating-on-search-matches-using-gn/</link>
+      <guid>http://vimcasts.org/episodes/operating-on-search-matches-using-gn/</guid>
+      <link>http://vimcasts.org/episodes/operating-on-search-matches-using-gn/</link>
     </item>
     <item>
       <title>Creating mappings that accept a count</title>
@@ -70,8 +70,8 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
       <media:category scheme="urn:boxee:episode">62</media:category>
       <enclosure url="http://media.vimcasts.org/videos/62/map-with-count.ogv" length="6859558" type="video/ogg"/>
       <pubDate>Thu, 06 Feb 2014 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/creating-mappings-that-accept-a-count/</guid>
-      <link>http://proof.vimcasts.org/episodes/creating-mappings-that-accept-a-count/</link>
+      <guid>http://vimcasts.org/episodes/creating-mappings-that-accept-a-count/</guid>
+      <link>http://vimcasts.org/episodes/creating-mappings-that-accept-a-count/</link>
     </item>
     <item>
       <title>Follow my leader</title>
@@ -79,17 +79,17 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 
 </description>
       <pubDate>Wed, 05 Feb 2014 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2014/02/follow-my-leader/</guid>
-      <link>http://proof.vimcasts.org/blog/2014/02/follow-my-leader/</link>
+      <guid>http://vimcasts.org/blog/2014/02/follow-my-leader/</guid>
+      <link>http://vimcasts.org/blog/2014/02/follow-my-leader/</link>
     </item>
     <item>
       <title>Upcoming online workshop: March 5th</title>
-      <description>&lt;p&gt;On Wednesday, March 5th 2014, I’m going to teach my &lt;a href="http://proof.vimcasts.org/classes/core-vim"&gt;Core Vim Class Online&lt;/a&gt;. Tickets cost $255, but you can save 10% if you buy a $230 Earlybird ticket by February 26th. You can &lt;a href="https://ti.to/studio-nelstrom/core-vim-class-online-4"&gt;buy tickets from tito.io&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;On Wednesday, March 5th 2014, I’m going to teach my &lt;a href="http://vimcasts.org/classes/core-vim"&gt;Core Vim Class Online&lt;/a&gt;. Tickets cost $255, but you can save 10% if you buy a $230 Earlybird ticket by February 26th. You can &lt;a href="https://ti.to/studio-nelstrom/core-vim-class-online-4"&gt;buy tickets from tito.io&lt;/a&gt;.&lt;/p&gt;
 
 </description>
       <pubDate>Fri, 31 Jan 2014 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2014/01/upcoming-online-workshop-march-5th/</guid>
-      <link>http://proof.vimcasts.org/announcements/2014/01/upcoming-online-workshop-march-5th/</link>
+      <guid>http://vimcasts.org/announcements/2014/01/upcoming-online-workshop-march-5th/</guid>
+      <link>http://vimcasts.org/announcements/2014/01/upcoming-online-workshop-march-5th/</link>
     </item>
     <item>
       <title>Creating repeatable mappings with repeat.vim</title>
@@ -99,8 +99,8 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
       <media:category scheme="urn:boxee:episode">61</media:category>
       <enclosure url="http://media.vimcasts.org/videos/61/map-with-repeat.ogv" length="7103130" type="video/ogg"/>
       <pubDate>Tue, 21 Jan 2014 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/</guid>
-      <link>http://proof.vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/</link>
+      <guid>http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/</guid>
+      <link>http://vimcasts.org/episodes/creating-repeatable-mappings-with-repeat-vim/</link>
     </item>
     <item>
       <title>Upcoming Core Vim Class: London, February '14</title>
@@ -109,16 +109,16 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 &lt;p&gt;You can &lt;a href="https://tito.io/studio-nelstrom/core-vim-class-in-london-2"&gt;purchase tickets for the London workshop&lt;/a&gt; from tito.io. The early bird price of £160 is available until midnight on Wednesday, February 12  th. After that, the price goes up to £180.&lt;/p&gt;
 </description>
       <pubDate>Mon, 20 Jan 2014 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2014/01/upcoming-core-vim-class-london-february-14/</guid>
-      <link>http://proof.vimcasts.org/announcements/2014/01/upcoming-core-vim-class-london-february-14/</link>
+      <guid>http://vimcasts.org/announcements/2014/01/upcoming-core-vim-class-london-february-14/</guid>
+      <link>http://vimcasts.org/announcements/2014/01/upcoming-core-vim-class-london-february-14/</link>
     </item>
     <item>
       <title>20% group discount for Core Vim Class, January edition</title>
       <description>&lt;p&gt;For the month of January only, I&amp;rsquo;m offering a &lt;strong&gt;20% discount on orders of five or more tickets&lt;/strong&gt; for my &lt;a href="https://tito.io/studio-nelstrom/core-vim-class-online-3"&gt;Core Vim Class&lt;/a&gt;. That&amp;rsquo;s £128 per head, a £32 saving on full price tickets at £160. If your team makes heavy use of Vim, then this is a great opportunity for everyone to level up their skills for 2014! Get in touch with &lt;a href="mailto:drew@vimcasts.org"&gt;drew@vimcasts.org&lt;/a&gt; for more details.&lt;/p&gt;
 </description>
       <pubDate>Mon, 20 Jan 2014 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2014/01/20-group-discount-for-core-vim-class-january-edition/</guid>
-      <link>http://proof.vimcasts.org/announcements/2014/01/20-group-discount-for-core-vim-class-january-edition/</link>
+      <guid>http://vimcasts.org/announcements/2014/01/20-group-discount-for-core-vim-class-january-edition/</guid>
+      <link>http://vimcasts.org/announcements/2014/01/20-group-discount-for-core-vim-class-january-edition/</link>
     </item>
     <item>
       <title>Comparing buffers with vimdiff</title>
@@ -128,25 +128,25 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
       <media:category scheme="urn:boxee:episode">60</media:category>
       <enclosure url="http://media.vimcasts.org/videos/60/vimdiff.ogv" length="9620942" type="video/ogg"/>
       <pubDate>Wed, 15 Jan 2014 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/comparing-buffers-with-vimdiff/</guid>
-      <link>http://proof.vimcasts.org/episodes/comparing-buffers-with-vimdiff/</link>
+      <guid>http://vimcasts.org/episodes/comparing-buffers-with-vimdiff/</guid>
+      <link>http://vimcasts.org/episodes/comparing-buffers-with-vimdiff/</link>
     </item>
     <item>
       <title>Help shape the redesign of Vimcasts.org</title>
       <description>&lt;p&gt;Vimcasts was launched four years ago, in January 2010. I anticipated making only a dozen screencasts, but there are now over 50, as well as a blog. I&amp;rsquo;m going to make some changes so you can find what you&amp;rsquo;re looking for more easily. I&amp;rsquo;d appreciate your help! Please &lt;a href="https://docs.google.com/forms/d/1BT-6eVqTbsk6XmE2xzJHzNDHyTJArgYb-L9BTRLZGY0/viewform"&gt;fill out this survey&lt;/a&gt; and I&amp;rsquo;ll take your feedback on board.&lt;/p&gt;
 </description>
       <pubDate>Fri, 10 Jan 2014 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2014/01/help-shape-the-redesign-of-vimcasts-org/</guid>
-      <link>http://proof.vimcasts.org/blog/2014/01/help-shape-the-redesign-of-vimcasts-org/</link>
+      <guid>http://vimcasts.org/blog/2014/01/help-shape-the-redesign-of-vimcasts-org/</guid>
+      <link>http://vimcasts.org/blog/2014/01/help-shape-the-redesign-of-vimcasts-org/</link>
     </item>
     <item>
       <title>Upcoming online workshop: January 27th</title>
-      <description>&lt;p&gt;On Monday, January 27th 2014, I’m going to teach my &lt;a href="http://proof.vimcasts.org/classes/core-vim"&gt;Core Vim Class Online&lt;/a&gt;. Tickets cost £160, but you can save 10% if you buy a £145 Earlybird ticket by January 24th. You can &lt;a href="https://tito.io/studio-nelstrom/core-vim-class-online-3"&gt;buy tickets from tito.io&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;On Monday, January 27th 2014, I’m going to teach my &lt;a href="http://vimcasts.org/classes/core-vim"&gt;Core Vim Class Online&lt;/a&gt;. Tickets cost £160, but you can save 10% if you buy a £145 Earlybird ticket by January 24th. You can &lt;a href="https://tito.io/studio-nelstrom/core-vim-class-online-3"&gt;buy tickets from tito.io&lt;/a&gt;.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 09 Dec 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2013/12/upcoming-online-workshop-january-27th/</guid>
-      <link>http://proof.vimcasts.org/announcements/2013/12/upcoming-online-workshop-january-27th/</link>
+      <guid>http://vimcasts.org/announcements/2013/12/upcoming-online-workshop-january-27th/</guid>
+      <link>http://vimcasts.org/announcements/2013/12/upcoming-online-workshop-january-27th/</link>
     </item>
     <item>
       <title>Registers: the Good, the Bad, and the Ugly Parts</title>
@@ -154,17 +154,17 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 
 </description>
       <pubDate>Mon, 25 Nov 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2013/11/registers-the-good-the-bad-and-the-ugly-parts/</guid>
-      <link>http://proof.vimcasts.org/blog/2013/11/registers-the-good-the-bad-and-the-ugly-parts/</link>
+      <guid>http://vimcasts.org/blog/2013/11/registers-the-good-the-bad-and-the-ugly-parts/</guid>
+      <link>http://vimcasts.org/blog/2013/11/registers-the-good-the-bad-and-the-ugly-parts/</link>
     </item>
     <item>
       <title>The copy/paste series - a retrospective</title>
-      <description>&lt;p&gt;Episodes &lt;a href="http://proof.vimcasts.org/e/51"&gt;51&lt;/a&gt;, &lt;a href="http://proof.vimcasts.org/e/52"&gt;52&lt;/a&gt;, &lt;a href="http://proof.vimcasts.org/e/53"&gt;53&lt;/a&gt;, &lt;a href="http://proof.vimcasts.org/e/54"&gt;54&lt;/a&gt;, &lt;a href="http://proof.vimcasts.org/e/55"&gt;55&lt;/a&gt;, &lt;a href="http://proof.vimcasts.org/e/58"&gt;58&lt;/a&gt;, and &lt;a href="http://proof.vimcasts.org/e/59"&gt;59&lt;/a&gt; are all on the topic of copy and paste in Vim. I think that this is one area where Vim is especially confusing, partly because of &lt;a href="http://vimcasts.org/episodes/meet-the-yank-register#vim-jargon"&gt;Vim&amp;rsquo;s non-standard jargon for cut, copy and paste operations&lt;/a&gt;. It&amp;rsquo;s not the most intuitive copy/paste system, but it&amp;rsquo;s usable when you get the hang of certain concepts and techniques.&lt;/p&gt;
+      <description>&lt;p&gt;Episodes &lt;a href="http://vimcasts.org/e/51"&gt;51&lt;/a&gt;, &lt;a href="http://vimcasts.org/e/52"&gt;52&lt;/a&gt;, &lt;a href="http://vimcasts.org/e/53"&gt;53&lt;/a&gt;, &lt;a href="http://vimcasts.org/e/54"&gt;54&lt;/a&gt;, &lt;a href="http://vimcasts.org/e/55"&gt;55&lt;/a&gt;, &lt;a href="http://vimcasts.org/e/58"&gt;58&lt;/a&gt;, and &lt;a href="http://vimcasts.org/e/59"&gt;59&lt;/a&gt; are all on the topic of copy and paste in Vim. I think that this is one area where Vim is especially confusing, partly because of &lt;a href="http://vimcasts.org/episodes/meet-the-yank-register#vim-jargon"&gt;Vim&amp;rsquo;s non-standard jargon for cut, copy and paste operations&lt;/a&gt;. It&amp;rsquo;s not the most intuitive copy/paste system, but it&amp;rsquo;s usable when you get the hang of certain concepts and techniques.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 18 Nov 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2013/11/the-copypaste-series-a-retrospective/</guid>
-      <link>http://proof.vimcasts.org/blog/2013/11/the-copypaste-series-a-retrospective/</link>
+      <guid>http://vimcasts.org/blog/2013/11/the-copypaste-series-a-retrospective/</guid>
+      <link>http://vimcasts.org/blog/2013/11/the-copypaste-series-a-retrospective/</link>
     </item>
     <item>
       <title>Using Vim's paste mode with the system paste command</title>
@@ -174,8 +174,8 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
       <media:category scheme="urn:boxee:episode">59</media:category>
       <enclosure url="http://media.vimcasts.org/videos/59/paste-option-toggle.ogv" length="5456772" type="video/ogg"/>
       <pubDate>Fri, 15 Nov 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/using-vims-paste-mode-with-the-system-paste-command/</guid>
-      <link>http://proof.vimcasts.org/episodes/using-vims-paste-mode-with-the-system-paste-command/</link>
+      <guid>http://vimcasts.org/episodes/using-vims-paste-mode-with-the-system-paste-command/</guid>
+      <link>http://vimcasts.org/episodes/using-vims-paste-mode-with-the-system-paste-command/</link>
     </item>
     <item>
       <title>Getting Vim with `+clipboard` support</title>
@@ -183,8 +183,8 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 
 </description>
       <pubDate>Wed, 13 Nov 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2013/11/getting-vim-with-clipboard-support/</guid>
-      <link>http://proof.vimcasts.org/blog/2013/11/getting-vim-with-clipboard-support/</link>
+      <guid>http://vimcasts.org/blog/2013/11/getting-vim-with-clipboard-support/</guid>
+      <link>http://vimcasts.org/blog/2013/11/getting-vim-with-clipboard-support/</link>
     </item>
     <item>
       <title>Accessing the system clipboard from Vim</title>
@@ -194,8 +194,8 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
       <media:category scheme="urn:boxee:episode">58</media:category>
       <enclosure url="http://media.vimcasts.org/videos/58/clipboard-register.ogv" length="6577643" type="video/ogg"/>
       <pubDate>Mon, 11 Nov 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/accessing-the-system-clipboard-from-vim/</guid>
-      <link>http://proof.vimcasts.org/episodes/accessing-the-system-clipboard-from-vim/</link>
+      <guid>http://vimcasts.org/episodes/accessing-the-system-clipboard-from-vim/</guid>
+      <link>http://vimcasts.org/episodes/accessing-the-system-clipboard-from-vim/</link>
     </item>
     <item>
       <title>Stockholm Vim Meetup &amp; Core Vim Class</title>
@@ -203,28 +203,28 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 
 </description>
       <pubDate>Mon, 04 Nov 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2013/11/stockholm-vim-meetup-core-vim-class/</guid>
-      <link>http://proof.vimcasts.org/announcements/2013/11/stockholm-vim-meetup-core-vim-class/</link>
+      <guid>http://vimcasts.org/announcements/2013/11/stockholm-vim-meetup-core-vim-class/</guid>
+      <link>http://vimcasts.org/announcements/2013/11/stockholm-vim-meetup-core-vim-class/</link>
     </item>
     <item>
       <title>Upcoming online workshop: December 5th</title>
-      <description>&lt;p&gt;On Thursday, December 5th 2013, I’m going to teach my &lt;a href="http://proof.vimcasts.org/classes/core-vim"&gt;Core Vim Class Online&lt;/a&gt;. Tickets cost $255, but you can save 10% if you buy a $230 Earlybird ticket by November 29th. You can &lt;a href="https://tito.io/studio-nelstrom/core-vim-class-online-2"&gt;buy tickets from tito.io&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;On Thursday, December 5th 2013, I’m going to teach my &lt;a href="http://vimcasts.org/classes/core-vim"&gt;Core Vim Class Online&lt;/a&gt;. Tickets cost $255, but you can save 10% if you buy a $230 Earlybird ticket by November 29th. You can &lt;a href="https://tito.io/studio-nelstrom/core-vim-class-online-2"&gt;buy tickets from tito.io&lt;/a&gt;.&lt;/p&gt;
 
 </description>
       <pubDate>Fri, 01 Nov 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2013/11/upcoming-online-workshop-december-5th/</guid>
-      <link>http://proof.vimcasts.org/announcements/2013/11/upcoming-online-workshop-december-5th/</link>
+      <guid>http://vimcasts.org/announcements/2013/11/upcoming-online-workshop-december-5th/</guid>
+      <link>http://vimcasts.org/announcements/2013/11/upcoming-online-workshop-december-5th/</link>
     </item>
     <item>
       <title>Evaluating scripts with Vim's expression register</title>
-      <description>&lt;p&gt;In &lt;a href="http://proof.vimcasts.org/e/56"&gt;the previous lesson&lt;/a&gt; we learned how use the expression register to evaluate simple calculations. We can also call built-in and user-defined Vimscript functions, and thanks to the &lt;code&gt;system()&lt;/code&gt; function, we can also fetch output from external scripts.&lt;/p&gt;
+      <description>&lt;p&gt;In &lt;a href="http://vimcasts.org/e/56"&gt;the previous lesson&lt;/a&gt; we learned how use the expression register to evaluate simple calculations. We can also call built-in and user-defined Vimscript functions, and thanks to the &lt;code&gt;system()&lt;/code&gt; function, we can also fetch output from external scripts.&lt;/p&gt;
 
 </description>
       <media:category scheme="urn:boxee:episode">57</media:category>
       <enclosure url="http://media.vimcasts.org/videos/57/eval-register.ogv" length="5514595" type="video/ogg"/>
       <pubDate>Mon, 21 Oct 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/evaluating-scripts-with-vims-expression-register/</guid>
-      <link>http://proof.vimcasts.org/episodes/evaluating-scripts-with-vims-expression-register/</link>
+      <guid>http://vimcasts.org/episodes/evaluating-scripts-with-vims-expression-register/</guid>
+      <link>http://vimcasts.org/episodes/evaluating-scripts-with-vims-expression-register/</link>
     </item>
     <item>
       <title>Simple calculations with Vim's expression register</title>
@@ -234,8 +234,8 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
       <media:category scheme="urn:boxee:episode">56</media:category>
       <enclosure url="http://media.vimcasts.org/videos/56/expression-register.ogv" length="4704449" type="video/ogg"/>
       <pubDate>Wed, 16 Oct 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/simple-calculations-with-vims-expression-register/</guid>
-      <link>http://proof.vimcasts.org/episodes/simple-calculations-with-vims-expression-register/</link>
+      <guid>http://vimcasts.org/episodes/simple-calculations-with-vims-expression-register/</guid>
+      <link>http://vimcasts.org/episodes/simple-calculations-with-vims-expression-register/</link>
     </item>
     <item>
       <title>Pasting from Insert mode</title>
@@ -245,8 +245,8 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
       <media:category scheme="urn:boxee:episode">55</media:category>
       <enclosure url="http://media.vimcasts.org/videos/55/insert-mode-put.ogv" length="5660879" type="video/ogg"/>
       <pubDate>Fri, 11 Oct 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/pasting-from-insert-mode/</guid>
-      <link>http://proof.vimcasts.org/episodes/pasting-from-insert-mode/</link>
+      <guid>http://vimcasts.org/episodes/pasting-from-insert-mode/</guid>
+      <link>http://vimcasts.org/episodes/pasting-from-insert-mode/</link>
     </item>
     <item>
       <title>Pasting from Visual mode</title>
@@ -256,8 +256,8 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
       <media:category scheme="urn:boxee:episode">54</media:category>
       <enclosure url="http://media.vimcasts.org/videos/54/visual-mode-put.ogv" length="3955140" type="video/ogg"/>
       <pubDate>Mon, 07 Oct 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/pasting-from-visual-mode/</guid>
-      <link>http://proof.vimcasts.org/episodes/pasting-from-visual-mode/</link>
+      <guid>http://vimcasts.org/episodes/pasting-from-visual-mode/</guid>
+      <link>http://vimcasts.org/episodes/pasting-from-visual-mode/</link>
     </item>
     <item>
       <title>Book a private Vim class for your team</title>
@@ -265,8 +265,8 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 
 </description>
       <pubDate>Mon, 07 Oct 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2013/10/book-a-private-vim-class-for-your-team/</guid>
-      <link>http://proof.vimcasts.org/announcements/2013/10/book-a-private-vim-class-for-your-team/</link>
+      <guid>http://vimcasts.org/announcements/2013/10/book-a-private-vim-class-for-your-team/</guid>
+      <link>http://vimcasts.org/announcements/2013/10/book-a-private-vim-class-for-your-team/</link>
     </item>
     <item>
       <title>Using Vim's named registers</title>
@@ -276,8 +276,8 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
       <media:category scheme="urn:boxee:episode">53</media:category>
       <enclosure url="http://media.vimcasts.org/videos/53/named-registers.ogv" length="5356368" type="video/ogg"/>
       <pubDate>Fri, 04 Oct 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/using-vims-named-registers/</guid>
-      <link>http://proof.vimcasts.org/episodes/using-vims-named-registers/</link>
+      <guid>http://vimcasts.org/episodes/using-vims-named-registers/</guid>
+      <link>http://vimcasts.org/episodes/using-vims-named-registers/</link>
     </item>
     <item>
       <title>Meet the yank register</title>
@@ -287,8 +287,8 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
       <media:category scheme="urn:boxee:episode">52</media:category>
       <enclosure url="http://media.vimcasts.org/videos/52/yank-register.ogv" length="5415333" type="video/ogg"/>
       <pubDate>Mon, 30 Sep 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/meet-the-yank-register/</guid>
-      <link>http://proof.vimcasts.org/episodes/meet-the-yank-register/</link>
+      <guid>http://vimcasts.org/episodes/meet-the-yank-register/</guid>
+      <link>http://vimcasts.org/episodes/meet-the-yank-register/</link>
     </item>
     <item>
       <title>Simple operations using the default register</title>
@@ -298,8 +298,8 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
       <media:category scheme="urn:boxee:episode">51</media:category>
       <enclosure url="http://media.vimcasts.org/videos/51/default-register.ogv" length="5676820" type="video/ogg"/>
       <pubDate>Fri, 27 Sep 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/simple-operations-using-the-default-register/</guid>
-      <link>http://proof.vimcasts.org/episodes/simple-operations-using-the-default-register/</link>
+      <guid>http://vimcasts.org/episodes/simple-operations-using-the-default-register/</guid>
+      <link>http://vimcasts.org/episodes/simple-operations-using-the-default-register/</link>
     </item>
     <item>
       <title>Upcoming online workshop: October 28th</title>
@@ -307,8 +307,8 @@ Tom McDonald&amp;rsquo;s &lt;a href="https://github.com/tommcdo/vim-exchange"&gt
 
 </description>
       <pubDate>Fri, 27 Sep 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2013/09/upcoming-online-workshop-october-28th/</guid>
-      <link>http://proof.vimcasts.org/announcements/2013/09/upcoming-online-workshop-october-28th/</link>
+      <guid>http://vimcasts.org/announcements/2013/09/upcoming-online-workshop-october-28th/</guid>
+      <link>http://vimcasts.org/announcements/2013/09/upcoming-online-workshop-october-28th/</link>
     </item>
     <item>
       <title>Change of pricing for Core Vim Class</title>
@@ -318,8 +318,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Thu, 26 Sep 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2013/09/change-of-pricing-for-core-vim-class/</guid>
-      <link>http://proof.vimcasts.org/announcements/2013/09/change-of-pricing-for-core-vim-class/</link>
+      <guid>http://vimcasts.org/announcements/2013/09/change-of-pricing-for-core-vim-class/</guid>
+      <link>http://vimcasts.org/announcements/2013/09/change-of-pricing-for-core-vim-class/</link>
     </item>
     <item>
       <title>Join the Vim community on gittip</title>
@@ -327,8 +327,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Fri, 20 Sep 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2013/09/join-the-vim-community-on-gittip/</guid>
-      <link>http://proof.vimcasts.org/blog/2013/09/join-the-vim-community-on-gittip/</link>
+      <guid>http://vimcasts.org/blog/2013/09/join-the-vim-community-on-gittip/</guid>
+      <link>http://vimcasts.org/blog/2013/09/join-the-vim-community-on-gittip/</link>
     </item>
     <item>
       <title>Upcoming workshop: London, October '13</title>
@@ -337,8 +337,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 &lt;p&gt;You can &lt;a href="https://tito.io/studio-nelstrom/core-vim-class-in-london-1"&gt;purchase tickets for the London workshop&lt;/a&gt; from tito.io. The early bird price of £160 is available until midnight on Wednesday, October 16th. After that, the price goes up to £180.&lt;/p&gt;
 </description>
       <pubDate>Wed, 18 Sep 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2013/09/upcoming-workshop-london-october-13/</guid>
-      <link>http://proof.vimcasts.org/announcements/2013/09/upcoming-workshop-london-october-13/</link>
+      <guid>http://vimcasts.org/announcements/2013/09/upcoming-workshop-london-october-13/</guid>
+      <link>http://vimcasts.org/announcements/2013/09/upcoming-workshop-london-october-13/</link>
     </item>
     <item>
       <title>Navigating Ruby Files with Vim</title>
@@ -346,8 +346,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Fri, 13 Sep 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2013/09/navigating-ruby-files-with-vim/</guid>
-      <link>http://proof.vimcasts.org/blog/2013/09/navigating-ruby-files-with-vim/</link>
+      <guid>http://vimcasts.org/blog/2013/09/navigating-ruby-files-with-vim/</guid>
+      <link>http://vimcasts.org/blog/2013/09/navigating-ruby-files-with-vim/</link>
     </item>
     <item>
       <title>Response to "Should Vimcasts go Pro?" survey</title>
@@ -355,8 +355,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Fri, 13 Sep 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2013/09/response-to-should-vimcasts-go-pro-survey/</guid>
-      <link>http://proof.vimcasts.org/blog/2013/09/response-to-should-vimcasts-go-pro-survey/</link>
+      <guid>http://vimcasts.org/blog/2013/09/response-to-should-vimcasts-go-pro-survey/</guid>
+      <link>http://vimcasts.org/blog/2013/09/response-to-should-vimcasts-go-pro-survey/</link>
     </item>
     <item>
       <title>Upcoming workshop: Berlin</title>
@@ -366,8 +366,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 29 Jul 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2013/07/upcoming-workshop-berlin-2/</guid>
-      <link>http://proof.vimcasts.org/announcements/2013/07/upcoming-workshop-berlin-2/</link>
+      <guid>http://vimcasts.org/announcements/2013/07/upcoming-workshop-berlin-2/</guid>
+      <link>http://vimcasts.org/announcements/2013/07/upcoming-workshop-berlin-2/</link>
     </item>
     <item>
       <title>Should Vimcasts go Pro?</title>
@@ -375,8 +375,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 01 Jul 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2013/07/should-vimcasts-go-pro/</guid>
-      <link>http://proof.vimcasts.org/blog/2013/07/should-vimcasts-go-pro/</link>
+      <guid>http://vimcasts.org/blog/2013/07/should-vimcasts-go-pro/</guid>
+      <link>http://vimcasts.org/blog/2013/07/should-vimcasts-go-pro/</link>
     </item>
     <item>
       <title>An introduction to vspec</title>
@@ -386,8 +386,8 @@ The class itself covers similar material to before.&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">50</media:category>
       <enclosure url="http://media.vimcasts.org/videos/50/vspec_intro.ogv" length="13515400" type="video/ogg"/>
       <pubDate>Mon, 17 Jun 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/an-introduction-to-vspec/</guid>
-      <link>http://proof.vimcasts.org/episodes/an-introduction-to-vspec/</link>
+      <guid>http://vimcasts.org/episodes/an-introduction-to-vspec/</guid>
+      <link>http://vimcasts.org/episodes/an-introduction-to-vspec/</link>
     </item>
     <item>
       <title>Upcoming online workshop: July 10th</title>
@@ -395,8 +395,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Wed, 05 Jun 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2013/06/upcoming-online-workshop-july-10th/</guid>
-      <link>http://proof.vimcasts.org/announcements/2013/06/upcoming-online-workshop-july-10th/</link>
+      <guid>http://vimcasts.org/announcements/2013/06/upcoming-online-workshop-july-10th/</guid>
+      <link>http://vimcasts.org/announcements/2013/06/upcoming-online-workshop-july-10th/</link>
     </item>
     <item>
       <title>Macbook Pro for sale - £900</title>
@@ -416,8 +416,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 03 Jun 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2013/06/macbook-pro-for-sale/</guid>
-      <link>http://proof.vimcasts.org/announcements/2013/06/macbook-pro-for-sale/</link>
+      <guid>http://vimcasts.org/announcements/2013/06/macbook-pro-for-sale/</guid>
+      <link>http://vimcasts.org/announcements/2013/06/macbook-pro-for-sale/</link>
     </item>
     <item>
       <title>Vimprint - a Vim keystroke parser</title>
@@ -425,8 +425,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Thu, 30 May 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2013/05/vimprint---a-vim-keystroke-parser/</guid>
-      <link>http://proof.vimcasts.org/blog/2013/05/vimprint---a-vim-keystroke-parser/</link>
+      <guid>http://vimcasts.org/blog/2013/05/vimprint---a-vim-keystroke-parser/</guid>
+      <link>http://vimcasts.org/blog/2013/05/vimprint---a-vim-keystroke-parser/</link>
     </item>
     <item>
       <title>Talks from VimLondon now on Vimeo</title>
@@ -434,8 +434,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Wed, 29 May 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2013/05/talks-from-vimlondon-now-on-vimeo/</guid>
-      <link>http://proof.vimcasts.org/blog/2013/05/talks-from-vimlondon-now-on-vimeo/</link>
+      <guid>http://vimcasts.org/blog/2013/05/talks-from-vimlondon-now-on-vimeo/</guid>
+      <link>http://vimcasts.org/blog/2013/05/talks-from-vimlondon-now-on-vimeo/</link>
     </item>
     <item>
       <title>GitMinutes #8 - Drew Neil on Vim and Workflow</title>
@@ -443,8 +443,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 27 May 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2013/05/gitminutes-8---drew-neil-on-vim-and-workflow/</guid>
-      <link>http://proof.vimcasts.org/blog/2013/05/gitminutes-8---drew-neil-on-vim-and-workflow/</link>
+      <guid>http://vimcasts.org/blog/2013/05/gitminutes-8---drew-neil-on-vim-and-workflow/</guid>
+      <link>http://vimcasts.org/blog/2013/05/gitminutes-8---drew-neil-on-vim-and-workflow/</link>
     </item>
     <item>
       <title>Enhanced abbreviations with :Abolish</title>
@@ -456,8 +456,8 @@ The class itself covers similar material to before.&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">49</media:category>
       <enclosure url="http://media.vimcasts.org/videos/49/abolish-abbreviate.ogv" length="4705804" type="video/ogg"/>
       <pubDate>Mon, 29 Apr 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/enhanced-abbreviations-with-abolish/</guid>
-      <link>http://proof.vimcasts.org/episodes/enhanced-abbreviations-with-abolish/</link>
+      <guid>http://vimcasts.org/episodes/enhanced-abbreviations-with-abolish/</guid>
+      <link>http://vimcasts.org/episodes/enhanced-abbreviations-with-abolish/</link>
     </item>
     <item>
       <title>Supercharged substitution with :Subvert</title>
@@ -469,16 +469,16 @@ The class itself covers similar material to before.&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">48</media:category>
       <enclosure url="http://media.vimcasts.org/videos/48/abolish-substitute.ogv" length="9326785" type="video/ogg"/>
       <pubDate>Mon, 22 Apr 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/supercharged-substitution-with-subvert/</guid>
-      <link>http://proof.vimcasts.org/episodes/supercharged-substitution-with-subvert/</link>
+      <guid>http://vimcasts.org/episodes/supercharged-substitution-with-subvert/</guid>
+      <link>http://vimcasts.org/episodes/supercharged-substitution-with-subvert/</link>
     </item>
     <item>
       <title>Upcoming online workshop: June 3rd</title>
       <description>&lt;p&gt;On Monday, June 3rd, I’m going to teach my &lt;a href="http://vimcasts.org/classes/core-vim"&gt;Core Vim Masterclass Online&lt;/a&gt;. It will run for 4 hours, from 18:00 GMT. That’s 10:00 if you live in San Fransisco, or 13:00 if you live in New York. &lt;a href="http://vimcasts-online-6.eventbrite.com/"&gt;Tickets cost £95&lt;/a&gt; (approximately US $140), but there’s an £80 earlybird offer (approx. US $120) running until May 24th.&lt;/p&gt;
 </description>
       <pubDate>Mon, 22 Apr 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2013/04/upcoming-online-workshop-june-3rd/</guid>
-      <link>http://proof.vimcasts.org/announcements/2013/04/upcoming-online-workshop-june-3rd/</link>
+      <guid>http://vimcasts.org/announcements/2013/04/upcoming-online-workshop-june-3rd/</guid>
+      <link>http://vimcasts.org/announcements/2013/04/upcoming-online-workshop-june-3rd/</link>
     </item>
     <item>
       <title>Practical Vim is a best-seller!</title>
@@ -486,8 +486,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Thu, 18 Apr 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2013/04/practical-vim-is-a-best-seller/</guid>
-      <link>http://proof.vimcasts.org/blog/2013/04/practical-vim-is-a-best-seller/</link>
+      <guid>http://vimcasts.org/blog/2013/04/practical-vim-is-a-best-seller/</guid>
+      <link>http://vimcasts.org/blog/2013/04/practical-vim-is-a-best-seller/</link>
     </item>
     <item>
       <title>Smart search with :Subvert</title>
@@ -499,8 +499,8 @@ The class itself covers similar material to before.&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">47</media:category>
       <enclosure url="http://media.vimcasts.org/videos/47/abolish-search.ogv" length="6849844" type="video/ogg"/>
       <pubDate>Fri, 12 Apr 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/smart-search-with-subvert/</guid>
-      <link>http://proof.vimcasts.org/episodes/smart-search-with-subvert/</link>
+      <guid>http://vimcasts.org/episodes/smart-search-with-subvert/</guid>
+      <link>http://vimcasts.org/episodes/smart-search-with-subvert/</link>
     </item>
     <item>
       <title>Search for the selected text</title>
@@ -510,8 +510,8 @@ The class itself covers similar material to before.&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">46</media:category>
       <enclosure url="http://media.vimcasts.org/videos/46/visual_star.ogv" length="5534285" type="video/ogg"/>
       <pubDate>Mon, 25 Mar 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/search-for-the-selected-text/</guid>
-      <link>http://proof.vimcasts.org/episodes/search-for-the-selected-text/</link>
+      <guid>http://vimcasts.org/episodes/search-for-the-selected-text/</guid>
+      <link>http://vimcasts.org/episodes/search-for-the-selected-text/</link>
     </item>
     <item>
       <title>Subscribe to the Vimcasts.org monthly newsletter</title>
@@ -519,8 +519,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Thu, 21 Mar 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2013/03/subscribe-to-the-vimcasts-org-monthly-newsletter/</guid>
-      <link>http://proof.vimcasts.org/announcements/2013/03/subscribe-to-the-vimcasts-org-monthly-newsletter/</link>
+      <guid>http://vimcasts.org/announcements/2013/03/subscribe-to-the-vimcasts-org-monthly-newsletter/</guid>
+      <link>http://vimcasts.org/announcements/2013/03/subscribe-to-the-vimcasts-org-monthly-newsletter/</link>
     </item>
     <item>
       <title>Project-wide find and replace</title>
@@ -530,8 +530,8 @@ The class itself covers similar material to before.&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">45</media:category>
       <enclosure url="http://media.vimcasts.org/videos/45/project_substitute.ogv" length="8171536" type="video/ogg"/>
       <pubDate>Tue, 19 Mar 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/project-wide-find-and-replace/</guid>
-      <link>http://proof.vimcasts.org/episodes/project-wide-find-and-replace/</link>
+      <guid>http://vimcasts.org/episodes/project-wide-find-and-replace/</guid>
+      <link>http://vimcasts.org/episodes/project-wide-find-and-replace/</link>
     </item>
     <item>
       <title>Upcoming online workshop: April 16th</title>
@@ -539,8 +539,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Thu, 14 Mar 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2013/03/upcoming-online-workshop-april-16th/</guid>
-      <link>http://proof.vimcasts.org/announcements/2013/03/upcoming-online-workshop-april-16th/</link>
+      <guid>http://vimcasts.org/announcements/2013/03/upcoming-online-workshop-april-16th/</guid>
+      <link>http://vimcasts.org/announcements/2013/03/upcoming-online-workshop-april-16th/</link>
     </item>
     <item>
       <title>Online Vim classes - sign up for email announcements</title>
@@ -548,8 +548,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 11 Mar 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2013/03/online-vim-classes---sign-up-for-email-announcements/</guid>
-      <link>http://proof.vimcasts.org/blog/2013/03/online-vim-classes---sign-up-for-email-announcements/</link>
+      <guid>http://vimcasts.org/blog/2013/03/online-vim-classes---sign-up-for-email-announcements/</guid>
+      <link>http://vimcasts.org/blog/2013/03/online-vim-classes---sign-up-for-email-announcements/</link>
     </item>
     <item>
       <title>Combining :vimgrep with git ls-files</title>
@@ -557,8 +557,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Thu, 07 Mar 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2013/03/combining-vimgrep-with-git-ls-files/</guid>
-      <link>http://proof.vimcasts.org/blog/2013/03/combining-vimgrep-with-git-ls-files/</link>
+      <guid>http://vimcasts.org/blog/2013/03/combining-vimgrep-with-git-ls-files/</guid>
+      <link>http://vimcasts.org/blog/2013/03/combining-vimgrep-with-git-ls-files/</link>
     </item>
     <item>
       <title>Combining :vimgrep with ack -f</title>
@@ -566,8 +566,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Tue, 05 Mar 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2013/03/combining-vimgrep-with-ack--f/</guid>
-      <link>http://proof.vimcasts.org/blog/2013/03/combining-vimgrep-with-ack--f/</link>
+      <guid>http://vimcasts.org/blog/2013/03/combining-vimgrep-with-ack--f/</guid>
+      <link>http://vimcasts.org/blog/2013/03/combining-vimgrep-with-ack--f/</link>
     </item>
     <item>
       <title>Search multiple files with :vimgrep</title>
@@ -577,8 +577,8 @@ The class itself covers similar material to before.&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">44</media:category>
       <enclosure url="http://media.vimcasts.org/videos/44/vimgrep.ogv" length="13806112" type="video/ogg"/>
       <pubDate>Fri, 01 Mar 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/search-multiple-files-with-vimgrep/</guid>
-      <link>http://proof.vimcasts.org/episodes/search-multiple-files-with-vimgrep/</link>
+      <guid>http://vimcasts.org/episodes/search-multiple-files-with-vimgrep/</guid>
+      <link>http://vimcasts.org/episodes/search-multiple-files-with-vimgrep/</link>
     </item>
     <item>
       <title>Using :argdo to change multiple files</title>
@@ -588,8 +588,8 @@ The class itself covers similar material to before.&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">43</media:category>
       <enclosure url="http://media.vimcasts.org/videos/43/argdo.ogv" length="7790359" type="video/ogg"/>
       <pubDate>Mon, 25 Feb 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/using-argdo-to-change-multiple-files/</guid>
-      <link>http://proof.vimcasts.org/episodes/using-argdo-to-change-multiple-files/</link>
+      <guid>http://vimcasts.org/episodes/using-argdo-to-change-multiple-files/</guid>
+      <link>http://vimcasts.org/episodes/using-argdo-to-change-multiple-files/</link>
     </item>
     <item>
       <title>Populating the arglist</title>
@@ -599,8 +599,8 @@ The class itself covers similar material to before.&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">42</media:category>
       <enclosure url="http://media.vimcasts.org/videos/42/arglist_populate.ogv" length="6533057" type="video/ogg"/>
       <pubDate>Fri, 22 Feb 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/populating-the-arglist/</guid>
-      <link>http://proof.vimcasts.org/episodes/populating-the-arglist/</link>
+      <guid>http://vimcasts.org/episodes/populating-the-arglist/</guid>
+      <link>http://vimcasts.org/episodes/populating-the-arglist/</link>
     </item>
     <item>
       <title>Get 30% off Practical Vim</title>
@@ -608,8 +608,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Fri, 22 Feb 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2013/02/get-30-off-practical-vim/</guid>
-      <link>http://proof.vimcasts.org/announcements/2013/02/get-30-off-practical-vim/</link>
+      <guid>http://vimcasts.org/announcements/2013/02/get-30-off-practical-vim/</guid>
+      <link>http://vimcasts.org/announcements/2013/02/get-30-off-practical-vim/</link>
     </item>
     <item>
       <title>Meet the arglist</title>
@@ -619,8 +619,8 @@ The class itself covers similar material to before.&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">41</media:category>
       <enclosure url="http://media.vimcasts.org/videos/41/meet_arglist.ogv" length="6615244" type="video/ogg"/>
       <pubDate>Tue, 19 Feb 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/meet-the-arglist/</guid>
-      <link>http://proof.vimcasts.org/episodes/meet-the-arglist/</link>
+      <guid>http://vimcasts.org/episodes/meet-the-arglist/</guid>
+      <link>http://vimcasts.org/episodes/meet-the-arglist/</link>
     </item>
     <item>
       <title>Google vimdocs with a custom search engine</title>
@@ -628,8 +628,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Fri, 15 Feb 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2013/02/google-vimdocs-with-a-custom-search-engine/</guid>
-      <link>http://proof.vimcasts.org/blog/2013/02/google-vimdocs-with-a-custom-search-engine/</link>
+      <guid>http://vimcasts.org/blog/2013/02/google-vimdocs-with-a-custom-search-engine/</guid>
+      <link>http://vimcasts.org/blog/2013/02/google-vimdocs-with-a-custom-search-engine/</link>
     </item>
     <item>
       <title>Habit breaking, habit making</title>
@@ -637,8 +637,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Wed, 06 Feb 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2013/02/habit-breaking-habit-making/</guid>
-      <link>http://proof.vimcasts.org/blog/2013/02/habit-breaking-habit-making/</link>
+      <guid>http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/</guid>
+      <link>http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/</link>
     </item>
     <item>
       <title>Upcoming online workshop: March 4th</title>
@@ -646,8 +646,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Wed, 06 Feb 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2013/02/upcoming-online-workshop-march-4th/</guid>
-      <link>http://proof.vimcasts.org/announcements/2013/02/upcoming-online-workshop-march-4th/</link>
+      <guid>http://vimcasts.org/announcements/2013/02/upcoming-online-workshop-march-4th/</guid>
+      <link>http://vimcasts.org/announcements/2013/02/upcoming-online-workshop-march-4th/</link>
     </item>
     <item>
       <title>Vim London January in review</title>
@@ -655,8 +655,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Thu, 31 Jan 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2013/01/vim-london-january-in-review/</guid>
-      <link>http://proof.vimcasts.org/blog/2013/01/vim-london-january-in-review/</link>
+      <guid>http://vimcasts.org/blog/2013/01/vim-london-january-in-review/</guid>
+      <link>http://vimcasts.org/blog/2013/01/vim-london-january-in-review/</link>
     </item>
     <item>
       <title>VimLondon January Meetup: Speak Vim - Operators and Motions</title>
@@ -664,8 +664,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 21 Jan 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2013/01/vimlondon-january-meetup-speak-vim---operators-and-motions/</guid>
-      <link>http://proof.vimcasts.org/announcements/2013/01/vimlondon-january-meetup-speak-vim---operators-and-motions/</link>
+      <guid>http://vimcasts.org/announcements/2013/01/vimlondon-january-meetup-speak-vim---operators-and-motions/</guid>
+      <link>http://vimcasts.org/announcements/2013/01/vimlondon-january-meetup-speak-vim---operators-and-motions/</link>
     </item>
     <item>
       <title>Long-range line duplication</title>
@@ -675,8 +675,8 @@ The class itself covers similar material to before.&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">40</media:category>
       <enclosure url="http://media.vimcasts.org/videos/40/line_duplication.ogv" length="7569155" type="video/ogg"/>
       <pubDate>Wed, 09 Jan 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/long-range-line-duplication/</guid>
-      <link>http://proof.vimcasts.org/episodes/long-range-line-duplication/</link>
+      <guid>http://vimcasts.org/episodes/long-range-line-duplication/</guid>
+      <link>http://vimcasts.org/episodes/long-range-line-duplication/</link>
     </item>
     <item>
       <title>New Year's discount on Vim Masterclass</title>
@@ -684,8 +684,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 07 Jan 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2013/01/new-years-discount-on-vim-masterclass/</guid>
-      <link>http://proof.vimcasts.org/announcements/2013/01/new-years-discount-on-vim-masterclass/</link>
+      <guid>http://vimcasts.org/announcements/2013/01/new-years-discount-on-vim-masterclass/</guid>
+      <link>http://vimcasts.org/announcements/2013/01/new-years-discount-on-vim-masterclass/</link>
     </item>
     <item>
       <title>Oil and vinegar - split windows and the project drawer</title>
@@ -693,8 +693,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Wed, 02 Jan 2013 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/</guid>
-      <link>http://proof.vimcasts.org/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/</link>
+      <guid>http://vimcasts.org/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/</guid>
+      <link>http://vimcasts.org/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/</link>
     </item>
     <item>
       <title>Upcoming online workshop: January 14th</title>
@@ -702,8 +702,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 17 Dec 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2012/12/upcoming-online-workshop-january-14th/</guid>
-      <link>http://proof.vimcasts.org/announcements/2012/12/upcoming-online-workshop-january-14th/</link>
+      <guid>http://vimcasts.org/announcements/2012/12/upcoming-online-workshop-january-14th/</guid>
+      <link>http://vimcasts.org/announcements/2012/12/upcoming-online-workshop-january-14th/</link>
     </item>
     <item>
       <title>Profiling Vimscript performance</title>
@@ -713,8 +713,8 @@ The class itself covers similar material to before.&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">39</media:category>
       <enclosure url="http://media.vimcasts.org/videos/39/profiling.ogv" length="13627416" type="video/ogg"/>
       <pubDate>Mon, 03 Dec 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/profiling-vimscript-performance/</guid>
-      <link>http://proof.vimcasts.org/episodes/profiling-vimscript-performance/</link>
+      <guid>http://vimcasts.org/episodes/profiling-vimscript-performance/</guid>
+      <link>http://vimcasts.org/episodes/profiling-vimscript-performance/</link>
     </item>
     <item>
       <title>Recap of the 1st Vim Masterclass Online</title>
@@ -722,8 +722,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Thu, 29 Nov 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2012/11/recap-of-the-1st-vim-masterclass-online/</guid>
-      <link>http://proof.vimcasts.org/blog/2012/11/recap-of-the-1st-vim-masterclass-online/</link>
+      <guid>http://vimcasts.org/blog/2012/11/recap-of-the-1st-vim-masterclass-online/</guid>
+      <link>http://vimcasts.org/blog/2012/11/recap-of-the-1st-vim-masterclass-online/</link>
     </item>
     <item>
       <title>Writing a custom fold expression</title>
@@ -733,8 +733,8 @@ The class itself covers similar material to before.&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">38</media:category>
       <enclosure url="http://media.vimcasts.org/videos/38/writing-a-foldexpr.ogv" length="19003361" type="video/ogg"/>
       <pubDate>Mon, 26 Nov 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/writing-a-custom-fold-expression/</guid>
-      <link>http://proof.vimcasts.org/episodes/writing-a-custom-fold-expression/</link>
+      <guid>http://vimcasts.org/episodes/writing-a-custom-fold-expression/</guid>
+      <link>http://vimcasts.org/episodes/writing-a-custom-fold-expression/</link>
     </item>
     <item>
       <title>How to fold</title>
@@ -744,8 +744,8 @@ The class itself covers similar material to before.&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">37</media:category>
       <enclosure url="http://media.vimcasts.org/videos/37/how-to-fold.ogv" length="17856957" type="video/ogg"/>
       <pubDate>Mon, 19 Nov 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/how-to-fold/</guid>
-      <link>http://proof.vimcasts.org/episodes/how-to-fold/</link>
+      <guid>http://vimcasts.org/episodes/how-to-fold/</guid>
+      <link>http://vimcasts.org/episodes/how-to-fold/</link>
     </item>
     <item>
       <title>Upcoming workshop: ONLINE</title>
@@ -755,8 +755,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Fri, 16 Nov 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2012/11/upcoming-workshop-online/</guid>
-      <link>http://proof.vimcasts.org/announcements/2012/11/upcoming-workshop-online/</link>
+      <guid>http://vimcasts.org/announcements/2012/11/upcoming-workshop-online/</guid>
+      <link>http://vimcasts.org/announcements/2012/11/upcoming-workshop-online/</link>
     </item>
     <item>
       <title>Øredev presentation: Vim - precision editing at the speed of thought</title>
@@ -764,8 +764,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 12 Nov 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2012/11/oredev-presentation-vim-precision-editing-at-the-speed-of-thought/</guid>
-      <link>http://proof.vimcasts.org/blog/2012/11/oredev-presentation-vim-precision-editing-at-the-speed-of-thought/</link>
+      <guid>http://vimcasts.org/blog/2012/11/oredev-presentation-vim-precision-editing-at-the-speed-of-thought/</guid>
+      <link>http://vimcasts.org/blog/2012/11/oredev-presentation-vim-precision-editing-at-the-speed-of-thought/</link>
     </item>
     <item>
       <title>Vim London - still alive in spite of meetup.com</title>
@@ -775,8 +775,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Thu, 25 Oct 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2012/10/vim-london-still-alive-in-spite-of-meetup-com/</guid>
-      <link>http://proof.vimcasts.org/announcements/2012/10/vim-london-still-alive-in-spite-of-meetup-com/</link>
+      <guid>http://vimcasts.org/announcements/2012/10/vim-london-still-alive-in-spite-of-meetup-com/</guid>
+      <link>http://vimcasts.org/announcements/2012/10/vim-london-still-alive-in-spite-of-meetup-com/</link>
     </item>
     <item>
       <title>Command-line Special: 40% discount on Practical Vim</title>
@@ -785,8 +785,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 &lt;p&gt;This offer is valid until Wednesday, 24th October. You won&amp;rsquo;t find a better deal on Practical Vim, so don&amp;rsquo;t miss out!&lt;/p&gt;
 </description>
       <pubDate>Tue, 23 Oct 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2012/10/command-line-special-40-discount-on-practical-vim/</guid>
-      <link>http://proof.vimcasts.org/announcements/2012/10/command-line-special-40-discount-on-practical-vim/</link>
+      <guid>http://vimcasts.org/announcements/2012/10/command-line-special-40-discount-on-practical-vim/</guid>
+      <link>http://vimcasts.org/announcements/2012/10/command-line-special-40-discount-on-practical-vim/</link>
     </item>
     <item>
       <title>Amazon reviews of Practical Vim</title>
@@ -794,8 +794,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Fri, 12 Oct 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2012/10/amazon-reviews-of-practical-vim/</guid>
-      <link>http://proof.vimcasts.org/blog/2012/10/amazon-reviews-of-practical-vim/</link>
+      <guid>http://vimcasts.org/blog/2012/10/amazon-reviews-of-practical-vim/</guid>
+      <link>http://vimcasts.org/blog/2012/10/amazon-reviews-of-practical-vim/</link>
     </item>
     <item>
       <title>Upcoming workshop: London, October '12</title>
@@ -804,8 +804,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 &lt;p&gt;This could become a regular thing, now that I&amp;rsquo;m living in London.&lt;/p&gt;
 </description>
       <pubDate>Fri, 12 Oct 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2012/10/upcoming-workshop-london-october-12/</guid>
-      <link>http://proof.vimcasts.org/announcements/2012/10/upcoming-workshop-london-october-12/</link>
+      <guid>http://vimcasts.org/announcements/2012/10/upcoming-workshop-london-october-12/</guid>
+      <link>http://vimcasts.org/announcements/2012/10/upcoming-workshop-london-october-12/</link>
     </item>
     <item>
       <title>Practical Vim now shipping</title>
@@ -813,8 +813,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Thu, 11 Oct 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2012/10/practical-vim-now-shipping/</guid>
-      <link>http://proof.vimcasts.org/blog/2012/10/practical-vim-now-shipping/</link>
+      <guid>http://vimcasts.org/blog/2012/10/practical-vim-now-shipping/</guid>
+      <link>http://vimcasts.org/blog/2012/10/practical-vim-now-shipping/</link>
     </item>
     <item>
       <title>Practical Vim rated 9/10 by Linux Format Magazine</title>
@@ -822,8 +822,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Wed, 10 Oct 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2012/10/practical-vim-in-linux-format-magazine/</guid>
-      <link>http://proof.vimcasts.org/blog/2012/10/practical-vim-in-linux-format-magazine/</link>
+      <guid>http://vimcasts.org/blog/2012/10/practical-vim-in-linux-format-magazine/</guid>
+      <link>http://vimcasts.org/blog/2012/10/practical-vim-in-linux-format-magazine/</link>
     </item>
     <item>
       <title>Upcoming workshop: Bristol</title>
@@ -833,8 +833,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 08 Oct 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2012/10/upcoming-workshop-bristol/</guid>
-      <link>http://proof.vimcasts.org/announcements/2012/10/upcoming-workshop-bristol/</link>
+      <guid>http://vimcasts.org/announcements/2012/10/upcoming-workshop-bristol/</guid>
+      <link>http://vimcasts.org/announcements/2012/10/upcoming-workshop-bristol/</link>
     </item>
     <item>
       <title>Upcoming workshop: Boulder, CO</title>
@@ -844,8 +844,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 03 Sep 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2012/09/upcoming-workshop-boulder-co/</guid>
-      <link>http://proof.vimcasts.org/announcements/2012/09/upcoming-workshop-boulder-co/</link>
+      <guid>http://vimcasts.org/announcements/2012/09/upcoming-workshop-boulder-co/</guid>
+      <link>http://vimcasts.org/announcements/2012/09/upcoming-workshop-boulder-co/</link>
     </item>
     <item>
       <title>VimGolf - Prime Numbers</title>
@@ -855,17 +855,17 @@ The class itself covers similar material to before.&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">36</media:category>
       <enclosure url="http://media.vimcasts.org/videos/36/primes.ogv" length="7335704" type="video/ogg"/>
       <pubDate>Fri, 10 Aug 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/vimgolf-prime-numbers/</guid>
-      <link>http://proof.vimcasts.org/episodes/vimgolf-prime-numbers/</link>
+      <guid>http://vimcasts.org/episodes/vimgolf-prime-numbers/</guid>
+      <link>http://vimcasts.org/episodes/vimgolf-prime-numbers/</link>
     </item>
     <item>
       <title>Status of US tour: postponed</title>
-      <description>&lt;p&gt;I&amp;rsquo;m sorry to say that I&amp;rsquo;m unable to take my &lt;a href="http://proof.vimcasts.org/blog/2012/05/on-tour-this-summer-vim-masterclass-workshop/"&gt;workshops on tour around the US this summer&lt;/a&gt;. I&amp;rsquo;m not allowed to work there on a business/tourist visa, and I was too disorganized to obtain the visa that would permit me to work. It&amp;rsquo;s a shame, because I had set the months of August-September aside for this tour!&lt;/p&gt;
+      <description>&lt;p&gt;I&amp;rsquo;m sorry to say that I&amp;rsquo;m unable to take my &lt;a href="http://vimcasts.org/blog/2012/05/on-tour-this-summer-vim-masterclass-workshop/"&gt;workshops on tour around the US this summer&lt;/a&gt;. I&amp;rsquo;m not allowed to work there on a business/tourist visa, and I was too disorganized to obtain the visa that would permit me to work. It&amp;rsquo;s a shame, because I had set the months of August-September aside for this tour!&lt;/p&gt;
 
 </description>
       <pubDate>Wed, 08 Aug 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2012/08/status-of-us-tour/</guid>
-      <link>http://proof.vimcasts.org/announcements/2012/08/status-of-us-tour/</link>
+      <guid>http://vimcasts.org/announcements/2012/08/status-of-us-tour/</guid>
+      <link>http://vimcasts.org/announcements/2012/08/status-of-us-tour/</link>
     </item>
     <item>
       <title>On sharpening the saw</title>
@@ -873,8 +873,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 06 Aug 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2012/08/on-sharpening-the-saw/</guid>
-      <link>http://proof.vimcasts.org/blog/2012/08/on-sharpening-the-saw/</link>
+      <guid>http://vimcasts.org/blog/2012/08/on-sharpening-the-saw/</guid>
+      <link>http://vimcasts.org/blog/2012/08/on-sharpening-the-saw/</link>
     </item>
     <item>
       <title>Upcoming workshops: London, Paris, Amsterdam, and Barcelona</title>
@@ -884,8 +884,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 25 Jun 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2012/06/upcoming-workshops-london-paris-amsterdam-and-barcelona/</guid>
-      <link>http://proof.vimcasts.org/announcements/2012/06/upcoming-workshops-london-paris-amsterdam-and-barcelona/</link>
+      <guid>http://vimcasts.org/announcements/2012/06/upcoming-workshops-london-paris-amsterdam-and-barcelona/</guid>
+      <link>http://vimcasts.org/announcements/2012/06/upcoming-workshops-london-paris-amsterdam-and-barcelona/</link>
     </item>
     <item>
       <title>Upcoming workshops: Edinburgh, Glasgow, and Newcastle</title>
@@ -895,8 +895,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Wed, 13 Jun 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2012/06/upcoming-workshops-edinburgh-glasgow-and-newcastle/</guid>
-      <link>http://proof.vimcasts.org/announcements/2012/06/upcoming-workshops-edinburgh-glasgow-and-newcastle/</link>
+      <guid>http://vimcasts.org/announcements/2012/06/upcoming-workshops-edinburgh-glasgow-and-newcastle/</guid>
+      <link>http://vimcasts.org/announcements/2012/06/upcoming-workshops-edinburgh-glasgow-and-newcastle/</link>
     </item>
     <item>
       <title>Upcoming workshop: Berlin</title>
@@ -906,8 +906,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Tue, 22 May 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2012/05/upcoming-workshop-berlin/</guid>
-      <link>http://proof.vimcasts.org/announcements/2012/05/upcoming-workshop-berlin/</link>
+      <guid>http://vimcasts.org/announcements/2012/05/upcoming-workshop-berlin/</guid>
+      <link>http://vimcasts.org/announcements/2012/05/upcoming-workshop-berlin/</link>
     </item>
     <item>
       <title>Upcoming workshop: Krakow</title>
@@ -917,8 +917,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Thu, 17 May 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2012/05/upcoming-workshop-krakow/</guid>
-      <link>http://proof.vimcasts.org/announcements/2012/05/upcoming-workshop-krakow/</link>
+      <guid>http://vimcasts.org/announcements/2012/05/upcoming-workshop-krakow/</guid>
+      <link>http://vimcasts.org/announcements/2012/05/upcoming-workshop-krakow/</link>
     </item>
     <item>
       <title>On tour this Summer: Vim masterclass workshop</title>
@@ -928,8 +928,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Wed, 16 May 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2012/05/on-tour-this-summer-vim-masterclass-workshop/</guid>
-      <link>http://proof.vimcasts.org/announcements/2012/05/on-tour-this-summer-vim-masterclass-workshop/</link>
+      <guid>http://vimcasts.org/announcements/2012/05/on-tour-this-summer-vim-masterclass-workshop/</guid>
+      <link>http://vimcasts.org/announcements/2012/05/on-tour-this-summer-vim-masterclass-workshop/</link>
     </item>
     <item>
       <title>Announcing Practical Vim (in beta)</title>
@@ -937,8 +937,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Wed, 18 Apr 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2012/04/announcing-practical-vim/</guid>
-      <link>http://proof.vimcasts.org/blog/2012/04/announcing-practical-vim/</link>
+      <guid>http://vimcasts.org/blog/2012/04/announcing-practical-vim/</guid>
+      <link>http://vimcasts.org/blog/2012/04/announcing-practical-vim/</link>
     </item>
     <item>
       <title>Upcoming workshop: London</title>
@@ -948,8 +948,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Wed, 11 Apr 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2012/04/upcoming-workshop-london/</guid>
-      <link>http://proof.vimcasts.org/announcements/2012/04/upcoming-workshop-london/</link>
+      <guid>http://vimcasts.org/announcements/2012/04/upcoming-workshop-london/</guid>
+      <link>http://vimcasts.org/announcements/2012/04/upcoming-workshop-london/</link>
     </item>
     <item>
       <title>Upcoming workshops: Berlin and St Louis</title>
@@ -961,8 +961,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Fri, 30 Mar 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2012/03/upcoming-workshops-berlin-and-st-louis/</guid>
-      <link>http://proof.vimcasts.org/announcements/2012/03/upcoming-workshops-berlin-and-st-louis/</link>
+      <guid>http://vimcasts.org/announcements/2012/03/upcoming-workshops-berlin-and-st-louis/</guid>
+      <link>http://vimcasts.org/announcements/2012/03/upcoming-workshops-berlin-and-st-louis/</link>
     </item>
     <item>
       <title>What to expect from a Vimcasts workshop</title>
@@ -970,8 +970,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Fri, 24 Feb 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2012/02/what-to-expect-from-a-vimcasts-workshop/</guid>
-      <link>http://proof.vimcasts.org/blog/2012/02/what-to-expect-from-a-vimcasts-workshop/</link>
+      <guid>http://vimcasts.org/blog/2012/02/what-to-expect-from-a-vimcasts-workshop/</guid>
+      <link>http://vimcasts.org/blog/2012/02/what-to-expect-from-a-vimcasts-workshop/</link>
     </item>
     <item>
       <title>Vim Workshop: Wroclaw, March 2012</title>
@@ -981,8 +981,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Thu, 09 Feb 2012 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2012/02/vim-workshop-wroclaw/</guid>
-      <link>http://proof.vimcasts.org/announcements/2012/02/vim-workshop-wroclaw/</link>
+      <guid>http://vimcasts.org/announcements/2012/02/vim-workshop-wroclaw/</guid>
+      <link>http://vimcasts.org/announcements/2012/02/vim-workshop-wroclaw/</link>
     </item>
     <item>
       <title>Bring a Vimcasts workshop to your town</title>
@@ -992,8 +992,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Wed, 05 Oct 2011 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2011/10/bring-a-vimcasts-workshop-to-your-town/</guid>
-      <link>http://proof.vimcasts.org/announcements/2011/10/bring-a-vimcasts-workshop-to-your-town/</link>
+      <guid>http://vimcasts.org/announcements/2011/10/bring-a-vimcasts-workshop-to-your-town/</guid>
+      <link>http://vimcasts.org/announcements/2011/10/bring-a-vimcasts-workshop-to-your-town/</link>
     </item>
     <item>
       <title>The Fugitive Series - a retrospective</title>
@@ -1001,8 +1001,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Wed, 18 May 2011 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2011/05/the-fugitive-series/</guid>
-      <link>http://proof.vimcasts.org/blog/2011/05/the-fugitive-series/</link>
+      <guid>http://vimcasts.org/blog/2011/05/the-fugitive-series/</guid>
+      <link>http://vimcasts.org/blog/2011/05/the-fugitive-series/</link>
     </item>
     <item>
       <title>Fugitive.vim - exploring the history of a git repository</title>
@@ -1014,8 +1014,8 @@ The class itself covers similar material to before.&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">35</media:category>
       <enclosure url="http://media.vimcasts.org/videos/35/fugitive_5.ogv" length="26702522" type="video/ogg"/>
       <pubDate>Wed, 18 May 2011 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/</guid>
-      <link>http://proof.vimcasts.org/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/</link>
+      <guid>http://vimcasts.org/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/</guid>
+      <link>http://vimcasts.org/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/</link>
     </item>
     <item>
       <title>Fugitive.vim - browsing the git object database</title>
@@ -1027,8 +1027,8 @@ The class itself covers similar material to before.&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">34</media:category>
       <enclosure url="http://media.vimcasts.org/videos/34/fugitive_4.ogv" length="23102160" type="video/ogg"/>
       <pubDate>Fri, 13 May 2011 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/</guid>
-      <link>http://proof.vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/</link>
+      <guid>http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/</guid>
+      <link>http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/</link>
     </item>
     <item>
       <title>Fugitive.vim - resolving merge conflicts with vimdiff</title>
@@ -1040,8 +1040,8 @@ The class itself covers similar material to before.&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">33</media:category>
       <enclosure url="http://media.vimcasts.org/videos/33/fugitive_3.ogv" length="17760378" type="video/ogg"/>
       <pubDate>Fri, 06 May 2011 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/</guid>
-      <link>http://proof.vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/</link>
+      <guid>http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/</guid>
+      <link>http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/</link>
     </item>
     <item>
       <title>Fugitive.vim - working with the git index</title>
@@ -1053,8 +1053,8 @@ The class itself covers similar material to before.&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">32</media:category>
       <enclosure url="http://media.vimcasts.org/videos/32/fugitive_2.ogv" length="19217222" type="video/ogg"/>
       <pubDate>Fri, 29 Apr 2011 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/fugitive-vim-working-with-the-git-index/</guid>
-      <link>http://proof.vimcasts.org/episodes/fugitive-vim-working-with-the-git-index/</link>
+      <guid>http://vimcasts.org/episodes/fugitive-vim-working-with-the-git-index/</guid>
+      <link>http://vimcasts.org/episodes/fugitive-vim-working-with-the-git-index/</link>
     </item>
     <item>
       <title>Fugitive.vim - a complement to command line git</title>
@@ -1066,8 +1066,8 @@ The class itself covers similar material to before.&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">31</media:category>
       <enclosure url="http://media.vimcasts.org/videos/31/fugitive_1.ogv" length="17353898" type="video/ogg"/>
       <pubDate>Fri, 22 Apr 2011 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/</guid>
-      <link>http://proof.vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/</link>
+      <guid>http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/</guid>
+      <link>http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/</link>
     </item>
     <item>
       <title>Undo branching and Gundo.vim</title>
@@ -1077,16 +1077,16 @@ The class itself covers similar material to before.&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">30</media:category>
       <enclosure url="http://media.vimcasts.org/videos/30/undo_tree.ogv" length="9435598" type="video/ogg"/>
       <pubDate>Wed, 23 Feb 2011 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/undo-branching-and-gundo-vim/</guid>
-      <link>http://proof.vimcasts.org/episodes/undo-branching-and-gundo-vim/</link>
+      <guid>http://vimcasts.org/episodes/undo-branching-and-gundo-vim/</guid>
+      <link>http://vimcasts.org/episodes/undo-branching-and-gundo-vim/</link>
     </item>
     <item>
       <title>Vimcasts plugin for Plex now available</title>
       <description>&lt;p&gt;Fans of the &lt;a href="http://plexapp.com/"&gt;Plex media center&lt;/a&gt; will be happy to know that there is now a &lt;a href="https://github.com/ches/plex-vimcasts"&gt;Vimcasts plugin&lt;/a&gt;, available from the Plex online app store. It was built by &lt;a href="http://chesmart.in/"&gt;Ches Martin&lt;/a&gt;, who was inspired when he saw that there was a &lt;a href="http://vimcasts.org/blog/2010/07/vimcasts-now-available-on-boxee/"&gt;Vimcasts plugin for Boxee&lt;/a&gt;. So now you can get your fix of Vimcasts straight from your media center. Thanks Ches!&lt;/p&gt;
 </description>
       <pubDate>Wed, 23 Feb 2011 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2011/02/vimcasts-plugin-for-plex-now-available/</guid>
-      <link>http://proof.vimcasts.org/blog/2011/02/vimcasts-plugin-for-plex-now-available/</link>
+      <guid>http://vimcasts.org/blog/2011/02/vimcasts-plugin-for-plex-now-available/</guid>
+      <link>http://vimcasts.org/blog/2011/02/vimcasts-plugin-for-plex-now-available/</link>
     </item>
     <item>
       <title>Aligning text with Tabular.vim</title>
@@ -1096,8 +1096,8 @@ The class itself covers similar material to before.&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">29</media:category>
       <enclosure url="http://media.vimcasts.org/videos/29/alignment.ogv" length="6556323" type="video/ogg"/>
       <pubDate>Mon, 17 Jan 2011 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/aligning-text-with-tabular-vim/</guid>
-      <link>http://proof.vimcasts.org/episodes/aligning-text-with-tabular-vim/</link>
+      <guid>http://vimcasts.org/episodes/aligning-text-with-tabular-vim/</guid>
+      <link>http://vimcasts.org/episodes/aligning-text-with-tabular-vim/</link>
     </item>
     <item>
       <title>A text-object for ruby blocks</title>
@@ -1105,8 +1105,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 27 Dec 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2010/12/a-text-object-for-ruby-blocks/</guid>
-      <link>http://proof.vimcasts.org/blog/2010/12/a-text-object-for-ruby-blocks/</link>
+      <guid>http://vimcasts.org/blog/2010/12/a-text-object-for-ruby-blocks/</guid>
+      <link>http://vimcasts.org/blog/2010/12/a-text-object-for-ruby-blocks/</link>
     </item>
     <item>
       <title>Refining search patterns with the command-line window</title>
@@ -1116,8 +1116,8 @@ The class itself covers similar material to before.&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">28</media:category>
       <enclosure url="http://media.vimcasts.org/videos/28/commandline_window.ogv" length="10505095" type="video/ogg"/>
       <pubDate>Sun, 21 Nov 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/refining-search-patterns-with-the-command-line-window/</guid>
-      <link>http://proof.vimcasts.org/episodes/refining-search-patterns-with-the-command-line-window/</link>
+      <guid>http://vimcasts.org/episodes/refining-search-patterns-with-the-command-line-window/</guid>
+      <link>http://vimcasts.org/episodes/refining-search-patterns-with-the-command-line-window/</link>
     </item>
     <item>
       <title>ArrrrCamp presentation: Vim - walking without crutches</title>
@@ -1125,8 +1125,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 01 Nov 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2010/11/arrrrcamp-presentation-vim---walking-without-crutches/</guid>
-      <link>http://proof.vimcasts.org/blog/2010/11/arrrrcamp-presentation-vim---walking-without-crutches/</link>
+      <guid>http://vimcasts.org/blog/2010/11/arrrrcamp-presentation-vim---walking-without-crutches/</guid>
+      <link>http://vimcasts.org/blog/2010/11/arrrrcamp-presentation-vim---walking-without-crutches/</link>
     </item>
     <item>
       <title>Working title: Practical Vim</title>
@@ -1134,8 +1134,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 
 </description>
       <pubDate>Mon, 01 Nov 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2010/11/working-title-practical-vim/</guid>
-      <link>http://proof.vimcasts.org/blog/2010/11/working-title-practical-vim/</link>
+      <guid>http://vimcasts.org/blog/2010/11/working-title-practical-vim/</guid>
+      <link>http://vimcasts.org/blog/2010/11/working-title-practical-vim/</link>
     </item>
     <item>
       <title>Synchronizing plugins with git submodules and pathogen</title>
@@ -1145,8 +1145,8 @@ The class itself covers similar material to before.&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">27</media:category>
       <enclosure url="http://media.vimcasts.org/videos/27/sync_with_git.ogv" length="19428011" type="video/ogg"/>
       <pubDate>Tue, 12 Oct 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/</guid>
-      <link>http://proof.vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/</link>
+      <guid>http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/</guid>
+      <link>http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/</link>
     </item>
     <item>
       <title>Bubbling text</title>
@@ -1156,8 +1156,8 @@ The class itself covers similar material to before.&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">26</media:category>
       <enclosure url="http://media.vimcasts.org/videos/26/bubble_selection.ogv" length="8959885" type="video/ogg"/>
       <pubDate>Tue, 05 Oct 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/bubbling-text/</guid>
-      <link>http://proof.vimcasts.org/episodes/bubbling-text/</link>
+      <guid>http://vimcasts.org/episodes/bubbling-text/</guid>
+      <link>http://vimcasts.org/episodes/bubbling-text/</link>
     </item>
     <item>
       <title>Fill out the Vim user survey</title>
@@ -1167,8 +1167,8 @@ The class itself covers similar material to before.&lt;/p&gt;
 Drew&lt;/p&gt;
 </description>
       <pubDate>Fri, 01 Oct 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2010/10/vim-user-survey/</guid>
-      <link>http://proof.vimcasts.org/blog/2010/10/vim-user-survey/</link>
+      <guid>http://vimcasts.org/blog/2010/10/vim-user-survey/</guid>
+      <link>http://vimcasts.org/blog/2010/10/vim-user-survey/</link>
     </item>
     <item>
       <title>Mac Classic - a light colorscheme</title>
@@ -1176,8 +1176,8 @@ Drew&lt;/p&gt;
 
 </description>
       <pubDate>Tue, 28 Sep 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2010/09/mac-classic/</guid>
-      <link>http://proof.vimcasts.org/blog/2010/09/mac-classic/</link>
+      <guid>http://vimcasts.org/blog/2010/09/mac-classic/</guid>
+      <link>http://vimcasts.org/blog/2010/09/mac-classic/</link>
     </item>
     <item>
       <title>Creating colorschemes for Vim</title>
@@ -1187,8 +1187,8 @@ Drew&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">25</media:category>
       <enclosure url="http://media.vimcasts.org/videos/25/colorschemes.ogv" length="18548209" type="video/ogg"/>
       <pubDate>Tue, 28 Sep 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/creating-colorschemes-for-vim/</guid>
-      <link>http://proof.vimcasts.org/episodes/creating-colorschemes-for-vim/</link>
+      <guid>http://vimcasts.org/episodes/creating-colorschemes-for-vim/</guid>
+      <link>http://vimcasts.org/episodes/creating-colorschemes-for-vim/</link>
     </item>
     <item>
       <title>Updating your vimrc file on the fly</title>
@@ -1198,8 +1198,8 @@ Drew&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">24</media:category>
       <enclosure url="http://media.vimcasts.org/videos/24/vimrc_on_the_fly.ogv" length="2922294" type="video/ogg"/>
       <pubDate>Sun, 18 Jul 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/</guid>
-      <link>http://proof.vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/</link>
+      <guid>http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/</guid>
+      <link>http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/</link>
     </item>
     <item>
       <title>Vimcasts on vacation</title>
@@ -1207,8 +1207,8 @@ Drew&lt;/p&gt;
 
 </description>
       <pubDate>Sun, 18 Jul 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/announcements/2010/07/vimcasts-on-vacation/</guid>
-      <link>http://proof.vimcasts.org/announcements/2010/07/vimcasts-on-vacation/</link>
+      <guid>http://vimcasts.org/announcements/2010/07/vimcasts-on-vacation/</guid>
+      <link>http://vimcasts.org/announcements/2010/07/vimcasts-on-vacation/</link>
     </item>
     <item>
       <title>Converting HAML to ERB with Vim macros</title>
@@ -1218,8 +1218,8 @@ Drew&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">23</media:category>
       <enclosure url="http://media.vimcasts.org/videos/23/haml_to_erb.ogv" length="11656496" type="video/ogg"/>
       <pubDate>Thu, 08 Jul 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/converting-haml-to-erb-with-vim-macros/</guid>
-      <link>http://proof.vimcasts.org/episodes/converting-haml-to-erb-with-vim-macros/</link>
+      <guid>http://vimcasts.org/episodes/converting-haml-to-erb-with-vim-macros/</guid>
+      <link>http://vimcasts.org/episodes/converting-haml-to-erb-with-vim-macros/</link>
     </item>
     <item>
       <title>Vimcasts adopts Flattr for micropayments</title>
@@ -1227,8 +1227,8 @@ Drew&lt;/p&gt;
 
 </description>
       <pubDate>Thu, 08 Jul 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2010/07/vimcasts-adopts-flattr-for-micropayments/</guid>
-      <link>http://proof.vimcasts.org/blog/2010/07/vimcasts-adopts-flattr-for-micropayments/</link>
+      <guid>http://vimcasts.org/blog/2010/07/vimcasts-adopts-flattr-for-micropayments/</guid>
+      <link>http://vimcasts.org/blog/2010/07/vimcasts-adopts-flattr-for-micropayments/</link>
     </item>
     <item>
       <title>Vimcasts now available on Boxee</title>
@@ -1236,8 +1236,8 @@ Drew&lt;/p&gt;
 
 </description>
       <pubDate>Tue, 06 Jul 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2010/07/vimcasts-now-available-on-boxee/</guid>
-      <link>http://proof.vimcasts.org/blog/2010/07/vimcasts-now-available-on-boxee/</link>
+      <guid>http://vimcasts.org/blog/2010/07/vimcasts-now-available-on-boxee/</guid>
+      <link>http://vimcasts.org/blog/2010/07/vimcasts-now-available-on-boxee/</link>
     </item>
     <item>
       <title>Selecting columns with visual block mode</title>
@@ -1247,8 +1247,8 @@ Drew&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">22</media:category>
       <enclosure url="http://media.vimcasts.org/videos/22/visual_block.ogv" length="5721437" type="video/ogg"/>
       <pubDate>Sun, 20 Jun 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/selecting-columns-with-visual-block-mode/</guid>
-      <link>http://proof.vimcasts.org/episodes/selecting-columns-with-visual-block-mode/</link>
+      <guid>http://vimcasts.org/episodes/selecting-columns-with-visual-block-mode/</guid>
+      <link>http://vimcasts.org/episodes/selecting-columns-with-visual-block-mode/</link>
     </item>
     <item>
       <title>Converting markdown to structured HTML with a macro</title>
@@ -1258,8 +1258,8 @@ Drew&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">21</media:category>
       <enclosure url="http://media.vimcasts.org/videos/21/markdown_macro.ogv" length="14625008" type="video/ogg"/>
       <pubDate>Wed, 02 Jun 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/converting-markdown-to-structured-html-with-a-macro/</guid>
-      <link>http://proof.vimcasts.org/episodes/converting-markdown-to-structured-html-with-a-macro/</link>
+      <guid>http://vimcasts.org/episodes/converting-markdown-to-structured-html-with-a-macro/</guid>
+      <link>http://vimcasts.org/episodes/converting-markdown-to-structured-html-with-a-macro/</link>
     </item>
     <item>
       <title>Running Vim within IRB</title>
@@ -1269,8 +1269,8 @@ Drew&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">20</media:category>
       <enclosure url="http://media.vimcasts.org/videos/20/irb_and_vim.ogv" length="6114279" type="video/ogg"/>
       <pubDate>Sun, 16 May 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/running-vim-within-irb/</guid>
-      <link>http://proof.vimcasts.org/episodes/running-vim-within-irb/</link>
+      <guid>http://vimcasts.org/episodes/running-vim-within-irb/</guid>
+      <link>http://vimcasts.org/episodes/running-vim-within-irb/</link>
     </item>
     <item>
       <title>Spell checking</title>
@@ -1280,8 +1280,8 @@ Drew&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">19</media:category>
       <enclosure url="http://media.vimcasts.org/videos/19/spell_checking.ogv" length="7475923" type="video/ogg"/>
       <pubDate>Mon, 10 May 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/spell-checking/</guid>
-      <link>http://proof.vimcasts.org/episodes/spell-checking/</link>
+      <guid>http://vimcasts.org/episodes/spell-checking/</guid>
+      <link>http://vimcasts.org/episodes/spell-checking/</link>
     </item>
     <item>
       <title>Formatting text with par</title>
@@ -1291,8 +1291,8 @@ Drew&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">18</media:category>
       <enclosure url="http://media.vimcasts.org/videos/18/formatting_with_par.ogv" length="7937415" type="video/ogg"/>
       <pubDate>Mon, 03 May 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/formatting-text-with-par/</guid>
-      <link>http://proof.vimcasts.org/episodes/formatting-text-with-par/</link>
+      <guid>http://vimcasts.org/episodes/formatting-text-with-par/</guid>
+      <link>http://vimcasts.org/episodes/formatting-text-with-par/</link>
     </item>
     <item>
       <title>SyntaxHighlighter Vimscript brush and Blackboard theme</title>
@@ -1300,8 +1300,8 @@ Drew&lt;/p&gt;
 
 </description>
       <pubDate>Thu, 29 Apr 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2010/04/syntaxhighlighter-vimscript-brush-and-blackboard-theme/</guid>
-      <link>http://proof.vimcasts.org/blog/2010/04/syntaxhighlighter-vimscript-brush-and-blackboard-theme/</link>
+      <guid>http://vimcasts.org/blog/2010/04/syntaxhighlighter-vimscript-brush-and-blackboard-theme/</guid>
+      <link>http://vimcasts.org/blog/2010/04/syntaxhighlighter-vimscript-brush-and-blackboard-theme/</link>
     </item>
     <item>
       <title>Hard wrapping text</title>
@@ -1311,8 +1311,8 @@ Drew&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">17</media:category>
       <enclosure url="http://media.vimcasts.org/videos/17/hard_wrapping_text.ogv" length="12559067" type="video/ogg"/>
       <pubDate>Mon, 26 Apr 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/hard-wrapping-text/</guid>
-      <link>http://proof.vimcasts.org/episodes/hard-wrapping-text/</link>
+      <guid>http://vimcasts.org/episodes/hard-wrapping-text/</guid>
+      <link>http://vimcasts.org/episodes/hard-wrapping-text/</link>
     </item>
     <item>
       <title>Soft wrapping text</title>
@@ -1322,8 +1322,8 @@ Drew&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">16</media:category>
       <enclosure url="http://media.vimcasts.org/videos/16/soft_wrap.ogv" length="9675588" type="video/ogg"/>
       <pubDate>Tue, 20 Apr 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/soft-wrapping-text/</guid>
-      <link>http://proof.vimcasts.org/episodes/soft-wrapping-text/</link>
+      <guid>http://vimcasts.org/episodes/soft-wrapping-text/</guid>
+      <link>http://vimcasts.org/episodes/soft-wrapping-text/</link>
     </item>
     <item>
       <title>The file explorer</title>
@@ -1333,8 +1333,8 @@ Drew&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">15</media:category>
       <enclosure url="http://media.vimcasts.org/videos/15/the_file_explorer.ogv" length="9156710" type="video/ogg"/>
       <pubDate>Mon, 12 Apr 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/the-file-explorer/</guid>
-      <link>http://proof.vimcasts.org/episodes/the-file-explorer/</link>
+      <guid>http://vimcasts.org/episodes/the-file-explorer/</guid>
+      <link>http://vimcasts.org/episodes/the-file-explorer/</link>
     </item>
     <item>
       <title>The :edit command</title>
@@ -1344,8 +1344,8 @@ Drew&lt;/p&gt;
       <media:category scheme="urn:boxee:episode">14</media:category>
       <enclosure url="http://media.vimcasts.org/videos/14/the_edit_command.ogv" length="7333302" type="video/ogg"/>
       <pubDate>Mon, 05 Apr 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/the-edit-command/</guid>
-      <link>http://proof.vimcasts.org/episodes/the-edit-command/</link>
+      <guid>http://vimcasts.org/episodes/the-edit-command/</guid>
+      <link>http://vimcasts.org/episodes/the-edit-command/</link>
     </item>
     <item>
       <title>Short form URLs for episodes</title>
@@ -1355,8 +1355,8 @@ episodes archive with the trailing path &lt;a href="http://vimcasts.org/episodes
 
 </description>
       <pubDate>Thu, 01 Apr 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/blog/2010/04/short-form-urls-for-episodes/</guid>
-      <link>http://proof.vimcasts.org/blog/2010/04/short-form-urls-for-episodes/</link>
+      <guid>http://vimcasts.org/blog/2010/04/short-form-urls-for-episodes/</guid>
+      <link>http://vimcasts.org/blog/2010/04/short-form-urls-for-episodes/</link>
     </item>
     <item>
       <title>Cleaning up with Vim</title>
@@ -1368,8 +1368,8 @@ episodes archive with the trailing path &lt;a href="http://vimcasts.org/episodes
       <media:category scheme="urn:boxee:episode">13</media:category>
       <enclosure url="http://media.vimcasts.org/videos/13/cleaning_up.ogv" length="1724552" type="video/ogg"/>
       <pubDate>Thu, 01 Apr 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/cleaning-up-with-vim/</guid>
-      <link>http://proof.vimcasts.org/episodes/cleaning-up-with-vim/</link>
+      <guid>http://vimcasts.org/episodes/cleaning-up-with-vim/</guid>
+      <link>http://vimcasts.org/episodes/cleaning-up-with-vim/</link>
     </item>
     <item>
       <title>Modal editing: undo, redo and repeat</title>
@@ -1379,8 +1379,8 @@ episodes archive with the trailing path &lt;a href="http://vimcasts.org/episodes
       <media:category scheme="urn:boxee:episode">12</media:category>
       <enclosure url="http://media.vimcasts.org/videos/12/modal_editing.ogv" length="6943276" type="video/ogg"/>
       <pubDate>Sun, 28 Mar 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/modal-editing-undo-redo-and-repeat/</guid>
-      <link>http://proof.vimcasts.org/episodes/modal-editing-undo-redo-and-repeat/</link>
+      <guid>http://vimcasts.org/episodes/modal-editing-undo-redo-and-repeat/</guid>
+      <link>http://vimcasts.org/episodes/modal-editing-undo-redo-and-repeat/</link>
     </item>
     <item>
       <title>Using the changelist and jumplist</title>
@@ -1390,8 +1390,8 @@ episodes archive with the trailing path &lt;a href="http://vimcasts.org/episodes
       <media:category scheme="urn:boxee:episode">11</media:category>
       <enclosure url="http://media.vimcasts.org/videos/11/changelist_and_jumplist.ogv" length="6286432" type="video/ogg"/>
       <pubDate>Tue, 23 Mar 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/using-the-changelist-and-jumplist/</guid>
-      <link>http://proof.vimcasts.org/episodes/using-the-changelist-and-jumplist/</link>
+      <guid>http://vimcasts.org/episodes/using-the-changelist-and-jumplist/</guid>
+      <link>http://vimcasts.org/episodes/using-the-changelist-and-jumplist/</link>
     </item>
     <item>
       <title>Creating the Vimcasts logo as ASCII art</title>
@@ -1401,8 +1401,8 @@ episodes archive with the trailing path &lt;a href="http://vimcasts.org/episodes
       <media:category scheme="urn:boxee:episode">10</media:category>
       <enclosure url="http://media.vimcasts.org/videos/10/ascii_art.ogv" length="8082719" type="video/ogg"/>
       <pubDate>Sun, 14 Mar 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/creating-the-vimcasts-logo-as-ascii-art/</guid>
-      <link>http://proof.vimcasts.org/episodes/creating-the-vimcasts-logo-as-ascii-art/</link>
+      <guid>http://vimcasts.org/episodes/creating-the-vimcasts-logo-as-ascii-art/</guid>
+      <link>http://vimcasts.org/episodes/creating-the-vimcasts-logo-as-ascii-art/</link>
     </item>
     <item>
       <title>How to use tabs</title>
@@ -1412,8 +1412,8 @@ episodes archive with the trailing path &lt;a href="http://vimcasts.org/episodes
       <media:category scheme="urn:boxee:episode">9</media:category>
       <enclosure url="http://media.vimcasts.org/videos/9/how_to_use_tabs.ogv" length="8326271" type="video/ogg"/>
       <pubDate>Mon, 08 Mar 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/how-to-use-tabs/</guid>
-      <link>http://proof.vimcasts.org/episodes/how-to-use-tabs/</link>
+      <guid>http://vimcasts.org/episodes/how-to-use-tabs/</guid>
+      <link>http://vimcasts.org/episodes/how-to-use-tabs/</link>
     </item>
     <item>
       <title>Working with tabs</title>
@@ -1423,8 +1423,8 @@ episodes archive with the trailing path &lt;a href="http://vimcasts.org/episodes
       <media:category scheme="urn:boxee:episode">8</media:category>
       <enclosure url="http://media.vimcasts.org/videos/8/working_with_tabs.ogv" length="4395212" type="video/ogg"/>
       <pubDate>Sun, 28 Feb 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/working-with-tabs/</guid>
-      <link>http://proof.vimcasts.org/episodes/working-with-tabs/</link>
+      <guid>http://vimcasts.org/episodes/working-with-tabs/</guid>
+      <link>http://vimcasts.org/episodes/working-with-tabs/</link>
     </item>
     <item>
       <title>Working with windows</title>
@@ -1434,8 +1434,8 @@ episodes archive with the trailing path &lt;a href="http://vimcasts.org/episodes
       <media:category scheme="urn:boxee:episode">7</media:category>
       <enclosure url="http://media.vimcasts.org/videos/7/working_with_windows.ogv" length="7579846" type="video/ogg"/>
       <pubDate>Sun, 21 Feb 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/working-with-windows/</guid>
-      <link>http://proof.vimcasts.org/episodes/working-with-windows/</link>
+      <guid>http://vimcasts.org/episodes/working-with-windows/</guid>
+      <link>http://vimcasts.org/episodes/working-with-windows/</link>
     </item>
     <item>
       <title>Working with buffers</title>
@@ -1445,8 +1445,8 @@ episodes archive with the trailing path &lt;a href="http://vimcasts.org/episodes
       <media:category scheme="urn:boxee:episode">6</media:category>
       <enclosure url="http://media.vimcasts.org/videos/6/buffers_listed_and_hidden.ogv" length="4834378" type="video/ogg"/>
       <pubDate>Sun, 14 Feb 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/working-with-buffers/</guid>
-      <link>http://proof.vimcasts.org/episodes/working-with-buffers/</link>
+      <guid>http://vimcasts.org/episodes/working-with-buffers/</guid>
+      <link>http://vimcasts.org/episodes/working-with-buffers/</link>
     </item>
     <item>
       <title>Indentation commands</title>
@@ -1456,8 +1456,8 @@ episodes archive with the trailing path &lt;a href="http://vimcasts.org/episodes
       <media:category scheme="urn:boxee:episode">5</media:category>
       <enclosure url="http://media.vimcasts.org/videos/5/indentation_commands.ogv" length="11178639" type="video/ogg"/>
       <pubDate>Mon, 08 Feb 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/indentation-commands/</guid>
-      <link>http://proof.vimcasts.org/episodes/indentation-commands/</link>
+      <guid>http://vimcasts.org/episodes/indentation-commands/</guid>
+      <link>http://vimcasts.org/episodes/indentation-commands/</link>
     </item>
     <item>
       <title>Tidying whitespace</title>
@@ -1467,8 +1467,8 @@ episodes archive with the trailing path &lt;a href="http://vimcasts.org/episodes
       <media:category scheme="urn:boxee:episode">4</media:category>
       <enclosure url="http://media.vimcasts.org/videos/4/tidying_whitespace.ogv" length="4917979" type="video/ogg"/>
       <pubDate>Sun, 24 Jan 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/tidying-whitespace/</guid>
-      <link>http://proof.vimcasts.org/episodes/tidying-whitespace/</link>
+      <guid>http://vimcasts.org/episodes/tidying-whitespace/</guid>
+      <link>http://vimcasts.org/episodes/tidying-whitespace/</link>
     </item>
     <item>
       <title>Whitespace preferences and filetypes</title>
@@ -1478,8 +1478,8 @@ episodes archive with the trailing path &lt;a href="http://vimcasts.org/episodes
       <media:category scheme="urn:boxee:episode">3</media:category>
       <enclosure url="http://media.vimcasts.org/videos/3/whitespace_preferences_and_filetypes.ogv" length="5436234" type="video/ogg"/>
       <pubDate>Sun, 17 Jan 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/whitespace-preferences-and-filetypes/</guid>
-      <link>http://proof.vimcasts.org/episodes/whitespace-preferences-and-filetypes/</link>
+      <guid>http://vimcasts.org/episodes/whitespace-preferences-and-filetypes/</guid>
+      <link>http://vimcasts.org/episodes/whitespace-preferences-and-filetypes/</link>
     </item>
     <item>
       <title>Tabs and Spaces</title>
@@ -1489,8 +1489,8 @@ episodes archive with the trailing path &lt;a href="http://vimcasts.org/episodes
       <media:category scheme="urn:boxee:episode">2</media:category>
       <enclosure url="http://media.vimcasts.org/videos/2/tabs_and_spaces.ogv" length="8675696" type="video/ogg"/>
       <pubDate>Tue, 05 Jan 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/tabs-and-spaces/</guid>
-      <link>http://proof.vimcasts.org/episodes/tabs-and-spaces/</link>
+      <guid>http://vimcasts.org/episodes/tabs-and-spaces/</guid>
+      <link>http://vimcasts.org/episodes/tabs-and-spaces/</link>
     </item>
     <item>
       <title>Show invisibles</title>
@@ -1500,8 +1500,8 @@ episodes archive with the trailing path &lt;a href="http://vimcasts.org/episodes
       <media:category scheme="urn:boxee:episode">1</media:category>
       <enclosure url="http://media.vimcasts.org/videos/1/show_invisibles.ogv" length="5036160" type="video/ogg"/>
       <pubDate>Mon, 04 Jan 2010 00:00:00 GMT</pubDate>
-      <guid>http://proof.vimcasts.org/episodes/show-invisibles/</guid>
-      <link>http://proof.vimcasts.org/episodes/show-invisibles/</link>
+      <guid>http://vimcasts.org/episodes/show-invisibles/</guid>
+      <link>http://vimcasts.org/episodes/show-invisibles/</link>
     </item>
   </channel>
 </rss>
