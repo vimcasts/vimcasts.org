@@ -28,7 +28,7 @@ If you've watched my screencasts, here on Vimcasts.org, then you'll be familiar 
 
 ![A simulation table from Practical Vim](http://vimcasts.org/images/buffer-simulation.png)
 
-After helping me with a technical review, Steven! RagnarÃ¶k had this to say:
+After helping me with a technical review, Steven! Ragnarök had this to say:
 
 > The simulation tables are hands-down *the best* example of an interactive editing session on paper
 

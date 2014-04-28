@@ -5,5 +5,5 @@
 %s/\Vâ€œ/“/ge
 %s/\Vâ€/”/ge
 %s/\VÂ£/£/ge
-%s/\VÃ˜redev/Øredev/ge
-%s/\VMalmÃ¶/Malmö/ge
+%s/\VÃ˜/Ø/ge
+%s/\VÃ¶/ö/ge

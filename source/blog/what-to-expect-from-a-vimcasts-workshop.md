@@ -61,7 +61,7 @@ The Vimcasts workshop won't teach you shallow VIM tricks - that you can find onl
   <p>
   I'm using the stuff I learned on a daily basis now (:args/:argdo FTW!) - it was an absolutely fantastic course.
   <br/>
-  <a href="http://felixge.de/">Felix GeisendÃ¶rfer</a>, <a href="https://twitter.com/felixge">@felixge</a>
+  <a href="http://felixge.de/">Felix Geisendörfer</a>, <a href="https://twitter.com/felixge">@felixge</a>
   </p>
 </blockquote>
 
