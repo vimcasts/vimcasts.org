@@ -5,7 +5,7 @@
   <% tags = visible_tags(current_page.tags, tag_visiblity_threshold) %>
   <% if tags.length > 0 %>
     <div class="metaheader">
-      <h3>Browse similar content by category:</h3>
+      <h3>Browse similar content</h3>
     </div>
     <%= partial 'category-list-item', locals: {items: tags} %>
   <% end %>
