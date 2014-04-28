@@ -99,16 +99,16 @@
               <% end %>
             </h1>
           </div>
-          <div class="strapline">
-            <% if content_for?(:header) %>
-              <%= yield_content :header %>
-            <% else %>
+          <% if content_for?(:header) %>
+            <%= yield_content :header %>
+          <% else %>
+            <div class="strapline">
               <h2>
               Learn Essential Vim&nbsp;Skills<br/>
               <small><a href="/about/">with&nbsp;Drew Neil, author of Practical&nbsp;Vim</a></small>
             </h2>
-            <% end %>
           </div>
+        <% end %>
         </div>
 
         <%= yield %>
