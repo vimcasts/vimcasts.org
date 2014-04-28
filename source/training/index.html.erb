@@ -4,20 +4,7 @@ title: Vimcasts - Free screencasts about the text editor Vim
 
 <% content_for :header do; end %>
 
-<div class="training-header">
-  <div class="strapline">
-    <h2>
-      Vim training: online,
-      <span class="nobr">in person,</span>
-      <span class="nobr">or in-house</span><br/>
-      <small>
-        Drew Neil has coached
-        <%= number_of_core_vim_attendees %>
-        people worldwide
-      </small>
-    </h2>
-  </div>
-</div>
+<%= partial "training-strapline" %>
 
 <%= partial "next-class" %>
 
