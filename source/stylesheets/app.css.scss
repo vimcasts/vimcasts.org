@@ -454,6 +454,18 @@ body.subscribe .section {
     font-size: 60%;
   }
 }
+.identity-row {
+  .strapline {
+    @media #{$medium-only} { margin-top: 1.5vw; }
+    @media #{$large-only} { margin-top: 2.5vw; }
+    @media #{$medium-up} {
+      text-align:right;
+      h2 {
+        font-size: $h1-font-size - rem-calc(10);
+      }
+    }
+  }
+}
 
 .latest-content {
   .latest-screencast {

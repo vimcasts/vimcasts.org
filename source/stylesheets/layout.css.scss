@@ -454,3 +454,17 @@ body.subscribe {
     }
   }
 }
+
+// logo and strapline
+.identity-row {
+  @include grid-row();
+  .logo {
+    @include grid-column($columns:4);
+  }
+  .strapline {
+    @include grid-column($columns:12);
+    @media #{$medium-up} {
+      @include grid-column($columns:7,$offset:1);
+    }
+  }
+}

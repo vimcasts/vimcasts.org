@@ -89,8 +89,8 @@
 
       <section class="main-section">
 
-        <div class="row identity-row">
-          <div id="logo" class="small-4 columns">
+        <div class="identity-row">
+          <div id="logo" class="logo">
             <h1>
               <% if current_page.url == "/" %>
                 <span>VimCasts.org</span>
@@ -99,14 +99,14 @@
               <% end %>
             </h1>
           </div>
-          <div class="small-7 small-offset-1 columns">
+          <div class="strapline">
             <% if content_for?(:header) %>
               <%= yield_content :header %>
             <% else %>
-            <h4 class="text-right">
+              <h2>
               Learn Essential Vim&nbsp;Skills<br/>
               <small><a href="/about/">with&nbsp;Drew Neil, author of Practical&nbsp;Vim</a></small>
-            </h4>
+            </h2>
             <% end %>
           </div>
         </div>
