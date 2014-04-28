@@ -41,7 +41,7 @@ module VimcastsHelper
   end
 
   def domain
-    environment == :development ? 'http://localhost:4567' : 'http://proof.vimcasts.org'
+    environment == :development ? 'http://localhost:4567' : 'http://vimcasts.org'
   end
 
   def transcript_for_episode(number)
