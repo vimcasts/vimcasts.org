@@ -24,12 +24,12 @@ $(document).ready(function() {
 
   // set up autocomplete
   $(".swiftype-search-input").swiftype({
-    engineKey: "Wdx4LxrBJv86q28yDA8A"
+    engineKey: "93GMPZWuwEM3vHyUwNGX"
   });
 
   // set up search
   $(".swiftype-search-input").swiftypeSearch({
-    engineKey: "Wdx4LxrBJv86q28yDA8A",
+    engineKey: "93GMPZWuwEM3vHyUwNGX",
     resultContainingElement: "#st-results-container",
     renderFunction: swiftypeRenderFunction
   });
