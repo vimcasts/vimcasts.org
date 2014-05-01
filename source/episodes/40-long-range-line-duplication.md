@@ -65,7 +65,7 @@ Copy line 9 and place a duplicate below line 16, to produce this:
 
 ### Normal mode solutions
 
-We start with a naÃ¯ve solution:
+We start with a naïve solution:
 
     kkkkkkk
     yy
