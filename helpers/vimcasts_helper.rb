@@ -20,7 +20,8 @@ module VimcastsHelper
   def article_type(article)
     {
       'blog' => 'article',
-      'episodes' => 'screencast'
+      'episodes' => 'screencast',
+      'announcements' => 'announcement'
     }[article.blog_options[:name]]
   end
 

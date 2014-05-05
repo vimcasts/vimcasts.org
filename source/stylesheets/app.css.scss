@@ -154,7 +154,8 @@ a.readmore {
 .categories section.article,
 .categories section.screencast,
 .episodes_index section.screencast,
-.episodes_page section.screencast {
+.episodes_page section.screencast,
+section.announcement {
   margin-bottom: $header-bottom-margin * 6;
   @media #{$medium-up} {
     margin-bottom: $header-bottom-margin * 10;
@@ -169,7 +170,7 @@ section.article, section.screencast, section.transcript {
   }
 }
 
-section.article {
+section.article, section.announcement {
   .title-row {
     position: relative;
     .pubdate {

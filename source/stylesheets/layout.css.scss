@@ -47,7 +47,7 @@
 
 
 // _article-listing - used for /episodes and /blog listings
-section.screencast, section.article, section.transcript {
+section.screencast, section.article, section.transcript, section.announcement {
   .title-row {
     @include grid-row();
     .title {
