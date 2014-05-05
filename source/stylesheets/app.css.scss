@@ -419,9 +419,16 @@ ul.off-canvas-list ul.dropdown {
 
 .pro-screencasts-image, .publications-image {
   text-align: center;
+  @media #{$medium-up} {
+    text-align: left;
+  }
 }
 .pro-screencasts-image img {
   max-width: 75px;
+  margin-top: 20px;
+  @media #{$medium-up} {
+    margin-top: 75px;
+  }
 }
 .publications-image img {
   max-width: 150px;
