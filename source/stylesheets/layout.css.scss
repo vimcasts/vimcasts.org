@@ -157,7 +157,7 @@ section.screencast, section.article, section.transcript, section.announcement {
     & > * {
       @include grid-column($columns:12);
     }
-    &>p, blockquote {
+    &>p, blockquote, ul {
       @media #{$medium-up} {
         @include grid-column($columns:10);
       }
@@ -175,7 +175,7 @@ section.screencast, section.article, section.transcript, section.announcement {
       & > * {
         @include grid-column($columns:12);
       }
-      &>p, blockquote {
+      &>p, blockquote, ul {
         @media #{$medium-up} {
           @include grid-column($columns:10);
         }
