@@ -20,6 +20,9 @@
     "source/blog/*": {
         "command": "article"
     },
+    "source/announcements/*": {
+        "command": "announcement"
+    },
     "source/episodes/*.md": {
         "command": "screencast",
         "alternate": "source/transcripts/%s/en.md"
