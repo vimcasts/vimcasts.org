@@ -10,6 +10,10 @@ set :markdown, fenced_code_blocks: true, smartypants: true
 
 I18n.enforce_available_locales = false
 
+activate :s3_sync do |s3|
+  s3.bucket = 'vimcasts.org'
+end
+
 ###
 # Blog settings
 ###
