@@ -4,7 +4,7 @@ source 'http://rubygems.org'
 
 gem "middleman"
 gem "middleman-blog", "~> 3.5.1"
-gem "middleman-gh-pages"
+gem 'middleman-s3_sync'
 gem "middleman-syntax"
 gem "nokogiri"
 gem "redcarpet"
