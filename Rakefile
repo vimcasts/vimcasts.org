@@ -73,10 +73,15 @@ namespace :data do
   end
 end
 
+desc 'Build the site locally'
+task :build do
+  system "bundle exec middleman build"
+end
+
 desc 'Publish this site to Amazon S3'
 task :publish do
   system "bundle exec middleman s3_sync"
 end
 
 desc 'Prepare, build, and publish to gh-pages'
-task :shipit => ["data:videos", :categories, :publish]
+task :shipit => ["data:videos", :categories, :build, :publish]
