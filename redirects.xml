@@ -72,4 +72,40 @@
         </Redirect>
     </RoutingRule>
 
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>classes/core-vim-live/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>training/core-vim/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>classes/core-vim/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>training/core-vim/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>classes/private-training/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>training/private/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>classes/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>training/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
 </RoutingRules>
