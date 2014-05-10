@@ -1,4 +1,3 @@
-require 'middleman-gh-pages'
 require 'json'
 
 desc 'List housekeeping chores'
@@ -72,6 +71,11 @@ namespace :data do
       open("data/videos.json", "w") { |file| file.write(resp.body) }
     end
   end
+end
+
+desc 'Publish this site to Amazon S3'
+task :publish do
+  system "bundle exec middleman s3_sync"
 end
 
 desc 'Prepare, build, and publish to gh-pages'

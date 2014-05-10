@@ -15,6 +15,7 @@ gem "builder", "~> 3.0"
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
 
+gem "rake"
 gem "pry"
 
 # For faster file watcher updates on Windows:
