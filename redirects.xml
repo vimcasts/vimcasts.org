@@ -1,0 +1,75 @@
+<RoutingRules>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>feeds/itunes/index.html</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>feeds/itunes.xml</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>feeds/itunes/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>feeds/itunes.xml</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>feeds/ogg/index.html</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>feeds/ogg.rss</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>feeds/ogg/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>feeds/ogg.rss</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>feeds/quicktime/index.html</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>feeds/quicktime.rss</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>feeds/quicktime/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>feeds/quicktime.rss</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>feeds/boxee-ogg/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>feeds/boxee-ogg.rss</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>feeds/boxee-quicktime/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>feeds/boxee-quicktime.rss</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+</RoutingRules>
