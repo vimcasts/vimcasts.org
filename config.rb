@@ -220,11 +220,6 @@ page "/transcripts/*/en.html", layout: "transcript"
 redirect "e/a.html", to: "/episodes/archive"
 redirect "transcripts/index.html", to: "/episodes/archive"
 
-redirect "classes/index.html", to: "/training"
-redirect "classes/core-vim/index.html", to: "/training/core-vim"
-redirect "classes/core-vim-live/index.html", to: "/training/core-vim"
-redirect "classes/private-training/index.html", to: "/training/private"
-
 ready do
 
   blog(:episodes).articles.each do |a|
@@ -244,10 +239,6 @@ ready do
 
   blog(:announcements).articles.each do |a|
     page a.path, layout: 'announcement'
-    # FIXME: this raises an error:
-    #   needs a date in its filename or frontmatter (RuntimeError)
-    # year, month = a.date.strftime('%Y %m').split(' ')
-    # redirect "blog/#{year}/#{month}/#{a.slug}/index.html", to: "/#{a.path}"
   end
 
 end
