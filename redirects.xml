@@ -108,4 +108,346 @@
         </Redirect>
     </RoutingRule>
 
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2014/01/upcoming-online-workshop-march-5th/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2014/01/upcoming-online-workshop-march-5th/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2014/01/20-group-discount-for-core-vim-class-january-edition/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2014/01/20-group-discount-for-core-vim-class-january-edition/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2014/01/upcoming-core-vim-class-london-february-14/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2014/01/upcoming-core-vim-class-london-february-14/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2013/12/upcoming-online-workshop-january-27th/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2013/12/upcoming-online-workshop-january-27th/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2013/11/stockholm-vim-meetup-core-vim-class/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2013/11/stockholm-vim-meetup-core-vim-class/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2013/11/upcoming-online-workshop-december-5th/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2013/11/upcoming-online-workshop-december-5th/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2013/10/book-a-private-vim-class-for-your-team/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2013/10/book-a-private-vim-class-for-your-team/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2013/09/upcoming-online-workshop-october-28th/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2013/09/upcoming-online-workshop-october-28th/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2013/09/change-of-pricing-for-core-vim-class/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2013/09/change-of-pricing-for-core-vim-class/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2013/09/upcoming-workshop-london-october-13/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2013/09/upcoming-workshop-london-october-13/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2013/07/upcoming-workshop-berlin-2/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2013/07/upcoming-workshop-berlin-2/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2013/06/upcoming-online-workshop-july-10th/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2013/06/upcoming-online-workshop-july-10th/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2013/06/macbook-pro-for-sale/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2013/06/macbook-pro-for-sale/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2013/04/upcoming-online-workshop-june-3rd/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2013/04/upcoming-online-workshop-june-3rd/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2013/03/subscribe-to-the-vimcasts-org-monthly-newsletter/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2013/03/subscribe-to-the-vimcasts-org-monthly-newsletter/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2013/03/upcoming-online-workshop-april-16th/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2013/03/upcoming-online-workshop-april-16th/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2013/02/get-30-off-practical-vim/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2013/02/get-30-off-practical-vim/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2013/02/upcoming-online-workshop-march-4th/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2013/02/upcoming-online-workshop-march-4th/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2013/01/vimlondon-january-meetup-speak-vim---operators-and-motions/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2013/01/vimlondon-january-meetup-speak-vim---operators-and-motions/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2013/01/new-years-discount-on-vim-masterclass/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2013/01/new-years-discount-on-vim-masterclass/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2012/12/upcoming-online-workshop-january-14th/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2012/12/upcoming-online-workshop-january-14th/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2012/11/upcoming-workshop-online/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2012/11/upcoming-workshop-online/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2012/10/vim-london-still-alive-in-spite-of-meetup-com/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2012/10/vim-london-still-alive-in-spite-of-meetup-com/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2012/10/command-line-special-40-discount-on-practical-vim/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2012/10/command-line-special-40-discount-on-practical-vim/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2012/10/upcoming-workshop-london-october-12/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2012/10/upcoming-workshop-london-october-12/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2012/10/upcoming-workshop-bristol/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2012/10/upcoming-workshop-bristol/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2012/09/upcoming-workshop-boulder-co/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2012/09/upcoming-workshop-boulder-co/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2012/08/status-of-us-tour/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2012/08/status-of-us-tour/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2012/06/upcoming-workshops-london-paris-amsterdam-and-barcelona/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2012/06/upcoming-workshops-london-paris-amsterdam-and-barcelona/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2012/06/upcoming-workshops-edinburgh-glasgow-and-newcastle/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2012/06/upcoming-workshops-edinburgh-glasgow-and-newcastle/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2012/05/upcoming-workshop-berlin/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2012/05/upcoming-workshop-berlin/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2012/05/upcoming-workshop-krakow/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2012/05/upcoming-workshop-krakow/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2012/05/on-tour-this-summer-vim-masterclass-workshop/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2012/05/on-tour-this-summer-vim-masterclass-workshop/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2012/04/upcoming-workshop-london/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2012/04/upcoming-workshop-london/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2012/03/upcoming-workshops-berlin-and-st-louis/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2012/03/upcoming-workshops-berlin-and-st-louis/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2012/02/vim-workshop-wroclaw/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2012/02/vim-workshop-wroclaw/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2011/10/bring-a-vimcasts-workshop-to-your-town/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2011/10/bring-a-vimcasts-workshop-to-your-town/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
+    <RoutingRule>
+        <Condition>
+            <KeyPrefixEquals>blog/2010/07/vimcasts-on-vacation/</KeyPrefixEquals>
+        </Condition>
+        <Redirect>
+            <ReplaceKeyPrefixWith>announcements/2010/07/vimcasts-on-vacation/</ReplaceKeyPrefixWith>
+        </Redirect>
+    </RoutingRule>
+
 </RoutingRules>
