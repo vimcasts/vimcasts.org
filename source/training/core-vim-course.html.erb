@@ -8,7 +8,7 @@ title: Core Vim Course - At Your Own Pace
   </div>
 </div>
 
-<div class="row">
+<div class="training-leadtext">
   <div class="enlarged small-12 medium-10 columns">
     <p>
       I've taught my Core Vim Class to more than 600 people online and in person. Now, for the first time, I'm making available the core learning resources &ndash; the Vim Dojo and 10 videos &ndash; for purchase, so you can study Vim at your own pace, in your own time.
@@ -17,38 +17,61 @@ title: Core Vim Course - At Your Own Pace
 </div>
 
 <div class="row">
-  <div class="small-12 medium-7 columns">
+  <div class="small-12 columns">
     <h3>Why take the course?</h3>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 medium-6 columns">
 
-    <ul>
+    <ul class="veryspaced">
       <li>by combining learning and doing through the videos and dojo you develop a deeper understanding of Core Vim principles</li>
       <li>By learning at your own pace you can take as much or as littel time as you need to get to grips with these vital Vim skills</li>
-      <li>Over the course of study, I'll gradually tease out a set of best practices so you'll build a ddeper knowledge of Vim rather than just assembling a list of quick-fix solutions</li>
+      <li>Over the course of study, I'll gradually tease out a set of best practices so you'll build a deeper knowledge of Vim rather than just assembling a list of quick-fix solutions</li>
     </ul>
+  </div>
+  <div class="small-12 medium-5 medium-offset-1 columns">
+
+    <div class="passport">
+      <img src="/images/drewneil-mugshot.jpeg"/>
+      <p>The Core Vim Course was produced by <a href="/about/" class="nobr">Drew Neil.</a></p>
+    </div>
+
   </div>
 </div>
 
-<div class="row">
+<div class="row howitworks">
   <div class="small-12 columns">
     <h3>How does the course work?</h3>
   </div>
+</div>
 
-  <div class="small-12 medium-5 columns">
+
+<div class="row">
+  <div class="small-12 medium-6 columns">
     <h4>Watch the video</h4>
     <p>
       Each video introduces a problem that you're then encouragewd to try out in the Vim Dojo. Once you've had a go at solving the problem, you come back to the video, which will summarise as few possible approaches, comparing strengths and weaknesses. As the course unfolds, som patterns will emerge and I'll use these to derive a set of best-practices. There are ten videos in total, running from 5 to 15 minutes.
     </p>
   </div>
+  <div class="small-12 medium-5 medium-offset-1 columns">
+    <img src="/images/training/core-vim-course-video-1.png"/>
+  </div>
+</div>
 
-  <div class="small-12 medium-5 medium-offset-2 columns">
+<div class="row">
+  <div class="small-12 medium-6 columns">
     <h4>Learn by doing</h4>
     <p>
       The Vim Dojo contains a set of 25 specially selected exercises that are designed to show you some best practices for using Vim. I believve that you learn best by doing, so the Vim dojo lets you get your hands dirty. I've specifically chosen exerciese that work together to gradyually built your knowledge of Vim and your confidence in your skills.
     </p>
   </div>
+  <div class="small-12 medium-5 medium-offset-1 columns">
+    <img src="/images/training/core-vim-course-video-2.png"/>
+  </div>
 </div>
 
-<div class="row">
+<div class="standout">
   <blockquote class="testimonial">
     I'm using the stuff I learned on a daily basis now (:args/:argdo FTW!) - it was an absolutely fantastic course.
     <a href="https://twitter.com/felixge">Felix Geisendörfer</a>
@@ -56,18 +79,25 @@ title: Core Vim Course - At Your Own Pace
 </div>
 
 <div class="row">
-  <div class="small-12 large-8 columns">
+  <div class="small-12 large-6 columns">
     <h3>Who is the course for?</h3>
     <p>This Core Vim masterclass is aimed at the intermediate user who wants to level up.</p>
-    <ul>
+    <ul class="spaced">
       <li>you are familiar with the basics (not sure? Go through <a href="http://vimdoc.sourceforge.net/htmldoc/usr_01.html#tutor">vimtutor</a>)</li>
       <li>you have moved beyond using the arrow keys (not sure how? <a href="http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/">Read habit making, habit breaking</a>)</li>
       <li>you feel that something is holding you back from reaching the next level</li>
+      <li>you like to learn at your own pace</li>
     </ul>
+  </div>
+  <div class="small-12 large-5 large-offset-1 columns">
+    <% link_to "/training/core-vim" do %>
+      <h3>Prefer to join a class?</h3>
+      <p>Learn everything that matters in 4 hours.</p>
+    <% end %>
   </div>
 </div>
 
-<div class="row">
+<div class="standout">
   <blockquote class="testimonial">
     If you believe in learning how to master tools you use every day in your job as a programmer, learn your editor inside and out. Drew's Vim master class is the gateway to becoming really proficient with Vim.
     <a href="http://www.littlehart.net/atthekeyboard">Chris Hartjes</a>
@@ -79,7 +109,7 @@ title: Core Vim Course - At Your Own Pace
     <h3>What you will learn</h3>
   </div>
   <div class="small-12 large-6 columns">
-    <ul>
+    <ul class="spaced">
       <li>learn how to <strong>repeat the last change</strong> using the dot command</li>
       <li>meet <strong>the dot formula</strong> – a 2 step process with 1000 uses</li>
       <li>move your cursor wherever you want it to go <strong>with as little as 2 keystrokes</strong></li>
@@ -99,11 +129,17 @@ title: Core Vim Course - At Your Own Pace
   </div>
 </div>
 
+<div class="row standout">
+  <div class="small-12 columns">
+    <blockquote class="text-center">Come and see how Vim can blow your mind, <span class="nobr">or your money back</span></blockquote>
+  </div>
+</div>
+
 <div class="row">
   <div class="small-12 columns">
     <h3>Pricing</h3>
-    <p>The Core Vim Course is priced at $100, which includes:</p>
-    <ul>
+    <p>The Core Vim Course is priced at <strong>$<%= price_of_core_vim_course %></strong>, which includes:</p>
+    <ul class="spaced">
       <li>10 videos</li>
       <li>25 exercises</li>
       <li>PDF of the slides used in the video</li>
@@ -113,11 +149,14 @@ title: Core Vim Course - At Your Own Pace
 
 <div class="row">
 <div class="panel clearfix">
-  <p class="small-12 large-6 columns">Learn everything that matters in this Core Vim Course - at your own pace</p>
-  <div class="small-12 large-5 large-offset-1 columns">
-    <a href="http://transactions.sendowl.com/products/47171/E591DC22/purchase" rel="nofollow" ><img src="http://assets.sendowl.com/images/buttons/buy-now-green.png" /></a>
+  <div class="small-12 large-6 columns">
+    <h4>Level-up your Vim &ndash; at your own pace</h4>
   </div>
-
+  <div class="small-12 large-5 large-offset-1 columns">
+    <a class="button expand" href="http://transactions.sendowl.com/products/57722/9475ADEC/purchase" rel="nofollow" >
+      Buy Now
+    </a>
+  </div>
 </div>
 </div>
 

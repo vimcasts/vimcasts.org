@@ -11,6 +11,10 @@ module VimcastsHelper
     data.has_key?(:core_vim) ? data.core_vim.alumni : '500'
   end
 
+  def price_of_core_vim_course
+    '120'
+  end
+
   def link_to_article_tags(taglist)
     taglist.map do |tag|
       link_to tag[:name], "/categories/#{tag[:slug]}"

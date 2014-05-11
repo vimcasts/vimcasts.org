@@ -523,7 +523,7 @@ body.subscribe .section {
   margin-top: 2em;
   margin-bottom: 2em;
   blockquote {
-  border-style: none;
+
   font-family: Garamond, Georgia, serif;
   font-size: $h5-font-size;
   @media #{$medium-up} {
@@ -533,4 +533,24 @@ body.subscribe .section {
   //   color: $body-font-color;
   // }
 }
+}
+
+.training-leadtext {
+  margin-bottom: 1em;
+}
+
+.passport {
+  border: 1px solid black;
+  background-color: white;	
+  padding: 5px;
+  width: 212px;
+}
+ul.spaced li {
+  margin-bottom: $header-bottom-margin;
+}
+ul.veryspaced li {
+  margin-bottom: $paragraph-margin-bottom;
+}
+.howitworks {
+  margin-top: $header-bottom-margin * 6;
 }
