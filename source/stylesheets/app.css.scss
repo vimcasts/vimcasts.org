@@ -11,12 +11,12 @@ header {
 
 }
 
-body.proof {
-  .row {
-    background-image: url('/images/grid-960.png');
-    background-size: 100%;
-  }
-}
+// body.proof {
+//   .row {
+//     background-image: url('/images/grid-960.png');
+//     background-size: 100%;
+//   }
+// }
 
 .nobr { white-space: nowrap; }
 
@@ -509,4 +509,26 @@ body.subscribe .section {
   .description {
     margin-bottom: $header-bottom-margin*4;
   }
+}
+
+.testimonial {
+  font-family: Garamond, Georgia, serif;
+  &, & p {
+    color: $body-font-color;
+  }
+}
+.standout {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  blockquote {
+  border-style: none;
+  font-family: Garamond, Georgia, serif;
+  font-size: $h5-font-size;
+  @media #{$medium-up} {
+    font-size: $h4-font-size;
+  }
+  // &, & p {
+  //   color: $body-font-color;
+  // }
+}
 }
