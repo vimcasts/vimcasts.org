@@ -515,6 +515,8 @@ body.subscribe .section {
   font-family: Garamond, Georgia, serif;
   &, & p {
     color: $body-font-color;
+    font-style: italic;
+    strong { font-style: normal; }
   }
 }
 .standout {
