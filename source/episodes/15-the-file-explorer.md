@@ -55,7 +55,7 @@ There are a handful of useful commands for opening the file explorer - either in
        <td>in split at directory of current file</td>
    </tr>
    <tr>
-       <td><code>:Ve</code></td>
+       <td><code>:Vex</code></td>
        <td><code>:Vexplore</code></td>
        <td>in vertical split at directory of current file</td>
    </tr>
