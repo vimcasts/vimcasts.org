@@ -1,9 +1,9 @@
 ---
 - :name: plugins
   :slug: plugins
-  :videos: 13
+  :videos: 14
   :articles: 4
-  :total: 17
+  :total: 18
 - :name: Editing text
   :slug: editing-text
   :videos: 15
@@ -94,8 +94,8 @@
   :videos: 0
   :articles: 5
   :total: 5
-- :name: Navigating a project
-  :slug: navigating-a-project
+- :name: Insert mode
+  :slug: insert-mode
   :videos: 5
   :articles: 0
   :total: 5
@@ -114,11 +114,11 @@
   :videos: 0
   :articles: 5
   :total: 5
-- :name: Insert mode
-  :slug: insert-mode
-  :videos: 4
+- :name: Navigating a project
+  :slug: navigating-a-project
+  :videos: 5
   :articles: 0
-  :total: 4
+  :total: 5
 - :name: plaintext
   :slug: plaintext
   :videos: 4
