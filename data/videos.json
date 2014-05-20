@@ -1,4 +1,15 @@
 {
+  "66": {
+    "duration": 343,
+    "quicktime": {
+      "url": "http://media.vimcasts.org/videos/66/ultisnips-basics.m4v",
+      "size": 11262740
+    },
+    "ogg": {
+      "url": "http://media.vimcasts.org/videos/66/ultisnips-basics.ogv",
+      "size": 7736396
+    }
+  },
   "65": {
     "duration": 244,
     "quicktime": {
