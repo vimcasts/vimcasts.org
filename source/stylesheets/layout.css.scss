@@ -468,3 +468,17 @@ body.subscribe {
     }
   }
 }
+ 
+
+.training-leadtext {
+  @include grid-row();
+}
+.standout {
+  @include grid-row();
+  .testimonial {
+    @include  grid-column($columns:12);
+    @media #{$medium-up} {
+      @include  grid-column($columns:8, $offset:2);
+    }
+  }
+}

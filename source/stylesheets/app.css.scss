@@ -11,12 +11,12 @@ header {
 
 }
 
-body.proof {
-  .row {
-    background-image: url('/images/grid-960.png');
-    background-size: 100%;
-  }
-}
+// body.proof {
+//   .row {
+//     background-image: url('/images/grid-960.png');
+//     background-size: 100%;
+//   }
+// }
 
 .nobr { white-space: nowrap; }
 
@@ -509,4 +509,58 @@ body.subscribe .section {
   .description {
     margin-bottom: $header-bottom-margin*4;
   }
+}
+
+.testimonial {
+  font-family: Garamond, Georgia, serif;
+  &, & p {
+    color: $body-font-color;
+    font-style: italic;
+    strong { font-style: normal; }
+  }
+}
+.standout {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  blockquote {
+
+  font-family: Garamond, Georgia, serif;
+  font-size: $h5-font-size;
+  @media #{$medium-up} {
+    font-size: $h4-font-size;
+  }
+  // &, & p {
+  //   color: $body-font-color;
+  // }
+}
+}
+
+.training-leadtext {
+  margin-bottom: 1em;
+}
+
+.passport {
+  border: 1px solid black;
+  background-color: white;	
+  padding: 5px;
+  width: 212px;
+}
+ul.spaced li {
+  margin-bottom: $header-bottom-margin;
+}
+ul.veryspaced li {
+  margin-bottom: $paragraph-margin-bottom;
+}
+.howitworks {
+  margin-top: $header-bottom-margin * 6;
+}
+h4.call-to-action {
+  margin-bottom: $header-bottom-margin * 3;
+}
+.upsell-private-class {
+  margin-top: $header-bottom-margin * 6;
+}
+
+.buy-course-now {
+  margin-bottom: 0;
 }
