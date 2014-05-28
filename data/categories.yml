@@ -9,15 +9,15 @@
   :videos: 15
   :articles: 0
   :total: 15
+- :name: meta
+  :slug: meta
+  :videos: 0
+  :articles: 14
+  :total: 14
 - :name: registers
   :slug: registers
   :videos: 10
   :articles: 3
-  :total: 13
-- :name: meta
-  :slug: meta
-  :videos: 0
-  :articles: 13
   :total: 13
 - :name: Copy and Paste
   :slug: copy-and-paste
