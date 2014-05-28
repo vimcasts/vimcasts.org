@@ -417,7 +417,7 @@ body.subscribe {
 
 .training-signpost {
   @include grid-row();
-  .private-class, .core-vim-class {
+  .private-class, .core-vim-class, .core-vim-course {
     @include grid-column($columns:12);
     @media #{$medium-only} {
       max-width: 40rem;
