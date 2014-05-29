@@ -1,9 +1,9 @@
 ---
 - :name: plugins
   :slug: plugins
-  :videos: 14
+  :videos: 15
   :articles: 4
-  :total: 18
+  :total: 19
 - :name: Editing text
   :slug: editing-text
   :videos: 15
@@ -79,25 +79,25 @@
   :videos: 0
   :articles: 6
   :total: 6
-- :name: Managing your workspace
-  :slug: managing-your-workspace
-  :videos: 5
-  :articles: 1
+- :name: Insert mode
+  :slug: insert-mode
+  :videos: 6
+  :articles: 0
   :total: 6
 - :name: vimgrep
   :slug: vimgrep
   :videos: 4
   :articles: 2
   :total: 6
+- :name: Managing your workspace
+  :slug: managing-your-workspace
+  :videos: 5
+  :articles: 1
+  :total: 6
 - :name: Essays
   :slug: essays
   :videos: 0
   :articles: 5
-  :total: 5
-- :name: Insert mode
-  :slug: insert-mode
-  :videos: 5
-  :articles: 0
   :total: 5
 - :name: autocommands
   :slug: autocommands
@@ -109,15 +109,15 @@
   :videos: 5
   :articles: 0
   :total: 5
-- :name: Appearances
-  :slug: appearances
-  :videos: 0
-  :articles: 5
-  :total: 5
 - :name: Navigating a project
   :slug: navigating-a-project
   :videos: 5
   :articles: 0
+  :total: 5
+- :name: Appearances
+  :slug: appearances
+  :videos: 0
+  :articles: 5
   :total: 5
 - :name: plaintext
   :slug: plaintext
