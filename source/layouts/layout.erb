@@ -22,6 +22,7 @@
 
     <%= stylesheet_link_tag "vimcasts" %>
     <%= javascript_include_tag "modernizr" %>
+    <%= yield_content :document_head %>
   </head>
 
 <%= partial "ascii-logo" %>
