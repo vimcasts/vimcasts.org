@@ -90,5 +90,5 @@ this demonstration I use registers in two ways:
 [s]: http://www.vim.org/scripts/script.php?script_id=1697
 [to]: http://vimdoc.sourceforge.net/htmldoc/motion.html#text-objects
 [record]: http://vimdoc.sourceforge.net/htmldoc/repeat.html#q
-[template]: http://vimcasts.org/episodes/converting-markdown-to-structured-html-with-a-macro/template.html
-[source]: http://vimcasts.org/episodes/converting-markdown-to-structured-html-with-a-macro/pecha-kucha-script.md
+[template]: https://gist.githubusercontent.com/nelstrom/3ecb4ed6c5a2338ec6ac/raw/9f0721befbcd05bddfb84570d9304b7b1ab96189/template.html 
+[source]: https://gist.githubusercontent.com/nelstrom/5c1024ec097a33d3dd2b/raw/35d4f7cb37cf0814541182e287a0f36ac31652a8/pecha-kucha-script.md 
