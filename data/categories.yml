@@ -1,9 +1,9 @@
 ---
 - :name: plugins
   :slug: plugins
-  :videos: 15
+  :videos: 16
   :articles: 4
-  :total: 19
+  :total: 20
 - :name: Editing text
   :slug: editing-text
   :videos: 15
@@ -41,9 +41,9 @@
   :total: 8
 - :name: Visual mode
   :slug: visual-mode
-  :videos: 7
+  :videos: 8
   :articles: 0
-  :total: 7
+  :total: 8
 - :name: workflow
   :slug: workflow
   :videos: 7
