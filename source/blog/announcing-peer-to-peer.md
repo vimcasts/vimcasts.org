@@ -13,7 +13,7 @@ READMORE
 Here are some highlights from the Tom Stuart session:
 
 <div class="flex-video">
-<iframe src="//fast.wistia.net/embed/iframe/mvu6xgxx7f?videoFoam=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="640" height="360"></iframe><script src="//fast.wistia.net/assets/external/iframe-api-v1.js"></script>
+<iframe src="//fast.wistia.net/embed/iframe/7sbqrpj9ud?videoFoam=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="640" height="360"></iframe><script src="//fast.wistia.net/assets/external/iframe-api-v1.js"></script>
 </div>
 
 Tom Stuart happens to be a Vim user who knows Ruby, but *Peer to Peer* isn't just about Vim and Ruby.
