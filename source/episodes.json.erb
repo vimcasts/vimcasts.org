@@ -1,6 +1,6 @@
 {
     "episodes": [
-        <% blog(:episodes).articles.reverse.each do |page| %>{
+        <% blog(:episodes).articles.reverse.each_with_index do |page, i| %>{
             <% episode = Episode.new(page) %>
             "title": "<%= page.title %>",
             "episode_number": "<%= episode.number %>",
@@ -21,7 +21,7 @@
                 "seconds": "<%= episode.quicktime.duration %>",
                 "contentType": "video/x-m4v"
             }
-        },
+        }<%= "," unless blog(:episodes).articles.size-1 == i %>
         <% end %>
     ]
 }
