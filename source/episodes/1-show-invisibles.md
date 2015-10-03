@@ -45,27 +45,27 @@ Unicode characters can be inserted by typing `ctrl-vu` followed by the 4 digit h
         <th>Name</th>
     </tr>
     <tr>
-        <td class="large">Â¬</td>
+        <td class="large">¬</td>
         <td>U+00AC</td>
         <td>not sign</td>
     </tr>
     <tr>
-        <td class="large">â–¸</td>
+        <td class="large">▸</td>
         <td>U+25B8</td>
         <td>black right-pointing small triangle</td>
     </tr>
     <tr>
-        <td class="large">â˜ </td>
+        <td class="large">☠</td>
         <td>U+2620</td>
         <td>skull and crossbones</td>
     </tr>
     <tr>
-        <td class="large">â¤</td>
+        <td class="large">❤</td>
         <td>U+2764</td>
         <td>heavy black heart</td>
     </tr>
     <tr>
-        <td class="large">â€½</td>
+        <td class="large">‽</td>
         <td>U+203d</td>
         <td>interobang</td>
     </tr>
