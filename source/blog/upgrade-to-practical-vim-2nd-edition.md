@@ -12,10 +12,10 @@ READMORE
 ### How to claim your free upgrade
 
 * [log in][login] to your Pragmatic Bookshelf account
-* go to the [product page for the 2nd edition][dnvim2]
+* go to the [My Bookshelf][bookshelf] page
 * click the "**Redeem**" button
 
-The 2nd edition will be added to [your bookshelf][bookshelf] for free. Enjoy it!
+The 2nd edition will be added to your bookshelf for free. Enjoy it!
 
 ### What if I got the ebook elsewhere?
 
