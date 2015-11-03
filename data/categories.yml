@@ -4,15 +4,15 @@
   :videos: 16
   :articles: 5
   :total: 21
-- :name: Editing text
-  :slug: editing-text
-  :videos: 15
-  :articles: 0
-  :total: 15
 - :name: meta
   :slug: meta
   :videos: 0
   :articles: 15
+  :total: 15
+- :name: Editing text
+  :slug: editing-text
+  :videos: 15
+  :articles: 0
   :total: 15
 - :name: registers
   :slug: registers
@@ -29,8 +29,8 @@
   :videos: 6
   :articles: 3
   :total: 9
-- :name: Ex commands
-  :slug: ex-commands
+- :name: Visual mode
+  :slug: visual-mode
   :videos: 8
   :articles: 0
   :total: 8
@@ -39,18 +39,23 @@
   :videos: 6
   :articles: 2
   :total: 8
-- :name: Visual mode
-  :slug: visual-mode
+- :name: Ex commands
+  :slug: ex-commands
   :videos: 8
   :articles: 0
   :total: 8
-- :name: search
-  :slug: search
-  :videos: 7
-  :articles: 0
+- :name: Practical Vim
+  :slug: practical-vim
+  :videos: 0
+  :articles: 7
   :total: 7
 - :name: Regular expressions
   :slug: regular-expressions
+  :videos: 7
+  :articles: 0
+  :total: 7
+- :name: search
+  :slug: search
   :videos: 7
   :articles: 0
   :total: 7
@@ -69,20 +74,20 @@
   :videos: 6
   :articles: 0
   :total: 6
-- :name: Practical Vim
-  :slug: practical-vim
-  :videos: 0
-  :articles: 6
+- :name: Insert mode
+  :slug: insert-mode
+  :videos: 6
+  :articles: 0
   :total: 6
 - :name: Essays
   :slug: essays
   :videos: 0
   :articles: 6
   :total: 6
-- :name: Insert mode
-  :slug: insert-mode
-  :videos: 6
-  :articles: 0
+- :name: vimgrep
+  :slug: vimgrep
+  :videos: 4
+  :articles: 2
   :total: 6
 - :name: Whitespace
   :slug: whitespace
@@ -94,11 +99,11 @@
   :videos: 5
   :articles: 1
   :total: 6
-- :name: vimgrep
-  :slug: vimgrep
-  :videos: 4
-  :articles: 2
-  :total: 6
+- :name: Appearances
+  :slug: appearances
+  :videos: 0
+  :articles: 5
+  :total: 5
 - :name: autocommands
   :slug: autocommands
   :videos: 5
@@ -109,23 +114,18 @@
   :videos: 5
   :articles: 0
   :total: 5
-- :name: Appearances
-  :slug: appearances
-  :videos: 0
-  :articles: 5
-  :total: 5
 - :name: Navigating a project
   :slug: navigating-a-project
   :videos: 5
   :articles: 0
   :total: 5
-- :name: Formatting text
-  :slug: formatting-text
+- :name: plaintext
+  :slug: plaintext
   :videos: 4
   :articles: 0
   :total: 4
-- :name: plaintext
-  :slug: plaintext
+- :name: Formatting text
+  :slug: formatting-text
   :videos: 4
   :articles: 0
   :total: 4
