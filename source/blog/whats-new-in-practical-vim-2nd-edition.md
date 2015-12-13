@@ -52,9 +52,9 @@ I've updated **Tip 84 - Operate on a Complete Search Match** to use the gn comma
 I also covered this technique in Vimcasts [Episode 63 - Operating on search matches using gn](/e/63).
 
 [lastpat]: https://github.com/kana/vim-textobj-lastpat
-[offset]: http://vimdoc.sourceforge.net/htmldoc/pattern.html#search-offset
+[offset]: http://vimhelp.appspot.com/pattern.txt.html#search-offset
 [110]: https://github.com/vim/vim/commit/ba2d44f33863e115b1858ab572829f403ad21883
-[gn]: http://vimdoc.sourceforge.net/htmldoc/visual.html#gn
+[gn]: http://vimhelp.appspot.com/visual.txt.html#gn
 
 ### Find and replace across multiple files
 
@@ -158,6 +158,4 @@ If only there was some convenient way of making Vim do a find and replace across
 
 [new-help]: http://vimhelp.appspot.com/
 [old-help]: http://vimdoc.sourceforge.net/htmldoc/index.html
-[new-star]: http://vimhelp.appspot.com/pattern.txt.html#star
-[old-star]: http://vimdoc.sourceforge.net/htmldoc/pattern.html#star
 [cfdo]: http://vimhelp.appspot.com/quickfix.txt.html#%3Acfdo
