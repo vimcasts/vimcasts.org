@@ -53,7 +53,7 @@ That'll work, but I want to suggest a way of doing it [without leader mappings][
 ### Set up formatprg to filter selection through pandoc
 
 In [episode 18](/e/18) of Vimcasts, I demonstrated how the external `par` command could be used for the task of formatting plain text files with hard-wrapping.
-We could use a similar technique here.
+As long as we're using Vim version 8.0.0179 (or newer), we can use a similar technique here.
 
 The [`gq`][gq] operation runs the selected text through the filter specified by [`formatprg`][formatprg].
 This autocommand sets `formatprg` for HTML files to use our pandoc pipeline:
@@ -62,7 +62,7 @@ This autocommand sets `formatprg` for HTML files to use our pandoc pipeline:
 if has("autocmd")
   let pandoc_pipeline  = "pandoc --from=html --to=markdown"
   let pandoc_pipeline .= " | pandoc --from=markdown --to=html"
-  autocmd FileType html let &formatprg=pandoc_pipeline
+  autocmd FileType html let &l:formatprg=pandoc_pipeline
 endif
 ```
 
@@ -70,36 +70,8 @@ That means we can filter the current line through pandoc by pressing `gqq`.
 Or we can filter the entire buffer by pressing `gg` then `gqG`.
 Or we can switch to visual mode, and `gq` will filter only the selected lines.
 
-<h3 id='update'>Update: use `formatexpr` instead</h3>
-
-As domo pointed out in the comments, the `formatprg` setting can only be set globally. That's unfortunate! [Kana suggested using `formatexpr` instead][kana], so I came up with this alternative:
-
-```viml
-function! FormatprgLocal(filter)
-if !empty(v:char)
-  return 1
-else
-  let l:command = v:lnum.','.(v:lnum+v:count-1).'!'.a:filter
-  echo l:command
-  execute l:command
-endif
-endfunction
-
-if has("autocmd")
-  let pandoc_pipeline  = "pandoc --from=html --to=markdown"
-  let pandoc_pipeline .= " | pandoc --from=markdown --to=html"
-  autocmd FileType html setlocal formatexpr=FormatprgLocal(pandoc_pipeline)
-endif
-```
-
-However, this approach has a setback of its own. According to Sung Pae in the discussion for [this patch to convert formatprg to a global-local option][every-stroke]:
-
-> formatexpr` is called on every keystroke in Insert mode, even when
-> `formatoptions` is empty. This suggests to me that the primary purpose of
-> `formatexpr` is for fine-grained control over automatic formatting, rather
-> than to be a simple, on demand paragraph formatter like `fmt` or `par`
-
-Sung Pae's patch makes `formatprg` global-local, which means that it could be configured independently for differnt filetypes. It would be great if that patch could be folded into core Vim!
+**Update**: When I originally published this episode, I assumed that the `formatprg` option could be set for each buffer independently.
+I was wrong then, but this is now possible since [this patch by Sung Pae][179] was accepted into Vim core.
 
 ### Further reading
 
@@ -120,5 +92,4 @@ Sung Pae's patch makes `formatprg` global-local, which means that it could be co
 [gq]: http://vimdoc.sourceforge.net/htmldoc/change.html#gq
 [follow-my-leader]: http://vimcasts.org/blog/2014/02/follow-my-leader/
 [bang]: http://vimdoc.sourceforge.net/htmldoc/various.html#:!
-[every-stroke]: https://groups.google.com/forum/#!msg/vim_dev/cFK1UjstyAk/mreb2H4VCtoJ
-[kana]: https://twitter.com/kana1/status/435717948435484672
+[179]: https://github.com/vim/vim/commit/9be7c04e6cd5b0facedcb56b09a5bcfc339efe03
