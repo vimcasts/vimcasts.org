@@ -4,10 +4,10 @@
 :tags: ruby
 ---
 
-I've been collaborating with [thoughtbot][] to produce three screencasts about [Navigating Ruby Files with Vim][vimruby]. There's 40 minutes of material in total, and it's available from today. You can purchase these videos for $19, but they will also be available to thoughtbot Prime subscribers. Check out [learn.thoughtbot.com](https://learn.thoughtbot.com/products/21-navigating-ruby-files-with-vim) for more details.
+I've been collaborating with [thoughtbot][] to produce three screencasts about [Navigating Ruby Files with Vim][vimruby]. There's 40 minutes of material in total, and it's available from today. You can purchase these videos for $19, but they will also be available to thoughtbot Prime subscribers. Check out [learn.thoughtbot.com](https://thoughtbot.com/upcase/navigating-ruby-files-with-vim) for more details.
 
 [thoughtbot]: http://www.thoughtbot.com/
-[vimruby]: https://learn.thoughtbot.com/products/21-navigating-ruby-files-with-vim
+[vimruby]: https://thoughtbot.com/upcase/navigating-ruby-files-with-vim
 
 
 READMORE
