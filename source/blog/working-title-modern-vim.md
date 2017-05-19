@@ -1,6 +1,6 @@
 ---
 :title: "I'm writing a new book: Modern Vim"
-:date: 2017/05/17
+:date: 2017/05/18
 :tags: Modern Vim
 ---
 
