@@ -1,4 +1,7 @@
 {
+    "*": {
+        "start": "bundle exec middleman server"
+    },
     "config.rb": {
         "command": "config"
     },
