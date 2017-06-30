@@ -144,8 +144,8 @@ Vim's built in `:diffget` and `:diffput` commands work a bit like `:Gread` and `
 * [`:help do`][do]
 * [`:help dp`][dp]
 
-[gi1]: http://book.git-scm.com/1_the_git_index.html
-[gi7]: http://book.git-scm.com/7_the_git_index.html
+[gi1]: http://schacon.github.io/gitbook/1_the_git_index.html
+[gi7]: http://schacon.github.io/gitbook/7_the_git_index.html
 [solarized]: http://ethanschoonover.com/solarized
 [dfp]: http://vimdoc.sourceforge.net/htmldoc/diff.html#:diffput
 [dp]: http://vimdoc.sourceforge.net/htmldoc/diff.html#dp
