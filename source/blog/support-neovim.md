@@ -1,7 +1,7 @@
 --- 
 :title: Support Neovim!
 :date: 2014/03/03
-
+:tags: Neovim
 ---
 
 I've sometimes wondered what could lure me to switch from Vim to another text editor.
