@@ -12,7 +12,7 @@ With the fugitive plugin, you're not limited to just working with files in your 
 
 *This is the penultimate of a five part series on fugitive.vim.*
 
-[gito]: http://schacon.github.io/gitbook/1_the_git_object_model.html
+[gito]: http://shafiulazam.com/gitbook/1_the_git_object_model.html
 
 
 READMORE
@@ -101,8 +101,8 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 * [`:help fugitive-mappings`][mappings]
 * [`:help fugitive-statusline`][statusline]
 
-[gito]: http://schacon.github.io/gitbook/1_the_git_object_model.html
-[gbr]: http://schacon.github.io/gitbook/7_browsing_git_objects.html
+[gito]: http://shafiulazam.com/gitbook/1_the_git_object_model.html
+[gbr]: http://shafiulazam.com/gitbook/7_browsing_git_objects.html
 [colonH]: http://vimdoc.sourceforge.net/htmldoc/cmdline.html#::h
 [percent]: http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_%
 [15]: /e/15
