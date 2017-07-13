@@ -39,7 +39,7 @@ I've set this up to use the same `ctrl-shift-p` shortcut as TextMate. Now, I can
 
 ### Default colors
 
-When you reset the syntax highlighting, it doesn't just set everything to black and white. Instead, it uses the default colors defined in the file `$VIMRUNTIME/syntax/syncolor.vim`. If you're curious, you can open this file in Vim by running `:edit $VIMRUNTIM/syntax/syncolor.vim`. 
+When you reset the syntax highlighting, it doesn't just set everything to black and white. Instead, it uses the default colors defined in the file `$VIMRUNTIME/syntax/syncolor.vim`. If you're curious, you can open this file in Vim by running `:edit $VIMRUNTIME/syntax/syncolor.vim`. 
 
 ### Styling Vim's interface
 
