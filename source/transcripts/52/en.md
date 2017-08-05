@@ -77,7 +77,7 @@ Quick demo: running `yiw` populates both default and yank registers:
 Running `"_diw` "double-quote-underscore dee eye doubleyou" deletes the text, leaving the default register unchanged:
 
     :reg "0
-    "" obstacleToBeRemoved
+    "" collection
     "0 collection
 
 Now we can go ahead and paste from the default register, using `P` "big P" without having to prefix any register.
