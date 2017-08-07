@@ -81,7 +81,7 @@ In theory it should be safe to include the argument `-c 'quit'` in the profiling
 * [Profiling vim startup time question on StackOverflow][so]
 * [Github discussion around the markdown-folding issue][issue]
 
-[usevim]: http://usevim.com/2012/04/18/startuptime/
+[usevim]: https://medium.com/usevim/improving-vims-startup-time-beb3f83cbfe8
 [issue]: https://github.com/nelstrom/vim-markdown-folding/issues/1
 [so]: http://stackoverflow.com/a/8347244/128850
 [h]: http://vimdoc.sourceforge.net/htmldoc/repeat.html#profiling

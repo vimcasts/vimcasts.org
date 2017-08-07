@@ -75,4 +75,4 @@ In diff mode, Vim provides two handy motions for getting around: `[c` and `]c` j
 [w_v]: http://vimdoc.sourceforge.net/htmldoc/windows.html#CTRL-W_v
 [pbpaste]: https://developer.apple.com/library/mac/documentation/Darwin/Reference/Manpages/man1/pbpaste.1.html
 [vnew]: http://vimdoc.sourceforge.net/htmldoc/windows.html#:vnew
-[usevim]: http://usevim.com/2012/03/21/git-and-vimdiff/
+[usevim]: https://medium.com/usevim/git-and-vimdiff-a762d72ced86

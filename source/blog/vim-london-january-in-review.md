@@ -63,7 +63,7 @@ Alex introduced the concept of operator-pending mode, and showed how `:omap` can
 [alex-slides]: https://speakerdeck.com/aryoung/vim-london-custom-motions
 [camelcasemotion]: http://www.vim.org/scripts/script.php?script_id=1905
 [seek]: https://github.com/goldfeld/vim-seek
-[instict]: http://usevim.com/2013/01/30/instinct/
+[instict]: https://medium.com/usevim/vim-instinct-and-muscle-memory-c86f70b6110f
 
 ###More
 

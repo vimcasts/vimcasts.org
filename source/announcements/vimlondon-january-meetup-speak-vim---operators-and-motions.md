@@ -27,6 +27,6 @@ I'm looking forward to this event, because the subject of Vim's Grammar fascinat
 [alex]: http://twitter.com/alex_young
 [lanyrd]: http://lanyrd.com/2013/vimlondon/
 [fc]: https://www.fundingcircle.com/
-[motions]: http://usevim.com/2013/01/16/custom-motions/
+[motions]: https://medium.com/usevim/custom-motions-part-1-e5be6d745d23
 [surround]: https://github.com/tpope/vim-surround
 [easymotion]: https://github.com/Lokaltog/vim-easymotion
