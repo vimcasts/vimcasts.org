@@ -34,7 +34,7 @@
           <video poster="<%= episode.poster_url %>"
             controls="controls" preload="none" class="placeholder"
             id="episode_<%= episode.number %>_placeholder">
-            <% if episode.format == '720p' %>
+            <% if episode.format == 'mp4' %>
               <source src="<%= episode.mp4.url %>" type="video/mp4" />
             <% else %>
               <source src="<%= episode.ogg.url %>" type="video/ogg" />
@@ -49,7 +49,7 @@
         <div class="download-videos">
           <h4>Download</h4>
           <ul class="downloads-list">
-            <% if episode.format == '720p' %>
+            <% if episode.format == 'mp4' %>
               <li class="mp4">
                 <a href="<%= episode.mp4.url %>">MP4</a>
                 <span class="stats"><%= number_to_human_size(episode.mp4.size) %></span>

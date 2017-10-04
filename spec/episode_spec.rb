@@ -64,9 +64,9 @@ describe Episode do
   end
 
   describe 'mp4' do
-    it "has format:720p" do
-      episode = Episode.new(mp4: {url: 'http://media.vimcasts.org/videos/69/packages.mp4'})
-      assert_equal '720p', episode.format
+    it "has format:mp4" do
+      episode = Episode.new('mp4' => {'url' => 'http://media.vimcasts.org/videos/69/packages.mp4'})
+      assert_equal 'mp4', episode.format
     end
 
     it 'looks up video metadata indexed by number' do
@@ -77,6 +77,11 @@ describe Episode do
   end
 
   describe 'ogg' do
+    it "has format:quicktime-ogg" do
+      episode = Episode.new(ogg: {url: 'http://media.vimcasts.org/videos/1/show_invisibles.ogv'})
+      assert_equal 'quicktime-ogg', episode.format
+    end
+
     it 'maps to a VideoFile object' do
       episode = Episode.new(ogg: {url: 'http://media.vimcasts.org/videos/1/show_invisibles.ogv'})
       assert_equal VideoFile, episode.ogg.class
