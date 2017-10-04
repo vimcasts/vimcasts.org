@@ -40,7 +40,7 @@ set runtimepath+=~/.vim/arbitrary/demo-plugin
 ```
 
 Vim has supported plugins since version 6, but until recently there was no convenient way of managing the `runtimepath`.
-You had to do it by hand, or you had to install a plugin to automate the runtimepath management.
+You had to do it by hand, or you had to install a plugin such as [pathogen][] to automate the runtimepath management.
 With version 8, Vim released the packages feature to fill this gap.
 
 ### What's a Package?
@@ -52,6 +52,60 @@ By convention, you create packages within a `.vim/pack` directory.
 Your package should contain a subdirectory called `start`, which is where you install the plugins that you want to load when Vim starts up.
 
 You can create as many packages as you like. For example, you might create one package called `bundle` where you install plugins written by other people. Then you might create another package called `myplugins` where you keep the plugins that you maintain by yourself.
+
+### Creating a 'bundle' package
+
+Create a package called `bundle` where you'll install your plugins:
+
+```
+mkdir -p ~/.vim/pack/bundle/start
+mkdir -p ~/.vim/pack/bundle/opt
+```
+
+Any plugins that you install in the `start` directory will be added to your `runtimepath` when Vim starts up.
+
+The `opt` directory is for optional plugins. You can add these to your runtime path when you need them by using the `:packadd` command.
+
+### Installing plugins to the 'bundle' package
+
+Let's install some tpope plugins: [surround][], [unimpaired][], and [scriptease][].
+Change to the `bundle/start` directory, and clone the surround and unimpaired repositories there:
+
+```
+cd ~/.vim/pack/bundle/start
+git clone https://github.com/tpope/vim-surround.git
+git clone https://github.com/tpope/vim-unimpaired.git
+```
+
+If you start a fresh instance of Vim, these plugins will be available for you to use right away.
+(If you're already running an instance of Vim, you'll have to restart to use these plugins.)
+
+Next, clone the scriptease plugin to the `bundle/opt` directory:
+
+```
+cd ~/.vim/pack/bundle/opt
+git clone https://github.com/tpope/vim-scriptease.git
+```
+
+If you start a fresh instance of Vim, you won't be able to use the scriptease plugin right away. First, you have to activate it by running:
+
+```
+:packadd vim-scriptease
+```
+
+That adds the plugin to your `runtimepath` and makes the features of scriptease available to you. (To see for yourself, try running `:Scriptnames`.)
+
+### Indexing plugin documentation
+
+Most plugins include documentation, which you can view using the same `:help` command that you use for Vim's built-in documentation.
+Before you can look up the documentation for a newly installed plugin, you have to index its documentation.
+You can do so by running:
+
+```
+:helptags ~/.vim/pack
+```
+
+You only need to do this one time after installing (or updating) a plugin.
 
 ### Further reading
 
@@ -66,3 +120,7 @@ You can create as many packages as you like. For example, you might create one p
 [helptags]: https://neovim.io/doc/user/helphelp.html#%3Ahelptags
 [packload-two-steps]: https://neovim.io/doc/user/repeat.html#packload-two-steps
 [rtp]: https://neovim.io/doc/user/options.html#%27rtp%27
+[pathogen]: https://github.com/tpope/vim-pathogen
+[surround]: https://github.com/tpope/vim-surround
+[unimpaired]: https://github.com/tpope/vim-unimpaired
+[scriptease]: https://github.com/tpope/vim-scriptease
