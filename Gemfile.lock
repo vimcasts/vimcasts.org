@@ -104,6 +104,7 @@ GEM
       rouge (~> 1.0)
     mime-types (2.2)
     mini_portile (0.5.2)
+    minitest (5.7.0)
     multi_json (1.8.4)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -165,6 +166,7 @@ DEPENDENCIES
   middleman-livereload (~> 3.1.0)
   middleman-s3_sync
   middleman-syntax
+  minitest
   nokogiri
   pry
   rake

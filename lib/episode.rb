@@ -2,7 +2,7 @@ require 'json'
 
 class VideoFile
 
-  attr_reader :url, :size, :duration
+  attr_reader :url, :size, :duration, :blank
 
   def initialize(key, data, metadata_registry='')
     @registry = metadata_registry
@@ -12,9 +12,14 @@ class VideoFile
       @duration = data["duration"]
     elsif index = data[:number]
       metadata = load_video_metadata[index.to_s]
-      @url = metadata[key.to_s]["url"]
-      @size = metadata[key.to_s]["size"]
+      if metadata[key.to_s]
+        @url = metadata[key.to_s]["url"]
+        @size = metadata[key.to_s]["size"]
+      end
       @duration = metadata["duration"]
+    end
+    if url.nil?
+      @blank = true
     end
   end
 
@@ -31,7 +36,7 @@ end
 
 class Episode
 
-  attr_accessor :poster, :number, :ogg, :quicktime
+  attr_accessor :poster, :number, :ogg, :quicktime, :mp4, :format
 
   def initialize(options={}, metadata_registry='data/videos.json')
     if options.respond_to?(:data)
@@ -40,8 +45,13 @@ class Episode
     @poster = options[:poster]
     @duration = options[:duration].to_i
     @number = (options[:number] || -1).to_s
+    @format = 'quicktime-ogg'
+    @mp4 = VideoFile.new(:mp4, options, metadata_registry)
     @ogg = VideoFile.new(:ogg, options, metadata_registry)
     @quicktime = VideoFile.new(:quicktime, options, metadata_registry)
+    if !@mp4.blank
+      @format = 'mp4'
+    end
   end
 
   def poster_url
