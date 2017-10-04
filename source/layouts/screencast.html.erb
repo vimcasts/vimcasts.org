@@ -34,8 +34,12 @@
           <video poster="<%= episode.poster_url %>"
             controls="controls" preload="none" class="placeholder"
             id="episode_<%= episode.number %>_placeholder">
-            <source src="<%= episode.ogg.url %>" type="video/ogg" />
-            <source src="<%= episode.quicktime.url %>" type="video/x-m4v" />
+            <% if episode.format == '720p' %>
+              <source src="<%= episode.mp4.url %>" type="video/mp4" />
+            <% else %>
+              <source src="<%= episode.ogg.url %>" type="video/ogg" />
+              <source src="<%= episode.quicktime.url %>" type="video/x-m4v" />
+            <% end %>
           </video>
         </div>
       </div>
@@ -45,14 +49,21 @@
         <div class="download-videos">
           <h4>Download</h4>
           <ul class="downloads-list">
-            <li class="ogg">
-              <a href="<%= episode.ogg.url %>">OGG</a>
-              <span class="stats"><%= number_to_human_size(episode.ogg.size) %></span>
-            </li>
-            <li class="quicktime">
-              <a href="<%= episode.quicktime.url %>">Quicktime</a>
-              <span class="stats"><%= number_to_human_size(episode.quicktime.size) %></span>
-            </li>
+            <% if episode.format == '720p' %>
+              <li class="mp4">
+                <a href="<%= episode.mp4.url %>">MP4</a>
+                <span class="stats"><%= number_to_human_size(episode.mp4.size) %></span>
+              </li>
+            <% else %>
+              <li class="ogg">
+                <a href="<%= episode.ogg.url %>">OGG</a>
+                <span class="stats"><%= number_to_human_size(episode.ogg.size) %></span>
+              </li>
+              <li class="quicktime">
+                <a href="<%= episode.quicktime.url %>">Quicktime</a>
+                <span class="stats"><%= number_to_human_size(episode.quicktime.size) %></span>
+              </li>
+            <% end %>
           </ul>
         </div>
 
