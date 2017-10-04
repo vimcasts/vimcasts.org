@@ -9,5 +9,12 @@
       "url": "http://othermedia.vimcasts.org/videos/12/modal_editing.m4v",
       "size": 7654321
     }
+  },
+  "13": {
+    "duration": 326,
+    "mp4": {
+      "url": "http://othermedia.vimcasts.org/videos/13/packages.mp4",
+      "size": 1300000
+    }
   }
 }
