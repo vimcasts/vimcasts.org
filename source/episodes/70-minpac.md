@@ -1,6 +1,6 @@
 ---
 :title: Meet minpac
-:date: 2017/10/13
+:date: 2017/10/12
 :poster: /images/posters/minpac.png
 :duration: 323
 :number: 70
