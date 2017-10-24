@@ -28,14 +28,12 @@ Note that you have to have Silverlight installed to watch the video. A [few][1] 
 
 <a href="http://2010.arrrrcamp.be/videos/drew-neil/vim-walking-without-crutches"><img title="Drew Neil presenting at ArrrrCamp" src="/images/blog/arrrrcamp-presentation.jpg"/></a>
 
-You can view [the slides from my talk][slides] online. I created the slides show using [Scott Chacon's][sc] [showoff][so] gem, which allows you to write your presentation in markdown format. It's a [Sinatra][sinatra] app, which means you can easily deploy the slideshow to [Heroku][heroku]. 
+You can view [the slides from my talk][slides] online. I created the slides show using [Scott Chacon's][sc] [showoff][so] gem, which allows you to write your presentation in markdown format.
 
 I'd like to say a warm thank you to the crew for inviting me to speak at ArrrrCamp. This was my debut on the conference circuit and it was fine place to begin. The audience was friendly and engaging, asking some great questions. The break for mojitos in the afternoon was inspired, and I hope that other conferences will take note. Ghent is a beautiful place, reminding me of York and Cambridge in equal measure. I would happily return for ArrrrCamp another year.
 
-[slides]: http://walking-without-crutches.heroku.com/
+[slides]: https://nelstrom.github.io/vim-walking-without-crutches/
 [sc]: http://scottchacon.com/
 [so]: http://github.com/schacon/showoff
-[heroku]: http://heroku.com/
-[sinatra]: http://www.sinatrarb.com/
 [bj]: http://bankjob-and-associates.heroku.com/
 [h5vid]: http://html5-video-slides.heroku.com/
