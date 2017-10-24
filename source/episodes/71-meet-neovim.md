@@ -63,6 +63,18 @@ Remote plugins are a game changer for plugin authors.
 On the wiki, there's a [list of plugins][nvim-plugins] that exploit Neovim's features, such as remote plugins and the built in terminal.
 I expect to see this list growing over time.
 
+### Case study: Unite and Denite
+
+The [Unite][unite] plugin by Shougo makes an interesting case study.
+This is a popular plugin, but it's always been plagued by poor performance.
+It's implemented in Vimscript, which is too slow for the kind of work that Unite does.
+
+The author has given up on trying to fix these performance issues and started a new plugin called [Denite][denite].
+In Denite, all of the heavy-lifting is performed in a separate Python process.
+Denite does not yet support all of the features of Unite, but it performs much more snappily.
+If you want to extend the functionality of Denite, you can do so by writing your own plugin in Python.
+It's a good showcase for Neovim's remote plugins.
+
 ### Further reading
 
 * [Installing Neovim][install]
@@ -80,3 +92,5 @@ I expect to see this list growing over time.
 [vim_diff]: https://neovim.io/doc/user/vim_diff.html
 [nvim-plugins]: https://github.com/neovim/neovim/wiki/Related-projects#plugins
 [remote]: https://neovim.io/doc/user/remote_plugin.html
+[unite]: https://github.com/Shougo/unite.vim
+[denite]: https://github.com/Shougo/denite.nvim
