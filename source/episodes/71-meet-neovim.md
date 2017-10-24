@@ -7,8 +7,8 @@
 :tags: Neovim
 ---
 
-In this video, we'll see how to install and set up NeoVim so that it reuses your existing Vim configuration files.
-Most plugins should work in NeoVim just like they do in Vim.
+In this video, we'll see how to install and set up Neovim so that it reuses your existing Vim configuration files.
+Most plugins should work in Neovim just like they do in Vim.
 
 READMORE
 
@@ -45,22 +45,22 @@ Any customisations you make in your `~/.vimrc` will now apply to Neovim as well 
 
 ### Plugin compatibility
 
-NeoVim can run most Vim plugins just fine.
-As a general rule, if a plugin has been around since before version 8 of Vim came out, then you can be confident that it will work fine in NeoVim.
+Neovim can run most Vim plugins just fine.
+As a general rule, if a plugin has been around since before version 8 of Vim came out, then you can be confident that it will work fine in Neovim.
 
 The one area where you have to be cautious is with any plugin that uses job control to perform work asynchronously.
-NeoVim came out with this feature first, way back in 2014.
+Neovim came out with this feature first, way back in 2014.
 Vim released a similar feature with version 8, but the job control APIs are different.
 Some plugins offer async functionality whether you run them in Vim 8 or in
-NeoVim, but some plugins may only work in one or the other.
+Neovim, but some plugins may only work in one or the other.
 This problem doesn't affect that many plugins since the job control functionality is relatively new, but it is something to watch out for.
 
-NeoVim can run any plugin written in Vimscript.
+Neovim can run any plugin written in Vimscript.
 But it also supports [remote plugins][remote], which can be written in any language.
 These run in a separate process, using remote procedure calls (RPC) to communicate with the neovim process.
 Remote plugins are a game changer for plugin authors.
 
-On the wiki, there's a [list of plugins][nvim-plugins] that exploit NeoVim's features, such as remote plugins and the built in terminal.
+On the wiki, there's a [list of plugins][nvim-plugins] that exploit Neovim's features, such as remote plugins and the built in terminal.
 I expect to see this list growing over time.
 
 ### Further reading
