@@ -169,6 +169,11 @@
   :videos: 3
   :articles: 0
   :total: 3
+- :name: colorschemes
+  :slug: colorschemes
+  :videos: 1
+  :articles: 2
+  :total: 3
 - :name: Commandline mode
   :slug: commandline-mode
   :videos: 3
@@ -179,8 +184,8 @@
   :videos: 3
   :articles: 0
   :total: 3
-- :name: colorschemes
-  :slug: colorschemes
+- :name: Neovim
+  :slug: neovim
   :videos: 1
   :articles: 2
   :total: 3
@@ -193,11 +198,6 @@
   :slug: file-explorers
   :videos: 1
   :articles: 1
-  :total: 2
-- :name: Neovim
-  :slug: neovim
-  :videos: 0
-  :articles: 2
   :total: 2
 - :name: filetypes
   :slug: filetypes
