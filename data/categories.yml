@@ -189,25 +189,25 @@
   :videos: 3
   :articles: 0
   :total: 3
-- :name: File explorers
-  :slug: file-explorers
-  :videos: 1
-  :articles: 1
-  :total: 2
 - :name: folding
   :slug: folding
   :videos: 2
   :articles: 0
   :total: 2
+- :name: Modern Vim
+  :slug: modern-vim
+  :videos: 0
+  :articles: 2
+  :total: 2
+- :name: File explorers
+  :slug: file-explorers
+  :videos: 1
+  :articles: 1
+  :total: 2
 - :name: Vim 8
   :slug: vim-8
   :videos: 0
   :articles: 1
-  :total: 1
-- :name: vimrc
-  :slug: vimrc
-  :videos: 1
-  :articles: 0
   :total: 1
 - :name: helpfiles
   :slug: helpfiles
@@ -229,8 +229,8 @@
   :videos: 0
   :articles: 1
   :total: 1
-- :name: email
-  :slug: email
+- :name: grammar
+  :slug: grammar
   :videos: 0
   :articles: 1
   :total: 1
@@ -244,13 +244,13 @@
   :videos: 1
   :articles: 0
   :total: 1
-- :name: grammar
-  :slug: grammar
-  :videos: 0
-  :articles: 1
+- :name: vimrc
+  :slug: vimrc
+  :videos: 1
+  :articles: 0
   :total: 1
-- :name: syntax
-  :slug: syntax
+- :name: email
+  :slug: email
   :videos: 0
   :articles: 1
   :total: 1
@@ -279,8 +279,8 @@
   :videos: 1
   :articles: 0
   :total: 1
-- :name: vimprint
-  :slug: vimprint
+- :name: syntax
+  :slug: syntax
   :videos: 0
   :articles: 1
   :total: 1
@@ -299,8 +299,8 @@
   :videos: 1
   :articles: 0
   :total: 1
-- :name: Modern Vim
-  :slug: modern-vim
+- :name: vimprint
+  :slug: vimprint
   :videos: 0
   :articles: 1
   :total: 1
