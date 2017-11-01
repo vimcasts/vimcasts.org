@@ -23,18 +23,19 @@ You can buy the beta ebook today and read what I've written so far.
 Buying the beta edition entitles you to free updates as new editions of Modern Vim are published.
 
 (My previous book, Practical Vim, was published as a beta book in April 2012.
-Customers who purchased the beta edition back then will have received the latest update, which was published in January 2017.)
+Customers who purchased the beta edition back then will have received all revisions, including the latest update which was published in January 2017.)
 
 If you choose to read the beta book, you should be prepared for the fact that it's unfinished.
 There will be mistakes; there will be dead-end cross-references.
-We rely on our beta readers to submit feedback letting us know about any problems, so that we can fix them.
-The end result is a better book for all readers.
+Many beta readers submit feedback letting us know about any problems, so that we can fix them.
+We're grateful, and the end result is a better book for all readers.
 
-### Can I get that as a paperback?
+### Can I get Modern Vim as a paperback?
 
-The paperback edition of Modern Vim will ship when it's ready.
-I have to write the remaining 30 or so pages, as well as fixing any issues that are reported by my beta readers and tech reviewers.
+The beta book is available only as an ebook.
+When the book comes out of beta, we will publish Modern Vim as a paperback (as well as an ebook).
 I hope to have the first edition complete by the end of 2017.
+I have to write the remaining 30 or so pages, as well as fixing any issues that are reported by my beta readers and tech reviewers.
 
 ### p.s. my other big news...
 
