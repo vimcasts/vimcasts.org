@@ -1,9 +1,9 @@
 ---
 - :name: plugins
   :slug: plugins
-  :videos: 18
+  :videos: 19
   :articles: 5
-  :total: 23
+  :total: 24
 - :name: Editing text
   :slug: editing-text
   :videos: 15
@@ -21,9 +21,9 @@
   :total: 13
 - :name: Copy and Paste
   :slug: copy-and-paste
-  :videos: 7
+  :videos: 8
   :articles: 3
-  :total: 10
+  :total: 11
 - :name: Practical Vim
   :slug: practical-vim
   :videos: 0
@@ -74,16 +74,6 @@
   :videos: 4
   :articles: 2
   :total: 6
-- :name: Whitespace
-  :slug: whitespace
-  :videos: 6
-  :articles: 0
-  :total: 6
-- :name: Essays
-  :slug: essays
-  :videos: 0
-  :articles: 6
-  :total: 6
 - :name: Repetition
   :slug: repetition
   :videos: 6
@@ -94,11 +84,31 @@
   :videos: 6
   :articles: 0
   :total: 6
+- :name: Essays
+  :slug: essays
+  :videos: 0
+  :articles: 6
+  :total: 6
 - :name: Managing your workspace
   :slug: managing-your-workspace
   :videos: 5
   :articles: 1
   :total: 6
+- :name: Whitespace
+  :slug: whitespace
+  :videos: 6
+  :articles: 0
+  :total: 6
+- :name: Neovim
+  :slug: neovim
+  :videos: 3
+  :articles: 2
+  :total: 5
+- :name: autocommands
+  :slug: autocommands
+  :videos: 5
+  :articles: 0
+  :total: 5
 - :name: Appearances
   :slug: appearances
   :videos: 0
@@ -109,50 +119,40 @@
   :videos: 5
   :articles: 0
   :total: 5
-- :name: autocommands
-  :slug: autocommands
-  :videos: 5
-  :articles: 0
-  :total: 5
 - :name: Navigating a project
   :slug: navigating-a-project
   :videos: 5
   :articles: 0
   :total: 5
-- :name: External commands
-  :slug: external-commands
-  :videos: 2
-  :articles: 2
+- :name: Navigating a document
+  :slug: navigating-a-document
+  :videos: 3
+  :articles: 1
   :total: 4
 - :name: plaintext
   :slug: plaintext
   :videos: 4
   :articles: 0
   :total: 4
-- :name: Formatting text
-  :slug: formatting-text
-  :videos: 4
-  :articles: 0
+- :name: External commands
+  :slug: external-commands
+  :videos: 2
+  :articles: 2
   :total: 4
 - :name: undo
   :slug: undo
   :videos: 3
   :articles: 1
   :total: 4
-- :name: Navigating a document
-  :slug: navigating-a-document
-  :videos: 3
-  :articles: 1
+- :name: Formatting text
+  :slug: formatting-text
+  :videos: 4
+  :articles: 0
   :total: 4
 - :name: substitution
   :slug: substitution
   :videos: 4
   :articles: 0
-  :total: 4
-- :name: Neovim
-  :slug: neovim
-  :videos: 2
-  :articles: 2
   :total: 4
 - :name: Text objects
   :slug: text-objects
@@ -174,11 +174,6 @@
   :videos: 3
   :articles: 0
   :total: 3
-- :name: vimdiff
-  :slug: vimdiff
-  :videos: 3
-  :articles: 0
-  :total: 3
 - :name: colorschemes
   :slug: colorschemes
   :videos: 1
@@ -189,6 +184,16 @@
   :videos: 3
   :articles: 0
   :total: 3
+- :name: vimdiff
+  :slug: vimdiff
+  :videos: 3
+  :articles: 0
+  :total: 3
+- :name: File explorers
+  :slug: file-explorers
+  :videos: 1
+  :articles: 1
+  :total: 2
 - :name: folding
   :slug: folding
   :videos: 2
@@ -199,43 +204,38 @@
   :videos: 0
   :articles: 2
   :total: 2
-- :name: File explorers
-  :slug: file-explorers
+- :name: filetypes
+  :slug: filetypes
   :videos: 1
-  :articles: 1
-  :total: 2
-- :name: Vim 8
-  :slug: vim-8
-  :videos: 0
-  :articles: 1
-  :total: 1
-- :name: helpfiles
-  :slug: helpfiles
-  :videos: 0
-  :articles: 1
+  :articles: 0
   :total: 1
 - :name: pathogen
   :slug: pathogen
   :videos: 1
   :articles: 0
   :total: 1
+- :name: helpfiles
+  :slug: helpfiles
+  :videos: 0
+  :articles: 1
+  :total: 1
 - :name: spoof
   :slug: spoof
   :videos: 1
   :articles: 0
-  :total: 1
-- :name: leader
-  :slug: leader
-  :videos: 0
-  :articles: 1
   :total: 1
 - :name: grammar
   :slug: grammar
   :videos: 0
   :articles: 1
   :total: 1
-- :name: filetypes
-  :slug: filetypes
+- :name: leader
+  :slug: leader
+  :videos: 0
+  :articles: 1
+  :total: 1
+- :name: vimrc
+  :slug: vimrc
   :videos: 1
   :articles: 0
   :total: 1
@@ -244,13 +244,13 @@
   :videos: 1
   :articles: 0
   :total: 1
-- :name: vimrc
-  :slug: vimrc
-  :videos: 1
-  :articles: 0
-  :total: 1
 - :name: email
   :slug: email
+  :videos: 0
+  :articles: 1
+  :total: 1
+- :name: Vim 8
+  :slug: vim-8
   :videos: 0
   :articles: 1
   :total: 1
@@ -259,13 +259,8 @@
   :videos: 1
   :articles: 0
   :total: 1
-- :name: interactive
-  :slug: interactive
-  :videos: 1
-  :articles: 0
-  :total: 1
-- :name: ack
-  :slug: ack
+- :name: syntax
+  :slug: syntax
   :videos: 0
   :articles: 1
   :total: 1
@@ -274,13 +269,18 @@
   :videos: 1
   :articles: 0
   :total: 1
+- :name: ack
+  :slug: ack
+  :videos: 0
+  :articles: 1
+  :total: 1
 - :name: testing
   :slug: testing
   :videos: 1
   :articles: 0
   :total: 1
-- :name: syntax
-  :slug: syntax
+- :name: vimprint
+  :slug: vimprint
   :videos: 0
   :articles: 1
   :total: 1
@@ -299,13 +299,18 @@
   :videos: 1
   :articles: 0
   :total: 1
-- :name: vimprint
-  :slug: vimprint
-  :videos: 0
-  :articles: 1
-  :total: 1
 - :name: exchange
   :slug: exchange
+  :videos: 1
+  :articles: 0
+  :total: 1
+- :name: interactive
+  :slug: interactive
+  :videos: 1
+  :articles: 0
+  :total: 1
+- :name: Substitution
+  :slug: substitution
   :videos: 1
   :articles: 0
   :total: 1
