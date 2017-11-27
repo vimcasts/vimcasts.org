@@ -62,6 +62,16 @@ In many cases, `<C-c>` will do the trick, but some programs handle this differen
 
 Finally, when you quit Neovim, any remaining terminal buffers will be wiped out, causing their associated programs to exit.
 
+### What about the `:terminal` in Vim 8?
+
+This video covers the `:terminal` feature in Neovim.
+Since I recorded this video, work has started to add a `:terminal` command to Vim 8.
+This has some similarities with the Neovim implementation and some important differences.
+**Be warned**: I don't expect the instructions given here to work in Vim 8.
+
+The last time I tried using the `:terminal` in Vim 8, it was a long way from being ready.
+I'm watching the development of that feature with interest.
+
 ### Further reading
 
 * [`:h terminal_emulator.txt`][terminal_emulator]
