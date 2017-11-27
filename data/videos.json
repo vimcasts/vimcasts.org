@@ -1,4 +1,11 @@
 {
+  "74": {
+    "duration": 365,
+    "mp4": {
+      "url": "http://media.vimcasts.org/videos/74/neovim-terminal.mp4",
+      "size": 75468258
+    }
+  },
   "73": {
     "duration": 348,
     "mp4": {
