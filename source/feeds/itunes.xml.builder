@@ -36,6 +36,15 @@ xml.rss "xmlns:itunes" => "http://www.itunes.com/dtds/podcast-1.0.dtd",  "xmlns:
 
     @episodes.each do  |article|
       episode = Episode.new(article)
+
+      if(episode.format == 'mp4')
+        video = episode.mp4
+        type = "video/mp4"
+      else
+        video = episode.quicktime
+        type = "video/x-m4v"
+      end
+
       xml.item do
         xml.title html_escape(article.title)
 
@@ -43,9 +52,9 @@ xml.rss "xmlns:itunes" => "http://www.itunes.com/dtds/podcast-1.0.dtd",  "xmlns:
         xml.itunes :subtitle, article.data.subtitle
         xml.itunes :summary, article.summary
 
-        xml.enclosure url: episode.quicktime.url,
-          length: episode.quicktime.size,
-          type: "video/x-m4v"
+        xml.enclosure url: video.url,
+          length: video.size,
+          type: type
         xml.itunes :duration, episode.running_time
 
         xml.guid URI.join(domain, article.url)
