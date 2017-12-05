@@ -4,15 +4,15 @@
   :videos: 19
   :articles: 5
   :total: 24
-- :name: Editing text
-  :slug: editing-text
-  :videos: 15
-  :articles: 0
-  :total: 15
 - :name: meta
   :slug: meta
   :videos: 0
   :articles: 15
+  :total: 15
+- :name: Editing text
+  :slug: editing-text
+  :videos: 15
+  :articles: 0
   :total: 15
 - :name: registers
   :slug: registers
@@ -39,21 +39,16 @@
   :videos: 8
   :articles: 0
   :total: 8
-- :name: Customizing Vim
-  :slug: customizing-vim
-  :videos: 6
-  :articles: 2
-  :total: 8
 - :name: Ex commands
   :slug: ex-commands
   :videos: 8
   :articles: 0
   :total: 8
-- :name: workflow
-  :slug: workflow
-  :videos: 7
-  :articles: 0
-  :total: 7
+- :name: Customizing Vim
+  :slug: customizing-vim
+  :videos: 6
+  :articles: 2
+  :total: 8
 - :name: The argument list
   :slug: the-argument-list
   :videos: 5
@@ -69,18 +64,33 @@
   :videos: 7
   :articles: 0
   :total: 7
-- :name: vimgrep
-  :slug: vimgrep
-  :videos: 4
-  :articles: 2
-  :total: 6
+- :name: workflow
+  :slug: workflow
+  :videos: 7
+  :articles: 0
+  :total: 7
 - :name: Repetition
   :slug: repetition
   :videos: 6
   :articles: 0
   :total: 6
+- :name: Neovim
+  :slug: neovim
+  :videos: 4
+  :articles: 2
+  :total: 6
 - :name: Insert mode
   :slug: insert-mode
+  :videos: 6
+  :articles: 0
+  :total: 6
+- :name: vimgrep
+  :slug: vimgrep
+  :videos: 4
+  :articles: 2
+  :total: 6
+- :name: Whitespace
+  :slug: whitespace
   :videos: 6
   :articles: 0
   :total: 6
@@ -94,28 +104,8 @@
   :videos: 5
   :articles: 1
   :total: 6
-- :name: Whitespace
-  :slug: whitespace
-  :videos: 6
-  :articles: 0
-  :total: 6
-- :name: Neovim
-  :slug: neovim
-  :videos: 3
-  :articles: 2
-  :total: 5
 - :name: autocommands
   :slug: autocommands
-  :videos: 5
-  :articles: 0
-  :total: 5
-- :name: Appearances
-  :slug: appearances
-  :videos: 0
-  :articles: 5
-  :total: 5
-- :name: Vimscript
-  :slug: vimscript
   :videos: 5
   :articles: 0
   :total: 5
@@ -124,6 +114,21 @@
   :videos: 5
   :articles: 0
   :total: 5
+- :name: Vimscript
+  :slug: vimscript
+  :videos: 5
+  :articles: 0
+  :total: 5
+- :name: Appearances
+  :slug: appearances
+  :videos: 0
+  :articles: 5
+  :total: 5
+- :name: undo
+  :slug: undo
+  :videos: 3
+  :articles: 1
+  :total: 4
 - :name: Navigating a document
   :slug: navigating-a-document
   :videos: 3
@@ -134,20 +139,15 @@
   :videos: 4
   :articles: 0
   :total: 4
-- :name: External commands
-  :slug: external-commands
-  :videos: 2
-  :articles: 2
-  :total: 4
-- :name: undo
-  :slug: undo
-  :videos: 3
-  :articles: 1
-  :total: 4
 - :name: Formatting text
   :slug: formatting-text
   :videos: 4
   :articles: 0
+  :total: 4
+- :name: External commands
+  :slug: external-commands
+  :videos: 2
+  :articles: 2
   :total: 4
 - :name: substitution
   :slug: substitution
@@ -159,18 +159,18 @@
   :videos: 1
   :articles: 2
   :total: 3
-- :name: Opening files
-  :slug: opening-files
+- :name: vimdiff
+  :slug: vimdiff
   :videos: 3
   :articles: 0
   :total: 3
-- :name: ruby
-  :slug: ruby
-  :videos: 1
-  :articles: 2
-  :total: 3
 - :name: Expression register
   :slug: expression-register
+  :videos: 3
+  :articles: 0
+  :total: 3
+- :name: Opening files
+  :slug: opening-files
   :videos: 3
   :articles: 0
   :total: 3
@@ -184,11 +184,16 @@
   :videos: 3
   :articles: 0
   :total: 3
-- :name: vimdiff
-  :slug: vimdiff
-  :videos: 3
-  :articles: 0
+- :name: ruby
+  :slug: ruby
+  :videos: 1
+  :articles: 2
   :total: 3
+- :name: Modern Vim
+  :slug: modern-vim
+  :videos: 0
+  :articles: 2
+  :total: 2
 - :name: File explorers
   :slug: file-explorers
   :videos: 1
@@ -199,23 +204,28 @@
   :videos: 2
   :articles: 0
   :total: 2
-- :name: Modern Vim
-  :slug: modern-vim
+- :name: leader
+  :slug: leader
   :videos: 0
-  :articles: 2
-  :total: 2
-- :name: filetypes
-  :slug: filetypes
-  :videos: 1
-  :articles: 0
+  :articles: 1
   :total: 1
-- :name: pathogen
-  :slug: pathogen
-  :videos: 1
-  :articles: 0
+- :name: email
+  :slug: email
+  :videos: 0
+  :articles: 1
+  :total: 1
+- :name: syntax
+  :slug: syntax
+  :videos: 0
+  :articles: 1
   :total: 1
 - :name: helpfiles
   :slug: helpfiles
+  :videos: 0
+  :articles: 1
+  :total: 1
+- :name: vimprint
+  :slug: vimprint
   :videos: 0
   :articles: 1
   :total: 1
@@ -229,13 +239,28 @@
   :videos: 0
   :articles: 1
   :total: 1
-- :name: leader
-  :slug: leader
-  :videos: 0
-  :articles: 1
+- :name: interactive
+  :slug: interactive
+  :videos: 1
+  :articles: 0
   :total: 1
 - :name: vimrc
   :slug: vimrc
+  :videos: 1
+  :articles: 0
+  :total: 1
+- :name: pathogen
+  :slug: pathogen
+  :videos: 1
+  :articles: 0
+  :total: 1
+- :name: Vim 8
+  :slug: vim-8
+  :videos: 0
+  :articles: 1
+  :total: 1
+- :name: filetypes
+  :slug: filetypes
   :videos: 1
   :articles: 0
   :total: 1
@@ -244,28 +269,8 @@
   :videos: 1
   :articles: 0
   :total: 1
-- :name: email
-  :slug: email
-  :videos: 0
-  :articles: 1
-  :total: 1
-- :name: Vim 8
-  :slug: vim-8
-  :videos: 0
-  :articles: 1
-  :total: 1
 - :name: vimgolf
   :slug: vimgolf
-  :videos: 1
-  :articles: 0
-  :total: 1
-- :name: syntax
-  :slug: syntax
-  :videos: 0
-  :articles: 1
-  :total: 1
-- :name: performance
-  :slug: performance
   :videos: 1
   :articles: 0
   :total: 1
@@ -274,15 +279,15 @@
   :videos: 0
   :articles: 1
   :total: 1
+- :name: performance
+  :slug: performance
+  :videos: 1
+  :articles: 0
+  :total: 1
 - :name: testing
   :slug: testing
   :videos: 1
   :articles: 0
-  :total: 1
-- :name: vimprint
-  :slug: vimprint
-  :videos: 0
-  :articles: 1
   :total: 1
 - :name: count
   :slug: count
@@ -304,13 +309,13 @@
   :videos: 1
   :articles: 0
   :total: 1
-- :name: interactive
-  :slug: interactive
+- :name: Substitution
+  :slug: substitution
   :videos: 1
   :articles: 0
   :total: 1
-- :name: Substitution
-  :slug: substitution
+- :name: Terminal Emulator
+  :slug: terminal-emulator
   :videos: 1
   :articles: 0
   :total: 1
