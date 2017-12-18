@@ -32,9 +32,9 @@ In future, it may become possible to get live feedback on other commands, such a
 Vim doesn't show any visual feedback when you use the yank command.
 The [vim-highlightedyank][hly] plugin changes this, by applying a temporary highlight to the region of text that was yanked.
 
-The highlightedyank plugin works both in Neovim and in Vim.
-If you want to use the plugin in Vim, you have to remap the `y` command.
-In Neovim, the plugin makes use of the [`TextYankPost`][TextYankPost] autocommand, which means that you don't need to remap the `y` command.
+The highlightedyank plugin works both in Neovim and in Vim (since [version 8.0.1394][1394]).
+It makes use of the [`TextYankPost`][TextYankPost] autocommand.
+If you want to use the plugin in an older version of Vim you have to remap the `y` command, because that autocommand is not available.
 
 At first, I didn't think I needed to use the highlightedyank plugin.
 I was accustomed to the behaviour of the yank command, and I didn't feel as though I needed any visual feedback to help me understand how the command worked.
@@ -47,7 +47,9 @@ I'm a convert!
 * [`:help 'inccommand'`][inccommand]
 * [`:help TextYankPost`][TextYankPost]
 * [vim-highlightedyank][hly]
+* Vim [patch 8.0.1394][1394]
 
 [inccommand]: https://neovim.io/doc/user/options.html#%27inccommand%27
 [hly]: https://github.com/machakann/vim-highlightedyank
 [TextYankPost]: https://neovim.io/doc/user/autocmd.html#TextYankPost
+[1394]: https://github.com/vim/vim/commit/7e1652c63c96585b9e2235c195a3c322b1f11595
