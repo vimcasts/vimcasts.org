@@ -3,9 +3,11 @@
 source 'http://rubygems.org'
 
 gem "middleman"
-gem "middleman-blog", "~> 3.5.1"
+gem "middleman-blog"
 gem 'middleman-s3_sync'
 gem "middleman-syntax"
+gem "middleman-compass"
+gem "middleman-sprockets"
 gem "nokogiri"
 gem "redcarpet"
 

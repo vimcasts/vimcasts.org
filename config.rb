@@ -56,7 +56,7 @@ activate :blog do |blog|
   blog.summary_length = nil
 end
 
-set :boxee_feeds, [
+boxee_feeds = [
   {
     name: "boxee-ogg",
     format: "ogg",
@@ -70,8 +70,9 @@ set :boxee_feeds, [
     type: "video/x-m4v",
   },
 ]
+set :boxee_feeds, boxee_feeds
 
-set :feeds, [
+feeds = [
   {
     name: "ogg",
     format: "ogg",
@@ -85,6 +86,7 @@ set :feeds, [
     type: "video/x-m4v",
   }
 ]
+set :feeds, feeds
 
 (feeds + boxee_feeds).each do |feed|
   proxy "/feeds/#{feed[:name]}.rss", "/feeds/all.xml",
@@ -183,10 +185,10 @@ activate :livereload
 # end
 
 # Add bower's directory to sprockets asset path
-after_configuration do
-  @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
-  sprockets.append_path File.join "#{root}", @bower_config["directory"]
-end
+# after_configuration do
+#   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
+#   sprockets.append_path File.join "#{root}", @bower_config["directory"]
+# end
 
 set :css_dir, 'stylesheets'
 
@@ -221,25 +223,25 @@ page "/transcripts/*/en.html", layout: "transcript"
 redirect "e/a.html", to: "/episodes/archive"
 redirect "transcripts/index.html", to: "/episodes/archive"
 
-ready do
+# ready do
 
-  blog(:episodes).articles.each do |a|
-    page a.path, layout: 'screencast'
-    n = a.data.number
-    redirect "e/#{n}/index.html", to: "/#{a.path}"
-    redirect "e/#{n}/t/index.html", to: "/transcripts/#{n}/en"
-    redirect "episodes/#{n}/index.html", to: "/#{a.path}"
-  end
+#   blog(:episodes).articles.each do |a|
+#     page a.path, layout: 'screencast'
+#     n = a.data.number
+#     redirect "e/#{n}/index.html", to: "/#{a.path}"
+#     redirect "e/#{n}/t/index.html", to: "/transcripts/#{n}/en"
+#     redirect "episodes/#{n}/index.html", to: "/#{a.path}"
+#   end
 
-  blog(:blog).articles.each do |a|
-    page a.path, layout: 'article'
-    # FIXME: this raises an error:
-    #   needs a date in its filename or frontmatter (RuntimeError)
-    # redirect a.path, to: a.destination_path
-  end
+#   blog(:blog).articles.each do |a|
+#     page a.path, layout: 'article'
+#     # FIXME: this raises an error:
+#     #   needs a date in its filename or frontmatter (RuntimeError)
+#     # redirect a.path, to: a.destination_path
+#   end
 
-  blog(:announcements).articles.each do |a|
-    page a.path, layout: 'announcement'
-  end
+#   blog(:announcements).articles.each do |a|
+#     page a.path, layout: 'announcement'
+#   end
 
-end
+# end
