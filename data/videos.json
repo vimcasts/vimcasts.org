@@ -1,4 +1,11 @@
 {
+  "76": {
+    "duration": 345,
+    "mp4": {
+      "url": "http://media.vimcasts.org/videos/76/neovim-terminal-paste.mp4",
+      "size": 65535819
+    }
+  },
   "75": {
     "duration": 308,
     "mp4": {
