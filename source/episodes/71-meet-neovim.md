@@ -35,8 +35,8 @@ You can find advice on how to reuse your Vim configuration in Neovim by looking 
 Then create a `~/.config/nvim/init.vim` file with the following contents:
 
 ```viml
-set runtimepath+=~/.vim,~/.vim/after
-set packpath+=~/.vim
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath = &runtimepath
 source ~/.vimrc
 ```
 
