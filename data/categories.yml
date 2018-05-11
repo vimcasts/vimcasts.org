@@ -179,26 +179,26 @@
   :videos: 1
   :articles: 2
   :total: 3
-- :name: Commandline mode
-  :slug: commandline-mode
-  :videos: 3
-  :articles: 0
-  :total: 3
 - :name: Text objects
   :slug: text-objects
   :videos: 1
   :articles: 2
+  :total: 3
+- :name: Modern Vim
+  :slug: modern-vim
+  :videos: 0
+  :articles: 3
+  :total: 3
+- :name: Commandline mode
+  :slug: commandline-mode
+  :videos: 3
+  :articles: 0
   :total: 3
 - :name: Opening files
   :slug: opening-files
   :videos: 3
   :articles: 0
   :total: 3
-- :name: Modern Vim
-  :slug: modern-vim
-  :videos: 0
-  :articles: 2
-  :total: 2
 - :name: File explorers
   :slug: file-explorers
   :videos: 1
