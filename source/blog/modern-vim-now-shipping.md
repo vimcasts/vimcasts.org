@@ -23,6 +23,10 @@ In return, I'll give you a high five!
 If you're based in the US, then you may well get your hands on a physical copy of Modern Vim before I do!
 (It takes a while for paper books to make their way over to the UK.)
 
+**UPDATE 11 May, 2018**: My copy has arrived!
+
+![Drew Neil unboxing Modern Vim](/images/blog/drew-with-modvim-paperback.jpg)
+
 [modvim]: https://pragprog.com/book/modvim/modern-vim
 [bookshelf]: https://pragprog.com/my_bookshelf
 [amazon]: http://a.co/2E7nq4o
