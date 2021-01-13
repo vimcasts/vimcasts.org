@@ -22,7 +22,7 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.5.3)
     eventmachine (1.0.3)
-    excon (0.33.0)
+    excon (0.78.1)
     execjs (1.4.0)
       multi_json (~> 1.0)
     ffi (1.9.3)
