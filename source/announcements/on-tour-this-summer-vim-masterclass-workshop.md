@@ -31,7 +31,7 @@ I'll return to the UK in October. Likely destinations include [Bristol][], [Glas
 
 If you can help me to make any of these workshops happen, I'd love to hear from you. Drop me an email on drew at vimcasts dot org.
 
-[dnvim]:  http://pragprog.com/book/dnvim/practical-vim
+[dnvim]:  https://pragprog.com/titles/dnvim2/practical-vim-second-edition
 [want]:       http://www.wantworkshop.com/workshops/vimcasts_workshop
 [Krakow]: http://www.wantworkshop.com/workshops/vimcasts_workshop/locations/pl-krakow
 [Amsterdam]:   http://www.wantworkshop.com/workshops/vimcasts_workshop/locations/nl-amsterdam

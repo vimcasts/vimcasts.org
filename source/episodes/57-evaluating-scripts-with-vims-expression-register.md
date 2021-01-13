@@ -104,6 +104,6 @@ This executes the specified command in the shell and outputs the results directl
 [float-functions]: http://vimdoc.sourceforge.net/htmldoc/usr_41.html#float-functions
 [:put]: http://vimdoc.sourceforge.net/htmldoc/change.html#:put
 [:r!]: http://vimdoc.sourceforge.net/htmldoc/insert.html#:r!
-[pv]: http://pragprog.com/book/dnvim/practical-vim
+[pv]: https://pragprog.com/titles/dnvim2/practical-vim-second-edition
 [rand()]: http://stackoverflow.com/a/12739441/128850
 [faker]: http://rubygems.org/gems/faker

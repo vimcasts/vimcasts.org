@@ -95,4 +95,4 @@ You can think of the arglist as being a stable subset of the buffer list. The co
 [repeat]: http://vimdoc.sourceforge.net/htmldoc/repeat.html#@:
 [unimpaired]: https://github.com/tpope/vim-unimpaired
 [6]: /e/6
-[Practical Vim]: http://pragprog.com/book/dnvim/practical-vim
+[Practical Vim]: https://pragprog.com/titles/dnvim2/practical-vim-second-edition

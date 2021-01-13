@@ -6,7 +6,7 @@
 /training/private-training
 
 /publications - landing page for Practical Vim, ebooks, dojos, pro screencasts
-/publications/practical-vim -> http://pragprog.com/book/dnvim/practical-vim
+/publications/practical-vim -> https://pragprog.com/titles/dnvim2/practical-vim-second-edition
 /publications/navigating-ruby-files-with-vim -> https://learn.thoughtbot.com/products/21-navigating-ruby-files-with-vim
 /publications/copy-paste-clinic - [PRIORITY]
 /publications/fugitive-ebook - [coming soon...]

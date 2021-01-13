@@ -10,7 +10,7 @@ READMORE
 
 [![Practical Vim](http://vimcasts.org/images/practical-vim-cover.png)][dnvim]
 
-[dnvim]: http://pragprog.com/book/dnvim/practical-vim
+[dnvim]: https://pragprog.com/titles/dnvim2/practical-vim-second-edition
 
 ### About the beta book
 
@@ -40,4 +40,4 @@ When I set out to write a book about Vim, I ran [a survey][survey] to find out w
 
 [sjl]: http://learnvimscriptthehardway.stevelosh.com/
 [survey]: https://spreadsheets0.google.com/a/vimcasts.org/viewform?formkey=dHYyTUhqVVo4WDhuVTR2M1cwbEJNSVE6MQ
-[dnvim]: http://pragprog.com/book/dnvim/practical-vim
+[dnvim]: https://pragprog.com/titles/dnvim2/practical-vim-second-edition

@@ -9,6 +9,6 @@ For a limited time, The Pragmatic Bookshelf is running a [Command-Line Special d
 This offer is valid until Wednesday, 24th October. You won't find a better deal on Practical Vim, so don't miss out!
 
 [ftw]: http://pragprog.com/news/40-off-command-line%20special
-[pv]: http://pragprog.com/book/dnvim/practical-vim
+[pv]: https://pragprog.com/titles/dnvim2/practical-vim-second-edition
 [tmux]: http://pragprog.com/book/bhtmux/tmux
 [cla]: http://pragprog.com/book/dccar/build-awesome-command-line-applications-in-ruby

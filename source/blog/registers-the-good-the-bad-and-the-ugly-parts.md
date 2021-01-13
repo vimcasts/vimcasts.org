@@ -18,7 +18,7 @@ The fact that registers are multi-purpose means that after recording a macro we 
 I also like how Vim exposes useful information through the [search][quote/] and [read-only registers][readonly]: `@/` contains the current search pattern, `@:` contains the last Ex command, `@.` contains the last inserted text, and `@%` contains the filename of the current buffer.
 
 [summary]: http://vimcasts.org/blog/2013/11/the-copypaste-series-a-retrospective/
-[pv]: http://pragprog.com/book/dnvim/practical-vim
+[pv]: https://pragprog.com/titles/dnvim2/practical-vim-second-edition
 [readonly]: http://vimdoc.sourceforge.net/htmldoc/change.html#quote_.
 [quote/]: http://vimdoc.sourceforge.net/htmldoc/change.html#quote_/
 

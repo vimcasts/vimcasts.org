@@ -69,5 +69,5 @@ I find Vim's terminology to be unhelpful, so I try to make a point of describing
 * [Practical Vim][pv], Tip 60: Grok Vim's registers
 
 [so]: http://stackoverflow.com/a/1504373/128850
-[pv]: http://pragprog.com/book/dnvim/practical-vim
+[pv]: https://pragprog.com/titles/dnvim2/practical-vim-second-edition
 [quote0]: http://vimdoc.sourceforge.net/htmldoc/change.html#quote0

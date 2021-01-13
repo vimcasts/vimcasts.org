@@ -54,4 +54,4 @@ For each line that matches the pattern `TODO`, run the Ex command: `:yank A`.
 * [Practical Vim][pv], Tip 99: Collect TODO items in a register
 
 [quote_alpha]: http://vimdoc.sourceforge.net/htmldoc/change.html#quote_alpha
-[pv]: http://pragprog.com/book/dnvim/practical-vim
+[pv]: https://pragprog.com/titles/dnvim2/practical-vim-second-edition

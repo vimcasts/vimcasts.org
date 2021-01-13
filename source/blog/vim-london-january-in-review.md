@@ -35,7 +35,7 @@ In a nutshell: visual mode doesn't work well with the dot command. The dot comma
 This will be a familiar refrain if you've ever attended one of my Vim Masterclasses. I also cover this material in tip 23 of [Practical Vim][pv]. Essential further reading: [Operator, the true power of Vim][op], by Kana Natsuno.
 
 [drew-slides]: https://speakerdeck.com/nelstrom/when-and-why-you-should-stay-out-of-visual-mode
-[pv]: http://pragprog.com/book/dnvim/practical-vim
+[pv]: https://pragprog.com/titles/dnvim2/practical-vim-second-edition
 [op]: http://whileimautomaton.net/2008/11/vimm3/operator
 
 ###3. Meet Easymotion, by Jack Franklin

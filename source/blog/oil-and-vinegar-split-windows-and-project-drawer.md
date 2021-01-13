@@ -97,4 +97,4 @@ The project drawer works well in an interface where you can only view one file a
 The illustrations in this blog post are adapted from [Practical Vim][pv]. For more discussion, please refer to *Tip 43 Explore the file system with netrw* and *Tip 39: Divide your workspace into split windows*.
 
 [netrw]:  http://vimcasts.org/e/15
-[pv]: http://pragprog.com/book/dnvim/practical-vim
+[pv]: https://pragprog.com/titles/dnvim2/practical-vim-second-edition

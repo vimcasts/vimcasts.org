@@ -100,7 +100,7 @@ Peter Jaros created [`vim-cdo`][cdo], which includes `:Cdo` as well as `:Ldo` fo
 
 [substitute]: http://vimdoc.sourceforge.net/htmldoc/change.html#:s
 [vimgrep]: http://vimdoc.sourceforge.net/htmldoc/quickfix.html#:vim
-[pv]: http://pragprog.com/book/dnvim/practical-vim
+[pv]: https://pragprog.com/titles/dnvim2/practical-vim-second-edition
 [qargs]: https://github.com/nelstrom/vim-qargs
 [zs]: http://vimdoc.sourceforge.net/htmldoc/pattern.html#/\zs
 [argdo]: http://vimdoc.sourceforge.net/htmldoc/editing.html#:argdo

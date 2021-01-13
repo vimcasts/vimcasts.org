@@ -6,7 +6,7 @@
 
 I'm happy to announce that the paperback edition of [Practical Vim][pv] is now available. If you've pre-ordered, then your copy should arrive soon. Also, that means Practical Vim is no longer in *beta*. It's been tech-reviewed, indexed, edited, typeset, and laid out. If you've been holding out for the final cut, then your wait is over. 
 
-[pv]: http://pragprog.com/book/dnvim/practical-vim 
+[pv]: https://pragprog.com/titles/dnvim2/practical-vim-second-edition 
 
 
 READMORE
