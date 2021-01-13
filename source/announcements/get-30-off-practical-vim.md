@@ -6,7 +6,7 @@
 
 For a limited time, the Pragmatic Bookshelf is offering [a 30% discount on Practical Vim][pv]. To claim this deal, use the coupon: **DrewNeilVimMarchMadness**. The offer runs until midnight (PST) on March 8th. Please help me spread the word wide and far by Tweeting, Liking, +1-ing and so on.
 
-[pv]: http://pragprog.com/book/dnvim/practical-vim
+[pv]: https://pragprog.com/titles/dnvim2/practical-vim-second-edition
 
 READMORE
 

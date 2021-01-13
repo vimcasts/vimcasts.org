@@ -70,7 +70,7 @@ I used to consider this to be an essential plugin, but don't now that the `gn` c
 [647]: http://ftp.vim.org/pub/vim/patches/7.3/7.3.647
 [1275]: http://ftp.vim.org/pub/vim/patches/7.3/7.3.1275
 [110]: http://ftp.vim.org/pub/vim/patches/7.4/7.4.110
-[Practical Vim]: http://pragprog.com/book/dnvim/practical-vim
+[Practical Vim]: https://pragprog.com/titles/dnvim2/practical-vim-second-edition
 [Operator-pending mode]: http://vimdoc.sourceforge.net/htmldoc/intro.html#Operator-pending-mode
 [textobj-lastpat]: https://github.com/kana/vim-textobj-lastpat
 [dot]: http://vimdoc.sourceforge.net/htmldoc/repeat.html#.

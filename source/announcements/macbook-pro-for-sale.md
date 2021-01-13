@@ -30,4 +30,4 @@ I've replaced the standard feet on the bottom casing with Sugru-molded rubber fe
 <img width="480" height="320" src="/images/blog/MBP_2010_lid.jpg"/>
 
 [sugru]: http://sugru.com/guides/replace-macbook-s-rubber-feet
-[pv]: http://pragprog.com/book/dnvim/practical-vim
+[pv]: https://pragprog.com/titles/dnvim2/practical-vim-second-edition

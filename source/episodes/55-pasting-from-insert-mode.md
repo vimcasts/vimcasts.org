@@ -82,7 +82,7 @@ If we use `<C-r><C-o>"` instead, Vim inserts the contents of the default registe
 * Vimgolf challenge: [Words in parens][golf]
 
 [golf]: http://vimgolf.com/challenges/5192f96ad8df110002000002
-[pv]: http://pragprog.com/book/dnvim/practical-vim
+[pv]: https://pragprog.com/titles/dnvim2/practical-vim-second-edition
 [dot]: http://vimdoc.sourceforge.net/htmldoc/repeat.html#.
 [cr]: http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-r
 [yank-register]: /e/52

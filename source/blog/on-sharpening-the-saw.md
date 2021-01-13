@@ -98,6 +98,6 @@ I presented these ideas at a lightning talk at the Scottish Ruby Conference. Ema
 [todo]: http://vimdoc.sourceforge.net/htmldoc/todo.html#todo
 [operator]: http://vimdoc.sourceforge.net/htmldoc/motion.html#operator
 [7habits]: http://www.moolenaar.net/habits.html
-[dnvim]:  http://pragprog.com/book/dnvim/practical-vim
+[dnvim]:  https://pragprog.com/titles/dnvim2/practical-vim-second-edition
 [src]: http://scottishrubyconference.com/
 [emacs]: https://twitter.com/jimweirich/status/218769796500701184

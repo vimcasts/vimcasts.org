@@ -28,6 +28,6 @@ In the meantime, I'm enjoying a bit of a holiday in Iceland (which is as close t
 
 [EventBrite]: http://vimcasts.eventbrite.com/
 [Indiegogo]: http://www.indiegogo.com/
-[Practical Vim]: http://pragprog.com/book/dnvim/practical-vim
+[Practical Vim]: https://pragprog.com/titles/dnvim2/practical-vim-second-edition
 [rocky]: http://rockymtnruby.com/#workshop
 [strangeloop]: https://thestrangeloop.com/sessions/vim-masterclass

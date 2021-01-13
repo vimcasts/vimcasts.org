@@ -6,7 +6,7 @@
 
 One year ago today, [Practical Vim][] was released as a beta book. I'm thrilled with how the book has been received and I'd like to thank everybody who has purchased a copy. After a year of sales, I'm happy to report that Practical Vim is a best-seller!
 
-[Practical Vim]: http://pragprog.com/book/dnvim/practical-vim
+[Practical Vim]: https://pragprog.com/titles/dnvim2/practical-vim-second-edition
 
 
 READMORE

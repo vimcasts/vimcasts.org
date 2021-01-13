@@ -39,7 +39,7 @@ If I've missed any plugins that provide this functionality, please leave a comme
 * [Practical Vim][pv], tip 61: Replace a visual selection with a register
 
 [v_p]: http://vimdoc.sourceforge.net/htmldoc/change.html#v_p
-[pv]: http://pragprog.com/book/dnvim/practical-vim
+[pv]: https://pragprog.com/titles/dnvim2/practical-vim-second-edition
 [quote0]: http://vimdoc.sourceforge.net/htmldoc/change.html#quote0
 
 [operator-replace]: https://github.com/kana/vim-operator-replace

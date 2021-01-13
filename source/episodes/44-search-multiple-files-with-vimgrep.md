@@ -139,4 +139,4 @@ The downside to using these external tools it that each uses a different regex s
 [ack.vim]: https://github.com/mileszs/ack.vim
 [ag]: https://github.com/ggreer/the_silver_searcher
 [ag.vim]: https://github.com/rking/ag.vim
-[pv]: http://pragprog.com/book/dnvim/practical-vim
+[pv]: https://pragprog.com/titles/dnvim2/practical-vim-second-edition
