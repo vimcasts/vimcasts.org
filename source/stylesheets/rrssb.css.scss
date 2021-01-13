@@ -5,6 +5,6 @@
 ul.rrssb-buttons {
   @include block-grid($per-row:2, $spacing: $block-grid-default-spacing/2);
   @media #{$medium-up} {
-    @include block-grid($per-row:4, $spacing: $block-grid-default-spacing/2);
+    @include block-grid($per-row:3, $spacing: $block-grid-default-spacing/2);
   }
 }
